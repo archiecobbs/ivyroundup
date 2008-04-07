@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- $Id$ -->
+<builder-module>
+
+    <property name="name" value="${ivy.builder.module}"/>
+    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="zipname" value="${name}-${version}"/>
+
+    <resource dest="archive" url="http://testng.org/${zipname}.zip"
+      sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
+        <include name="${zipname}/src/main/**/*"/>
+        <include name="${zipname}/src/jdk15/**/*"/>
+        <include name="${zipname}/javadocs/**/*"/>
+        <include name="${zipname}/*.jar"/>
+    </resource>
+
+    <build>
+
+        <!-- jar  -->
+        <move file="archive/${zipname}/${zipname}-jdk14.jar" tofile="artifacts/jars/${name}-jdk14.jar"/>
+        <move file="archive/${zipname}/${zipname}-jdk15.jar" tofile="artifacts/jars/${name}-jdk15.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}.zip">
+            <fileset dir="archive/${zipname}/src/main">
+                <include name="**/*.java"/>
+            </fileset>
+            <fileset dir="archive/${zipname}/src/jdk15">
+                <include name="**/*.java"/>
+            </fileset>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${zipname}/javadocs"/>
+        </zip>
+    </build>
+</builder-module>
+
