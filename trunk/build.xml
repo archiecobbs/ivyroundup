@@ -30,6 +30,7 @@
                 <include name="images/**/*"/>
                 <include name="xsl/**/*"/>
                 <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
             </fileset>
         </delete>
         <copy todir="repo">
@@ -38,7 +39,7 @@
                 <include name="modules/**/builder.xml"/>
                 <include name="images/**/*"/>
                 <include name="xsl/**/*"/>
-                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
             </fileset>
         </copy>
 
