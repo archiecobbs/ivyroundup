@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- $Id$ -->
+<builder-module>
+
+    <property name="name" value="${ivy.builder.module}"/>
+    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="archive" value="${name}-${version}"/>
+
+    <resource url="http://www.antlr2.org/download/${name}-${version}.tar.gz"
+      dest="archive" sha1="802655c343cc7806aaf1ec2177a0e663ff209de1">
+        <include name="${archive}/${name}.jar"/>
+    </resource>
+
+    <build>
+        <move file="archive/${archive}/${name}.jar" todir="artifacts/jars"/>
+    </build>
+
+</builder-module>

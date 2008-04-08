@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="http://ivyroundup.googlecode.com/svn/trunk/src/xsl/ivy-doc.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!-- $Id$ -->
 <ivy-module version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="http://ivyroundup.googlecode.com/svn/trunk/src/xsd/ivy.xsd">
+  xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="testng" module="testng" revision="5.7" status="release" publication="20070807210300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
@@ -14,6 +14,9 @@
             of several classes, several packages and even several external
             frameworks, such as application servers).
         </description>
+        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
+        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+          pattern="http://ivyroundup.googlecode.com/svn/trunk/src/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
     <configurations>
