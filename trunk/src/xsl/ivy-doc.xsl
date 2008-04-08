@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<!-- $Id$ -->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
   ivy files keep a visible link to ivy site (if you don't modify it, it's the 
@@ -47,7 +48,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   <html>
   <head>
-    <title><xsl:value-of select="info/@module"/> by <xsl:value-of select="info/@organisation"/> :: Ivy description</title>
+    <title><xsl:value-of select="info/@module"/> by <xsl:value-of select="info/@organisation"/> :: Ivy RoundUp</title>
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
     <meta http-equiv="content-language" content="en" />
     <meta name="robots" content="index,follow" />
