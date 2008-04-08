@@ -51,21 +51,21 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
     <meta http-equiv="content-language" content="en" />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" type="text/css" href="http://ivyrep.jayasoft.org/ivy-style.css" /> 
+    <link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css" /> 
   </head>
   <body>
-    <div id="logo"><a href="http://ivy.jayasoft.org/"><img src="http://ivy.jayasoft.org/logo.png"/></a><br/><a id="rep" href="http://ivyrep.jayasoft.org/">Ivy Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://code.google.com/p/ivyroundup">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">
 	        <xsl:element name="a">
-	            <xsl:attribute name="href">http://ivyrep.jayasoft.org/<xsl:value-of select="info/@organisation"/>/<xsl:value-of select="info/@module"/>/</xsl:attribute>
+	            <xsl:attribute name="href">../../../<xsl:value-of select="info/@organisation"/>/<xsl:value-of select="info/@module"/>/</xsl:attribute>
 	            <xsl:value-of select="info/@module"/>
 	        </xsl:element>
     </span> 
     by 
     <span id="organisation">
 	        <xsl:element name="a">
-	            <xsl:attribute name="href">http://ivyrep.jayasoft.org/<xsl:value-of select="info/@organisation"/>/</xsl:attribute>
+	            <xsl:attribute name="href">../../../<xsl:value-of select="info/@organisation"/>/</xsl:attribute>
 	            <xsl:value-of select="info/@organisation"/>
 	        </xsl:element> 
     </span></h1>
@@ -273,7 +273,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <td><xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/></td>
       <td>
         <xsl:element name="a">
-            <xsl:attribute name="href">http://ivyrep.jayasoft.org/<xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/>/<xsl:value-of select="@name"/>/ivy-<xsl:value-of select="@rev"/>.xml</xsl:attribute>
+            <xsl:attribute name="href">../../../<xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/>/<xsl:value-of select="@name"/>/<xsl:value-of select="@rev"/>/ivy.xml</xsl:attribute>
 		    <xsl:value-of select="@name"/>
         </xsl:element>
       </td>
