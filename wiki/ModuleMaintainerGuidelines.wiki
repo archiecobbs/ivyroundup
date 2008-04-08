@@ -8,6 +8,8 @@ When adding a new revision of an existing module, do an {{{svn copy}}} of the pr
 
 With a well-designed {{{builder.xml}}} and a minor revision bump, the only change that should be necessary is the SHA1 checksum.
 
+When adding completely new modules, do an {{{svn copy}}} of {{{src/boilerplate}}} to give you a well-formed starting point for the {{{ivy.xml}}} and {{{builder.xml}}} files.
+
 == Ivy Module Definitions ({{{ivy.xml}}} files) ==
 
 === Organization ===
