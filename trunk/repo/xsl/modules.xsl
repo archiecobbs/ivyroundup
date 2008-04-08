@@ -56,6 +56,11 @@
     <tbody>
     <xsl:for-each select="org/mod">
     <xsl:sort select="@name"/>
+    <a>
+        <xsl:attribute name="href">
+            <xsl:value-of select="concat('module-', ../@name)"/>
+        </xsl:attribute>
+    </a>
     <tr>
       <td><xsl:value-of select="@name"/></td>
       <td><xsl:value-of select="../@name"/></td>
