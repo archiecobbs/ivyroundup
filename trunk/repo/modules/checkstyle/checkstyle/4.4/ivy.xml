@@ -21,31 +21,37 @@
 <ivy-module version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="testng" module="testng" revision="5.7" status="release" publication="20070807210300">
+    <info organisation="checkstyle" module="checkstyle" revision="4.4" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://www.testng.org/">
-            TestNG is a testing framework designed to simply a broad range of
-            testing needs, from unit testing (testing a class in isolation of
-            the others) to integration testing (testing entire systems made
-            of several classes, several packages and even several external
-            frameworks, such as application servers).
+        <description homepage="http://checkstyle.sourceforge.net/">
+            Checkstyle is a development tool to help programmers write
+            Java code that adheres to a coding standard. It automates the
+            process of checking Java code to spare humans of this boring
+            (but important) task. This makes it ideal for projects that
+            want to enforce a coding standard.
+
+            Checkstyle is highly configurable and can be made to support
+            almost any coding standard. An example configuration file
+            is supplied supporting the Sun Code Conventions. As well,
+            other sample configuration files are supplied for other
+            well known conventions.
         </description>
         <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
         <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
           pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
-    <configurations>
-        <conf name="default" description="Default (JDK 1.5) configuration"/>
-        <conf name="jdk15" description="JDK 1.5 configuration"/>
-        <conf name="jdk14" description="JDK 1.4 configuration"/>
-    </configurations>
-
     <publications>
-        <artifact name="testng-jdk14" conf="jdk14"/>
-        <artifact name="testng-jdk15" conf="default,jdk15"/>
-        <artifact type="source" ext="zip"/>
+        <artifact/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency name="antlr" rev="2.7+"/>
+        <dependency name="jakarta-commons-cli" rev="[1.1,2.0["/>
+        <dependency name="jakarta-commons-collections" rev="2.1+"/>
+        <dependency name="jakarta-commons-logging" rev="1+"/>
+        <dependency name="jakarta-commons-beanutils" rev="1.7+"/>
+    </dependencies>
 
 </ivy-module>
