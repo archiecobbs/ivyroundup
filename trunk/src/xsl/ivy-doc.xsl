@@ -274,7 +274,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <td><xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/></td>
       <td>
         <xsl:element name="a">
-            <xsl:attribute name="href">../../../<xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/>/<xsl:value-of select="@name"/>/<xsl:value-of select="@rev"/>/ivy.xml</xsl:attribute>
+            <xsl:attribute name="href">../../../../modules.xml#<xsl:value-of select="concat('module-', @name)"/></xsl:attribute>
 		    <xsl:value-of select="@name"/>
         </xsl:element>
       </td>
