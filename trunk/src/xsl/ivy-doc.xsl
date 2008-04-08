@@ -108,7 +108,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td></tr>
     <tr><td class="title">Description</td><td class="value"><xsl:copy-of select="info/description"/></td></tr>
     </table>
-    
+
     <xsl:if test="count($repositories) > 0">
     <div id="repositories">
     <h2>Public Repositories</h2>
@@ -141,7 +141,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </div>
     </xsl:if>
-    
+
     <div id="public-confs" class="conf">
     <h2>Public Configurations</h2>
     <table>
@@ -170,7 +170,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tbody>
     </table>
     </div>
-    
+
     <xsl:if test="count($deprecated.conf) > 0">
     <div id="deprecated-confs" class="conf">
     <h2>Deprecated Configurations</h2>
@@ -194,7 +194,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </div>
     </xsl:if>
-    
+
     <xsl:if test="count($private.conf) > 0">
     <div id="deprecated-confs" class="conf">
     <h2>Private Configurations</h2>
@@ -218,7 +218,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </div>
     </xsl:if>
-    
+
     <div id="artifacts">
     <h2>Published Artifacts</h2>
     <table>
@@ -255,7 +255,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tbody>
     </table>
     </div>
-    
+
     <xsl:if test="count($dependencies) > 0">
     <div id="dependencies">
     <h2>Dependencies</h2>
@@ -284,9 +284,88 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </div>
     </xsl:if>
-    
-    
+
+    <xsl:variable name="builder" select="document('builder.xml', .)/builder-module"/>
+    <div id="build-instructions" class="conf">
+    <h2>Builder Instructions</h2>
+    <xsl:if test="$builder/property">
+    <table>
+    <thead>
+    <tr>
+      <th class="conf-name">Property</th>
+      <th class="conf-desc">Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <xsl:for-each select="$builder/property">
+    <tr>
+      <td><xsl:value-of select="@name"/></td>
+      <td><xsl:value-of select="@value"/></td>
+    </tr>
+    </xsl:for-each>
+    </tbody>
+    </table>
+    </xsl:if>
+    <table>
+    <thead>
+    <tr>
+      <th class="conf-name">Resource</th>
+      <th class="conf-desc">SHA1 Checksum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <xsl:for-each select="$builder/resource">
+    <tr>
+      <td><xsl:value-of select="@url"/></td>
+      <td><xsl:value-of select="@sha1"/></td>
+    </tr>
+    </xsl:for-each>
+    </tbody>
+    </table>
+
+    <table>
+    <thead>
+    <tr>
+      <th class="conf-name">Build Steps</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td><div class="build-inst"><xsl:apply-templates mode="escape" select="$builder/build/node()"/></div></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+
   </body>
   </html>
 </xsl:template>
+
+<xsl:template mode="escape" match="comment()">
+    <xsl:value-of select="concat('&lt;!--', ., '--&gt;')"/>
+</xsl:template>
+
+<xsl:template mode="escape" match="*">
+    <xsl:value-of select="concat('&lt;', name(.))"/>
+    <xsl:apply-templates select="@*" mode="escape"/>
+    <xsl:choose>
+        <xsl:when test="node()">
+            <xsl:value-of select="'&gt;'"/>
+            <xsl:apply-templates select="node()" mode="escape"/>
+            <xsl:value-of select="concat('&lt;/', name(.), '&gt;')"/>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:value-of select="'/&gt;'"/>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template mode="escape" match="@*">
+    <xsl:value-of select="concat(' ', name(.), '=&quot;', ., '&quot;')"/>
+</xsl:template>
+
+<xsl:template mode="escape" match="text()">
+    <xsl:value-of select="."/>
+</xsl:template>
+
 </xsl:stylesheet>
