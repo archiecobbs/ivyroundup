@@ -109,29 +109,29 @@ td.title:first-letter {
 	text-align: left;
 }
 
-.conf table, #artifacts table, #dependencies table  {
+.conf table, #artifacts table, #dependencies table, #modules table {
 	border-collapse:collapse;
 	width:90%;
 	margin:auto;
 	margin-top: 10px;
 }
-.conf thead, #artifacts thead, #dependencies thead {
+.conf thead, #artifacts thead, #dependencies thead, #modules thead {
 	background-color:#DEE4CD;
 	border:1px solid #7A9437;
 }
-.conf tbody, #artifacts tbody, #dependencies tbody {
+.conf tbody, #artifacts tbody, #dependencies tbody, #modules tbody {
 	border-collapse:collapse;
 	background-color:#FFFFFF;
 	border:1px solid #7A9437;
 }
 
-.conf th, #artifacts th, #dependencies th {
+.conf th, #artifacts th, #dependencies th, #modules th {
 	font-family:monospace;
 	border:1px solid #7A9437;
 	padding:5px;
 }
 
-.conf td, #artifacts td, #dependencies td {
+.conf td, #artifacts td, #dependencies td, #modules td {
 	border:1px dotted #7A9437;
 	padding:5px;
 }
