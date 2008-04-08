@@ -47,11 +47,11 @@
     </publications>
 
     <dependencies>
-        <dependency name="antlr" rev="2.7+"/>
-        <dependency name="jakarta-commons-cli" rev="[1.1,2.0["/>
-        <dependency name="jakarta-commons-collections" rev="2.1+"/>
-        <dependency name="jakarta-commons-logging" rev="1+"/>
-        <dependency name="jakarta-commons-beanutils" rev="1.7+"/>
+        <dependency organisation="antler" name="antlr" rev="2.7+"/>
+        <dependency organisation="apache" name="commons-cli" rev="[1.1,2.0["/>
+        <dependency organisation="apache" name="commons-collections" rev="2.1+"/>
+        <dependency organisation="apache" name="commons-logging" rev="1+"/>
+        <dependency organisation="apache" name="commons-beanutils" rev="1.7+"/>
     </dependencies>
 
 </ivy-module>
