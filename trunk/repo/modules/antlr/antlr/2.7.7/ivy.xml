@@ -23,6 +23,9 @@
 
     <info organisation="antlr" module="antlr" revision="2.7.7" status="release" publication="20061101000000">
         <license name="Public Domain" url="http://www.antlr2.org/license.html"/>
+        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
+        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://www.antlr2.org/">
             ANTLR, ANother Tool for Language Recognition, (formerly
             PCCTS) is a language tool that provides a framework for
@@ -32,9 +35,6 @@
             tree construction, tree walking, and translation. There are
             currently about 5,000 ANTLR source downloads a month.
         </description>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
     <publications>

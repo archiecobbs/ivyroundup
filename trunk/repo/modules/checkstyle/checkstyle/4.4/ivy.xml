@@ -23,6 +23,9 @@
 
     <info organisation="checkstyle" module="checkstyle" revision="4.4" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
+        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
             Java code that adheres to a coding standard. It automates the
@@ -36,9 +39,6 @@
             other sample configuration files are supplied for other
             well known conventions.
         </description>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
     <publications>
@@ -47,11 +47,11 @@
     </publications>
 
     <dependencies>
-        <dependency organisation="antler" name="antlr" rev="2.7+"/>
-        <dependency organisation="apache" name="commons-cli" rev="[1.1,2.0["/>
-        <dependency organisation="apache" name="commons-collections" rev="2.1+"/>
-        <dependency organisation="apache" name="commons-logging" rev="1+"/>
-        <dependency organisation="apache" name="commons-beanutils" rev="1.7+"/>
+        <dependency org="antler" name="antlr" rev="2.7+"/>
+        <dependency org="apache" name="commons-cli" rev="[1.1,2.0["/>
+        <dependency org="apache" name="commons-collections" rev="2.1+"/>
+        <dependency org="apache" name="commons-logging" rev="1+"/>
+        <dependency org="apache" name="commons-beanutils" rev="1.7+"/>
     </dependencies>
 
 </ivy-module>
