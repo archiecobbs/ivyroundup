@@ -1,0 +1,16 @@
+#summary How to configure your Ivy settings to use [http://code.google.com/p/ivyroundup/ Ivy RoundUp]
+
+To use the Ivy !RoundUp repository, simply define a "builder" resolver pointing to the Ivy !RoundUp repository like so:
+
+{{{
+    <resolvers>
+        <builder name="roundup" buildRoot="${java.io.tmpdir}/ivybuilder">
+            <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+            <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
+        </builder>
+    </resolvers>
+}}}
+
+A couple of notes about this:
+  * You can use any directory you want for the temporary builds; this example uses {{{${java.io.tmpdir}/ivybuilder}}}. However, you must specify _some_ location.
+  * The URLs above point to the "trunk" of Ivy !RoundUp. Eventually, there may be more stable snapshots under "branches" and "tags".
