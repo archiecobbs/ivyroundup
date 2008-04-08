@@ -23,6 +23,9 @@
 
     <info organisation="testng" module="testng" revision="5.7" status="release" publication="20070807210300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
+        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://www.testng.org/">
             TestNG is a testing framework designed to simply a broad range of
             testing needs, from unit testing (testing a class in isolation of
@@ -30,9 +33,6 @@
             of several classes, several packages and even several external
             frameworks, such as application servers).
         </description>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
     <configurations>

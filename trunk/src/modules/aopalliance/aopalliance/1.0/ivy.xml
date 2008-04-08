@@ -23,6 +23,9 @@
 
     <info organisation="aopalliance" module="aopalliance" revision="1.0" status="release" publication="20040322000000">
         <license name="Public Domain" url="http://aopalliance.sourceforge.net/"/>
+        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
+        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://aopalliance.sourceforge.net/">
             The AOP Alliance project is a joint open-source project
             between several software engineering people who are interested
@@ -37,9 +40,6 @@
             interoperability between Java/J2EE AOP implementations to
             build a larger AOP community.
         </description>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
     </info>
 
     <publications>

@@ -23,12 +23,12 @@
 
     <info organisation="example" module="example" revision="1.2.3" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://www.example.com/">
-            The module description goes here.
-        </description>
         <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
         <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
           pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+        <description homepage="http://www.example.com/">
+            The module description goes here.
+        </description>
     </info>
 
     <configurations>
