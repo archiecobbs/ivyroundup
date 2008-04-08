@@ -19,7 +19,19 @@
 <!-- $Id$ -->
 <project name="ivyroundup" default="repo">
 
-    <target name="repo" description="Regenerate the repository">
+    <target name="validate" description="Validate all ivy.xml and builder.xml files">
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="src">
+                <include name="modules/**/ivy.xml"/>
+                <include name="modules/**/builder.xml"/>
+            </fileset>
+        </xmlvalidate>
+    </target>
+
+    <target name="repo" depends="validate" description="Regenerate the repository">
 
         <!-- Copy all ivy.xml and builder.xml files into repository -->
         <delete>
@@ -39,6 +51,7 @@
                 <include name="modules/**/builder.xml"/>
                 <include name="images/**/*"/>
                 <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
                 <include name="xsd/**/*"/>
             </fileset>
         </copy>
