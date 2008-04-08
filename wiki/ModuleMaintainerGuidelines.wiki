@@ -1,0 +1,33 @@
+#summary Guidelines for maintainers of Ivy modules in the Ivy RoundUp Repository
+
+This page describes some good practices when adding or maintaining Ivy modules.
+
+== General ==
+
+When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents.
+
+With a well-designed {{{builder.xml}}} and a minor revision bump, the only change that should be necessary is the SHA1 checksum.
+
+== Ivy Module Definitions ({{{ivy.xml}}} files) ==
+
+=== Organization ===
+
+Try to discover and follow existing precedents (if any) for the value of the "organisation" attribute. If there's no better option, use the module name for the organisation also.
+
+=== Configurations ===
+
+Define module configurations carefully. If other modules reference configurations in your module, and the those configurations change, things can get screwy very quickly.
+
+For this reason generally it's safer to define new configurations rather than changing or removing old ones.
+
+Don't be afraid to define configurations, they're very useful. Don't forget that the same artifact can be part of more than one configuration. And having more configurations than necessary doesn't really cause any harm; users can just ignore them.
+
+=== Dependencies ===
+
+Ensure dependencies are correct with respect to the configurations of the module you're working with as well as those of the dependency module.
+
+== Builder XML files ==
+
+Make use of the {{{${ivy.builder.*} }}}pre-defined properties to avoid typos.
+
+SHA1 checksums can be generated via the command {{{openssl sha1 foobar-1.2.3.tar.gz}}}.
