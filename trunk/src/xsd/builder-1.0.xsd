@@ -47,7 +47,7 @@
                                 <xsd:element name="artifact">
                                     <xsd:complexType>
                                         <xsd:attribute name="ext" type="xsd:string"/>
-                                        <xsd:attribute name="qualifier" type="xsd:string"/>
+                                        <xsd:attribute name="classifier" type="xsd:string"/>
                                         <xsd:attribute name="sha1" type="sha1Type" use="required"/>
                                         <xsd:attribute name="dest" type="xsd:string"/>
                                         <xsd:attribute name="tofile" type="xsd:string"/>

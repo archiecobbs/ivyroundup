@@ -349,7 +349,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <th class="conf-name">Group ID</th>
       <th class="conf-name">Artifact ID</th>
       <th class="conf-name">Version</th>
-      <th class="conf-name">Qualifier</th>
+      <th class="conf-name">Classifier</th>
       <th class="conf-name">Extension</th>
       <th class="conf-name">Action</th>
       <th class="conf-desc">SHA1 Checksum</th>
@@ -389,8 +389,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </xsl:choose>
       </td>
       <td>
-        <xsl:if test="@qualifier">
-            <xsl:value-of select="@qualifier"/>
+        <xsl:if test="@classifier">
+            <xsl:value-of select="@classifier"/>
         </xsl:if>
       </td>
       <td>
