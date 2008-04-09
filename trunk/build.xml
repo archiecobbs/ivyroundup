@@ -56,10 +56,20 @@
             </fileset>
         </copy>
 
+        <!-- Get SVN revision -->
+        <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="( svn info . 2>/dev/null 
+              | grep -E '^Last Changed Rev:' || echo '0' )
+              | sed 's/^Last Changed Rev: //g'"/>
+        </exec>
+
         <!-- Generate list of modules -->
         <exec executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="find src/modules -name ivy.xml -print | awk -F/ -f src/awk/xmlify.awk > repo/modules.xml"/>
+            <arg value="find src/modules -name ivy.xml -print
+              | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
+              > repo/modules.xml"/>
         </exec>
     </target>
 
