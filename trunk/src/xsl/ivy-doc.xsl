@@ -38,6 +38,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:variable name="repositories" select="/ivy-module/info/repository"/>
     <xsl:variable name="ivyauthors" select="/ivy-module/info/ivyauthor"/>
     <xsl:variable name="licenses" select="/ivy-module/info/license"/>
+    <xsl:variable name="module" select="/ivy-module/info/@module"/>
+    <xsl:variable name="organisation" select="/ivy-module/info/@organisation"/>
+    <xsl:variable name="revision" select="/ivy-module/info/@revision"/>
     <xsl:variable name="configurations" select="/ivy-module/configurations"/>
     <xsl:variable name="public.conf" select="$configurations/conf[not(@visibility) and not(@deprecated)] | $configurations/conf[@visibility='public' and not(@deprecated)]"/>
     <xsl:variable name="deprecated.conf" select="configurations/conf[not(@visibility) and @deprecated] | configurations/conf[@visibility='public' and @deprecated]"/>
@@ -289,6 +292,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:variable name="builder" select="document('builder.xml', .)/builder-module"/>
     <div id="build-instructions" class="conf">
     <h2>Builder Instructions</h2>
+
     <xsl:if test="$builder/property">
     <table>
     <thead>
@@ -307,10 +311,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tbody>
     </table>
     </xsl:if>
+
+    <xsl:if test="$builder/resource">
     <table>
     <thead>
     <tr>
       <th class="conf-name">Resource</th>
+      <th class="conf-name">Action</th>
       <th class="conf-desc">SHA1 Checksum</th>
     </tr>
     </thead>
@@ -318,12 +325,102 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:for-each select="$builder/resource">
     <tr>
       <td><xsl:value-of select="@url"/></td>
+      <td>
+        <xsl:choose>
+            <xsl:when test="@tofile">
+                <xsl:value-of select="concat('Copy to ', @tofile)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
       <td><xsl:value-of select="@sha1"/></td>
     </tr>
     </xsl:for-each>
     </tbody>
     </table>
+    </xsl:if>
 
+    <xsl:if test="$builder/m2resource/artifact">
+    <table>
+    <thead>
+    <tr>
+      <th class="conf-name">Group ID</th>
+      <th class="conf-name">Artifact ID</th>
+      <th class="conf-name">Version</th>
+      <th class="conf-name">Qualifier</th>
+      <th class="conf-name">Extension</th>
+      <th class="conf-name">Action</th>
+      <th class="conf-desc">SHA1 Checksum</th>
+    </tr>
+    </thead>
+    <tbody>
+    <xsl:for-each select="$builder/m2resource/artifact">
+    <tr>
+      <td>
+        <xsl:choose>
+            <xsl:when test="../@groupId">
+                <xsl:value-of select="../@groupId"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$organisation"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td>
+        <xsl:choose>
+            <xsl:when test="../@artifactId">
+                <xsl:value-of select="../@artifactId"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$module"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td>
+        <xsl:choose>
+            <xsl:when test="../@version">
+                <xsl:value-of select="../@version"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$revision"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td>
+        <xsl:if test="@qualifier">
+            <xsl:value-of select="@qualifier"/>
+        </xsl:if>
+      </td>
+      <td>
+        <xsl:choose>
+            <xsl:when test="@ext">
+                <xsl:value-of select="ext"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'jar'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td>
+        <xsl:choose>
+            <xsl:when test="@tofile">
+                <xsl:value-of select="concat('Copy to ', @tofile)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+            </xsl:otherwise>
+        </xsl:choose>
+      </td>
+      <td><xsl:value-of select="@sha1"/></td>
+    </tr>
+    </xsl:for-each>
+    </tbody>
+    </table>
+    </xsl:if>
+
+    <xsl:if test="$builder/build/node()">
     <table>
     <thead>
     <tr>
@@ -336,6 +433,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tr>
     </tbody>
     </table>
+    </xsl:if>
+
     </div>
 
   </body>
