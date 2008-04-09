@@ -35,7 +35,7 @@
     <span id="module">Ivy RoundUp Repository Contents</span>
     </h1>
 
-    <div id="revision"><span id="revision">Last Repository Build: </span><xsl:value-of select="timestamp"/></div>
+    <div id="revision"><span id="revision">Last Repository Build: </span><xsl:value-of select="timestamp"/> (r<xsl:value-of select="svnRevision"/>)</div>
     <p class="header">
     This page lists all revisions of all modules contained in the <a href="http://code.google.com/p/ivyroundup/">Ivy RoundUp Repository</a>.
     </p>
