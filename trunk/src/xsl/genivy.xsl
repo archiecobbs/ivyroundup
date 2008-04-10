@@ -30,9 +30,9 @@
         <xsl:variable name="rev" select="@name"/>
         <pipe:pipeDocument source="../src/modules/{$org}/{$mod}/{$rev}/ivy.xml" target="repo/modules/{$org}/{$mod}/{$rev}/ivy.xml">
             <stylesheet href="ivy-repo.xsl">
-                <param name="organisation" value="$org"/>
-                <param name="module" value="$mod"/>
-                <param name="revision" value="$rev"/>
+                <param name="organisation" value="{$org}"/>
+                <param name="module" value="{$mod}"/>
+                <param name="revision" value="{$rev}"/>
             </stylesheet>
         </pipe:pipeDocument>
     </xsl:template>

@@ -79,6 +79,14 @@
                 <include name="**/builder.xml"/>
             </fileset>
         </xmlvalidate>
+
+        <!-- Make sure keyword expansion turned off -->
+        <exec executable="svn" logError="true" failonerror="true">
+            <arg value="propdel"/>
+            <arg value="--quiet"/>
+            <arg value="--recursive"/>
+            <arg value="repo"/>
+        </exec>
     </target>
 
 </project>

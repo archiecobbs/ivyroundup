@@ -30,9 +30,9 @@
         <xsl:variable name="rev" select="@name"/>
         <pipe:pipeDocument source="../src/modules/{$org}/{$mod}/{$rev}/builder.xml" target="repo/modules/{$org}/{$mod}/{$rev}/builder.xml">
             <stylesheet href="builder-repo.xsl">
-                <param name="organisation" value="$org"/>
-                <param name="module" value="$mod"/>
-                <param name="revision" value="$rev"/>
+                <param name="organisation" value="{$org}"/>
+                <param name="module" value="{$mod}"/>
+                <param name="revision" value="{$rev}"/>
             </stylesheet>
         </pipe:pipeDocument>
     </xsl:template>
