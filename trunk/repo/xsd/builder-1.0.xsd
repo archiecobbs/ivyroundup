@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id$ -->
+<!-- $Id: builder-1.0.xsd 35 2008-04-09 20:39:44Z archie.cobbs $ -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="builder-module">
@@ -47,7 +47,7 @@
                                 <xsd:element name="artifact">
                                     <xsd:complexType>
                                         <xsd:attribute name="ext" type="xsd:string"/>
-                                        <xsd:attribute name="qualifier" type="xsd:string"/>
+                                        <xsd:attribute name="classifier" type="xsd:string"/>
                                         <xsd:attribute name="sha1" type="sha1Type" use="required"/>
                                         <xsd:attribute name="dest" type="xsd:string"/>
                                         <xsd:attribute name="tofile" type="xsd:string"/>

@@ -19,17 +19,14 @@
 <builder-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
 
     <property name="name" value="${ivy.builder.module}"/>
+    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="archive" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://downloads.sourceforge.net/${name}/${name}.zip" sha1="9bb519396b3f5005b22c4dd3090cd3f343a63fa0"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.tar.gz" dest="archive" sha1="0c92236a29d8614f59ac7b8f15c1ea6b6cd97bc4">
+        <include name="${archive}/${name}.jar"/>
+    </resource>
 
     <build>
-
-        <!-- jar -->
-        <move file="archive/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/javadoc"/>
-        </zip>
+        <move file="archive/${archive}/${name}.jar" todir="artifacts/jars"/>
     </build>
 </builder-module>
