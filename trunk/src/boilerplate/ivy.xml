@@ -28,13 +28,12 @@
     </configurations>
 
     <publications>
-        <artifact name="example"/>
+        <artifact/>
         <artifact name="example" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency name="exampledep" rev="[1.0,2.0["/>
     </dependencies>
 
 </ivy-module>
