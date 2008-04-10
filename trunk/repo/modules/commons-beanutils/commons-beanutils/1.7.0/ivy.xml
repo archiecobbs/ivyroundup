@@ -22,7 +22,7 @@
 
     <info organisation="commons-beanutils" module="commons-beanutils" revision="1.7.0" status="release" publication="20051124120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 49 2008-04-10 17:06:48Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
+        <ivyauthor name="$Id: ivy.xml 52 2008-04-10 17:30:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://code.google.com/p/ivyroundup/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/beanutils/">
             Most Java developers are used to creating Java classes
@@ -64,7 +64,7 @@
         <artifact name="commons-beanutils" conf="default"/>
         <artifact name="commons-beanutils-core" conf="core"/>
         <artifact name="commons-beanutils-bean-collections" conf="bean-collections"/>
-        <artifact name="commons-beanutils" type="source" ext="zip"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

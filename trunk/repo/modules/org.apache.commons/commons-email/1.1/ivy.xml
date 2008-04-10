@@ -22,7 +22,7 @@
 
     <info organisation="org.apache.commons" module="commons-email" revision="1.1" status="release" publication="20071027000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 37 2008-04-10 15:47:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
+        <ivyauthor name="$Id: ivy.xml 52 2008-04-10 17:30:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://code.google.com/p/ivyroundup/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/email/">
             Commons-Email aims to provide a API for sending email. It is
@@ -32,7 +32,7 @@
 
     <publications>
         <artifact/>
-        <artifact type="source" ext="zip"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
