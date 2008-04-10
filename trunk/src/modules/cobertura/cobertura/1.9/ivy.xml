@@ -33,9 +33,9 @@
     </publications>
 
     <dependencies>
-        <dependency name="log4j" rev="[1.2.9,2.0["/>
-        <dependency name="jakarta-oro" rev="[2.0.8,3.0["/>
-        <dependency name="asm" rev="2.2+"/>
+        <dependency org="log4j" name="log4j" rev="[1.2.9,2.0["/>
+        <dependency org="oro" name="oro" rev="[2.0.8,3.0["/>
+        <dependency org="asm" name="asm" rev="2.2+"/>
     </dependencies>
 
 </ivy-module>
