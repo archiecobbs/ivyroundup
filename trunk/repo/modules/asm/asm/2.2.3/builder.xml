@@ -32,14 +32,14 @@
 
         <!-- jar -->
         <move todir="artifacts/jars">
-            <fileset dir="archive/${archive}/lib/" todir="artifacts/jars">
+            <fileset dir="archive/${archive}/lib">
                 <include name="*.jar"/>
-                <mapper type="glob" from="*-${version}.jar" to="*.jar"/>
             </fileset>
+            <mapper type="glob" from="*-${version}.jar" to="*.jar"/>
         </move>
 
         <!-- source -->
-        <move file="archive/${archive}/src.zip" tofile="artifacts/sources/${name}.zip"/>
+        <move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">

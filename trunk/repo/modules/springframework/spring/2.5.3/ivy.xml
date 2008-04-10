@@ -22,7 +22,7 @@
 
     <info organisation="springframework" module="spring" revision="2.5.3" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 64 2008-04-10 19:22:20Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
+        <ivyauthor name="$Id: ivy.xml 68 2008-04-10 20:33:01Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://code.google.com/p/ivyroundup/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -140,7 +140,7 @@
     <dependencies>
         <dependency conf="default,aop-&gt;default" org="aopalliance" name="aopalliance" rev="1.+"/>
         <dependency conf="default,core-&gt;default" org="commons-logging" name="commons-logging" rev="1.+"/>
-        <dependency conf="default,jms-&gt;default" name="jms" rev="1.+"/>
+        <dependency conf="default,jms-&gt;default" org="sun" name="jms" rev="1.+"/>
     </dependencies>
 
 </ivy-module>

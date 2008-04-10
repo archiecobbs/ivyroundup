@@ -22,7 +22,7 @@
 
     <info organisation="asm" module="asm" revision="2.2.3" status="release" publication="20070606000000">
         <license name="BSD License" url="http://asm.objectweb.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 38 2008-04-10 15:52:21Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
+        <ivyauthor name="$Id: ivy.xml 69 2008-04-10 21:13:32Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://code.google.com/p/ivyroundup/" name="ivyroundup"/>
         <description homepage="http://asm.objectweb.org/">
             ASM is an all purpose Java bytecode manipulation and
@@ -59,7 +59,7 @@
         <artifact name="asm-tree" conf="tree"/>
         <artifact name="asm-util" conf="util"/>
         <artifact name="asm-xml" conf="xml"/>
-        <artifact type="source" ext="zip"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
