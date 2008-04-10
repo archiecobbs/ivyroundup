@@ -235,9 +235,37 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </thead>
     <tbody>
     <xsl:for-each select="$artifacts">
+      <xsl:variable name="aname">
+        <xsl:choose>
+          <xsl:when test="@name">
+            <xsl:value-of select="@name"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$module"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="atype">
+        <xsl:choose>
+          <xsl:when test="@type">
+            <xsl:value-of select="@type"/>
+          </xsl:when>
+          <xsl:otherwise>jar</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+      <xsl:variable name="aext">
+        <xsl:choose>
+          <xsl:when test="@ext">
+            <xsl:value-of select="@ext"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$atype"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
     <tr>
-      <td><xsl:value-of select="@name"/></td>
-      <td><xsl:value-of select="@type"/></td>
+      <td><xsl:value-of select="concat($aname, '.', $aext)"/></td>
+      <td><xsl:value-of select="$atype"/></td>
       <td>
           <xsl:value-of select="@conf"/>
           <xsl:for-each select="conf">
