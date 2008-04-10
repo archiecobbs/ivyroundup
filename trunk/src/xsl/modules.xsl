@@ -72,8 +72,8 @@
                   <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.xml')"/>
               </xsl:attribute>
               <span class="revision"><xsl:value-of select="@name"/></span>
-              <xsl:value-of select="'&#160;'"/>
           </xsl:element>
+          <xsl:value-of select="'&#160;'"/>
       </xsl:for-each>
       </td>
     </tr>
