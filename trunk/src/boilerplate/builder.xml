@@ -29,7 +29,7 @@
         <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/${name}.zip">
+        <zip destfile="artifacts/sources/source.zip">
             <fileset dir="archive/${archive}/src/java"/>
         </zip>
 
