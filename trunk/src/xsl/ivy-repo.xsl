@@ -22,7 +22,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   version="1.0">
 
-    <xsl:output encoding="UTF-8" method="xml" indent="yes" media-type="text/xml"/>
+    <xsl:output encoding="UTF-8" method="xml" indent="no" media-type="text/xml"/>
 
     <xsl:variable name="svnrevision" select="'$Id$'"/>
 
@@ -32,6 +32,7 @@
 
     <xsl:template match="/">
         <xsl:copy>
+            <xsl:value-of select="'&#10;'"/>
             <!-- Add stylesheet reference -->
             <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="../../../../xsl/ivy-doc.xsl"</xsl:processing-instruction>
             <xsl:value-of select="'&#10;'"/>
@@ -51,6 +52,7 @@
             <xsl:attribute name="xsi:noNamespaceSchemaLocation">../../../../xsd/ivy.xsd</xsl:attribute>
             <xsl:apply-templates select="@*[name() != 'rev']|node()"/>
         </xsl:copy>
+        <xsl:value-of select="'&#10;'"/>
     </xsl:template>
 
     <xsl:template match="/ivy-module/info">
