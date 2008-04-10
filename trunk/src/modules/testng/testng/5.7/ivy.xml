@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
     Copyright 2008 Archie L. Cobbs.
@@ -17,15 +16,10 @@
     under the License.
 -->
 
-<!-- $Id$ -->
-<ivy-module version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+<ivy-module rev="$Id$">
 
-    <info organisation="testng" module="testng" revision="5.7" status="release" publication="20070807210300">
+    <info publication="20070807210300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://www.testng.org/">
             TestNG is a testing framework designed to simply a broad range of
             testing needs, from unit testing (testing a class in isolation of

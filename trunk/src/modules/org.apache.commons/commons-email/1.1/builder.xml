@@ -16,9 +16,7 @@
     under the License.
 -->
 
-<!-- $Id$ -->
-<builder-module version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
+<builder-module rev="$Id$">
     <m2resource>
         <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="a05c4de7bf2e0579ac0f21e16f3737ec6fa0ff98"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8f09630f1600bcd0472a36fb2fa2d2a6f2836535"/>

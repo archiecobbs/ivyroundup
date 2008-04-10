@@ -19,21 +19,9 @@
 <!-- $Id$ -->
 <project name="ivyroundup" default="repo">
 
-    <target name="validate" description="Validate all ivy.xml and builder.xml files">
-        <xmlvalidate failonerror="true" warn="yes" lenient="no">
-            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
-            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
-            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
-            <fileset dir="src">
-                <include name="modules/**/ivy.xml"/>
-                <include name="modules/**/builder.xml"/>
-            </fileset>
-        </xmlvalidate>
-    </target>
+    <target name="repo" description="Regenerate the repository">
 
-    <target name="repo" depends="validate" description="Regenerate the repository">
-
-        <!-- Copy all ivy.xml and builder.xml files into repository -->
+        <!-- Wipe repository clean -->
         <delete>
             <fileset dir="repo">
                 <include name="modules.xml"/>
@@ -45,18 +33,21 @@
                 <include name="xsd/**/*"/>
             </fileset>
         </delete>
+
+        <!-- Copy support files into repository -->
         <copy todir="repo">
             <fileset dir="src">
-                <include name="modules/**/ivy.xml"/>
-                <include name="modules/**/builder.xml"/>
                 <include name="images/**/*"/>
                 <include name="xsl/**/*"/>
                 <include name="css/**/*"/>
                 <include name="xsd/**/*"/>
             </fileset>
+            <dirset dir="src">
+                <include name="modules/**/*"/>
+            </dirset>
         </copy>
 
-        <!-- Get SVN revision -->
+        <!-- Get current SVN revision -->
         <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
             <arg value="( svn info . 2>/dev/null 
@@ -71,6 +62,23 @@
               | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
               > repo/modules.xml"/>
         </exec>
+
+        <!-- Generate ivy.xml files -->
+        <xslt style="src/xsl/genivy.xsl" in="repo/modules.xml" out="/dev/null"/>
+
+        <!-- Generate builder.xml files -->
+        <xslt style="src/xsl/genbuilder.xsl" in="repo/modules.xml" out="/dev/null"/>
+
+        <!-- Validate all generated XML files -->
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="repo/modules">
+                <include name="**/ivy.xml"/>
+                <include name="**/builder.xml"/>
+            </fileset>
+        </xmlvalidate>
     </target>
 
 </project>

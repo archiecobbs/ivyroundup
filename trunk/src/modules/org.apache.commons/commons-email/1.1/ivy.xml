@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
     Copyright 2008 Archie L. Cobbs.
@@ -17,15 +16,10 @@
     under the License.
 -->
 
-<!-- $Id$ -->
-<ivy-module version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+<ivy-module rev="$Id$">
 
-    <info organisation="org.apache.commons" module="commons-email" revision="1.1" status="release" publication="20071027000000">
+    <info publication="20071027000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id$" url="http://code.google.com/p/ivyroundup/"/>
-        <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
-          pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
         <description homepage="http://commons.apache.org/email/">
             Commons-Email aims to provide a API for sending email. It is
             built on top of the JavaMail API, which it aims to simplify.
