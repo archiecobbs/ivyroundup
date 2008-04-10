@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<builder-module rev="$Id$">
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="11c98b99ad538f2f67633afd4d7f4d98ecfbb408"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="5111aa2ad78d87a8a096d0cf80e7e70bb76fa91e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="1a8c9194dfa38239e76736dcff6a410f89540e5a"/>
+    </m2resource>
+</builder-module>
