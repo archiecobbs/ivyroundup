@@ -22,23 +22,15 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://www.example.com/download/${archive}.zip"
-      sha1="0123456789012345678901234567890123456789">
-        <include name="${archive}/*.jar"/>
-        <include name="${archive}/src/**/*"/>
-        <include name="${archive}/doc/api/**/*"/>
-    </resource>
+    <resource dest="archive" url="http://www.example.com/download/${archive}.zip" sha1="0123456789012345678901234567890123456789"/>
 
     <build>
-
-        <!-- jar  -->
+        <!-- jar -->
         <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/${name}.zip">
-            <fileset dir="archive/${archive}/src/java">
-                <include name="**/*.java"/>
-            </fileset>
+            <fileset dir="archive/${archive}/src/java"/>
         </zip>
 
         <!-- javadoc -->
