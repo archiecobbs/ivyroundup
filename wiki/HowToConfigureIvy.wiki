@@ -1,10 +1,10 @@
 #summary How to configure your Ivy settings to use Ivy RoundUp
 
-To use the Ivy !RoundUp repository, simply define a "builder" resolver pointing to the Ivy !RoundUp repository like so:
+To use the Ivy !RoundUp repository, simply define a "builder" resolver in your {{{ivysettings.xml}}} that points to the Ivy !RoundUp repository like so:
 
 {{{
     <resolvers>
-        <builder name="roundup" buildRoot="${java.io.tmpdir}/ivybuilder">
+        <builder name="roundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache">
             <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
             <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
         </builder>
