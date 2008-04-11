@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+-->
+<html>
+<head>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+    <BASE href="http://ant.apache.org/ivy/history/latest-milestone/resolver/">
+	<script type="text/javascript">var xookiConfig = {level: 1};</script>	
+	<script type="text/javascript" src="../xooki/xooki.js"></script>
+</head>
+<body>
+	<textarea id="xooki-source">
+<table class="resolver">
+<tr><td class="title">Tag</td><td class="value">builder</td></tr>
+<tr><td class="title">Handle latest</td><td class="value">yes with http urls (and apache server) and with file urls, no with other urls</td></tr>
+<tr><td class="title">Handle publish</td><td class="value">no</td></tr>
+</table>
+
+<br/>
+<span class="since">Since 2.0</span>.
+
+This resolver accesses ivy files and "build instructions" from an online "builder" repository. "Builder" repositories contain no actual artifacts. To get the artifacts, the build instructions are downloaded from the repository and executed locally. These instructions specify additional resource(s) to download and how to build the artifacts from them, for example, by downloading a project's original distribution archive directly from their web site and extracting the desired artifacts.
+
+Builder repositories allow the creation of Ivy repositories that require neither the participation of any of the modules' creators nor setting up a huge mirror site. One such repository on the web is <a href="http://code.google.com/p/ivyroundup/">Ivy RoundUp</a>. Of course, private builder repositories are feasible as well.
+
+The build instructions are in a simple XML format. At "build time" they get converted into a build.xml file via XSLT and then executed using <a href="http://ant.apache.org/">ant</a>. Therefore, ant must be available as an executable on the platform. The ant task executes in a separate process and so is not affected by properties, etc. that may be set in any existing ant environment in which Ivy is running. However, ivy will define a few properties for convenience; see the "Properties" listed below.
+
+For security reasons, the XSLT transform ensures that (a) all downloaded archives have SHA1 checksums that can be verified; and (b) only a very limited set of ant tasks can be performed during the build; currently these include move, copy, mkdir, zip, unzip, tar, and untar.
+
+The Builder resolver is based on the <a href="url.html">URL resolver</a> and is configured similarly, except the artifact child tags specify where to find the XML build instructions, rather than the artifacts themselves.
+
+Because the downloading and building process is slow, it is important to use <a href="../concept.html#cache">Ivy's caching support</a> to avoid repeated execution of the build instructions. In addition, the Builder resolver has its own private cache for downloaded resources; this is enabled using the <span class="ivy-att">resourceCache</span> attribute (see below).
+
+<h1>Attributes</h1>
+This resolver shares the <a href="../configuration/resolvers.html#common">common attributes</a> of standard resolvers.
+<table class="ivy-attributes">
+<thead>
+    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>buildRoot</td>
+    <td>Defines the root of the temporary build directory hierarchy</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>resourceCache</td>
+    <td>Directory where downloaded resources should be cached</td>
+    <td>No; defaults to none</td>
+  </tr>
+  <tr>
+    <td>validate</td>
+    <td>True if this resolver should validate (via XSD) the downloaded XML build instructions</td>
+    <td>No; defaults to true</td>
+  </tr>
+  <tr>
+    <td>preserveBuildDirectories</td>
+    <td>True if this resolver should not delete the temporary build directories in which the ant tasks are executed (for debugging purposes)</td>
+    <td>No; defaults to false</td>
+  </tr>
+</tbody>
+</table>
+
+<h1>Child elements</h1>
+<table class="ivy-children">
+<thead>
+    <tr><th class="ivy-chld">Element</th><th class="ivy-chld-desc">Description</th><th class="ivy-chld-card">Cardinality</th></tr>
+</thead>
+<tbody>
+    <tr><td>ivy</td><td>Defines a pattern for ivy files, using the pattern attribute</td>
+    <td>1..n</td></tr>
+    <tr><td>artifact</td><td>Defines a pattern for builder XML files, using the pattern attribute</td>
+    <td>1..n</td></tr>
+</tbody>
+</table>
+
+<h1>Examples</h1>
+<code type="xml">
+<builder name="ivyroundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache">
+  <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+  <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
+</builder>
+</code>
+Defines a builder resolver which points to the <a href="http://code.google.com/p/ivyroundup/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> and downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code>
+
+<h1>Build Instructions</h1>
+<p>
+The goal of the build instructions is to download the required archives, extract the artifacts, and put the artifacts into a subdirectory. Each artifact should be written to artifacts/[type]s/[artifact].[ext] when the build completes.
+</p>
+
+<p>
+Below is an example of build instructions for <a href="http://testng.org/">TestNG 2.5</a>:
+<code type="xml">
+<builder-module version="1.0">
+
+    <property name="name" value="${ivy.builder.module}"/>
+    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="zipname" value="${name}-${version}"/>
+
+    <resource dest="archive" url="http://testng.org/${zipname}.zip" sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
+        <include name="${zipname}/src/main/**/*"/>
+        <include name="${zipname}/src/jdk15/**/*"/>
+        <include name="${zipname}/javadocs/**/*"/>
+        <include name="${zipname}/*.jar"/>
+    </resource>
+
+    <build>
+
+        <!-- jar  -->
+        <move file="archive/${zipname}/${zipname}-jdk14.jar" tofile="artifacts/jars/${name}-jdk14.jar"/>
+        <move file="archive/${zipname}/${zipname}-jdk15.jar" tofile="artifacts/jars/${name}-jdk15.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}.zip">
+            <fileset dir="archive/${zipname}/src/main">
+                <include name="**/*.java"/>
+            </fileset>
+            <fileset dir="archive/${zipname}/src/jdk15">
+                <include name="**/*.java"/>
+            </fileset>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${zipname}/javadocs"/>
+        </zip>
+    </build>
+</builder-module>
+</code>
+Of course, build instructions must be consistent with the artifact definitions in the associated ivy.xml file.
+</p>
+
+<h1>Build-time properties</h1>
+This resolver ensures following ant properties are defined when it executes the ant build task.
+<table class="ivy-attributes">
+<thead>
+    <tr><th class="ivy-att">Property</th><th class="ivy-att-desc">Description</th>
+</thead>
+<tbody>
+  <tr>
+    <td>ivy.builder.organisation</td>
+    <td>Organization of the ivy module whose artifacts are being built</td>
+  </tr>
+  <tr>
+    <td>ivy.builder.module</td>
+    <td>Module of the ivy module whose artifacts are being built</td>
+  </tr>
+  <tr>
+    <td>ivy.builder.revision</td>
+    <td>Revision of the ivy module whose artifacts are being built</td>
+  </tr>
+  <tr>
+    <td>ivy.builder.branch</td>
+    <td>Branch of the ivy module whose artifacts are being built</td>
+  </tr>
+  <tr>
+    <td>ivy.builder.resourceCache</td>
+    <td>The configured <span class="ivy-att">resourceCache</span> if any; otherwise not defined</td>
+</tbody>
+</table>
+
+<h1>Builder XML Elements</h1>
+The build instructions document element can contain the following child tags.
+<table class="ivy-children">
+<thead>
+    <tr><th class="ivy-chld">Element</th><th class="ivy-chld-desc">Description</th><th class="ivy-chld-card">Cardinality</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>property</td>
+    <td>Set an ant property</td>
+    <td>0..n</td>
+  </tr>
+  <tr>
+    <td>resource</td>
+    <td>Define a resource to download and (optionally) unpack</td>
+    <td>0..n</td>
+  </tr>
+  <tr>
+    <td>m2resource</td>
+    <td>Define a Maven2 resource to download and (optionally) unpack</td>
+    <td>0..n</td>
+  </tr>
+  <tr>
+    <td>build</td>
+    <td>Specify move, copy, and/or archiving ant tasks that ultimately result in each artifact being placed into artifacts/[type]s/[artifact].[ext]</td>
+    <td>0..1</td>
+  </tr>
+</tbody>
+</table>
+
+<h1>Resource XML Elements</h1>
+The resource XML tag supports the following attributes:
+<table class="ivy-attributes">
+<thead>
+    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>url</td>
+    <td>URL for the resource</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>sha1</td>
+    <td>SHA1 checksum of the resource</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>dest</td>
+    <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
+    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
+  </tr>
+  <tr>
+    <td>tofile</td>
+    <td>Where to put the file; no extraction will be performed</td>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>Type of archive: "zip", "jar", "war", "tar", "tgz", "tar.gz", "tar.bz2"</td>
+    <td>No; if not present, will be automatically determined from the filename suffix</td>
+  </tr>
+</tbody>
+</table>
+<br />
+The resource XML tag may contain child elements. If any exist, they will be included as children of an automatically generated fileset tag.
+
+<h1>Maven2 Resources</h1>
+Special support is included for maven2 resources. For these resources, use the m2resource tag instead of the resource tag. Each m2resource tag specifies one or more artifacts that are downloaded from the Maven2 repository.
+
+<h1>M2Resource XML Elements</h1>
+The m2resource XML tag supports the following attributes:
+<table class="ivy-attributes">
+<thead>
+    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>groupId</td>
+    <td>Maven group ID</td>
+    <td>No; defaults to ${ivy.builder.organisation}</td>
+  </tr>
+  <tr>
+    <td>artifactId</td>
+    <td>Maven artifact ID</td>
+    <td>No; defaults to ${ivy.builder.module}</td>
+  </tr>
+  <tr>
+    <td>version</td>
+    <td>Maven version</td>
+    <td>No; defaults to ${ivy.builder.revision}</td>
+  </tr>
+  <tr>
+    <td>repo</td>
+    <td>Maven repository URL</td>
+    <td>No; defaults to http://repo1.maven.org/maven2/ </td>
+  </tr>
+</tbody>
+</table>
+<br />
+Each m2resource XML tag must have one or more artifact tags that define the artifacts to directly download. The URL for each artifact is constructed automatically based on the attributes in the m2resource and artifact tags.
+
+<h1>M2Resource Artifact Attributes</h1>
+The artifact children of m2resource tags support the following attributes:
+<table class="ivy-attributes">
+<thead>
+    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
+</thead>
+<tbody>
+  <tr>
+    <td>ext</td>
+    <td>Maven filename extension</td>
+    <td>No; defaults to "jar"</td>
+  </tr>
+  <tr>
+    <td>classifier</td>
+    <td>Maven classifier (e.g., "sources", "javadoc")</td>
+    <td>No; defaults to none</td>
+  </tr>
+  <tr>
+    <td>sha1</td>
+    <td>SHA1 checksum of the resource</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>dest</td>
+    <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
+    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
+  </tr>
+  <tr>
+    <td>tofile</td>
+    <td>Where to put the file; no extraction will be performed</td>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>Type of archive: "zip", "jar", "war", "tar", "tgz", "tar.gz", "tar.bz2"</td>
+    <td>No; if not present, will be automatically determined from the filename suffix</td>
+  </tr>
+</tbody>
+</table>
+<br />
+Below is an example of build instructions for the <a href="http://commons.apache.org/email/">Apache Commons Email</a> module. Note that no build tag is required because all of the maven2 artifacts are usable directly (i.e., without unpacking anything).
+<code type="xml">
+<builder-module version="1.0">
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="a05c4de7bf2e0579ac0f21e16f3737ec6fa0ff98"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8f09630f1600bcd0472a36fb2fa2d2a6f2836535"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="15d67ca689a792ed8f29d0d21e2d0116fa117b7e"/>
+    </m2resource>
+</builder-module>
+</code>
+</p>
+
+	</textarea>
+<script type="text/javascript">xooki.postProcess();</script>
+</body>
+</html>
