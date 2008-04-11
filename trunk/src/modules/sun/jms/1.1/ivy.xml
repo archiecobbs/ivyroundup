@@ -26,6 +26,12 @@
             Platform, Enterprise Edition (J2EE) to create, send, receive,
             and read messages. It enables distributed communication that
             is loosely coupled, reliable, and asynchronous.
+
+            <b>NOTE:</b>You must download the JMS software yourself from
+            <a href="http://java.sun.com/products/jms/docs.html">Sun's web site</a>
+            after agreeing to the license terms. Once you've downloaded the JAR,
+            save it as <code>${java.io.tmpdir}/jms-1_1-fr-apidocs.zip</code>,
+            where it will be picked up by this module's builder script.
         </description>
     </info>
 
