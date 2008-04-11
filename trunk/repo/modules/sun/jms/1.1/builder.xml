@@ -23,16 +23,6 @@
     <property name="archive" value="${name}-1_1-fr-apidocs"/>
     <property name="archivedir" value="${name}${version}"/>
 
-    <!--
-                    *** NOTE ***
-
-        You have to download this yourself from:
-
-            http://java.sun.com/products/jms/docs.html
-
-        after agreeing to the terms. Once you've downloaded the JAR,
-        store it in ${java.io.tmpdir}/jms-1_1-fr-apidocs.zip.
-    -->
     <resource dest="archive" url="file:///${java.io.tmpdir}/${archive}.zip" sha1="ba2ef3e8f8bc62427d680330c2dd7d37d6250791"/>
 
     <build>
