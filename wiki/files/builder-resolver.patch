@@ -1,0 +1,1765 @@
+Index: test/java/org/apache/ivy/plugins/resolver/BuilderResolverTest.java
+===================================================================
+--- test/java/org/apache/ivy/plugins/resolver/BuilderResolverTest.java	(revision 0)
++++ test/java/org/apache/ivy/plugins/resolver/BuilderResolverTest.java	(revision 0)
+@@ -0,0 +1,137 @@
++/*
++ *  Licensed to the Apache Software Foundation (ASF) under one or more
++ *  contributor license agreements.  See the NOTICE file distributed with
++ *  this work for additional information regarding copyright ownership.
++ *  The ASF licenses this file to You under the Apache License, Version 2.0
++ *  (the "License"); you may not use this file except in compliance with
++ *  the License.  You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ *  Unless required by applicable law or agreed to in writing, software
++ *  distributed under the License is distributed on an "AS IS" BASIS,
++ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ *  See the License for the specific language governing permissions and
++ *  limitations under the License.
++ *
++ */
++package org.apache.ivy.plugins.resolver;
++
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.FileOutputStream;
++import java.util.Date;
++import java.util.GregorianCalendar;
++
++import org.apache.ivy.core.event.EventManager;
++import org.apache.ivy.core.module.descriptor.Artifact;
++import org.apache.ivy.core.module.descriptor.DefaultArtifact;
++import org.apache.ivy.core.module.descriptor.DefaultDependencyDescriptor;
++import org.apache.ivy.core.module.id.ModuleRevisionId;
++import org.apache.ivy.core.report.ArtifactDownloadReport;
++import org.apache.ivy.core.report.DownloadReport;
++import org.apache.ivy.core.report.DownloadStatus;
++import org.apache.ivy.core.resolve.DownloadOptions;
++import org.apache.ivy.core.resolve.ResolveData;
++import org.apache.ivy.core.resolve.ResolveEngine;
++import org.apache.ivy.core.resolve.ResolveOptions;
++import org.apache.ivy.core.resolve.ResolvedModuleRevision;
++import org.apache.ivy.core.settings.IvySettings;
++import org.apache.ivy.core.sort.SortEngine;
++import org.apache.ivy.plugins.resolver.builder.BuilderResolver;
++import org.apache.tools.ant.Project;
++import org.apache.tools.ant.taskdefs.Delete;
++
++/**
++ * Tests BuilderResolver.
++ */
++// junit
++public class BuilderResolverTest extends AbstractDependencyResolverTest {
++
++    private IvySettings _settings;
++
++    private ResolveEngine _engine;
++
++    private ResolveData _data;
++
++    private File _cache;
++
++    private File _dist;
++
++    protected void setUp() throws Exception {
++        _settings = new IvySettings();
++        _engine = new ResolveEngine(_settings, new EventManager(), new SortEngine(_settings));
++        _cache = new File("build/cache");
++        _data = new ResolveData(_engine, new ResolveOptions());
++        _cache.mkdirs();
++        _settings.setDefaultCache(_cache);
++
++        // Put source distribution onto "website"
++        FileInputStream in = new FileInputStream(new File("test/repositories/builder/website/mod-1.0.tar.gz"));
++        _dist = new File(new File(System.getProperty("java.io.tmpdir")), "mod-1.0.tgz");
++        FileOutputStream out = new FileOutputStream(_dist);
++        byte[] buf = new byte[1024];
++        int r;
++        while ((r = in.read(buf)) != -1)
++            out.write(buf, 0, r);
++        in.close();
++        out.close();
++    }
++
++    protected void tearDown() throws Exception {
++        Delete del = new Delete();
++        del.setProject(new Project());
++        del.setDir(_cache);
++        del.execute();
++        _dist.delete();
++    }
++
++    public void testFile() throws Exception {
++
++        // Create and configure resolver
++        BuilderResolver resolver = new BuilderResolver();
++        resolver.setSettings(_settings);
++        String rootpath = new File("test/repositories/builder").getAbsolutePath();
++        resolver.addIvyPattern("file:" + rootpath + "/[organisation]/[module]/[revision]/ivy.xml");
++        resolver.setBuilderPattern("file:" + rootpath + "/[organisation]/[module]/[revision]/builder.xml");
++        resolver.setBuildRoot(new File(new File(System.getProperty("java.io.tmpdir")), "ivybuilder").getAbsolutePath());
++
++        resolver.setName("builder");
++        assertEquals("builder", resolver.getName());
++
++        // Get module descriptor
++        ModuleRevisionId mrid = ModuleRevisionId.newInstance("org", "mod", "1.0");
++        ResolvedModuleRevision rmr = resolver.getDependency(
++          new DefaultDependencyDescriptor(mrid, false), _data);
++        assertNotNull(rmr);
++
++        assertEquals(mrid, rmr.getId());
++        Date pubdate = new GregorianCalendar(2004, 10, 1, 11, 0, 0).getTime();
++        assertEquals(pubdate, rmr.getPublicationDate());
++
++        // Download artifact
++        DefaultArtifact artifact = new DefaultArtifact(mrid, pubdate, "mod", "jar", "jar");
++        DownloadReport report = resolver.download(new Artifact[] {artifact}, downloadOptions());
++        assertNotNull(report);
++
++        assertEquals(1, report.getArtifactsReports().length);
++
++        ArtifactDownloadReport ar = report.getArtifactReport(artifact);
++        assertNotNull(ar);
++
++        assertEquals(artifact, ar.getArtifact());
++        assertEquals(DownloadStatus.SUCCESSFUL, ar.getDownloadStatus());
++
++        // Download again, should use cache
++        report = resolver.download(new Artifact[] {artifact}, downloadOptions());
++        assertNotNull(report);
++
++        assertEquals(1, report.getArtifactsReports().length);
++
++        ar = report.getArtifactReport(artifact);
++        assertNotNull(ar);
++
++        assertEquals(artifact, ar.getArtifact());
++        assertEquals(DownloadStatus.NO, ar.getDownloadStatus());
++    }
++}
+
+Property changes on: test/java/org/apache/ivy/plugins/resolver/BuilderResolverTest.java
+___________________________________________________________________
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: test/repositories/builder/website/mod-1.0.tar.gz
+===================================================================
+Cannot display: file marked as a binary type.
+svn:mime-type = application/gzip
+
+Property changes on: test/repositories/builder/website/mod-1.0.tar.gz
+___________________________________________________________________
+Name: svn:mime-type
+   + application/gzip
+
+Index: test/repositories/builder/org/mod/1.0/builder.xml
+===================================================================
+--- test/repositories/builder/org/mod/1.0/builder.xml	(revision 0)
++++ test/repositories/builder/org/mod/1.0/builder.xml	(revision 0)
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="ISO-8859-1"?>
++
++<!-- $Id$ -->
++<builder-module version="1.0">
++
++    <property name="name" value="${ivy.builder.module}"/>
++    <property name="version" value="${ivy.builder.revision}"/>
++    <property name="archive" value="${name}-${version}"/>
++
++    <resource dest="extract" url="file:///${java.io.tmpdir}/${archive}.tar.gz"
++      sha1="c0a20882a540a1060c616c95fcff654f3f6f999d">
++        <include name="${archive}/**/*"/>
++    </resource>
++
++    <build>
++        <move file="extract/${archive}/${name}.jar" todir="artifacts/jars"/>
++    </build>
++
++</builder-module>
+
+Property changes on: test/repositories/builder/org/mod/1.0/builder.xml
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: test/repositories/builder/org/mod/1.0/ivy.xml
+===================================================================
+--- test/repositories/builder/org/mod/1.0/ivy.xml	(revision 0)
++++ test/repositories/builder/org/mod/1.0/ivy.xml	(revision 0)
+@@ -0,0 +1,29 @@
++<!--
++   Licensed to the Apache Software Foundation (ASF) under one
++   or more contributor license agreements.  See the NOTICE file
++   distributed with this work for additional information
++   regarding copyright ownership.  The ASF licenses this file
++   to you under the Apache License, Version 2.0 (the
++   "License"); you may not use this file except in compliance
++   with the License.  You may obtain a copy of the License at
++
++     http://www.apache.org/licenses/LICENSE-2.0
++
++   Unless required by applicable law or agreed to in writing,
++   software distributed under the License is distributed on an
++   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++   KIND, either express or implied.  See the License for the
++   specific language governing permissions and limitations
++   under the License.    
++-->
++<ivy-module version="1.3">
++	<info organisation="org"
++	       module="mod"
++	       revision="1.0"
++	       status="integration"
++	       publication="20041101110000"
++	/>
++	<publications>
++        <artifact/>
++	</publications>
++</ivy-module>
+
+Property changes on: test/repositories/builder/org/mod/1.0/ivy.xml
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd	(revision 0)
+@@ -0,0 +1,101 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!--
++    Copyright 2008 Archie L. Cobbs.
++
++    Licensed under the Apache License, Version 2.0 (the "License"); you may
++    not use this file except in compliance with the License. You may obtain
++    a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
++    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
++    License for the specific language governing permissions and limitations
++    under the License.
++-->
++
++<!-- $Id$ -->
++<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
++
++    <xsd:element name="builder-module">
++        <xsd:complexType>
++            <xsd:sequence>
++                <xsd:choice maxOccurs="unbounded">
++                    <xsd:element name="property">
++                        <xsd:complexType>
++                            <xsd:attribute name="name" type="xsd:string" use="required"/>
++                            <xsd:attribute name="value" type="xsd:string" use="required"/>
++                        </xsd:complexType>
++                    </xsd:element>
++                    <xsd:element name="resource">
++                        <xsd:complexType>
++                            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
++                                <xsd:any processContents="lax"/>    <!-- XXX refine me -->
++                            </xsd:sequence>
++                            <xsd:attribute name="url" type="xsd:anyURI" use="required"/>
++                            <xsd:attribute name="sha1" type="sha1Type" use="required"/>
++                            <xsd:attribute name="dest" type="xsd:string"/>
++                            <xsd:attribute name="tofile" type="xsd:string"/>
++                            <xsd:attribute name="type" type="archiveType"/>
++                        </xsd:complexType>
++                    </xsd:element>
++                    <xsd:element name="m2resource">
++                        <xsd:complexType>
++                            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
++                                <xsd:element name="artifact">
++                                    <xsd:complexType>
++                                        <xsd:attribute name="ext" type="xsd:string"/>
++                                        <xsd:attribute name="classifier" type="xsd:string"/>
++                                        <xsd:attribute name="sha1" type="sha1Type" use="required"/>
++                                        <xsd:attribute name="dest" type="xsd:string"/>
++                                        <xsd:attribute name="tofile" type="xsd:string"/>
++                                        <xsd:attribute name="type" type="archiveType"/>
++                                    </xsd:complexType>
++                                </xsd:element>
++                            </xsd:sequence>
++                            <xsd:attribute name="groupId" type="xsd:string"/>
++                            <xsd:attribute name="artifactId" type="xsd:string"/>
++                            <xsd:attribute name="version" type="xsd:string"/>
++                            <xsd:attribute name="repo" type="xsd:anyURI"/>
++                        </xsd:complexType>
++                    </xsd:element>
++                    <xsd:element name="build">
++                        <xsd:complexType>
++                            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
++                                <xsd:any processContents="lax"/>    <!-- XXX refine me -->
++                            </xsd:sequence>
++                        </xsd:complexType>
++                    </xsd:element>
++                </xsd:choice>
++            </xsd:sequence>
++            <xsd:attribute name="version" type="versionType" use="required"/>
++        </xsd:complexType>
++    </xsd:element>
++
++    <xsd:simpleType name="sha1Type">
++        <xsd:restriction base="xsd:string">
++            <xsd:pattern value="[0-9a-f]{40}"/>
++        </xsd:restriction>
++    </xsd:simpleType>
++
++    <xsd:simpleType name="versionType">
++        <xsd:restriction base="xsd:string">
++            <xsd:enumeration value="1.0"/>
++        </xsd:restriction>
++    </xsd:simpleType>
++
++    <xsd:simpleType name="archiveType">
++        <xsd:restriction base="xsd:string">
++            <xsd:enumeration value="zip"/>
++            <xsd:enumeration value="war"/>
++            <xsd:enumeration value="jar"/>
++            <xsd:enumeration value="tar"/>
++            <xsd:enumeration value="tgz"/>
++            <xsd:enumeration value="tar.gz"/>
++            <xsd:enumeration value="tar.bz2"/>
++        </xsd:restriction>
++    </xsd:simpleType>
++
++</xsd:schema>
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml	(revision 0)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!-- $Id$ -->
++<project name="builder">
++
++    <!-- Apply XSLT to generate ant build file -->
++    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml"/>
++
++    <!-- Execute ant build file -->
++    <ant antfile="builder-output.xml"/>
++</project>
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml	(revision 0)
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!-- $Id$ -->
++<project name="builder">
++
++    <!-- Validate builder.xml -->
++    <xmlvalidate failonerror="true" warn="yes" lenient="no">
++        <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
++        <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
++        <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
++        <property name="http://apache.org/xml/properties/schema/external-noNamespaceSchemaLocation" value="builder-1.0.xsd"/>
++        <fileset dir=".">
++            <include name="builder.xml"/>
++        </fileset>
++    </xmlvalidate>
++
++    <!-- Apply XSLT to generate ant build file -->
++    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml"/>
++
++    <!-- Execute ant build file -->
++    <ant antfile="builder-output.xml"/>
++</project>
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/BuiltFileResource.java
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/BuiltFileResource.java	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/BuiltFileResource.java	(revision 0)
+@@ -0,0 +1,85 @@
++/*
++ *  Licensed to the Apache Software Foundation (ASF) under one or more
++ *  contributor license agreements.  See the NOTICE file distributed with
++ *  this work for additional information regarding copyright ownership.
++ *  The ASF licenses this file to You under the Apache License, Version 2.0
++ *  (the "License"); you may not use this file except in compliance with
++ *  the License.  You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ *  Unless required by applicable law or agreed to in writing, software
++ *  distributed under the License is distributed on an "AS IS" BASIS,
++ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ *  See the License for the specific language governing permissions and
++ *  limitations under the License.
++ *
++ */
++package org.apache.ivy.plugins.resolver.builder;
++
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.IOException;
++import java.io.InputStream;
++
++import org.apache.ivy.core.IvyPatternHelper;
++import org.apache.ivy.core.module.descriptor.Artifact;
++import org.apache.ivy.plugins.repository.Resource;
++
++/**
++ * Represents an artifact built by a {@link BuilderResolver}.
++ */
++public class BuiltFileResource implements Resource {
++
++    /**
++     * Where the build file should put built artifacts (relative
++     * to the build directory). Value is: {@value}
++     */
++    public static final String BUILT_ARTIFACT_PATTERN = "artifacts/[type]s/[artifact].[ext]";
++
++    private final File file;
++
++    public BuiltFileResource(File file) {
++        this.file = file;
++    }
++
++    public BuiltFileResource(File dir, Artifact artifact) {
++        this(new File(dir, IvyPatternHelper.substitute(BUILT_ARTIFACT_PATTERN, artifact)));
++    }
++
++    public String getName() {
++        return file.toURI().toString();
++    }
++
++    public Resource clone(String name) {
++        return new BuiltFileResource(new File(name));
++    }
++
++    public long getLastModified() {
++        return file.lastModified();
++    }
++
++    public long getContentLength() {
++        return file.length();
++    }
++
++    public boolean exists() {
++        return file.exists();
++    }
++
++    public String toString() {
++        return getName();
++    }
++
++    public File getFile() {
++        return file;
++    }
++
++    public boolean isLocal() {
++        return false;
++    }
++
++    public InputStream openStream() throws IOException {
++        return new FileInputStream(file);
++    }
++}
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/BuiltFileResource.java
+___________________________________________________________________
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
+@@ -0,0 +1,199 @@
++/*
++ *  Licensed to the Apache Software Foundation (ASF) under one or more
++ *  contributor license agreements.  See the NOTICE file distributed with
++ *  this work for additional information regarding copyright ownership.
++ *  The ASF licenses this file to You under the Apache License, Version 2.0
++ *  (the "License"); you may not use this file except in compliance with
++ *  the License.  You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ *  Unless required by applicable law or agreed to in writing, software
++ *  distributed under the License is distributed on an "AS IS" BASIS,
++ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ *  See the License for the specific language governing permissions and
++ *  limitations under the License.
++ *
++ */
++package org.apache.ivy.plugins.resolver.builder;
++
++import java.io.File;
++import java.io.IOException;
++import java.util.ArrayList;
++import java.util.Date;
++import java.util.HashMap;
++import java.util.Iterator;
++
++import org.apache.ivy.core.module.descriptor.Artifact;
++import org.apache.ivy.core.module.descriptor.DefaultArtifact;
++import org.apache.ivy.core.module.id.ModuleRevisionId;
++import org.apache.ivy.plugins.resolver.URLResolver;
++import org.apache.ivy.plugins.resolver.util.ResolvedResource;
++import org.apache.ivy.util.Message;
++
++/**
++ * Resolver that performs a "build" operation to resolve artifacts.
++ *
++ * <p>
++ * The resolver is configured with a base URL, from which the "ivy.xml"
++ * and "builder.xml" files are resolved. The latter file contains
++ * instructions describing how to build the actual artifacts.
++ */
++public class BuilderResolver extends URLResolver {
++
++    private static final String BUILDER_ARTIFACT_NAME = "builder";
++    private static final String BUILDER_ARTIFACT_TYPE = "builder";
++    private static final String BUILDER_ARTIFACT_EXT = "xml";
++
++    private final HashMap/*<ModuleRevisionId, BuilderCacheEntry>*/ builderCache = new HashMap();
++
++    private File buildRoot;
++    private File resourceCache;
++    private boolean validate = true;
++    private boolean preserve;
++
++    public BuilderResolver() {
++        Runtime.getRuntime().addShutdownHook(new Thread() {
++            public void run() {
++                clearCache();
++            }
++        });
++    }
++
++    protected synchronized void clearCache() {
++        if (this.preserve) {
++            return;
++        }
++        for (Iterator i = builderCache.values().iterator(); i.hasNext();) {
++            BuilderCacheEntry entry = (BuilderCacheEntry) i.next();
++            entry.cleanup();
++        }
++        builderCache.clear();
++        if (this.buildRoot != null) {
++            deleteRecursive(this.buildRoot);
++        }
++    }
++
++    /**
++     * Set root directory under which builds take place.
++     */
++    public void setBuildRoot(String buildRoot) {
++        this.buildRoot = new File(buildRoot);
++    }
++
++    /**
++     * Set resource cache directory.
++     */
++    public void setResourceCache(String resourceCache) {
++        this.resourceCache = resourceCache != null ?
++          new File(resourceCache) : null;
++    }
++
++    /**
++     * Set pattern for locating "builder.xml" files.
++     */
++    public void setBuilderPattern(String pattern) {
++        ArrayList list = new ArrayList();
++        list.add(pattern);
++        setArtifactPatterns(list);
++    }
++
++    /**
++     * Set whether to preserve build directories. Default is false.
++     */
++    public void setPreserveBuildDirectories(boolean preserve) {
++        this.preserve = preserve;
++    }
++
++    /**
++     * Set whether to validate downloaded builder.xml files. Default is true.
++     */
++    public void setValidate(boolean validate) {
++        this.validate = validate;
++    }
++
++    public void setAllownomd(boolean b) {
++        Message.error("allownomd not supported by resolver " + this);
++    }
++    public void setDescriptor(String rule) {
++        if (DESCRIPTOR_OPTIONAL.equals(rule)) {
++            Message.error("descriptor=\"" + DESCRIPTOR_OPTIONAL
++              + "\" not supported by resolver " + this);
++            return;
++        }
++        super.setDescriptor(rule);
++    }
++
++    // @Override
++    public void validate() {
++        super.validate();
++        if (this.buildRoot == null) {
++            throw new IllegalStateException("no buildRoot specified");
++        }
++        if (getArtifactPatterns().size() == 0) {
++            throw new IllegalStateException("no builder pattern specified");
++        }
++    }
++
++    // @Override
++    protected synchronized ResolvedResource findArtifactRef(Artifact artifact, Date date) {
++
++        // For our special build file, defer to superclass
++        if (BUILDER_ARTIFACT_NAME.equals(artifact.getName())
++          && BUILDER_ARTIFACT_TYPE.equals(artifact.getType())
++          && BUILDER_ARTIFACT_EXT.equals(artifact.getExt())) {
++            return super.findArtifactRef(artifact, date);
++        }
++
++        // Check the cache
++        ModuleRevisionId mr = artifact.getModuleRevisionId();
++        BuilderCacheEntry entry = (BuilderCacheEntry) builderCache.get(mr);
++
++        // Ignore invalid entries
++        if (entry != null && !entry.isBuilt()) {
++            builderCache.remove(mr);
++            entry.cleanup();
++            entry = null;
++        }
++
++        // Build the artifacts (if not done already)
++        if (entry == null) {
++            ResolvedResource builder = findArtifactRef(new DefaultArtifact(mr, null,
++              BUILDER_ARTIFACT_NAME, BUILDER_ARTIFACT_TYPE, BUILDER_ARTIFACT_EXT), date);
++            if (builder == null) {
++                return null;
++            }
++            entry = new BuilderCacheEntry(mr, this.buildRoot,
++              this.resourceCache, this.validate, this.preserve);
++            try {
++                entry.build(builder.getResource().openStream());
++            } catch (IOException e) {
++                throw new RuntimeException("can't build artifact " + artifact, e);
++            }
++            builderCache.put(mr, entry);
++        }
++
++        // Return reference to desired artifact
++        return entry.getBuiltArtifact(artifact);
++    }
++
++    public String getTypeName() {
++        return "builder";
++    }
++
++    public static boolean deleteRecursive(File file) {
++        if (!file.exists()) {
++            return true;
++        }
++        if (file.isDirectory()) {
++            File[] files = file.listFiles();
++            for (int i = 0; i < files.length; i++) {
++                if (!deleteRecursive(files[i])) {
++                    return false;
++                }
++            }
++        }
++        return file.delete();
++    }
++}
++
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
+___________________________________________________________________
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
+@@ -0,0 +1,316 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<!-- $Id$ -->
++<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
++
++    <xsl:output encoding="UTF-8" method="xml" indent="yes" media-type="text/xml"/>
++
++    <xsl:variable name="maven2repo" select="'http://repo1.maven.org/maven2/'"/>
++
++    <xsl:template match="/builder-module">
++        <xsl:comment> GENERATED FILE - DO NOT EDIT </xsl:comment>
++        <xsl:comment> Generated by $Id$ </xsl:comment>
++        <project name="builder" default="build">
++            <xsl:apply-templates select="property"/>
++
++            <xsl:apply-templates select="resource | m2resource"/>
++
++            <target name="resources">
++                <xsl:attribute name="depends">
++                    <xsl:for-each select="resource | m2resource/artifact">
++                        <xsl:if test="position() &gt; 1">
++                            <xsl:value-of select="', '"/>
++                        </xsl:if>
++                        <xsl:value-of select="concat('resource.', generate-id())"/>
++                    </xsl:for-each>
++                </xsl:attribute>
++            </target>
++
++            <target name="build" depends="resources">
++                <mkdir dir="artifacts/jars"/>
++                <mkdir dir="artifacts/sources"/>
++                <mkdir dir="artifacts/javadocs"/>
++                <!-- ...add some other common artifact types here... -->
++                <xsl:apply-templates select="build/*"/>
++            </target>
++        </project>
++    </xsl:template>
++
++    <!-- Properties -->
++    <xsl:template match="/builder-module/property">
++        <xsl:copy-of select="."/>
++    </xsl:template>
++
++    <!-- The allowed build actions -->
++    <xsl:template match="/builder-module/build/copy"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/jar"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/mkdir"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/move"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/tar"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/unjar"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/untar"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/unwar"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/unzip"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/war"><xsl:copy-of select="."/></xsl:template>
++    <xsl:template match="/builder-module/build/zip"><xsl:copy-of select="."/></xsl:template>
++
++    <!-- Resource definitions -->
++    <xsl:template match="/builder-module/resource">
++        <target name="setfilename.{generate-id()}">
++            <basename property="filename.{generate-id()}" file="{@url}"/>
++        </target>
++        <xsl:call-template name="resource">
++            <xsl:with-param name="url" select="@url"/>
++            <xsl:with-param name="type" select="@type"/>
++            <xsl:with-param name="csum" select="@sha1"/>
++            <xsl:with-param name="dest" select="@dest"/>
++            <xsl:with-param name="tofile" select="@tofile"/>
++            <xsl:with-param name="filename" select="concat('${filename.', generate-id(), '}')"/>
++            <xsl:with-param name="depends" select="concat('setfilename.', generate-id())"/>
++        </xsl:call-template>
++    </xsl:template>
++
++    <!-- Maven2 resources -->
++    <xsl:template match="/builder-module/m2resource">
++        <xsl:variable name="groupdirs" select="concat('groupdirs.', generate-id())"/>
++        <target name="setgroupdirs.{generate-id()}">
++            <xsl:variable name="groupId">
++                <xsl:choose>
++                    <xsl:when test="@groupId">
++                        <xsl:value-of select="@groupId"/>
++                    </xsl:when>
++                    <xsl:otherwise>
++                        <xsl:value-of select="'${ivy.builder.organisation}'"/>
++                    </xsl:otherwise>
++                </xsl:choose>
++            </xsl:variable>
++            <pathconvert property="{$groupdirs}" dirsep="/">
++                <path location="{$groupId}"/>
++                <mapper type="unpackage" to="*">
++                    <xsl:attribute name="from">
++                        <xsl:value-of select="'${basedir}/*'"/>
++                    </xsl:attribute>
++                </mapper>
++            </pathconvert>
++        </target>
++        <xsl:variable name="artifactId">
++            <xsl:choose>
++                <xsl:when test="@artifactId">
++                    <xsl:value-of select="@artifactId"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:value-of select="'${ivy.builder.module}'"/>
++                </xsl:otherwise>
++            </xsl:choose>
++        </xsl:variable>
++        <xsl:variable name="version">
++            <xsl:choose>
++                <xsl:when test="@version">
++                    <xsl:value-of select="@version"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:value-of select="'${ivy.builder.revision}'"/>
++                </xsl:otherwise>
++            </xsl:choose>
++        </xsl:variable>
++        <xsl:variable name="repourl">
++            <xsl:choose>
++                <xsl:when test="@repourl and substring(@repourl, string-length(@repourl) - 1) = '/'">
++                    <xsl:value-of select="@repourl"/>
++                </xsl:when>
++                <xsl:when test="@repourl">
++                    <xsl:value-of select="concat(@repourl, '/')"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:value-of select="$maven2repo"/>
++                </xsl:otherwise>
++            </xsl:choose>
++        </xsl:variable>
++        <xsl:variable name="m2dir" select="concat($repourl, '${', $groupdirs, '}/', $artifactId, '/', $version, '/')"/>
++        <xsl:for-each select="artifact">
++            <xsl:variable name="classifier">
++                <xsl:choose>
++                    <xsl:when test="@classifier">
++                        <xsl:value-of select="concat('-', @classifier)"/>
++                    </xsl:when>
++                    <xsl:otherwise/>
++                </xsl:choose>
++            </xsl:variable>
++            <xsl:variable name="suffix">
++                <xsl:choose>
++                    <xsl:when test="@ext">
++                        <xsl:value-of select="concat('.', @ext)"/>
++                    </xsl:when>
++                    <xsl:otherwise>
++                        <xsl:value-of select="'.jar'"/>
++                    </xsl:otherwise>
++                </xsl:choose>
++            </xsl:variable>
++            <xsl:variable name="filename" select="concat($artifactId, '-', $version, $classifier, $suffix)"/>
++            <xsl:variable name="url" select="concat($m2dir, $filename)"/>
++            <xsl:call-template name="resource">
++                <xsl:with-param name="url" select="$url"/>
++                <xsl:with-param name="csum" select="@sha1"/>
++                <xsl:with-param name="dest" select="@dest"/>
++                <xsl:with-param name="tofile" select="@tofile"/>
++                <xsl:with-param name="type" select="@type"/>
++                <xsl:with-param name="filename" select="$filename"/>
++                <xsl:with-param name="depends" select="concat('setgroupdirs.', generate-id(..))"/>
++            </xsl:call-template>
++        </xsl:for-each>
++    </xsl:template>
++
++    <!-- Download and optionally unpack a resource -->
++    <xsl:template name="resource">
++        <xsl:param name="url"/>
++        <xsl:param name="type"/>
++        <xsl:param name="csum"/>
++        <xsl:param name="dest"/>
++        <xsl:param name="tofile"/>
++        <xsl:param name="filename"/>
++        <xsl:param name="depends"/>
++
++        <!-- Figure out which directory to download into (at runtime) -->
++        <target name="genresdir.1.{generate-id()}" unless="ivy.builder.resourceCache">
++            <property name="resdir.{generate-id()}" value="tempdir.{generate-id()}"/>
++        </target>
++        <target name="genresdir.2.{generate-id()}" if="ivy.builder.resourceCache">
++            <property name="resdir.{generate-id()}">
++                <xsl:attribute name="value">${ivy.builder.resourceCache}</xsl:attribute>
++            </property>
++        </target>
++        <xsl:variable name="resdir" select="concat('${resdir.', generate-id(), '}')"/>
++        <xsl:variable name="downloadfile" select="concat($resdir, '${file.separator}', $filename)"/>
++
++        <!-- Check whether file is already downloaded -->
++        <target name="checkdownload.{generate-id()}" depends="{$depends}, genresdir.1.{generate-id()}, genresdir.2.{generate-id()}">
++            <condition property="alreadydownloaded.{generate-id()}">
++                <and>
++                    <available file="{$downloadfile}"/>
++                    <checksum file="{$downloadfile}" algorithm="SHA" property="{$csum}"/>
++                </and>
++            </condition>
++        </target>
++
++        <!-- Download the file (if not already downloaded) -->
++        <target name="download.{generate-id()}" depends="checkdownload.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
++            <mkdir dir="{$resdir}"/>
++            <get src="{$url}" dest="{$downloadfile}" verbose="true" usetimestamp="true"/>
++            <fail message="SHA1 checksum verification for {$filename} failed!">
++                <condition>
++                    <not>
++                        <checksum file="{$downloadfile}" algorithm="SHA" property="{$csum}"/>
++                    </not>
++                </condition>
++            </fail>
++        </target>
++
++        <!-- Unpack or just copy the file to its destination -->
++        <target name="resource.{generate-id()}" depends="download.{generate-id()}">
++            <xsl:choose>
++                <xsl:when test="$tofile">
++                    <copy file="{$downloadfile}" tofile="{$tofile}"/>
++                </xsl:when>
++                <xsl:when test="$dest">
++                    <xsl:choose>
++                        <xsl:when test="$type = 'none'">
++                            <copy file="{$downloadfile}" todir="{$dest}"/>
++                        </xsl:when>
++                        <xsl:otherwise>
++                            <xsl:variable name="actualtype">
++                                <xsl:choose>
++                                    <xsl:when test="not($type)">
++                                        <xsl:call-template name="archiveType">
++                                            <xsl:with-param name="file" select="$url"/>
++                                        </xsl:call-template>
++                                    </xsl:when>
++                                    <xsl:otherwise>
++                                        <xsl:value-of select="$type"/>
++                                    </xsl:otherwise>
++                                </xsl:choose>
++                            </xsl:variable>
++                            <xsl:call-template name="unpack">
++                                <xsl:with-param name="file" select="$downloadfile"/>
++                                <xsl:with-param name="dir" select="$dest"/>
++                                <xsl:with-param name="type" select="$actualtype"/>
++                            </xsl:call-template>
++                        </xsl:otherwise>
++                    </xsl:choose>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:message terminate="yes">
++                        <xsl:value-of select="'ERROR: one of &quot;tofile&quot; or &quot;dest&quot; must be specified for resources&#10;'"/>
++                    </xsl:message>
++                </xsl:otherwise>
++            </xsl:choose>
++        </target>
++    </xsl:template>
++
++    <!-- Unpack an archive -->
++    <xsl:template name="unpack">
++        <xsl:param name="file"/>
++        <xsl:param name="dir"/>
++        <xsl:param name="type"/>
++
++        <!-- Unpack -->
++        <mkdir dir="{$dir}"/>
++        <xsl:choose>
++            <xsl:when test="$type = 'zip' or $type = 'war' or $type = 'jar'">
++                <unzip src="{$file}" dest="{$dir}">
++                    <xsl:if test="*">
++                        <fileset dir=".">
++                            <xsl:copy-of select="*"/>
++                        </fileset>
++                    </xsl:if>
++                </unzip>
++            </xsl:when>
++            <xsl:when test="starts-with($type, 'tar')">
++                <untar src="{$file}" dest="{$dir}">
++                    <xsl:choose>
++                        <xsl:when test="$type = 'tar.gz'">
++                            <xsl:attribute name="compression">gzip</xsl:attribute>
++                        </xsl:when>
++                        <xsl:when test="$type = 'tar.bz2'">
++                            <xsl:attribute name="compression">bzip2</xsl:attribute>
++                        </xsl:when>
++                    </xsl:choose>
++                    <xsl:if test="*">
++                        <fileset dir=".">
++                            <xsl:copy-of select="*"/>
++                        </fileset>
++                    </xsl:if>
++                </untar>
++            </xsl:when>
++            <xsl:otherwise>
++                <xsl:message terminate="yes">
++                    <xsl:value-of select="concat('ERROR: unknown archive type &quot;', $type, '&quot;&#10;')"/>
++                    <xsl:value-of select="'Please set the &quot;type&quot; attribute to one of: zip, tar, tar.gz, or tar.bz2.&#10;'"/>
++                </xsl:message>
++            </xsl:otherwise>
++        </xsl:choose>
++    </xsl:template>
++
++    <!-- Determine type of archive automatically based on filename -->
++    <xsl:template name="archiveType">
++        <xsl:param name="file"/>
++        <xsl:choose>
++            <xsl:when test="substring($file, string-length($file) - 3) = '.jar'">jar</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 3) = '.war'">war</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 3) = '.zip'">zip</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 3) = '.tar'">tar</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 3) = '.tgz'">tar.gz</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 6) = '.tar.gz'">tar.gz</xsl:when>
++            <xsl:when test="substring($file, string-length($file) - 7) = '.tar.bz2'">tar.bz2</xsl:when>
++            <xsl:otherwise>
++                <xsl:message terminate="yes">
++                    <xsl:value-of select="concat('ERROR: cannot determine type of archive: ', $file, '&#10;')"/>
++                    <xsl:value-of select="'Please set the &quot;type&quot; attribute to one of: zip, tar, tar.gz, or tar.bz2.&#10;'"/>
++                </xsl:message>
++            </xsl:otherwise>
++        </xsl:choose>
++    </xsl:template>
++
++    <!-- Ignore anything unexpected -->
++    <xsl:template match="@*|node()"/>
++
++</xsl:transform>
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
+===================================================================
+--- src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
++++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
+@@ -0,0 +1,219 @@
++/*
++ *  Licensed to the Apache Software Foundation (ASF) under one or more
++ *  contributor license agreements.  See the NOTICE file distributed with
++ *  this work for additional information regarding copyright ownership.
++ *  The ASF licenses this file to You under the Apache License, Version 2.0
++ *  (the "License"); you may not use this file except in compliance with
++ *  the License.  You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ *  Unless required by applicable law or agreed to in writing, software
++ *  distributed under the License is distributed on an "AS IS" BASIS,
++ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ *  See the License for the specific language governing permissions and
++ *  limitations under the License.
++ *
++ */
++package org.apache.ivy.plugins.resolver.builder;
++
++import java.io.BufferedOutputStream;
++import java.io.File;
++import java.io.FileOutputStream;
++import java.io.IOException;
++import java.io.InputStream;
++import java.io.OutputStream;
++import java.util.ArrayList;
++
++import org.apache.ivy.core.module.descriptor.Artifact;
++import org.apache.ivy.core.module.id.ModuleRevisionId;
++import org.apache.ivy.plugins.resolver.util.ResolvedResource;
++
++/**
++ * Represents one entry in a {@link BuilderCache}.
++ */
++public class BuilderCacheEntry {
++
++    private static final int BUFSIZE = 1024;
++
++    private final ModuleRevisionId mr;
++    private final File dir;
++    private final File resourceCache;
++    private final boolean validate;
++    private final boolean preserve;
++
++    private boolean built;
++
++    public BuilderCacheEntry(ModuleRevisionId mr, File rootDir,
++      File resourceCache, boolean validate, boolean preserve) {
++        this.mr = mr;
++        this.dir = getSubdir(rootDir, this.mr);
++        this.resourceCache = resourceCache;
++        this.validate = validate;
++        this.preserve = preserve;
++    }
++
++    /**
++     * Attempt to build this entry.
++     *
++     * @param builderXML builder XML input stream
++     * @throws IllegalStateException if this entry has already been built
++     */
++    public synchronized void build(InputStream builderXML) throws IOException {
++
++        // Sanity check
++        if (this.built) {
++            throw new IllegalStateException("build in directory `"
++              + this.dir + "' already completed");
++        }
++
++        // Remove work directory if it exists (e.g. left over from last time)
++        if (this.dir.exists()) {
++            if (!cleanup()) {
++                throw new IOException("can't remove directory `" + this.dir + "'");
++            }
++        }
++
++        // Create work directory
++        if (!this.dir.mkdirs()) {
++            throw new IOException("can't create directory `" + this.dir + "'");
++        }
++
++        // Write out builder XML
++        saveFile("builder.xml", builderXML);
++
++        // Write builder XSLT
++        saveFile("builder.xsl");
++
++        // Write builder XSD
++        saveFile("builder-1.0.xsd");
++
++        // Write master ant build file
++        saveFile(this.validate ? "build-validate.xml" : "build-novalidate.xml");
++
++        // Create new process argument list
++        ArrayList paramList = new ArrayList();
++        paramList.add("ant");
++        //paramList.add("-v");
++        paramList.add("-Divy.builder.organisation=" + this.mr.getModuleId().getOrganisation());
++        paramList.add("-Divy.builder.module=" + this.mr.getModuleId().getName());
++        paramList.add("-Divy.builder.revision=" + this.mr.getRevision());
++        paramList.add("-Divy.builder.branch=" + this.mr.getBranch());
++        if (this.resourceCache != null)
++            paramList.add("-Divy.builder.resourceCache=" + this.resourceCache.getCanonicalPath());
++        paramList.add("-buildfile");
++        paramList.add(this.validate ? "build-validate.xml" : "build-novalidate.xml");
++        String[] params = (String[]) paramList.toArray(new String[paramList.size()]);
++
++        // Run ant
++        Process proc = Runtime.getRuntime().exec(params, null, this.dir);
++        proc.getOutputStream().close();
++        Thread relay1 = startRelay(proc.getInputStream(), System.out);
++        Thread relay2 = startRelay(proc.getErrorStream(), System.err);
++        int result;
++        try {
++            relay1.join();
++            relay2.join();
++            result = proc.waitFor();
++        } catch (InterruptedException e) {
++            throw new RuntimeException(e);
++        }
++        if (result != 0) {
++            throw new IOException("build in directory `" + this.dir + "' failed");
++        }
++        this.built = true;
++    }
++
++    /**
++     * Has this entry been successfully built?
++     */
++    public synchronized boolean isBuilt() {
++        return this.built;
++    }
++
++    /**
++     * Get a built artifact.
++     *
++     * @throws IllegalStateException if this entry's built has not
++     *  (yet) completed successfully
++     */
++    public ResolvedResource getBuiltArtifact(Artifact artifact) {
++        if (!this.built) {
++            throw new IllegalStateException("build in directory `" + this.dir
++              + "' has not yet successfully completed");
++        }
++        return new ResolvedResource(
++          new BuiltFileResource(this.dir, artifact), this.mr.getRevision());
++    }
++
++    public synchronized boolean cleanup() {
++        this.built = false;
++        return BuilderResolver.deleteRecursive(this.dir);
++    }
++
++    /**
++     * Create a separate thread that copies input to output.
++     */
++    protected Thread startRelay(final InputStream in, final OutputStream out) {
++        Thread thread = new Thread() {
++            public void run() {
++                try {
++                    copy(in, out);
++                    in.close();
++                } catch (IOException e) {
++                    return;
++                }
++            }
++        };
++        thread.setDaemon(true);
++        thread.start();
++        return thread;
++    }
++
++    protected void saveFile(String name, InputStream input) throws IOException {
++        OutputStream out = new BufferedOutputStream(
++          new FileOutputStream(new File(this.dir, name)));
++        copy(input, out);
++        input.close();
++        out.close();
++    }
++
++    protected void saveFile(String name) throws IOException {
++        InputStream input = getClass().getResourceAsStream(name);
++        if (input == null) {
++            throw new IOException("can't find resource `" + name + "'");
++        }
++        saveFile(name, input);
++    }
++
++    /**
++     * Copy from input to output. Does not close either stream when finished.
++     */
++    protected void copy(InputStream in, OutputStream out) throws IOException {
++        byte[] buf = new byte[BUFSIZE];
++        int r;
++        while ((r = in.read(buf)) != -1) {
++            out.write(buf, 0, r);
++        }
++        out.flush();
++    }
++
++    // @Override
++    protected void finalize() throws Throwable {
++        try {
++            if (!this.preserve) {
++                cleanup();
++            }
++        } finally {
++            super.finalize();
++        }
++    }
++
++    private static File getSubdir(File rootDir, ModuleRevisionId mr) {
++        return new File(rootDir,
++          mr.getOrganisation() + File.separatorChar
++          + mr.getName() + File.separatorChar
++          + mr.getRevision());
++    }
++}
++
+
+Property changes on: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
+___________________________________________________________________
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: src/java/org/apache/ivy/core/settings/typedef.properties
+===================================================================
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 647187)
++++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
+@@ -27,6 +27,7 @@
+ vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
+ vfs         = org.apache.ivy.plugins.resolver.VfsResolver
+ cache		= org.apache.ivy.plugins.resolver.CacheResolver
++builder		= org.apache.ivy.plugins.resolver.builder.BuilderResolver
+ 
+ latest-revision = org.apache.ivy.plugins.latest.LatestRevisionStrategy
+ latest-lexico   = org.apache.ivy.plugins.latest.LatestLexicographicStrategy
+Index: src/example/builder-resolver/ivysettings.xml
+===================================================================
+--- src/example/builder-resolver/ivysettings.xml	(revision 0)
++++ src/example/builder-resolver/ivysettings.xml	(revision 0)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="ISO-8859-1"?>
++
++<!-- $Id$ -->
++<ivysettings>
++    <resolvers>
++        <builder name="ivyroundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache">
++
++            <!-- This defines the Ivy file location as is normally done -->
++            <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
++
++            <!-- This defines the location of the build instructions -->
++            <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
++        </builder>
++    </resolvers>
++    <modules>
++        <module organisation=".*" name=".*" resolver="ivyroundup"/>
++    </modules>
++    <caches useOrigin="true"/>
++</ivysettings>
++
+
+Property changes on: src/example/builder-resolver/ivysettings.xml
+___________________________________________________________________
+Name: svn:mime-type
+   + text/xml
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
+Index: build.xml
+===================================================================
+--- build.xml	(revision 647187)
++++ build.xml	(working copy)
+@@ -570,6 +570,32 @@
+     
+ 
+     <!-- =================================================================
++         IVY ROUNDUP TEST
++         ================================================================= -->
++    <target name="roundup" depends="jar">
++
++        <!-- Configure Ivy -->
++        <ivy:settings id="roundup-settings" override="true" file="src/example/builder-resolver/ivysettings.xml"/>
++
++        <!-- Find TestNG (dynamic revision) using roundup resolver  -->
++        <ivy:resolve revision="5.7+" settingsRef="roundup-settings" type="jar"
++          organisation="testng" module="testng" inline="true" log="download-only"/>
++        <ivy:cachepath pathid="testng.classpath" settingsRef="roundup-settings" type="jar"
++          organisation="testng" module="testng" inline="true" log="download-only"/>
++
++        <!-- Find commons-email using roundup resolver  -->
++        <ivy:resolve revision="1.1" settingsRef="roundup-settings" type="jar"
++          organisation="org.apache.commons" module="commons-email" inline="true" log="download-only"/>
++        <ivy:cachepath pathid="email.classpath" settingsRef="roundup-settings" type="jar"
++          organisation="org.apache.commons" module="commons-email" inline="true" log="download-only"/>
++
++        <!-- Run TestNG's main class causing it to output usage message  -->
++        <java classname="org.testng.TestNG" fork="true">
++            <classpath refid="testng.classpath"/>
++        </java>
++    </target>
++
++    <!-- =================================================================
+          IDE SPECIFIC
+          ================================================================= -->
+     <available file="${basedir}/.classpath" property="eclipse.classpath.exists" />
+Index: doc/configuration/resolvers.html
+===================================================================
+--- doc/configuration/resolvers.html	(revision 647187)
++++ doc/configuration/resolvers.html	(working copy)
+@@ -63,6 +63,7 @@
+ <tbody>
+ <tr><td><a href="../resolver/ivyrep.html">IvyRep</a></td><td>Standard</td><td>Finds ivy files on ivyrep and artifacts on ibiblio.</td></tr>
+ <tr><td><a href="../resolver/ibiblio.html">IBiblio</a></td><td>Standard</td><td>Finds artifacts on ibiblio.</td></tr>
++<tr><td><a href="../resolver/builder.html">Builder</a></td><td>Standard</td><td>Finds ivy files and build instructions via URLs, then builds artifacts by following the instructions.</td></tr>
+ <tr><td><a href="../resolver/filesystem.html">FileSystem</a></td><td>Standard</td><td>This very performant resolver finds ivy files and artifacts in your file system.</td></tr>
+ <tr><td><a href="../resolver/url.html">Url</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with urls.</td></tr>
+ <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
+Index: doc/toc.json
+===================================================================
+--- doc/toc.json	(revision 647187)
++++ doc/toc.json	(working copy)
+@@ -295,6 +295,13 @@
+                                   ]
+                               },
+                               {
++                                "id":"resolver/builder",
++                                "title":"Builder resolver",
++                                "children": [
++
++                                  ]
++                              },
++                              {
+                                 "id":"resolver/filesystem",
+                                 "title":"File System resolver",
+                                 "children": [
+Index: doc/resolver/builder.html
+===================================================================
+--- doc/resolver/builder.html	(revision 0)
++++ doc/resolver/builder.html	(revision 0)
+@@ -0,0 +1,346 @@
++<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
++<!--
++   Licensed to the Apache Software Foundation (ASF) under one
++   or more contributor license agreements.  See the NOTICE file
++   distributed with this work for additional information
++   regarding copyright ownership.  The ASF licenses this file
++   to you under the Apache License, Version 2.0 (the
++   "License"); you may not use this file except in compliance
++   with the License.  You may obtain a copy of the License at
++
++     http://www.apache.org/licenses/LICENSE-2.0
++
++   Unless required by applicable law or agreed to in writing,
++   software distributed under the License is distributed on an
++   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++   KIND, either express or implied.  See the License for the
++   specific language governing permissions and limitations
++   under the License.    
++-->
++<html>
++<head>
++	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
++	<script type="text/javascript">var xookiConfig = {level: 1};</script>	
++	<script type="text/javascript" src="../xooki/xooki.js"></script>
++</head>
++<body>
++	<textarea id="xooki-source">
++<table class="resolver">
++<tr><td class="title">Tag</td><td class="value">builder</td></tr>
++<tr><td class="title">Handle latest</td><td class="value">yes with http urls (and apache server) and with file urls, no with other urls</td></tr>
++<tr><td class="title">Handle publish</td><td class="value">no</td></tr>
++</table>
++
++<br/>
++<p>
++<span class="since">Since 2.0</span>.
++</p>
++
++<p>
++This resolver accesses ivy files and "build instructions" from an online "builder" repository. "Builder" repositories contain no actual artifacts. To get the artifacts, the build instructions are downloaded from the repository and executed locally. These instructions specify additional resource(s) to download and how to build the artifacts from them, for example, by downloading a project's original distribution archive directly from their web site and extracting the desired artifacts.
++</p>
++
++<p>
++Builder repositories allow the creation of Ivy repositories that require neither the participation of any of the modules' creators nor setting up a huge mirror site. One such repository on the web is <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a>. Of course, private builder repositories are feasible as well.
++</p>
++
++<p>
++The build instructions are in a simple XML format. At "build time" they get converted into a build.xml file via XSLT and then executed using <a href="http://ant.apache.org/">ant</a>. Therefore, ant must be available as an executable on the platform. The ant task executes in a separate process and so is not affected by properties, etc. that may be set in any existing ant environment in which Ivy is running. However, ivy will define a few properties for convenience; see the "Properties" listed below.
++</p>
++
++<p>
++For security reasons, the XSLT transform ensures that (a) all downloaded archives have SHA1 checksums that can be verified; and (b) only a very limited set of ant tasks can be performed during the build; currently these include move, copy, mkdir, zip, unzip, tar, and untar.
++</p>
++
++<p>
++The Builder resolver is based on the <a href="url.html">URL resolver</a> and is configured similarly, except the artifact child tags specify where to find the XML build instructions, rather than the artifacts themselves.
++</p>
++
++<p>
++Because the downloading and building process is slow, it is important to use <a href="../concept.html#cache">Ivy's caching support</a> to avoid repeated execution of the build instructions. In addition, the Builder resolver has its own private cache for downloaded resources; this is enabled using the <span class="ivy-att">resourceCache</span> attribute (see below).
++</p>
++
++<h1>Attributes</h1>
++This resolver shares the <a href="../configuration/resolvers.html#common">common attributes</a> of standard resolvers.
++<table class="ivy-attributes">
++<thead>
++    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
++</thead>
++<tbody>
++  <tr>
++    <td>buildRoot</td>
++    <td>Defines the root of the temporary build directory hierarchy</td>
++    <td>Yes</td>
++  </tr>
++  <tr>
++    <td>resourceCache</td>
++    <td>Directory where downloaded resources should be cached</td>
++    <td>No; defaults to none</td>
++  </tr>
++  <tr>
++    <td>validate</td>
++    <td>True if this resolver should validate (via XSD) the downloaded XML build instructions</td>
++    <td>No; defaults to true</td>
++  </tr>
++  <tr>
++    <td>preserveBuildDirectories</td>
++    <td>True if this resolver should not delete the temporary build directories in which the ant tasks are executed (for debugging purposes)</td>
++    <td>No; defaults to false</td>
++  </tr>
++</tbody>
++</table>
++
++<h1>Child elements</h1>
++<table class="ivy-children">
++<thead>
++    <tr><th class="ivy-chld">Element</th><th class="ivy-chld-desc">Description</th><th class="ivy-chld-card">Cardinality</th></tr>
++</thead>
++<tbody>
++    <tr><td>ivy</td><td>Defines a pattern for ivy files, using the pattern attribute</td>
++    <td>1..n</td></tr>
++    <tr><td>artifact</td><td>Defines a pattern for builder XML files, using the pattern attribute</td>
++    <td>1..n</td></tr>
++</tbody>
++</table>
++
++<h1>Examples</h1>
++<code type="xml">
++<builder name="ivyroundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache">
++  <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
++  <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
++</builder>
++</code>
++Defines a builder resolver which points to the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> and downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code>
++
++<h1>Build Instructions</h1>
++<p>
++The goal of the build instructions is to download the required archives, extract the artifacts, and put the artifacts into a subdirectory. Each artifact should be written to artifacts/[type]s/[artifact].[ext] when the build completes.
++</p>
++
++<p>
++Below is an example of build instructions for <a href="http://testng.org/">TestNG 2.5</a>:
++<code type="xml">
++<builder-module version="1.0">
++
++    <property name="name" value="${ivy.builder.module}"/>
++    <property name="version" value="${ivy.builder.revision}"/>
++    <property name="zipname" value="${name}-${version}"/>
++
++    <resource dest="archive" url="http://testng.org/${zipname}.zip" sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
++        <include name="${zipname}/src/main/**/*"/>
++        <include name="${zipname}/src/jdk15/**/*"/>
++        <include name="${zipname}/javadocs/**/*"/>
++        <include name="${zipname}/*.jar"/>
++    </resource>
++
++    <build>
++
++        <!-- jar  -->
++        <move file="archive/${zipname}/${zipname}-jdk14.jar" tofile="artifacts/jars/${name}-jdk14.jar"/>
++        <move file="archive/${zipname}/${zipname}-jdk15.jar" tofile="artifacts/jars/${name}-jdk15.jar"/>
++
++        <!-- source -->
++        <zip destfile="artifacts/sources/${name}.zip">
++            <fileset dir="archive/${zipname}/src/main">
++                <include name="**/*.java"/>
++            </fileset>
++            <fileset dir="archive/${zipname}/src/jdk15">
++                <include name="**/*.java"/>
++            </fileset>
++        </zip>
++
++        <!-- javadoc -->
++        <zip destfile="artifacts/javadocs/javadoc.zip">
++            <fileset dir="archive/${zipname}/javadocs"/>
++        </zip>
++    </build>
++</builder-module>
++</code>
++Of course, build instructions must produce artifacts consistent with those listed in the associated ivy.xml file.
++</p>
++
++<h1>Build-time properties</h1>
++This resolver ensures following ant properties are defined when it executes the ant build task.
++<table class="ivy-attributes">
++<thead>
++    <tr><th class="ivy-att">Property</th><th class="ivy-att-desc">Description</th>
++</thead>
++<tbody>
++  <tr>
++    <td>ivy.builder.organisation</td>
++    <td>Organization of the ivy module whose artifacts are being built</td>
++  </tr>
++  <tr>
++    <td>ivy.builder.module</td>
++    <td>Module of the ivy module whose artifacts are being built</td>
++  </tr>
++  <tr>
++    <td>ivy.builder.revision</td>
++    <td>Revision of the ivy module whose artifacts are being built</td>
++  </tr>
++  <tr>
++    <td>ivy.builder.branch</td>
++    <td>Branch of the ivy module whose artifacts are being built</td>
++  </tr>
++  <tr>
++    <td>ivy.builder.resourceCache</td>
++    <td>The configured <span class="ivy-att">resourceCache</span> if any; otherwise not defined</td>
++</tbody>
++</table>
++
++<h1>Builder XML Elements</h1>
++The build instructions document element can contain the following child tags.
++<table class="ivy-children">
++<thead>
++    <tr><th class="ivy-chld">Element</th><th class="ivy-chld-desc">Description</th><th class="ivy-chld-card">Cardinality</th></tr>
++</thead>
++<tbody>
++  <tr>
++    <td>property</td>
++    <td>Set an ant property</td>
++    <td>0..n</td>
++  </tr>
++  <tr>
++    <td>resource</td>
++    <td>Define a resource to download and (optionally) unpack</td>
++    <td>0..n</td>
++  </tr>
++  <tr>
++    <td>m2resource</td>
++    <td>Define a Maven2 resource to download and (optionally) unpack</td>
++    <td>0..n</td>
++  </tr>
++  <tr>
++    <td>build</td>
++    <td>Specify move, copy, and/or archiving ant tasks that ultimately result in each artifact being placed into artifacts/[type]s/[artifact].[ext]</td>
++    <td>0..1</td>
++  </tr>
++</tbody>
++</table>
++
++<h1>Resource XML Elements</h1>
++The resource XML tag supports the following attributes:
++<table class="ivy-attributes">
++<thead>
++    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
++</thead>
++<tbody>
++  <tr>
++    <td>url</td>
++    <td>URL for the resource</td>
++    <td>Yes</td>
++  </tr>
++  <tr>
++    <td>sha1</td>
++    <td>SHA1 checksum of the resource</td>
++    <td>Yes</td>
++  </tr>
++  <tr>
++    <td>dest</td>
++    <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
++    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
++  </tr>
++  <tr>
++    <td>tofile</td>
++    <td>Where to put the file; no extraction will be performed</td>
++  </tr>
++  <tr>
++    <td>type</td>
++    <td>Type of archive: "zip", "jar", "war", "tar", "tgz", "tar.gz", "tar.bz2"</td>
++    <td>No; if not present, will be automatically determined from the filename suffix</td>
++  </tr>
++</tbody>
++</table>
++<br />
++The resource XML tag may contain child elements. If any exist, they will be included as children of an automatically generated fileset tag.
++
++<h1>Maven2 Resources</h1>
++Special support is included for maven2 resources. For these resources, use the m2resource tag instead of the resource tag. Each m2resource tag specifies one or more artifacts that are downloaded from the Maven2 repository.
++
++<h1>M2Resource XML Elements</h1>
++The m2resource XML tag supports the following attributes:
++<table class="ivy-attributes">
++<thead>
++    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
++</thead>
++<tbody>
++  <tr>
++    <td>groupId</td>
++    <td>Maven group ID</td>
++    <td>No; defaults to ${ivy.builder.organisation}</td>
++  </tr>
++  <tr>
++    <td>artifactId</td>
++    <td>Maven artifact ID</td>
++    <td>No; defaults to ${ivy.builder.module}</td>
++  </tr>
++  <tr>
++    <td>version</td>
++    <td>Maven version</td>
++    <td>No; defaults to ${ivy.builder.revision}</td>
++  </tr>
++  <tr>
++    <td>repo</td>
++    <td>Maven repository URL</td>
++    <td>No; defaults to http://repo1.maven.org/maven2/ </td>
++  </tr>
++</tbody>
++</table>
++<br />
++Each m2resource XML tag must have one or more artifact tags that define the artifacts to directly download. The URL for each artifact is constructed automatically based on the attributes in the m2resource and artifact tags.
++
++<h1>M2Resource Artifact Attributes</h1>
++The artifact children of m2resource tags support the following attributes:
++<table class="ivy-attributes">
++<thead>
++    <tr><th class="ivy-att">Attribute</th><th class="ivy-att-desc">Description</th><th class="ivy-att-req">Required</th></tr>
++</thead>
++<tbody>
++  <tr>
++    <td>ext</td>
++    <td>Maven filename extension</td>
++    <td>No; defaults to "jar"</td>
++  </tr>
++  <tr>
++    <td>classifier</td>
++    <td>Maven classifier (e.g., "sources", "javadoc")</td>
++    <td>No; defaults to none</td>
++  </tr>
++  <tr>
++    <td>sha1</td>
++    <td>SHA1 checksum of the resource</td>
++    <td>Yes</td>
++  </tr>
++  <tr>
++    <td>dest</td>
++    <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
++    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
++  </tr>
++  <tr>
++    <td>tofile</td>
++    <td>Where to put the file; no extraction will be performed</td>
++  </tr>
++  <tr>
++    <td>type</td>
++    <td>Type of archive: "zip", "jar", "war", "tar", "tgz", "tar.gz", "tar.bz2"</td>
++    <td>No; if not present, will be automatically determined from the filename suffix</td>
++  </tr>
++</tbody>
++</table>
++<br />
++Below is an example of build instructions for the <a href="http://commons.apache.org/email/">Apache Commons Email</a> module. Note that no build tag is required because all of the maven2 artifacts are usable directly (i.e., without unpacking anything).
++<code type="xml">
++<builder-module version="1.0">
++    <m2resource>
++        <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="a05c4de7bf2e0579ac0f21e16f3737ec6fa0ff98"/>
++        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8f09630f1600bcd0472a36fb2fa2d2a6f2836535"/>
++        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="15d67ca689a792ed8f29d0d21e2d0116fa117b7e"/>
++    </m2resource>
++</builder-module>
++</code>
++</p>
++
++	</textarea>
++<script type="text/javascript">xooki.postProcess();</script>
++</body>
++</html>
+
+Property changes on: doc/resolver/builder.html
+___________________________________________________________________
+Name: svn:mime-type
+   + text/html
+Name: svn:keywords
+   + Id
+Name: svn:eol-style
+   + native
+
