@@ -39,9 +39,6 @@
     <p class="header">
     This page lists all revisions of all modules contained in the <a href="http://code.google.com/p/ivyroundup/">Ivy RoundUp Repository</a>.
     </p>
-    <p class="header">
-    Don't see your favorite software? Then please consider contributing!
-    </p>
 
     <div id="modules">
     <h2>Modules</h2>
