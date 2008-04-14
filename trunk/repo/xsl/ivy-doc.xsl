@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 62 2008-04-10 18:39:55Z archie.cobbs $ -->
+<!-- $Id: ivy-doc.xsl 90 2008-04-14 22:08:55Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
@@ -58,7 +58,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css" /> 
   </head>
   <body>
-    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://code.google.com/p/ivyroundup">Ivy RoundUp Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">
 	        <xsl:element name="a">
