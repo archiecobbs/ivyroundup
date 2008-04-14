@@ -58,7 +58,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css" /> 
   </head>
   <body>
-    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://code.google.com/p/ivyroundup">Ivy RoundUp Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">
 	        <xsl:element name="a">

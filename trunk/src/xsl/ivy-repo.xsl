@@ -92,13 +92,13 @@
                                 <xsl:otherwise>Ivy RoundUp Repository</xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                        <xsl:attribute name="url">http://code.google.com/p/ivyroundup/</xsl:attribute>
+                        <xsl:attribute name="url">http://ivyroundup.googlecode.com/</xsl:attribute>
                     </ivyauthor>
                     <xsl:value-of select="'&#10;        '"/>
                 </xsl:otherwise>
             </xsl:choose>
             <!-- Add <repository> tag pointing to Ivy RoundUp -->
-            <repository name="ivyroundup" url="http://code.google.com/p/ivyroundup/" ivys="true"
+            <repository name="ivyroundup" url="http://ivyroundup.googlecode.com/" ivys="true"
               pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
             <xsl:value-of select="'&#10;        '"/>
             <xsl:apply-templates select="description"/>

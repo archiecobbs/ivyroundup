@@ -30,14 +30,14 @@
   </head>
   <body>
 
-    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="images/logo.png"/></a><br/><a id="rep" href="http://code.google.com/p/ivyroundup">Ivy RoundUp Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="images/logo.png"/></a><br/><a id="rep" href="http://ivroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">Ivy RoundUp Repository Contents</span>
     </h1>
 
     <div id="revision"><span id="revision">Last Repository Build: </span><xsl:value-of select="timestamp"/> (r<xsl:value-of select="svnRevision"/>)</div>
     <p class="header">
-    This page lists all revisions of all modules contained in the <a href="http://code.google.com/p/ivyroundup/">Ivy RoundUp Repository</a>.
+    This page lists all revisions of all modules contained in the <a href="http://ivroundup.googlecode.com/">Ivy RoundUp Repository</a>.
     </p>
 
     <div id="modules">
