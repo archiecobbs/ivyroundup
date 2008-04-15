@@ -61,6 +61,21 @@ This resolver shares the <a href="../configuration/resolvers.html#common">common
     <td>No; defaults to none</td>
   </tr>
   <tr>
+    <td>resourceURL</td>
+    <td>Ivy pattern that specifies a base URL to use for downloading <i>all</i> resources; overrides build instructions</td>
+    <td>No; defaults to none</td>
+  </tr>
+  <tr>
+    <td>verbose</td>
+    <td>True to run ant with the -verbose flag</td>
+    <td>No; defaults to false</td>
+  </tr>
+  <tr>
+    <td>quiet</td>
+    <td>True to run ant with the -quiet flag</td>
+    <td>No; defaults to false</td>
+  </tr>
+  <tr>
     <td>validate</td>
     <td>True if this resolver should validate (via XSD) the downloaded XML build instructions</td>
     <td>No; defaults to true</td>
@@ -72,6 +87,18 @@ This resolver shares the <a href="../configuration/resolvers.html#common">common
   </tr>
 </tbody>
 </table>
+<br />
+<p>
+Setting a resourceURL will cause the resolver to ignore the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
+</p>
+
+<p>
+If a resourceURL download fails, the resolver will fall back to the original URL from the build instructions.
+</p>
+
+<p>
+Configure a resourceURL in situations where you don't want to rely on (or wait for) the web sites configured in the build instructions, and have access to a better (perhaps private) mirror site.
+</p>
 
 <h1>Child elements</h1>
 <table class="ivy-children">
@@ -88,12 +115,15 @@ This resolver shares the <a href="../configuration/resolvers.html#common">common
 
 <h1>Examples</h1>
 <pre type="xml">
-&lt;builder name="ivyroundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache"&gt;
-  &lt;ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/&gt;
-  &lt;artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/&gt;
+&lt;builder name="ivyroundup"
+         buildRoot="${java.io.tmpdir}/ivybuilder"
+         resourceCache="${user.home}/.ivy2/builder-cache"
+         resourceURL="ftp://mirror.example.com/pub/resources/[organisation]/[module]/"&gt;
+    &lt;ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/&gt;
+    &lt;artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/&gt;
 &lt;/builder&gt;
 </pre>
-Defines a builder resolver which points to the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> and downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code>
+Defines a builder resolver which points to the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code> and the mirror site <code>ftp://mirror.example.com/pub/resources/[organisation]/[module]/ </code> will be tried first for all resources.
 
 <h1>Build Instructions</h1>
 <p>
@@ -168,6 +198,11 @@ This resolver ensures following ant properties are defined when it executes the 
   <tr>
     <td>ivy.builder.resourceCache</td>
     <td>The configured <span class="ivy-att">resourceCache</span> if any; otherwise not defined</td>
+  </tr>
+  <tr>
+    <td>ivy.builder.resourceURL</td>
+    <td>The resolved <span class="ivy-att">resourceURL</span> pattern if any; otherwise not defined</td>
+  </tr>
 </tbody>
 </table>
 

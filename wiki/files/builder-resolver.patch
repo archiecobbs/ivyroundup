@@ -356,14 +356,16 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/build-novalidate.xml	(revision 0)
-@@ -0,0 +1,11 @@
+@@ -0,0 +1,13 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
 +<project name="builder">
 +
 +    <!-- Apply XSLT to generate ant build file -->
-+    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml"/>
++    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml">
++        <param name="resourceURL" expression="${ivy.builder.resourceURL}"/>
++    </xslt>
 +
 +    <!-- Execute ant build file -->
 +    <ant antfile="builder-output.xml"/>
@@ -382,7 +384,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml	(revision 0)
-@@ -0,0 +1,22 @@
+@@ -0,0 +1,24 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
@@ -400,7 +402,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/build-validate.xml
 +    </xmlvalidate>
 +
 +    <!-- Apply XSLT to generate ant build file -->
-+    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml"/>
++    <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml">
++        <param name="resourceURL" expression="${ivy.builder.resourceURL}"/>
++    </xslt>
 +
 +    <!-- Execute ant build file -->
 +    <ant antfile="builder-output.xml"/>
@@ -517,7 +521,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
-@@ -0,0 +1,199 @@
+@@ -0,0 +1,223 @@
 +/*
 + *  Licensed to the Apache Software Foundation (ASF) under one or more
 + *  contributor license agreements.  See the NOTICE file distributed with
@@ -569,8 +573,11 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 +
 +    private File buildRoot;
 +    private File resourceCache;
++    private String resourceURL;
 +    private boolean validate = true;
 +    private boolean preserve;
++    private boolean verbose;
++    private boolean quiet;
 +
 +    public BuilderResolver() {
 +        Runtime.getRuntime().addShutdownHook(new Thread() {
@@ -610,6 +617,13 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 +    }
 +
 +    /**
++     * Set base resource override URL pattern.
++     */
++    public void setResourceURL(String resourceURL) {
++        this.resourceURL = resourceURL;
++    }
++
++    /**
 +     * Set pattern for locating "builder.xml" files.
 +     */
 +    public void setBuilderPattern(String pattern) {
@@ -623,6 +637,20 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 +     */
 +    public void setPreserveBuildDirectories(boolean preserve) {
 +        this.preserve = preserve;
++    }
++
++    /**
++     * Set whether to run ant with the -verbose flag. Default is false.
++     */
++    public void setVerbose(boolean verbose) {
++        this.verbose = verbose;
++    }
++
++    /**
++     * Set whether to run ant with the -quiet flag. Default is false.
++     */
++    public void setQuiet(boolean quiet) {
++        this.quiet = quiet;
 +    }
 +
 +    /**
@@ -683,8 +711,8 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 +            if (builder == null) {
 +                return null;
 +            }
-+            entry = new BuilderCacheEntry(mr, this.buildRoot,
-+              this.resourceCache, this.validate, this.preserve);
++            entry = new BuilderCacheEntry(mr, this.buildRoot, this.resourceCache,
++              this.resourceURL, this.validate, this.preserve, this.verbose, this.quiet);
 +            try {
 +                entry.build(builder.getResource().openStream());
 +            } catch (IOException e) {
@@ -729,13 +757,15 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
-@@ -0,0 +1,316 @@
+@@ -0,0 +1,355 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
 +<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 +
 +    <xsl:output encoding="UTF-8" method="xml" indent="yes" media-type="text/xml"/>
++
++    <xsl:param name="resourceURL"/>
 +
 +    <xsl:variable name="maven2repo" select="'http://repo1.maven.org/maven2/'"/>
 +
@@ -910,6 +940,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +            <property name="resdir.{generate-id()}">
 +                <xsl:attribute name="value">${ivy.builder.resourceCache}</xsl:attribute>
 +            </property>
++            <echo level="info">
++                <xsl:attribute name="message">using resource cache: ${ivy.builder.resourceCache}</xsl:attribute>
++            </echo>
 +        </target>
 +        <xsl:variable name="resdir" select="concat('${resdir.', generate-id(), '}')"/>
 +        <xsl:variable name="downloadfile" select="concat($resdir, '${file.separator}', $filename)"/>
@@ -924,8 +957,42 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +            </condition>
 +        </target>
 +
-+        <!-- Download the file (if not already downloaded) -->
-+        <target name="download.{generate-id()}" depends="checkdownload.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
++        <!-- Try resourceURL first (if configured) -->
++        <xsl:if test="$resourceURL">
++
++            <!-- Download the file using resourceURL -->
++            <target name="download.0.{generate-id()}" depends="checkdownload.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
++                <mkdir dir="{$resdir}"/>
++                <get dest="{$downloadfile}" verbose="true" usetimestamp="true" ignoreerrors="true">
++                    <xsl:attribute name="src">
++                        <xsl:value-of select="concat('${ivy.builder.resourceURL}', $filename)"/>
++                    </xsl:attribute>
++                </get>
++            </target>
++
++            <!-- Check whether resourceURL download was successful -->
++            <target name="checkdownload.0.{generate-id()}" depends="download.0.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
++                <condition property="alreadydownloaded.{generate-id()}">
++                    <and>
++                        <available file="{$downloadfile}"/>
++                        <checksum file="{$downloadfile}" algorithm="SHA" property="{$csum}"/>
++                    </and>
++                </condition>
++            </target>
++        </xsl:if>
++
++        <!-- Download the file using normal URL -->
++        <target name="download.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
++            <xsl:attribute name="depends">
++                <xsl:choose>
++                    <xsl:when test="$resourceURL">
++                        <xsl:value-of select="concat('checkdownload.0.', generate-id())"/>
++                    </xsl:when>
++                    <xsl:otherwise>
++                        <xsl:value-of select="concat('checkdownload.', generate-id())"/>
++                    </xsl:otherwise>
++                </xsl:choose>
++            </xsl:attribute>
 +            <mkdir dir="{$resdir}"/>
 +            <get src="{$url}" dest="{$downloadfile}" verbose="true" usetimestamp="true"/>
 +            <fail message="SHA1 checksum verification for {$filename} failed!">
@@ -1060,7 +1127,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
-@@ -0,0 +1,219 @@
+@@ -0,0 +1,243 @@
 +/*
 + *  Licensed to the Apache Software Foundation (ASF) under one or more
 + *  contributor license agreements.  See the NOTICE file distributed with
@@ -1088,6 +1155,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +import java.io.OutputStream;
 +import java.util.ArrayList;
 +
++import org.apache.ivy.core.IvyPatternHelper;
 +import org.apache.ivy.core.module.descriptor.Artifact;
 +import org.apache.ivy.core.module.id.ModuleRevisionId;
 +import org.apache.ivy.plugins.resolver.util.ResolvedResource;
@@ -1102,18 +1170,25 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +    private final ModuleRevisionId mr;
 +    private final File dir;
 +    private final File resourceCache;
++    private final String resourceURL;
 +    private final boolean validate;
 +    private final boolean preserve;
++    private final boolean verbose;
++    private final boolean quiet;
 +
 +    private boolean built;
 +
 +    public BuilderCacheEntry(ModuleRevisionId mr, File rootDir,
-+      File resourceCache, boolean validate, boolean preserve) {
++      File resourceCache, String resourceURL, boolean validate,
++      boolean preserve, boolean verbose, boolean quiet) {
 +        this.mr = mr;
 +        this.dir = getSubdir(rootDir, this.mr);
 +        this.resourceCache = resourceCache;
++        this.resourceURL = resourceURL;
 +        this.validate = validate;
 +        this.preserve = preserve;
++        this.verbose = verbose;
++        this.quiet = quiet;
 +    }
 +
 +    /**
@@ -1157,13 +1232,19 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +        // Create new process argument list
 +        ArrayList paramList = new ArrayList();
 +        paramList.add("ant");
-+        //paramList.add("-v");
++        if (this.verbose)
++            paramList.add("-verbose");
++        if (this.quiet)
++            paramList.add("-quiet");
 +        paramList.add("-Divy.builder.organisation=" + this.mr.getModuleId().getOrganisation());
 +        paramList.add("-Divy.builder.module=" + this.mr.getModuleId().getName());
 +        paramList.add("-Divy.builder.revision=" + this.mr.getRevision());
 +        paramList.add("-Divy.builder.branch=" + this.mr.getBranch());
 +        if (this.resourceCache != null)
 +            paramList.add("-Divy.builder.resourceCache=" + this.resourceCache.getCanonicalPath());
++        if (this.resourceURL != null) {
++            paramList.add("-Divy.builder.resourceURL=" + getBaseURL());
++        }
 +        paramList.add("-buildfile");
 +        paramList.add(this.validate ? "build-validate.xml" : "build-novalidate.xml");
 +        String[] params = (String[]) paramList.toArray(new String[paramList.size()]);
@@ -1272,6 +1353,16 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +        }
 +    }
 +
++    private String getBaseURL() {
++        String baseURL = IvyPatternHelper.substitute(this.resourceURL, this.mr.getOrganisation(),
++          this.mr.getName(), this.mr.getRevision(), null, null, null, null,
++          this.mr.getAttributes());
++        int slash = baseURL.lastIndexOf('/');
++        if (slash != -1)
++            baseURL = baseURL.substring(0, slash + 1);
++        return baseURL;
++    }
++
 +    private static File getSubdir(File rootDir, ModuleRevisionId mr) {
 +        return new File(rootDir,
 +          mr.getOrganisation() + File.separatorChar
@@ -1290,7 +1381,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 647187)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 648360)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1337,7 +1428,7 @@ Name: svn:eol-style
 
 Index: build.xml
 ===================================================================
---- build.xml	(revision 647187)
+--- build.xml	(revision 648360)
 +++ build.xml	(working copy)
 @@ -570,6 +570,32 @@
      
@@ -1374,7 +1465,7 @@ Index: build.xml
      <available file="${basedir}/.classpath" property="eclipse.classpath.exists" />
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 647187)
+--- doc/configuration/resolvers.html	(revision 648360)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1386,7 +1477,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 647187)
+--- doc/toc.json	(revision 648360)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
@@ -1406,7 +1497,7 @@ Index: doc/resolver/builder.html
 ===================================================================
 --- doc/resolver/builder.html	(revision 0)
 +++ doc/resolver/builder.html	(revision 0)
-@@ -0,0 +1,346 @@
+@@ -0,0 +1,381 @@
 +<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 +<!--
 +   Licensed to the Apache Software Foundation (ASF) under one
@@ -1487,6 +1578,21 @@ Index: doc/resolver/builder.html
 +    <td>No; defaults to none</td>
 +  </tr>
 +  <tr>
++    <td>resourceURL</td>
++    <td>Ivy pattern that specifies a base URL to use for downloading <i>all</i> resources; overrides build instructions</td>
++    <td>No; defaults to none</td>
++  </tr>
++  <tr>
++    <td>verbose</td>
++    <td>True to run ant with the -verbose flag</td>
++    <td>No; defaults to false</td>
++  </tr>
++  <tr>
++    <td>quiet</td>
++    <td>True to run ant with the -quiet flag</td>
++    <td>No; defaults to false</td>
++  </tr>
++  <tr>
 +    <td>validate</td>
 +    <td>True if this resolver should validate (via XSD) the downloaded XML build instructions</td>
 +    <td>No; defaults to true</td>
@@ -1498,6 +1604,18 @@ Index: doc/resolver/builder.html
 +  </tr>
 +</tbody>
 +</table>
++<br />
++<p>
++Setting a resourceURL will cause the resolver to ignore the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
++</p>
++
++<p>
++If a resourceURL download fails, the resolver will fall back to the original URL from the build instructions.
++</p>
++
++<p>
++Configure a resourceURL in situations where you don't want to rely on (or wait for) the web sites configured in the build instructions, and have access to a better (perhaps private) mirror site.
++</p>
 +
 +<h1>Child elements</h1>
 +<table class="ivy-children">
@@ -1514,12 +1632,15 @@ Index: doc/resolver/builder.html
 +
 +<h1>Examples</h1>
 +<code type="xml">
-+<builder name="ivyroundup" buildRoot="${java.io.tmpdir}/ivybuilder" resourceCache="${user.home}/.ivy2/builder-cache">
-+  <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-+  <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
++<builder name="ivyroundup"
++         buildRoot="${java.io.tmpdir}/ivybuilder"
++         resourceCache="${user.home}/.ivy2/builder-cache"
++         resourceURL="ftp://mirror.example.com/pub/resources/[organisation]/[module]/">
++    <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
++    <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
 +</builder>
 +</code>
-+Defines a builder resolver which points to the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> and downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code>
++Defines a builder resolver which points to the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp</a> online repository. Builds will occur in a subdirectory of <code>${java.io.tmpdir}/ivybuilder</code> downloaded resources will be cached in <code>${user.home}/.ivy2/builder-cache</code> and the mirror site <code>ftp://mirror.example.com/pub/resources/[organisation]/[module]/ </code> will be tried first for all resources.
 +
 +<h1>Build Instructions</h1>
 +<p>
@@ -1594,6 +1715,11 @@ Index: doc/resolver/builder.html
 +  <tr>
 +    <td>ivy.builder.resourceCache</td>
 +    <td>The configured <span class="ivy-att">resourceCache</span> if any; otherwise not defined</td>
++  </tr>
++  <tr>
++    <td>ivy.builder.resourceURL</td>
++    <td>The resolved <span class="ivy-att">resourceURL</span> pattern if any; otherwise not defined</td>
++  </tr>
 +</tbody>
 +</table>
 +
