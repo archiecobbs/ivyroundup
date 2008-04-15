@@ -521,7 +521,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java	(revision 0)
-@@ -0,0 +1,223 @@
+@@ -0,0 +1,222 @@
 +/*
 + *  Licensed to the Apache Software Foundation (ASF) under one or more
 + *  contributor license agreements.  See the NOTICE file distributed with
@@ -612,8 +612,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderResolver.java
 +     * Set resource cache directory.
 +     */
 +    public void setResourceCache(String resourceCache) {
-+        this.resourceCache = resourceCache != null ?
-+          new File(resourceCache) : null;
++        this.resourceCache = resourceCache != null ? new File(resourceCache) : null;
 +    }
 +
 +    /**
@@ -1127,7 +1126,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java	(revision 0)
-@@ -0,0 +1,243 @@
+@@ -0,0 +1,249 @@
 +/*
 + *  Licensed to the Apache Software Foundation (ASF) under one or more
 + *  contributor license agreements.  See the NOTICE file distributed with
@@ -1178,6 +1177,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +
 +    private boolean built;
 +
++    // CheckStyle:ParameterNumber OFF
 +    public BuilderCacheEntry(ModuleRevisionId mr, File rootDir,
 +      File resourceCache, String resourceURL, boolean validate,
 +      boolean preserve, boolean verbose, boolean quiet) {
@@ -1190,6 +1190,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +        this.verbose = verbose;
 +        this.quiet = quiet;
 +    }
++    // CheckStyle:ParameterNumber ON
 +
 +    /**
 +     * Attempt to build this entry.
@@ -1232,16 +1233,19 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +        // Create new process argument list
 +        ArrayList paramList = new ArrayList();
 +        paramList.add("ant");
-+        if (this.verbose)
++        if (this.verbose) {
 +            paramList.add("-verbose");
-+        if (this.quiet)
++        }
++        if (this.quiet) {
 +            paramList.add("-quiet");
++        }
 +        paramList.add("-Divy.builder.organisation=" + this.mr.getModuleId().getOrganisation());
 +        paramList.add("-Divy.builder.module=" + this.mr.getModuleId().getName());
 +        paramList.add("-Divy.builder.revision=" + this.mr.getRevision());
 +        paramList.add("-Divy.builder.branch=" + this.mr.getBranch());
-+        if (this.resourceCache != null)
++        if (this.resourceCache != null) {
 +            paramList.add("-Divy.builder.resourceCache=" + this.resourceCache.getCanonicalPath());
++        }
 +        if (this.resourceURL != null) {
 +            paramList.add("-Divy.builder.resourceURL=" + getBaseURL());
 +        }
@@ -1358,8 +1362,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/BuilderCacheEntry.java
 +          this.mr.getName(), this.mr.getRevision(), null, null, null, null,
 +          this.mr.getAttributes());
 +        int slash = baseURL.lastIndexOf('/');
-+        if (slash != -1)
++        if (slash != -1) {
 +            baseURL = baseURL.substring(0, slash + 1);
++        }
 +        return baseURL;
 +    }
 +
@@ -1381,7 +1386,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 648360)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 648374)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1428,7 +1433,7 @@ Name: svn:eol-style
 
 Index: build.xml
 ===================================================================
---- build.xml	(revision 648360)
+--- build.xml	(revision 648374)
 +++ build.xml	(working copy)
 @@ -570,6 +570,32 @@
      
@@ -1465,7 +1470,7 @@ Index: build.xml
      <available file="${basedir}/.classpath" property="eclipse.classpath.exists" />
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 648360)
+--- doc/configuration/resolvers.html	(revision 648374)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1477,7 +1482,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 648360)
+--- doc/toc.json	(revision 648374)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
