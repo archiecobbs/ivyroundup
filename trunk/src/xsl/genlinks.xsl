@@ -28,10 +28,12 @@
     </xsl:template>
 
     <xsl:template match="/modules/org/alias">
+        <xsl:value-of select="concat('rm -f repo/modules/', @name, '&#10;')"/>
         <xsl:value-of select="concat('ln -s ', ../@name, ' repo/modules/', @name, '&#10;')"/>
     </xsl:template>
 
     <xsl:template match="/modules/org/mod/alias">
+        <xsl:value-of select="concat('rm -f repo/modules/', ../@name, '/', @name, '&#10;')"/>
         <xsl:value-of select="concat('ln -s ', ../../@name, ' repo/modules/', ../@name, '/', @name, '&#10;')"/>
     </xsl:template>
 
