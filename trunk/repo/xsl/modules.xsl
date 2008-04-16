@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: modules.xsl 90 2008-04-14 22:08:55Z archie.cobbs $ -->
+<!-- $Id: modules.xsl 96 2008-04-16 21:13:31Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/modules">
@@ -54,13 +54,23 @@
     <xsl:for-each select="org/mod">
     <xsl:sort select="@name"/>
     <a>
-        <xsl:attribute name="href">
+        <xsl:attribute name="name">
             <xsl:value-of select="concat('module-', ../@name)"/>
         </xsl:attribute>
     </a>
     <tr>
-      <td><xsl:value-of select="@name"/></td>
-      <td><xsl:value-of select="../@name"/></td>
+      <td>
+        <xsl:value-of select="@name"/>
+        <xsl:for-each select="alias">
+            <xsl:value-of select="concat(', ', @name)"/>
+        </xsl:for-each>
+      </td>
+      <td>
+        <xsl:value-of select="../@name"/>
+        <xsl:for-each select="../alias">
+            <xsl:value-of select="concat(', ', @name)"/>
+        </xsl:for-each>
+      </td>
       <td>
       <xsl:for-each select="rev">
           <xsl:sort select="@name"/>

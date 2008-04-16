@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-04-14 17:10:56 GMT</timestamp>
-  <svnRevision>90</svnRevision>
+  <timestamp>2008-04-16 16:17:32 GMT</timestamp>
+  <svnRevision>97</svnRevision>
   <org name="asm">
     <mod name="asm">
       <rev name="2.2.3"/>
@@ -9,6 +9,7 @@
   </org>
   <org name="oro">
     <mod name="oro">
+      <alias name="jakarta-oro"/>
       <rev name="2.0.8"/>
     </mod>
   </org>
@@ -79,6 +80,8 @@
     </mod>
   </org>
   <org name="springframework">
+    <alias name="org.springframework"/>
+    <alias name="spring"/>
     <mod name="spring">
       <rev name="2.5.3"/>
     </mod>
