@@ -58,7 +58,7 @@
         <!-- Generate list of modules -->
         <exec executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="find src/modules -name ivy.xml -print
+            <arg value="find src/modules \( -name ivy.xml -o -name aliases.txt \) -print
               | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
               > repo/modules.xml"/>
         </exec>
@@ -68,6 +68,13 @@
 
         <!-- Generate builder.xml files -->
         <xslt style="src/xsl/genbuilder.xsl" in="repo/modules.xml" out="/dev/null"/>
+
+        <!-- Generate alias symlinks -->
+        <xslt style="src/xsl/genlinks.xsl" in="repo/modules.xml" out="genlinks.sh"/>
+        <exec executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="genlinks.sh"/>
+        </exec>
+        <delete file="genlinks.sh"/>
 
         <!-- Validate all generated XML files -->
         <xmlvalidate failonerror="true" warn="yes" lenient="no">
