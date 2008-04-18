@@ -24,24 +24,10 @@ BEGIN {
         printf "  <org name=\"%s\">\n", $3
         ORG = $3
     }
-    if ($4 != MOD && $4 != "aliases.txt") {
+    if ($4 != MOD) {
         printf "    <mod name=\"%s\">\n", $4
         MOD = $4
     }
-
-    # Handle aliases.txt
-    if ($NF == "aliases.txt") {
-        while (1) {
-            if ((getline ALIAS < $0) <= 0)
-                break
-            if (ALIAS ~ /^(#.*|[[:space:]]*)$/)
-                continue
-            printf "    %*s<alias name=\"%s\"/>\n", (NF - 4) * 2, "", ALIAS
-        }
-        close($0)
-        next;
-    }
-
     printf "      <rev name=\"%s\"/>\n", $5
 }
 
