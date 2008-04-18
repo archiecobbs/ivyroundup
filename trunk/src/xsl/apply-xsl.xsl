@@ -24,12 +24,15 @@
   extension-element-prefixes="pipe"
   version="1.0">
 
+    <xsl:param name="filename"/>
+    <xsl:param name="stylesheet"/>
+
     <xsl:template match="/modules/org/mod/rev">
         <xsl:variable name="org" select="../../@name"/>
         <xsl:variable name="mod" select="../@name"/>
         <xsl:variable name="rev" select="@name"/>
-        <pipe:pipeDocument source="../src/modules/{$org}/{$mod}/{$rev}/builder.xml" target="repo/modules/{$org}/{$mod}/{$rev}/builder.xml">
-            <stylesheet href="builder-repo.xsl">
+        <pipe:pipeDocument source="../src/modules/{$org}/{$mod}/{$rev}/{$filename}" target="repo/modules/{$org}/{$mod}/{$rev}/{$filename}">
+            <stylesheet href="{$stylesheet}">
                 <param name="organisation" value="{$org}"/>
                 <param name="module" value="{$mod}"/>
                 <param name="revision" value="{$rev}"/>

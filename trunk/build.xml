@@ -64,10 +64,16 @@
         </exec>
 
         <!-- Generate ivy.xml files -->
-        <xslt style="src/xsl/genivy.xsl" in="repo/modules.xml" out="/dev/null"/>
+        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+            <param name="filename" expression="ivy.xml"/>
+            <param name="stylesheet" expression="ivy-repo.xsl"/>
+        </xslt>
 
         <!-- Generate builder.xml files -->
-        <xslt style="src/xsl/genbuilder.xsl" in="repo/modules.xml" out="/dev/null"/>
+        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+            <param name="filename" expression="builder.xml"/>
+            <param name="stylesheet" expression="builder-repo.xsl"/>
+        </xslt>
 
         <!-- Validate all generated XML files -->
         <xmlvalidate failonerror="true" warn="yes" lenient="no">
