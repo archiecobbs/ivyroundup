@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: builder-repo.xsl 39 2008-04-10 16:17:36Z archie.cobbs $ -->
+<!-- $Id: builder-repo.xsl 101 2008-04-18 20:18:46Z archie.cobbs $ -->
 <xsl:transform
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -24,11 +24,13 @@
 
     <xsl:output encoding="UTF-8" method="xml" indent="yes" media-type="text/xml"/>
 
-    <xsl:variable name="svnrevision" select="'$Id: builder-repo.xsl 39 2008-04-10 16:17:36Z archie.cobbs $'"/>
+    <xsl:variable name="svnrevision" select="'$Id: builder-repo.xsl 101 2008-04-18 20:18:46Z archie.cobbs $'"/>
 
     <xsl:param name="organisation"/>
     <xsl:param name="module"/>
     <xsl:param name="revision"/>
+
+    <xsl:include href="util.xsl"/>
 
     <xsl:template match="/">
         <xsl:copy>
@@ -45,7 +47,14 @@
         <xsl:copy>
             <!-- Add version and xsi:noNamespaceSchemaLocation attributes -->
             <xsl:attribute name="version">1.0</xsl:attribute>
-            <xsl:attribute name="xsi:noNamespaceSchemaLocation">../../../../xsd/builder-1.0.xsd</xsl:attribute>
+            <xsl:variable name="topdir">
+                <xsl:call-template name="topdir">
+                    <xsl:with-param name="org" select="$organisation"/>
+                </xsl:call-template>
+            </xsl:variable>
+            <xsl:attribute name="xsi:noNamespaceSchemaLocation">
+                <xsl:value-of select="concat($topdir, '/../xsd/builder-1.0.xsd')"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*[name() != 'rev']|node()"/>
         </xsl:copy>
     </xsl:template>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 90 2008-04-14 22:08:55Z archie.cobbs $ -->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
   ivy files keep a visible link to ivy site (if you don't modify it, it's the 
@@ -34,6 +32,12 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
+
+<!-- $Id: ivy-doc.xsl 101 2008-04-18 20:18:46Z archie.cobbs $ -->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:include href="util.xsl"/>
+
 <xsl:template match="/ivy-module">
     <xsl:variable name="repositories" select="/ivy-module/info/repository"/>
     <xsl:variable name="ivyauthors" select="/ivy-module/info/ivyauthor"/>
@@ -49,29 +53,34 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:variable name="artifacts" select="/ivy-module/publications/artifact"/>
     <xsl:variable name="dependencies" select="/ivy-module/dependencies/dependency"/>
 
+    <xsl:variable name="topdir">
+        <xsl:value-of select="'../'"/>
+        <xsl:call-template name="topdir">
+            <xsl:with-param name="org" select="$organisation"/>
+        </xsl:call-template>
+    </xsl:variable>
+
   <html>
   <head>
     <title><xsl:value-of select="info/@module"/> by <xsl:value-of select="info/@organisation"/> :: Ivy RoundUp</title>
     <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
     <meta http-equiv="content-language" content="en" />
     <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css" /> 
+    <link rel="stylesheet" type="text/css" href="{$topdir}/css/ivy-style.css" /> 
   </head>
   <body>
-    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="{$topdir}/images/logo.png"/></a><br/><a id="rep" href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">
-	        <xsl:element name="a">
-	            <xsl:attribute name="href">../../../<xsl:value-of select="info/@organisation"/>/<xsl:value-of select="info/@module"/>/</xsl:attribute>
-	            <xsl:value-of select="info/@module"/>
-	        </xsl:element>
+        <a href="../">
+            <xsl:value-of select="info/@module"/>
+        </a>
     </span> 
     by 
     <span id="organisation">
-	        <xsl:element name="a">
-	            <xsl:attribute name="href">../../../<xsl:value-of select="info/@organisation"/>/</xsl:attribute>
-	            <xsl:value-of select="info/@organisation"/>
-	        </xsl:element> 
+        <a href="../../">
+            <xsl:value-of select="info/@organisation"/>
+        </a>
     </span></h1>
     <div id="revision"><span id="revision">Revision: </span><xsl:value-of select="info/@revision"/></div>
     <table class="header">
@@ -305,8 +314,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <td><xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/></td>
       <td>
         <xsl:element name="a">
-            <xsl:attribute name="href">../../../../modules.xml#<xsl:value-of select="concat('module-', @name)"/></xsl:attribute>
-		    <xsl:value-of select="@name"/>
+            <xsl:attribute name="href">
+                <xsl:value-of select="concat($topdir, '/modules.xml#module-', @name)"/>
+            </xsl:attribute>
+            <xsl:value-of select="@name"/>
         </xsl:element>
       </td>
       <td><xsl:value-of select="@rev"/></td>
