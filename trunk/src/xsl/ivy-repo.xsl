@@ -30,11 +30,22 @@
     <xsl:param name="module"/>
     <xsl:param name="revision"/>
 
+    <xsl:include href="util.xsl"/>
+
+    <xsl:variable name="topdir">
+            <xsl:value-of select="'../'"/>
+        <xsl:call-template name="topdir">
+            <xsl:with-param name="org" select="$organisation"/>
+        </xsl:call-template>
+    </xsl:variable>
+
     <xsl:template match="/">
         <xsl:copy>
             <xsl:value-of select="'&#10;'"/>
             <!-- Add stylesheet reference -->
-            <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="../../../../xsl/ivy-doc.xsl"</xsl:processing-instruction>
+            <xsl:processing-instruction name="xml-stylesheet">
+                <xsl:value-of select="concat('type=&quot;text/xsl&quot; href=&quot;', $topdir, '/xsl/ivy-doc.xsl&quot;')"/>
+            </xsl:processing-instruction>
             <xsl:value-of select="'&#10;'"/>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
@@ -49,7 +60,9 @@
         <xsl:copy>
             <!-- Add version and xsi:noNamespaceSchemaLocation attributes -->
             <xsl:attribute name="version">1.3</xsl:attribute>
-            <xsl:attribute name="xsi:noNamespaceSchemaLocation">../../../../xsd/ivy.xsd</xsl:attribute>
+            <xsl:attribute name="xsi:noNamespaceSchemaLocation">
+                <xsl:value-of select="concat($topdir, '/xsd/ivy.xsd')"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*[name() != 'rev']|node()"/>
         </xsl:copy>
         <xsl:value-of select="'&#10;'"/>

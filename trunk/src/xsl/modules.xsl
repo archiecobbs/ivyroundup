@@ -19,6 +19,8 @@
 <!-- $Id$ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<xsl:import href="util.xsl"/>
+
 <xsl:template match="/modules">
   <html>
   <head>
@@ -53,6 +55,11 @@
     <tbody>
     <xsl:for-each select="org/mod">
     <xsl:sort select="@name"/>
+    <xsl:variable name="orgdir">
+        <xsl:call-template name="dot2slash">
+            <xsl:with-param name="s" select="../@name"/>
+        </xsl:call-template>
+    </xsl:variable>
     <a>
         <xsl:attribute name="href">
             <xsl:value-of select="concat('module-', ../@name)"/>
@@ -66,7 +73,7 @@
           <xsl:sort select="@name"/>
           <xsl:element name="a">
               <xsl:attribute name="href">
-                  <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.xml')"/>
+                  <xsl:value-of select="concat('modules/', $orgdir, '/', ../@name, '/', @name, '/ivy.xml')"/>
               </xsl:attribute>
               <span class="revision"><xsl:value-of select="@name"/></span>
           </xsl:element>

@@ -30,6 +30,8 @@
     <xsl:param name="module"/>
     <xsl:param name="revision"/>
 
+    <xsl:include href="util.xsl"/>
+
     <xsl:template match="/">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
@@ -45,7 +47,14 @@
         <xsl:copy>
             <!-- Add version and xsi:noNamespaceSchemaLocation attributes -->
             <xsl:attribute name="version">1.0</xsl:attribute>
-            <xsl:attribute name="xsi:noNamespaceSchemaLocation">../../../../xsd/builder-1.0.xsd</xsl:attribute>
+            <xsl:variable name="topdir">
+                <xsl:call-template name="topdir">
+                    <xsl:with-param name="org" select="$organisation"/>
+                </xsl:call-template>
+            </xsl:variable>
+            <xsl:attribute name="xsi:noNamespaceSchemaLocation">
+                <xsl:value-of select="concat($topdir, '/../xsd/builder-1.0.xsd')"/>
+            </xsl:attribute>
             <xsl:apply-templates select="@*[name() != 'rev']|node()"/>
         </xsl:copy>
     </xsl:template>
