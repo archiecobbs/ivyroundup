@@ -26,7 +26,7 @@
         <!-- Get current SVN revision -->
         <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="( svn info . 2>/dev/null 
+            <arg value="( svn info ${basedir} 2>/dev/null 
               | grep -E '^Last Changed Rev:' || echo '0' )
               | sed 's/^Last Changed Rev: //g'"/>
         </exec>
@@ -70,10 +70,24 @@
             </dirset>
         </copy>
 
+        <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
+        <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="( svn info ${basedir} 2>/dev/null 
+              | grep -E '^URL:' || echo '/unknown' )
+              | sed -r 's|^URL: .*/svn(/.*)$$|\1|g'"/>
+        </exec>
+        <mkdir dir="build/xsl"/>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl">
+            <filterset>
+                <filter token="SVNROOTPATH" value="${svn.path}"/>
+            </filterset>
+        </copy>
+
         <!-- Generate ivy.xml files -->
         <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
             <param name="filename" expression="ivy.xml"/>
-            <param name="stylesheet" expression="ivy-repo.xsl"/>
+            <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
         </xslt>
 
         <!-- Generate builder.xml files -->
