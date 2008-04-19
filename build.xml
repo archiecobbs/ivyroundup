@@ -17,9 +17,12 @@
 -->
 
 <!-- $Id$ -->
-<project name="ivyroundup" default="repo" xmlns:ivy="urn:org.apache.ivy.ant">
+<project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
-    <!-- List all module revisions in an XML file manifest -->
+    <!-- Default target: build the repo and run all checks -->
+    <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
+
+    <!-- Regenerate list all module revisions in XML manifest (repo/modules.xml) -->
     <target name="modules" description="Regenerate repo/modules.xml">
         <mkdir dir="repo"/>
 
@@ -118,34 +121,39 @@
     </target>
 
     <!-- Clear the temporary cache -->
-    <target name="clear-cache" description="Empty the cache">
-        <delete dir="${basedir}/build/cache"/>
-        <mkdir dir="${basedir}/build/cache"/>
+    <target name="clear-cache" description="Clear the cache">
+        <delete dir="build/cache"/>
+        <mkdir dir="build/cache"/>
     </target>
 
-    <!-- Resolve every artifact into the temporary cache -->
-    <target name="resolve" depends="modules, clear-cache" description="Resolve every artifact in the entire repository">
+    <!--
+        Resolve every artifact into the temporary cache and then
+        build a normal repository that includes artifacts.
+    -->
+    <target name="resolve" depends="repo" description="Resolve everything and build a normal repository">
 
-        <!-- Create an ant build that resolves every artifact in every module -->
+        <!-- Initialize resolve work area and repository we're going to build -->
         <delete dir="build/resolve"/>
+        <delete dir="build/repo-with-artifacts"/>
         <mkdir dir="build/resolve"/>
-        <xslt style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml"/>
+        <mkdir dir="build/repo-with-artifacts"/>
+
+        <!-- Copy the builder repo -->
+        <copy todir="build/repo-with-artifacts">
+            <fileset dir="repo"/>
+        </copy>
+
+        <!-- Create an ant build that does the resolve and retrieve work -->
+        <xslt style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml">
+            <param name="retrieve.pattern" expression="../repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
+        </xslt>
         <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
 
         <!-- Run the build -->
         <ant dir="build/resolve"/>
     </target>
 
-    <!-- Build a normal repository including artifacts -->
-    <target name="repo-with-artifacts" description="Build a normal repository including artifacts">
-
-        <!-- Clear out the temporary cache -->
-        <delete dir="${basedir}/build/cache"/>
-        <mkdir dir="${basedir}/build/cache"/>
-
-        <echo message="implement me"/>
-    </target>
-
+    <!-- Clean out all generated files (not including the builder repository under repo/) -->
     <target name="clean" description="Delete build files">
         <delete dir="build"/>
     </target>
