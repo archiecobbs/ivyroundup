@@ -22,7 +22,7 @@
 
     <info organisation="com.puppycrawl" module="checkstyle" revision="4.4" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 108 2008-04-19 02:17:48Z archie.cobbs $" url="http://ivyroundup.googlecode.com/"/>
+        <ivyauthor name="$Id: ivy.xml 114 2008-04-19 21:18:34Z archie.cobbs $" url="http://ivyroundup.googlecode.com/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
@@ -45,11 +45,11 @@
     </publications>
 
     <dependencies>
-        <dependency org="antlr" name="antlr" rev="2.7+"/>
-        <dependency org="commons-cli" name="commons-cli" rev="[1.1,2.0["/>
-        <dependency org="commons-collections" name="commons-collections" rev="2.1+"/>
-        <dependency org="commons-logging" name="commons-logging" rev="1+"/>
-        <dependency org="commons-beanutils" name="commons-beanutils" rev="1.7+"/>
+        <dependency org="org.antlr" name="antlr" rev="2.7+"/>
+        <dependency org="org.apache.commons" name="commons-cli" rev="[1.1,2.0["/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="2.1+"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1+"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7+"/>
     </dependencies>
 
 </ivy-module>

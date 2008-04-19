@@ -22,7 +22,7 @@
 
     <info organisation="net.sourceforge.cobertura" module="cobertura" revision="1.9" status="release" publication="20070605000000">
         <license name="GNU General Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-        <ivyauthor name="$Id: ivy.xml 108 2008-04-19 02:17:48Z archie.cobbs $" url="http://ivyroundup.googlecode.com/"/>
+        <ivyauthor name="$Id: ivy.xml 114 2008-04-19 21:18:34Z archie.cobbs $" url="http://ivyroundup.googlecode.com/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://cobertura.sourceforge.net/">
             Cobertura is a free Java tool that calculates the percentage
@@ -37,9 +37,9 @@
     </publications>
 
     <dependencies>
-        <dependency org="log4j" name="log4j" rev="[1.2.9,2.0["/>
-        <dependency org="oro" name="oro" rev="[2.0.8,3.0["/>
-        <dependency org="asm" name="asm" rev="2.2+"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.9,2.0["/>
+        <dependency org="org.apache.oro" name="oro" rev="[2.0.8,3.0["/>
+        <dependency org="org.objectweb.asm" name="asm" rev="2.2+"/>
     </dependencies>
 
 </ivy-module>
