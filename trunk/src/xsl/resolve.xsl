@@ -28,6 +28,9 @@
 
     <xsl:output encoding="UTF-8" method="xml" indent="yes" media-type="text/xml"/>
 
+    <!-- Set this to also retrieve artifacts -->
+    <xsl:param name="retrieve.pattern"/>
+
     <xsl:template match="/modules">
         <project name="resolve" default="resolve">
 
@@ -74,38 +77,15 @@
             <xsl:value-of select="concat(' ******* Revision: ', $rev, ' ')"/>
         </xsl:comment>
 
-        <xsl:for-each select="$artifacts">
+        <!-- Resolve artifacts -->
+        <ivy:resolve settingsRef="ivy-settings" transitive="true" inline="true"
+          organisation="{$org}" module="{$mod}" revision="{$rev}" type="*" conf="*"/>
 
-            <!-- Get artifact name -->
-        <!--
-            <xsl:variable name="name">
-                <xsl:choose>
-                    <xsl:when test="@name">
-                        <xsl:value-of select="@name"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="$mod"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
-        -->
-
-            <!-- Get artifact type -->
-            <xsl:variable name="type">
-                <xsl:choose>
-                    <xsl:when test="@type">
-                        <xsl:value-of select="@type"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="'jar'"/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
-
-            <!-- Resolve artifact -->
-            <ivy:resolve settingsRef="ivy-settings" transitive="true" inline="true" log="download-only"
-              organisation="{$org}" module="{$mod}" revision="{$rev}" type="{$type}" conf="*"/>
-        </xsl:for-each>
+        <!-- Retrieve artifacts -->
+        <xsl:if test="$retrieve.pattern">
+            <ivy:retrieve settingsRef="ivy-settings" inline="true" log="default" pattern="{$retrieve.pattern}"
+              organisation="{$org}" module="{$mod}" revision="{$rev}" type="*" conf="*"/>
+        </xsl:if>
     </xsl:template>
 
 </xsl:transform>
