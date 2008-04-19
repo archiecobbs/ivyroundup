@@ -65,8 +65,8 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default,core" org="commons-logging" name="commons-logging" rev="[1.0,2.0["/>
-        <dependency conf="core" org="commons-collections" name="commons-collections" rev="[2.0,3.0["/>
+        <dependency conf="default,core" org="org.apache.commons" name="commons-logging" rev="[1.0,2.0["/>
+        <dependency conf="core" org="org.apache.commons" name="commons-collections" rev="[2.0,3.0["/>
     </dependencies>
 
 </ivy-module>
