@@ -117,4 +117,37 @@
         </exec>
     </target>
 
+    <!-- Clear the temporary cache -->
+    <target name="clear-cache" description="Empty the cache">
+        <delete dir="${basedir}/build/cache"/>
+        <mkdir dir="${basedir}/build/cache"/>
+    </target>
+
+    <!-- Resolve every artifact into the temporary cache -->
+    <target name="resolve" depends="modules, clear-cache" description="Resolve every artifact in the entire repository">
+
+        <!-- Create an ant build that resolves every artifact in every module -->
+        <delete dir="build/resolve"/>
+        <mkdir dir="build/resolve"/>
+        <xslt style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml"/>
+        <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
+
+        <!-- Run the build -->
+        <ant dir="build/resolve"/>
+    </target>
+
+    <!-- Build a normal repository including artifacts -->
+    <target name="repo-with-artifacts" description="Build a normal repository including artifacts">
+
+        <!-- Clear out the temporary cache -->
+        <delete dir="${basedir}/build/cache"/>
+        <mkdir dir="${basedir}/build/cache"/>
+
+        <echo message="implement me"/>
+    </target>
+
+    <target name="clean" description="Delete build files">
+        <delete dir="build"/>
+    </target>
+
 </project>
