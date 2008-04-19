@@ -25,6 +25,7 @@
     <xsl:output encoding="UTF-8" method="xml" indent="no" media-type="text/xml"/>
 
     <xsl:variable name="svnrevision" select="'$Id$'"/>
+    <xsl:variable name="svnviewbase" select="'http://code.google.com/p/ivyroundup/source/browse@SVNROOTPATH@/src/modules'"/>
 
     <xsl:param name="organisation"/>
     <xsl:param name="module"/>
@@ -82,7 +83,10 @@
                     <xsl:value-of select="'&#10;        '"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <!-- Set <ivyauthor> based on SVN revision string -->
+                    <!--
+                        Set <ivyauthor> based on SVN revision string and
+                        set hyperlink to point to the SVN web interface.
+                        -->
                     <ivyauthor>
                         <xsl:attribute name="name">
                             <xsl:choose>
@@ -92,7 +96,9 @@
                                 <xsl:otherwise>Ivy RoundUp Repository</xsl:otherwise>
                             </xsl:choose>
                         </xsl:attribute>
-                        <xsl:attribute name="url">http://ivyroundup.googlecode.com/</xsl:attribute>
+                        <xsl:attribute name="url">
+                            <xsl:value-of select="concat($svnviewbase, '/', $organisation, '/', $module, '/', $revision, '/')"/>
+                        </xsl:attribute>
                     </ivyauthor>
                     <xsl:value-of select="'&#10;        '"/>
                 </xsl:otherwise>
