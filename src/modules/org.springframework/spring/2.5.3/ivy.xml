@@ -134,9 +134,9 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default,aop->default" org="aopalliance" name="aopalliance" rev="1.+"/>
-        <dependency conf="default,core->default" org="commons-logging" name="commons-logging" rev="1.+"/>
-        <dependency conf="default,jms->default" org="sun" name="jms" rev="1.+"/>
+        <dependency conf="default,aop->default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
+        <dependency conf="default,core->default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
+        <dependency conf="default,jms->default" org="javax.jms" name="jms" rev="1.+"/>
     </dependencies>
 
 </ivy-module>
