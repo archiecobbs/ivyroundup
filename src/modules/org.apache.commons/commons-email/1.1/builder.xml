@@ -17,7 +17,7 @@
 -->
 
 <builder-module rev="$Id$">
-    <m2resource>
+    <m2resource groupId="commons-email">
         <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="a05c4de7bf2e0579ac0f21e16f3737ec6fa0ff98"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8f09630f1600bcd0472a36fb2fa2d2a6f2836535"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="15d67ca689a792ed8f29d0d21e2d0116fa117b7e"/>
