@@ -17,7 +17,7 @@
 -->
 
 <builder-module rev="$Id$">
-    <m2resource>
+    <m2resource groupId="commons-logging">
         <artifact tofile="artifacts/jars/${ivy.builder.module}.jar" sha1="5043bfebc3db072ed80fbd362e7caf00e885d8ae"/>
         <artifact classifier="api" tofile="artifacts/jars/${ivy.builder.module}-api.jar" sha1="eb3b72ff88dba201bbf878cdc6fdbe8e63c73ac0"/>
         <artifact classifier="adapters" tofile="artifacts/jars/${ivy.builder.module}-adapters.jar" sha1="5a1956b2aca8443e32ca572daaa3a9d54e91884b"/>
