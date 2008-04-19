@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<!-- $Id$ -->
+<project name="ivyroundup" default="repo">
+
+    <target name="repo" description="Regenerate the repository">
+
+        <!-- Wipe repository clean -->
+        <delete>
+            <fileset dir="repo">
+                <include name="modules.xml"/>
+                <include name="modules/**/ivy.xml"/>
+                <include name="modules/**/builder.xml"/>
+                <include name="images/**/*"/>
+                <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
+            </fileset>
+        </delete>
+
+        <!-- Copy support files into repository -->
+        <copy todir="repo">
+            <fileset dir="src">
+                <include name="images/**/*"/>
+                <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
+            </fileset>
+            <dirset dir="src">
+                <include name="modules/**/*"/>
+            </dirset>
+        </copy>
+
+        <!-- Get current SVN revision -->
+        <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="( svn info . 2>/dev/null 
+              | grep -E '^Last Changed Rev:' || echo '0' )
+              | sed 's/^Last Changed Rev: //g'"/>
+        </exec>
+
+        <!-- Generate list of modules -->
+        <exec executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="find src/modules -name ivy.xml -print
+              | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
+              > repo/modules.xml"/>
+        </exec>
+
+        <!-- Generate ivy.xml files -->
+        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+            <param name="filename" expression="ivy.xml"/>
+            <param name="stylesheet" expression="ivy-repo.xsl"/>
+        </xslt>
+
+        <!-- Generate builder.xml files -->
+        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+            <param name="filename" expression="builder.xml"/>
+            <param name="stylesheet" expression="builder-repo.xsl"/>
+        </xslt>
+
+        <!-- Validate all generated XML files -->
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="repo/modules">
+                <include name="**/ivy.xml"/>
+                <include name="**/builder.xml"/>
+            </fileset>
+        </xmlvalidate>
+
+        <!-- Make sure keyword expansion turned off -->
+        <exec executable="svn" logError="true" failonerror="true">
+            <arg value="propdel"/>
+            <arg value="--quiet"/>
+            <arg value="--recursive"/>
+            <arg value="svn:keywords"/>
+            <arg value="repo"/>
+        </exec>
+    </target>
+
+</project>
