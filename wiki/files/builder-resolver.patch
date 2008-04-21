@@ -1514,7 +1514,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 648799)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 649854)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1561,7 +1561,7 @@ Name: svn:eol-style
 
 Index: build.xml
 ===================================================================
---- build.xml	(revision 648799)
+--- build.xml	(revision 649854)
 +++ build.xml	(working copy)
 @@ -570,6 +570,32 @@
      
@@ -1598,7 +1598,7 @@ Index: build.xml
      <available file="${basedir}/.classpath" property="eclipse.classpath.exists" />
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 648799)
+--- doc/configuration/resolvers.html	(revision 649854)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1610,7 +1610,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 648799)
+--- doc/toc.json	(revision 649854)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
@@ -1630,7 +1630,7 @@ Index: doc/resolver/builder.html
 ===================================================================
 --- doc/resolver/builder.html	(revision 0)
 +++ doc/resolver/builder.html	(revision 0)
-@@ -0,0 +1,381 @@
+@@ -0,0 +1,385 @@
 +<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 +<!--
 +   Licensed to the Apache Software Foundation (ASF) under one
@@ -1671,6 +1671,10 @@ Index: doc/resolver/builder.html
 +
 +<p>
 +This resolver accesses ivy files and "build instructions" from an online "builder" repository. "Builder" repositories contain no actual artifacts. To get the artifacts, the build instructions are downloaded from the repository and executed locally. These instructions specify additional resource(s) to download and how to build the artifacts from them, for example, by downloading a project's original distribution archive directly from their web site and extracting the desired artifacts.
++</p>
++
++<p>
++Athough named the "builder" resolver, the only build operations currently supported are extracting files from archives, packaging files into archives, and moving and copying files. In the future more general build operations may be supported, once appropriate security controls are in place.
 +</p>
 +
 +<p>
