@@ -130,7 +130,7 @@
         Resolve every artifact into the temporary cache and then
         build a normal repository that includes artifacts.
     -->
-    <target name="resolve" depends="repo" description="Resolve everything and build a normal repository">
+    <target name="resolve" depends="repo, clear-cache" description="Resolve everything and build a normal repository">
 
         <!-- Initialize resolve work area and repository we're going to build -->
         <delete dir="build/resolve"/>
