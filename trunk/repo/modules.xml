@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-04-19 17:42:27 GMT</timestamp>
-  <svnRevision>120</svnRevision>
+  <timestamp>2008-04-21 17:24:53 GMT</timestamp>
+  <svnRevision>124</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -37,6 +37,11 @@
       <rev name="2.5.3"/>
     </mod>
   </org>
+  <org name="org.apache.xerces">
+    <mod name="xerces">
+      <rev name="2.5.0"/>
+    </mod>
+  </org>
   <org name="org.objectweb.asm">
     <mod name="asm">
       <rev name="2.2.3"/>
@@ -68,6 +73,11 @@
   <org name="org.apache.log4j">
     <mod name="log4j">
       <rev name="1.2.15"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.ehcache">
+    <mod name="ehcache">
+      <rev name="1.2.3"/>
     </mod>
   </org>
   <org name="javax.jms">
