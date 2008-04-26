@@ -31,6 +31,11 @@
     <!-- Set this to also retrieve artifacts -->
     <xsl:param name="retrieve.pattern"/>
 
+    <!-- Set one or more of these to restrict what gets resolved -->
+    <xsl:param name="resolve.org"/>
+    <xsl:param name="resolve.mod"/>
+    <xsl:param name="resolve.rev"/>
+
     <xsl:template match="/modules">
         <project name="resolve" default="resolve">
 
@@ -45,9 +50,9 @@
             -->
             <ivy:settings id="ivy-settings" override="true" file="resolve-settings.xml"/>
 
-            <!-- Resolve all revisions of all modules -->
+            <!-- Resolve all (matching) revisions -->
             <target name="resolve" description="Resolve all revisions of all modules">
-                <xsl:apply-templates select="org"/>
+                <xsl:apply-templates select="org[not($resolve.org) or @name = $resolve.org]"/>
             </target>
         </project>
     </xsl:template>
@@ -56,14 +61,14 @@
         <xsl:comment>
             <xsl:value-of select="concat(' *** Organisation: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates/>
+        <xsl:apply-templates select="mod[not($resolve.mod) or @name = $resolve.mod]"/>
     </xsl:template>
 
     <xsl:template match="mod">
         <xsl:comment>
             <xsl:value-of select="concat(' ***** Module: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates/>
+        <xsl:apply-templates select="rev[not($resolve.rev) or @name = $resolve.rev]"/>
     </xsl:template>
 
     <xsl:template match="rev">
