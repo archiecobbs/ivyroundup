@@ -151,8 +151,14 @@
     <!--
         Resolve every artifact into the temporary cache and then
         build a normal repository that includes artifacts.
+
+        You can restrict what gets resolved by defining one or more of:
+
+            ${resolve.org}  - Only resolve when organization matches
+            ${resolve.mod}  - Only resolve when module matches
+            ${resolve.rev}  - Only resolve when revision matches
     -->
-    <target name="resolve" depends="repo, clear-cache" description="Resolve everything and build a normal repository">
+    <target name="resolve" description="Resolve everything and build a normal repository">
 
         <!-- Initialize resolve work area and repository we're going to build -->
         <delete dir="build/resolve"/>
@@ -166,8 +172,14 @@
         </copy>
 
         <!-- Create an ant build that does the resolve and retrieve work -->
+        <property name="resolve.org" value=""/>
+        <property name="resolve.mod" value=""/>
+        <property name="resolve.rev" value=""/>
         <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml">
             <param name="retrieve.pattern" expression="../repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
+            <param name="resolve.org" expression="${resolve.org}"/>
+            <param name="resolve.mod" expression="${resolve.mod}"/>
+            <param name="resolve.rev" expression="${resolve.rev}"/>
         </xslt>
         <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
 
