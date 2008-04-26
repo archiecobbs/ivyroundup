@@ -46,12 +46,14 @@
 
     <!-- Regenerate list all module revisions in XML manifest (repo/modules.xml) -->
     <target name="modules" description="Regenerate repo/modules.xml">
+        <property name="svn-cmd" value="svn" />
+
         <mkdir dir="repo"/>
 
         <!-- Get current SVN revision -->
         <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="( svn info ${basedir} 2>/dev/null 
+            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
               | grep -E '^Last Changed Rev:' || echo '0' )
               | sed 's/^Last Changed Rev: //g'"/>
         </exec>
@@ -66,7 +68,9 @@
     </target>
 
     <!-- Build the Ivy RoundUp builder repository (no artifacts) -->
-    <target name="repo" depends="modules" description="Regenerate the repository">
+    <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
+
+    <target name="gen-repo" depends="modules" description="Regenerate the repository">
 
         <!-- Wipe repository clean -->
         <delete>
@@ -98,7 +102,7 @@
         <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
         <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="( svn info ${basedir} 2>/dev/null 
+            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
               | grep -E '^URL:' || echo '/unknown' )
               | sed -r 's|^URL: .*/svn(/.*)$$|\1|g'"/>
         </exec>
@@ -131,7 +135,9 @@
                 <include name="**/builder.xml"/>
             </fileset>
         </xmlvalidate>
+    </target>
 
+    <target name="post-repo-gen-svn-ops" unless="skip-svn" description="Regenerate the repository">
         <!-- Make sure keyword expansion turned off -->
         <exec executable="svn" logError="true" failonerror="true">
             <arg value="propdel"/>
@@ -190,6 +196,11 @@
     <!-- Clean out all generated files (not including the builder repository under repo/) -->
     <target name="clean" description="Delete build files">
         <delete dir="build"/>
+    </target>
+
+    <target name="use-git">
+        <property name="svn-cmd" value="git svn" />
+        <property name="skip-svn" value="true" />
     </target>
 
 </project>
