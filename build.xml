@@ -19,6 +19,28 @@
 <!-- $Id$ -->
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
+    <!--
+        Define Ivy ant tasks.
+
+        NOTE: /usr/share/java/ivy.jar must be a version of ivy containing
+        the builder resolver.
+    -->
+    <taskdef uri="urn:org.apache.ivy.ant"
+      resource="org/apache/ivy/ant/antlib.xml"
+      classpath="/usr/share/java/ivy.jar"/>
+
+    <!--
+        Configure ivy. The override="true" is a workaround for:
+            https://issues.apache.org/jira/browse/IVY-782
+    -->
+    <ivy:settings id="ivy-settings" override="true" file="src/ivy/build-settings.xml"/>
+
+    <!-- Find xalan -->
+    <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
+      organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+    <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
+      organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+
     <!-- Default target: build the repo and run all checks -->
     <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
 
@@ -88,13 +110,13 @@
         </copy>
 
         <!-- Generate ivy.xml files -->
-        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
             <param name="filename" expression="ivy.xml"/>
             <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
         </xslt>
 
         <!-- Generate builder.xml files -->
-        <xslt style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
             <param name="filename" expression="builder.xml"/>
             <param name="stylesheet" expression="builder-repo.xsl"/>
         </xslt>
@@ -144,7 +166,7 @@
         </copy>
 
         <!-- Create an ant build that does the resolve and retrieve work -->
-        <xslt style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml">
+        <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml">
             <param name="retrieve.pattern" expression="../repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
         </xslt>
         <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
