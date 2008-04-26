@@ -16,6 +16,14 @@
     under the License.
 -->
 
+<!--
+Option targets (execute these before the action targets (like 'repo' or 'resolve') to turn on or off build behaviors):
+
+    use-git: makes svn related operations either use "git svn" or skipped.
+
+    get-xalan: resolve and download xalan, and use the artifacts generated for the xslt operations. Slow but gurantees
+    xalan availability. If not specified the build will assume the xalan jars already on ant classpath.
+-->
 <!-- $Id$ -->
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
@@ -34,12 +42,6 @@
             https://issues.apache.org/jira/browse/IVY-782
     -->
     <ivy:settings id="ivy-settings" override="true" file="src/ivy/build-settings.xml"/>
-
-    <!-- Find xalan -->
-    <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
-      organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
-    <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
-      organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
 
     <!-- Default target: build the repo and run all checks -->
     <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
@@ -70,7 +72,7 @@
     <!-- Build the Ivy RoundUp builder repository (no artifacts) -->
     <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
 
-    <target name="gen-repo" depends="modules" description="Regenerate the repository">
+    <target name="gen-repo" depends="_init-xalan, modules" description="Regenerate the repository">
 
         <!-- Wipe repository clean -->
         <delete>
@@ -164,7 +166,7 @@
             ${resolve.mod}  - Only resolve when module matches
             ${resolve.rev}  - Only resolve when revision matches
     -->
-    <target name="resolve" description="Resolve everything and build a normal repository">
+    <target name="resolve" depends="_init-xalan" description="Resolve everything and build a normal repository">
 
         <!-- Initialize resolve work area and repository we're going to build -->
         <delete dir="build/resolve"/>
@@ -203,4 +205,22 @@
         <property name="skip-svn" value="true" />
     </target>
 
+    <target name="get-xalan">
+        <property name="download-xalan" value="true" />
+    </target>
+
+    <target name="_init-xalan" depends="_download-xalan, _provided-xalan-classpath" />
+
+    <target name="_download-xalan" if="download-xalan">
+      <!-- Find xalan -->
+      <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
+        organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+      <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
+        organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+    </target>
+
+    <target name="_provided-xalan-classpath" unless="get-xalan">
+      <!-- placeholder declaration -->
+      <path id="xalan.classpath" path="" />
+    </target>
 </project>
