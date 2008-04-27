@@ -17,7 +17,7 @@
 -->
 
 <!--
-Option targets (execute these before the action targets (like 'repo' or 'resolve') to turn on or off build behaviors):
+    Option targets (execute these before the action targets (like 'repo' or 'resolve') to turn on or off build behaviors):
 
     use-git: makes svn related operations either use "git svn" or skipped.
 
@@ -26,6 +26,12 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
 -->
 <!-- $Id$ -->
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
+
+    <!--
+        Set this property to change where the meta-repo is generated.
+        You also need '-Dskip-svn=true' if this is set to somewhere outside a subversion working tree.
+    -->
+    <property name="target.repo" value="${basedir}/repo" />
 
     <!--
         Define Ivy ant tasks.
@@ -50,7 +56,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
     <target name="modules" description="Regenerate repo/modules.xml">
         <property name="svn-cmd" value="svn" />
 
-        <mkdir dir="repo"/>
+        <mkdir dir="${target.repo}"/>
 
         <!-- Get current SVN revision -->
         <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
@@ -65,7 +71,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
             <arg value="-c"/>
             <arg value="find src/modules -name ivy.xml -print
               | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
-              > repo/modules.xml"/>
+              > ${target.repo}/modules.xml"/>
         </exec>
     </target>
 
@@ -76,7 +82,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
 
         <!-- Wipe repository clean -->
         <delete>
-            <fileset dir="repo">
+            <fileset dir="${target.repo}">
                 <include name="modules/**/ivy.xml"/>
                 <include name="modules/**/builder.xml"/>
                 <include name="images/**/*"/>
@@ -87,7 +93,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
         </delete>
 
         <!-- Copy support files into repository -->
-        <copy todir="repo">
+        <copy todir="${target.repo}">
             <fileset dir="src">
                 <include name="images/**/*"/>
                 <include name="xsl/ivy-doc.xsl"/>
@@ -116,15 +122,19 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
         </copy>
 
         <!-- Generate ivy.xml files -->
-        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null">
             <param name="filename" expression="ivy.xml"/>
             <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
+            <param name="target.repo" expression="${target.repo}" />
+            <param name="source.base" expression="${basedir}/src" />
         </xslt>
 
         <!-- Generate builder.xml files -->
-        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="repo/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null">
             <param name="filename" expression="builder.xml"/>
             <param name="stylesheet" expression="builder-repo.xsl"/>
+            <param name="target.repo" expression="${target.repo}" />
+            <param name="source.base" expression="${basedir}/src" />
         </xslt>
 
         <!-- Validate all generated XML files -->
@@ -132,7 +142,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
             <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
             <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
             <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
-            <fileset dir="repo/modules">
+            <fileset dir="${target.repo}/modules">
                 <include name="**/ivy.xml"/>
                 <include name="**/builder.xml"/>
             </fileset>
@@ -146,7 +156,7 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
             <arg value="--quiet"/>
             <arg value="--recursive"/>
             <arg value="svn:keywords"/>
-            <arg value="repo"/>
+            <arg value="${target.repo}"/>
         </exec>
     </target>
 
@@ -176,14 +186,14 @@ Option targets (execute these before the action targets (like 'repo' or 'resolve
 
         <!-- Copy the builder repo -->
         <copy todir="build/repo-with-artifacts">
-            <fileset dir="repo"/>
+            <fileset dir="${target.repo}"/>
         </copy>
 
         <!-- Create an ant build that does the resolve and retrieve work -->
         <property name="resolve.org" value=""/>
         <property name="resolve.mod" value=""/>
         <property name="resolve.rev" value=""/>
-        <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="repo/modules.xml" out="build/resolve/build.xml">
+        <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="${target.repo}/modules.xml" out="build/resolve/build.xml">
             <param name="retrieve.pattern" expression="../repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
             <param name="resolve.org" expression="${resolve.org}"/>
             <param name="resolve.mod" expression="${resolve.mod}"/>
