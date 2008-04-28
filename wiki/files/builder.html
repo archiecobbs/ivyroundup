@@ -93,7 +93,7 @@ This resolver shares the <a href="../configuration/resolvers.html#common">common
 </table>
 <br />
 <p>
-Setting a resourceURL will cause the resolver to ignore the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
+Setting a resourceURL will cause the resolver to override the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
 </p>
 
 <p>
@@ -144,6 +144,7 @@ Below is an example of build instructions for <a href="http://testng.org/">TestN
     &lt;property name="zipname" value="${name}-${version}"/&gt;
 
     &lt;resource dest="archive" url="http://testng.org/${zipname}.zip" sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b"&gt;
+        &lt;url href="http://mirror.example.com/archives/${zipname}.zip"/&gt;
         &lt;include name="${zipname}/src/main/**/*"/&gt;
         &lt;include name="${zipname}/src/jdk15/**/*"/&gt;
         &lt;include name="${zipname}/javadocs/**/*"/&gt;
@@ -249,7 +250,7 @@ The resource XML tag supports the following attributes:
 <tbody>
   <tr>
     <td>url</td>
-    <td>URL for the resource</td>
+    <td>Primary URL for the resource</td>
     <td>Yes</td>
   </tr>
   <tr>
@@ -274,7 +275,7 @@ The resource XML tag supports the following attributes:
 </tbody>
 </table>
 <br />
-The resource XML tag may contain child elements. If any exist, they will be included as children of an automatically generated fileset tag.
+The resource XML tag may contain child elements. An url tag with an href attribute specifies an alternate URL for the resource (see TestNG example above). Any other tags will be included as children of an automatically generated fileset tag.
 
 <h1>Maven2 Resources</h1>
 Special support is included for maven2 resources. For these resources, use the m2resource tag instead of the resource tag. Each m2resource tag specifies one or more artifacts that are downloaded from the Maven2 repository.

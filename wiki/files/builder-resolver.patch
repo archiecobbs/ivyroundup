@@ -854,7 +854,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
-@@ -0,0 +1,376 @@
+@@ -0,0 +1,456 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
@@ -923,9 +923,16 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +            <basename property="filename.{generate-id()}" file="{@url}"/>
 +        </target>
 +
++        <!-- Generate list of URLs to try -->
++        <xsl:variable name="urls">
++            <xsl:call-template name="concat">
++                <xsl:with-param name="nodes" select="@url | url/@href"/>
++            </xsl:call-template>
++        </xsl:variable>
++
 +        <!-- Get resource -->
 +        <xsl:call-template name="resource">
-+            <xsl:with-param name="url" select="@url"/>
++            <xsl:with-param name="urls" select="$urls"/>
 +            <xsl:with-param name="type" select="@type"/>
 +            <xsl:with-param name="csum" select="@sha1"/>
 +            <xsl:with-param name="dest" select="@dest"/>
@@ -1034,7 +1041,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +
 +            <!-- Get resource -->
 +            <xsl:call-template name="resource">
-+                <xsl:with-param name="url" select="$url"/>
++                <xsl:with-param name="urls" select="$url"/>
 +                <xsl:with-param name="csum" select="@sha1"/>
 +                <xsl:with-param name="dest" select="@dest"/>
 +                <xsl:with-param name="tofile" select="@tofile"/>
@@ -1047,7 +1054,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +
 +    <!-- Download and optionally unpack a resource -->
 +    <xsl:template name="resource">
-+        <xsl:param name="url"/>
++        <xsl:param name="urls"/>
 +        <xsl:param name="type"/>
 +        <xsl:param name="csum"/>
 +        <xsl:param name="dest"/>
@@ -1070,8 +1077,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +        <xsl:variable name="resdir" select="concat('${resdir.', generate-id(), '}')"/>
 +        <xsl:variable name="downloadfile" select="concat($resdir, '${file.separator}', $filename)"/>
 +
-+        <!-- Check whether file is already downloaded -->
-+        <target name="checkdownload.{generate-id()}" depends="{$depends}, genresdir.1.{generate-id()}, genresdir.2.{generate-id()}">
++        <!-- Create directory for the downloaded resource -->
++        <target name="checkdownload.0.{generate-id()}" depends="{$depends}, genresdir.1.{generate-id()}, genresdir.2.{generate-id()}">
++            <mkdir dir="{$resdir}"/>
 +            <condition property="alreadydownloaded.{generate-id()}">
 +                <and>
 +                    <available file="{$downloadfile}"/>
@@ -1080,40 +1088,25 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +            </condition>
 +        </target>
 +
-+        <!-- Try to download the file using resourceURL first (if configured to use it) -->
-+        <target name="download.0.{generate-id()}" depends="checkdownload.{generate-id()}" unless="alreadydownloaded.{generate-id()}"
-+          if="ivy.builder.resourceURL">
-+            <mkdir dir="{$resdir}"/>
-+            <get dest="{$downloadfile}" verbose="true" usetimestamp="true" ignoreerrors="true">
-+                <xsl:attribute name="src">
-+                    <xsl:value-of select="concat('${ivy.builder.resourceURL}', $filename)"/>
-+                </xsl:attribute>
-+            </get>
-+        </target>
++        <!-- Prepend URL list with resourceURL if configured -->
++        <xsl:variable name="urls2">
++            <xsl:choose>
++                <xsl:when test="$resourceURL">
++                    <xsl:value-of select="concat($resourceURL, $filename, ' ', $urls)"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:value-of select="$urls"/>
++                </xsl:otherwise>
++            </xsl:choose>
++        </xsl:variable>
 +
-+        <!-- Check whether resourceURL download was successful (if configured to use it) -->
-+        <target name="checkdownload.0.{generate-id()}" depends="download.0.{generate-id()}" unless="alreadydownloaded.{generate-id()}"
-+          if="ivy.builder.resourceURL">
-+            <condition property="alreadydownloaded.{generate-id()}">
-+                <and>
-+                    <available file="{$downloadfile}"/>
-+                    <checksum file="{$downloadfile}" algorithm="SHA" property="{$csum}"/>
-+                </and>
-+            </condition>
-+        </target>
-+
-+        <!-- Download the file using normal URL if not already downloaded or gotten via resourceURL -->
-+        <target name="download.{generate-id()}" depends="checkdownload.0.{generate-id()}" unless="alreadydownloaded.{generate-id()}">
-+            <mkdir dir="{$resdir}"/>
-+            <get src="{$url}" dest="{$downloadfile}" verbose="true" usetimestamp="true"/>
-+            <fail message="SHA1 checksum verification for {$filename} failed!">
-+                <condition>
-+                    <not>
-+                        <checksum file="{$downloadfile}" algorithm="SHA" property="{$csum}"/>
-+                    </not>
-+                </condition>
-+            </fail>
-+        </target>
++        <!-- Try to download each of the URLs in order -->
++        <xsl:call-template name="downloads">
++            <xsl:with-param name="urls" select="$urls2"/>
++            <xsl:with-param name="filename" select="$filename"/>
++            <xsl:with-param name="destfile" select="$downloadfile"/>
++            <xsl:with-param name="csum" select="$csum"/>
++        </xsl:call-template>
 +
 +        <!-- Unpack or just copy the file to its destination -->
 +        <target name="resource.{generate-id()}" depends="download.{generate-id()}">
@@ -1131,7 +1124,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +                                <xsl:choose>
 +                                    <xsl:when test="not($type)">
 +                                        <xsl:call-template name="archiveType">
-+                                            <xsl:with-param name="file" select="$url"/>
++                                            <xsl:with-param name="file" select="$urls"/>
 +                                        </xsl:call-template>
 +                                    </xsl:when>
 +                                    <xsl:otherwise>
@@ -1156,11 +1149,82 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +        </target>
 +    </xsl:template>
 +
++    <!-- Download resource, trying one or more URLs in order -->
++    <xsl:template name="downloads">
++        <xsl:param name="urls"/>
++        <xsl:param name="filename"/>
++        <xsl:param name="destfile"/>
++        <xsl:param name="csum"/>
++        <xsl:param name="index" select="1"/>
++
++        <!-- Parse out first URL from whitespace-separated list -->
++        <xsl:variable name="nurls" select="normalize-space($urls)"/>
++        <xsl:variable name="isFirstURL" select="$index = 1"/>
++        <xsl:variable name="isLastURL" select="not(contains($nurls, ' '))"/>
++        <xsl:variable name="url">
++            <xsl:choose>
++                <xsl:when test="not($isLastURL)">
++                    <xsl:value-of select="substring-before($nurls, ' ')"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <xsl:value-of select="$nurls"/>
++                </xsl:otherwise>
++            </xsl:choose>
++        </xsl:variable>
++        <xsl:variable name="rurls" select="substring-after($nurls, ' ')"/>
++
++        <!-- Attempt download using this URL; allow download to fail if this is not the last URL -->
++        <target name="download.{$index}.{generate-id()}" depends="checkdownload.{$index - 1}.{generate-id()}"
++          unless="alreadydownloaded.{generate-id()}">
++            <get src="{$url}" dest="{$destfile}" verbose="true" ignoreerrors="{string(not($isLastURL))}"/>
++        </target>
++
++        <!-- Check whether download attempt was successful -->
++        <target name="checkdownload.{$index}.{generate-id()}" depends="download.{$index}.{generate-id()}"
++          unless="alreadydownloaded.{generate-id()}">
++            <condition property="alreadydownloaded.{generate-id()}">
++                <and>
++                    <available file="{$destfile}"/>
++                    <checksum file="{$destfile}" algorithm="SHA" property="{$csum}"/>
++                </and>
++            </condition>
++        </target>
++
++        <!-- Do final check after last attempt, or recurse -->
++        <xsl:choose>
++            <xsl:when test="$isLastURL">
++                <target name="download.{generate-id()}" depends="checkdownload.{$index}.{generate-id()}"
++                  unless="alreadydownloaded.{generate-id()}">
++                    <fail message="Unable to download {$filename} from any configured URL">
++                        <condition>
++                            <not>
++                                <available file="{$destfile}"/>
++                            </not>
++                        </condition>
++                    </fail>
++                    <fail message="SHA1 checksum verification for {$filename} failed!"/>
++                </target>
++            </xsl:when>
++            <xsl:otherwise>
++                <xsl:call-template name="downloads">
++                    <xsl:with-param name="urls" select="$rurls"/>
++                    <xsl:with-param name="filename" select="$filename"/>
++                    <xsl:with-param name="destfile" select="$destfile"/>
++                    <xsl:with-param name="csum" select="$csum"/>
++                    <xsl:with-param name="index" select="$index + 1"/>
++                </xsl:call-template>
++            </xsl:otherwise>
++        </xsl:choose>
++    </xsl:template>
++
 +    <!-- Unpack an archive -->
 +    <xsl:template name="unpack">
 +        <xsl:param name="file"/>
 +        <xsl:param name="dir"/>
 +        <xsl:param name="type"/>
++
++        <!-- Get nested includes, excludes, etc. -->
++        <xsl:variable name="includes" select="*[name() != 'url']"/>
 +
 +        <!-- Unpack -->
 +        <mkdir dir="{$dir}"/>
@@ -1169,9 +1233,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +            <!-- ZIP type files -->
 +            <xsl:when test="$type = 'zip' or $type = 'war' or $type = 'jar'">
 +                <unzip src="{$file}" dest="{$dir}">
-+                    <xsl:if test="*">
++                    <xsl:if test="$includes">
 +                        <fileset dir=".">
-+                            <xsl:copy-of select="*"/>
++                            <xsl:copy-of select="$includes"/>
 +                        </fileset>
 +                    </xsl:if>
 +                </unzip>
@@ -1188,9 +1252,9 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +                            <xsl:attribute name="compression">bzip2</xsl:attribute>
 +                        </xsl:when>
 +                    </xsl:choose>
-+                    <xsl:if test="*">
++                    <xsl:if test="$includes">
 +                        <fileset dir=".">
-+                            <xsl:copy-of select="*"/>
++                            <xsl:copy-of select="$includes"/>
 +                        </fileset>
 +                    </xsl:if>
 +                </untar>
@@ -1220,6 +1284,22 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +                    <xsl:value-of select="concat('ERROR: cannot determine type of archive: ', $file, '&#10;')"/>
 +                    <xsl:value-of select="'Please set the &quot;type&quot; attribute to one of: zip, tar, tar.gz, or tar.bz2.&#10;'"/>
 +                </xsl:message>
++            </xsl:otherwise>
++        </xsl:choose>
++    </xsl:template>
++
++    <!-- Concatenate nodes separated by spaces -->
++    <xsl:template name="concat">
++        <xsl:param name="nodes"/>
++        <xsl:choose>
++            <xsl:when test="count($nodes) &lt;= 1">
++                <xsl:value-of select="string($nodes)"/>
++            </xsl:when>
++            <xsl:otherwise>
++                <xsl:value-of select="concat(string($nodes[1]), ' ')"/>
++                <xsl:call-template name="concat">
++                    <xsl:with-param name="nodes" select="$nodes[position() &gt; 1]"/>
++                </xsl:call-template>
 +            </xsl:otherwise>
 +        </xsl:choose>
 +    </xsl:template>
@@ -1470,7 +1550,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/build.xml
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/build.xml	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/build.xml	(revision 0)
-@@ -0,0 +1,31 @@
+@@ -0,0 +1,41 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
@@ -1489,15 +1569,25 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/build.xml
 +        </xmlvalidate>
 +    </target>
 +
++    <!-- Set ${resourceURL} (case 1) -->
++    <target name="setResourceURL1" if="ivy.builder.resourceURL">
++        <property name="resourceURL" value="${ivy.builder.resourceURL}"/>
++    </target>
++
++    <!-- Set ${resourceURL} (case 2) -->
++    <target name="setResourceURL2" unless="ivy.builder.resourceURL">
++        <property name="resourceURL" value=""/>
++    </target>
++
 +    <!-- Apply XSLT to generate ant build file -->
 +    <target name="style">
 +        <xslt style="builder.xsl" in="builder.xml" out="builder-output.xml">
-+            <param name="resourceURL" expression="${ivy.builder.resourceURL}"/>
++            <param name="resourceURL" expression="${resourceURL}"/>
 +        </xslt>
 +    </target>
 +
 +    <!-- Main build target: invoke generated build file -->
-+    <target name="build" depends="validate, style">
++    <target name="build" depends="validate, setResourceURL1, setResourceURL2, style">
 +        <ant antfile="builder-output.xml"/>
 +    </target>
 +
@@ -1514,7 +1604,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 649854)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 652071)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1559,46 +1649,9 @@ Name: svn:keywords
 Name: svn:eol-style
    + native
 
-Index: build.xml
-===================================================================
---- build.xml	(revision 649854)
-+++ build.xml	(working copy)
-@@ -570,6 +570,32 @@
-     
- 
-     <!-- =================================================================
-+         IVY ROUNDUP TEST
-+         ================================================================= -->
-+    <target name="roundup" depends="jar">
-+
-+        <!-- Configure Ivy -->
-+        <ivy:settings id="roundup-settings" override="true" file="src/example/builder-resolver/ivysettings.xml"/>
-+
-+        <!-- Find TestNG (dynamic revision) using roundup resolver  -->
-+        <ivy:resolve revision="5.7+" settingsRef="roundup-settings" type="jar"
-+          organisation="testng" module="testng" inline="true" log="download-only"/>
-+        <ivy:cachepath pathid="testng.classpath" settingsRef="roundup-settings" type="jar"
-+          organisation="testng" module="testng" inline="true" log="download-only"/>
-+
-+        <!-- Find commons-email using roundup resolver  -->
-+        <ivy:resolve revision="1.1" settingsRef="roundup-settings" type="jar"
-+          organisation="org.apache.commons" module="commons-email" inline="true" log="download-only"/>
-+        <ivy:cachepath pathid="email.classpath" settingsRef="roundup-settings" type="jar"
-+          organisation="org.apache.commons" module="commons-email" inline="true" log="download-only"/>
-+
-+        <!-- Run TestNG's main class causing it to output usage message  -->
-+        <java classname="org.testng.TestNG" fork="true">
-+            <classpath refid="testng.classpath"/>
-+        </java>
-+    </target>
-+
-+    <!-- =================================================================
-          IDE SPECIFIC
-          ================================================================= -->
-     <available file="${basedir}/.classpath" property="eclipse.classpath.exists" />
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 649854)
+--- doc/configuration/resolvers.html	(revision 652071)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1610,7 +1663,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 649854)
+--- doc/toc.json	(revision 652071)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
@@ -1630,7 +1683,7 @@ Index: doc/resolver/builder.html
 ===================================================================
 --- doc/resolver/builder.html	(revision 0)
 +++ doc/resolver/builder.html	(revision 0)
-@@ -0,0 +1,385 @@
+@@ -0,0 +1,386 @@
 +<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 +<!--
 +   Licensed to the Apache Software Foundation (ASF) under one
@@ -1743,7 +1796,7 @@ Index: doc/resolver/builder.html
 +</table>
 +<br />
 +<p>
-+Setting a resourceURL will cause the resolver to ignore the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
++Setting a resourceURL will cause the resolver to override the URLs for resources specified by the build instructions. Instead, all resources will be downloaded from an URL constructed by first resolving the resourceURL pattern into a base URL, and then resolving the resource filename relative to that base URL. In other words, the resourceURL pattern specifies the URL "directory", so it should always end in a forward slash.
 +</p>
 +
 +<p>
@@ -1794,6 +1847,7 @@ Index: doc/resolver/builder.html
 +    <property name="zipname" value="${name}-${version}"/>
 +
 +    <resource dest="archive" url="http://testng.org/${zipname}.zip" sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
++        <url href="http://mirror.example.com/archives/${zipname}.zip"/>
 +        <include name="${zipname}/src/main/**/*"/>
 +        <include name="${zipname}/src/jdk15/**/*"/>
 +        <include name="${zipname}/javadocs/**/*"/>
@@ -1899,7 +1953,7 @@ Index: doc/resolver/builder.html
 +<tbody>
 +  <tr>
 +    <td>url</td>
-+    <td>URL for the resource</td>
++    <td>Primary URL for the resource</td>
 +    <td>Yes</td>
 +  </tr>
 +  <tr>
@@ -1924,7 +1978,7 @@ Index: doc/resolver/builder.html
 +</tbody>
 +</table>
 +<br />
-+The resource XML tag may contain child elements. If any exist, they will be included as children of an automatically generated fileset tag.
++The resource XML tag may contain child elements. An url tag with an href attribute specifies an alternate URL for the resource (see TestNG example above). Any other tags will be included as children of an automatically generated fileset tag.
 +
 +<h1>Maven2 Resources</h1>
 +Special support is included for maven2 resources. For these resources, use the m2resource tag instead of the resource tag. Each m2resource tag specifies one or more artifacts that are downloaded from the Maven2 repository.
