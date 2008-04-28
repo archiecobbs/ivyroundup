@@ -113,7 +113,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <tr><td class="title">Description</td><td class="value"><xsl:copy-of select="info/description"/></td></tr>
     </table>
 
-    <xsl:if test="count($repositories) > 0">
+    <xsl:if test="false() and count($repositories) > 0">
     <div id="repositories">
     <h2>Public Repositories</h2>
     <table>
