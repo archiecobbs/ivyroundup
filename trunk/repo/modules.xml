@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-04-28 16:19:39 GMT</timestamp>
-  <svnRevision>151</svnRevision>
+  <timestamp>2008-04-28 17:02:38 GMT</timestamp>
+  <svnRevision>154</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -25,6 +25,11 @@
   <org name="org.antlr">
     <mod name="antlr">
       <rev name="2.7.7"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.jsr107cache">
+    <mod name="jsr107cache">
+      <rev name="1.0"/>
     </mod>
   </org>
   <org name="org.mortbay">
@@ -98,6 +103,7 @@
   <org name="net.sourceforge.ehcache">
     <mod name="ehcache">
       <rev name="1.2.3"/>
+      <rev name="1.4.1"/>
     </mod>
   </org>
   <org name="javax.jms">
