@@ -5,7 +5,7 @@ BEGIN {
     MOD=""
     printf "<?xml-stylesheet type=\"text/xsl\" href=\"xsl/modules.xsl\"?>\n"
     printf "<modules>\n"
-    printf "  <timestamp>%s</timestamp>\n", strftime("%Y-%m-%d %H:%M:%S GMT", systime())
+    printf "  <timestamp>%s</timestamp>\n", strftime("%Y-%m-%d %H:%M:%S %Z", systime())
     printf "  <svnRevision>%s</svnRevision>\n", SVNREV
 }
 
