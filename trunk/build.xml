@@ -195,7 +195,7 @@
         <property name="resolve.mod" value=""/>
         <property name="resolve.rev" value=""/>
         <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="${target.repo}/modules.xml" out="build/resolve/build.xml">
-            <param name="retrieve.pattern" expression="../repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
+            <param name="retrieve.pattern" expression="build/repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
             <param name="resolve.org" expression="${resolve.org}"/>
             <param name="resolve.mod" expression="${resolve.mod}"/>
             <param name="resolve.rev" expression="${resolve.rev}"/>
