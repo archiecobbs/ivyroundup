@@ -71,7 +71,7 @@
         <exec executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
             <arg value="find src/modules -name ivy.xml -print
-              | awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
+              | TZ= awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
               > ${target.repo}/modules.xml"/>
         </exec>
     </target>
