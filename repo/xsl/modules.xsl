@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: modules.xsl 99 2008-04-18 15:47:12Z archie.cobbs $ -->
+<!-- $Id: modules.xsl 161 2008-04-30 19:11:21Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/modules">
@@ -38,6 +38,7 @@
     <div id="revision"><span id="revision">Last Repository Build: </span><xsl:value-of select="timestamp"/> (r<xsl:value-of select="svnRevision"/>)</div>
     <p class="header">
     This page lists all revisions of all modules contained in the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a>.
+    You can view module dependencies as <a href="graph/modules.gif">GIF</a> or <a href="graph/modules.svg">SVG</a>.  
     </p>
 
     <div id="modules">
