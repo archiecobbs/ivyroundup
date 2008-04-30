@@ -29,7 +29,9 @@
 
     <!-- See dot(1) man page for valid settings -->
     <xsl:param name="graph.size"/>
+    <xsl:param name="graph.margin"/>
     <xsl:param name="graph.rankdir"/>
+    <xsl:param name="graph.splines"/>
     <xsl:param name="node.shape"/>
 
     <xsl:variable name="revision" select="'$Id$'"/>
@@ -49,6 +51,12 @@
             </xsl:if>
             <xsl:if test="$graph.size">
                 size="<xsl:value-of select="$graph.size"/>";
+            </xsl:if>
+            <xsl:if test="$graph.splines">
+                splines="<xsl:value-of select="$graph.splines"/>";
+            </xsl:if>
+            <xsl:if test="$graph.margin">
+                margin="<xsl:value-of select="$graph.margin"/>";
             </xsl:if>
             <xsl:if test="$node.shape">
                 node [shape="<xsl:value-of select="$node.shape"/>"];
