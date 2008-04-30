@@ -31,7 +31,10 @@
     <!-- Set this to also retrieve artifacts -->
     <xsl:param name="retrieve.pattern"/>
 
-    <!-- Set one or more of these to restrict what gets resolved -->
+    <!--
+        Set one or more of these to restrict what gets resolved.
+        Format of these parameters is: value1[,value2[,value3,...]].
+    -->
     <xsl:param name="resolve.org"/>
     <xsl:param name="resolve.mod"/>
     <xsl:param name="resolve.rev"/>
@@ -52,7 +55,7 @@
 
             <!-- Resolve all (matching) revisions -->
             <target name="resolve" description="Resolve all revisions of all modules">
-                <xsl:apply-templates select="org[not($resolve.org) or @name = $resolve.org]"/>
+                <xsl:apply-templates select="org[not($resolve.org) or starts-with($resolve.org, @name) or contains($resolve.org, concat(',', @name))]"/>
             </target>
         </project>
     </xsl:template>
@@ -61,14 +64,14 @@
         <xsl:comment>
             <xsl:value-of select="concat(' *** Organisation: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates select="mod[not($resolve.mod) or @name = $resolve.mod]"/>
+        <xsl:apply-templates select="mod[not($resolve.mod) or starts-with($resolve.mod, @name) or contains($resolve.mod, concat(',', @name))]"/>
     </xsl:template>
 
     <xsl:template match="mod">
         <xsl:comment>
             <xsl:value-of select="concat(' ***** Module: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates select="rev[not($resolve.rev) or @name = $resolve.rev]"/>
+        <xsl:apply-templates select="rev[not($resolve.rev) or starts-with($resolve.rev, @name) or contains($resolve.rev, concat(',', @name))]"/>
     </xsl:template>
 
     <xsl:template match="rev">
