@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 YOUR NAME HERE
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20080306120000">
+        <license name="Mozilla Public License, Version 1.1" url="http://www.mozilla.org/MPL/"/>
+        <description homepage="http://www.mozilla.org/rhino/">
+            Rhino is an open-source implementation of JavaScript
+            written entirely in Java. It is typically embedded into Java
+            applications to provide scripting to end users.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Configuration for JDK 1.5 and later"/>
+        <conf name="jdk14" description="Configuration for JDK 1.4 and earlier"/>
+    </configurations>
+
+    <publications>
+        <artifact name="js" conf="default"/>
+        <artifact name="js-14" conf="jdk14"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
