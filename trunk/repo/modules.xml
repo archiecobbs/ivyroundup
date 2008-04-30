@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-04-28 22:16:07 UTC</timestamp>
-  <svnRevision>159</svnRevision>
+  <timestamp>2008-04-30 20:27:53 UTC</timestamp>
+  <svnRevision>165</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -35,6 +35,16 @@
   <org name="org.mortbay">
     <mod name="jetty">
       <rev name="6.1.9"/>
+    </mod>
+  </org>
+  <org name="org.mozilla">
+    <mod name="rhino">
+      <rev name="1.7R1"/>
+    </mod>
+  </org>
+  <org name="org.apache.xmlgraphics">
+    <mod name="batik">
+      <rev name="1.7"/>
     </mod>
   </org>
   <org name="org.aopalliance">
