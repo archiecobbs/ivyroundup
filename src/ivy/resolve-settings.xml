@@ -8,7 +8,8 @@
             Define a builder repository using the repository we build in the repo/ subdirectory.
         -->
         <builder name="ivyroundup"
-          buildRoot="${java.io.tmpdir}/ivybuilder"
+          buildRoot="${basedir}/build/workspace"
+          preserveBuildDirectories="true"
           resourceCache="${user.home}/.ivy2/builder-cache">
             <ivy pattern="file://${basedir}/../../repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
             <artifact pattern="file://${basedir}/../../repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
