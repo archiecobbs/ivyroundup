@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-${version}"/>
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.tar.gz"
-      dest="archive" sha1="0c92236a29d8614f59ac7b8f15c1ea6b6cd97bc4">
+      sha1="0c92236a29d8614f59ac7b8f15c1ea6b6cd97bc4">
         <include name="${archive}/${name}.jar"/>
     </resource>
 

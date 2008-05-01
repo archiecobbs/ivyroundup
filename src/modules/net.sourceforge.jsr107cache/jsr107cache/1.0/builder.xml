@@ -21,7 +21,7 @@
     <property name="name" value="${ivy.builder.module}"/>
     <property name="version" value="${ivy.builder.revision}"/>
 
-    <resource dest="archive" url="http://downloads.sourceforge.net/${name}/${name}-${version}-bundle.jar"
+    <resource url="http://downloads.sourceforge.net/${name}/${name}-${version}-bundle.jar"
       sha1="c53ffd84ca9a2b041a07f603411aa8229f3b671e"/>
 
     <build>

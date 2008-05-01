@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-${version}"/>
 
     <resource url="http://www.antlr2.org/download/${name}-${version}.tar.gz"
-      dest="archive" sha1="802655c343cc7806aaf1ec2177a0e663ff209de1">
+      sha1="802655c343cc7806aaf1ec2177a0e663ff209de1">
         <include name="${archive}/${name}.jar"/>
     </resource>
 

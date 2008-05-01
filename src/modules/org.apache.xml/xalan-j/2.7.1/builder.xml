@@ -22,11 +22,11 @@
     <property name="version" value="2_7_1"/>
     <property name="archive" value="${name}_${version}"/>
 
-    <resource dest="archive" url="http://www.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-bin-2jars.tar.gz"
+    <resource url="http://www.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-bin-2jars.tar.gz"
       sha1="cb9c988b1a93c008e924551cbe144b2bc62c3f2e">
         <include name="${archive}/*.jar"/>
     </resource>
-    <resource dest="archive" url="http://www.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-src-2jars.tar.gz"
+    <resource url="http://www.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-src-2jars.tar.gz"
       sha1="c6e597e88de0dd2e7e63a5df6203f7270235812b">
         <include name="${archive}/src/**/*"/>
     </resource>

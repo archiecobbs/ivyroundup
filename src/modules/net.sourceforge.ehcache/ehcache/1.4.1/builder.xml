@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-${version}"/>
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.tgz"
-      dest="archive" sha1="948d63acfba69fe1093fdca3eae52d3fe8a37217"/>
+      sha1="948d63acfba69fe1093fdca3eae52d3fe8a37217"/>
 
     <build>
         <!-- jars -->
