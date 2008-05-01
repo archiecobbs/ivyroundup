@@ -261,11 +261,17 @@ The resource XML tag supports the following attributes:
   <tr>
     <td>dest</td>
     <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
-    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
+    <td>No; defaults to "archive"</td>
   </tr>
   <tr>
     <td>tofile</td>
-    <td>Where to put the file; no extraction will be performed</td>
+    <td>Where to put the file directly; if present no extraction will be performed</td>
+    <td>No; if present, "dest" is ignored</td>
+  </tr>
+  <tr>
+    <td>filename</td>
+    <td>Name of the file to download</td>
+    <td>No; if not present, same as the last component of the URL</td>
   </tr>
   <tr>
     <td>type</td>

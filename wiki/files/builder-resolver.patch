@@ -286,7 +286,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd	(revision 0)
-@@ -0,0 +1,101 @@
+@@ -0,0 +1,102 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!--
@@ -328,6 +328,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder-1.0.xsd
 +                            <xsd:attribute name="dest" type="xsd:string"/>
 +                            <xsd:attribute name="tofile" type="xsd:string"/>
 +                            <xsd:attribute name="type" type="archiveType"/>
++                            <xsd:attribute name="filename" type="xsd:string"/>
 +                        </xsd:complexType>
 +                    </xsd:element>
 +                    <xsd:element name="m2resource">
@@ -854,7 +855,7 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl	(revision 0)
-@@ -0,0 +1,456 @@
+@@ -0,0 +1,471 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!-- $Id$ -->
@@ -920,7 +921,14 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +
 +        <!-- Convert URL into simple filename -->
 +        <target name="setfilename.{generate-id()}">
-+            <basename property="filename.{generate-id()}" file="{@url}"/>
++            <xsl:choose>
++                <xsl:when test="@filename">
++                    <property name="filename.{generate-id()}" value="{@filename}"/>
++                </xsl:when>
++                <xsl:otherwise>
++                    <basename property="filename.{generate-id()}" file="{@url}"/>
++                </xsl:otherwise>
++            </xsl:choose>
 +        </target>
 +
 +        <!-- Generate list of URLs to try -->
@@ -1114,36 +1122,44 @@ Index: src/java/org/apache/ivy/plugins/resolver/builder/builder.xsl
 +                <xsl:when test="$tofile">
 +                    <copy file="{$downloadfile}" tofile="{$tofile}"/>
 +                </xsl:when>
-+                <xsl:when test="$dest">
++                <xsl:otherwise>
++                    <xsl:variable name="realdest">
++                        <xsl:choose>
++                            <xsl:when test="$dest">
++                                <xsl:value-of select="$dest"/>
++                            </xsl:when>
++                            <xsl:otherwise>archive</xsl:otherwise>
++                        </xsl:choose>
++                    </xsl:variable>
 +                    <xsl:choose>
 +                        <xsl:when test="$type = 'none'">
-+                            <copy file="{$downloadfile}" todir="{$dest}"/>
++                            <copy file="{$downloadfile}" todir="{$realdest}"/>
 +                        </xsl:when>
 +                        <xsl:otherwise>
 +                            <xsl:variable name="actualtype">
 +                                <xsl:choose>
-+                                    <xsl:when test="not($type)">
++                                    <xsl:when test="$type">
++                                        <xsl:value-of select="$type"/>
++                                    </xsl:when>
++                                    <xsl:when test="@filename">
 +                                        <xsl:call-template name="archiveType">
-+                                            <xsl:with-param name="file" select="$urls"/>
++                                            <xsl:with-param name="file" select="@filename"/>
 +                                        </xsl:call-template>
 +                                    </xsl:when>
 +                                    <xsl:otherwise>
-+                                        <xsl:value-of select="$type"/>
++                                        <xsl:call-template name="archiveType">
++                                            <xsl:with-param name="file" select="$urls"/>
++                                        </xsl:call-template>
 +                                    </xsl:otherwise>
 +                                </xsl:choose>
 +                            </xsl:variable>
 +                            <xsl:call-template name="unpack">
 +                                <xsl:with-param name="file" select="$downloadfile"/>
-+                                <xsl:with-param name="dir" select="$dest"/>
++                                <xsl:with-param name="dir" select="$realdest"/>
 +                                <xsl:with-param name="type" select="$actualtype"/>
 +                            </xsl:call-template>
 +                        </xsl:otherwise>
 +                    </xsl:choose>
-+                </xsl:when>
-+                <xsl:otherwise>
-+                    <xsl:message terminate="yes">
-+                        <xsl:value-of select="'ERROR: one of &quot;tofile&quot; or &quot;dest&quot; must be specified for resources&#10;'"/>
-+                    </xsl:message>
 +                </xsl:otherwise>
 +            </xsl:choose>
 +        </target>
@@ -1604,7 +1620,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 652071)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 652420)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1651,7 +1667,7 @@ Name: svn:eol-style
 
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 652071)
+--- doc/configuration/resolvers.html	(revision 652420)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1663,7 +1679,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 652071)
+--- doc/toc.json	(revision 652420)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
@@ -1683,7 +1699,7 @@ Index: doc/resolver/builder.html
 ===================================================================
 --- doc/resolver/builder.html	(revision 0)
 +++ doc/resolver/builder.html	(revision 0)
-@@ -0,0 +1,386 @@
+@@ -0,0 +1,392 @@
 +<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 +<!--
 +   Licensed to the Apache Software Foundation (ASF) under one
@@ -1964,11 +1980,17 @@ Index: doc/resolver/builder.html
 +  <tr>
 +    <td>dest</td>
 +    <td>Defines the name of the subdirectory into which the artifact should be unpacked</td>
-+    <td rowspan="2">Exactly one of "dest" or "tofile" must be supplied</td>
++    <td>No; defaults to "archive"</td>
 +  </tr>
 +  <tr>
 +    <td>tofile</td>
-+    <td>Where to put the file; no extraction will be performed</td>
++    <td>Where to put the file directly; if present no extraction will be performed</td>
++    <td>No; if present, "dest" is ignored</td>
++  </tr>
++  <tr>
++    <td>filename</td>
++    <td>Name of the file to download</td>
++    <td>No; if not present, same as the last component of the URL</td>
 +  </tr>
 +  <tr>
 +    <td>type</td>
