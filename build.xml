@@ -54,7 +54,7 @@
     <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
 
     <!-- Regenerate list all module revisions in XML manifest (repo/modules.xml) -->
-    <target name="modules" depends="_init-xalan" description="Regenerate repo/modules.xml">
+    <target name="modules" description="Regenerate repo/modules.xml">
         <property name="svn-cmd" value="svn" />
 
         <mkdir dir="${target.repo}"/>
@@ -73,23 +73,6 @@
             <arg value="find src/modules -name ivy.xml -print
               | TZ= awk -F/ -v SVNREV=${svn.revision} -f src/awk/xmlify.awk
               > ${target.repo}/modules.xml"/>
-        </exec>
-
-        <!-- Create graphs of module dependencies -->
-        <mkdir dir="build/graph"/>
-        <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
-            <param name="node.shape" expression="ellipse"/>
-            <param name="graph.rankdir" expression="LR"/>
-            <param name="graph.size" expression="8.5,11"/>
-        </xslt>
-        <mkdir dir="${target.repo}/graph"/>
-        <exec executable="/bin/bash" logError="true" failonerror="false">
-            <arg value="-c"/>
-            <arg value="circo -Tgif -o ${target.repo}/graph/modules.gif build/graph/modules.dot"/>
-        </exec>
-        <exec executable="/bin/bash" logError="true" failonerror="false">
-            <arg value="-c"/>
-            <arg value="circo -Tsvg -o ${target.repo}/graph/modules.svg build/graph/modules.dot"/>
         </exec>
     </target>
 
@@ -165,6 +148,23 @@
                 <include name="**/builder.xml"/>
             </fileset>
         </xmlvalidate>
+
+        <!-- Create graphs of module dependencies -->
+        <mkdir dir="build/graph"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
+            <param name="node.shape" expression="ellipse"/>
+            <param name="graph.rankdir" expression="LR"/>
+            <param name="graph.size" expression="11,11"/>
+        </xslt>
+        <mkdir dir="${target.repo}/graph"/>
+        <exec executable="/bin/bash" logError="true" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tgif -o ${target.repo}/graph/modules.gif build/graph/modules.dot"/>
+        </exec>
+        <exec executable="/bin/bash" logError="true" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tsvg -o ${target.repo}/graph/modules.svg build/graph/modules.dot"/>
+        </exec>
     </target>
 
     <target name="post-repo-gen-svn-ops" unless="skip-svn" description="Regenerate the repository">
