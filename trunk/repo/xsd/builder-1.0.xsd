@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: builder-1.0.xsd 35 2008-04-09 20:39:44Z archie.cobbs $ -->
+<!-- $Id: builder-1.0.xsd 170 2008-05-01 15:48:56Z archie.cobbs $ -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="builder-module">
@@ -39,6 +39,7 @@
                             <xsd:attribute name="dest" type="xsd:string"/>
                             <xsd:attribute name="tofile" type="xsd:string"/>
                             <xsd:attribute name="type" type="archiveType"/>
+                            <xsd:attribute name="filename" type="xsd:string"/>
                         </xsd:complexType>
                     </xsd:element>
                     <xsd:element name="m2resource">

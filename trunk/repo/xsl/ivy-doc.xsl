@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 157 2008-04-28 22:07:23Z archie.cobbs $ -->
+<!-- $Id: ivy-doc.xsl 170 2008-05-01 15:48:56Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
@@ -167,7 +167,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:if test="count($public.conf) = 0">
     <tr>
       <td>default</td>
-      <td></td>
+      <td><i>Implicit default configuration</i></td>
       <td></td>
     </tr>
     </xsl:if>
@@ -352,14 +352,23 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <tbody>
     <xsl:for-each select="$builder/resource">
     <tr>
-      <td><xsl:value-of select="@url"/></td>
+      <td>
+        <xsl:value-of select="@url"/>
+        <xsl:for-each select="url/@href">
+            <br/>
+            <xsl:value-of select="concat('[', ., ']')"/>
+        </xsl:for-each>
+      </td>
       <td>
         <xsl:choose>
             <xsl:when test="@tofile">
                 <xsl:value-of select="concat('Copy to ', @tofile)"/>
             </xsl:when>
+            <xsl:when test="@dest">
+                <xsl:value-of select="concat('Unpack into ', @dest, '/')"/>
+            </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+                <xsl:value-of select="'Unpack into archive/'"/>
             </xsl:otherwise>
         </xsl:choose>
       </td>
@@ -437,7 +446,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <xsl:value-of select="concat('Copy to ', @tofile)"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+                <xsl:value-of select="concat('Unpack into ', @dest, '/')"/>
             </xsl:otherwise>
         </xsl:choose>
       </td>
