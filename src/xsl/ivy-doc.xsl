@@ -167,7 +167,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:if test="count($public.conf) = 0">
     <tr>
       <td>default</td>
-      <td></td>
+      <td><i>Implicit default configuration</i></td>
       <td></td>
     </tr>
     </xsl:if>
@@ -352,7 +352,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <tbody>
     <xsl:for-each select="$builder/resource">
     <tr>
-      <td><xsl:value-of select="@url"/></td>
+      <td>
+        <xsl:value-of select="@url"/>
+        <xsl:for-each select="url/@href">
+            <br/>
+            <xsl:value-of select="concat('[', ., ']')"/>
+        </xsl:for-each>
+      </td>
       <td>
         <xsl:choose>
             <xsl:when test="@tofile">
