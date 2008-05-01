@@ -22,7 +22,7 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="zipname" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://testng.org/${zipname}.zip"
+    <resource url="http://testng.org/${zipname}.zip"
       sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
         <include name="${zipname}/src/main/**/*"/>
         <include name="${zipname}/src/jdk15/**/*"/>

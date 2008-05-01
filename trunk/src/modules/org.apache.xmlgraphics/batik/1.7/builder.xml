@@ -24,20 +24,20 @@
     <property name="src" value="${name}-src-${version}"/>
     <property name="doc" value="${name}-docs-${version}"/>
 
-    <resource dest="archive" url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${bin}.zip"
+    <resource url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${bin}.zip"
       sha1="69d974ab0a4e13cbdd649fa96785776563b73fcf">
         <url href="http://archive.apache.org/dist/xmlgraphics/batik/${bin}.zip"/>
         <include name="${name}-${version}/*.jar"/>
         <include name="${name}-${version}/lib/*.jar"/>
     </resource>
-    <resource dest="archive" url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${src}.zip"
+    <resource url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${src}.zip"
       sha1="806f57b0200cc755903c2f6f55463f0dd5f6f7d6">
         <url href="http://archive.apache.org/dist/xmlgraphics/batik/${src}.zip"/>
         <include name="${name}-${version}/sources/**/*"/>
         <include name="${name}-${version}/sources-1.4/**/*"/>
         <include name="${name}-${version}/resources/**/*"/>
     </resource>
-    <resource dest="archive" url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${doc}.zip"
+    <resource url="http://apache.mirror.facebook.com/xmlgraphics/${name}/${doc}.zip"
       sha1="180715cd140efd33934684442ee6142f10d0c49c">
         <url href="http://archive.apache.org/dist/xmlgraphics/batik/${doc}.zip"/>
     </resource>

@@ -364,8 +364,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <xsl:when test="@tofile">
                 <xsl:value-of select="concat('Copy to ', @tofile)"/>
             </xsl:when>
+            <xsl:when test="@dest">
+                <xsl:value-of select="concat('Unpack into ', @dest, '/')"/>
+            </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+                <xsl:value-of select="'Unpack into archive/'"/>
             </xsl:otherwise>
         </xsl:choose>
       </td>
@@ -443,7 +446,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                 <xsl:value-of select="concat('Copy to ', @tofile)"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="concat('Unpack into ', @dest)"/>
+                <xsl:value-of select="concat('Unpack into ', @dest, '/')"/>
             </xsl:otherwise>
         </xsl:choose>
       </td>

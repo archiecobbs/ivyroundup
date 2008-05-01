@@ -23,7 +23,7 @@
     <property name="_version" value="1_7R1"/>
     <property name="archive" value="${name}${_version}"/>
 
-    <resource dest="archive" url="ftp://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip"
+    <resource url="ftp://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip"
       sha1="4ee03d524f231a04fccff0cdbe13a41dae6d44f7">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/src/**/*"/>
