@@ -51,13 +51,14 @@
     </info>
 
     <configurations>
-        <conf name="default"/>
-        <conf name="core"/>
-        <conf name="bean-collections"/>
+        <conf name="core" description="BeanUtils minus Bean Collections classes"/>
+        <conf name="complete" description="All of BeanUtils"/>
+        <conf name="bean-collections" description="Only the BeanUtils Bean Collections classes"/>
+        <conf name="default" extends="core" description="Same as core configuration"/>
     </configurations>
 
     <publications>
-        <artifact name="commons-beanutils" conf="default"/>
+        <artifact name="commons-beanutils" conf="complete"/>
         <artifact name="commons-beanutils-core" conf="core"/>
         <artifact name="commons-beanutils-bean-collections" conf="bean-collections"/>
         <artifact name="source" type="source" ext="zip"/>
@@ -65,8 +66,8 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default,core" org="org.apache.commons" name="commons-logging" rev="[1.0,2.0["/>
-        <dependency conf="core" org="org.apache.commons" name="commons-collections" rev="[2.0,3.0["/>
+        <dependency conf="core,complete" org="org.apache.commons" name="commons-logging" rev="[1.0,2.0["/>
+        <dependency conf="complete,bean-collections" org="org.apache.commons" name="commons-collections" rev="3.+"/>
     </dependencies>
 
 </ivy-module>
