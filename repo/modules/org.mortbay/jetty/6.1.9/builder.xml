@@ -22,7 +22,7 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://dist.codehaus.org/${name}/${archive}/${archive}.zip" sha1="7f187800d1854d827d3296ad5e8228e8c1241da2">
+    <resource url="http://dist.codehaus.org/${name}/${archive}/${archive}.zip" sha1="7f187800d1854d827d3296ad5e8228e8c1241da2">
         <include name="${archive}/lib/**/*"/>
         <include name="${archive}/javadoc/**/*"/>
     </resource>

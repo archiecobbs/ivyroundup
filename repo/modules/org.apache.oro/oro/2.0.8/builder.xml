@@ -22,7 +22,7 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="jakarta-${name}-${version}"/>
 
-    <resource dest="archive" url="http://www.urlstructure.com/apache/jakarta/${name}/binaries/${archive}.tar.gz" sha1="23d708b77885c97149873e808fdf4bcf05fe6708">
+    <resource url="http://www.urlstructure.com/apache/jakarta/${name}/binaries/${archive}.tar.gz" sha1="23d708b77885c97149873e808fdf4bcf05fe6708">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/src/java/**/*"/>
         <include name="${archive}/docs/api/**/*"/>

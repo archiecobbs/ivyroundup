@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2008 YOUR NAME HERE
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,17 +19,23 @@
 <builder-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
 
     <property name="name" value="${ivy.builder.module}"/>
+    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="archive" value="${name}-${version}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}.zip" sha1="9bb519396b3f5005b22c4dd3090cd3f343a63fa0"/>
+    <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mirror.services.wisc.edu/mysql/" filename="${archive}.tar.gz" sha1="3ebbab405e1578d165fe8910e3c23d808e6fcdd1">
+        <url href="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mysql.easynet.be/"/>
+        <include name="${archive}/src/com/**/*"/>
+        <include name="${archive}/src/org/**/*"/>
+    </resource>
 
     <build>
-
         <!-- jar -->
-        <move file="archive/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${archive}-bin.jar" tofile="artifacts/jars/${name}.jar"/>
 
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/javadoc"/>
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/com"/>
+            <fileset dir="archive/${archive}/src/org"/>
         </zip>
     </build>
 </builder-module>
