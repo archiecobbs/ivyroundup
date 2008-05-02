@@ -33,6 +33,10 @@ uP/8Lt9yGe9LJFrUNPdf53DMpcsfreCo+kX/PsZkrOuS5s2f9w8AAAAAAAAAAAAA
 AADgdz0AL9ijtAAoAAA=
 xxEOFxx
 
+# Apply patch
+echo applying patch
+patch -p0 < "${PATCH}"
+
 # Done
 echo done
 
