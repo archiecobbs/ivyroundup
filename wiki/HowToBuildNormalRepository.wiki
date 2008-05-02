@@ -1,0 +1,23 @@
+#summary How to build a normal Ivy repository using Ivy RoundUp
+
+== Overview ==
+
+The Ivy !RoundUp repository contains {{{ivy.xml}}} files but no actual artifacts. In place of artifacts, it has {{{builder.xml}}} files which describe how to download and (if necessary) extract artifacts on-demand.
+
+However, it's easy to use these files to create a normal Ivy repository. How to do this is described here.
+
+== Prerequisites ==
+
+ # You must have a version of Ivy containing the *builder resolver* installed on your machine (see [http://code.google.com/p/ivyroundup/downloads/list Downloads]).
+ # You must have a copy of the Ivy !RoundUp project *source code*. The easiest way to do this is to [http://code.google.com/p/ivyroundup/source/checkout check out the source code] using Subversion.
+ # You'll need to be running on a UNIX-like O/S.
+ # You'll need *ant* 1.6.2 or later.
+ # (Optional) You'll need the [http://www.graphviz.org/ GraphViz] package installed to generate the dependency graph.
+
+== Steps To Build Repository ==
+
+Once you've satisfied the prerequisites:
+ # Change into the top of the appropriate tree (e.g., *trunk/*).
+ # Run *ant*.
+
+After downloading all of the resources and resolving every module in Ivy !RoundUp, your completed "normal" repository will be in *build/repo-with-artifacts*.
