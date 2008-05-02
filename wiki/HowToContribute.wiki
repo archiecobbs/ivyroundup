@@ -1,0 +1,15 @@
+#summary How to Contribute to Ivy !RoundUp
+
+==Contributing to Ivy !RoundUp is easy and helps Ivy users everywhere==
+
+The main work required is adding new modules and new revisions of existing modules. All that is required for a new revision is an {{{ivy.xml}}} file and a {{{builder.xml}}} file.
+
+If the module already exists (i.e., you're just adding a new revision), typically all you need to do is copy the files from the previous revision and update the release timestamp and resource SHA1 checksums.
+
+For new modules, there are plenty of examples to work from. Or, you can start with the [http://code.google.com/p/ivyroundup/source/browse/trunk/src/boilerplate boilerplate files].
+
+Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules.
+
+If you're interested in developing the Ivy !RoundUp infrastructure, or becoming a regular contributor with SVN commit access, join us on the [http://groups.google.com/group/ivyroundup mailing list].
+
+Thanks!
