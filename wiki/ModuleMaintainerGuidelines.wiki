@@ -1,34 +1,42 @@
 #summary Guidelines for maintainers of Ivy modules in the Ivy RoundUp Repository
 
-This page describes some good practices when adding or maintaining Ivy modules.
+This page describes some good practices when adding or maintaining modules in Ivy !RoundUp.
 
 == General ==
 
-When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents.
+When adding a new module, create the module subdirectory using {{{svn mkdir}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{builder.xml}}} files.
 
-With a well-designed {{{builder.xml}}} and a minor revision bump, the only change that should be necessary is the SHA1 checksum.
-
-When adding completely new modules, do an {{{svn copy}}} of {{{src/boilerplate}}} to give you a well-formed starting point for the {{{ivy.xml}}} and {{{builder.xml}}} files.
+When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{builder.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{builder.xml}}}.
 
 == Ivy Module Definitions ({{{ivy.xml}}} files) ==
 
 === Organization ===
 
-Try to discover and follow existing precedents (if any) for the value of the "organisation" attribute. If there's no better option, use the module name for the organisation also.
+Try to discover and follow existing precedents (if any) for the value of the "organisation" attribute.
+
+Ivy !RoundUp attempts to follow Java package naming conventions whenever possible.
 
 === Configurations ===
 
-Define module configurations carefully. If other modules reference configurations in your module, and the those configurations change, things can get screwy very quickly.
+Define module configurations carefully. If other modules reference configurations in your module, and the those configurations change, things can get messed up very quickly. So maintaining backwards compatibility is important.
 
 For this reason generally it's safer to define new configurations rather than changing or removing old ones.
 
-Don't be afraid to define configurations, they're very useful. Don't forget that the same artifact can be part of more than one configuration. And having more configurations than necessary doesn't really cause any harm; users can just ignore them.
+All modules should have a *default* configuration, which should best reflect the "normal" or "expected" usage of the module. Use your best judgement here, and err on the side of including more artifacts rather than less.
+
+Don't be afraid to define configurations, they're very useful. Don't forget that the same artifact can be part of more than one configuration. And having more configurations than necessary doesn't really cause any harm; users can just ignore them. On the other hand, not having enough precision or granularity in configurations can lead to problems.
+
+The point is to give people a "quick and dirty" way to reference your module using the default configuration, at the possible cost of pulling in more than they really need. In addition, provide additional non-default configurations for more specific and precise situations.
+
+For modules that have different configurations for different JDK versions, let the newer JDK configuration(s) be the default, while requiring specific configuration settings for older JDK versions (especially JDK 1.3 or earlier). This is a strategy that gets more, not less, correct as time goes forward and people upgrade to newer JDK versions.
 
 === Dependencies ===
 
-Ensure dependencies are correct with respect to the configurations of the module you're working with as well as those of the dependency module.
+Needless to say, all dependency organisation and module names must be consistent with the naming used in Ivy !RoundUp. In order to keep Ivy !RoundUp self-consistent, no dependencies should exist that point to modules or revisions that don't exist in Ivy !RoundUp (this will cause the build to fail in any case). If you must, include the dependency to a non-existent module in a commented out section until the module can be added, and then go back and correct it.
 
-== Builder XML files ==
+Ensure dependencies are correct with respect to the configurations of the module you're working with, as well as those of the module being depended on.
+
+== Builder XML files ({{{builder.xml}}}) files ==
 
 Make use of the {{{${ivy.builder.*} }}}pre-defined properties to avoid typos.
 
