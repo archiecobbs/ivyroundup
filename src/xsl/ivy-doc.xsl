@@ -297,6 +297,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <th class="dep-org">Organisation</th>
       <th class="dep-name">Name</th>
       <th class="dep-rev">Revision</th>
+      <th class="dep-conf">Configurations</th>
     </tr>
     </thead>
     <tbody>
@@ -310,6 +311,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </xsl:element>
       </td>
       <td><xsl:value-of select="@rev"/></td>
+      <td>
+      <xsl:choose>
+          <xsl:when test="@conf">
+		    <xsl:value-of select="@conf"/>
+          </xsl:when>
+          <xsl:otherwise>*-&gt;*</xsl:otherwise>
+      </xsl:choose>
+      </td>
     </tr>
     </xsl:for-each>
     </tbody>
