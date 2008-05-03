@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20070521120000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://c3p0.sourceforge.net/">
+            <p>
+            c3p0 is an easy-to-use library for making traditional
+            JDBC drivers "enterprise-ready" by augmenting them with
+            functionality defined by the jdbc3 spec and the optional
+            extensions to jdbc2. In particular, c3p0 provides several
+            useful services:
+            <ul>
+            <li>Classes which adapt traditional DriverManager-based JDBC
+            drivers to the new javax.sql.DataSource scheme for acquiring
+            database Connections.</li>
+            <li>Transparent pooling of Connection and PreparedStatements
+            behind DataSources which can "wrap" around traditional
+            drivers or arbitrary unpooled DataSources.</li>
+            </ul>
+            </p>
+
+            <p>
+            The library tries hard to get the details right:
+            <ul>
+            <li>c3p0 DataSources are both Referenceable and Serializable,
+            and are thus suitable for binding to a wide-variety of
+            JNDI-based naming services.</li>
+            <li>Statement and ResultSets are carefully cleaned up
+            when pooled Connections and Statements are checked in,
+            to prevent resource- exhaustion when clients use the lazy
+            but common resource-management strategy of only cleaning up
+            their Connections....</li>
+            <li>The library adopts the approach defined by the JDBC
+            2 and 3 specification (even where these conflict with the
+            library author's preferences). DataSources are written in
+            the JavaBean style, offering all the required and most of
+            the optional properties (as well as some non-standard ones),
+            and no-arg constructors. All JDBC-defined internal interfaces
+            are implemented (ConnectionPoolDataSource, PooledConnection,
+            ConnectionEvent-generating Connections, etc.) You can mix
+            c3p0 classes with compliant third-party implementations
+            (although not all c3p0 features will work with external
+            implementations).</li>
+            </ul>
+            </p>
+
+            <p>
+            c3p0 hopes to provide DataSource implementations more
+            than suitable for use by high-volume "J2EE enterprise
+            applications". Please provide feedback, bug-fixes, etc.!
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default configuration"/>
+        <conf name="oracle-thin-extras" extends="default" description="Default plus Oracle thin extras"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="c3p0-oracle-thin-extras"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
