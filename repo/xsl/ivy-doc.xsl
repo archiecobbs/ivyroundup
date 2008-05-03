@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 170 2008-05-01 15:48:56Z archie.cobbs $ -->
+<!-- $Id: ivy-doc.xsl 193 2008-05-03 21:40:28Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
@@ -297,6 +297,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <th class="dep-org">Organisation</th>
       <th class="dep-name">Name</th>
       <th class="dep-rev">Revision</th>
+      <th class="dep-conf">Configurations</th>
     </tr>
     </thead>
     <tbody>
@@ -310,6 +311,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </xsl:element>
       </td>
       <td><xsl:value-of select="@rev"/></td>
+      <td>
+      <xsl:choose>
+          <xsl:when test="@conf">
+		    <xsl:value-of select="@conf"/>
+          </xsl:when>
+          <xsl:otherwise>*-&gt;*</xsl:otherwise>
+      </xsl:choose>
+      </td>
     </tr>
     </xsl:for-each>
     </tbody>
