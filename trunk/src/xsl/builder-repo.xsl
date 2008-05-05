@@ -50,6 +50,11 @@
         </xsl:copy>
     </xsl:template>
 
+    <!-- Detect "YOUR NAME HERE" -->
+    <xsl:template match="comment()[contains(., 'YOUR NAME HERE')]">
+        <xsl:message terminate="yes">ERROR: you didn't put your own name in the copyright message</xsl:message>
+    </xsl:template>
+
     <!-- Copy everything else exactly -->
     <xsl:template match="@*|node()">
         <xsl:copy>
