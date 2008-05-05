@@ -1,10 +1,15 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-05-03 21:35:22 UTC</timestamp>
-  <svnRevision>191</svnRevision>
+  <timestamp>2008-05-05 21:13:48 UTC</timestamp>
+  <svnRevision>196</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.jaxen">
+    <mod name="jaxen">
+      <rev name="1.1.1"/>
     </mod>
   </org>
   <org name="com.puppycrawl">
@@ -30,6 +35,11 @@
   <org name="org.dom4j">
     <mod name="dom4j">
       <rev name="1.6.1"/>
+    </mod>
+  </org>
+  <org name="org.jboss">
+    <mod name="javassist">
+      <rev name="3.7.0"/>
     </mod>
   </org>
   <org name="net.sourceforge.jsr107cache">
