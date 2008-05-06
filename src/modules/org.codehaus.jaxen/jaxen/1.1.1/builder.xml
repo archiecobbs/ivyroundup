@@ -22,12 +22,12 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://dist.codehaus.org/jaxen/distributions/${archive}.tar.gz"
+    <resource url="http://dist.codehaus.org/jaxen/distributions/${archive}.tar.gz"
       sha1="98b3f7095dff2a90cf056b9de4a0809259434853">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/docs/apidocs/**/*"/>
     </resource>
-    <resource dest="archive" url="http://dist.codehaus.org/jaxen/distributions/${archive}-src.tar.gz"
+    <resource url="http://dist.codehaus.org/jaxen/distributions/${archive}-src.tar.gz"
       sha1="8839aa0b415c0bc707a194414e9e0de647ccd7f9">
         <include name="${archive}/src/java/main/**/*"/>
     </resource>
