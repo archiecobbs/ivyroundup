@@ -4,9 +4,37 @@ This page describes some good practices when adding or maintaining modules in Iv
 
 == General ==
 
+=== Overall Goals ===
+
+Ivy !RoundUp has the following overall goals:
+  * *Self Sufficiency:* Ivy !RoundUp is usable as a standalone repository. This means that if module A in !RoundUp depends on revision X of module B, the revision X of module B must also exist in !RoundUp.
+  * *Consistency in naming:* !RoundUp uses consistent naming schemes for organization, module, and configuration names
+  * *Minimalism and Simplicity:* We don't include unnecessary stuff in {{{ivy.xml}}} files. Use the simplest ivy syntax available, and don't include redundant attributes that simply restate the default value.
+
+It is an explicit _non-goal_ that organization, module, and configuration names be consistent with other Ivy repositories that may already exist.
+
+=== Subversion Operations ===
+
+==== Adding new modules ====
+
 When adding a new module, create the module subdirectory using {{{svn mkdir}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{builder.xml}}} files.
 
+==== Adding new revisions ====
+
 When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{builder.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{builder.xml}}}.
+
+==== Regenerating the Repository ====
+
+Follow these steps to regenerate the repository:
+
+  # Ensure there aren't any outstanding changes in the {{{src/}}} directory hierarchy
+  # Run {{{svn update}}} to ensure the correct generated SVN revision number
+  # Run {{{ant repo}}} to regenerate the repository.
+  # Run {{{svn status repo}}}. If any modules or revisions have been added since the last time the repository was regenerated, they will show up with '?' question marks. For each such directory {{{repo/modules/foo/bar}}}:
+    # Run {{{rm -rf repo/modules/foo/bar}}}
+    # Run {{{svn copy src/modules/foo/bar repo/modules/foo/bar}}}
+  # If any {{{svn copy}}}ing was done in step #4, Re-run {{{ant repo}}}
+  # Finally, {{{svn commit repo}}}
 
 == Ivy Module Definitions ({{{ivy.xml}}} files) ==
 
@@ -14,30 +42,38 @@ When adding a new revision of an existing module, do an {{{svn copy}}} of the pr
 
 Try to discover and follow existing precedents (if any) for the value of the "organisation" attribute.
 
-Ivy !RoundUp attempts to follow Java package naming conventions whenever possible.
+Ivy !RoundUp attempts to follow Java package naming conventions whenever possible. Be sure that the entity that owns the associated DNS domain is the same as the entity that created the software.
 
 === Configurations ===
 
-Define module configurations carefully. If other modules reference configurations in your module, and the those configurations change, things can get messed up very quickly. So maintaining backwards compatibility is important.
+Define module configurations carefully. If other modules reference configurations in your module, and the those configurations change, things can get messed up very quickly. So maintaining backwards compatibility (within Ivy !RoundUp) is important.
 
 For this reason generally it's safer to define new configurations rather than changing or removing old ones.
 
 All modules should have a *default* configuration, which should best reflect the "normal" or "expected" usage of the module. Use your best judgement here, and err on the side of including more artifacts rather than less.
 
+The point is to give people a "quick and dirty" way to reference your module using the default configuration, at the possible cost of pulling in more than they really need. In addition, provide additional non-default configurations for more specific and precise situations.
+
 Don't be afraid to define configurations, they're very useful. Don't forget that the same artifact can be part of more than one configuration. And having more configurations than necessary doesn't really cause any harm; users can just ignore them. On the other hand, not having enough precision or granularity in configurations can lead to problems.
 
-The point is to give people a "quick and dirty" way to reference your module using the default configuration, at the possible cost of pulling in more than they really need. In addition, provide additional non-default configurations for more specific and precise situations.
+On the other hand, avoid useless configurations. For example, "test" configurations are not useful: the tests have already been run long ago by the originators of the software.
 
 For modules that have different configurations for different JDK versions, let the newer JDK configuration(s) be the default, while requiring specific configuration settings for older JDK versions (especially JDK 1.3 or earlier). This is a strategy that gets more, not less, correct as time goes forward and people upgrade to newer JDK versions.
 
 === Dependencies ===
 
-Needless to say, all dependency organisation and module names must be consistent with the naming used in Ivy !RoundUp. In order to keep Ivy !RoundUp self-consistent, no dependencies should exist that point to modules or revisions that don't exist in Ivy !RoundUp (this will cause the build to fail in any case). If you must, include the dependency to a non-existent module in a commented out section until the module can be added, and then go back and correct it.
+==== Consistency ====
+
+Needless to say, all dependency organisation and module names must be consistent with the naming used in Ivy !RoundUp. In order to keep Ivy !RoundUp self-consistent, no dependencies should exist that point to modules or revisions that don't exist in Ivy !RoundUp (this will cause the build to fail in any case). If you must, include the dependency to a non-existent module in a commented out section containing the string "TODO" until the module can be added, and then go back and correct it later.
 
 Ensure dependencies are correct with respect to the configurations of the module you're working with, as well as those of the module being depended on.
 
+==== Transitive Dependencies ====
+
+If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you.
+
 == Builder XML files ({{{builder.xml}}}) files ==
 
-Make use of the {{{${ivy.builder.*} }}}pre-defined properties to avoid typos.
+Make use of the {{{${ivy.builder.*} }}}pre-defined properties to avoid typos and make future revision upgrades easier.
 
 SHA1 checksums can be generated via the command {{{openssl sha1 foobar-1.2.3.tar.gz}}}.
