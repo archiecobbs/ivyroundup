@@ -10,8 +10,8 @@
         <builder name="ivyroundup"
           buildRoot="${java.io.tmpdir}/ivybuilder"
           resourceCache="${user.home}/.ivy2/builder-cache">
-            <ivy pattern="file://${basedir}/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-            <artifact pattern="file://${basedir}/repo/modules/[organisation]/[module]/[revision]/builder.xml"/>
+            <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/builder.xml"/>
         </builder>
     </resolvers>
     <modules>

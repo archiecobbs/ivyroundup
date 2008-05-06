@@ -29,7 +29,7 @@
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
     <!--
-        Set this property to change where the meta-repo is generated.
+        Set this property to change where the meta-repo is generated. Must use absolute paths.
         You also need '-Dskip-svn=true' if this is set to somewhere outside a subversion working tree.
     -->
     <property name="target.repo" value="${basedir}/repo" />
