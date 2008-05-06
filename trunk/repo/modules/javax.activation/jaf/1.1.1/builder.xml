@@ -19,29 +19,23 @@
 <builder-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
 
     <property name="name" value="${ivy.builder.module}"/>
-    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="version" value="1.1.1"/>
+    <property name="_version" value="1_1_1"/>
     <property name="archive" value="${name}-${version}"/>
+    <property name="_archive" value="${name}-${_version}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" sha1="53b398980a4da0b71d4fac293bce9dcdc435fb7e">
-        <include name="${archive}/lib/${archive}.jar"/>
-        <include name="${archive}/doc/api/**/*"/>
-    </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-source.tar.gz" sha1="bdb0d96eccd51d18643f00c6f880c67e56188eb4">
-        <include name="${archive}/src/java/**/*"/>
+    <resource url="file://${java.io.tmpdir}/${_archive}.zip" sha1="ce547d5bf929d1e318cc8559426db1e871aeabc8">
+        <include name="${archive}/activation.jar"/>
+        <include name="${archive}/docs/javadocs/**/*"/>
     </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
-        </zip>
+        <move file="archive/${archive}/activation.jar" todir="artifacts/jars"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
+            <fileset dir="archive/${archive}/docs/javadocs"/>
         </zip>
     </build>
 </builder-module>

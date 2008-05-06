@@ -22,26 +22,24 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" sha1="53b398980a4da0b71d4fac293bce9dcdc435fb7e">
-        <include name="${archive}/lib/${archive}.jar"/>
-        <include name="${archive}/doc/api/**/*"/>
-    </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-source.tar.gz" sha1="bdb0d96eccd51d18643f00c6f880c67e56188eb4">
-        <include name="${archive}/src/java/**/*"/>
+    <resource url="https://oscache.dev.java.net/files/documents/629/61427/${archive}-full.zip" sha1="f9b66b1da8945621a285c5ca1a9a9cb3ad383fe9">
+        <include name="${archive}.jar"/>
+        <include name="src/java/**/*"/>
+        <include name="docs/api/**/*"/>
     </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
+            <fileset dir="archive/src/java"/>
         </zip>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
+            <fileset dir="archive/docs/api"/>
         </zip>
     </build>
 </builder-module>

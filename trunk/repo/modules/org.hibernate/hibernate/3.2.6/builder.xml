@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2008 Archie L. Cobbs.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,29 +19,32 @@
 <builder-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
 
     <property name="name" value="${ivy.builder.module}"/>
-    <property name="version" value="${ivy.builder.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="version.major" value="3"/>
+    <property name="version.minor" value="2"/>
+    <property name="version.patch" value="6"/>
+    <property name="version" value="${version.major}.${version.minor}.${version.patch}"/>
+    <property name="archive" value="${name}-${version}.ga"/>
+    <property name="archdir" value="${name}-${version.major}.${version.minor}"/>
+    <property name="jarname" value="${name}${version.major}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" sha1="53b398980a4da0b71d4fac293bce9dcdc435fb7e">
-        <include name="${archive}/lib/${archive}.jar"/>
-        <include name="${archive}/doc/api/**/*"/>
-    </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-source.tar.gz" sha1="bdb0d96eccd51d18643f00c6f880c67e56188eb4">
-        <include name="${archive}/src/java/**/*"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" dest="archive" sha1="276d1a3424c59fef85859d5f0357bf531efab793">
+        <include name="${archdir}/${jarname}.jar"/>
+        <include name="${archdir}/doc/api/**/*"/>
+        <include name="${archdir}/src/**/*"/>
     </resource>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
-        </zip>
+        <!-- hibernate3.jar -->
+        <move file="archive/${archdir}/${jarname}.jar" todir="artifacts/jars"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
+            <fileset dir="archive/${archdir}/doc/api"/>
+        </zip>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archdir}/doc/api"/>
         </zip>
     </build>
 </builder-module>

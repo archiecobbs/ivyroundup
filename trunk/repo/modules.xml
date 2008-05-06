@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-05-05 22:21:18 UTC</timestamp>
-  <svnRevision>200</svnRevision>
+  <timestamp>2008-05-06 16:24:42 UTC</timestamp>
+  <svnRevision>212</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -62,6 +62,11 @@
       <rev name="1.7"/>
     </mod>
   </org>
+  <org name="com.opensymphony">
+    <mod name="oscache">
+      <rev name="2.4.1"/>
+    </mod>
+  </org>
   <org name="com.mysql">
     <mod name="mysql-connector-java">
       <rev name="5.1.6"/>
@@ -70,6 +75,24 @@
   <org name="org.aopalliance">
     <mod name="aopalliance">
       <rev name="1.0"/>
+    </mod>
+  </org>
+  <org name="javax.management">
+    <mod name="jmx">
+      <rev name="1.2.1"/>
+    </mod>
+    <mod name="jmxremote">
+      <rev name="1.0.1_04"/>
+    </mod>
+  </org>
+  <org name="javax.mail">
+    <mod name="javamail">
+      <rev name="1.4.1"/>
+    </mod>
+  </org>
+  <org name="org.hibernate">
+    <mod name="hibernate">
+      <rev name="3.2.6"/>
     </mod>
   </org>
   <org name="org.springframework">
@@ -89,6 +112,11 @@
   <org name="org.jgroups">
     <mod name="jgroups">
       <rev name="2.6.2"/>
+    </mod>
+  </org>
+  <org name="javax.activation">
+    <mod name="jaf">
+      <rev name="1.1.1"/>
     </mod>
   </org>
   <org name="net.sourceforge.proxool">
@@ -150,6 +178,11 @@
   <org name="org.apache.log4j">
     <mod name="log4j">
       <rev name="1.2.15"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.swarmcache">
+    <mod name="swarmcache">
+      <rev name="1.0RC2"/>
     </mod>
   </org>
   <org name="net.sourceforge.cglib">
