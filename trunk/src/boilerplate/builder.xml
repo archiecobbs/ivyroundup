@@ -22,7 +22,7 @@
     <property name="version" value="${ivy.builder.revision}"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource dest="archive" url="http://www.example.com/download/${archive}.zip" sha1="0123456789012345678901234567890123456789"/>
+    <resource url="http://www.example.com/download/${archive}.zip" sha1="0123456789012345678901234567890123456789"/>
 
     <build>
         <!-- jar -->
