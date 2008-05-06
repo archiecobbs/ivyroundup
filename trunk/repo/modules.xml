@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-05-06 16:24:42 UTC</timestamp>
-  <svnRevision>212</svnRevision>
+  <timestamp>2008-05-06 21:13:53 UTC</timestamp>
+  <svnRevision>219</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -91,8 +91,23 @@
     </mod>
   </org>
   <org name="org.hibernate">
+    <mod name="hibernate-entitymanager">
+      <rev name="3.3.2"/>
+    </mod>
+    <mod name="hibernate-commons-annotations">
+      <rev name="3.0.0"/>
+    </mod>
     <mod name="hibernate">
       <rev name="3.2.6"/>
+    </mod>
+    <mod name="hibernate-validator">
+      <rev name="3.0.0"/>
+    </mod>
+    <mod name="hibernate-tools">
+      <rev name="3.2.2.Beta1"/>
+    </mod>
+    <mod name="hibernate-annotations">
+      <rev name="3.3.1"/>
     </mod>
   </org>
   <org name="org.springframework">

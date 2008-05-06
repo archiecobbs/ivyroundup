@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.2.6" status="release" publication="20080206120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 208 2008-05-06 02:38:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.2.6/"/>
+        <ivyauthor name="$Id: ivy.xml 218 2008-05-06 21:03:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.2.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
@@ -55,7 +55,8 @@
     </info>
 
     <configurations>
-        <conf name="default" description="Hibernate core"/>
+        <conf name="core" description="Hibernate core"/>
+        <conf name="default" extends="core" description="Same as `core'"/>
         <conf name="c3p0" extends="default" description="c3p0 connection pooling support"/>
         <conf name="proxool" extends="default" description="Proxool connection pooling support"/>
         <conf name="oscache" extends="default" description="Open Symphony cache support"/>
@@ -65,8 +66,8 @@
         <conf name="cglib" extends="default" description="cglib bytecode provider"/>
         <conf name="javassist" extends="default" description="javassist bytecode provider"/>
         <conf name="deserializeconfig" extends="default" description="Support for deserializing Configuration at startup"/>
-        <conf name="JAAC" extends="default" description="JAAC support [NOT IMPLEMENTED]"/>
-        <conf name="JAAS" extends="default" description="JAAS support [NOT IMPLEMENTED]"/>
+        <conf name="jaac" extends="default" description="JAAC support [NOT IMPLEMENTED]"/>
+        <conf name="jaas" extends="default" description="JAAS support [NOT IMPLEMENTED]"/>
     </configurations>
 
     <publications>
@@ -76,16 +77,16 @@
     </publications>
 
     <dependencies>
-        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="1.2.3" conf="default-&gt;default"/>
-        <dependency org="javax.transaction" name="jta" rev="1.1" conf="default-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="[2.1.1,3.0[" conf="default-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="default-&gt;default"/>
-        <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="default-&gt;default"/>
-        <dependency org="org.apache.xerces" name="xerces" rev="[2.5,3.0[" conf="default-&gt;default"/>
-        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="default-&gt;default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="1.2.3" conf="core-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="1.1" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[2.1.1,3.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="core-&gt;default"/>
+        <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="core-&gt;default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[2.5,3.0[" conf="core-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="core-&gt;default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.1.3+" conf="cglib-&gt;default"/>
-        <dependency org="org.apache.log4j" name="log4j" rev="[1.2,1.3[" conf="default-&gt;default"/>
-        <dependency org="org.antlr" name="antlr" rev="[2.7.6,2.8[" conf="default-&gt;apis"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2,1.3[" conf="core-&gt;default"/>
+        <dependency org="org.antlr" name="antlr" rev="[2.7.6,2.8[" conf="core-&gt;apis"/>
         <dependency org="net.sourceforge.c3p0" name="c3p0" rev="[0.9.1,2.0[" conf="c3p0-&gt;default"/>
         <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="javassist-&gt;default"/>
         <dependency org="org.codehaus.jaxen" name="jaxen" rev="[1.1,1.2[" conf="deserializeconfig-&gt;default"/>
@@ -107,8 +108,8 @@
     <!--
         TODO: Other dependencies
 
-        <dependency org="???" name="jacc" rev="???" conf="???->???"/>
-        <dependency org="???" name="jaas" rev="???" conf="???->???"/>
+        <dependency org="???" name="jaac" rev="???" conf="jaac->???"/>
+        <dependency org="???" name="jaas" rev="???" conf="jaas->???"/>
     -->
 
     </dependencies>
