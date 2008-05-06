@@ -19,29 +19,23 @@
 <builder-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/builder-1.0.xsd">
 
     <property name="name" value="${ivy.builder.module}"/>
-    <property name="version" value="${ivy.builder.revision}"/>
+    <property name="version" value="1_0_1"/>
     <property name="archive" value="${name}-${version}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" sha1="53b398980a4da0b71d4fac293bce9dcdc435fb7e">
-        <include name="${archive}/lib/${archive}.jar"/>
-        <include name="${archive}/doc/api/**/*"/>
-    </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-source.tar.gz" sha1="bdb0d96eccd51d18643f00c6f880c67e56188eb4">
-        <include name="${archive}/src/java/**/*"/>
+    <resource url="file://${java.io.tmpdir}/${archive}-ri-bin-b58.zip" sha1="f39c15ec198a87ba9d62b13596c1381a2380e4c0">
+        <include name="${archive}-bin/lib/*.jar"/>
+        <include name="${archive}-bin/doc/api/spec-jmxremote/**/*"/>
     </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
-        </zip>
+        <move file="archive/${archive}-bin/lib/${name}.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}-bin/lib/${name}_optional.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}-bin/lib/rmissl.jar" todir="artifacts/jars"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
+            <fileset dir="archive/${archive}-bin/doc/api/spec-jmxremote"/>
         </zip>
     </build>
 </builder-module>
