@@ -22,7 +22,7 @@
 
     <info organisation="javax.jms" module="jms" revision="1.1" status="release" publication="20020430000000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://java.sun.com/products/jms/docs.html"/>
-        <ivyauthor name="$Id: ivy.xml 80 2008-04-11 15:18:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jms/jms/1.1/"/>
+        <ivyauthor name="$Id: ivy.xml 222 2008-05-08 17:02:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jms/jms/1.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/products/jms/docs.html">
             The Java Message Service (JMS) API is a messaging standard
@@ -36,7 +36,7 @@
             <a href="http://java.sun.com/products/jms/docs.html">Sun's web site</a>
             after agreeing to the license terms. Once you've downloaded the JAR,
             save it as <code>${java.io.tmpdir}/jms-1_1-fr-apidocs.zip</code>,
-            where it will be picked up by this module's builder script.
+            where it will be picked up by this module's packager.xml file.
             </p>
         </description>
     </info>
