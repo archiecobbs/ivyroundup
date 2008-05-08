@@ -326,11 +326,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </div>
     </xsl:if>
 
-    <xsl:variable name="builder" select="document('builder.xml', .)/builder-module"/>
-    <div id="build-instructions" class="conf">
-    <h2>Builder Instructions</h2>
+    <xsl:variable name="packager" select="document('packager.xml', .)/packager-module"/>
+    <div id="packaging-instructions" class="conf">
+    <h2>Packaging Instructions</h2>
 
-    <xsl:if test="$builder/property">
+    <xsl:if test="$packager/property">
     <table>
     <thead>
     <tr>
@@ -339,7 +339,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tr>
     </thead>
     <tbody>
-    <xsl:for-each select="$builder/property">
+    <xsl:for-each select="$packager/property">
     <tr>
       <td><xsl:value-of select="@name"/></td>
       <td><xsl:value-of select="@value"/></td>
@@ -349,7 +349,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </xsl:if>
 
-    <xsl:if test="$builder/resource">
+    <xsl:if test="$packager/resource">
     <table>
     <thead>
     <tr>
@@ -359,7 +359,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tr>
     </thead>
     <tbody>
-    <xsl:for-each select="$builder/resource">
+    <xsl:for-each select="$packager/resource">
     <tr>
       <td>
         <xsl:value-of select="@url"/>
@@ -388,7 +388,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </xsl:if>
 
-    <xsl:if test="$builder/m2resource/artifact">
+    <xsl:if test="$packager/m2resource/artifact">
     <table>
     <thead>
     <tr>
@@ -402,7 +402,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </tr>
     </thead>
     <tbody>
-    <xsl:for-each select="$builder/m2resource/artifact">
+    <xsl:for-each select="$packager/m2resource/artifact">
     <tr>
       <td>
         <xsl:choose>
@@ -466,7 +466,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </table>
     </xsl:if>
 
-    <xsl:if test="$builder/build/node()">
+    <xsl:if test="$packager/build/node()">
     <table>
     <thead>
     <tr>
@@ -475,7 +475,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </thead>
     <tbody>
     <tr>
-      <td><div class="build-inst"><xsl:apply-templates mode="escape" select="$builder/build/node()"/></div></td>
+      <td><div class="build-inst"><xsl:apply-templates mode="escape" select="$packager/build/node()"/></div></td>
     </tr>
     </tbody>
     </table>
