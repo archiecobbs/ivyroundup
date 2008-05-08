@@ -1,10 +1,10 @@
 #!/bin/sh
 
 #
-# Copy this file and builder-resolver.patch to the top of the ivy source tree,
+# Copy this file and packager-resolver.patch to the top of the ivy source tree,
 # then run this script. Example:
 #
-#   $ cp builder-resolver.patch apply-patch.sh ~/ivycore/trunk
+#   $ cp packager-resolver.patch apply-patch.sh ~/ivycore/trunk
 #   $ cd ~/ivycore/trunk
 #   $ sh apply-patch.sh
 #   $ ant
@@ -12,8 +12,8 @@
 
 set -e
 SRCDIR="."
-PATCH="${SRCDIR}/builder-resolver.patch"
-MODTGZ="${SRCDIR}/test/repositories/builder/website/dist/mod-1.0.tar.gz"
+PATCH="${SRCDIR}/packager-resolver.patch"
+MODTGZ="${SRCDIR}/test/repositories/packager/website/dist/mod-1.0.tar.gz"
 
 # Create directories
 echo creating directories

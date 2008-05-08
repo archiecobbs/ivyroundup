@@ -5,14 +5,14 @@
     <resolvers>
 
         <!--
-            Define a builder repository using the repository we build in the repo/ subdirectory.
+            Define a packager repository using the repository we build in ${target.repo}
         -->
-        <builder name="ivyroundup"
-          buildRoot="${java.io.tmpdir}/ivybuilder"
-          resourceCache="${user.home}/.ivy2/builder-cache">
+        <packager name="ivyroundup"
+          buildRoot="${user.home}/.ivy2/packager/build"
+          resourceCache="${user.home}/.ivy2/packager/cache">
             <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/builder.xml"/>
-        </builder>
+            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
+        </packager>
     </resolvers>
     <modules>
         <module organisation=".*" name=".*" resolver="ivyroundup"/>

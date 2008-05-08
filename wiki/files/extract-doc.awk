@@ -12,12 +12,12 @@ BEGIN {
   printf ("</head>\n");
   printf ("<body id=\"body\">\n")
   printf ("<div>\n")
-  printf ("<h1>Builder Resolver</h1>\n")
+  printf ("<h1>Packager Resolver</h1>\n")
 }
 
 {
   if ( $0 ~ /^Index: / ) {
-    if ( $0 ~ /^Index: doc\/resolver\/builder.html$/ )
+    if ( $0 ~ /^Index: doc\/resolver\/packager.html$/ )
       GOTFILE = 1
     else
       GOTFILE = 0

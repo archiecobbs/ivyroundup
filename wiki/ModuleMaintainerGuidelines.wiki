@@ -17,11 +17,11 @@ It is an explicit _non-goal_ that organization, module, and configuration names 
 
 ==== Adding new modules ====
 
-When adding a new module, create the module subdirectory using {{{svn mkdir}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{builder.xml}}} files.
+When adding a new module, create the module subdirectory using {{{svn mkdir}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{packager.xml}}} files.
 
 ==== Adding new revisions ====
 
-When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{builder.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{builder.xml}}}.
+When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{packager.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{packager.xml}}}.
 
 ==== Regenerating the Repository ====
 
@@ -72,8 +72,8 @@ Ensure dependencies are correct with respect to the configurations of the module
 
 If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you.
 
-== Builder XML files ({{{builder.xml}}}) files ==
+== Packager XML files ({{{packager.xml}}}) files ==
 
-Make use of the {{{${ivy.builder.*} }}}pre-defined properties to avoid typos and make future revision upgrades easier.
+Make use of the {{{${ivy.packager.*} }}}pre-defined properties to avoid typos and make future revision upgrades easier.
 
 SHA1 checksums can be generated via the command {{{openssl sha1 foobar-1.2.3.tar.gz}}}.

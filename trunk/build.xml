@@ -38,7 +38,7 @@
         Define Ivy ant tasks.
 
         NOTE: /usr/share/java/ivy.jar must be a version of ivy containing
-        the builder resolver.
+        the packager resolver.
     -->
     <taskdef uri="urn:org.apache.ivy.ant"
       resource="org/apache/ivy/ant/antlib.xml"
@@ -76,7 +76,7 @@
         </exec>
     </target>
 
-    <!-- Build the Ivy RoundUp builder repository (no artifacts) -->
+    <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
     <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
 
     <target name="gen-repo" depends="_init-xalan, modules" description="Regenerate the repository">
@@ -85,7 +85,7 @@
         <delete>
             <fileset dir="${target.repo}">
                 <include name="modules/**/ivy.xml"/>
-                <include name="modules/**/builder.xml"/>
+                <include name="modules/**/packager.xml"/>
                 <include name="images/**/*"/>
                 <include name="xsl/**/*"/>
                 <include name="css/**/*"/>
@@ -100,7 +100,7 @@
                 <include name="xsl/ivy-doc.xsl"/>
                 <include name="xsl/modules.xsl"/>
                 <include name="css/ivy-style.css"/>
-                <include name="xsd/builder-1.0.xsd"/>
+                <include name="xsd/packager-1.0.xsd"/>
                 <include name="xsd/ivy.xsd"/>
             </fileset>
             <dirset dir="src">
@@ -130,10 +130,10 @@
             <param name="source.base" expression="${basedir}/src" />
         </xslt>
 
-        <!-- Generate builder.xml files -->
+        <!-- Generate packager.xml files -->
         <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null">
-            <param name="filename" expression="builder.xml"/>
-            <param name="stylesheet" expression="builder-repo.xsl"/>
+            <param name="filename" expression="packager.xml"/>
+            <param name="stylesheet" expression="packager-repo.xsl"/>
             <param name="target.repo" expression="${target.repo}" />
             <param name="source.base" expression="${basedir}/src" />
         </xslt>
@@ -145,7 +145,7 @@
             <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
             <fileset dir="${target.repo}/modules">
                 <include name="**/ivy.xml"/>
-                <include name="**/builder.xml"/>
+                <include name="**/packager.xml"/>
             </fileset>
         </xmlvalidate>
 
@@ -202,7 +202,7 @@
         <mkdir dir="build/resolve"/>
         <mkdir dir="build/repo-with-artifacts"/>
 
-        <!-- Copy the builder repo -->
+        <!-- Copy the packager repo -->
         <copy todir="build/repo-with-artifacts">
             <fileset dir="${target.repo}"/>
         </copy>
@@ -223,7 +223,7 @@
         <ant dir="build/resolve"/>
     </target>
 
-    <!-- Clean out all generated files (not including the builder repository under repo/) -->
+    <!-- Clean out all generated files (not including the packager repository under repo/) -->
     <target name="clean" description="Delete build files">
         <delete dir="build"/>
     </target>
