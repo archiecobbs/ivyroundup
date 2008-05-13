@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-05-08 20:55:08 UTC</timestamp>
-  <svnRevision>226</svnRevision>
+  <timestamp>2008-05-13 20:17:38 UTC</timestamp>
+  <svnRevision>230</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -67,6 +67,11 @@
       <rev name="2.4.1"/>
     </mod>
   </org>
+  <org name="net.sourceforge.gwt-widget">
+    <mod name="gwt-sl">
+      <rev name="0.1.4e"/>
+    </mod>
+  </org>
   <org name="com.mysql">
     <mod name="mysql-connector-java">
       <rev name="5.1.6"/>
@@ -127,6 +132,13 @@
       <rev name="2.9.1"/>
     </mod>
   </org>
+  <org name="com.google">
+    <mod name="gwt">
+      <rev name="1.5m2"/>
+      <rev name="1.4.60"/>
+      <rev name="1.4.62"/>
+    </mod>
+  </org>
   <org name="org.jgroups">
     <mod name="jgroups">
       <rev name="2.6.2"/>
@@ -172,6 +184,9 @@
       <rev name="1.2"/>
       <rev name="1.2.1"/>
       <rev name="1.2.2"/>
+    </mod>
+    <mod name="commons-lang">
+      <rev name="2.4"/>
     </mod>
     <mod name="commons-pool">
       <rev name="1.3"/>
