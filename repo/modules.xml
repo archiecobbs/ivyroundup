@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-05-13 20:17:38 UTC</timestamp>
-  <svnRevision>230</svnRevision>
+  <timestamp>2008-05-20 20:53:21 UTC</timestamp>
+  <svnRevision>236</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -121,6 +121,7 @@
     </mod>
     <mod name="spring">
       <rev name="2.5.3"/>
+      <rev name="2.5.4"/>
     </mod>
   </org>
   <org name="org.apache.xerces">
@@ -224,6 +225,11 @@
   <org name="net.sourceforge.cglib">
     <mod name="cglib">
       <rev name="2.1.3"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.dozer">
+    <mod name="dozer">
+      <rev name="4.2"/>
     </mod>
   </org>
   <org name="net.sourceforge.ehcache">
