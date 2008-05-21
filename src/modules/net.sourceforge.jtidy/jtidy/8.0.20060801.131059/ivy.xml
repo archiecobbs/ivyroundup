@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20060801131059">
+        <license name="BSD style" url="http://jtidy.svn.sourceforge.net/viewvc/*checkout*/jtidy/trunk/jtidy/LICENSE.txt?revision=95"/>
+        <description homepage="http://jtidy.sourceforge.net/">
+
+            <p>
+            JTidy is a Java port of <a href="http://www.w3.org/People/Raggett/tidy/">HTML Tidy</a>,
+            a HTML syntax checker and pretty printer. Like its non-Java
+            cousin, JTidy can be used as a tool for cleaning up malformed
+            and faulty HTML. In addition, JTidy provides a DOM interface
+            to the document that is being processed, which effectively
+            makes you able to use JTidy as a DOM parser for real-world
+            HTML.
+            </p>
+
+            <p>
+            JTidy was written by Andy Quick, who later stepped down from
+            the maintainer position. Now JTidy is maintained by a group
+            of volunteers.
+            </p>
+
+            <p>
+            More information on JTidy can be found on the
+            <a href="http://sourceforge.net/projects/jtidy/">JTidy SourceForge
+            project page</a>
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+</ivy-module>
