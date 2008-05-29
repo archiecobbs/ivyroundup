@@ -44,7 +44,7 @@
 
         <!-- sources -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archdir}/doc/api"/>
+            <fileset dir="archive/${archdir}/src"/>
         </zip>
     </build>
 </packager-module>
