@@ -30,7 +30,7 @@
             <fileset dir="archive/${archive}/dist">
                 <include name="${name}-*-${version}.jar"/>
             </fileset>
-            <mapper type="glob" from="*-${version}.jar" to="*.jar"/>
+            <mapper type="glob" from="${name}-*-${version}.jar" to="${name}-*.jar"/>
         </move>
 
         <!-- sources -->
@@ -38,7 +38,7 @@
             <fileset dir="archive/${archive}/dist">
                 <include name="${name}-*-${version}-sources.jar"/>
             </fileset>
-            <mapper type="glob" from="*-${version}-sources.jar" to="*.zip"/>
+            <mapper type="glob" from="${name}-*-${version}-sources.jar" to="${name}-*.zip"/>
         </move>
     </build>
 </packager-module>
