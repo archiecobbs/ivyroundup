@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring-security" revision="2.0.1" status="release" publication="20080502120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 251 2008-05-30 15:03:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 253 2008-05-30 20:35:05Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-security/site/">
 
@@ -132,6 +132,7 @@
         <dependency org="org.apache.commons" name="commons-codec" rev="[1.3,2.0[" conf="core-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="core-&gt;default"/>
         <dependency org="org.codehaus.jaxen" name="jaxen" rev="[1.1.1,2.0[" conf="core-&gt;default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="[1.5.4,1.6[" conf="core-&gt;default"/>
         <dependency org="org.mortbay" name="jetty" rev="[4.2.22,)" conf="jetty-&gt;core"/>
         <dependency org="org.openid4java" name="openid4java" rev="[0.9.4.339,2.0[" conf="openid-&gt;default"/>
 
