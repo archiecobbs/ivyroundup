@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring-security" revision="2.0.1" status="release" publication="20080502120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 229 2008-05-09 14:57:32Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 251 2008-05-30 15:03:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-security/site/">
 
@@ -109,6 +109,7 @@
         <artifact name="spring-security-portlet" conf="portlet"/>
         <artifact name="spring-security-resin" conf="resin"/>
         <artifact name="spring-security-taglibs" conf="taglibs"/>
+
         <artifact name="spring-security-acl" type="source" ext="zip"/>
         <artifact name="spring-security-cas-client" type="source" ext="zip"/>
         <artifact name="spring-security-catalina" type="source" ext="zip"/>
@@ -132,6 +133,7 @@
         <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="core-&gt;default"/>
         <dependency org="org.codehaus.jaxen" name="jaxen" rev="[1.1.1,2.0[" conf="core-&gt;default"/>
         <dependency org="org.mortbay" name="jetty" rev="[4.2.22,)" conf="jetty-&gt;core"/>
+        <dependency org="org.openid4java" name="openid4java" rev="[0.9.4.339,2.0[" conf="openid-&gt;default"/>
 
     <!-- TODO
 
