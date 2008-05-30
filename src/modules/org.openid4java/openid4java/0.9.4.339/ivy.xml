@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20071007120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/openid4java/">
+
+            <p>
+            This library allows you to OpenID-enable your Java webapp.
+            </p>
+
+            <p>The following specifications are supported:
+                <ul>
+                <li><a href="http://openid.net/specs/openid-authentication-2_0.html" rel="nofollow">OpenID Authentication 2.0</a></li>
+                <li><a href="http://openid.net/specs/openid-authentication-1_1.html" rel="nofollow">OpenID Authentication 1.1 (in compatibility mode)</a></li>
+                <li><a href="http://openid.net/specs/openid-attribute-exchange-1_0.html" rel="nofollow">OpenID Attribute Exchange 1.0</a></li>
+                <li><a href="http://openid.net/specs/openid-simple-registration-extension-1_0.html" rel="nofollow">OpenID Simple Registration 1.0</a> and <a href="http://openid.net/specs/openid-simple-registration-extension-1_1-01.html" rel="nofollow">1.1, draft 1</a></li>
+                <li><a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0-01.html" rel="nofollow">OpenID Provider Authentication Policy Extension 1.0, draft 1</a></li>
+                <li><a href="https://openidcards.sxip.com/spec/openid-infocards.html" rel="nofollow">OpenID Information Cards 1.0, draft 1</a></li>
+                </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.0.1,4.0[" conf="default->default"/>
+        <dependency org="net.sourceforge.htmlparser" name="htmlparser" rev="1.6" conf="default->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.14,1.3[" conf="default->default"/>
+        <dependency org="org.openxri" name="openxri" rev="[1.0.1,2.0[" conf="default->syntax,client"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.3.0,1.5[" conf="default->default"/>
+        <dependency org="org.springframework" name="spring" rev="[2.0.6,3.0[" conf="default->jdbc"/>
+    <!-- TODO: others?  -->
+    </dependencies>
+
+</ivy-module>
