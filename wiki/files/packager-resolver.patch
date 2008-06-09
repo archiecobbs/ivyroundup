@@ -248,8 +248,22 @@ Index: test/repositories/packager/repo/org/mod/1.0/packager.xml
 ===================================================================
 --- test/repositories/packager/repo/org/mod/1.0/packager.xml	(revision 0)
 +++ test/repositories/packager/repo/org/mod/1.0/packager.xml	(revision 0)
-@@ -0,0 +1,23 @@
+@@ -0,0 +1,37 @@
 +<?xml version="1.0" encoding="ISO-8859-1"?>
++
++<!--
++    Licensed under the Apache License, Version 2.0 (the "License"); you may
++    not use this file except in compliance with the License. You may obtain
++    a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
++    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
++    License for the specific language governing permissions and limitations
++    under the License.
++-->
 +
 +<!-- $Id$ -->
 +<packager-module version="1.0">
@@ -282,6 +296,25 @@ Name: svn:keywords
 Name: svn:eol-style
    + native
 
+Index: CHANGES.txt
+===================================================================
+--- CHANGES.txt	(revision 665706)
++++ CHANGES.txt	(working copy)
+@@ -64,12 +64,14 @@
+ 	John Williams
+ 	Patrick Woodworth
+ 	Jaroslaw Wypychowski
++	Archie Cobbs
+ 
+    trunk version
+ =====================================
+ - NEW: Retain original dependency constraint rules in resolved ivy file (IVY-739)
+ - NEW: Add a new resolve mode (optionally per module) to utilize dynamic constraint rule metadata (IVY-740)
+ - NEW: Add transitive dependency version and branch override mechanism (IVY-784)
++- NEW: Add new packager resolver (IVY-???)
+ 
+ - IMPROVEMENT: declare source and javadoc artifacts in maven2 modules (IVY-325)
+ - IMPROVEMENT: Set the last modified attribute of files downloaded from repositories (IVY-823)
 Index: src/java/org/apache/ivy/plugins/resolver/packager/PackagerResolver.java
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/packager/PackagerResolver.java	(revision 0)
@@ -521,8 +554,22 @@ Index: src/java/org/apache/ivy/plugins/resolver/packager/packager.xsl
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/packager/packager.xsl	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/packager/packager.xsl	(revision 0)
-@@ -0,0 +1,471 @@
+@@ -0,0 +1,485 @@
 +<?xml version="1.0" encoding="UTF-8"?>
++
++<!--
++    Licensed under the Apache License, Version 2.0 (the "License"); you may
++    not use this file except in compliance with the License. You may obtain
++    a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
++    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
++    License for the specific language governing permissions and limitations
++    under the License.
++-->
 +
 +<!-- $Id$ -->
 +<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -1232,12 +1279,10 @@ Index: src/java/org/apache/ivy/plugins/resolver/packager/packager-1.0.xsd
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/packager/packager-1.0.xsd	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/packager/packager-1.0.xsd	(revision 0)
-@@ -0,0 +1,102 @@
+@@ -0,0 +1,100 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +
 +<!--
-+    Copyright 2008 Archie L. Cobbs.
-+
 +    Licensed under the Apache License, Version 2.0 (the "License"); you may
 +    not use this file except in compliance with the License. You may obtain
 +    a copy of the License at
@@ -1566,8 +1611,22 @@ Index: src/java/org/apache/ivy/plugins/resolver/packager/build.xml
 ===================================================================
 --- src/java/org/apache/ivy/plugins/resolver/packager/build.xml	(revision 0)
 +++ src/java/org/apache/ivy/plugins/resolver/packager/build.xml	(revision 0)
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,55 @@
 +<?xml version="1.0" encoding="UTF-8"?>
++
++<!--
++    Licensed under the Apache License, Version 2.0 (the "License"); you may
++    not use this file except in compliance with the License. You may obtain
++    a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
++    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
++    License for the specific language governing permissions and limitations
++    under the License.
++-->
 +
 +<!-- $Id$ -->
 +<project name="packager" default="build">
@@ -1620,7 +1679,7 @@ Name: svn:eol-style
 
 Index: src/java/org/apache/ivy/core/settings/typedef.properties
 ===================================================================
---- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 654570)
+--- src/java/org/apache/ivy/core/settings/typedef.properties	(revision 665706)
 +++ src/java/org/apache/ivy/core/settings/typedef.properties	(working copy)
 @@ -27,6 +27,7 @@
  vsftp       = org.apache.ivy.plugins.resolver.VsftpResolver
@@ -1630,19 +1689,26 @@ Index: src/java/org/apache/ivy/core/settings/typedef.properties
  
  latest-revision = org.apache.ivy.plugins.latest.LatestRevisionStrategy
  latest-lexico   = org.apache.ivy.plugins.latest.LatestLexicographicStrategy
-@@ -52,4 +53,4 @@
- ant-call		= org.apache.ivy.ant.AntCallTrigger
- log		        = org.apache.ivy.plugins.trigger.LogTrigger
- 
--cache			= org.apache.ivy.core.cache.DefaultRepositoryCacheManager
-\ No newline at end of file
-+cache			= org.apache.ivy.core.cache.DefaultRepositoryCacheManager
 Index: src/example/packager-resolver/ivysettings.xml
 ===================================================================
 --- src/example/packager-resolver/ivysettings.xml	(revision 0)
 +++ src/example/packager-resolver/ivysettings.xml	(revision 0)
-@@ -0,0 +1,20 @@
+@@ -0,0 +1,34 @@
 +<?xml version="1.0" encoding="ISO-8859-1"?>
++
++<!--
++    Licensed under the Apache License, Version 2.0 (the "License"); you may
++    not use this file except in compliance with the License. You may obtain
++    a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
++    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
++    License for the specific language governing permissions and limitations
++    under the License.
++-->
 +
 +<!-- $Id$ -->
 +<ivysettings>
@@ -1674,7 +1740,7 @@ Name: svn:eol-style
 
 Index: doc/configuration/resolvers.html
 ===================================================================
---- doc/configuration/resolvers.html	(revision 654570)
+--- doc/configuration/resolvers.html	(revision 665706)
 +++ doc/configuration/resolvers.html	(working copy)
 @@ -63,6 +63,7 @@
  <tbody>
@@ -1686,7 +1752,7 @@ Index: doc/configuration/resolvers.html
  <tr><td><a href="../resolver/vfs.html">Vfs</a></td><td>Standard</td><td>Finds ivy files and artifacts in any repository accessible with <a href="http://jakarta.apache.org/commons/vfs/">apache commons vfs</a>.</td></tr>
 Index: doc/toc.json
 ===================================================================
---- doc/toc.json	(revision 654570)
+--- doc/toc.json	(revision 665706)
 +++ doc/toc.json	(working copy)
 @@ -295,6 +295,13 @@
                                    ]
@@ -1702,13 +1768,6 @@ Index: doc/toc.json
                                  "id":"resolver/filesystem",
                                  "title":"File System resolver",
                                  "children": [
-@@ -776,4 +783,4 @@
-           ]
-       }
-     ]
--}
-\ No newline at end of file
-+}
 Index: doc/resolver/packager.html
 ===================================================================
 --- doc/resolver/packager.html	(revision 0)
