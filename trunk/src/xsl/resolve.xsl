@@ -48,10 +48,9 @@
               classpath="/usr/share/java/ivy.jar"/>
 
             <!--
-                Configure ivy. The override="true" is a workaround for:
-                    https://issues.apache.org/jira/browse/IVY-782
+                Configure ivy.
             -->
-            <ivy:settings id="ivy-settings" override="true" file="resolve-settings.xml"/>
+            <ivy:settings id="ivy-settings" file="resolve-settings.xml"/>
 
             <!-- Resolve all (matching) revisions -->
             <target name="resolve" description="Resolve all revisions of all modules">

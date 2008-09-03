@@ -45,10 +45,9 @@
       classpath="/usr/share/java/ivy.jar"/>
 
     <!--
-        Configure ivy. The override="true" is a workaround for:
-            https://issues.apache.org/jira/browse/IVY-782
+        Configure ivy.
     -->
-    <ivy:settings id="ivy-settings" override="true" file="src/ivy/build-settings.xml"/>
+    <ivy:settings id="ivy-settings" file="src/ivy/build-settings.xml"/>
 
     <!-- Default target: build the repo and run all checks -->
     <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
