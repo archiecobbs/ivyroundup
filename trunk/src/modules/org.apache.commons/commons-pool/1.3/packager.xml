@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="commons-pool">
+    <m2resource groupId="${ivy.packager.module}">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="03231230c1d7631b66a74d1c4653cfd65a6f9ea0"/>
     </m2resource>
 </packager-module>

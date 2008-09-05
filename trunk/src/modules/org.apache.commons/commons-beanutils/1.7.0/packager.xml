@@ -17,15 +17,15 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="commons-beanutils">
+    <m2resource groupId="${ivy.packager.module}">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="5675fd96b29656504b86029551973d60fb41339b"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="b0265478004257d5ec82db41037f2cd371bf5629"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b68c4fc66026e8c08df7fb57c7dc1e94a6ed8cbb"/>
     </m2resource>
-    <m2resource groupId="commons-beanutils" artifactId="commons-beanutils-core">
+    <m2resource groupId="${ivy.packager.module}" artifactId="${ivy.packager.module}-core">
         <artifact tofile="artifacts/jars/commons-beanutils-core.jar" sha1="52f7701e1e9fd1d2b93379503c0bc839d2caf68d"/>
     </m2resource>
-    <m2resource groupId="commons-beanutils" artifactId="commons-beanutils-bean-collections">
+    <m2resource groupId="${ivy.packager.module}" artifactId="${ivy.packager.module}-bean-collections">
         <artifact tofile="artifacts/jars/commons-beanutils-bean-collections.jar" sha1="af285cbc5fa03dfa6d18febc176763d0163b8d24"/>
     </m2resource>
 </packager-module>
