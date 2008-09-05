@@ -14,6 +14,22 @@ However, it's easy to use these files to create a normal Ivy repository. How to 
  # You'll need *ant* 1.6.2 or later.
  # (Optional) You'll need the [http://www.graphviz.org/ GraphViz] package installed to generate the dependency graph.
 
+== Software Requiring License Agreements ==
+
+Some software in Ivy !RoundUp cannot be downloaded directly from the Internet, due to the requirement that you must click to accept a license.
+
+For these cases, the {{{packager.xml}}} files will look for the archive instead in {{{${java.io.tmpdir}.}}} You must download the archive files manually and put them there.
+
+At the time of this writing, the following modules fall into this category:
+
+|| *Module* || *Version* || *Archive* || *Download Site* ||
+|| jmx || 1.2.1 || {{{jmx-1_2_1-ri.zip}}} || http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp ||
+|| jmxremote || 1.0.1_04 || {{{jmxremote-1_0_1-ri-bin-b58.zip}}} || http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp ||
+|| javamail || 1.4.1 || {{{javamail-1_4_1.zip}}} || http://java.sun.com/products/javamail/downloads/index.html ||
+|| jaf || 1.1.1 || {{{jaf-1_1_1.zip}}} || http://java.sun.com/javase/technologies/desktop/javabeans/jaf/downloads/index.html ||
+|| jta || 1.1 || {{{jta-1_1-classes.zip}}}, {{{jta-1_1-doc.zip}}} || http://java.sun.com/javaee/technologies/jta/ ||
+|| jms || 1.1 || {{{jms-1_1-fr-apidocs.zip}}} || http://www.sun.com/software/products/message_queue/index.xml ||
+
 == Steps To Build Repository ==
 
 Once you've satisfied the prerequisites:
