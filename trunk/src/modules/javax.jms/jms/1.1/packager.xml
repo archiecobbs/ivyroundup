@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-1_1-fr-apidocs"/>
     <property name="archivedir" value="${name}${version}"/>
 
-    <resource url="file:///${java.io.tmpdir}/${archive}.zip" sha1="ba2ef3e8f8bc62427d680330c2dd7d37d6250791"/>
+    <resource url="file://${java.io.tmpdir}/${archive}.zip" sha1="ba2ef3e8f8bc62427d680330c2dd7d37d6250791"/>
 
     <build>
         <!-- jar -->
