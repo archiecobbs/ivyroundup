@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="commons-digester">
+    <m2resource groupId="${ivy.packager.module}">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="e2822f655f2c182681c2cf27f224a425ccb2983d"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="d8c01fe0dcfcaa24f04aa0479951e80a1cc5e793"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="776f60b31da3df0306a8b41387534659c097b5a6"/>

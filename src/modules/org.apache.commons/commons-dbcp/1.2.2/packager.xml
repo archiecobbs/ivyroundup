@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="commons-dbcp">
+    <m2resource groupId="${ivy.packager.module}">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="4fd4c6110e9bca3a655b717eb2e5920febb8403d"/>
     </m2resource>
 </packager-module>
