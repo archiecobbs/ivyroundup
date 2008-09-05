@@ -168,12 +168,22 @@
     </target>
 
     <target name="post-repo-gen-svn-ops" unless="skip-svn" description="Regenerate the repository">
+
         <!-- Make sure keyword expansion turned off -->
         <exec executable="svn" logError="true" failonerror="true">
             <arg value="propdel"/>
             <arg value="--quiet"/>
             <arg value="--recursive"/>
             <arg value="svn:keywords"/>
+            <arg value="${target.repo}"/>
+        </exec>
+
+        <!-- Disable merge tracking -->
+        <exec executable="svn" logError="true" failonerror="true">
+            <arg value="propdel"/>
+            <arg value="--quiet"/>
+            <arg value="--recursive"/>
+            <arg value="svn:mergeinfo"/>
             <arg value="${target.repo}"/>
         </exec>
     </target>
