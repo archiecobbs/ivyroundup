@@ -19,8 +19,6 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
     <property name="apiname" value="jsr173_1.0_api"/>
 
     <resource url="file://${java.io.tmpdir}/${name}.jar" tofile="artifacts/jars/${name}.jar" sha1="548e4fc4e6a65d9d5e5b2e10b2b05babf59bad8d"/>
