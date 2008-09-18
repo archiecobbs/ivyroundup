@@ -19,8 +19,6 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
     <property name="apiname" value="jsr173_1.0_api"/>
 
     <resource url="file://${java.io.tmpdir}/${name}.jar" tofile="artifacts/jars/${name}.jar"
