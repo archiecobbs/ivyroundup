@@ -22,7 +22,7 @@
 
     <info organisation="javax.xml.stream" module="sjsxp" revision="1.0.1" status="release" publication="20070401120000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <ivyauthor name="$Id: ivy.xml 280 2008-09-18 15:02:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.stream/sjsxp/1.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 283 2008-09-18 15:07:21Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.stream/sjsxp/1.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://sjsxp.dev.java.net/">
         <a href="http://www.jcp.org/en/jsr/detail?id=173">JSR 173</a>
@@ -39,7 +39,7 @@
     </configurations>
 
     <publications>
-        <artifact/>
+        <artifact conf="default"/>
         <artifact name="jsr173_1.0_api" conf="default,api"/>
     </publications>
 
