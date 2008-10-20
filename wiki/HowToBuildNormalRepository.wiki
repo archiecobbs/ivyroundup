@@ -2,13 +2,13 @@
 
 == Overview ==
 
-The Ivy !RoundUp repository contains {{{ivy.xml}}} files but no actual artifacts. In place of artifacts, it has {{{packager.xml}}} files which describe how to download and (if necessary) extract artifacts on-demand.
+While the primary goal of the Ivy !RoundUp project is to provide an online Ivy repository, not repository build tools, it's easy to use the Ivy !RoundUp build infrastructure to create a normal Ivy repository. How to do this is described here.
 
-However, it's easy to use these files to create a normal Ivy repository. How to do this is described here.
+The Ivy !RoundUp repository contains {{{ivy.xml}}} files but no actual artifacts. In place of artifacts, it has {{{packager.xml}}} files which describe how to download and (if necessary) extract artifacts on-demand. An "ant" task in allows you to build a normal repository automatically using this information.
 
 == Prerequisites ==
 
- # You must have a version of Ivy containing the *packager resolver* installed on your machine (see [http://code.google.com/p/ivyroundup/downloads/list Downloads]).
+ # You must have a version of Ivy containing the *packager resolver* installed on your machine (Ivy 2.0.0-rc1 or later).
  # You'll need to [http://code.google.com/p/ivyroundup/source/checkout check out the source code] for Ivy !RoundUp using Subversion.
  # You'll need to be running on a UNIX-like O/S.
  # You'll need *ant* 1.6.2 or later.
