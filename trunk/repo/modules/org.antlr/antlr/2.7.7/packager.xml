@@ -28,6 +28,13 @@
 
     <build>
         <move file="archive/${archive}/${name}.jar" todir="artifacts/jars"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}">
+                <include name="antlr/**/*"/>
+            </fileset>
+        </zip>
     </build>
 
 </packager-module>
