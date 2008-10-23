@@ -53,7 +53,7 @@
     <configurations>
         <conf name="core" description="BeanUtils minus Bean Collections classes"/>
         <conf name="complete" description="All of BeanUtils"/>
-        <conf name="bean-collections" description="Only the BeanUtils Bean Collections classes"/>
+        <conf name="bean-collections" extends="core" description="BeanUtils with Bean Collections classes"/>
         <conf name="default" extends="core" description="Same as core configuration"/>
     </configurations>
 
