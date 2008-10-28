@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.2.6" status="release" publication="20080206120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 288 2008-10-21 14:32:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.2.6/"/>
+        <ivyauthor name="$Id: ivy.xml 296 2008-10-28 14:12:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.2.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
@@ -56,18 +56,21 @@
 
     <configurations>
         <conf name="core" description="Hibernate core"/>
-        <conf name="default" extends="core" description="Same as `core'"/>
-        <conf name="c3p0" extends="default" description="c3p0 connection pooling support"/>
-        <conf name="proxool" extends="default" description="Proxool connection pooling support"/>
-        <conf name="oscache" extends="default" description="Open Symphony cache support"/>
-        <conf name="swarmcache" extends="default" description="Swarmcache cache support"/>
-        <conf name="treecache" extends="default" description="TreeCache cache support [NOT IMPLEMENTED]"/>
-        <conf name="replicatedcaches" extends="default" description="Replicated caches support"/>
-        <conf name="cglib" extends="default" description="cglib bytecode provider"/>
-        <conf name="javassist" extends="default" description="javassist bytecode provider"/>
-        <conf name="deserializeconfig" extends="default" description="Support for deserializing Configuration at startup"/>
-        <conf name="jaac" extends="default" description="JAAC support [NOT IMPLEMENTED]"/>
-        <conf name="jaas" extends="default" description="JAAS support [NOT IMPLEMENTED]"/>
+        <conf name="default" extends="core,ehcache" description="Default configuration using EHCache"/>
+        <conf name="standalone" extends="core" description="For standalone operation (outside application server)"/>
+        <conf name="c3p0" extends="core" description="c3p0 connection pooling support"/>
+        <conf name="proxool" extends="core" description="Proxool connection pooling support"/>
+        <conf name="ehcache" extends="core" description="EHCache support (required if no other cache provider is set)"/>
+        <conf name="oscache" extends="core" description="Open Symphony cache support"/>
+        <conf name="swarmcache" extends="core" description="Swarmcache cache support"/>
+        <conf name="treecache" extends="core" description="TreeCache cache support [NOT IMPLEMENTED]"/>
+        <conf name="replicatedcaches" extends="core" description="Replicated caches support"/>
+        <conf name="cglib" extends="core" description="cglib bytecode provider"/>
+        <conf name="javassist" extends="core" description="javassist bytecode provider"/>
+        <conf name="deserializeconfig" extends="core" description="Support for deserializing Configuration at startup"/>
+        <conf name="jaac" extends="core" description="JAAC support [NOT IMPLEMENTED]"/>
+        <conf name="jaas" extends="core" description="JAAS support [NOT IMPLEMENTED]"/>
+        <conf name="jdk13" extends="core" description="For jdk &lt; 1.4"/>
     </configurations>
 
     <publications>
@@ -77,14 +80,13 @@
     </publications>
 
     <dependencies>
-        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="1.2.3" conf="core-&gt;default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="1.2.3" conf="ehcache-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-collections" rev="[2.1.1,3.0[" conf="core-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="core-&gt;default"/>
         <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="core-&gt;default"/>
-        <dependency org="org.apache.xerces" name="xerces" rev="[2.5,3.0[" conf="core-&gt;default"/>
-        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[2.5,3.0[" conf="jdk13-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="standalone-&gt;default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.1.3+" conf="cglib-&gt;default"/>
-        <dependency org="org.apache.log4j" name="log4j" rev="[1.2,1.3[" conf="core-&gt;default"/>
         <dependency org="org.antlr" name="antlr" rev="[2.7.6,2.8[" conf="core-&gt;default"/>
         <dependency org="net.sourceforge.c3p0" name="c3p0" rev="[0.9.1,2.0[" conf="c3p0-&gt;default"/>
         <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="javassist-&gt;default"/>
