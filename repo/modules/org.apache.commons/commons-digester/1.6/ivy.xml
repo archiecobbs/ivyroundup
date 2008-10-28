@@ -22,7 +22,7 @@
 
     <info organisation="org.apache.commons" module="commons-digester" revision="1.6" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 179 2008-05-01 22:28:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-digester/1.6/"/>
+        <ivyauthor name="$Id: ivy.xml 292 2008-10-23 17:10:23Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-digester/1.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/digester/">
             <p>
@@ -61,8 +61,7 @@
 
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.1+"/>
-        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.7,2.0]" conf="*-&gt;core"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="[2.0,4.0["/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.7,2.0]" conf="*-&gt;bean-collections"/>
     </dependencies>
 
 </ivy-module>
