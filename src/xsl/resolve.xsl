@@ -43,9 +43,13 @@
         <project name="resolve" default="resolve">
 
             <!-- Define Ivy ant tasks -->
+            <property environment="env"/>
+            <condition property="ivy.jar" value="${{env.IVY_JAR}}" else="/usr/share/java/ivy.jar">
+                <isset property="env.IVY_JAR"/>
+            </condition>
             <taskdef uri="urn:org.apache.ivy.ant"
               resource="org/apache/ivy/ant/antlib.xml"
-              classpath="/usr/share/java/ivy.jar"/>
+              classpath="${{ivy.jar}}"/>
 
             <!--
                 Configure ivy.
