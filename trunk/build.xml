@@ -113,7 +113,7 @@
             <arg value="-c"/>
             <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
               | grep -E '^URL:' || echo '/unknown' )
-              | sed -r 's|^URL: .*/svn(/.*)$$|\1|g'"/>
+              | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
         </exec>
         <mkdir dir="build/xsl"/>
         <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl">
