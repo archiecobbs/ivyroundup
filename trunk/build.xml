@@ -242,7 +242,9 @@
         <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
 
         <!-- Run the build -->
-        <ant dir="build/resolve"/>
+        <ant dir="build/resolve" inheritAll="false">
+            <property name="target.repo" value="${target.repo}"/>
+        </ant>
     </target>
 
     <!-- Clean out all generated files (not including the packager repository under repo/) -->
