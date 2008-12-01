@@ -28,6 +28,9 @@
 <!-- $Id$ -->
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
+    <!-- Examine environment variables for various defaults -->
+    <property environment="env"/>
+
     <!--
         Set this property to change where the meta-repo is generated. Must use absolute paths.
         You also need '-Dskip-svn=true' if this is set to somewhere outside a subversion working tree.
@@ -35,14 +38,23 @@
     <property name="target.repo" value="${basedir}/repo" />
 
     <!--
-        Define Ivy ant tasks.
+        Set this property to change which ivy is used.  It must be a version of
+        ivy containing the package resolver.
+        
+        If not explicitly set, the value of the IVY_JAR environment variable
+        will be used.  If no such environment variable exists,
+        /usr/share/java/ivy.jar will be used.
+    -->
+    <condition property="ivy.jar" value="${env.IVY_JAR}" else="/usr/share/java/ivy.jar">
+        <isset property="env.IVY_JAR"/>
+    </condition>
 
-        NOTE: /usr/share/java/ivy.jar must be a version of ivy containing
-        the packager resolver.
+    <!--
+        Define Ivy ant tasks.
     -->
     <taskdef uri="urn:org.apache.ivy.ant"
       resource="org/apache/ivy/ant/antlib.xml"
-      classpath="/usr/share/java/ivy.jar"/>
+      classpath="${ivy.jar}"/>
 
     <!--
         Configure ivy.
