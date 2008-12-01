@@ -257,7 +257,7 @@
         organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
     </target>
 
-    <target name="_provided-xalan-classpath" unless="get-xalan">
+    <target name="_provided-xalan-classpath" unless="download-xalan">
       <!-- placeholder declaration -->
       <path id="xalan.classpath" path="" />
     </target>
