@@ -135,7 +135,7 @@
         </copy>
 
         <!-- Generate ivy.xml files -->
-        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null" force="true">
             <param name="filename" expression="ivy.xml"/>
             <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
             <param name="target.repo" expression="${target.repo}" />
@@ -143,7 +143,7 @@
         </xslt>
 
         <!-- Generate packager.xml files -->
-        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null">
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null" force="true">
             <param name="filename" expression="packager.xml"/>
             <param name="stylesheet" expression="packager-repo.xsl"/>
             <param name="target.repo" expression="${target.repo}" />
