@@ -52,7 +52,12 @@
 
     <!-- Detect "YOUR NAME HERE" -->
     <xsl:template match="comment()[contains(., 'YOUR NAME HERE')]">
-        <xsl:message terminate="yes">ERROR: you didn't put your own name in the copyright message</xsl:message>
+        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: you didn't put your own name in the copyright message</xsl:message>
+    </xsl:template>
+
+    <!-- Detect use of ${version} ant property (see issue #14) -->
+    <xsl:template match="property[@name = 'version']">
+        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: don't use ${version} ant property; see http://code.google.com/p/ivyroundup/issues/detail?id=14 for details</xsl:message>
     </xsl:template>
 
     <!-- Copy everything else exactly -->
