@@ -38,7 +38,7 @@
     <div id="revision"><span id="revision">Last Repository Build: </span><xsl:value-of select="timestamp"/> (r<xsl:value-of select="svnRevision"/>)</div>
     <p class="header">
     This page lists all revisions of all modules contained in the <a href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a>.
-    You can view module dependencies as <a href="graph/modules.gif">GIF</a> or <a href="graph/modules.svg">SVG</a>.  
+    Currently there are <xsl:value-of select="count(org/mod/rev)"/> revisions of <xsl:value-of select="count(org/mod)"/> modules.
     </p>
 
     <div id="modules">

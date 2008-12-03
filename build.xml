@@ -168,14 +168,13 @@
             <param name="graph.rankdir" expression="LR"/>
             <param name="graph.size" expression="11,11"/>
         </xslt>
-        <mkdir dir="${target.repo}/graph"/>
         <exec executable="/bin/bash" logError="true" failonerror="false">
             <arg value="-c"/>
-            <arg value="circo -Tgif -o ${target.repo}/graph/modules.gif build/graph/modules.dot"/>
+            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot"/>
         </exec>
         <exec executable="/bin/bash" logError="true" failonerror="false">
             <arg value="-c"/>
-            <arg value="circo -Tsvg -o ${target.repo}/graph/modules.svg build/graph/modules.dot"/>
+            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot"/>
         </exec>
     </target>
 
