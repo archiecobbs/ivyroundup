@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://downloads.sourceforge.net/springframework/${archive}.zip"
       sha1="4a1bc64bdf61db3d44cb3f4ba6eefc38678ac87b"/>
@@ -29,17 +29,17 @@
         <!-- jars -->
         <move todir="artifacts/jars">
             <fileset dir="archive/${archive}/dist">
-                <include name="${name}-*-${version}.jar"/>
+                <include name="${name}-*-${revision}.jar"/>
             </fileset>
-            <mapper type="glob" from="${name}-*-${version}.jar" to="${name}-*.jar"/>
+            <mapper type="glob" from="${name}-*-${revision}.jar" to="${name}-*.jar"/>
         </move>
 
         <!-- sources -->
         <move todir="artifacts/sources">
             <fileset dir="archive/${archive}/dist">
-                <include name="${name}-*-${version}-sources.jar"/>
+                <include name="${name}-*-${revision}-sources.jar"/>
             </fileset>
-            <mapper type="glob" from="${name}-*-${version}-sources.jar" to="${name}-*.zip"/>
+            <mapper type="glob" from="${name}-*-${revision}-sources.jar" to="${name}-*.zip"/>
         </move>
     </build>
 </packager-module>

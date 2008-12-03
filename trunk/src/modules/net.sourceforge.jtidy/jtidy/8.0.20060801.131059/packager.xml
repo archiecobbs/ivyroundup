@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="8.0-20060801.131059-3"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="8.0-20060801.131059-3"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://jtidy.sourceforge.net/snapshots/jtidy/jtidy/8.0-SNAPSHOT/${archive}.jar"
       tofile="artifacts/jars/${name}.jar" sha1="788e89775eeaa0f4e77742ec8336c75b7cff6146"/>

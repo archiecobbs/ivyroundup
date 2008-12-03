@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="https://jets3t.dev.java.net/releases/jets3t-0.6.0.zip"
       sha1="271abd2074ab1579b37ff56c16f4d797de17690d"/>
@@ -32,7 +32,7 @@
             <fileset dir="archive/${archive}/jars">
                 <include name="*.jar"/>
             </fileset>
-            <mapper type="glob" from="*-${version}.jar" to="*.jar"/>
+            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
         </move>
         <move todir="artifacts/jars">
             <fileset dir="archive/${archive}/libs">

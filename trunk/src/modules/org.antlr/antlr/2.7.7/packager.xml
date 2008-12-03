@@ -19,10 +19,10 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.antlr2.org/download/${name}-${version}.tar.gz"
+    <resource url="http://www.antlr2.org/download/${name}-${revision}.tar.gz"
       sha1="802655c343cc7806aaf1ec2177a0e663ff209de1">
         <include name="${archive}/${name}.jar"/>
     </resource>

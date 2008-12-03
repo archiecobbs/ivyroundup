@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="gwt-widgets-server-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="gwt-widgets-server-${revision}"/>
 
     <resource url="http://downloads.sourceforge.net/gwt-widget/${archive}.tar.gz"
       sha1="563edd0c87a865bca8566067ed52252bfa8eb709">
@@ -32,7 +32,7 @@
     <build>
 
         <!-- jars -->
-        <move file="archive/${name}-${version}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
         <move file="archive/${name}-java1.4.jar" tofile="artifacts/jars/${name}-java1.4.jar"/>
 
         <!-- sources -->

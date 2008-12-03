@@ -20,11 +20,11 @@
 
     <property name="name" value="xerces"/>
     <property name="Name" value="Xerces"/>
-    <property name="version" value="2.6.2"/>
+    <property name="revision" value="2.6.2"/>
     <property name="_version" value="2_6_2"/>
 
-    <property name="binarchive" value="${Name}-J-bin.${version}"/>
-    <property name="srcarchive" value="${Name}-J-src.${version}"/>
+    <property name="binarchive" value="${Name}-J-bin.${revision}"/>
+    <property name="srcarchive" value="${Name}-J-src.${revision}"/>
     <property name="archdir" value="${name}-${_version}"/>
 
     <resource dest="binarchive" url="http://archive.apache.org/dist/xml/${name}-j/${binarchive}.tar.gz"

@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="https://oscache.dev.java.net/files/documents/629/61427/${archive}-full.zip"
       sha1="f9b66b1da8945621a285c5ca1a9a9cb3ad383fe9">

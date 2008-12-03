@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}.GA"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}.GA"/>
 
     <resource url="http://downloads.sourceforge.net/hibernate/${archive}.tar.gz"
       sha1="8d04395878a2b7d9ab987f989b7274eff636e096">

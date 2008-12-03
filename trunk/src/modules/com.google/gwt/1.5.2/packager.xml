@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-linux-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-linux-${revision}"/>
 
     <resource url="http://google-web-toolkit.googlecode.com/files/${archive}.tar.bz2"
       sha1="f867ac578f86c201954e0c183d11d9156189b1a0">

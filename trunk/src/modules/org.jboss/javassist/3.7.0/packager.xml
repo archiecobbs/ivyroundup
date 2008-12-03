@@ -19,10 +19,10 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="3.7"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="3.7"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/jboss/${name}-${version}.GA.zip"
+    <resource url="http://downloads.sourceforge.net/jboss/${name}-${revision}.GA.zip"
       sha1="f435a9b69234eda3772e5512023062bff97c15f5">
         <include name="${archive}/${name}.jar"/>
         <include name="${archive}/html/**/*"/>

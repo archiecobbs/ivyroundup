@@ -19,12 +19,12 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
     <property name="_version" value="2_1_7"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="archive" value="${name}-${revision}"/>
     <property name="archdir" value="${name}-ri"/>
 
-    <resource url="https://jaxb.dev.java.net/${version}/jaxb-${_version}.zip"
+    <resource url="https://jaxb.dev.java.net/${revision}/jaxb-${_version}.zip"
       sha1="194310817270ec6fb3a0463f9f10f24128d98db3"/>
 
     <build>

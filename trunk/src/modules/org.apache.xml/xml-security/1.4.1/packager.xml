@@ -19,7 +19,7 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-bin-1_4_1"/>
     <property name="topdir" value="${name}-1_4_1"/>
 
@@ -28,7 +28,7 @@
 
     <build>
         <!-- jar -->
-        <move file="archive/${topdir}/libs/xmlsec-${version}.jar" tofile="artifacts/jars/xmlsec.jar"/>
+        <move file="archive/${topdir}/libs/xmlsec-${revision}.jar" tofile="artifacts/jars/xmlsec.jar"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">

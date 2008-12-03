@@ -19,25 +19,25 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.tgz"
       sha1="4ac1bd9f8a04f3d98231e0e8e71d592c2494fc30"/>
 
     <build>
         <!-- jars -->
-        <move file="archive/${archive}/${name}-${version}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${name}-${version}-remote-debugger.jar" tofile="artifacts/jars/${name}-remote-debugger.jar"/>
+        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-${revision}-remote-debugger.jar" tofile="artifacts/jars/${name}-remote-debugger.jar"/>
 
         <!-- javadocs -->
         <mkdir dir="javadocs"/>
-        <unzip src="archive/${archive}/${name}-${version}-javadoc.zip" dest="javadocs"/>
+        <unzip src="archive/${archive}/${name}-${revision}-javadoc.zip" dest="javadocs"/>
         <zip destfile="artifacts/javadocs/javadoc.zip">
             <fileset dir="javadocs/docs"/>
         </zip>
 
         <!-- sources -->
-        <move file="archive/${archive}/${name}-${version}-src.zip" tofile="artifacts/sources/source.zip"/>
+        <move file="archive/${archive}/${name}-${revision}-src.zip" tofile="artifacts/sources/source.zip"/>
     </build>
 </packager-module>

@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}${revision}"/>
 
     <resource url="http://downloads.sourceforge.net/junit/${archive}.zip"
       sha1="75d642adaf15091c7ca9ed54f0f2f058bd9ec653">
@@ -30,11 +30,11 @@
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${name}-${version}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${name}-dep-${version}.jar" tofile="artifacts/jars/${name}-dep.jar"/>
+        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-dep-${revision}.jar" tofile="artifacts/jars/${name}-dep.jar"/>
 
         <!-- source -->
-        <move file="archive/${archive}/${name}-${version}-src.jar" tofile="artifacts/sources/${name}.zip"/>
+        <move file="archive/${archive}/${name}-${revision}-src.jar" tofile="artifacts/sources/${name}.zip"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/${name}.zip">

@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="1_0_1"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="1_0_1"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="file://${java.io.tmpdir}/${archive}-ri-bin-b58.zip"
       sha1="f39c15ec198a87ba9d62b13596c1381a2380e4c0">
