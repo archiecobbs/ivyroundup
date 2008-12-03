@@ -19,10 +19,10 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.eclipse.org/downloads/download.php?file=/tools/${name}/downloads/${name}-${version}.jar&amp;mirror_id=1&amp;url=http://download.eclipse.org/tools/${name}/downloads/${name}-${version}.jar"
+    <resource url="http://www.eclipse.org/downloads/download.php?file=/tools/${name}/downloads/${name}-${revision}.jar&amp;mirror_id=1&amp;url=http://download.eclipse.org/tools/${name}/downloads/${name}-${revision}.jar"
       sha1="9af12d400446c4d088aba5fffc4a1dd56c26f9be">
         <include name="lib/*.jar"/>
         <include name="doc/*-api/**/*"/>

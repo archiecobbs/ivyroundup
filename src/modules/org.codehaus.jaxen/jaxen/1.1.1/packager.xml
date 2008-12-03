@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://dist.codehaus.org/jaxen/distributions/${archive}.tar.gz"
       sha1="98b3f7095dff2a90cf056b9de4a0809259434853">

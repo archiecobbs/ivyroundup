@@ -19,14 +19,14 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://recaptcha.googlecode.com/files/${name}-${version}.zip" sha1="77f395807b70f874ecdb0a6dabb869eec8aafd41"/>
+    <resource url="http://recaptcha.googlecode.com/files/${name}-${revision}.zip" sha1="77f395807b70f874ecdb0a6dabb869eec8aafd41"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${name}-${version}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">

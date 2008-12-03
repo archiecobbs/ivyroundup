@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="1_1"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="1_1"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource tofile="artifacts/jars/jta.jar" url="file://${java.io.tmpdir}/${archive}-classes.zip"
       sha1="d3b80bef03168fb92b50d6d7c3a3a9611fcc0143"/>

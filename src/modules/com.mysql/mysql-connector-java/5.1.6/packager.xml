@@ -19,8 +19,8 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mirror.services.wisc.edu/mysql/"
       filename="${archive}.tar.gz" sha1="3ebbab405e1578d165fe8910e3c23d808e6fcdd1">

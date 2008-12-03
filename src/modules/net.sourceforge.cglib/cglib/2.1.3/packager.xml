@@ -19,10 +19,10 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="version" value="2.1_3"/>
-    <property name="binjar" value="${name}-${version}"/>
-    <property name="srcjar" value="${name}-src-${version}"/>
-    <property name="docjar" value="${name}-docs-${version}"/>
+    <property name="revision" value="2.1_3"/>
+    <property name="binjar" value="${name}-${revision}"/>
+    <property name="srcjar" value="${name}-src-${revision}"/>
+    <property name="docjar" value="${name}-docs-${revision}"/>
 
     <resource tofile="artifacts/jars/${name}.jar" url="http://downloads.sourceforge.net/${name}/${binjar}.jar"
       sha1="d3851e366b9fe8b7d8215de0f9eb980b359d8de0"/>
