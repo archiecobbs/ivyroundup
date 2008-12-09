@@ -1,15 +1,17 @@
 #summary List of software that cannot be downloaded without you manually clicking on something
 
-Some software in Ivy !RoundUp cannot be downloaded directly from the Internet, due to the requirement that you must click to accept a license.
+Some software in Ivy !RoundUp cannot be downloaded directly from the Internet, due to the requirement that you must click to accept a license, browser cookie tracking, or whatever.
 
-For these cases, the {{{packager.xml}}} files will look for the archive instead in {{{${java.io.tmpdir}.}}} You must download the archive files manually and put them there.
+For these cases, the {{{packager.xml}}} files will look for the archive instead in {{{${java.io.tmpdir}.}}} On UNIX systems, this is normally {{{/tmp}}}. You must download the archive files manually and put them there.
 
 At the time of this writing, the following modules fall into this category:
 
-|| *Module* || *Version* || *Archive* || *Download Site* ||
-|| jmx || 1.2.1 || {{{jmx-1_2_1-ri.zip}}} || http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp ||
-|| jmxremote || 1.0.1_04 || {{{jmxremote-1_0_1-ri-bin-b58.zip}}} || http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp ||
-|| javamail || 1.4.1 || {{{javamail-1_4_1.zip}}} || http://java.sun.com/products/javamail/downloads/index.html ||
-|| jaf || 1.1.1 || {{{jaf-1_1_1.zip}}} || http://java.sun.com/javase/technologies/desktop/javabeans/jaf/downloads/index.html ||
-|| jta || 1.1 || {{{jta-1_1-classes.zip}}}, {{{jta-1_1-doc.zip}}} || http://java.sun.com/javaee/technologies/jta/ ||
-|| jms || 1.1 || {{{jms-1_1-fr-apidocs.zip}}} || http://www.sun.com/software/products/message_queue/index.xml ||
+|| *Module* || *Version* || *File(s) and Link* || *Notes* ||
+|| jmx || 1.2.1 || [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp jmx-1_2_1-ri.zip] || ||
+|| jmxremote || 1.0.1_04 || [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp jmxremote-1_0_1-ri-bin-b58.zip] || ||
+|| javamail || 1.4.1 || [http://java.sun.com/products/javamail/downloads/index.html javamail-1_4_1.zip] || ||
+|| jaf || 1.1.1 || [http://java.sun.com/javase/technologies/desktop/javabeans/jaf/downloads/index.html jaf-1_1_1.zip] || ||
+|| jta || 1.1 || [http://java.sun.com/javaee/technologies/jta/ jta-1_1-classes.zip], [http://java.sun.com/javaee/technologies/jta/ jta-1_1-doc.zip] || ||
+|| jms || 1.1 || [http://www.sun.com/software/products/message_queue/index.xml jms-1_1-fr-apidocs.zip] || ||
+|| sjsxp || 1.0.1 || [https://sjsxp.dev.java.net/files/documents/3071/54332/sjsxp_101.class sjsxp.jar] || Run {{{java -cp . sjsxp_101}}} to extract the file ||
+|| sjsxp || 1.0.1 || [http://maven.tailsweep.com/archiva/repository/opensource/javax.xml/jars/jsr173-1.0.jar jsr173_1.0_api.jar] || ||
