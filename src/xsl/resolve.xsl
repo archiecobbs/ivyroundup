@@ -44,8 +44,13 @@
 
             <!-- Define Ivy ant tasks -->
             <property environment="env"/>
-            <condition property="ivy.jar" value="${{env.IVY_JAR}}" else="/usr/share/java/ivy.jar">
+            <condition property="ivy.jar" value="${{env.IVY_JAR}}">
                 <isset property="env.IVY_JAR"/>
+            </condition>
+            <condition property="ivy.jar" value="/usr/share/java/ivy.jar">
+		<not>
+		    <isset property="env.IVY_JAR"/>
+		</not>
             </condition>
             <taskdef uri="urn:org.apache.ivy.ant"
               resource="org/apache/ivy/ant/antlib.xml"

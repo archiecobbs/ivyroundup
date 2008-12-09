@@ -44,9 +44,16 @@
         If not explicitly set, the value of the IVY_JAR environment variable
         will be used.  If no such environment variable exists,
         /usr/share/java/ivy.jar will be used.
+
+        Avoid use of "else" attribute which ant 1.6.2 does not support.
     -->
-    <condition property="ivy.jar" value="${env.IVY_JAR}" else="/usr/share/java/ivy.jar">
+    <condition property="ivy.jar" value="${env.IVY_JAR}">
         <isset property="env.IVY_JAR"/>
+    </condition>
+    <condition property="ivy.jar" value="/usr/share/java/ivy.jar">
+        <not>
+            <isset property="env.IVY_JAR"/>
+        </not>
     </condition>
 
     <!--
@@ -115,9 +122,11 @@
                 <include name="xsd/packager-1.0.xsd"/>
                 <include name="xsd/ivy.xsd"/>
             </fileset>
-            <dirset dir="src">
+            <fileset dir="src">
                 <include name="modules/**/*"/>
-            </dirset>
+                <exclude name="ivy.xml"/>
+                <exclude name="packager.xml"/>
+            </fileset>
         </copy>
 
         <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
