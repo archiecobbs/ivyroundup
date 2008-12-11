@@ -28,24 +28,27 @@
     </resource>
 
     <build>
-        <!-- jar -->
-        <move todir="artifacts/jars">
-            <fileset dir="archive/${archive}/lib">
-                <include name="**/*.jar"/>
-                <exclude name="win32/**/*"/>
-            </fileset>
-            <chainedmapper>
-                <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
-                <mapper type="flatten"/>
-            </chainedmapper>
-        </move>
-        <move todir="artifacts/jars">
+
+        <!-- jar (note: avoiding use of chained mapper not supported in ant 1.6.2) -->
+        <mkdir dir="flattened-jars"/>
+        <copy todir="flattened-jars">
             <fileset dir="archive/${archive}/lib">
                 <include name="**/*.jar"/>
                 <exclude name="win32/**/*"/>
             </fileset>
             <mapper type="flatten"/>
-        </move>
+        </copy>
+        <copy todir="artifacts/jars">
+            <fileset dir="flattened-jars">
+                <include name="*.jar"/>
+            </fileset>
+            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
+        </copy>
+        <copy todir="artifacts/jars">	<!-- extra copy needed to workaround bug in ant 1.6.2 -->
+            <fileset dir="flattened-jars">
+                <include name="*.jar"/>
+            </fileset>
+        </copy>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
