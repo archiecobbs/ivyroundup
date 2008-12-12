@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-12-12 16:46:21 UTC</timestamp>
-  <svnRevision>327</svnRevision>
+  <timestamp>2008-12-12 23:21:59 UTC</timestamp>
+  <svnRevision>331</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -114,6 +114,11 @@
       <rev name="1.4.1"/>
     </mod>
   </org>
+  <org name="net.sourceforge.opencsv">
+    <mod name="opencsv">
+      <rev name="1.8"/>
+    </mod>
+  </org>
   <org name="org.openxri">
     <mod name="openxri">
       <rev name="1.0.1"/>
@@ -169,6 +174,8 @@
   <org name="javax.xml.bind">
     <mod name="jaxb">
       <rev name="2.1.7"/>
+      <rev name="2.1.8"/>
+      <rev name="2.1.9"/>
     </mod>
   </org>
   <org name="org.apache.xerces">
@@ -187,6 +194,11 @@
       <rev name="1.5m2"/>
       <rev name="1.4.60"/>
       <rev name="1.4.62"/>
+    </mod>
+  </org>
+  <org name="org.apache.ws">
+    <mod name="xmlrpc">
+      <rev name="3.1.1"/>
     </mod>
   </org>
   <org name="javax.xml.stream">
