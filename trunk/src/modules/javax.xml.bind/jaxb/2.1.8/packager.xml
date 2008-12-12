@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="_version" value="2_1_8"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="archdir" value="${name}-ri"/>
+
+    <resource url="https://jaxb.dev.java.net/${revision}/jaxb-${_version}.zip"
+      sha1="aa0301e819512da228e4ddfe17a584e1f1441d4f"/>
+
+    <build>
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archdir}/lib">
+                <include name="${name}-impl.jar"/>
+                <include name="${name}1-impl.jar"/>
+                <include name="${name}-xjc.jar"/>
+                <include name="${name}-api.jar"/>
+                <include name="jsr173_1.0_api.jar"/>
+            </fileset>
+        </move>
+
+        <!-- sources -->
+        <move todir="artifacts/sources">
+            <fileset dir="archive/${archdir}/lib">
+                <include name="*src.zip"/>
+            </fileset>
+        </move>
+
+        <!-- javadoc -->
+        <move file="archive/${archdir}/lib/${name}-api-doc.zip" todir="artifacts/javadocs"/>
+    </build>
+</packager-module>
