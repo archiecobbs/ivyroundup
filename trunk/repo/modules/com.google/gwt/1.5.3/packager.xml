@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2008 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,39 +20,24 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="${name}-linux-${revision}"/>
 
-    <resource url="http://dist.codehaus.org/${name}/${archive}/${archive}.zip" sha1="7f187800d1854d827d3296ad5e8228e8c1241da2">
-        <include name="${archive}/lib/**/*"/>
-        <include name="${archive}/javadoc/**/*"/>
+    <resource url="http://google-web-toolkit.googlecode.com/files/${archive}.tar.bz2" sha1="5d7d3295cef4d0eb06a991138e9f538409146027">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/doc/javadoc/**/*"/>
     </resource>
 
     <build>
-
-        <!-- jar (note: avoiding use of chained mapper not supported in ant 1.6.2) -->
-        <mkdir dir="flattened-jars"/>
-        <copy todir="flattened-jars">
-            <fileset dir="archive/${archive}/lib">
-                <include name="**/*.jar"/>
-                <exclude name="win32/**/*"/>
-            </fileset>
-            <mapper type="flatten"/>
-        </copy>
-        <copy todir="artifacts/jars">
-            <fileset dir="flattened-jars">
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}">
                 <include name="*.jar"/>
             </fileset>
-            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
-        </copy>
-        <copy todir="artifacts/jars">	<!-- extra copy needed to workaround bug in ant 1.6.2 -->
-            <fileset dir="flattened-jars">
-                <include name="*.jar"/>
-            </fileset>
-        </copy>
+        </move>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/javadoc"/>
+            <fileset dir="archive/${archive}/doc/javadoc"/>
         </zip>
     </build>
 </packager-module>
