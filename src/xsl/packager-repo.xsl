@@ -60,6 +60,11 @@
         <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: don't use ${version} ant property; see http://code.google.com/p/ivyroundup/issues/detail?id=14 for details</xsl:message>
     </xsl:template>
 
+    <!-- Ensure there is a "default" configuration -->
+    <xsl:template match="configurations[not(conf[@name = 'default'])]">
+        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: there is no 'default' configuration declared</xsl:message>
+    </xsl:template>
+
     <!-- Copy everything else exactly -->
     <xsl:template match="@*|node()">
         <xsl:copy>
