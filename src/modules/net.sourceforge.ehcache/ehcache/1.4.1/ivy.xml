@@ -54,10 +54,10 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default->default" org="org.apache.commons" name="commons-logging" rev="1.1+"/>
-        <dependency conf="jsr107->default" org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default->default"/>
+        <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="jsr107->default"/>
     <!--
-        <dependency conf="jsr107->???" org="edu.emory.mathcs.backport" name="backport-util-concurrent" rev="3.0+"/>
+        <dependency org="edu.emory.mathcs.backport" name="backport-util-concurrent" rev="3.0+" conf="jsr107->???"/>
     -->
     </dependencies>
 

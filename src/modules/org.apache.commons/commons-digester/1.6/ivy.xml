@@ -56,8 +56,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+"/>
-        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.7,2.0]" conf="*->bean-collections"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.7,2.0]" conf="default->bean-collections"/>
     </dependencies>
 
 </ivy-module>

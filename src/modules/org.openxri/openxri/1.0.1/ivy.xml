@@ -32,15 +32,16 @@
     </info>
 
     <configurations>
-        <conf name="client"/>
-        <conf name="server"/>
-        <conf name="syntax"/>
+        <conf name="default" extends="client,server" description="Combination of client and server configurations"/>
+        <conf name="client" description="Client-side support"/>
+        <conf name="server" description="Server-side support"/>
+        <conf name="syntax" description="Syntax checking support"/>
     </configurations>
 
     <publications>
-        <artifact name="openxri-client"/>
-        <artifact name="openxri-server"/>
-        <artifact name="openxri-syntax"/>
+        <artifact name="openxri-client" conf="client"/>
+        <artifact name="openxri-server" conf="server"/>
+        <artifact name="openxri-syntax" conf="syntax"/>
 
         <artifact name="client-source" type="source" ext="zip" conf="client"/>
         <artifact name="server-source" type="source" ext="zip" conf="server"/>
