@@ -18,7 +18,7 @@
 
 <ivy-module rev="$Id$">
 
-    <info>
+    <info publication="20081120120000">
         <license name="SLF4J License" url="http://www.slf4j.org/license.html"/>
         <description homepage="http://www.slf4j.org/">
 
@@ -85,7 +85,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.log4j" name="log4j" rev="[1.2,1.3[" conf="default->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2,1.3[" conf="log4j,log4j-migration->default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="jcl->default"/>
         <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="ext->default"/>
     </dependencies>

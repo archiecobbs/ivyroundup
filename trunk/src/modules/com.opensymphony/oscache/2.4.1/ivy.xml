@@ -38,8 +38,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1,2.0["/>
-        <dependency org="org.jgroups" name="jgroups" rev="[2.2,3.0["/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1,2.0[" conf="default->default"/>
+        <dependency org="org.jgroups" name="jgroups" rev="[2.2,3.0[" conf="default->default"/>
     </dependencies>
 
 </ivy-module>

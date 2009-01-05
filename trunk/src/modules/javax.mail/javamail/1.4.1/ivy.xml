@@ -40,15 +40,15 @@
     <publications>
         <artifact name="mail" conf="default"/>
         <artifact name="mailapi" conf="api"/>
-        <artifact name="imap" conf="imap"/>
-        <artifact name="smtp" conf="smtp"/>
-        <artifact name="pop3" conf="pop3"/>
-        <artifact name="dsn" conf="dsn"/>
+        <artifact name="imap" conf="default,imap"/>
+        <artifact name="smtp" conf="default,smtp"/>
+        <artifact name="pop3" conf="default,pop3"/>
+        <artifact name="dsn" conf="default,dsn"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency org="javax.activation" name="jaf" rev="[1.1.1,2.0["/>
+        <dependency org="javax.activation" name="jaf" rev="[1.1.1,2.0[" conf="*->default"/>
     </dependencies>
 
 </ivy-module>

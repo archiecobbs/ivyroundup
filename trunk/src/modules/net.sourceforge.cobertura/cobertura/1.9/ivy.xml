@@ -33,9 +33,9 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.9,2.0["/>
-        <dependency org="org.apache.oro" name="oro" rev="[2.0.8,3.0["/>
-        <dependency org="org.objectweb.asm" name="asm" rev="2.2+"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.9,2.0[" conf="default->default"/>
+        <dependency org="org.apache.oro" name="oro" rev="[2.0.8,3.0[" conf="default->default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="2.2+" conf="default->default"/>
     </dependencies>
 
 </ivy-module>
