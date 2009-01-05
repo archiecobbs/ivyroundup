@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2008-12-22 22:53:15 UTC</timestamp>
-  <svnRevision>343</svnRevision>
+  <timestamp>2009-01-05 23:06:35 UTC</timestamp>
+  <svnRevision>350</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -48,6 +48,14 @@
       <rev name="3.8.0"/>
       <rev name="3.8.1"/>
       <rev name="3.9.0"/>
+    </mod>
+  </org>
+  <org name="org.jfree">
+    <mod name="jfreechart">
+      <rev name="1.0.12"/>
+    </mod>
+    <mod name="jcommon">
+      <rev name="1.0.15"/>
     </mod>
   </org>
   <org name="org.jruby">
@@ -214,6 +222,9 @@
       <rev name="1.5m2"/>
       <rev name="1.4.60"/>
       <rev name="1.4.62"/>
+    </mod>
+    <mod name="guice">
+      <rev name="1.0"/>
     </mod>
   </org>
   <org name="org.apache.ws">
