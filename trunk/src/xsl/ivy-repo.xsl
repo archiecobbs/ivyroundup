@@ -42,6 +42,19 @@
     </xsl:template>
 
     <xsl:template match="/ivy-module">
+
+        <!-- Various style and consistency checks -->
+        <xsl:if test="@version">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&quot;version&quot; attribute is auto-populated; do not include'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="not(starts-with(@rev, '$Id'))">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'tag should have a &quot;rev&quot; attribute containing &quot;$Id$&quot;'"/>
+            </xsl:call-template>
+        </xsl:if>
+
         <xsl:value-of select="'&#10;'"/>
         <xsl:comment> GENERATED FILE - DO NOT EDIT </xsl:comment>
         <xsl:value-of select="'&#10;'"/>
@@ -57,6 +70,24 @@
     </xsl:template>
 
     <xsl:template match="/ivy-module/info">
+
+        <!-- Various style and consistency checks -->
+        <xsl:if test="@organisation or @module or @revision">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&quot;organisation&quot;, &quot;module&quot;, and &quot;status&quot; are auto-populated; do not include'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="@status = 'release'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'status=&quot;release&quot; is the default; do not include'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="translate(@publication, '0123456789', '0000000000') != '00000000000000'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'valid 14-digit &quot;publication&quot; attribute is required in &lt;info&gt; tag'"/>
+            </xsl:call-template>
+        </xsl:if>
+
         <xsl:copy>
             <!-- Auto-insert organisation, module, and revision attributes -->
             <xsl:attribute name="organisation">
@@ -112,9 +143,76 @@
         </xsl:copy>
     </xsl:template>
 
-    <!-- Detect "YOUR NAME HERE" -->
-    <xsl:template match="comment()[contains(., 'YOUR NAME HERE')]">
-        <xsl:message>*** ERROR *** you didn't put your own name in the copyright message</xsl:message>
+    <xsl:template match="/ivy-module/configurations">
+        <!-- Various style and consistency checks -->
+        <xsl:if test="count(conf) = 0">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'empty &lt;configurations&gt; tag'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="not(conf[@name = 'default'])">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'no &quot;default&quot; &lt;configuration&gt; defined'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="/ivy-module/configurations/configuration">
+        <!-- Various style and consistency checks -->
+        <xsl:if test="@name != 'default' and not(@description)">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'non-default &lt;configuration&gt; tags must have &quot;description&quot; attributes'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="/ivy-module/dependencies">
+        <!-- Various style and consistency checks -->
+        <xsl:if test="count(dependency) = 0">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'empty &lt;dependencies&gt; tag'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="/ivy-module/dependencies/dependency">
+        <!-- Various style and consistency checks -->
+        <xsl:if test="not(@org) or not(@name) or not(@rev) or not(@conf)">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&quot;org&quot;, &quot;name&quot;, &quot;rev&quot;, and &quot;conf&quot; attributes are required in &lt;dependency&gt; tags'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <!-- Check comments -->
+    <xsl:template match="comment()">
+
+        <!-- Detect "YOUR NAME HERE" -->
+        <xsl:if test="contains(., 'YOUR NAME HERE')">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'put your own name in the copyright message'"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <!-- Warn about "XXX" and "TODO" markers -->
+        <xsl:if test="contains(., 'XXX') or contains(., 'TODO')">
+            <xsl:call-template name="warning">
+                <xsl:with-param name="msg" select="'comment with &quot;XXX&quot; and/or &quot;TODO&quot; marker found'"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
     </xsl:template>
 
     <!-- Copy everything else exactly -->
@@ -122,6 +220,33 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
+    </xsl:template>
+
+    <!-- Warning and error templates -->
+    <xsl:template name="error">
+        <xsl:param name="msg"/>
+        <xsl:call-template name="message">
+            <xsl:with-param name="msg" select="$msg"/>
+            <xsl:with-param name="kind" select="'ERROR'"/>
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="warning">
+        <xsl:param name="msg"/>
+        <xsl:call-template name="message">
+            <xsl:with-param name="msg" select="$msg"/>
+            <xsl:with-param name="kind" select="'WARNING'"/>
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="message">
+        <xsl:param name="msg"/>
+        <xsl:param name="kind"/>
+        <xsl:message>
+            <xsl:if test="$kind = 'ERROR'">&#10;**********************************************************************************</xsl:if>
+            <xsl:value-of select="concat('&#10;*** ', $kind, ': ', $organisation, '/', $module, '/', $revision, '/ivy.xml: ', $msg)"/>
+            <xsl:if test="$kind = 'ERROR'">&#10;**********************************************************************************</xsl:if>
+        </xsl:message>
     </xsl:template>
 
 </xsl:transform>
