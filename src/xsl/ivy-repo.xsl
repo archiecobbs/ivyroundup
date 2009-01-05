@@ -51,7 +51,7 @@
         </xsl:if>
         <xsl:if test="not(starts-with(@rev, '$Id'))">
             <xsl:call-template name="error">
-                <xsl:with-param name="msg" select="'tag should have a &quot;rev&quot; attribute containing &quot;$Id$&quot;'"/>
+                <xsl:with-param name="msg" select="'tag should have a &quot;rev&quot; attribute containing &quot;$Id&#36;&quot;'"/>
             </xsl:call-template>
         </xsl:if>
 
