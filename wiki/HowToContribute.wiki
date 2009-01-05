@@ -8,14 +8,13 @@ If the module already exists (i.e., you're just adding a new revision), typicall
 
 For new modules, there are plenty of examples to work from. Or, you can start with the [http://code.google.com/p/ivyroundup/source/browse/trunk/src/boilerplate boilerplate files].
 
-Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules.
-
-*Please follow these guidelines*:
+Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules. *Please follow these guidelines when creating issues for new revisions:*
   # Read and understand the ModuleMaintainerGuidelines.
   # Make sure that running {{{ant repo}}} with your new files in place under {{{src/modules}}} doesn't generate any (new) warnings or errors.
   # Include your new modules as a subversion patch file attached to the issue:
     * If the module is new, the patch should be against the boilerplate files
     * If the revision is new but the module already exists, the patch should be against the previous revision
+  # Set the issue type to Type-Enhancement (instead of the default Type-Defect).
 
 If you're interested in developing the Ivy !RoundUp infrastructure, or becoming a regular contributor with SVN commit access, join us on the [http://groups.google.com/group/ivyroundup mailing list].
 
