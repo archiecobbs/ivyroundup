@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-01-05 23:14:29 UTC</timestamp>
-  <svnRevision>351</svnRevision>
+  <timestamp>2009-01-06 15:27:04 UTC</timestamp>
+  <svnRevision>357</svnRevision>
   <org name="org.testng">
     <mod name="testng">
       <rev name="5.7"/>
@@ -74,6 +74,11 @@
       <rev name="1.5.6"/>
     </mod>
   </org>
+  <org name="org.mockito">
+    <mod name="mockito">
+      <rev name="1.6"/>
+    </mod>
+  </org>
   <org name="net.sourceforge.jsr107cache">
     <mod name="jsr107cache">
       <rev name="1.0"/>
@@ -82,6 +87,11 @@
   <org name="org.mortbay">
     <mod name="jetty">
       <rev name="6.1.9"/>
+    </mod>
+  </org>
+  <org name="org.hamcrest">
+    <mod name="hamcrest">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="net.sourceforge.freemarker">
@@ -122,6 +132,12 @@
   <org name="org.aopalliance">
     <mod name="aopalliance">
       <rev name="1.0"/>
+    </mod>
+  </org>
+  <org name="org.objenesis">
+    <mod name="objenesis">
+      <rev name="1.0"/>
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="javax.management">
