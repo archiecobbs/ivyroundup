@@ -194,7 +194,7 @@
     </xsl:template>
 
     <!-- Check comments -->
-    <xsl:template match="comment()">
+    <xsl:template match="comment()" priority="1">
 
         <!-- Detect "YOUR NAME HERE" -->
         <xsl:if test="contains(., 'YOUR NAME HERE')">
