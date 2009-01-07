@@ -86,6 +86,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td></tr>
     <tr><td class="title">Licenses</td><td class="value">
 	    <xsl:for-each select="$licenses">
+    	<xsl:if test="position() &gt; 1"><br/></xsl:if>
     	<xsl:if test="@url">
 	        <xsl:element name="a">
 	            <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
