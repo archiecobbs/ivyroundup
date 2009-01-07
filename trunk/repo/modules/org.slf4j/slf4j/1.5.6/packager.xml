@@ -48,7 +48,6 @@
         <zip destfile="artifacts/sources/source.zip">
             <fileset dir="work/src" includes="org/slf4j/**/*"/>
         </zip>
-        <delete dir="work/src"/>
 
         <!-- javadocs -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
