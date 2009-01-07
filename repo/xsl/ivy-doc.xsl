@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 222 2008-05-08 17:02:34Z archie.cobbs $ -->
+<!-- $Id: ivy-doc.xsl 362 2009-01-07 20:25:11Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
@@ -86,6 +86,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </td></tr>
     <tr><td class="title">Licenses</td><td class="value">
 	    <xsl:for-each select="$licenses">
+    	<xsl:if test="position() &gt; 1"><br/></xsl:if>
     	<xsl:if test="@url">
 	        <xsl:element name="a">
 	            <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
