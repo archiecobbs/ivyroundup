@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="0c651d5103c649c12b20d53731643e5fffceb536"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="a36b1b41ebcdb0b098e80d3d0e1a28cc08d58613"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="2818502bbb50bbcbd3f57e92a2bfe4d496f37688"/>
+    </m2resource>
+    <m2resource groupId="${ivy.packager.module}" artifactId="${ivy.packager.module}-core">
+        <artifact tofile="artifacts/jars/commons-beanutils-core.jar" sha1="175dc721f87e4bc5cc0573f990e28c3cf9117508"/>
+    </m2resource>
+    <m2resource groupId="${ivy.packager.module}" artifactId="${ivy.packager.module}-bean-collections">
+        <artifact tofile="artifacts/jars/commons-beanutils-bean-collections.jar" sha1="ced39f38700514e95f028b3555732d74d864dd1c"/>
+    </m2resource>
+</packager-module>
