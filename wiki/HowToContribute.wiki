@@ -11,6 +11,8 @@ For new modules, there are plenty of examples to work from. But you should alway
 Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules. *Please follow these guidelines when creating issues for new revisions:*
   # Read and understand the ModuleMaintainerGuidelines.
   # Make sure that running {{{ant repo}}} with your new files in place under {{{src/modules}}} doesn't generate any (new) warnings or errors.
+  # Make sure that running {{{ant -Dresolve.mod=foo}}} doesn't generate any errors (where "foo" is the name of your module; you can also use {{{resolve.org}}} and/or {{{resolve.rev}}})
+  # Don't forget to set the "publication" attribute to the release date of the module.
   # Include your new modules as a subversion patch file attached to the issue:
     * If the module is new, the patch should be against the boilerplate files
     * If the revision is new but the module already exists, the patch should be against the previous revision
