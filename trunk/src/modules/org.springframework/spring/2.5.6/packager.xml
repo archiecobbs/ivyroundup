@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2009 Vladimir Ritz Bossicard.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,10 +22,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/springframework/${archive}-with-docs.zip"
-      sha1="704494f2a6943522b8d95c19702cbdbf953f6e47">
+    <resource url="http://dist.springframework.org/release/SPR/${archive}-with-docs.zip"
+      sha1="876766d13b910a1ebaf6a254bff0138fb623ec8f">
         <include name="${archive}/dist/modules/**/*"/>
         <include name="${archive}/docs/api/**/*"/>
+        <include name="${archive}/dist/${name}-sources.jar"/>
     </resource>
 
     <build>
@@ -37,6 +38,10 @@
             </fileset>
             <mapper type="glob" from="spring-*.jar" to="*.jar"/>
         </move>
+
+        <!-- source -->
+        <move file="archive/${archive}/dist/spring-sources.jar"
+          tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
