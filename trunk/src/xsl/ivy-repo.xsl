@@ -217,6 +217,13 @@
 
     <!-- Copy everything else exactly -->
     <xsl:template match="@*|node()">
+
+        <!-- Avoid tab characters -->
+        <xsl:if test="contains(., '&#9;')">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'file contains tab characters; expand to spaces'"/>
+            </xsl:call-template>
+        </xsl:if>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
