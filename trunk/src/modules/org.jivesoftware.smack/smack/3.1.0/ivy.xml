@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20081120120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.igniterealtime.org/projects/smack/">
+            Smack is an Open Source XMPP (Jabber) client library for instant messaging and presence. 
+            A pure Java library, it can be embedded into your applications to create anything from 
+            a full XMPP client to simple XMPP integrations such as sending notification messages and 
+            presence-enabling devices.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Smack core classes"/>
+        <conf name="ext" extends="core" description="Core + extension classes"/>
+        <conf name="jingle" extends="core" description="Core + Jingle classes"/>
+        <conf name="debug" extends="core" description="Core + Smack debugger classes"/>
+        <conf name="default" extends="ext" description="Same as 'ext' configuration"/>
+    </configurations>
+
+    <publications>
+        <artifact name="smack" conf="core"/>
+        <artifact name="smackx" conf="ext"/>
+        <artifact name="smackx-jingle" conf="jingle"/>
+        <artifact name="smackx-debug" conf="debug"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

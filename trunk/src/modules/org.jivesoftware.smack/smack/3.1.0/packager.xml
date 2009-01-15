@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="3_1_0"/>               <!-- hard coded because of underscores -->
+    <property name="archive" value="${name}_${revision}"/>
+
+    <resource url="http://www.igniterealtime.org/downloadServlet?filename=${name}/${archive}.zip"
+      sha1="07c50b65cc3ed8cc1badac3c154ba3309203e296"/>
+    <resource url="http://www.igniterealtime.org/downloadServlet?filename=${name}/${name}_src_${revision}.zip"
+      sha1="dac9eb96248ad1e11afeb89924030ecdbf5fc5c0"/>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}" includes="*.jar"/>
+        </move>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}_src_${revision}/jingle/extension/source"/>
+            <fileset dir="archive/${name}_src_${revision}/source"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+    </build>
+</packager-module>
