@@ -27,18 +27,30 @@ When adding a new revision of an existing module, do an {{{svn copy}}} of the pr
 
 Follow these steps to regenerate the repository:
 
-  # Ensure there aren't any outstanding changes in the {{{src/}}} directory hierarchy
-  # Run {{{svn update}}} to ensure the correct generated SVN revision number
-  # Run {{{ant repo}}} to regenerate the repository.
-  # If you see any {{{*** ERROR ***}}} reports, fix the errors and try again (note: the build will not fail even if errors are reported)
-  # Run {{{svn status repo}}}. If any modules or revisions have been added since the last time the repository was regenerated, they will show up with '?' question marks. For each such directory {{{repo/modules/foo/bar}}}:
-    # Run {{{rm -rf repo/modules/foo/bar}}}
-    # Run {{{svn copy src/modules/foo/bar repo/modules/foo/bar}}}
-    # Run {{{svn propdel svn:mergeinfo repo/modules/foo/bar}}}
-  Alternately, just run this command (UNIX only):
-  {{{svn st repo/modules | grep '^\?' | awk '{print $2}' | sed -r 's/^repo\///g' | while read NAME; do rm -rf repo/$NAME; svn cp src/$NAME repo/$NAME; svn pd svn:mergeinfo repo/$NAME; done}}}
-  # If any {{{svn copy}}}ing was done in step #4, Re-run {{{ant repo}}}
-  # Finally, {{{svn commit repo}}}
+  * Ensure there aren't any outstanding changes in the {{{src/}}} directory hierarchy
+  * Run {{{svn update}}} to ensure the correct SVN revision number for the top level directory.
+  * Run {{{ant repo}}} to regenerate the repository (and record that SVN revision number in {{{modules.xml}}})
+  * If you see any {{{*** ERROR ***}}} reports, fix the errors and try again (note: the build will not fail even if errors are reported)
+  * Run {{{svn status repo}}}. If any modules or revisions have been added since the last time the repository was regenerated, they will show up with '?' question marks. For each such directory {{{repo/modules/foo/bar}}}:
+    * Run {{{rm -rf repo/modules/foo/bar}}}
+    * Run {{{svn copy src/modules/foo/bar repo/modules/foo/bar}}}
+    * Run {{{svn propdel svn:mergeinfo repo/modules/foo/bar}}}
+  Alternately, just run this shell script (UNIX only):
+{{{
+#!/bin/sh
+
+svn st repo/modules \
+  | grep '^\?' \
+  | awk '{print $2}' \
+  | sed -r 's/^repo\///g' \
+  | while read NAME; do
+    rm -rf repo/$NAME
+    svn cp src/$NAME repo/$NAME
+    svn pd svn:mergeinfo repo/$NAME
+done
+}}}
+  * If any {{{svn copy}}}ing was done in the previous step, Re-run {{{ant repo}}}
+  * Finally, {{{svn commit repo}}}
 
 == Ivy Module Definitions ({{{ivy.xml}}} files) ==
 
