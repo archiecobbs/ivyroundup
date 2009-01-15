@@ -35,6 +35,8 @@ Follow these steps to regenerate the repository:
     # Run {{{rm -rf repo/modules/foo/bar}}}
     # Run {{{svn copy src/modules/foo/bar repo/modules/foo/bar}}}
     # Run {{{svn propdel svn:mergeinfo repo/modules/foo/bar}}}
+  Alternately, just run this command (UNIX only):
+  {{{svn st repo/modules | grep '^\?' | awk '{print $2}' | sed -r 's/^repo\///g' | while read NAME; do rm -rf repo/$NAME; svn cp src/$NAME repo/$NAME; svn pd svn:mergeinfo repo/$NAME; done}}}
   # If any {{{svn copy}}}ing was done in step #4, Re-run {{{ant repo}}}
   # Finally, {{{svn commit repo}}}
 
