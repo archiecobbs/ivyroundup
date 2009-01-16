@@ -8,36 +8,42 @@
 # Bail on errors, show commands
 set -e
 
-# There should be no outstanding changes
-echo 'regenrepo: checking status of source'
-if ! [ "`svn st src | wc -c`" -eq 0 ]; then
-    echo 'regenrepo: ERROR: src/ is not clean:'
-    svn st src
-    exit 1
-fi
+# Subroutine
+regenerate_repo()
+{
+    # Regenerate repo
+    echo 'regenrepo: regenerating repository' "$1"
+    ant repo > regen.out
+
+    # Check for errors (fatal)
+    if grep -q ERROR regen.out; then
+        echo 'regenrepo: ERROR: errors found during repository generation:'
+        grep ERROR regen.out
+        rm -f regen.out
+        exit 1
+    fi
+
+    # Check for warnings (non-fatal)
+    if grep -q WARNING regen.out; then
+        echo 'regenrepo: warnings found during repository generation:'
+        grep WARNING regen.out
+    fi
+    rm -f regen.out
+}
 
 # Update to get lastest stuff
 echo 'regenrepo: updating from SVN'
 svn up
 
-# Regenerate repo
-echo 'regenrepo: regenerating repository'
-ant repo > regen.out
-
-# Check for errors (fatal)
-if grep -q ERROR regen.out; then
-    echo 'regenrepo: ERROR: errors found during repository generation:'
-    grep ERROR regen.out
-    rm -f regen.out
-    exit 1
+# There should be no outstanding changes
+echo 'regenrepo: checking status of source'
+if ! [ "`svn st src | wc -c`" -eq 0 ]; then
+    echo 'regenrepo: WARNING: src/ is not clean; do not commit generated repository:'
+    svn st src
 fi
 
-# Check for warnings (non-fatal)
-if grep -q WARNING regen.out; then
-    echo 'regenrepo: warnings found during repository generation:'
-    grep WARNING regen.out
-fi
-rm -f regen.out
+# Regenerate repo (first time)
+regenerate_repo
 
 # If there's anything new, svn copy it from source
 if svn st repo/modules | grep -q '^\?'; then
@@ -54,9 +60,9 @@ if svn st repo/modules | grep -q '^\?'; then
         svn pd svn:mergeinfo repo/$NAME
     done
 
-    # Need to regenerate
-    echo 'regenrepo: regenerating repository (again)'
-    ant repo
+    # Regenerate repo (second time)
+    regenerate_repo '(again)'
 fi
 
+# Done
 echo 'regenrepo: done'
