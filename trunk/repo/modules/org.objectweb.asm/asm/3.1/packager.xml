@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://download.forge.objectweb.org/${name}/${archive}-bin.zip" sha1="234b8e2e09796cb77265e73ce0843c1513514fea">
+    <resource url="http://download.forge.objectweb.org/${name}/${archive}-bin.zip" sha1="e74de24c337b70c53d556a27fe304f0ceed84a81">
         <include name="${archive}/lib/*.jar"/>
         <include name="${archive}/src.zip"/>
         <include name="${archive}/doc/javadoc/user/**/*"/>
