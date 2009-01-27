@@ -24,7 +24,7 @@
 
     <resource url="http://download.forge.objectweb.org/${name}/${archive}-bin.zip"
       sha1="234b8e2e09796cb77265e73ce0843c1513514fea">
-        <include name="${archive}/lib/all/${name}-all-${revision}.jar"/>
+        <include name="${archive}/lib/*.jar"/>
         <include name="${archive}/src.zip"/>
         <include name="${archive}/doc/javadoc/user/**/*"/>
     </resource>
