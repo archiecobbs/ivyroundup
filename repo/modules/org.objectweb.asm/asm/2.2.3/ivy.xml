@@ -22,21 +22,29 @@
 
     <info organisation="org.objectweb.asm" module="asm" revision="2.2.3" status="release" publication="20070606000000">
         <license name="BSD License" url="http://asm.objectweb.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 69 2008-04-10 21:13:32Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.asm/asm/2.2.3/"/>
+        <ivyauthor name="$Id: ivy.xml 461 2009-01-27 17:28:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.asm/asm/2.2.3/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://asm.objectweb.org/">
+            <p>
             ASM is an all purpose Java bytecode manipulation and
             analysis framework. It can be used to modify existing
             classes or dynamically generate classes, directly in binary
             form. Provided common transformations and analysis algorithms
             allow to easily assemble custom complex transformations and
             code analysis tools.
+            </p>
 
+            <p>
             ASM offer similar functionality as other bytecode
             frameworks, but it is focused on simplicity of use and
             performance. Because it was designed and implemented to be
             as small and as fast as possible, it makes it very attractive
-            for using in dynamic systems.
+            for using in dynamic systems<super>*</super>.
+            </p>
+
+            <p>
+            (*) ASM can of course be used in a static way too.
+            </p>
         </description>
     </info>
 
