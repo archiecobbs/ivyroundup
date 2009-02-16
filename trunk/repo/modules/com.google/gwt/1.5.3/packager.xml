@@ -20,24 +20,32 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-linux-${revision}"/>
+    <property name="archive1" value="${name}-linux-${revision}"/>
+    <property name="archive2" value="${name}-windows-${revision}"/>
+    <property name="archive3" value="${name}-mac-${revision}"/>
 
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive}.tar.bz2" sha1="5d7d3295cef4d0eb06a991138e9f538409146027">
-        <include name="${archive}/*.jar"/>
-        <include name="${archive}/doc/javadoc/**/*"/>
+    <resource url="http://google-web-toolkit.googlecode.com/files/${archive1}.tar.bz2" sha1="5d7d3295cef4d0eb06a991138e9f538409146027">
+        <include name="${archive1}/*.jar"/>
+        <include name="${archive1}/doc/javadoc/**/*"/>
+    </resource>
+    <resource url="http://google-web-toolkit.googlecode.com/files/${archive2}.zip" sha1="8db182ea463cd842cf2ffa667c4e588addd4e00b">
+        <include name="${archive2}/gwt-dev-windows.jar"/>
+    </resource>
+    <resource url="http://google-web-toolkit.googlecode.com/files/${archive3}.tar.gz" sha1="542be28e0bacbe3b9d2e70c3fc61a4cc90d89914">
+        <include name="${archive3}/gwt-dev-mac.jar"/>
     </resource>
 
     <build>
         <!-- jars -->
         <move todir="artifacts/jars">
-            <fileset dir="archive/${archive}">
-                <include name="*.jar"/>
-            </fileset>
+            <fileset dir="archive/${archive1}" includes="*.jar"/>
+            <fileset dir="archive/${archive2}" includes="*.jar"/>
+            <fileset dir="archive/${archive3}" includes="*.jar"/>
         </move>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/javadoc"/>
+            <fileset dir="archive/${archive1}/doc/javadoc"/>
         </zip>
     </build>
 </packager-module>
