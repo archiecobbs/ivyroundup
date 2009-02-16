@@ -22,7 +22,7 @@
 
     <info organisation="com.google" module="gwt" revision="1.5.3" status="milestone" publication="20081016120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 327 2008-12-12 16:41:43Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/gwt/1.5.3/"/>
+        <ivyauthor name="$Id: ivy.xml 467 2009-02-16 20:30:16Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/gwt/1.5.3/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/webtoolkit/">
 
@@ -69,17 +69,24 @@
     </info>
 
     <configurations>
-        <conf name="default" description="Development and runtime JARs (combining compile and runtime)"/>
-        <conf name="compile" description="JARs needed to compile GWT apps"/>
+        <conf name="default" description="Development and runtime JARs (combining compile and runtime) on Linux"/>
+        <conf name="linux" extends="default" description="Development and runtime JARs (combining compile and runtime) on Linux"/>
+        <conf name="windows" description="Development and runtime JARs (combining compile and runtime) on Windows"/>
+        <conf name="mac" description="Development and runtime JARs (combining compile and runtime) on Mac"/>
+        <conf name="compile" description="JARs needed to compile GWT apps on Linux"/>
+        <conf name="compile-windows" description="JARs needed to compile GWT apps on Windows"/>
+        <conf name="compile-mac" description="JARs needed to compile GWT apps on Mac"/>
         <conf name="runtime" description="JARs needed for server-side runtime support for GWT RPC"/>
         <conf name="benchmark-viewer" description="Benchmark viewer support"/>
     </configurations>
 
     <publications>
         <artifact name="gwt-benchmark-viewer" conf="benchmark-viewer"/>
-        <artifact name="gwt-dev-linux" conf="default,compile"/>
+        <artifact name="gwt-dev-linux" conf="default,linux,compile"/>
+        <artifact name="gwt-dev-windows" conf="windows,compile-windows"/>
+        <artifact name="gwt-dev-mac" conf="mac,compile-mac"/>
         <artifact name="gwt-servlet" conf="runtime"/>
-        <artifact name="gwt-user" conf="default,compile"/>
+        <artifact name="gwt-user" conf="default,linux,windows,mac,compile,compile-windows,compile-mac"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
