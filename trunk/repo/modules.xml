@@ -1,79 +1,22 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-02-20 09:29:34 UTC</timestamp>
-  <svnRevision>474</svnRevision>
-  <org name="org.apache.commons">
-    <mod name="commons-codec">
-      <rev name="1.3"/>
-    </mod>
-    <mod name="commons-logging">
-      <rev name="1.0.3"/>
+  <timestamp>2009-02-20 20:36:45 UTC</timestamp>
+  <svnRevision>478</svnRevision>
+  <org name="com.google">
+    <mod name="guice">
       <rev name="1.0"/>
-      <rev name="1.0.4"/>
-      <rev name="1.1"/>
-      <rev name="1.0.2"/>
-      <rev name="1.1.1"/>
-      <rev name="1.0.1"/>
     </mod>
-    <mod name="commons-beanutils">
-      <rev name="1.8.0"/>
-      <rev name="1.7.0"/>
-    </mod>
-    <mod name="commons-httpclient">
-      <rev name="3.1"/>
-      <rev name="3.0.1"/>
-    </mod>
-    <mod name="commons-lang">
-      <rev name="2.4"/>
-    </mod>
-    <mod name="commons-cli">
-      <rev name="1.1"/>
-    </mod>
-    <mod name="commons-collections">
-      <rev name="3.2"/>
-      <rev name="2.1.1"/>
-    </mod>
-    <mod name="commons-email">
-      <rev name="1.1"/>
-    </mod>
-    <mod name="commons-fileupload">
-      <rev name="1.2"/>
-    </mod>
-    <mod name="commons-pool">
-      <rev name="1.3"/>
-      <rev name="1.4"/>
-    </mod>
-    <mod name="commons-digester">
-      <rev name="1.6"/>
-      <rev name="1.4.1"/>
-      <rev name="1.8.1"/>
-      <rev name="1.7"/>
-      <rev name="1.8"/>
-      <rev name="1.5"/>
-      <rev name="2.0"/>
-    </mod>
-    <mod name="commons-io">
-      <rev name="1.4"/>
-    </mod>
-    <mod name="commons-dbcp">
-      <rev name="1.2.2"/>
-      <rev name="1.2.1"/>
-      <rev name="1.1"/>
-      <rev name="1.2"/>
+    <mod name="gwt">
+      <rev name="1.4.60"/>
+      <rev name="1.4.62"/>
+      <rev name="1.5.2"/>
+      <rev name="1.5.3"/>
+      <rev name="1.5m2"/>
     </mod>
   </org>
-  <org name="org.testng">
-    <mod name="testng">
-      <rev name="5.7"/>
-      <rev name="5.8"/>
-    </mod>
-  </org>
-  <org name="org.tigris.subclipse">
-    <mod name="svnant">
-      <rev name="1.2.1"/>
-    </mod>
-    <mod name="svn-client-adapter">
-      <rev name="0.9.4"/>
+  <org name="com.mysql">
+    <mod name="mysql-connector-java">
+      <rev name="5.1.6"/>
     </mod>
   </org>
   <org name="com.opensymphony">
@@ -81,23 +24,40 @@
       <rev name="2.4.1"/>
     </mod>
   </org>
-  <org name="org.apache.xerces">
-    <mod name="xerces">
-      <rev name="2.5.0"/>
-      <rev name="2.6.2"/>
-      <rev name="2.7.1"/>
-      <rev name="2.9.1"/>
-      <rev name="2.8.1"/>
+  <org name="com.puppycrawl">
+    <mod name="checkstyle">
+      <rev name="4.4"/>
     </mod>
   </org>
-  <org name="net.sourceforge.gwt-widget">
-    <mod name="gwt-sl">
-      <rev name="0.1.4e"/>
+  <org name="com.sleepycat">
+    <mod name="berkeley-db-java">
+      <rev name="3.3.75"/>
     </mod>
   </org>
-  <org name="net.sourceforge.jtidy">
-    <mod name="jtidy">
-      <rev name="8.0.20060801.131059"/>
+  <org name="com.svnkit">
+    <mod name="svnkit">
+      <rev name="1.2.1"/>
+      <rev name="1.2.2"/>
+    </mod>
+  </org>
+  <org name="com.xerox.amazonws">
+    <mod name="typica">
+      <rev name="1.3"/>
+    </mod>
+  </org>
+  <org name="dk.contix.ant">
+    <mod name="ant-gwt">
+      <rev name="1.1.2"/>
+    </mod>
+  </org>
+  <org name="javax.activation">
+    <mod name="jaf">
+      <rev name="1.1.1"/>
+    </mod>
+  </org>
+  <org name="javax.jms">
+    <mod name="jms">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="javax.mail">
@@ -105,23 +65,20 @@
       <rev name="1.4.1"/>
     </mod>
   </org>
-  <org name="org.antlr">
-    <mod name="antlr">
-      <rev name="3.1.1"/>
-      <rev name="2.7.7"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.cobertura">
-    <mod name="cobertura">
-      <rev name="1.9"/>
-    </mod>
-  </org>
   <org name="javax.management">
+    <mod name="jmx">
+      <rev name="1.2.1"/>
+    </mod>
     <mod name="jmxremote">
       <rev name="1.0.1_04"/>
     </mod>
-    <mod name="jmx">
-      <rev name="1.2.1"/>
+  </org>
+  <org name="javax.servlet">
+    <mod name="servletapi">
+      <rev name="2.2"/>
+      <rev name="2.3"/>
+      <rev name="2.4"/>
+      <rev name="2.5"/>
     </mod>
   </org>
   <org name="javax.transaction">
@@ -129,51 +86,11 @@
       <rev name="1.1"/>
     </mod>
   </org>
-  <org name="org.jets3t">
-    <mod name="jets3t">
-      <rev name="0.6.0"/>
-    </mod>
-  </org>
-  <org name="org.mockito">
-    <mod name="mockito">
-      <rev name="1.6"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.supercsv">
-    <mod name="supercsv">
-      <rev name="1.52"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.htmlparser">
-    <mod name="htmlparser">
-      <rev name="1.6"/>
-    </mod>
-  </org>
-  <org name="net.tanesha.recaptcha">
-    <mod name="recaptcha4j">
-      <rev name="0.0.7"/>
-    </mod>
-  </org>
-  <org name="org.mozilla">
-    <mod name="rhino">
-      <rev name="1.7R1"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.dozer">
-    <mod name="dozer">
-      <rev name="4.2"/>
-    </mod>
-  </org>
   <org name="javax.xml.bind">
     <mod name="jaxb">
       <rev name="2.1.7"/>
-      <rev name="2.1.9"/>
       <rev name="2.1.8"/>
-    </mod>
-  </org>
-  <org name="org.aopalliance">
-    <mod name="aopalliance">
-      <rev name="1.0"/>
+      <rev name="2.1.9"/>
     </mod>
   </org>
   <org name="javax.xml.soap">
@@ -181,12 +98,60 @@
       <rev name="1.3"/>
     </mod>
   </org>
-  <org name="javax.servlet">
-    <mod name="servletapi">
-      <rev name="2.5"/>
-      <rev name="2.3"/>
-      <rev name="2.4"/>
-      <rev name="2.2"/>
+  <org name="javax.xml.stream">
+    <mod name="sjsxp">
+      <rev name="1.0.1"/>
+    </mod>
+  </org>
+  <org name="net.java.dev.jna">
+    <mod name="jna">
+      <rev name="3.0.9"/>
+    </mod>
+  </org>
+  <org name="net.miginfocom">
+    <mod name="miglayout">
+      <rev name="3.6.2"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.c3p0">
+    <mod name="c3p0">
+      <rev name="0.9.1.2"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.cglib">
+    <mod name="cglib">
+      <rev name="2.1.3"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.cobertura">
+    <mod name="cobertura">
+      <rev name="1.9"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.dozer">
+    <mod name="dozer">
+      <rev name="4.2"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.ehcache">
+    <mod name="ehcache">
+      <rev name="1.2.3"/>
+      <rev name="1.4.1"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.freemarker">
+    <mod name="freemarker">
+      <rev name="2.3.13"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.gwt-widget">
+    <mod name="gwt-sl">
+      <rev name="0.1.4e"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.htmlparser">
+    <mod name="htmlparser">
+      <rev name="1.6"/>
     </mod>
   </org>
   <org name="net.sourceforge.itext">
@@ -195,56 +160,29 @@
       <rev name="2.1.4"/>
     </mod>
   </org>
-  <org name="org.slf4j">
-    <mod name="slf4j">
-      <rev name="1.4.3"/>
-      <rev name="1.5.1"/>
-      <rev name="1.5.6"/>
-      <rev name="1.4.0"/>
-      <rev name="1.3.0"/>
-      <rev name="1.3.1"/>
-      <rev name="1.4.1"/>
-      <rev name="1.5.0"/>
-      <rev name="1.1.0"/>
-      <rev name="1.0"/>
-      <rev name="1.5.4"/>
-      <rev name="1.4.2"/>
-      <rev name="1.5.3"/>
-      <rev name="1.5.5"/>
-      <rev name="1.2"/>
-      <rev name="1.5.2"/>
-    </mod>
-  </org>
-  <org name="org.apache.ant">
-    <mod name="ant">
-      <rev name="1.7.1"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.c3p0">
-    <mod name="c3p0">
-      <rev name="0.9.1.2"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.freemarker">
-    <mod name="freemarker">
-      <rev name="2.3.13"/>
-    </mod>
-  </org>
-  <org name="org.aspectj">
-    <mod name="aspectj">
-      <rev name="1.5.4"/>
-      <rev name="1.6.1"/>
-      <rev name="1.6.0"/>
-    </mod>
-  </org>
   <org name="net.sourceforge.jsr107cache">
     <mod name="jsr107cache">
       <rev name="1.0"/>
     </mod>
   </org>
-  <org name="com.sleepycat">
-    <mod name="berkeley-db-java">
-      <rev name="3.3.75"/>
+  <org name="net.sourceforge.jtidy">
+    <mod name="jtidy">
+      <rev name="8.0.20060801.131059"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.opencsv">
+    <mod name="opencsv">
+      <rev name="1.8"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.proxool">
+    <mod name="proxool">
+      <rev name="0.9.0RC3"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.supercsv">
+    <mod name="supercsv">
+      <rev name="1.52"/>
     </mod>
   </org>
   <org name="net.sourceforge.swarmcache">
@@ -252,50 +190,100 @@
       <rev name="1.0RC2"/>
     </mod>
   </org>
-  <org name="org.jgroups">
-    <mod name="jgroups">
-      <rev name="2.6.2"/>
+  <org name="net.tanesha.recaptcha">
+    <mod name="recaptcha4j">
+      <rev name="0.0.7"/>
     </mod>
   </org>
-  <org name="org.junit">
-    <mod name="junit">
-      <rev name="4.5"/>
-      <rev name="3.8.2"/>
+  <org name="org.antlr">
+    <mod name="antlr">
+      <rev name="2.7.7"/>
+      <rev name="3.1.1"/>
     </mod>
   </org>
-  <org name="javax.xml.stream">
-    <mod name="sjsxp">
-      <rev name="1.0.1"/>
+  <org name="org.aopalliance">
+    <mod name="aopalliance">
+      <rev name="1.0"/>
     </mod>
   </org>
-  <org name="org.dom4j">
-    <mod name="dom4j">
-      <rev name="1.6.1"/>
+  <org name="org.apache.ant">
+    <mod name="ant">
+      <rev name="1.7.1"/>
     </mod>
   </org>
-  <org name="dk.contix.ant">
-    <mod name="ant-gwt">
-      <rev name="1.1.2"/>
+  <org name="org.apache.commons">
+    <mod name="commons-beanutils">
+      <rev name="1.7.0"/>
+      <rev name="1.8.0"/>
     </mod>
-  </org>
-  <org name="javax.jms">
-    <mod name="jms">
+    <mod name="commons-cli">
       <rev name="1.1"/>
     </mod>
-  </org>
-  <org name="org.apache.xmlgraphics">
-    <mod name="batik">
+    <mod name="commons-codec">
+      <rev name="1.3"/>
+    </mod>
+    <mod name="commons-collections">
+      <rev name="2.1.1"/>
+      <rev name="3.2"/>
+    </mod>
+    <mod name="commons-dbcp">
+      <rev name="1.1"/>
+      <rev name="1.2.1"/>
+      <rev name="1.2.2"/>
+      <rev name="1.2"/>
+    </mod>
+    <mod name="commons-digester">
+      <rev name="1.4.1"/>
+      <rev name="1.5"/>
+      <rev name="1.6"/>
       <rev name="1.7"/>
+      <rev name="1.8.1"/>
+      <rev name="1.8"/>
+      <rev name="2.0"/>
     </mod>
-  </org>
-  <org name="org.openxri">
-    <mod name="openxri">
+    <mod name="commons-email">
+      <rev name="1.1"/>
+    </mod>
+    <mod name="commons-fileupload">
+      <rev name="1.2"/>
+    </mod>
+    <mod name="commons-httpclient">
+      <rev name="3.0.1"/>
+      <rev name="3.1"/>
+    </mod>
+    <mod name="commons-io">
+      <rev name="1.4"/>
+    </mod>
+    <mod name="commons-lang">
+      <rev name="2.4"/>
+    </mod>
+    <mod name="commons-logging">
       <rev name="1.0.1"/>
+      <rev name="1.0.2"/>
+      <rev name="1.0.3"/>
+      <rev name="1.0.4"/>
+      <rev name="1.0"/>
+      <rev name="1.1.1"/>
+      <rev name="1.1"/>
+    </mod>
+    <mod name="commons-pool">
+      <rev name="1.3"/>
+      <rev name="1.4"/>
     </mod>
   </org>
-  <org name="org.javacc">
-    <mod name="javacc">
-      <rev name="4.2"/>
+  <org name="org.apache.log4j">
+    <mod name="log4j">
+      <rev name="1.2.15"/>
+    </mod>
+  </org>
+  <org name="org.apache.lucene">
+    <mod name="lucene">
+      <rev name="2.4.0"/>
+    </mod>
+  </org>
+  <org name="org.apache.oro">
+    <mod name="oro">
+      <rev name="2.0.8"/>
     </mod>
   </org>
   <org name="org.apache.ws.commons">
@@ -303,44 +291,18 @@
       <rev name="1.4.3"/>
     </mod>
   </org>
-  <org name="org.jivesoftware.smack">
-    <mod name="smack">
-      <rev name="3.1.0"/>
+  <org name="org.apache.ws">
+    <mod name="xmlrpc">
+      <rev name="3.1.1"/>
     </mod>
   </org>
-  <org name="org.jboss">
-    <mod name="javassist">
-      <rev name="3.6.0"/>
-      <rev name="3.8.1"/>
-      <rev name="3.8.0"/>
-      <rev name="3.9.0"/>
-      <rev name="3.7.0"/>
-      <rev name="3.4.0"/>
-    </mod>
-  </org>
-  <org name="net.java.dev.jna">
-    <mod name="jna">
-      <rev name="3.0.9"/>
-    </mod>
-  </org>
-  <org name="org.codehaus.groovy">
-    <mod name="groovy">
-      <rev name="1.5.7"/>
-    </mod>
-  </org>
-  <org name="com.puppycrawl">
-    <mod name="checkstyle">
-      <rev name="4.4"/>
-    </mod>
-  </org>
-  <org name="org.openid4java">
-    <mod name="openid4java">
-      <rev name="0.9.4.339"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.proxool">
-    <mod name="proxool">
-      <rev name="0.9.0RC3"/>
+  <org name="org.apache.xerces">
+    <mod name="xerces">
+      <rev name="2.5.0"/>
+      <rev name="2.6.2"/>
+      <rev name="2.7.1"/>
+      <rev name="2.8.1"/>
+      <rev name="2.9.1"/>
     </mod>
   </org>
   <org name="org.apache.xml">
@@ -351,55 +313,48 @@
       <rev name="1.4.1"/>
     </mod>
   </org>
+  <org name="org.apache.xmlgraphics">
+    <mod name="batik">
+      <rev name="1.7"/>
+    </mod>
+  </org>
+  <org name="org.aspectj">
+    <mod name="aspectj">
+      <rev name="1.5.4"/>
+      <rev name="1.6.0"/>
+      <rev name="1.6.1"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.groovy">
+    <mod name="groovy">
+      <rev name="1.5.7"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.jaxen">
+    <mod name="jaxen">
+      <rev name="1.1.1"/>
+    </mod>
+  </org>
+  <org name="org.dom4j">
+    <mod name="dom4j">
+      <rev name="1.6.1"/>
+    </mod>
+  </org>
   <org name="org.hamcrest">
     <mod name="hamcrest">
       <rev name="1.1"/>
     </mod>
   </org>
-  <org name="org.apache.ws">
-    <mod name="xmlrpc">
-      <rev name="3.1.1"/>
-    </mod>
-  </org>
-  <org name="com.svnkit">
-    <mod name="svnkit">
-      <rev name="1.2.2"/>
-      <rev name="1.2.1"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.opencsv">
-    <mod name="opencsv">
-      <rev name="1.8"/>
-    </mod>
-  </org>
-  <org name="com.google">
-    <mod name="gwt">
-      <rev name="1.4.60"/>
-      <rev name="1.5m2"/>
-      <rev name="1.5.3"/>
-      <rev name="1.4.62"/>
-      <rev name="1.5.2"/>
-    </mod>
-    <mod name="guice">
-      <rev name="1.0"/>
-    </mod>
-  </org>
-  <org name="org.apache.lucene">
-    <mod name="lucene">
-      <rev name="2.4.0"/>
-    </mod>
-  </org>
-  <org name="net.miginfocom">
-    <mod name="miglayout">
-      <rev name="3.6.2"/>
-    </mod>
-  </org>
-  <org name="com.xerox.amazonws">
-    <mod name="typica">
-      <rev name="1.3"/>
-    </mod>
-  </org>
   <org name="org.hibernate">
+    <mod name="hibernate-annotations">
+      <rev name="3.3.1"/>
+    </mod>
+    <mod name="hibernate-commons-annotations">
+      <rev name="3.0.0"/>
+    </mod>
+    <mod name="hibernate-entitymanager">
+      <rev name="3.3.2"/>
+    </mod>
     <mod name="hibernate-tools">
       <rev name="3.2.2.Beta1"/>
     </mod>
@@ -409,124 +364,69 @@
     <mod name="hibernate">
       <rev name="3.2.6"/>
     </mod>
-    <mod name="hibernate-commons-annotations">
-      <rev name="3.0.0"/>
-    </mod>
-    <mod name="hibernate-annotations">
-      <rev name="3.3.1"/>
-    </mod>
-    <mod name="hibernate-entitymanager">
-      <rev name="3.3.2"/>
+  </org>
+  <org name="org.javacc">
+    <mod name="javacc">
+      <rev name="4.2"/>
     </mod>
   </org>
-  <org name="javax.activation">
-    <mod name="jaf">
-      <rev name="1.1.1"/>
+  <org name="org.jboss">
+    <mod name="javassist">
+      <rev name="3.4.0"/>
+      <rev name="3.6.0"/>
+      <rev name="3.7.0"/>
+      <rev name="3.8.0"/>
+      <rev name="3.8.1"/>
+      <rev name="3.9.0"/>
     </mod>
   </org>
-  <org name="com.mysql">
-    <mod name="mysql-connector-java">
-      <rev name="5.1.6"/>
-    </mod>
-  </org>
-  <org name="org.apache.oro">
-    <mod name="oro">
-      <rev name="2.0.8"/>
-    </mod>
-  </org>
-  <org name="net.sourceforge.cglib">
-    <mod name="cglib">
-      <rev name="2.1.3"/>
-    </mod>
-  </org>
-  <org name="org.apache.log4j">
-    <mod name="log4j">
-      <rev name="1.2.15"/>
-    </mod>
-  </org>
-  <org name="org.objenesis">
-    <mod name="objenesis">
-      <rev name="1.0"/>
-      <rev name="1.1"/>
-    </mod>
-  </org>
-  <org name="org.springframework">
-    <mod name="spring-ws">
-      <rev name="1.5.5"/>
-    </mod>
-    <mod name="spring-security">
-      <rev name="2.0.4"/>
-      <rev name="2.0.3"/>
-      <rev name="2.0.1"/>
-    </mod>
-    <mod name="spring">
-      <rev name="2.5.3"/>
-      <rev name="2.5.4"/>
-      <rev name="2.5.6"/>
-    </mod>
-    <mod name="spring-integration">
-      <rev name="1.0.1"/>
-    </mod>
-  </org>
-  <org name="org.codehaus.jaxen">
-    <mod name="jaxen">
-      <rev name="1.1.1"/>
-    </mod>
-  </org>
-  <org name="org.tigris.subversion">
-    <mod name="javahl">
-      <rev name="1.5.5"/>
-    </mod>
-  </org>
-  <org name="org.objectweb.asm">
-    <mod name="asm">
-      <rev name="3.1"/>
-      <rev name="1.5.3"/>
-      <rev name="2.2.3"/>
-    </mod>
-  </org>
-  <org name="org.mortbay">
-    <mod name="jetty">
-      <rev name="6.1.9"/>
+  <org name="org.jets3t">
+    <mod name="jets3t">
+      <rev name="0.6.0"/>
     </mod>
   </org>
   <org name="org.jfree">
     <mod name="jcommon">
-      <rev name="1.0.12"/>
-      <rev name="1.0.9"/>
-      <rev name="1.0.6"/>
-      <rev name="1.0.13"/>
-      <rev name="1.0.7"/>
       <rev name="1.0.0"/>
+      <rev name="1.0.1"/>
+      <rev name="1.0.10"/>
+      <rev name="1.0.11"/>
+      <rev name="1.0.12"/>
+      <rev name="1.0.13"/>
+      <rev name="1.0.14"/>
+      <rev name="1.0.15"/>
+      <rev name="1.0.2"/>
       <rev name="1.0.3"/>
       <rev name="1.0.4"/>
-      <rev name="1.0.10"/>
-      <rev name="1.0.15"/>
       <rev name="1.0.5"/>
-      <rev name="1.0.14"/>
-      <rev name="1.0.2"/>
-      <rev name="1.0.11"/>
+      <rev name="1.0.6"/>
+      <rev name="1.0.7"/>
       <rev name="1.0.8"/>
-      <rev name="1.0.1"/>
+      <rev name="1.0.9"/>
     </mod>
     <mod name="jfreechart">
-      <rev name="1.0.12"/>
-      <rev name="1.0.9"/>
-      <rev name="1.0.6"/>
-      <rev name="1.0.7"/>
       <rev name="1.0.0"/>
+      <rev name="1.0.10"/>
+      <rev name="1.0.11"/>
+      <rev name="1.0.12"/>
+      <rev name="1.0.2"/>
       <rev name="1.0.3"/>
       <rev name="1.0.4"/>
-      <rev name="1.0.10"/>
       <rev name="1.0.5"/>
-      <rev name="1.0.2"/>
-      <rev name="1.0.11"/>
+      <rev name="1.0.6"/>
+      <rev name="1.0.7"/>
       <rev name="1.0.8"/>
+      <rev name="1.0.9"/>
     </mod>
   </org>
-  <org name="org.restlet">
-    <mod name="restlet">
-      <rev name="1.1.1"/>
+  <org name="org.jgroups">
+    <mod name="jgroups">
+      <rev name="2.6.2"/>
+    </mod>
+  </org>
+  <org name="org.jivesoftware.smack">
+    <mod name="smack">
+      <rev name="3.1.0"/>
     </mod>
   </org>
   <org name="org.jruby">
@@ -535,10 +435,110 @@
       <rev name="1.1.6"/>
     </mod>
   </org>
-  <org name="net.sourceforge.ehcache">
-    <mod name="ehcache">
+  <org name="org.junit">
+    <mod name="junit">
+      <rev name="3.8.2"/>
+      <rev name="4.5"/>
+    </mod>
+  </org>
+  <org name="org.mockito">
+    <mod name="mockito">
+      <rev name="1.6"/>
+    </mod>
+  </org>
+  <org name="org.mortbay">
+    <mod name="jetty">
+      <rev name="6.1.9"/>
+    </mod>
+  </org>
+  <org name="org.mozilla">
+    <mod name="rhino">
+      <rev name="1.7R1"/>
+    </mod>
+  </org>
+  <org name="org.objectweb.asm">
+    <mod name="asm">
+      <rev name="1.5.3"/>
+      <rev name="2.2.3"/>
+      <rev name="3.1"/>
+    </mod>
+  </org>
+  <org name="org.objenesis">
+    <mod name="objenesis">
+      <rev name="1.0"/>
+      <rev name="1.1"/>
+    </mod>
+  </org>
+  <org name="org.openid4java">
+    <mod name="openid4java">
+      <rev name="0.9.4.339"/>
+    </mod>
+  </org>
+  <org name="org.openxri">
+    <mod name="openxri">
+      <rev name="1.0.1"/>
+    </mod>
+  </org>
+  <org name="org.restlet">
+    <mod name="restlet">
+      <rev name="1.1.1"/>
+    </mod>
+  </org>
+  <org name="org.slf4j">
+    <mod name="slf4j">
+      <rev name="1.0"/>
+      <rev name="1.1.0"/>
+      <rev name="1.2"/>
+      <rev name="1.3.0"/>
+      <rev name="1.3.1"/>
+      <rev name="1.4.0"/>
       <rev name="1.4.1"/>
-      <rev name="1.2.3"/>
+      <rev name="1.4.2"/>
+      <rev name="1.4.3"/>
+      <rev name="1.5.0"/>
+      <rev name="1.5.1"/>
+      <rev name="1.5.2"/>
+      <rev name="1.5.3"/>
+      <rev name="1.5.4"/>
+      <rev name="1.5.5"/>
+      <rev name="1.5.6"/>
+    </mod>
+  </org>
+  <org name="org.springframework">
+    <mod name="spring-integration">
+      <rev name="1.0.1"/>
+    </mod>
+    <mod name="spring-security">
+      <rev name="2.0.1"/>
+      <rev name="2.0.3"/>
+      <rev name="2.0.4"/>
+    </mod>
+    <mod name="spring-ws">
+      <rev name="1.5.5"/>
+    </mod>
+    <mod name="spring">
+      <rev name="2.5.3"/>
+      <rev name="2.5.4"/>
+      <rev name="2.5.6"/>
+    </mod>
+  </org>
+  <org name="org.testng">
+    <mod name="testng">
+      <rev name="5.7"/>
+      <rev name="5.8"/>
+    </mod>
+  </org>
+  <org name="org.tigris.subclipse">
+    <mod name="svn-client-adapter">
+      <rev name="0.9.4"/>
+    </mod>
+    <mod name="svnant">
+      <rev name="1.2.1"/>
+    </mod>
+  </org>
+  <org name="org.tigris.subversion">
+    <mod name="javahl">
+      <rev name="1.5.5"/>
     </mod>
   </org>
 </modules>
