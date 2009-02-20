@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20081001000000">
+        <license name="Public Domain" url="http://www.antlr2.org/license.html"/>
+        <description homepage="http://www.antlr.org/">
+            ANTLR, ANother Tool for Language Recognition, (formerly
+            PCCTS) is a language tool that provides a framework for
+            constructing recognizers, compilers, and translators
+            from grammatical descriptions containing Java, C#, C++,
+            or Python actions. ANTLR provides excellent support for
+            tree construction, tree walking, and translation. There are
+            currently about 5,000 ANTLR source downloads a month.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default"/>
+        <conf name="runtime" description="include Java runtime only"/>
+    </configurations>
+
+    <publications>
+        <artifact name="antlr" conf="default"/>
+        <artifact name="source" type="source" ext="zip" conf="default"/>
+        <artifact name="antlr-runtime" conf="runtime"/>
+        <artifact name="source-runtime" type="source" ext="zip" conf="runtime"/>
+    </publications>
+
+</ivy-module>
