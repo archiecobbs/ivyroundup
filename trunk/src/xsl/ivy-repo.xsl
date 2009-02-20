@@ -62,7 +62,7 @@
         <xsl:value-of select="'&#10;'"/>
         <xsl:copy>
             <!-- Add version and xsi:noNamespaceSchemaLocation attributes -->
-            <xsl:attribute name="version">1.3</xsl:attribute>
+            <xsl:attribute name="version">2.0</xsl:attribute>
             <xsl:attribute name="xsi:noNamespaceSchemaLocation">../../../../xsd/ivy.xsd</xsl:attribute>
             <xsl:apply-templates select="@*[name() != 'rev']|node()"/>
         </xsl:copy>
