@@ -43,6 +43,24 @@
             <fileset dir="archive/${archive3}" includes="*.jar"/>
         </move>
 
+        <!-- linux SWT native libs -->
+        <mkdir dir="artifacts/sos"/>
+        <move todir="artifacts/sos">
+            <fileset dir="archive/${archive1}" includes="*.so"/>
+        </move>
+
+        <!-- windows SWT native libs -->
+        <mkdir dir="artifacts/dlls"/>
+        <move todir="artifacts/dlls">
+            <fileset dir="archive/${archive2}" includes="*.dll"/>
+        </move>
+
+        <!-- mac SWT native libs -->
+        <mkdir dir="artifacts/jnilibs"/>
+        <move todir="artifacts/jnilibs">
+            <fileset dir="archive/${archive3}" includes="*.jnilib"/>
+        </move>
+
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
             <fileset dir="archive/${archive1}/doc/javadoc"/>
