@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-02-23 22:45:01 UTC</timestamp>
-  <svnRevision>482</svnRevision>
+  <timestamp>2009-02-24 20:53:26 UTC</timestamp>
+  <svnRevision>484</svnRevision>
   <org name="com.google">
     <mod name="guice">
       <rev name="1.0"/>
@@ -17,6 +17,7 @@
   <org name="com.mysql">
     <mod name="mysql-connector-java">
       <rev name="5.1.6"/>
+      <rev name="5.1.7"/>
     </mod>
   </org>
   <org name="com.opensymphony">
@@ -305,17 +306,17 @@
       <rev name="2.9.1"/>
     </mod>
   </org>
+  <org name="org.apache.xmlgraphics">
+    <mod name="batik">
+      <rev name="1.7"/>
+    </mod>
+  </org>
   <org name="org.apache.xml">
     <mod name="xalan-j">
       <rev name="2.7.1"/>
     </mod>
     <mod name="xml-security">
       <rev name="1.4.1"/>
-    </mod>
-  </org>
-  <org name="org.apache.xmlgraphics">
-    <mod name="batik">
-      <rev name="1.7"/>
     </mod>
   </org>
   <org name="org.aspectj">
@@ -346,6 +347,9 @@
     </mod>
   </org>
   <org name="org.hibernate">
+    <mod name="hibernate">
+      <rev name="3.2.6"/>
+    </mod>
     <mod name="hibernate-annotations">
       <rev name="3.3.1"/>
     </mod>
@@ -360,9 +364,6 @@
     </mod>
     <mod name="hibernate-validator">
       <rev name="3.0.0"/>
-    </mod>
-    <mod name="hibernate">
-      <rev name="3.2.6"/>
     </mod>
   </org>
   <org name="org.javacc">
@@ -388,13 +389,13 @@
   <org name="org.jfree">
     <mod name="jcommon">
       <rev name="1.0.0"/>
-      <rev name="1.0.1"/>
       <rev name="1.0.10"/>
       <rev name="1.0.11"/>
       <rev name="1.0.12"/>
       <rev name="1.0.13"/>
       <rev name="1.0.14"/>
       <rev name="1.0.15"/>
+      <rev name="1.0.1"/>
       <rev name="1.0.2"/>
       <rev name="1.0.3"/>
       <rev name="1.0.4"/>
@@ -505,6 +506,11 @@
     </mod>
   </org>
   <org name="org.springframework">
+    <mod name="spring">
+      <rev name="2.5.3"/>
+      <rev name="2.5.4"/>
+      <rev name="2.5.6"/>
+    </mod>
     <mod name="spring-integration">
       <rev name="1.0.1"/>
     </mod>
@@ -516,11 +522,6 @@
     <mod name="spring-ws">
       <rev name="1.5.5"/>
     </mod>
-    <mod name="spring">
-      <rev name="2.5.3"/>
-      <rev name="2.5.4"/>
-      <rev name="2.5.6"/>
-    </mod>
   </org>
   <org name="org.testng">
     <mod name="testng">
@@ -529,11 +530,11 @@
     </mod>
   </org>
   <org name="org.tigris.subclipse">
-    <mod name="svn-client-adapter">
-      <rev name="0.9.4"/>
-    </mod>
     <mod name="svnant">
       <rev name="1.2.1"/>
+    </mod>
+    <mod name="svn-client-adapter">
+      <rev name="0.9.4"/>
     </mod>
   </org>
   <org name="org.tigris.subversion">
