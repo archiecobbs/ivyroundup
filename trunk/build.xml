@@ -89,7 +89,7 @@
         <exec executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
             <arg value="TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'` ;
-              export LC_ALL=C
+              export LC_ALL=C;
               find src/modules -name ivy.xml -print
                 | sort
                 | awk -F/ -v SVNREV=${svn.revision} -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
