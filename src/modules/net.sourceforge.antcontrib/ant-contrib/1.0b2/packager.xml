@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.tar.bz2"
+      sha1="4211a6048166ae8de7bec0fecf0e39415c7e3976"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.tar.bz2"
+      sha1="b93f62923922d9ec718239e4ecb3c1677c14a125"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${name}/lib/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/src" includes="net/**/*"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${name}/docs/api"/>
+        </zip>
+    </build>
+</packager-module>
