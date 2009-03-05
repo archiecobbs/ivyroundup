@@ -12,6 +12,6 @@ To use the Ivy !RoundUp repository, simply define a "packager" resolver in your 
 }}}
 
 A couple of notes about the above configuration:
-  * You can use any directory you want for the temporary builds; this example uses {{{${user.home}/.ivy2/packager/build}}}. You may prefer another directory, e.g., {{{${java.io.tmpdir}/ivypackager-${user.home}}}}. However, you must specify _some_ location.
+  * You can use any directory you want for the temporary builds; this example uses {{{${user.home}/.ivy2/packager/build}}}. You may prefer another directory, e.g., {{{${java.io.tmpdir}/ivypackager-${user.name}}}}. However, you must specify _some_ location.
   * Downloaded resources will be cached in {{{${user.home}/.ivy2/packager/cache}}}; if you don't want this, remove the {{{resourceCache}}} attribute.
   * The URLs above point to the "trunk" of Ivy !RoundUp. Eventually, there may be more stable snapshots under "branches" and "tags".
