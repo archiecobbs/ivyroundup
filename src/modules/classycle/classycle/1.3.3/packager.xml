@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!--
     Copyright 2009 Mark Thomas
 
@@ -14,13 +15,15 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
+
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="Classycle${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}${revision}.zip" sha1="7c5d623f5b97e9347d2247b66e742bf3a8b291c4"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${name}${revision}.zip"
+      sha1="6b6d58511759a582a14e9a6c52fcd5a94d0ef962"/>
 
     <build>
         <!-- jar -->
@@ -31,7 +34,7 @@
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/Website/apidoc"/>
+            <fileset dir="archive/${archive}/docs/WebSite/apidoc"/>
         </zip>
     </build>
 </packager-module>
