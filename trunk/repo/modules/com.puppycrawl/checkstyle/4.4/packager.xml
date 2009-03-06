@@ -24,13 +24,21 @@
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="48f56abecf4e8e9a406996c744e59bf424432911">
         <include name="${archive}/${archive}.jar"/>
+        <include name="${archive}/${name}-optional-${revision}.jar"/>
         <include name="${archive}/docs/api/**/*"/>
     </resource>
+    <resource url="http://downloads.sourceforge.net/${name}/${name}-src-${revision}.tar.gz" sha1="a5c7f9e57021c09ae32c399ca22ab49f03224d75"/>
 
     <build>
 
         <!-- jar -->
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-optional-${revision}.jar" tofile="artifacts/jars/${name}-optional.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}-src-${revision}/src/${name}"/>
+        </zip>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
