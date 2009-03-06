@@ -18,9 +18,9 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="Classycle${revision}"/>
+    <property name="archive" value="Classycle"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}${revision}.zip" sha1="128afb85f5f9d20a0a04f3e1f537670ee79f72c3"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${name}.zip" sha1="7c5d623f5b97e9347d2247b66e742bf3a8b291c4"/>
 
     <build>
         <!-- jar -->
@@ -31,7 +31,7 @@
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/Website/apidoc"/>
+            <fileset dir="archive/${archive}/docs/WebSite/apidoc"/>
         </zip>
     </build>
 </packager-module>
