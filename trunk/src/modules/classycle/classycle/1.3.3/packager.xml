@@ -29,6 +29,10 @@
         <!-- jar -->
         <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
+        <!-- xsl -->
+        <mkdir dir="artifacts/xsls"/>
+        <move file="archive/${archive}/reportXMLtoHTML.xsl" todir="artifacts/xsls"/>
+
         <!-- source -->
         <move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/>
 
