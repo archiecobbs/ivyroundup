@@ -18,7 +18,7 @@
 
 <ivy-module rev="$Id$">
 
-    <info publication="20080406120000">
+    <info publication="20071216153900">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
@@ -35,17 +35,24 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="default" description="Core checkstyle classes"/>
+        <conf name="all" extends="default" description="Core and optional checkstyle classes"/>
+    </configurations>
+
     <publications>
-        <artifact/>
+        <artifact name="checkstyle" conf="default"/>
+        <artifact name="checkstyle-optional" conf="all"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency org="org.antlr" name="antlr" rev="2.7+" conf="default->default"/>
-        <dependency org="org.apache.commons" name="commons-cli" rev="[1.1,2.0[" conf="default->default"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="2.1+" conf="default->default"/>
-        <dependency org="org.apache.commons" name="commons-logging" rev="1+" conf="default->default"/>
-        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7+" conf="default->default"/>
+        <dependency org="org.antlr" name="antlr" rev="2.7+" conf="all->default"/>
+        <dependency org="org.apache.commons" name="commons-cli" rev="[1.1,2.0[" conf="all->default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="2.1+" conf="all->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1+" conf="all->default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7+" conf="all->default"/>
     </dependencies>
 
 </ivy-module>
