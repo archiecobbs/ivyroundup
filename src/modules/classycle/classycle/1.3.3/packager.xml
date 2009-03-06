@@ -30,8 +30,11 @@
         <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- xsl -->
-        <mkdir dir="artifacts/xsls"/>
-        <move file="archive/${archive}/reportXMLtoHTML.xsl" todir="artifacts/xsls"/>
+        <mkdir dir="artifacts/reports"/>
+        <move file="archive/${archive}/reportXMLtoHTML.xsl" todir="artifacts/reports"/>
+        <zip destfile="artifacts/reports/images.zip">
+            <fileset dir="archive/${archive}" includes="images/*"/>
+        </zip>
 
         <!-- source -->
         <move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/>
