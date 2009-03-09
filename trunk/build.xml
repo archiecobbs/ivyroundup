@@ -179,11 +179,11 @@
             <param name="graph.rankdir" expression="LR"/>
             <param name="graph.size" expression="11,11"/>
         </xslt>
-        <exec executable="/bin/bash" logError="true" failonerror="false">
+        <exec executable="/bin/bash" logError="false" failonerror="false">
             <arg value="-c"/>
             <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot"/>
         </exec>
-        <exec executable="/bin/bash" logError="true" failonerror="false">
+        <exec executable="/bin/bash" logError="false" failonerror="false">
             <arg value="-c"/>
             <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot"/>
         </exec>
