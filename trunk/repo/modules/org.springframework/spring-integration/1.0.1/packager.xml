@@ -50,6 +50,5 @@
         <zip destfile="artifacts/sources/source.zip">
             <fileset dir="work/src" includes="org/**/*"/>
         </zip>
-        <delete dir="work/src"/>
     </build>
 </packager-module>
