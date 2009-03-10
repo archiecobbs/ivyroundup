@@ -18,19 +18,21 @@
 
 <packager-module rev="$Id$">
 
-    <resource tofile="artifacts/jars/ojdbc14dms_g.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/ojdbc14dms_g.jar"
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/ojdbc14dms_g.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms_g.jar"
       sha1="77054185fa34c9bc12db7609ca2c0e556363a571"/>
-    <resource tofile="artifacts/jars/ojdbc14dms.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/ojdbc14dms.jar"
+    <resource tofile="artifacts/jars/ojdbc14dms.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms.jar"
       sha1="ac425870d54ee92bcb5fd61ace0b602567f3857d"/>
-    <resource tofile="artifacts/jars/ojdbc14_g.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/ojdbc14_g.jar"
+    <resource tofile="artifacts/jars/ojdbc14_g.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14_g.jar"
       sha1="d87755a2d55c943a82258b120a225f4ac50f7c4f"/>
-    <resource tofile="artifacts/jars/ojdbc14.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/ojdbc14.jar"
+    <resource tofile="artifacts/jars/ojdbc14.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14.jar"
       sha1="c19f869a5b401bc526a5149bd4b6b6314a688be9"/>
-    <resource tofile="artifacts/jars/ons.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/ons.jar"
+    <resource tofile="artifacts/jars/ons.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ons.jar"
       sha1="2d090de2c54102867af028a7f160d294a3d00f40"/>
-    <resource tofile="artifacts/jars/orai18n.jar" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/orai18n.jar"
+    <resource tofile="artifacts/jars/orai18n.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/orai18n.jar"
       sha1="75b73408f5ced657ff05f737e5420c5618c1c483"/>
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="file://${java.io.tmpdir}/ojdbc/10.2.0.3/javadoc.zip"
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="file://${java.io.tmpdir}/ojdbc/${revision}/javadoc.zip"
       sha1="4879d35e38fdca9c123b87ddc24c5aa11273be85"/>
 
 </packager-module>
