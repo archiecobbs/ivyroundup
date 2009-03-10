@@ -22,7 +22,7 @@
 
     <info organisation="com.oracle" module="ojdbc" revision="10.2.0.2" status="release" publication="20060124120000">
         <license name="OTN License Agreement" url="http://www.oracle.com/technology/software/htdocs/devlic.html"/>
-        <ivyauthor name="$Id: ivy.xml 524 2009-03-10 03:27:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.oracle/ojdbc/10.2.0.2/"/>
+        <ivyauthor name="$Id: ivy.xml 532 2009-03-10 14:49:55Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.oracle/ojdbc/10.2.0.2/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html">
             JDBC driver for Oracle 10g database.
@@ -46,6 +46,7 @@
         <artifact name="ojdbc14dms_g" conf="ojdbc14dms_g"/>
         <artifact name="orai18n" conf="orai18n"/>
         <artifact name="ons" conf="ons"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
