@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-03-12 05:52:00 UTC</timestamp>
-  <svnRevision>541</svnRevision>
+  <timestamp>2009-03-12 12:26:40 UTC</timestamp>
+  <svnRevision>545</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -103,6 +103,11 @@
       <rev name="1.0.1_04"/>
     </mod>
   </org>
+  <org name="javax.servlet.jsp.jstl">
+    <mod name="jstl">
+      <rev name="1.1.2"/>
+    </mod>
+  </org>
   <org name="javax.servlet">
     <mod name="servletapi">
       <rev name="2.2"/>
@@ -196,7 +201,15 @@
   </org>
   <org name="net.sourceforge.gwt-widget">
     <mod name="gwt-sl">
+      <rev name="0.1.4"/>
+      <rev name="0.1.4b"/>
+      <rev name="0.1.4c"/>
+      <rev name="0.1.4d"/>
       <rev name="0.1.4e"/>
+      <rev name="0.1.4f"/>
+      <rev name="0.1.5"/>
+      <rev name="0.1.5a"/>
+      <rev name="0.1.5b"/>
     </mod>
   </org>
   <org name="net.sourceforge.htmlparser">
@@ -332,6 +345,9 @@
       <rev name="1.8.1"/>
       <rev name="1.8"/>
       <rev name="2.0"/>
+    </mod>
+    <mod name="commons-el">
+      <rev name="1.0"/>
     </mod>
     <mod name="commons-email">
       <rev name="1.1"/>
