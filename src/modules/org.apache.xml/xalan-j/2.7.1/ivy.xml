@@ -52,15 +52,15 @@
 
     <configurations>
         <conf name="interp" extends="xml-apis" description="Xalan interpreted version only"/>
-        <conf name="compiled" extends="xml-apis" description="Xalan compiled version only"/>
+        <conf name="compiler" extends="xml-apis" description="Xalan compiled version only"/>
         <conf name="xml-apis" description="Xalan XML APIs only"/>
         <conf name="serializer" description="Xalan serializer only"/>
-        <conf name="default" extends="compiled, xml-apis, serializer" description="Xalan compiled version + XML APIs + serializer"/>
+        <conf name="default" extends="interp, xml-apis, serializer" description="Xalan compiled version + XML APIs + serializer"/>
     </configurations>
 
     <publications>
         <artifact conf="interp" name="xalan"/>
-        <artifact conf="compiled" name="xsltc"/>
+        <artifact conf="compiler" name="xsltc"/>
         <artifact conf="xml-apis" name="xml-apis"/>
         <artifact conf="serializer" name="serializer"/>
         <artifact name="source" type="source" ext="zip"/>
