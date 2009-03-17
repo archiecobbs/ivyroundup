@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20050920000412">
+        <license name="The Clearthought Software License, Version 1.0"
+          url="https://www.dev.java.net/files/documents/3495/59349/License.txt"/>
+        <description homepage="https://tablelayout.dev.java.net/"><![CDATA[
+         TableLayout is a totally free layout manager designed to make creating
+         user interfaces fast and easy. It can do anything GridBagLayout can do
+         and much, much more. Yet it is remarkably simple and easy to use.
+
+         TableLayout uses concepts that everyone is familiar with such as
+         spreadsheet-like rows, columns, and cells; and word processing
+         justifications like left, center, right, and full. Consequentially,
+         creating interfaces takes minutes instead of hours. Read the tutorial
+         articles below to quickly get familiar with TableLayout. Once you do,
+         you will never want to use another layout manager again!
+        ]]></description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
