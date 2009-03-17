@@ -42,7 +42,6 @@
 
     <configurations>
         <conf name="default" description="Default normal configuration"/>
-        <conf name="jsr107" extends="default" description="Additional support for the JSR 107 API"/>
         <conf name="remote-debugger" description="Remote debugger JAR only (normally not needed)"/>
     </configurations>
 
@@ -55,10 +54,8 @@
 
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default->default"/>
-        <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="jsr107->default"/>
-    <!--
-        <dependency org="edu.emory.mathcs.backport" name="backport-util-concurrent" rev="3.0+" conf="jsr107->???"/>
-    -->
+        <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="default->default"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="default->default"/>
     </dependencies>
 
 </ivy-module>
