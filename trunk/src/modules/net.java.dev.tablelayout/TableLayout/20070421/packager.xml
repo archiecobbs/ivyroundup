@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="2007-04-21"/>
+
+    <resource url="https://tablelayout.dev.java.net/files/documents/3495/15742/Everything-${revision}.zip"
+      sha1="ecee9c52ea9b592d1362a6378d2d954f5ade0652"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${name}-bin-jdk1.1-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.1.jar"/>
+        <move file="archive/${name}-bin-jdk1.4-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.4.jar"/>
+        <move file="archive/${name}-bin-jdk1.5-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.5.jar"/>
+        <move file="archive/${name}Extensions-all-jdk1.4-${revision}.jar" tofile="artifacts/jars/${name}Extensions-jdk1.4.jar"/>
+        <move file="archive/${name}Extensions-all-jdk1.5-${revision}.jar" tofile="artifacts/jars/${name}Extensions-jdk1.5.jar"/>
+
+        <!-- source -->
+        <move file="archive/${name}-src-${revision}.jar" tofile="artifacts/sources/source.zip"/>
+
+        <!-- javadoc -->
+        <move file="archive/${name}-javadoc-${revision}.jar" tofile="artifacts/javadocs/javadoc.zip"/>
+    </build>
+
+</packager-module>
