@@ -8,7 +8,9 @@ If the module already exists (i.e., you're just adding a new revision), typicall
 
 For new modules, there are plenty of examples to work from. But you should always start with an SVN copy of the [http://code.google.com/p/ivyroundup/source/browse/trunk/src/boilerplate boilerplate files].
 
-Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules. *Please follow these guidelines when creating issues for new revisions:*
+Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules.
+
+*Please follow these guidelines when creating issues for new revisions:*
   # Read and understand the ModuleMaintainerGuidelines.
   # Make sure that running {{{ant repo}}} with your new files in place under {{{src/modules}}} doesn't generate any (new) warnings or errors.
   # Make sure that running {{{ant -Dresolve.mod=foo}}} doesn't generate any errors (where "foo" is the name of your module; you can also use {{{resolve.org}}} and/or {{{resolve.rev}}})
