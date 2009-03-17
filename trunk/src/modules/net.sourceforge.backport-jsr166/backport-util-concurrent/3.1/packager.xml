@@ -17,9 +17,61 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="${ivy.packager.module}">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="682f7ac17fed79e92f8e87d8455192b63376347b"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="eff8366924cf1a666dd20aa632febf1c2c05b8cb"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="fce73b8e047a400296fec5a0653a844ff6e29d8f"/>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/backport-jsr166/${name}-Java12-${revision}.zip"
+      sha1="e9d97a8158c5ccadd75ce6ef033df4c2ed2eccdd"/>
+    <resource url="http://downloads.sourceforge.net/backport-jsr166/${name}-Java50-${revision}.zip"
+      sha1="97563a1181857925dea655b773b36318db9b3d0b"/>
+    <resource url="http://downloads.sourceforge.net/backport-jsr166/${name}-Java60-${revision}.zip"
+      sha1="4b96c46f7554afffed8d85a94f4d64697869f897"/>
+    <m2resource groupId="${name}">
+        <artifact tofile="artifacts/jars/${name}-Java14.jar" sha1="682f7ac17fed79e92f8e87d8455192b63376347b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-Java14.zip" sha1="eff8366924cf1a666dd20aa632febf1c2c05b8cb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-Java14.zip" sha1="fce73b8e047a400296fec5a0653a844ff6e29d8f"/>
     </m2resource>
+
+    <build>
+
+        <!-- jars -->
+        <move file="archive/${name}-Java12-${revision}/${name}.jar" tofile="artifacts/jars/${name}-Java12.jar"/>
+        <move file="archive/${name}-Java50-${revision}/${name}.jar" tofile="artifacts/jars/${name}-Java50.jar"/>
+        <move file="archive/${name}-Java60-${revision}/${name}.jar" tofile="artifacts/jars/${name}-Java60.jar"/>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/${name}-Java12.zip">
+            <fileset dir="archive/${name}-Java12-${revision}/src">
+                <include name="edu/**/*"/>
+            </fileset>
+        </zip>
+        <zip destfile="artifacts/sources/${name}-Java50.zip">
+            <fileset dir="archive/${name}-Java50-${revision}/src">
+                <include name="edu/**/*"/>
+            </fileset>
+        </zip>
+        <zip destfile="artifacts/sources/${name}-Java60.zip">
+            <fileset dir="archive/${name}-Java60-${revision}/src">
+                <include name="edu/**/*"/>
+            </fileset>
+        </zip>
+
+        <!-- javadocs -->
+        <zip destfile="artifacts/javadocs/${name}-Java12.zip">
+            <fileset dir="archive/${name}-Java12-${revision}/doc/api">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+        <zip destfile="artifacts/javadocs/${name}-Java50.zip">
+            <fileset dir="archive/${name}-Java50-${revision}/doc/api">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+        <zip destfile="artifacts/javadocs/${name}-Java60.zip">
+            <fileset dir="archive/${name}-Java60-${revision}/doc/api">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+    </build>
 </packager-module>
