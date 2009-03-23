@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20051207120800">
+        <license name="BSD" url="http://howl.objectweb.org/license.html"/>
+        <description homepage="http://howl.objectweb.org/"><![CDATA[
+         <p>HOWL is a logger implementation providing features required by the
+         ObjectWeb JOTM project, with a public API that is generally usable by
+         any Transaction Manager. HOWL uses unformatted binary logs to maximize
+         performance and specifies a journalization API with methods necessary
+         to support JOTM recovery operations.</p>
+
+        <p>HOWL is intended to be used for logging of temporary data such as XA
+        transaction events. HOWL is not a replacement for traditional log kits
+        such as LOG4J and Java SE Logging.</p> 
+        ]]></description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+</ivy-module>
