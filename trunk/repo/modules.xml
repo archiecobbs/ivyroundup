@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-03-23 15:09:56 UTC</timestamp>
-  <svnRevision>601</svnRevision>
+  <timestamp>2009-03-23 19:30:42 UTC</timestamp>
+  <svnRevision>604</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -110,6 +110,9 @@
     </mod>
   </org>
   <org name="javax.management">
+    <mod name="j2ee_management">
+      <rev name="1.0"/>
+    </mod>
     <mod name="jmx">
       <rev name="1.2.1"/>
     </mod>
@@ -362,6 +365,11 @@
     </mod>
     <mod name="ivy">
       <rev name="2.0.0"/>
+    </mod>
+  </org>
+  <org name="org.apache.bsf">
+    <mod name="bsf">
+      <rev name="2.4.0"/>
     </mod>
   </org>
   <org name="org.apache.commons">
