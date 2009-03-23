@@ -44,7 +44,7 @@
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.+" conf="*->default"/>
         <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="[0,)"
-          conf="howl,xnet,java12->Java12;howl,xnet,java14->Java14;howl,xnet,java5->Java50;howl,xnet,java6->Java60"/>
+          conf="java12->Java12;java14->Java14;java5->Java50;java6->Java60"/>
         <dependency org="org.objectweb.howl" name="howl" rev="1.0.2" conf="howl->default"/>
         <!-- TODO: add geronimo to repo
         <dependency org="org.apache.geronimo" name="geronimo-kernel" rev="1.0" conf="xnet->default"/>
