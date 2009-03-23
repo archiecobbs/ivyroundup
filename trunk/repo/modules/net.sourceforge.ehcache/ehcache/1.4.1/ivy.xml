@@ -22,7 +22,7 @@
 
     <info organisation="net.sourceforge.ehcache" module="ehcache" revision="1.4.1" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 599 2009-03-23 14:26:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.ehcache/ehcache/1.4.1/"/>
+        <ivyauthor name="$Id: ivy.xml 607 2009-03-23 19:46:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.ehcache/ehcache/1.4.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ehcache.sourceforge.net/">
             <p>
@@ -63,10 +63,7 @@
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default-&gt;default"/>
         <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="default-&gt;default"/>
-        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java12-&gt;Java12"/>
-        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java14-&gt;Java14"/>
-        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java5-&gt;Java50"/>
-        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java6-&gt;Java60"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java12-&gt;Java12;java14-&gt;Java14;java5-&gt;Java50;java6-&gt;Java60"/>
     </dependencies>
 
 </ivy-module>
