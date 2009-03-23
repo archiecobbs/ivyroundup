@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: packager-1.0.xsd 222 2008-05-08 17:02:34Z archie.cobbs $ -->
+<!-- $Id: packager-1.0.xsd 609 2009-03-23 20:47:30Z spatialguru.net $ -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
     <xsd:element name="packager-module">
@@ -91,6 +91,8 @@
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="zip"/>
             <xsd:enumeration value="war"/>
+            <xsd:enumeration value="rar"/>
+            <xsd:enumeration value="sar"/>
             <xsd:enumeration value="jar"/>
             <xsd:enumeration value="tar"/>
             <xsd:enumeration value="tgz"/>
