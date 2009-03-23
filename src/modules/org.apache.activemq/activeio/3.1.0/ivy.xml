@@ -26,14 +26,13 @@
     </info>
 
     <configurations>
-        <conf name="core" description="Core ActiveIO and dependencies"/>
-        <conf name="core_java12" extends="core" description="Core ActiveIO and dependencies for JDK &lt; 1.4"/>
-        <conf name="core_java14" extends="core" description="Core ActiveIO and dependencies for JDK 1.4"/>
-        <conf name="core_java5" extends="core" description="Core ActiveIO and dependencies for JDK 5"/>
-        <conf name="core_java6" extends="core" description="Core ActiveIO and dependencies for JDK 6"/>
-        <conf name="default" extends="core_java5" description="Core ActiveIO and dependencies for JDK 5"/>
-        <conf name="howl" extends="core" description="HOWL Logger"/>
-        <conf name="xnet" extends="core" description="Dependecies for xnet GBean code"/>
+        <conf name="java12" description="Core ActiveIO and dependencies for JDK &lt; 1.4"/>
+        <conf name="java14" description="Core ActiveIO and dependencies for JDK 1.4"/>
+        <conf name="java5" description="Core ActiveIO and dependencies for JDK 5"/>
+        <conf name="java6" description="Core ActiveIO and dependencies for JDK 6"/>
+        <conf name="default" extends="java5" description="Core ActiveIO and dependencies for JDK 5"/>
+        <conf name="howl" description="HOWL Logger"/>
+        <conf name="xnet" description="Dependecies for xnet GBean code"/>
     </configurations>
 
     <publications>
@@ -43,9 +42,9 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.+" conf="core->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.+" conf="*->default"/>
         <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="[0,)"
-          conf="core_java12->Java12;core_java14->Java14;core_java5->Java50;core_java6->Java60"/>
+          conf="howl,xnet,java12->Java12;howl,xnet,java14->Java14;howl,xnet,java5->Java50;howl,xnet,java6->Java60"/>
         <dependency org="org.objectweb.howl" name="howl" rev="1.0.2" conf="howl->default"/>
         <!-- TODO: add geronimo to repo
         <dependency org="org.apache.geronimo" name="geronimo-kernel" rev="1.0" conf="xnet->default"/>
