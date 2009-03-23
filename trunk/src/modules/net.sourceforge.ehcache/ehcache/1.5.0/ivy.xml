@@ -41,7 +41,11 @@
     </info>
 
     <configurations>
-        <conf name="default" description="Default normal configuration"/>
+        <conf name="java12" description="Default normal configuration for JDK &lt; 1.4"/>
+        <conf name="java14" description="Default normal configuration for JDK 1.4"/>
+        <conf name="java5" description="Default normal configuration for JDK 5"/>
+        <conf name="java6" description="Default normal configuration for JDK 6"/>
+        <conf name="default" extends="java5" description="Default normal configuration for JDK 5"/>
         <conf name="remote-debugger" description="Remote debugger JAR only (normally not needed)"/>
     </configurations>
 
@@ -57,7 +61,10 @@
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default->default"/>
         <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="default->default"/>
-        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="default->default"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java12->Java12"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java14->Java14"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java5->Java50"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+" conf="java6->Java60"/>
     </dependencies>
 
 </ivy-module>
