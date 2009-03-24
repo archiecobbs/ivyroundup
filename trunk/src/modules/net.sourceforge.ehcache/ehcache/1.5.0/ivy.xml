@@ -59,8 +59,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="default->default"/>
-        <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="*->default"/>
+        <dependency org="net.sourceforge.jsr107cache" name="jsr107cache" rev="1.0+" conf="*->default"/>
         <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="3.+"
           conf="java12->Java12;java14->Java14;java5->Java50;java6->Java60"/>
     </dependencies>
