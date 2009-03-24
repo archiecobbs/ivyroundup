@@ -31,7 +31,14 @@
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}-all.jar" tofile="artifacts/jars/${name}.jar"/>
+        <mkdir dir="work"/>
+        <unzip src="archive/${archive}/lib/${archive}-all.jar" dest="work">
+            <patternset>
+                <exclude name="META-INF/INDEX.LIST"/>
+            </patternset>
+        </unzip>
+        <jar destfile="artifacts/jars/${name}.jar" basedir="work" index="true"
+          manifest="work/META-INF/MANIFEST.MF"/>
 
         <!-- xsd -->
         <mkdir dir="artifacts/xsds"/>
