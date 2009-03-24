@@ -22,7 +22,7 @@
 
     <info organisation="org.beanshell" module="bsh" revision="2.0b4" status="release" publication="20050523114800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 612 2009-03-23 21:22:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.beanshell/bsh/2.0b4/"/>
+        <ivyauthor name="$Id: ivy.xml 620 2009-03-24 13:44:25Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.beanshell/bsh/2.0b4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.beanshell.org/">
         <p>
@@ -58,7 +58,7 @@
 
     <configurations>
         <conf name="default" description="Beanshell scripting language"/>
-        <conf name="bsf" description="Beanshell classes for Jakarta BSF"/>
+        <conf name="bsf" extends="default" description="Beanshell classes for Jakarta BSF"/>
     </configurations>
 
     <publications>
