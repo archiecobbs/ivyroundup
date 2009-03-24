@@ -54,7 +54,7 @@
 
     <configurations>
         <conf name="default" description="Beanshell scripting language"/>
-        <conf name="bsf" description="Beanshell classes for Jakarta BSF"/>
+        <conf name="bsf" extends="default" description="Beanshell classes for Jakarta BSF"/>
     </configurations>
 
     <publications>
