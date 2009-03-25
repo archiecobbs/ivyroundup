@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring" revision="2.0.2" status="release" publication="20070108202100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 594 2009-03-23 12:10:56Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.0.2/"/>
+        <ivyauthor name="$Id: ivy.xml 629 2009-03-25 09:08:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.0.2/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -124,7 +124,7 @@
     </info>
 
     <configurations>
-        <conf name="default" description="All standard modules (except for Portlet and Hibernate2 support) with typical dependencies"/>
+        <conf name="default" extends="all" description="All standard modules (except for Portlet and Hibernate2 support) with typical dependencies"/>
         <conf name="agent" description="Spring's InstrumentationSavingAgent (for InstrumentationLoadTimeWeaver)"/>
         <conf name="all" description="All standard modules (except for Portlet and Hibernate2 support)"/>
         <conf name="aspects" description="AspectJ aspects, for explicitly linking aspects into an IDE (Eclipse AJDT)"/>
