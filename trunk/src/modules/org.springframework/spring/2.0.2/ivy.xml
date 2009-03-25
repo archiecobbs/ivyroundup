@@ -120,7 +120,7 @@
     </info>
 
     <configurations>
-        <conf name="default" description="All standard modules (except for Portlet and Hibernate2 support) with typical dependencies" />
+        <conf name="default" extends="all" description="All standard modules (except for Portlet and Hibernate2 support) with typical dependencies" />
         <conf name="agent" description="Spring's InstrumentationSavingAgent (for InstrumentationLoadTimeWeaver)" />
         <conf name="all" description="All standard modules (except for Portlet and Hibernate2 support)" />
         <conf name="aspects" description="AspectJ aspects, for explicitly linking aspects into an IDE (Eclipse AJDT)" />
