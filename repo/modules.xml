@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-03-25 10:12:08 UTC</timestamp>
-  <svnRevision>630</svnRevision>
+  <timestamp>2009-03-26 15:56:30 UTC</timestamp>
+  <svnRevision>633</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -134,6 +134,12 @@
   <org name="javax.servlet.jsp.jstl">
     <mod name="jstl">
       <rev name="1.1.2"/>
+    </mod>
+  </org>
+  <org name="javax.servlet.jsp">
+    <mod name="jsp-api">
+      <rev name="2.0"/>
+      <rev name="2.1"/>
     </mod>
   </org>
   <org name="javax.servlet">
