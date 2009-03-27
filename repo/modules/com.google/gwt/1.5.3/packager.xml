@@ -42,6 +42,9 @@
             <fileset dir="archive/${archive2}" includes="*.jar"/>
             <fileset dir="archive/${archive3}" includes="*.jar"/>
         </move>
+        <mkdir dir="work"/>
+        <unzip src="artifacts/jars/gwt-user.jar" dest="work"/>
+        <jar basedir="work" destfile="artifacts/jars/gwt-user.jar" index="true" includes="com/**/*"/>
 
         <!-- linux SWT native libs -->
         <mkdir dir="artifacts/sos"/>
