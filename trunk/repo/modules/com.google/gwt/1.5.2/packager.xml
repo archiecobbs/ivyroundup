@@ -37,6 +37,9 @@
         <mkdir dir="work"/>
         <unzip src="artifacts/jars/gwt-user.jar" dest="work"/>
         <jar basedir="work" destfile="artifacts/jars/gwt-user.jar" index="true" includes="com/**/*"/>
+        <mkdir dir="work2"/>
+        <unzip src="artifacts/jars/gwt-dev-linux.jar" dest="work2"/>
+        <jar basedir="work2" destfile="artifacts/jars/gwt-dev-linux.jar" index="true" includes="com/**/*"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
