@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas <spatialguru.net@gmail.com>
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}.RELEASE"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="extract" value="archive/${archive}"/>
+
+    <resource url="http://s3.amazonaws.com/dist.springframework.org/release/INT/${archive}.zip"
+      sha1="d40d312be9dd3e08b3a1a7bb9198a90f9891f2a4"/>
+
+    <build>
+        <!-- jar -->
+        <copy todir="artifacts/jars">
+            <fileset dir="${extract}/dist/" includes="*-${revision}.jar"/>
+            <mapper type="glob" from="org.springframework.integration.*-${revision}.jar" to="${name}-*.jar"/>
+        </copy>
+        <move file="${extract}/dist/org.springframework.integration-${revision}.jar" tofile="artifacts/jars/${name}-core.jar"/> 
+
+        <!-- src -->
+        <mkdir dir="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.adapter-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.event-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.file-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.httpinvoker-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.jms-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.mail-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.rmi-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.security-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.stream-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.ws-sources-${revision}.jar" dest="work/src"/>
+        <unzip src="${extract}/src/org.springframework.integration.xml-sources-${revision}.jar" dest="work/src"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="work/src" includes="org/**/*"/>
+        </zip>
+    </build>
+</packager-module>
