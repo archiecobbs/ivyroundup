@@ -112,4 +112,14 @@
         <artifact classifier="sources" tofile="artifacts/sources/jetty-xml.zip" sha1="7856a2a5095d2ece81cdaa373efc8abe6e7a3aee"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-xml.zip" sha1="7ac966d8a6dce050075bf940b14f93dcf73e0510"/>
     </m2resource>
+    <m2resource groupId="org/mortbay/jetty" artifactId="jsp-api-2.1-glassfish" version="9.1.1.B60.25.p1">
+        <artifact tofile="artifacts/jars/jsp-api-2.1.jar" sha1="4b4a913af75d94d67bf90a64c3c9388f8af9adc1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsp-api-2.1.zip" sha1="79b11437d61c806be68833a315aa1a9b223334b2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsp-api-2.1.zip" sha1="ebc391d99c2d62e649f4865be1d90e86c30b4f8f"/>
+    </m2resource>
+    <m2resource groupId="org/mortbay/jetty" artifactId="jsp-2.1-glassfish" version="9.1.1.B60.25.p1">
+        <artifact tofile="artifacts/jars/jsp-2.1.jar" sha1="b0a94cee784f4769a286f67c35905571df48b897"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsp-2.1.zip" sha1="52c00e4566d47b4199eb5095af77bf67ded2294e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsp-2.1.zip" sha1="b86db336db3f1af78281eca10284d551f7559760"/>
+    </m2resource>
 </packager-module>

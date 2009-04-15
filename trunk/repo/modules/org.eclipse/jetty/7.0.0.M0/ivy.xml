@@ -22,7 +22,7 @@
 
     <info organisation="org.eclipse" module="jetty" revision="7.0.0.M0" status="release" publication="20090403104700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 649 2009-04-15 17:09:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.0.0.M0/"/>
+        <ivyauthor name="$Id: ivy.xml 653 2009-04-15 18:27:46Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.0.0.M0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.eclipse.org/jetty/">
             <p>
@@ -46,17 +46,18 @@
 
     <configurations>
         <conf name="ajp" extends="server" description="AJP protocol support"/>
-        <conf name="all" extends="servlets,rewrite,annotations,jmx,deploy,start" description="All artifacts"/>
+        <conf name="all" extends="default,servlets,rewrite,annotations,jmx,deploy,start" description="All artifacts"/>
         <conf name="annotations" extends="plus" description="Annotation support for deploying servlets in jetty"/>
         <conf name="client" extends="http" description="Asynchronous HTTP Client"/>
         <conf name="continuation" description="Asynchronous API"/>
         <conf name="core" extends="server" description="Core Jetty server"/>
-        <conf name="default" extends="webapp" description="Jetty web application support"/>
+        <conf name="default" extends="jsp" description="Jetty web application support with JSP 2.1"/>
         <conf name="deploy" extends="webapp" description="Deployers"/>
         <conf name="http" extends="io" description="Http Utility"/>
         <conf name="io" extends="util" description="I/O Utility"/>
         <conf name="jmx" extends="webapp" description="JMX Management"/>
         <conf name="jndi" extends="webapp" description="JNDI Naming"/>
+        <conf name="jsp" extends="webapp" description="JSP 2.1"/>
         <conf name="plus" extends="jndi" description="Jetty JavaEE style services"/>
         <conf name="rewrite" extends="server" description="Rewrite Handler"/>
         <conf name="security" extends="server" description="Jetty security infrastructure"/>
@@ -90,6 +91,8 @@
         <artifact name="jetty-util" conf="util"/>
         <artifact name="jetty-webapp" conf="webapp"/>
         <artifact name="jetty-xml" conf="xml"/>
+        <artifact name="jsp-2.1" conf="jsp"/>
+        <artifact name="jsp-api-2.1" conf="jsp"/>
 
         <!-- source -->
         <artifact name="jetty-ajp" type="source" ext="zip" conf="ajp"/>
@@ -111,6 +114,8 @@
         <artifact name="jetty-util" type="source" ext="zip" conf="util"/>
         <artifact name="jetty-webapp" type="source" ext="zip" conf="webapp"/>
         <artifact name="jetty-xml" type="source" ext="zip" conf="xml"/>
+        <artifact name="jsp-2.1" type="source" ext="zip" conf="jsp"/>
+        <artifact name="jsp-api-2.1" type="source" ext="zip" conf="jsp"/>
 
         <!-- javadoc -->
         <artifact name="jetty-ajp" type="javadoc" ext="zip" conf="ajp"/>
@@ -132,12 +137,15 @@
         <artifact name="jetty-util" type="javadoc" ext="zip" conf="util"/>
         <artifact name="jetty-webapp" type="javadoc" ext="zip" conf="webapp"/>
         <artifact name="jetty-xml" type="javadoc" ext="zip" conf="xml"/>
+        <artifact name="jsp-2.1" type="javadoc" ext="zip" conf="jsp"/>
+        <artifact name="jsp-api-2.1" type="javadoc" ext="zip" conf="jsp"/>
     </publications>
 
     <dependencies>
-        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="continuation,util-&gt;default"/>
         <dependency org="javax.mail" name="javamail" rev="[1.4,2.0[" conf="jndi-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="continuation,util-&gt;default"/>
         <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="plus-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3.1.1" conf="jsp-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.5.+" conf="util-&gt;core"/>
         <dependency org="org.objectweb.asm" name="asm" rev="[3.1,4.0[" conf="annotations-&gt;commons"/>
     </dependencies>
