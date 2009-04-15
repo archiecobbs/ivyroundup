@@ -42,17 +42,18 @@
 
     <configurations>
         <conf name="ajp" extends="server" description="AJP protocol support"/>
-        <conf name="all" extends="servlets,rewrite,annotations,jmx,deploy,start" description="All artifacts"/>
+        <conf name="all" extends="default,servlets,rewrite,annotations,jmx,deploy,start" description="All artifacts"/>
         <conf name="annotations" extends="plus" description="Annotation support for deploying servlets in jetty"/>
         <conf name="client" extends="http" description="Asynchronous HTTP Client"/>
         <conf name="continuation" description="Asynchronous API"/>
         <conf name="core" extends="server" description="Core Jetty server"/>
-        <conf name="default" extends="webapp" description="Jetty web application support"/>
+        <conf name="default" extends="jsp" description="Jetty web application support with JSP 2.1"/>
         <conf name="deploy" extends="webapp" description="Deployers"/>
         <conf name="http" extends="io" description="Http Utility"/>
         <conf name="io" extends="util" description="I/O Utility"/>
         <conf name="jmx" extends="webapp" description="JMX Management"/>
         <conf name="jndi" extends="webapp" description="JNDI Naming"/>
+        <conf name="jsp" extends="webapp" description="JSP 2.1"/>
         <conf name="plus" extends="jndi" description="Jetty JavaEE style services"/>
         <conf name="rewrite" extends="server" description="Rewrite Handler"/>
         <conf name="security" extends="server" description="Jetty security infrastructure"/>
@@ -86,6 +87,8 @@
         <artifact name="jetty-util" conf="util"/>
         <artifact name="jetty-webapp" conf="webapp"/>
         <artifact name="jetty-xml" conf="xml"/>
+        <artifact name="jsp-2.1" conf="jsp"/>
+        <artifact name="jsp-api-2.1" conf="jsp"/>
 
         <!-- source -->
         <artifact name="jetty-ajp" type="source" ext="zip" conf="ajp"/>
@@ -107,6 +110,8 @@
         <artifact name="jetty-util" type="source" ext="zip" conf="util"/>
         <artifact name="jetty-webapp" type="source" ext="zip" conf="webapp"/>
         <artifact name="jetty-xml" type="source" ext="zip" conf="xml"/>
+        <artifact name="jsp-2.1" type="source" ext="zip" conf="jsp"/>
+        <artifact name="jsp-api-2.1" type="source" ext="zip" conf="jsp"/>
 
         <!-- javadoc -->
         <artifact name="jetty-ajp" type="javadoc" ext="zip" conf="ajp"/>
@@ -128,12 +133,15 @@
         <artifact name="jetty-util" type="javadoc" ext="zip" conf="util"/>
         <artifact name="jetty-webapp" type="javadoc" ext="zip" conf="webapp"/>
         <artifact name="jetty-xml" type="javadoc" ext="zip" conf="xml"/>
+        <artifact name="jsp-2.1" type="javadoc" ext="zip" conf="jsp"/>
+        <artifact name="jsp-api-2.1" type="javadoc" ext="zip" conf="jsp"/>
     </publications>
 
     <dependencies>
-        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="continuation,util->default"/>
         <dependency org="javax.mail" name="javamail" rev="[1.4,2.0[" conf="jndi->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="continuation,util->default"/>
         <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="plus->default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3.1.1" conf="jsp->default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.5.+" conf="util->core"/>
         <dependency org="org.objectweb.asm" name="asm" rev="[3.1,4.0[" conf="annotations->commons"/>
     </dependencies>
