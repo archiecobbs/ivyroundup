@@ -22,7 +22,7 @@
 
     <info organisation="org.eclipse" module="jetty" revision="7.0.0.M0" status="release" publication="20090403104700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 653 2009-04-15 18:27:46Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.0.0.M0/"/>
+        <ivyauthor name="$Id: ivy.xml 655 2009-04-15 18:57:51Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.0.0.M0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.eclipse.org/jetty/">
             <p>
@@ -61,7 +61,7 @@
         <conf name="plus" extends="jndi" description="Jetty JavaEE style services"/>
         <conf name="rewrite" extends="server" description="Rewrite Handler"/>
         <conf name="security" extends="server" description="Jetty security infrastructure"/>
-        <conf name="server" extends="continuation" description="Service Core"/>
+        <conf name="server" extends="continuation,http" description="Service Core"/>
         <conf name="servlet" extends="security" description="Jetty Servlet Container"/>
         <conf name="servlets" extends="client,webapp" description="Utility Servlets from Jetty"/>
         <conf name="start" description="The jetty startup artifact"/>
