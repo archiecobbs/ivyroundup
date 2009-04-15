@@ -57,7 +57,7 @@
         <conf name="plus" extends="jndi" description="Jetty JavaEE style services"/>
         <conf name="rewrite" extends="server" description="Rewrite Handler"/>
         <conf name="security" extends="server" description="Jetty security infrastructure"/>
-        <conf name="server" extends="continuation" description="Service Core"/>
+        <conf name="server" extends="continuation,http" description="Service Core"/>
         <conf name="servlet" extends="security" description="Jetty Servlet Container"/>
         <conf name="servlets" extends="client,webapp" description="Utility Servlets from Jetty"/>
         <conf name="start" description="The jetty startup artifact"/>
