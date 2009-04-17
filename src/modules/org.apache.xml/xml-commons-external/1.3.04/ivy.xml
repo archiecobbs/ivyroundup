@@ -30,7 +30,8 @@
 
     <configurations>
         <conf name="default" description="Main interfaces"/>
-        <conf name="ext" extends="default" description="Other interfaces, e.g. SVG"/>
+        <conf name="ext" extends="default" description="Main plus extension interfaces, e.g. SVG"/>
+        <conf name="ext-only" description="Extension interfaces only"/>
     </configurations>
 
     <publications>
