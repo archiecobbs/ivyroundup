@@ -22,7 +22,7 @@
 
     <info organisation="org.apache.xmlgraphics" module="batik" revision="1.7" status="release" publication="20080106120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 179 2008-05-01 22:28:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xmlgraphics/batik/1.7/"/>
+        <ivyauthor name="$Id: ivy.xml 657 2009-04-17 11:27:23Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xmlgraphics/batik/1.7/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xmlgraphics.apache.org/batik/">
              <p>
@@ -92,7 +92,10 @@
 
     <dependencies>
         <dependency conf="core-&gt;default" org="org.mozilla" name="rhino" rev="1.+"/>
-        <dependency conf="core-&gt;apis,impl" org="org.apache.xerces" name="xerces" rev="2.5+"/>
+        <dependency conf="core-&gt;ext" org="org.apache.xml" name="xml-commons-external" rev="1.+">
+            <artifact name="xml-apis-ext"/>
+        </dependency>
+        <dependency conf="core-&gt;apis,impl" org="org.apache.xerces" name="xerces" rev="[2.5,3.0["/>
     <!--
        <dependency conf="pdf->default" org="org.apache.fop" name="fop" rev="0.94+"/>
     -->
