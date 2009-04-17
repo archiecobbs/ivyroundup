@@ -76,6 +76,13 @@ Ensure dependencies are correct with respect to the configurations of the module
 
 If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you.
 
+==== Avoid {{{<artifact>}}} tags ====
+
+In general, try to avoid using {{{<artifact>}}} sub-tags in dependencies. If you have to use them, then that's an indication that the module you're depending on has an incomplete set of configurations.
+
+Instead, modify or create the configurations in the target module so you can get what you want without the {{{<artifact>}}} tags, i.e., simply by specifying the right configuration(s) in your dependency.
+
+
 == Packager XML files ({{{packager.xml}}}) files ==
 
 Make use of the {{{${ivy.packager.*} }}}pre-defined properties to avoid typos and make future revision upgrades easier.
