@@ -188,6 +188,16 @@
                 <xsl:with-param name="msg" select="'&quot;org&quot;, &quot;name&quot;, &quot;rev&quot;, and &quot;conf&quot; attributes are required in &lt;dependency&gt; tags'"/>
             </xsl:call-template>
         </xsl:if>
+        <xsl:if test="not(contains(@conf, '-&gt;'))">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&quot;conf&quot; attribute has does not specify source configuration(s)'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="contains(@conf, '-&gt;*')">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&quot;conf&quot; attribute has &quot;*&quot; target configuration'"/>
+            </xsl:call-template>
+        </xsl:if>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
