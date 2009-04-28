@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-04-28 10:18:14 UTC</timestamp>
-  <svnRevision>680</svnRevision>
+  <timestamp>2009-04-28 19:09:10 UTC</timestamp>
+  <svnRevision>689</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -34,6 +34,11 @@
       <rev name="1.5.3"/>
       <rev name="1.5m2"/>
       <rev name="1.6.4"/>
+    </mod>
+  </org>
+  <org name="com.icl.saxon">
+    <mod name="saxon">
+      <rev name="6.5.5"/>
     </mod>
   </org>
   <org name="com.jgoodies">
@@ -404,6 +409,11 @@
       <rev name="2.0.0"/>
     </mod>
   </org>
+  <org name="org.apache.avalon">
+    <mod name="avalon-framework">
+      <rev name="4.2.0"/>
+    </mod>
+  </org>
   <org name="org.apache.bsf">
     <mod name="bsf">
       <rev name="2.4.0"/>
@@ -533,6 +543,12 @@
     <mod name="batik">
       <rev name="1.7"/>
     </mod>
+    <mod name="fop">
+      <rev name="0.95"/>
+    </mod>
+    <mod name="xmlgraphics-commons">
+      <rev name="1.3.1"/>
+    </mod>
   </org>
   <org name="org.aspectj">
     <mod name="aspectj">
@@ -554,6 +570,11 @@
   <org name="org.codehaus.jaxen">
     <mod name="jaxen">
       <rev name="1.1.1"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.xstream">
+    <mod name="xstream">
+      <rev name="1.3.1"/>
     </mod>
   </org>
   <org name="org.dbmaintain">
@@ -651,6 +672,14 @@
       <rev name="3.9.0"/>
     </mod>
   </org>
+  <org name="org.jdesktop">
+    <mod name="appframework">
+      <rev name="1.0.3"/>
+    </mod>
+    <mod name="swingworker">
+      <rev name="1.2"/>
+    </mod>
+  </org>
   <org name="org.jets3t">
     <mod name="jets3t">
       <rev name="0.6.0"/>
@@ -717,6 +746,11 @@
     <mod name="junit">
       <rev name="3.8.2"/>
       <rev name="4.5"/>
+    </mod>
+  </org>
+  <org name="org.mc4j">
+    <mod name="mc4j-ems">
+      <rev name="1.2.6"/>
     </mod>
   </org>
   <org name="org.mockito">
@@ -841,6 +875,11 @@
       <rev name="2.0"/>
       <rev name="2.1"/>
       <rev name="2.2"/>
+    </mod>
+  </org>
+  <org name="org.xmlpull.xpp3">
+    <mod name="xpp3">
+      <rev name="1.1.4c"/>
     </mod>
   </org>
 </modules>
