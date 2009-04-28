@@ -69,7 +69,7 @@
 
     <!-- TODO: separate out BCEL, java_cup runtime, regexp also -->
     <dependencies>
-        <dependency conf="*" org="org.apache.xerces" name="xerces" rev="2.7+"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="2.7+" conf="*->default"/>
     </dependencies>
 
 </ivy-module>
