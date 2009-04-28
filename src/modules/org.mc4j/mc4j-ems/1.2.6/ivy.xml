@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20081125120000">
+        <license name="GNU Lesser Public License, Version 2.1" url="http://www.opensource.org/licenses/lgpl-2.1.php"/>
+        <description homepage="http://mc4j.org/confluence/display/mc4j/Home">
+            EMS is the connection library behind MC4J. It is an adapter layer to allow simultaneous 
+            access to any number of MBean servers from different AS vendors and different versions of 
+            those. It uses classloading isolation per connection to avoid the typical serialization 
+            problems and can load the correct libraries from installations of the target app servers. 
+            It also provides a cached, object form of the MBeanInfo metadata that eases writing tools 
+            that connect to many MBean Servers.
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
