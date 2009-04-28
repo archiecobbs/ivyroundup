@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="_revision" value="1.03"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource tofile="artifacts/jars/${name}.jar" url="http://download.java.net/maven/2/org/jdesktop/appframework/${revision}/${archive}.jar"
+        sha1="338045feff6e61df237aafd11b6f3fe1a3b4e60e"/>
+
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="https://appframework.dev.java.net/downloads/AppFramework-${_revision}-doc.zip"
+        sha1="b456600d274b835e1e7ddb16fd843ddab2ed3ef1"/>
+
+    <resource tofile="artifacts/sources/source.zip" url="https://appframework.dev.java.net/downloads/AppFramework-${_revision}-src.zip"
+        sha1="9ce96108b657a091da54a5a566d85e5cfdfff56e"/>
+
+</packager-module>
