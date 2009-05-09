@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20031119143000">
+        <license name="CDDL+GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
+        <description homepage="http://java.sun.com/j2ee/javaacc/">
+            <p>
+                The Java Authorization Contract for Containers (Java ACC) specification
+                (JSR-115) defines new java.security.Permission classes to satisfy the
+                Java 2 Platform, Enterprise Edition (J2EE) authorization model. The Java
+                ACC specification defines the binding of container access decisions to
+                operations on instances of these permission classes. It defines the
+                semantics of policy providers that employ the new permission classes to
+                address the authorization requirements of J2EE, including the following:
+                <ul>
+                    <li>
+                    The definition of roles as named collections of permissions
+                    </li>
+                    <li>
+                    The granting to principals of permissions corresponding to roles
+                    </li>
+                    <li>
+                    The determination of whether a principal has been granted the
+                    permissions of a role (ie. isCallerInRole)
+                    </li>
+                    <li>
+                    The definition of identifier to role mappings that bind
+                    application embedded identifiers to application scoped role names
+                    </li>
+                </ul>
+            </p>
+            <p>
+                The Java ACC specification defines the installation and configuration
+                of authorization providers for use by containers. The specification
+                defines the interfaces that a provider must make available to allow
+                container deployment tools to create and manage permission collections
+                corresponding to roles.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+</ivy-module>
