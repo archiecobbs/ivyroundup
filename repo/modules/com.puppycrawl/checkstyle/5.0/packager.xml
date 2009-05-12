@@ -24,6 +24,8 @@
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="510d4188f74463772ed3e9d67585c2cdbe194264">
         <include name="${archive}/${archive}.jar"/>
+        <include name="${archive}/${name}-all-${revision}.jar"/>
+        <include name="${archive}/${name}/contrib/**"/>
         <include name="${archive}/docs/api/**/*"/>
     </resource>
     <resource url="http://downloads.sourceforge.net/${name}/${name}-src-${revision}.tar.gz" sha1="9f60fd8a9c365446c681a2bc2d6194bcbd987624"/>
@@ -32,6 +34,16 @@
 
         <!-- jar -->
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-all-${revision}.jar" tofile="artifacts/jars/${name}-all.jar"/>
+        <move file="archive/${archive}/google-collect-snapshot-20090211.jar" tofile="artifacts/jars/google-collect-snapshot-20090211.jar"/>
+
+        <!-- stylesheets -->
+        <mkdir dir="artifacts/reports"/>
+        <move todir="artifacts/reports">
+          <fileset dir="archive/${archive}/contrib">
+            <include name="*.xsl"/>
+          </fileset>
+	</move>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
