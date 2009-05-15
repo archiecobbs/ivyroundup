@@ -116,6 +116,7 @@
     </configurations>
 
     <publications>
+        <!-- jar -->
         <artifact name="aop" conf="default,aop"/>
         <artifact name="beans" conf="default,beans"/>
         <artifact name="context" conf="default,context"/>
@@ -130,7 +131,24 @@
         <artifact name="webmvc" conf="default,webmvc"/>
         <artifact name="webmvc-portlet" conf="default,webmvc-portlet"/>
         <artifact name="webmvc-struts" conf="default,webmvc-struts"/>
-        <artifact name="source" type="source" ext="zip"/>
+
+        <!-- source -->
+        <artifact name="aop" type="source" ext="zip" conf="default,aop"/>
+        <artifact name="beans" type="source" ext="zip" conf="default,beans"/>
+        <artifact name="context" type="source" ext="zip" conf="default,context"/>
+        <artifact name="context-support" type="source" ext="zip" conf="default,context-support"/>
+        <artifact name="core" type="source" ext="zip" conf="default,core"/>
+        <artifact name="jdbc" type="source" ext="zip" conf="default,jdbc"/>
+        <artifact name="jms" type="source" ext="zip" conf="default,jms"/>
+        <artifact name="orm" type="source" ext="zip" conf="default,orm"/>
+        <artifact name="test" type="source" ext="zip" conf="default,test"/>
+        <artifact name="tx" type="source" ext="zip" conf="default,tx"/>
+        <artifact name="web" type="source" ext="zip" conf="default,web"/>
+        <artifact name="webmvc" type="source" ext="zip" conf="default,webmvc"/>
+        <artifact name="webmvc-portlet" type="source" ext="zip" conf="default,webmvc-portlet"/>
+        <artifact name="webmvc-struts" type="source" ext="zip" conf="default,webmvc-struts"/>
+
+        <!-- javadoc -->
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

@@ -26,7 +26,7 @@
       sha1="876766d13b910a1ebaf6a254bff0138fb623ec8f">
         <include name="${archive}/dist/modules/**/*"/>
         <include name="${archive}/docs/api/**/*"/>
-        <include name="${archive}/dist/${name}-sources.jar"/>
+        <include name="${archive}/dist/module-sources/*-sources.jar"/>
     </resource>
 
     <build>
@@ -40,8 +40,12 @@
         </move>
 
         <!-- source -->
-        <move file="archive/${archive}/dist/spring-sources.jar"
-          tofile="artifacts/sources/source.zip"/>
+        <move todir="artifacts/sources">
+            <fileset dir="archive/${archive}/dist/module-sources">
+                <include name="*.jar"/>
+            </fileset>
+            <mapper type="glob" from="spring-*-sources.jar" to="*.zip"/>
+        </move>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
