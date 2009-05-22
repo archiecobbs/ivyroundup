@@ -72,16 +72,23 @@ Needless to say, all dependency organisation and module names must be consistent
 
 Ensure dependencies are correct with respect to the configurations of the module you're working with, as well as those of the module being depended on.
 
+==== Revision Ranges ====
+
+When module A depends on module B, it is the maintainer's responsibility to figure out to the best of his/her ability exactly _which_ revisions of module B are compatible with module A. This is because the two extremes ("too tight" and "too loose") must be avoided: specifying only a single (exact) revision of B when many revisions are compatible with A ("too tight") will likely cause unnecessary conflicts, when someone tries to use your module with another module that depends on a different revision of B. On the other hand, specifying a very wide range of revisions that includes incompatible ones ("too loose") is even worse, because the ivy resolution will succeed but then the code won't run properly.
+
+An important special case of this is when you make assumptions about the future: such assumptions can be dangerous (this applies to life in general too :-) For example, suppose the latest revision of module B is 1.5.3, and you specify module A depends on B with {{{rev="1.+"}}}, or {{{rev="[1.5.3,2.0)"}}}, or somesuch. Then you are effectively predicting the future: you're declaring that the developers of module B will not introduce an API-breaking change in their code without a major version number increase. Unless you have actually verified this assumption (e.g., a stated policy of module B) then don't make it.
+
+Of course, if you know there are no future 1.x revisions forthcoming (2.0 has been released and is stable, etc.) then you are no longer "predicting the future" so the dependency's correctness can be verified first.
+
 ==== Transitive Dependencies ====
 
-If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you.
+If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you, as that could change in the future.
 
 ==== Avoid {{{<artifact>}}} tags ====
 
 In general, try to avoid using {{{<artifact>}}} sub-tags in dependencies. If you have to use them, then that's an indication that the module you're depending on has an incomplete set of configurations.
 
 Instead, modify or create the configurations in the target module so you can get what you want without the {{{<artifact>}}} tags, i.e., simply by specifying the right configuration(s) in your dependency.
-
 
 == Packager XML files ({{{packager.xml}}}) files ==
 
