@@ -151,6 +151,7 @@
             <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
             <param name="target.repo" expression="${target.repo}" />
             <param name="source.base" expression="${basedir}/src" />
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
         </xslt>
 
         <!-- Generate packager.xml files -->
@@ -159,6 +160,7 @@
             <param name="stylesheet" expression="packager-repo.xsl"/>
             <param name="target.repo" expression="${target.repo}" />
             <param name="source.base" expression="${basedir}/src" />
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
         </xslt>
 
         <!-- Validate all generated XML files -->
