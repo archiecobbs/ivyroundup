@@ -37,7 +37,7 @@
             <!-- Add stylesheet reference -->
             <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="../../../../xsl/ivy-doc.xsl"</xsl:processing-instruction>
             <xsl:value-of select="'&#10;'"/>
-            <xsl:apply-templates select="@*|node()"/>
+            <xsl:apply-templates select="node()"/>
         </xsl:copy>
     </xsl:template>
 
@@ -220,9 +220,7 @@
             </xsl:call-template>
         </xsl:if>
 
-        <xsl:copy>
-            <xsl:apply-templates select="@*|node()"/>
-        </xsl:copy>
+        <xsl:copy/>
     </xsl:template>
 
     <!-- Copy everything else exactly -->
