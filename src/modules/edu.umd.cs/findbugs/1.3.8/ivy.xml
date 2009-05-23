@@ -34,6 +34,7 @@
         <artifact name="findbugs-ant" conf="default"/>
         <artifact name="default" conf="default" type="report" ext="xsl"/>
         <artifact name="annotations" conf="default"/>
+        <artifact name="bcel" conf="default"/>
         <artifact name="jFormatString" conf="default"/>
         <artifact name="jsr305" conf="default"/>
         <artifact name="source" type="source" ext="zip"/>
@@ -42,7 +43,6 @@
 
     <dependencies>
       <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="default->default"/>
-      <dependency org="org.apache.bcel" name="bcel" rev="5.+" conf="default->default"/>
       <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default->default"/>
       <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="default->default"/>
       <dependency org="org.codehaus.jaxen" name="jaxen" rev="1.1.1" conf="default->default"/>
