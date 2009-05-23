@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2009 Philip Johnson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -36,6 +35,7 @@
         <move file="archive/${archive}/lib/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
         <move file="archive/${archive}/lib/${name}-ant.jar" tofile="artifacts/jars/${name}-ant.jar"/>
         <move file="archive/${archive}/lib/annotations.jar" tofile="artifacts/jars/annotations.jar"/>
+        <move file="archive/${archive}/lib/bcel.jar" tofile="artifacts/jars/bcel.jar"/>
         <move file="archive/${archive}/lib/jFormatString.jar" tofile="artifacts/jars/jFormatString.jar"/>
         <move file="archive/${archive}/lib/jsr305.jar" tofile="artifacts/jars/jsr305.jar"/>
 
