@@ -8,6 +8,9 @@
 # Bail on errors, show commands
 set -e
 
+LANG=C
+LC_ALL=C
+
 # Subroutine
 regenerate_repo()
 {
