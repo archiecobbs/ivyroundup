@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="JGroups-${revision}.GA"/>
+
+    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.bin.zip"
+      sha1="8a1966e9591ad4dbb790f0e5122fa4c058a9afad">
+        <include name="${archive}.bin/${name}-all.jar"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.src.zip"
+      sha1="a607a1cea8e712417ccd32ba04a048aa01e6be4c">
+        <include name="${archive}.src/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}.bin/${name}-all.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}.src/src"/>
+        </zip>
+    </build>
+</packager-module>
