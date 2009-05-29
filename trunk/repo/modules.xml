@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-05-26 21:03:15 UTC</timestamp>
-  <svnRevision>734</svnRevision>
+  <timestamp>2009-05-29 11:58:28 UTC</timestamp>
+  <svnRevision>743</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -336,6 +336,11 @@
       <rev name="8.0.20060801.131059"/>
     </mod>
   </org>
+  <org name="net.sourceforge.kosmosfs">
+    <mod name="kfs">
+      <rev name="0.2.0"/>
+    </mod>
+  </org>
   <org name="net.sourceforge.mx4j">
     <mod name="mx4j">
       <rev name="3.0.2"/>
@@ -408,6 +413,11 @@
   <org name="net.sourceforge.wsdl4j">
     <mod name="wsdl4j">
       <rev name="1.6.2"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.xmlenc">
+    <mod name="xmlenc">
+      <rev name="0.52"/>
     </mod>
   </org>
   <org name="net.sourceforge.xmlunit">
@@ -522,9 +532,17 @@
       <rev name="1.1.1"/>
       <rev name="1.1"/>
     </mod>
+    <mod name="commons-net">
+      <rev name="1.4.1"/>
+    </mod>
     <mod name="commons-pool">
       <rev name="1.3"/>
       <rev name="1.4"/>
+    </mod>
+  </org>
+  <org name="org.apache.hadoop">
+    <mod name="hadoop">
+      <rev name="0.19.1"/>
     </mod>
   </org>
   <org name="org.apache.jakarta.taglibs">
