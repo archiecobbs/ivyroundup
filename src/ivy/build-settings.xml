@@ -7,7 +7,7 @@
         <!--
             Define a packager repository using the repository we build in ${target.repo}
         -->
-        <packager name="ivyroundup"
+        <packager name="ivyroundup" restricted="false"
           buildRoot="${user.home}/.ivy2/packager/build"
           resourceCache="${user.home}/.ivy2/packager/cache">
             <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>

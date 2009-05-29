@@ -7,7 +7,7 @@
         <!--
             Define a packager repository using the repository we build in ${target.repo}
         -->
-        <packager name="ivyroundup"
+        <packager name="ivyroundup" restricted="false"
           buildRoot="${basedir}/build/workspace"
           preserveBuildDirectories="true"
           resourceCache="${user.home}/.ivy2/packager/cache">
