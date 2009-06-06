@@ -22,18 +22,23 @@
 
     <info organisation="org.apache.commons" module="commons-codec" revision="1.3" status="release" publication="20040710000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 225 2008-05-08 20:43:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-codec/1.3/"/>
+        <ivyauthor name="$Id: ivy.xml 748 2009-06-06 03:58:51Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-codec/1.3/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/codec/">
             Commons Codec provides implementations of common encoders
             and decoders such as Base64, Hex, Phonetic and URLs.
         </description>
     </info>
+  <configurations>
+    <conf name="build"/>
+    <conf name="source"/>
+    <conf name="javadoc"/>
+    <conf name="default" extends="build,source,javadoc"/>
+  </configurations>
 
-    <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-
+  <publications>
+    <artifact conf="build"/>
+    <artifact name="commons-codec-source" type="source" conf="source" ext="zip"/>
+    <artifact name="commons-codec-javadoc" type="javadoc" conf="javadoc" ext="zip"/>
+  </publications>
 </ivy-module>
