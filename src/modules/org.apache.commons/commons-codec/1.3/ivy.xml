@@ -25,11 +25,26 @@
             and decoders such as Base64, Hex, Phonetic and URLs.
         </description>
     </info>
+  <configurations>
+    <conf name="build" />
+    <conf name="source" />
+    <conf name="javadoc" />
+    <conf
+        name="default"
+        extends="build,source,javadoc" />
+  </configurations>
 
-    <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-
+  <publications>
+    <artifact conf="build" />
+    <artifact
+        name="commons-codec-source"
+        type="source"
+        conf="source"
+        ext="zip"/>
+    <artifact
+        name="commons-codec-javadoc"
+        type="javadoc"
+        conf="javadoc"
+        ext="zip"/>
+  </publications>
 </ivy-module>
