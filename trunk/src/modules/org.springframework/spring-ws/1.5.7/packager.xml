@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2009 Mark Thomas <spatialguru.net@gmail.com>
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="org/springframework/ws" artifactId="spring-oxm">
+        <artifact tofile="artifacts/jars/spring-oxm.jar" sha1="df9dd13ebaa3917010dbecdf717f333c2ad71d35"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-oxm.zip" sha1="d987f486095e95707b20d9ad0053045e9d39fca4"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-oxm-tiger">
+        <artifact tofile="artifacts/jars/spring-oxm-tiger.jar" sha1="222fcc490a624c0b6f4b4156065ce6f88ebd91ff"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-oxm-tiger.zip" sha1="494303623466670bd1874ac9e1150872adf417d7"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-ws">
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="e7d8de8d53ab303b3f4ed0c72ced6a3ed5ab687a"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-ws-core">
+        <artifact tofile="artifacts/jars/spring-ws-core.jar" sha1="f5b5c1844ad98d9eb0e2d8f8221939f93d30172a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-ws-core.zip" sha1="9d748c8289e0d6d6471091362925e1b5b8d9b530"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-ws-core-tiger">
+        <artifact tofile="artifacts/jars/spring-ws-core-tiger.jar" sha1="4e4e920bb14c134dce4977373ce38c54ddaaa631"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-ws-core-tiger.zip" sha1="34a7eb3406dc85b646ee9b414b17b545b4fc5cc2"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-ws-security">
+        <artifact tofile="artifacts/jars/spring-ws-security.jar" sha1="0e7cfc49ff85e00963a838a2013d61e55849c042"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-ws-security.zip" sha1="db5279fda09faace42737c83cd007ee32a8a7325"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-ws-support">
+        <artifact tofile="artifacts/jars/spring-ws-support.jar" sha1="61bfb798ae44a4e3962dd36427e18bdbf44bf412"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-ws-support.zip" sha1="2c4a9e4ab11b1123e60c4c17ec47440df6f8e207"/>
+     </m2resource>
+    <m2resource groupId="org/springframework/ws" artifactId="spring-xml">
+        <artifact tofile="artifacts/jars/spring-xml.jar" sha1="1cd2ea2501c50ae7ced8b9d30bea9319b32b84b5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-xml.zip" sha1="f2db05fa172b8ce0284fb1a80680a14f201a37b2"/>
+    </m2resource>
+</packager-module>
