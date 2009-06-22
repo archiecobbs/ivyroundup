@@ -17,7 +17,7 @@ regenerate_repo()
 {
     # Regenerate repo
     echo 'regenrepo: regenerating repository' "$1"
-    ant repo > regen.out
+    ant -Ddownload-xalan=true repo > regen.out
 
     # Check for errors (fatal)
     if grep -q ERROR regen.out; then
