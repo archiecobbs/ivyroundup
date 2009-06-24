@@ -31,11 +31,10 @@ Instead, they define artifacts. Artifacts have the following attributes:
   * Artifact name
   * Artifact type
   * Artifact extension
-The only thing guaranteed to be unique for an artifact is the combination of _all_ of the above attributes (and that guarantee only applies within a single repository).
+The only thing guaranteed to be unique for an artifact is the combination of _all_ of the above attributes (and that guarantee only applies within a single repository). (Actually I don't think two artifacts can differ only in their extension... anyone?)
 
 Filename collisions can only happen when actually retrieve the artifacts. They are only possible when you specify a retrieval filename pattern that is "degenerate". Of course, many times you can get lucky, but that just makes the error even more mysterious when it does finally occur. You may see an exception that says {{{Multiple artifacts of the module xxx#yyy;zzz are retrieved to the same file! Update the retrieve pattern  to fix this error}}}.
 
 To take an extreme example, a retrieval pattern of {{{"file"}}} will cause every artifact to map to the same filename - obviously this won't work. But neither will (in general) a seemingly reasonable pattern like {{{"[organisation]/[module]/[name]-[revision].[ext]"}}}, because it doesn't contain {{{[type]}}} anywhere. So a module with a "foo.jar" (JAR file artifact with {{{type="jar"}}}) and a "foo.jar" (Javadoc artifact with {{{type="javadoc"}}}) will cause a collision.
 
 The moral of the story is to always include all of the above attributes in ivy retrieval patterns. Of course, if you know you're only getting one revision of each module, you can leave that out. But you should always include all of the other attributes for safety.
-
