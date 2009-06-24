@@ -65,6 +65,9 @@
       <td>
       <xsl:for-each select="rev">
           <xsl:sort select="@name"/>
+          <xsl:if test="position() mod 10 = 0 and position() &lt; last()">
+              <br/>
+          </xsl:if>
           <xsl:element name="a">
               <xsl:attribute name="href">
                   <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.xml')"/>
