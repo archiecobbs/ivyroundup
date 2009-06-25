@@ -39,9 +39,9 @@ To take an extreme example, a retrieval pattern of {{{"file"}}} will cause every
 
 The moral of the story is: if possible, always include all of the above attributes in ivy retrieval patterns. Of course, if you know you're only getting one revision of each module, you can leave that out. Or if you're confident no two modules have the same name (often the case), you can leave out the organisation. But in general, you should include as many attributes as you can for safety.
 
-Here's an example of a reasonable retrieval pattern if you want to segregate different types of artifacts into separate directories. Note that this is not perfect because there's no {{{[organisation]}}}, but typically it would work:
+Here's an example of a reasonable retrieval pattern if you want to segregate different types of artifacts into separate (sub)directories. Note that this is not perfect because there's no {{{[organisation]}}}, but typically it would work as module names are, in practice, usually unique:
 {{{
-artifacts/[type]s/[module]-[name]-[revision].[ext]
+artifacts/[type]s/[module]/[name]-[revision].[ext]
 }}}
 If everything has to go into the same directory, then you might do something like this:
 {{{
