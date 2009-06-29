@@ -50,7 +50,7 @@ fi
 regenerate_repo
 
 # If there's anything new, svn copy it from source
-if svn st repo/modules | grep -q '^\?'; then
+if svn st repo/modules 2>/dev/null | grep '^\?'; then
 
     # Do the copy
     echo 'regenrepo: svn copying new stuff into repository'
