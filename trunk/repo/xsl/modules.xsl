@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: modules.xsl 315 2008-12-03 15:22:11Z archie.cobbs $ -->
+<!-- $Id: modules.xsl 776 2009-06-24 15:23:36Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/modules">
@@ -65,6 +65,9 @@
       <td>
       <xsl:for-each select="rev">
           <xsl:sort select="@name"/>
+          <xsl:if test="position() mod 10 = 0 and position() &lt; last()">
+              <br/>
+          </xsl:if>
           <xsl:element name="a">
               <xsl:attribute name="href">
                   <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.xml')"/>
