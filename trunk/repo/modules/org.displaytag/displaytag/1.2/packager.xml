@@ -26,10 +26,18 @@
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/docs/${name}/apidocs/**/*"/>
     </resource>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.zip" sha1="65af530f6602039328d1be0b0248153b36275429"/>
 
     <build>
         <!-- jar -->
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/${name}/src/main/java"/>
+            <fileset dir="archive/${archive}/${name}-export-poi/src/main/java"/>
+            <fileset dir="archive/${archive}/${name}-portlet/src/main/java"/>
+        </zip>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
