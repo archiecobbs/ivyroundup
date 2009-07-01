@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="version.major" value="3"/>
+    <property name="version.minor" value="2"/>
+    <property name="version.patch" value="7"/>
+    <property name="revision" value="${version.major}.${version.minor}.${version.patch}"/>
+    <property name="archive" value="${name}-${revision}.ga"/>
+    <property name="archdir" value="${name}-${version.major}.${version.minor}"/>
+    <property name="jarname" value="${name}${version.major}"/>
+
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz"
+      dest="archive" sha1="a089b238e07d5571391039b15b5632c5bdd777ea">
+        <include name="${archdir}/${jarname}.jar"/>
+        <include name="${archdir}/doc/api/**/*"/>
+        <include name="${archdir}/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- hibernate3.jar -->
+        <move file="archive/${archdir}/${jarname}.jar" todir="artifacts/jars"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archdir}/doc/api"/>
+        </zip>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archdir}/src"/>
+        </zip>
+    </build>
+</packager-module>
