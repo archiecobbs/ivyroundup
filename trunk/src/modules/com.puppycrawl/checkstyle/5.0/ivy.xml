@@ -37,14 +37,14 @@
 
     <configurations>
         <conf name="default" description="Core checkstyle classes"/>
-        <conf name="bundled" extends="default" description="Core plus checkstyle-all.jar with all dependent libraries" />
+        <conf name="bundled" description="Core plus checkstyle-all.jar with all dependent libraries" />
     </configurations>
 
     <publications>
         <artifact name="checkstyle" conf="default"/>
         <artifact name="checkstyle-all" conf="bundled"/>
-        <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default"/>
-        <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default"/>
+        <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default,bundled"/>
+        <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
         <artifact name="google-collect-snapshot-20090211" conf="default"/>
