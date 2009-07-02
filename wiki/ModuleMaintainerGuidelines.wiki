@@ -54,7 +54,7 @@ Define module configurations carefully. If other modules reference configuration
 
 For this reason generally it's safer to define new configurations rather than changing or removing old ones.
 
-All modules should have a *default* configuration, which should best reflect the "normal" or "expected" usage of the module. Use your best judgement here, and err on the side of including more artifacts rather than less.
+All modules should have a *default* configuration, which should best reflect the "normal" or "expected" usage of the module. Use your best judgement here, and err on the side of including more artifacts rather than less. However, if *default* would be the _only_ configuration, then don't define any configurations at all, because ivy will add *default* for you implicitly.
 
 The point is to give people a "quick and dirty" way to reference your module using the default configuration, at the possible cost of pulling in more than they really need. In addition, provide additional non-default configurations for more specific and precise situations.
 
