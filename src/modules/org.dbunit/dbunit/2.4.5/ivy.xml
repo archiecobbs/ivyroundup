@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20090522220500">
+        <license name="GNU Lesser General Public License, Version 2.1"
+          url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://www.dbunit.org/"><![CDATA[
+        DbUnit is a JUnit extension (also usable with Ant) targeted for
+        database-driven projects that, among other things, puts your
+        database into a known state between test runs. This is an excellent
+        way to avoid the myriad of problems that can occur when one test case
+        corrupts the database and causes subsequent tests to fail or
+        exacerbate the damage.
+        ]]></description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.5.6,2.0[" conf="default->core"/>
+    </dependencies>
+
+</ivy-module>
