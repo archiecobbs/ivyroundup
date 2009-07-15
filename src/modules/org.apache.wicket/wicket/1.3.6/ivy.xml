@@ -59,4 +59,8 @@ powerful, reusable components written with plain Java and HTML.
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 
+    <dependencies>
+      <dependency org="org.joda" name="joda-time" rev="1.6" conf="datetime->default"/>
+    </dependencies>
+
 </ivy-module>
