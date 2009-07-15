@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
-
 <!--
     Copyright 2009 Philip Johnson
 
@@ -22,7 +21,7 @@
 
     <info organisation="org.apache.wicket" module="wicket" revision="1.3.6" status="release" publication="20090503120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 783 2009-06-27 20:34:41Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.wicket/wicket/1.3.6/"/>
+        <ivyauthor name="$Id: ivy.xml 806 2009-07-15 20:37:55Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.wicket/wicket/1.3.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://wicket.apache.org/">
 Apache Wicket is an open source, java, component based, web application
@@ -62,5 +61,9 @@ powerful, reusable components written with plain Java and HTML.
         <artifact name="wicket-velocity" conf="velocity"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
+
+    <dependencies>
+      <dependency org="org.joda" name="joda-time" rev="1.6" conf="datetime-&gt;default"/>
+    </dependencies>
 
 </ivy-module>
