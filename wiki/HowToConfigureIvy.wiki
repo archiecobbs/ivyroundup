@@ -18,6 +18,8 @@ A couple of notes about the above configuration:
   * Downloaded resources will be cached in {{{${user.home}/.ivy2/packager/cache}}}; if you don't want this, remove the {{{resourceCache}}} attribute.
   * The URLs above point to the "trunk" of Ivy !RoundUp. Eventually, there may be more stable snapshots under "branches" and "tags".
 
+*IMPORTANT:* you also have to manually download certain software that requires a license agreement. See ManuallyDownloadedSoftware for details.
+
 == Retrieval Patterns ==
 
 Ivy !RoundUp (and any other ivy repository) may contain many artifacts with the same filename. For example, two unrelated modules may both have an artifact called {{{util.jar}}}. Or several modules may have a {{{javadoc.zip}}}. So be careful with your retrieval patterns that you don't map two different artifacts to the same directory and filename.
