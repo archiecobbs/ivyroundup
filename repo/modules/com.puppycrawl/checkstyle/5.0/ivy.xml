@@ -22,7 +22,7 @@
 
     <info organisation="com.puppycrawl" module="checkstyle" revision="5.0" status="release" publication="20090418144200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 699 2009-05-12 02:48:59Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.0/"/>
+        <ivyauthor name="$Id: ivy.xml 798 2009-07-02 18:11:02Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
@@ -41,14 +41,14 @@
 
     <configurations>
         <conf name="default" description="Core checkstyle classes"/>
-        <conf name="bundled" extends="default" description="Core plus checkstyle-all.jar with all dependent libraries"/>
+        <conf name="bundled" description="Core plus checkstyle-all.jar with all dependent libraries"/>
     </configurations>
 
     <publications>
         <artifact name="checkstyle" conf="default"/>
         <artifact name="checkstyle-all" conf="bundled"/>
-        <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default"/>
-        <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default"/>
+        <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default,bundled"/>
+        <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
         <artifact name="google-collect-snapshot-20090211" conf="default"/>
