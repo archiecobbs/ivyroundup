@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/${name}/iText-${revision}.jar"
+      tofile="artifacts/jars/${name}.jar" sha1="892bfb3e97074a61123b3b2d7caa2db112750864"/>
+    <resource url="http://downloads.sourceforge.net/${name}/iText-rtf-${revision}.jar"
+      tofile="artifacts/jars/${name}-rtf.jar" sha1="ed1cbe69ff69c6e6fa7645f51c8d25894a177e7b"/>
+    <resource url="http://downloads.sourceforge.net/${name}/iText-rups-${revision}.jar"
+      tofile="artifacts/jars/${name}-rups.jar" sha1="a2393cd888517614777f08f5da84ccc172400493"/>
+    <resource url="http://downloads.sourceforge.net/${name}/iText-toolbox-${revision}.jar"
+      tofile="artifacts/jars/${name}-toolbox.jar" sha1="274121a1a386d8fcca547e8bb3e79c84fd6de495"/>
+    <resource url="http://downloads.sourceforge.net/${name}/iText-${revision}-sources.jar"
+      tofile="artifacts/sources/source.zip" sha1="c4a56ee84b87e8737e6b7769fcfeb97019003a14"/>
+    <resource url="http://downloads.sourceforge.net/${name}/iText-docs-${revision}.tar.gz"
+      sha1="f206dacbc9c8e051f476bf7d01b0688672b776b6"/>
+
+    <build>
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive"/>
+        </zip>
+    </build>
+</packager-module>
