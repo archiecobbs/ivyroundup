@@ -107,8 +107,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.2.0,4.0[" conf="default-&gt;core"/>
-        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="[3.0.0,4.0[" conf="default-&gt;default"/>
-        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3.2,4.0[" conf="jpa-&gt;ejb3api"/>
+        <dependency org="org.hibernate" name="hibernate" rev="3.2.+" conf="default-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.0.+" conf="default-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.3.+" conf="jpa-&gt;ejb3api"/>
     </dependencies>
 </ivy-module>

@@ -75,10 +75,10 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.2.0,4.0[" conf="default-&gt;core"/>
-        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="[3.0.0,4.0[" conf="default-&gt;default"/>
-        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3.2,4.0[" conf="default-&gt;ejb3api"/>
-        <dependency org="org.hibernate" name="hibernate-validator" rev="[3.0.0,4.0[" conf="validator-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="3.2.+" conf="default-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.0.+" conf="default-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.3.+" conf="default-&gt;ejb3api"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="3.0.+" conf="validator-&gt;default"/>
     <!-- TODO
         <dependency org="org.hibernate" name="hibernate-search" rev="[3.0.0,4.0[" conf="search->default"/>
     -->
