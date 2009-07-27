@@ -32,6 +32,7 @@
         <conf name="core" description="Spring Integration Core"/>
         <conf name="event" extends="core" description="Spring Integration ApplicationEvent Support"/>
         <conf name="file" extends="core" description="Spring Integration File Adapters"/>
+        <conf name="http" extends="adapter" description="Spring Integration HTTP Support"/>
         <conf name="httpinvoker" extends="adapter" description="Spring Integration HttpInvoker Support"/>
         <conf name="jms" extends="adapter" description="Spring Integration JMS Support"/>
         <conf name="mail" extends="adapter" description="Spring Integration Mail Support"/>
@@ -48,6 +49,7 @@
         <artifact name="spring-integration-core" conf="default,core"/>
         <artifact name="spring-integration-event" conf="default,event"/>
         <artifact name="spring-integration-file" conf="default,file"/>
+        <artifact name="spring-integration-http" conf="default,http"/>
         <artifact name="spring-integration-httpinvoker" conf="default,httpinvoker"/>
         <artifact name="spring-integration-jms" conf="default,jms"/>
         <artifact name="spring-integration-mail" conf="default,mail"/>
@@ -74,12 +76,13 @@
         <dependency org="org.apache.ws.commons" name="XmlSchema" rev="[1.3.2,)" conf="default,xml-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="[2.5.6,3.0["
           conf="default,core-&gt;tx;default,httpinvoker-&gt;web;default,jms-&gt;jms;default,mail-&gt;context-support;default,ws-&gt;webmvc"/>
-        <dependency org="org.springframework" name="spring-security" rev="2.0.4" conf="default,security-&gt;core"/>
-        <dependency org="org.springframework" name="spring-ws" rev="1.5.5" conf="default,ws-&gt;core">
+        <dependency org="org.springframework" name="spring-security" rev="2.0.+" conf="default,security-&gt;core"/>
+        <dependency org="org.springframework" name="spring-ws" rev="1.5.+" conf="default,ws-&gt;core">
             <artifact name="spring-ws-core"/>
             <artifact name="spring-oxm"/>
             <artifact name="spring-xml"/>
         </dependency>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.1,4.0[" conf="default,http-&gt;default"/>
     </dependencies>
 
 </ivy-module>

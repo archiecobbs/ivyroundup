@@ -14,7 +14,7 @@
 
 <ivy-module rev="$Id$">
 
-    <info publication="20081217181900">
+    <info publication="20090331181700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://www.springsource.org/spring-integration/"><![CDATA[Spring Integration
         is a new addition to the Spring portfolio. It provides an extension of the Spring programming model
@@ -32,6 +32,7 @@
         <conf name="core" description="Spring Integration Core"/>
         <conf name="event" extends="core" description="Spring Integration ApplicationEvent Support"/>
         <conf name="file" extends="core" description="Spring Integration File Adapters"/>
+        <conf name="http" extends="core" description="Spring Integration HTTP Support"/>
         <conf name="httpinvoker" extends="adapter" description="Spring Integration HttpInvoker Support"/>
         <conf name="jms" extends="adapter" description="Spring Integration JMS Support"/>
         <conf name="mail" extends="adapter" description="Spring Integration Mail Support"/>
@@ -48,6 +49,7 @@
         <artifact name="spring-integration-core" conf="default,core"/>
         <artifact name="spring-integration-event" conf="default,event"/>
         <artifact name="spring-integration-file" conf="default,file"/>
+        <artifact name="spring-integration-http" conf="default,http"/>
         <artifact name="spring-integration-httpinvoker" conf="default,httpinvoker"/>
         <artifact name="spring-integration-jms" conf="default,jms"/>
         <artifact name="spring-integration-mail" conf="default,mail"/>
@@ -57,6 +59,7 @@
         <artifact name="spring-integration-ws" conf="default,ws"/>
         <artifact name="spring-integration-xml" conf="default,xml"/>
         <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
     
     <dependencies>
@@ -65,7 +68,7 @@
         <dependency org="javax.activation" name="jaf" rev="1.1.1" conf="default,ws-&gt;default"/>
         <dependency org="javax.jms" name="jms" rev="1.1" conf="default,jms-&gt;default"/>
         <dependency org="javax.mail" name="javamail" rev="1.4.1" conf="default,mail-&gt;default"/>
-        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="default,httpinvoker-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="default,http,httpinvoker-&gt;default"/>
         <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.1" conf="default,xml-&gt;default">
             <artifact name="jsr173_1.0_api"/>
         </dependency>
@@ -80,7 +83,7 @@
             <artifact name="spring-oxm"/>
             <artifact name="spring-xml"/>
         </dependency>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.1,4.0[" conf="default,http-&gt;default"/>
     </dependencies>
 
 </ivy-module>
-
