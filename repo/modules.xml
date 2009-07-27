@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-07-22 01:29:22 UTC</timestamp>
-  <svnRevision>825</svnRevision>
+  <timestamp>2009-07-27 14:45:21 UTC</timestamp>
+  <svnRevision>832</svnRevision>
   <org name="classycle">
     <mod name="classycle">
       <rev name="0.9"/>
@@ -795,6 +795,11 @@
       <rev name="1.8.0.10"/>
     </mod>
   </org>
+  <org name="org.jasig.cas">
+    <mod name="cas-client-core">
+      <rev name="3.1.6"/>
+    </mod>
+  </org>
   <org name="org.jaspersoft">
     <mod name="jasperreports">
       <rev name="3.5.0"/>
@@ -962,6 +967,11 @@
       <rev name="1.1.5"/>
     </mod>
   </org>
+  <org name="org.samba.jcifs">
+    <mod name="jcifs">
+      <rev name="1.2.19"/>
+    </mod>
+  </org>
   <org name="org.slf4j">
     <mod name="slf4j">
       <rev name="1.0"/>
@@ -986,11 +996,13 @@
     <mod name="spring-integration">
       <rev name="1.0.1"/>
       <rev name="1.0.2"/>
+      <rev name="1.0.3"/>
     </mod>
     <mod name="spring-security">
       <rev name="2.0.1"/>
       <rev name="2.0.3"/>
       <rev name="2.0.4"/>
+      <rev name="2.0.5"/>
     </mod>
     <mod name="spring-ws">
       <rev name="1.5.5"/>
