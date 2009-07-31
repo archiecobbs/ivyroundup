@@ -12,6 +12,16 @@ set -e
 export LANG=C
 export LC_ALL=C
 
+# Use the right sed(1) flag
+case "`uname -s`" in
+    Darwin|FreeBSD)
+        SEDFLAG="-E"
+        ;;
+    *)
+        SEDFLAG="-r"
+        ;;
+esac
+
 # Subroutine
 regenerate_repo()
 {
@@ -57,7 +67,7 @@ if svn st repo/modules 2>/dev/null | grep '^\?'; then
     svn st repo/modules \
       | grep '^\?' \
       | awk '{print $2}' \
-      | sed -r 's/^repo\///g' \
+      | sed ${SEDFLAG} 's/^repo\///g' \
       | while read NAME; do
         rm -rf repo/$NAME
         svn cp src/$NAME repo/$NAME
