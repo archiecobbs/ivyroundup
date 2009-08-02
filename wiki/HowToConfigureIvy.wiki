@@ -5,12 +5,12 @@
 To use the Ivy !RoundUp repository, simply define a "packager" resolver in your {{{ivysettings.xml}}} that points to the Ivy !RoundUp repository like so:
 
 {{{
-    <resolvers>
-        <packager name="roundup" buildRoot="${user.home}/.ivy2/packager/build" resourceCache="${user.home}/.ivy2/packager/cache">
-            <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-            <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/packager.xml"/>
-        </packager>
-    </resolvers>
+<resolvers>
+    <packager name="roundup" buildRoot="${user.home}/.ivy2/packager/build" resourceCache="${user.home}/.ivy2/packager/cache">
+        <ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+        <artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/packager.xml"/>
+    </packager>
+</resolvers>
 }}}
 
 A couple of notes about the above configuration:
@@ -19,6 +19,16 @@ A couple of notes about the above configuration:
   * The URLs above point to the "trunk" of Ivy !RoundUp. Eventually, there may be more stable snapshots under "branches" and "tags".
 
 *IMPORTANT:* you also have to manually download certain software that requires a license agreement. See ManuallyDownloadedSoftware for details.
+
+== Fixed Revisions of Ivy !RoundUp ==
+
+If you want to always use the same, fixed revision of Ivy RoundUp and not "float" with the trunk, then you just need to include */!svn/bc/REV* in your settings URLs, where *REV* is the revision number. For example, to always use revision *345* of Ivy RoundUp's trunk, you'd configure this way:
+{{{
+<ivy pattern="http://ivyroundup.googlecode.com/svn/!svn/bc/345/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+<artifact pattern="http://ivyroundup.googlecode.com/svn/!svn/bc/345/trunk/repo/modules/[organisation]/[module]/[revision]/packager.xml"/>
+}}}
+
+This is a useful technique when you want to ensure reproducible builds, e.g., for a version of your software that has already been tagged and released.
 
 == Retrieval Patterns ==
 
