@@ -22,7 +22,7 @@ A couple of notes about the above configuration:
 
 == Fixed Revisions of Ivy !RoundUp ==
 
-If you want to always use the same, fixed revision of Ivy RoundUp and not "float" with the trunk, then you just need to include */!svn/bc/REV* in your settings URLs, where *REV* is the revision number. For example, to always use revision *345* of Ivy RoundUp's trunk, you'd configure this way:
+If you want to always use the same, fixed revision of Ivy !RoundUp and not "float" with the trunk, then you just need to include */!svn/bc/REV* in your settings URLs, where *REV* is the revision number. For example, to always use revision *345* of Ivy !RoundUp's trunk, you'd configure this way:
 {{{
 <ivy pattern="http://ivyroundup.googlecode.com/svn/!svn/bc/345/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
 <artifact pattern="http://ivyroundup.googlecode.com/svn/!svn/bc/345/trunk/repo/modules/[organisation]/[module]/[revision]/packager.xml"/>
