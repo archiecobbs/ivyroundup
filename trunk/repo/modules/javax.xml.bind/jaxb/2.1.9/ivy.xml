@@ -22,7 +22,7 @@
 
     <info organisation="javax.xml.bind" module="jaxb" revision="2.1.9" status="release" publication="20081030120000">
         <license name="Dual license consisting of the  CDDL v1.0 and GPL v2" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 330 2008-12-12 22:34:23Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.1.9/"/>
+        <ivyauthor name="$Id: ivy.xml 841 2009-08-04 13:48:36Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.1.9/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jaxb.dev.java.net/">
 
@@ -66,11 +66,11 @@
         <artifact name="jaxb-xjc" conf="compile"/>
         <artifact name="jsr173_1.0_api" conf="runtime,jsr173"/>
 
-        <artifact name="jaxb-api-src" type="source" ext="zip"/>
-        <artifact name="jaxb-impl.src" type="source" ext="zip"/>
-        <artifact name="jaxb-xjc.src" type="source" ext="zip"/>
+        <artifact name="jaxb-api" type="source" ext="zip"/>
+        <artifact name="jaxb-impl" type="source" ext="zip"/>
+        <artifact name="jaxb-xjc" type="source" ext="zip"/>
 
-        <artifact name="jaxb-api-doc" type="javadoc" ext="zip"/>
+        <artifact name="jaxb-api" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
