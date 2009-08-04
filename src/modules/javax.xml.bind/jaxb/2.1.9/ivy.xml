@@ -62,11 +62,11 @@
         <artifact name="jaxb-xjc" conf="compile"/>
         <artifact name="jsr173_1.0_api" conf="runtime,jsr173"/>
 
-        <artifact name="jaxb-api-src" type="source" ext="zip"/>
-        <artifact name="jaxb-impl.src" type="source" ext="zip"/>
-        <artifact name="jaxb-xjc.src" type="source" ext="zip"/>
+        <artifact name="jaxb-api" type="source" ext="zip"/>
+        <artifact name="jaxb-impl" type="source" ext="zip"/>
+        <artifact name="jaxb-xjc" type="source" ext="zip"/>
 
-        <artifact name="jaxb-api-doc" type="javadoc" ext="zip"/>
+        <artifact name="jaxb-api" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
