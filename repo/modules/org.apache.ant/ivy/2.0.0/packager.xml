@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/ant/ivy/${revision}/${archive}-bin.tar.gz" sha1="c190db67e5ca5c76caea989bd9e508ece0072645"/>
+    <resource url="http://archive.apache.org/dist/ant/ivy/${revision}/${archive}-bin.tar.gz" sha1="c190db67e5ca5c76caea989bd9e508ece0072645"/>
 
     <build>
         <!-- jar -->

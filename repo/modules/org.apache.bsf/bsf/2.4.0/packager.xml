@@ -22,8 +22,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/jakarta/bsf/binaries/${name}-bin-${revision}.tar.gz" sha1="2b8fe5989824ccb732bdffefeb0be94453929245"/>
-    <resource url="http://www.apache.org/dist/jakarta/bsf/source/${name}-src-${revision}.tar.gz" sha1="23422d907d085797fcbdf81296237e608a77e54f"/>
+    <resource url="http://archive.apache.org/dist/jakarta/bsf/binaries/${name}-bin-${revision}.tar.gz" sha1="2b8fe5989824ccb732bdffefeb0be94453929245"/>
+    <resource url="http://archive.apache.org/dist/jakarta/bsf/source/${name}-src-${revision}.tar.gz" sha1="23422d907d085797fcbdf81296237e608a77e54f"/>
 
     <build>
         <!-- jar -->
