@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/ws/commons/${name}/1_4_3/${archive}-bin.zip"
+    <resource url="http://archive.apache.org/dist/ws/commons/${name}/1_4_3/${archive}-bin.zip"
       sha1="0e80321cf14ce9608d919111f8691a90b3e020ca"/>
-    <resource url="http://www.apache.org/dist/ws/commons/${name}/1_4_3/${archive}-src.zip"
+    <resource url="http://archive.apache.org/dist/ws/commons/${name}/1_4_3/${archive}-src.zip"
       sha1="b0970ef5943e1b8dfe66293c547c764a002e1544"/>
 
     <build>
