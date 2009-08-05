@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/hadoop/core/${archive}/${archive}.tar.gz" sha1="7e409b259145547f562c348deeb30a4f71e21be3"/>
+    <resource url="http://archive.apache.org/dist/hadoop/core/${archive}/${archive}.tar.gz" sha1="7e409b259145547f562c348deeb30a4f71e21be3"/>
 
     <build>
         <!-- jar -->
