@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/xmlgraphics/commons/binaries/${archive}-bin.zip"
+    <resource url="http://archive.apache.org/dist/xmlgraphics/commons/binaries/${archive}-bin.zip"
         sha1="93b696d01a7e606570a0063b105a0b9d9b969744"/>
-    <resource url="http://www.apache.org/dist/xmlgraphics/commons/source/${archive}-src.zip"
+    <resource url="http://archive.apache.org/dist/xmlgraphics/commons/source/${archive}-src.zip"
         sha1="463e7f4eab3f353cffc964a13a0773f3d489628a"/>
 
     <build>

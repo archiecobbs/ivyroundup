@@ -22,10 +22,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/avalon/${name}/v${revision}/${archive}.zip"
+    <resource url="http://archive.apache.org/dist/avalon/${name}/v${revision}/${archive}.zip"
         sha1="8c70d9625dcac8d0147538ce29dd79356a544056"/>
 
-    <resource url="http://www.apache.org/dist/avalon/${name}/v${revision}/${archive}-src.zip"
+    <resource url="http://archive.apache.org/dist/avalon/${name}/v${revision}/${archive}-src.zip"
         sha1="0484588f658e2acb470ec2f51b70097df4150837"/>
 
     <build>

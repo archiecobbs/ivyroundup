@@ -22,12 +22,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/db/derby/db-derby-10.5.1.1/db-derby-${revision}-bin.zip" sha1="b2700070284d27d0165b3f4ee34c15fa0be87d82">
+    <resource url="http://archive.apache.org/dist/db/derby/db-derby-10.5.1.1/db-derby-${revision}-bin.zip" sha1="b2700070284d27d0165b3f4ee34c15fa0be87d82">
        <include name="${archive}/lib/*.jar"/>
        <include name="${archive}/javadoc/jdbc4/**"/>
     </resource>
 
-    <resource url="http://www.apache.org/dist/db/derby/db-derby-10.5.1.1/db-derby-${revision}-src.zip" sha1="a408c88b34be776cac6a4d03a8ba40181dcc0500">
+    <resource url="http://archive.apache.org/dist/db/derby/db-derby-10.5.1.1/db-derby-${revision}-src.zip" sha1="a408c88b34be776cac6a4d03a8ba40181dcc0500">
        <include name="${archive}/db-derby-${revision}-doc-src/src/**"/>
     </resource>
 
