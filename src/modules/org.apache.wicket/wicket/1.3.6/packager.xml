@@ -22,7 +22,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/wicket/1.3.6/${archive}.zip" sha1="df1d619b3df272d0e9b0e06ba958cd91bbf8fe97"/>
+    <resource url="http://archive.apache.org/dist/wicket/1.3.6/${archive}.zip"
+      sha1="df1d619b3df272d0e9b0e06ba958cd91bbf8fe97"/>
 
     <build>
         <!-- jar files; strip revision numbers-->
