@@ -22,8 +22,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.urlstructure.com/apache/${name}/java/${archive}.zip" sha1="631591d385d2f3e988ad35709a8194d2651ea26c"/>
-    <resource url="http://www.urlstructure.com/apache/${name}/java/${archive}-src.zip" sha1="d6998367c926be0e7cd93e2b205d1607e513c99e"/>
+    <resource url="http://archive.apache.org/dist/${name}/java/${archive}.zip"
+      sha1="631591d385d2f3e988ad35709a8194d2651ea26c"/>
+    <resource url="http://archive.apache.org/dist/${name}/java/${archive}-src.zip"
+      sha1="d6998367c926be0e7cd93e2b205d1607e513c99e"/>
 
     <build>
         <!-- jar -->
