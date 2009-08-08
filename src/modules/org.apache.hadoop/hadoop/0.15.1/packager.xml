@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2009 Stephen Woods
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/hadoop/core/${archive}/${archive}.tar.gz" sha1="4d51d04726f0c99a4c6204e36e2a24eede6ebf8c"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${archive}-core.jar" tofile="artifacts/jars/${name}-core.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}-core-source.zip">
+            <fileset dir="archive/${archive}/src/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/${name}-javadoc.zip">
+            <fileset dir="archive/${archive}/docs/api"/>
+        </zip>
+    </build>
+</packager-module>
