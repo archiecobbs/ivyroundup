@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Vladimir Ritz Bossicard
+    Copyright 2009 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,22 +21,30 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
+    <property name="gwtarchive" value="${name}-gwt-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/${name}/java/${archive}.zip" sha1="631591d385d2f3e988ad35709a8194d2651ea26c"/>
-    <resource url="http://archive.apache.org/dist/${name}/java/${archive}-src.zip" sha1="d6998367c926be0e7cd93e2b205d1607e513c99e"/>
+    <resource url="http://charts4j.googlecode.com/files/${archive}.zip" sha1="fbe142210bbed7b1253410fc2c54f8b94e2caf75"/>
+    <resource url="http://charts4j.googlecode.com/files/${gwtarchive}.zip" sha1="96ae111d0f344bf9e439a031fd36ba1d1f99b8fc"/>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${name}-core-${revision}.jar" tofile="artifacts/jars/${name}-core.jar"/>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${gwtarchive}/lib/${gwtarchive}.jar" tofile="artifacts/jars/${name}-gwt.jar"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+        <zip destfile="artifacts/sources/source-gwt.zip">
+            <fileset dir="archive/${gwtarchive}/src"/>
         </zip>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/api"/>
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/javadoc-gwt.zip">
+            <fileset dir="archive/${gwtarchive}/javadoc"/>
         </zip>
     </build>
 </packager-module>

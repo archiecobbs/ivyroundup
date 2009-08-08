@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Vladimir Ritz Bossicard
+    Copyright 2009 Stephen Woods
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,20 +22,23 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/${name}/java/${archive}.zip" sha1="631591d385d2f3e988ad35709a8194d2651ea26c"/>
-    <resource url="http://archive.apache.org/dist/${name}/java/${archive}-src.zip" sha1="d6998367c926be0e7cd93e2b205d1607e513c99e"/>
+    <resource url="http://archive.apache.org/dist/hadoop/core/${archive}/${archive}.tar.gz" sha1="28af0ff0690fd19ec63ce764c535a6fcb50c8d75"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${name}-core-${revision}.jar" tofile="artifacts/jars/${name}-core.jar"/>
+        <move file="archive/${archive}/${archive}-core.jar" tofile="artifacts/jars/${name}-core.jar"/>
+        <move file="archive/${archive}/${archive}-tools.jar" tofile="artifacts/jars/${name}-tools.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/java"/>
+        <zip destfile="artifacts/sources/${name}-core-source.zip">
+            <fileset dir="archive/${archive}/src/core"/>
+        </zip>
+        <zip destfile="artifacts/sources/${name}-tools-source.zip">
+            <fileset dir="archive/${archive}/src/tools"/>
         </zip>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
+        <zip destfile="artifacts/javadocs/${name}-javadoc.zip">
             <fileset dir="archive/${archive}/docs/api"/>
         </zip>
     </build>
