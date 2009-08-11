@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.3.2.GA" status="release" publication="20090624015700">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 861 2009-08-11 14:59:38Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.3.2.GA/"/>
+        <ivyauthor name="$Id: ivy.xml 864 2009-08-11 15:58:14Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.3.2.GA/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
@@ -79,7 +79,6 @@
         <artifact name="hibernate-oscache" conf="oscache"/>
         <artifact name="hibernate-proxool" conf="proxool"/>
         <artifact name="hibernate-swarmcache" conf="swarmcache"/>
-        <artifact name="hibernate-cglib-repack" conf="cglib"/>
 
         <!-- source -->
         <artifact name="hibernate-c3p0" type="source" ext="zip" conf="c3p0"/>
@@ -116,6 +115,7 @@
         <dependency org="net.sourceforge.proxool" name="proxool" rev="[0.8.3,1.1[" conf="proxool-&gt;default"/>
         <dependency org="net.sourceforge.swarmcache" name="swarmcache" rev="[1.0RC2,2.0[" conf="swarmcache-&gt;default"/>
         <dependency org="com.opensymphony" name="oscache" rev="[2.1,3.0[" conf="oscache-&gt;default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="cglib-&gt;default"/>
 
     <!--
         TODO: TreeCache dependencies
