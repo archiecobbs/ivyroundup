@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Kirby Files
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20090623120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/webtoolkit/">
+
+            <p>
+            Google Web Toolkit (GWT) makes it easier to write
+            high-performance AJAX applications. You write your front end
+            in the Java programming language and GWT compiles your source
+            into highly optimized JavaScript. Writing web apps today
+            is a tedious and error-prone process. You spend 90% of your
+            time working around browser quirks, and JavaScript's lack of
+            modularity makes sharing, testing, and reusing AJAX components
+            difficult and fragile. It doesn't have to be that way.
+            </p>
+
+            <p>
+            <b>High performance JavaScript.</b> GWT produces AJAX apps that:
+                <ul>
+                <li>Load faster than hand-written JavaScript apps</li>
+                <li>Use smaller, more compact, cacheable code</li>
+                <li>Automatically support IE, Firefox, Mozilla, Safari, and Opera</li>
+                <li>Use the browser's "back" button correctly</li>
+                </ul>
+            </p>
+
+            <p>
+            <b>Better development tools.</b> Since you're writing in Java, you can use:
+                <ul>
+                <li>IDEs that you love like Eclipse, IntelliJ, and NetBeans</li>
+                <li>Full-featured debugging, with variable watches and breakpoints</li>
+                <li>Unit tests (based on JUnit) both in a debugger and in a browser</li>
+                </ul>
+            </p>
+
+            <p>
+            <b>Google APIs and reusable UI components.</b> GWT comes equipped with useful libraries:
+                <ul>
+                <li>Built-in UI components serve as cross-browser building blocks for your app</li>
+                <li>RPC helps with client-server interaction</li>
+                <li>JavaScript Native Interface (JSNI) simplifies integrating GWT code with existing JavaScript code</li>
+                </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Development and runtime JARs (combining compile and runtime) on Linux"/>
+        <conf name="linux" extends="default" description="Development and runtime JARs (combining compile and runtime) on Linux"/>
+        <conf name="linux-swt" extends="linux" description="Development and runtime JARs (combining compile and runtime) on Linux with SWT native libs"/>
+        <conf name="windows" description="Development and runtime JARs (combining compile and runtime) on Windows"/>
+        <conf name="windows-swt" extends="windows" description="Development and runtime JARs (combining compile and runtime) on Windows with SWT native libs"/>
+        <conf name="mac" description="Development and runtime JARs (combining compile and runtime) on Mac"/>
+        <conf name="mac-swt" extends="mac" description="Development and runtime JARs (combining compile and runtime) on Mac with SWT native libs"/>
+        <conf name="runtime" description="JARs needed for server-side runtime support for GWT RPC"/>
+        <conf name="api-checker" description="API Checker support"/>
+    </configurations>
+
+    <publications>
+        <artifact name="gwt-api-checker" conf="api-checker"/>
+        <artifact name="gwt-dev-linux" conf="default,linux"/>
+        <artifact name="libswt-mozilla17-profile-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libswt-mozilla-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libswt-mozilla17-profile-gcc3-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libswt-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libswt-pi-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libswt-mozilla-gcc3-gtk-3235" type="so" conf="linux-swt"/>
+        <artifact name="libgwt-ll" type="so" conf="linux-swt"/>
+        <artifact name="libswt-carbon-3235" type="jnilib" conf="mac-swt"/>
+        <artifact name="libswt-webkit-carbon-3235" type="jnilib" conf="mac-swt"/>
+        <artifact name="libswt-agl-carbon-3235" type="jnilib" conf="mac-swt"/>
+        <artifact name="libswt-pi-carbon-3235" type="jnilib" conf="mac-swt"/>
+        <artifact name="libgwt-ll" type="jnilib" conf="mac-swt"/>
+        <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
+        <artifact name="swt-win32-3235" type="dll" conf="windows-swt"/>
+        <artifact name="gwt-dev-windows" conf="windows"/>
+        <artifact name="gwt-dev-mac" conf="mac"/>
+        <artifact name="gwt-servlet" conf="runtime"/>
+        <artifact name="gwt-user" conf="default,linux,windows,mac"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
+
