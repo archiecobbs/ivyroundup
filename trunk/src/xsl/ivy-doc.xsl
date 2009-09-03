@@ -307,8 +307,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <td><xsl:if test="not(@org)"><xsl:value-of select="/ivy-module/info/@organisation"/></xsl:if><xsl:value-of select="@org"/></td>
       <td>
         <xsl:element name="a">
-            <xsl:attribute name="href">../../../../modules.xml#<xsl:value-of select="concat('module-', @name)"/></xsl:attribute>
-		    <xsl:value-of select="@name"/>
+          <xsl:attribute name="href">../../../<xsl:value-of select="@org"/>/<xsl:value-of select="@name"/>/</xsl:attribute>
+          <xsl:value-of select="@name"/>
         </xsl:element>
       </td>
       <td><xsl:value-of select="@rev"/></td>
@@ -363,10 +363,30 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:for-each select="$packager/resource">
     <tr>
       <td>
-        <xsl:value-of select="@url"/>
+        <xsl:choose>
+          <xsl:when test="starts-with(@url, 'file:')">
+            <span class="manual-download">
+                <xsl:value-of select="@url"/>
+            </span>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="@url"/>
+          </xsl:otherwise>
+        </xsl:choose>
         <xsl:for-each select="url/@href">
             <br/>
-            <xsl:value-of select="concat('[', ., ']')"/>
+            <xsl:choose>
+              <xsl:when test="starts-with(@url, 'file:')">
+                <xsl:value-of select="'['"/>
+                <span class="manual-download">
+                    <xsl:value-of select="."/>
+                </span>
+                <xsl:value-of select="']'"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="concat('[', ., ']')"/>
+              </xsl:otherwise>
+            </xsl:choose>
         </xsl:for-each>
       </td>
       <td>
@@ -385,6 +405,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <td><xsl:value-of select="@sha1"/></td>
     </tr>
     </xsl:for-each>
+    <xsl:if test="$packager/resource[starts-with(@url, 'file:')] or $packager/resource/url[starts-with(@href, 'file:')]">
+      <tr>
+        <td colspan="3">Note: <span class="manual-download">one ore more resources</span> shown above
+          <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">must be downloaded manually</a>.</td>
+      </tr>
+    </xsl:if>
     </tbody>
     </table>
     </xsl:if>
