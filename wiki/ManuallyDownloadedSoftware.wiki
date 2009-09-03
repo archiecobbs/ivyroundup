@@ -9,6 +9,7 @@ At the time of this writing, the following modules fall into this category:
 || *Module* || *Version* || *File(s) and Link* || *Notes* ||
 || jmx || 1.2.1 || [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp jmx-1_2_1-ri.zip] || ||
 || jmxremote || 1.0.1_04 || [http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/download.jsp jmxremote-1_0_1-ri-bin-b58.zip] || ||
+|| j2ee_management || 1.0 || [http://java.sun.com/j2ee/tools/management/downloads/index.html j2ee_management-1_0-fr-class.zip] || ||
 || javamail || 1.4.1 || [http://java.sun.com/products/javamail/downloads/index.html javamail-1_4_1.zip] || ||
 || jaf || 1.1.1 || [http://java.sun.com/javase/technologies/desktop/javabeans/jaf/downloads/index.html jaf-1_1_1.zip] || ||
 || jta || 1.1 || [http://java.sun.com/javaee/technologies/jta/ jta-1_1-classes.zip], [http://java.sun.com/javaee/technologies/jta/ jta-1_1-doc.zip] || ||
@@ -16,3 +17,6 @@ At the time of this writing, the following modules fall into this category:
 || sjsxp || 1.0.1 || [https://sjsxp.dev.java.net/#downloads sjsxp.jar] || Click on "SJSXP 1.0.1", download "sjsxp_101.class", then run {{{java -cp . sjsxp_101}}} to extract the file ||
 || sjsxp || 1.0.1 || [https://sjsxp.dev.java.net/#downloads jsr173_1.0_api.jar] || Click on "JSR 173 APIs" ||
 || ojdbc || `*` || [http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html ojdbc*.jar, orai18n.jar, and javadoc.zip] || Accept License Agreement; Click on a download link; Login to OTN from redirect to complete download; `*`NOTE`*` each version's JARs must be placed in `${java.io.tmpdir}/ojdbc/<version>/` ||
+|| jnlp || 1.5, 6.0 || jardiff.jar, jnlp.jar, jnlp-servlet.jar || Extract from J2SE download (?) ||
+|| jacc || 1.0 || [http://java.sun.com/j2ee/javaacc/ jacc-1_0-fr-class.zip] || ||
+|| jaxb || All || [https://jaxb.dev.java.net/ JAXB2_YYYYMMDD.jar] || Execute the JAR to extract, find archives in the lib/ subdirectory ||
