@@ -49,6 +49,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:variable name="artifacts" select="/ivy-module/publications/artifact"/>
     <xsl:variable name="dependencies" select="/ivy-module/dependencies/dependency"/>
 
+    <xsl:variable name="packager" select="document('packager.xml', .)/packager-module"/>
+
   <html>
   <head>
     <title><xsl:value-of select="info/@module"/> by <xsl:value-of select="info/@organisation"/> :: Ivy RoundUp</title>
@@ -112,6 +114,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	    </xsl:for-each>
     </td></tr>
     <tr><td class="title">Description</td><td class="value"><xsl:copy-of select="info/description"/></td></tr>
+    <xsl:if test="$packager/resource[starts-with(@url, 'file:')] or $packager/resource/url[starts-with(@href, 'file:')]">
+      <tr>
+        <td></td>
+        <td><strong><span class="manual-download">*** Note ***</span></strong> This module requires one or more
+          resources to be downloaded manually (see below). See the
+          <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td>
+      </tr>
+    </xsl:if>
     </table>
 
     <xsl:if test="false() and count($repositories) > 0">
@@ -327,7 +339,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </div>
     </xsl:if>
 
-    <xsl:variable name="packager" select="document('packager.xml', .)/packager-module"/>
     <div id="packaging-instructions" class="conf">
     <h2>Packaging Instructions</h2>
 
@@ -407,8 +418,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </xsl:for-each>
     <xsl:if test="$packager/resource[starts-with(@url, 'file:')] or $packager/resource/url[starts-with(@href, 'file:')]">
       <tr>
-        <td colspan="3">Note: <span class="manual-download">one ore more resources</span> shown above
-          <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">must be downloaded manually</a>.</td>
+        <td colspan="3"><span class="manual-download">Resources displayed in red</span> must be downloaded manually.
+          See the <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td>
       </tr>
     </xsl:if>
     </tbody>
