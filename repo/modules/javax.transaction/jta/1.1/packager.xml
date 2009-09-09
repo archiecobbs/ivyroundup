@@ -22,6 +22,6 @@
     <property name="revision" value="1_1"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource tofile="artifacts/jars/jta.jar" url="file://${java.io.tmpdir}/${archive}-classes.zip" sha1="d3b80bef03168fb92b50d6d7c3a3a9611fcc0143"/>
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="file://${java.io.tmpdir}/${archive}-doc.zip" sha1="50064470f98e393af4eff2f086b89bc4d1f08e66"/>
+    <resource tofile="artifacts/jars/jta.jar" url="file:///${java.io.tmpdir}/${archive}-classes.zip" sha1="d3b80bef03168fb92b50d6d7c3a3a9611fcc0143"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="file:///${java.io.tmpdir}/${archive}-doc.zip" sha1="50064470f98e393af4eff2f086b89bc4d1f08e66"/>
 </packager-module>

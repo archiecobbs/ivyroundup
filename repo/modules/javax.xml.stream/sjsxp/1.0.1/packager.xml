@@ -21,7 +21,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="apiname" value="jsr173_1.0_api"/>
 
-    <resource url="file://${java.io.tmpdir}/${name}.jar" tofile="artifacts/jars/${name}.jar" sha1="548e4fc4e6a65d9d5e5b2e10b2b05babf59bad8d"/>
-    <resource url="file://${java.io.tmpdir}/${apiname}.jar" tofile="artifacts/jars/${apiname}.jar" sha1="69b298cb1b6ce3a5852e96b7ef5cd3a28cc20c38"/>
+    <resource url="file:///${java.io.tmpdir}/${name}.jar" tofile="artifacts/jars/${name}.jar" sha1="548e4fc4e6a65d9d5e5b2e10b2b05babf59bad8d"/>
+    <resource url="file:///${java.io.tmpdir}/${apiname}.jar" tofile="artifacts/jars/${apiname}.jar" sha1="69b298cb1b6ce3a5852e96b7ef5cd3a28cc20c38"/>
 
 </packager-module>

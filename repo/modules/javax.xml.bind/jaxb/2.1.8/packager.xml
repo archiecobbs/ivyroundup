@@ -21,14 +21,14 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource tofile="artifacts/jars/${name}-api.jar" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-api.jar" sha1="f1117250df055926801082269cd07ffa2de93db9"/>
-    <resource tofile="artifacts/jars/${name}-impl.jar" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-impl.jar" sha1="78c54605c92a0d2cc70c203c283d56c75a9323f4"/>
-    <resource tofile="artifacts/jars/${name}-xjc.jar" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-xjc.jar" sha1="15f867fee80acb15e601b90d45464da075ed0a7a"/>
-    <resource tofile="artifacts/jars/${name}1-impl.jar" url="file://${java.io.tmpdir}/${name}/${revision}/${name}1-impl.jar" sha1="f99df6571108a337d88648aa39282c3891a55325"/>
-    <resource tofile="artifacts/jars/jsr173_1.0_api.jar" url="file://${java.io.tmpdir}/${name}/${revision}/jsr173_1.0_api.jar" sha1="8b7a70786148944ef061fca58b5467d05dae07ba"/>
-    <resource tofile="artifacts/sources/${name}-impl.zip" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-impl.src.zip" sha1="b29612c3e615b06bf006c19b36092c100029af06"/>
-    <resource tofile="artifacts/sources/${name}-xjc.zip" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-xjc.src.zip" sha1="3049a43228000459816d544d01a7fdabe7c705b0"/>
-    <resource tofile="artifacts/sources/${name}-api.zip" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-api-src.zip" sha1="b93bcde7b4e2b0a878739f59d8b3f34c6ff750b1"/>
-    <resource tofile="artifacts/javadocs/${name}-api.zip" url="file://${java.io.tmpdir}/${name}/${revision}/${name}-api-doc.zip" sha1="8fc9c1f931279823bf36a7ab34f65ac3bb2f4e23"/>
+    <resource tofile="artifacts/jars/${name}-api.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api.jar" sha1="f1117250df055926801082269cd07ffa2de93db9"/>
+    <resource tofile="artifacts/jars/${name}-impl.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.jar" sha1="78c54605c92a0d2cc70c203c283d56c75a9323f4"/>
+    <resource tofile="artifacts/jars/${name}-xjc.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.jar" sha1="15f867fee80acb15e601b90d45464da075ed0a7a"/>
+    <resource tofile="artifacts/jars/${name}1-impl.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}1-impl.jar" sha1="f99df6571108a337d88648aa39282c3891a55325"/>
+    <resource tofile="artifacts/jars/jsr173_1.0_api.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/jsr173_1.0_api.jar" sha1="8b7a70786148944ef061fca58b5467d05dae07ba"/>
+    <resource tofile="artifacts/sources/${name}-impl.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.src.zip" sha1="b29612c3e615b06bf006c19b36092c100029af06"/>
+    <resource tofile="artifacts/sources/${name}-xjc.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.src.zip" sha1="3049a43228000459816d544d01a7fdabe7c705b0"/>
+    <resource tofile="artifacts/sources/${name}-api.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-src.zip" sha1="b93bcde7b4e2b0a878739f59d8b3f34c6ff750b1"/>
+    <resource tofile="artifacts/javadocs/${name}-api.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-doc.zip" sha1="8fc9c1f931279823bf36a7ab34f65ac3bb2f4e23"/>
 
 </packager-module>
