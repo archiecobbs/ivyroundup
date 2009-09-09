@@ -24,7 +24,7 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="_archive" value="${name}-${_version}"/>
 
-    <resource url="file://${java.io.tmpdir}/${_archive}.zip" sha1="ce547d5bf929d1e318cc8559426db1e871aeabc8">
+    <resource url="file:///${java.io.tmpdir}/${_archive}.zip" sha1="ce547d5bf929d1e318cc8559426db1e871aeabc8">
         <include name="${archive}/activation.jar"/>
         <include name="${archive}/docs/javadocs/**/*"/>
     </resource>

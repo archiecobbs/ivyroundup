@@ -22,7 +22,7 @@
     <property name="revision" value="1_0_1"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="file://${java.io.tmpdir}/${archive}-ri-bin-b58.zip" sha1="f39c15ec198a87ba9d62b13596c1381a2380e4c0">
+    <resource url="file:///${java.io.tmpdir}/${archive}-ri-bin-b58.zip" sha1="f39c15ec198a87ba9d62b13596c1381a2380e4c0">
         <include name="${archive}-bin/lib/*.jar"/>
         <include name="${archive}-bin/doc/api/spec-jmxremote/**/*"/>
     </resource>
