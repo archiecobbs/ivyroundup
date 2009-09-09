@@ -21,13 +21,13 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="file://${java.io.tmpdir}/${name}/${revision}/jardiff.jar"
+    <resource url="file:///${java.io.tmpdir}/${name}/${revision}/jardiff.jar"
       sha1="9245ed77a8358d9c1243efa2641dccebaf5af7b4"
       tofile="artifacts/jars/jardiff.jar"/>
-    <resource url="file://${java.io.tmpdir}/${name}/${revision}/${name}.jar"
+    <resource url="file:///${java.io.tmpdir}/${name}/${revision}/${name}.jar"
       sha1="607493bb7d5cb3c5c15d0b2b1fbd3957614e48d4"
       tofile="artifacts/jars/${name}.jar"/>
-    <resource url="file://${java.io.tmpdir}/${name}/${revision}/${name}-servlet.jar"
+    <resource url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-servlet.jar"
       sha1="7edcbc0b6cb048f2c7d2b74d9dfbfafcb8ab5d64"
       tofile="artifacts/jars/${name}-servlet.jar"/>
 

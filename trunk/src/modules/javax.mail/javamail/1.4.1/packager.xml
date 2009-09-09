@@ -24,7 +24,7 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="_archive" value="${name}-${_version}"/>
 
-    <resource url="file://${java.io.tmpdir}/${_archive}.zip"
+    <resource url="file:///${java.io.tmpdir}/${_archive}.zip"
       sha1="a570f0340765013fec6cc14d11315f65fe528e2b">
         <include name="${archive}/mail.jar"/>
         <include name="${archive}/lib/*.jar"/>

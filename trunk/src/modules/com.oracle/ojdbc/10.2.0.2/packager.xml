@@ -20,19 +20,19 @@
 
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource tofile="artifacts/jars/ojdbc14dms_g.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms_g.jar"
+    <resource tofile="artifacts/jars/ojdbc14dms_g.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms_g.jar"
       sha1="48dd8579d538af0589c297b170804c931ac43fda"/>
-    <resource tofile="artifacts/jars/ojdbc14dms.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms.jar"
+    <resource tofile="artifacts/jars/ojdbc14dms.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms.jar"
       sha1="2b3842ed923903896cff18112eb6ab6ae75bfcbd"/>
-    <resource tofile="artifacts/jars/ojdbc14_g.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14_g.jar"
+    <resource tofile="artifacts/jars/ojdbc14_g.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14_g.jar"
       sha1="55cb634b0fa562dfbaf1cd247dc9e8653db235cf"/>
-    <resource tofile="artifacts/jars/ojdbc14.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ojdbc14.jar"
+    <resource tofile="artifacts/jars/ojdbc14.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14.jar"
       sha1="1ca52bcf75c0b23239900dcc90a653b7a30cd9cd"/>
-    <resource tofile="artifacts/jars/ons.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/ons.jar"
+    <resource tofile="artifacts/jars/ons.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ons.jar"
       sha1="dc4104ada8416f62b18175316263dba9d93a2383"/>
-    <resource tofile="artifacts/jars/orai18n.jar" url="file://${java.io.tmpdir}/ojdbc/${revision}/orai18n.jar"
+    <resource tofile="artifacts/jars/orai18n.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/orai18n.jar"
       sha1="a1c5e4fca68542abaabe4ad5e37f66137c5655ab"/>
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="file://${java.io.tmpdir}/ojdbc/${revision}/javadoc.zip"
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="file:///${java.io.tmpdir}/ojdbc/${revision}/javadoc.zip"
       sha1="4879d35e38fdca9c123b87ddc24c5aa11273be85"/>
 
 </packager-module>
