@@ -20,7 +20,7 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
     <info organisation="net.sourceforge.robocode" module="robocode" revision="1.7.1.4-Beta" status="release" publication="20090826120000">
         <license name="Common Public License, Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.php"/>
-        <ivyauthor name="$Id: ivy.xml 893 2009-09-16 00:04:25Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.robocode/robocode/1.7.1.4-Beta/"/>
+        <ivyauthor name="$Id: ivy.xml 895 2009-09-16 19:07:41Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.robocode/robocode/1.7.1.4-Beta/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://robocode.sourceforge.net/">
 Robocode is an open source educational game started by Mathew Nelson (originally provided by IBM). The game is designed to help people learn to program in Java and enjoy the experience. It is very easy to start: a simple robot can be written in just a few minutes - but perfecting a bot can take months or more.
@@ -33,6 +33,8 @@ Robocode is an open source educational game started by Mathew Nelson (originally
        <conf name="libs" description="Robocode libraries."/>
        <conf name="sample-robots" description="The sample robots."/>
        <conf name="templates" description="Templates for development."/>
+       <conf name="sources" description="The sources."/>
+       <conf name="javadocs" description="The javadocs."/>
        <conf name="default" description="The default configuration includes just libraries." extends="libs"/>
     </configurations>
 
@@ -114,8 +116,8 @@ Robocode is an open source educational game started by Mathew Nelson (originally
         <artifact name="newrobot" conf="templates" type="template" ext="tpt"/>
        
 
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact name="source" conf="sources" type="source" ext="zip"/>
+        <artifact name="javadoc" conf="javadocs" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
