@@ -30,6 +30,8 @@ Robocode is an open source educational game started by Mathew Nelson (originally
        <conf name="libs" description="Robocode libraries." />
        <conf name="sample-robots" description="The sample robots." />
        <conf name="templates" description="Templates for development." />
+       <conf name="sources" description="The sources." />
+       <conf name="javadocs" description="The javadocs." />
        <conf name="default" description="The default configuration includes just libraries." extends="libs" />
     </configurations>
 
@@ -111,8 +113,8 @@ Robocode is an open source educational game started by Mathew Nelson (originally
         <artifact name="newrobot" conf="templates" type="template" ext="tpt"/>
        
 
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact name="source" conf="sources" type="source" ext="zip"/>
+        <artifact name="javadoc" conf="javadocs" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
