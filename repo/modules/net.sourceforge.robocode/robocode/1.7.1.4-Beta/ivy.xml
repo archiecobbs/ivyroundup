@@ -20,31 +20,100 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
     <info organisation="net.sourceforge.robocode" module="robocode" revision="1.7.1.4-Beta" status="release" publication="20090826120000">
         <license name="Common Public License, Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.php"/>
-        <ivyauthor name="$Id: ivy.xml 891 2009-09-14 23:26:04Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.robocode/robocode/1.7.1.4-Beta/"/>
+        <ivyauthor name="$Id: ivy.xml 893 2009-09-16 00:04:25Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.robocode/robocode/1.7.1.4-Beta/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://robocode.sourceforge.net/">
 Robocode is an open source educational game started by Mathew Nelson (originally provided by IBM). The game is designed to help people learn to program in Java and enjoy the experience. It is very easy to start: a simple robot can be written in just a few minutes - but perfecting a bot can take months or more.
         </description>
     </info>
 
+    <configurations>
+       <conf name="scripts" description="The top-level scripts."/>
+       <conf name="battles" description="Files for sample battles."/>
+       <conf name="libs" description="Robocode libraries."/>
+       <conf name="sample-robots" description="The sample robots."/>
+       <conf name="templates" description="Templates for development."/>
+       <conf name="default" description="The default configuration includes just libraries." extends="libs"/>
+    </configurations>
+
     <publications>
-        <artifact name="codesize-1.1"/>
-        <artifact name="picocontainer-2.6"/>
-        <artifact name="robocode.battle-1.7.1.4-Beta"/>
-        <artifact name="robocode.core-1.7.1.4-Beta"/>
-        <artifact name="robocode.host-1.7.1.4-Beta"/>
-        <artifact name="robocode"/>
-        <artifact name="robocode.repository-1.7.1.4-Beta"/>
-        <artifact name="robocode.sound-1.7.1.4-Beta"/>
-        <artifact name="robocode.ui-1.7.1.4-Beta"/>
-        <artifact name="robocode.ui.editor-1.7.1.4-Beta"/>
-        <artifact name="roborumble"/>
-        <artifact name="robocode" type="script" ext="bat"/>
-        <artifact name="robocode" type="script" ext="sh"/>
-        <artifact name="roborumble" type="script" ext="bat"/>
-        <artifact name="roborumble" type="script" ext="sh"/>
-        <artifact name="meleerumble" type="script" ext="bat"/>
-        <artifact name="meleerumble" type="script" ext="sh"/>
+        <artifact name="codesize-1.1" conf="libs" type="lib" ext="jar"/>
+        <artifact name="picocontainer-2.6" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.battle-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.core-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.host-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.repository-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.sound-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.ui-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="robocode.ui.editor-1.7.1.4-Beta" conf="libs" type="lib" ext="jar"/>
+        <artifact name="roborumble" conf="libs" type="lib" ext="jar"/>
+
+        <artifact name="robocode" conf="scripts" type="script" ext="bat"/>
+        <artifact name="robocode" conf="scripts" type="script" ext="sh"/>
+        <artifact name="robocode" conf="scripts" type="script" ext="ico"/>
+        <artifact name="roborumble" conf="scripts" type="script" ext="bat"/>
+        <artifact name="roborumble" conf="scripts" type="script" ext="sh"/>
+        <artifact name="meleerumble" conf="scripts" type="script" ext="bat"/>
+        <artifact name="meleerumble" conf="scripts" type="script" ext="sh"/>
+        <artifact name="teamrumble" conf="scripts" type="script" ext="bat"/>
+        <artifact name="teamrumble" conf="scripts" type="script" ext="sh"/>
+        <artifact name="versions" conf="scripts" type="script" ext="txt"/>
+
+        <artifact name="intro" conf="battles" type="battle" ext="battle"/>
+        <artifact name="sample" conf="battles" type="battle" ext="battle"/>
+
+        <artifact name="Corners" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Corners" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Corners" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Crazy" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Crazy" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Crazy" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Fire" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Fire" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Fire" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Interactive" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Interactive" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Interactive" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="MyFirstJuniorRobot" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="MyFirstJuniorRobot" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="MyFirstJuniorRobot" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="MyFirstRobot" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="MyFirstRobot" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="MyFirstRobot" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="PaintingRobot" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="PaintingRobot" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="PaintingRobot" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="RamFire" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="RamFire" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="RamFire" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="SittingDuck" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="SittingDuck" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="SittingDuck" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="SpinBot" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="SpinBot" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="SpinBot" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Target" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Target$1" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Target" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Target" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Tracker" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Tracker" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Tracker" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="TrackFire" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="TrackFire" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="TrackFire" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="VelociRobot" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="VelociRobot" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="VelociRobot" conf="sample-robots" type="sample-robot" ext="properties"/>
+        <artifact name="Walls" conf="sample-robots" type="sample-robot" ext="class"/>
+        <artifact name="Walls" conf="sample-robots" type="sample-robot" ext="java"/>
+        <artifact name="Walls" conf="sample-robots" type="sample-robot" ext="properties"/>
+
+        <artifact name="newjavafile" conf="templates" type="template" ext="tpt"/>
+        <artifact name="newrobot" conf="templates" type="template" ext="tpt"/>
+       
+
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

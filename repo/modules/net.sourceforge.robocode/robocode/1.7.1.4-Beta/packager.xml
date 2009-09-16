@@ -29,18 +29,39 @@
 
 
     <build>
-      <!-- move all jar files. -->
-        <move todir="artifacts/jars" flatten="true">
+        <!-- move all robocode/lib jar files to the libs dir. -->
+        <mkdir dir="artifacts/libs"/>
+        <move todir="artifacts/libs" flatten="true">
            <fileset dir="archive/${archive}/libs" includes="*.jar"/>
 	</move>
 
-        <!-- scripts -->
+        <!-- move all top-level scripts to the scripts dir. -->
         <mkdir dir="artifacts/scripts"/>
         <move todir="artifacts/scripts" flatten="true">
           <fileset dir="archive/${archive}" includes="*.bat"/>
           <fileset dir="archive/${archive}" includes="*.sh"/>
+          <fileset dir="archive/${archive}" includes="*.ico"/>
+          <fileset dir="archive/${archive}" includes="*.txt"/>
 	</move>
 
+        <!-- move the battle files to the battles dir. -->
+        <mkdir dir="artifacts/battles"/>
+        <move todir="artifacts/battles" flatten="true">
+          <fileset dir="archive/${archive}/battles" includes="*.battle"/>
+	</move>
+
+        <!-- move the sample robot files to the sample-robots dir. -->
+        <!-- Note that advanced and team robots not moved. -->
+        <mkdir dir="artifacts/sample-robots"/>
+        <move todir="artifacts/sample-robots" flatten="true">
+          <fileset dir="archive/${archive}/robots/sample" includes="*"/>
+	</move>
+
+        <!-- move the template files to the templates dir. -->
+        <mkdir dir="artifacts/templates"/>
+        <move todir="artifacts/templates" flatten="true">
+          <fileset dir="archive/${archive}/templates" includes="*.tpt"/>
+	</move>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
