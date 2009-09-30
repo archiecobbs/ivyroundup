@@ -36,15 +36,15 @@ This library makes it easy to implement a Visualization data source so that you 
     </publications>
 
     <dependencies>
-      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default">
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" >
         <artifact name="commons-lang" type="jar" />
       </dependency>
-      <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1" conf="default">
+      <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1">
         <artifact name="commons-logging" type="jar" />
       </dependency>
-      <dependency org="com.google.common" name="google-collections" rev="1.0-rc2" conf="default"/>
-      <dependency org="com.ibm.icu4j" name="icu4j" rev="4.0.1.1" conf="default"/>
-      <dependency org="net.sourceforge.opencsv" name="opencsv" rev="1.8" conf="default">
+      <dependency org="com.google.common" name="google-collections" rev="1.0-rc2" />
+      <dependency org="com.ibm.icu4j" name="icu4j" rev="4.0.1.1"/>
+      <dependency org="net.sourceforge.opencsv" name="opencsv" rev="1.8">
         <artifact name="opencsv" type="jar" />
       </dependency>
     </dependencies>
