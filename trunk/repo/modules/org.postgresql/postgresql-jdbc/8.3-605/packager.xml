@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2009 Andreas Heiduk
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,22 +20,22 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="download.name" value="google-collect"/>
-    <property name="archive" value="${download.name}-${revision}"/>
-
-
-    <resource url="http://google-collections.googlecode.com/files/${download.name}-${revision}.zip" sha1="fc2dcc2c5e0835e29b177180f7c058c268df7b7e"/>
-
+    
+    <property name="download" value="http://jdbc.postgresql.org/download"/>
+    
+    <resource url="${download}/postgresql-${revision}.jdbc2.jar" tofile="artifacts/jars/postgresql-jdbc2.jar" sha1="7a2ff80442eaa26b147d8eb7f632b3506fe3526f"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc2ee.jar" tofile="artifacts/jars/postgresql-jdbc2ee.jar" sha1="bc77c6ff30c1638ef54075e717837320e367f614"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc3.jar" tofile="artifacts/jars/postgresql-jdbc3.jar" sha1="92d8b55c9f1d01fbe9af4af7dde0fe84adbb24dd"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc4.jar" tofile="artifacts/jars/postgresql-jdbc4.jar" sha1="312ec82ad1163def6fbb6318ff834ca86409ae47"/>
+        
+    <resource url="${download}/postgresql-jdbc-${revision}.src.tar.gz" sha1="19238eb3820250a03953673c095fb9a8d037851b"/>
+    
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${download.name}.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/src-${revision}.zip" tofile="artifacts/sources/source.zip"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/javadoc"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/postgresql-jdbc-${revision}.src"/>
         </zip>
     </build>
 </packager-module>

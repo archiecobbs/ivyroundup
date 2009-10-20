@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2009 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,19 +19,24 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="download.name" value="visualization-datasource"/>
-    <property name="archive" value="${download.name}-${revision}"/>
+    <property name="archive" value="${name}_1_2_1"/>
 
-    <resource url="http://google-visualization-java.googlecode.com/files/${download.name}-${revision}.zip" sha1="0b7067a68c7598509e66b1afaa228ebe93e5f91e"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="ceb98291fe4f5ac97339db0ee9f36b364030eb23"/>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${download.name}.jar"/>
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${name}/lib" includes="${name}-*.jar"/>
+        </move>
 
         <!-- source -->
-        <move file="archive/${archive}/${archive}-src.jar" tofile="artifacts/sources/source.zip"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/build/src"/>
+        </zip>
 
-        <!-- No javadocs! -->
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${name}/docs/api"/>
+        </zip>
     </build>
 </packager-module>

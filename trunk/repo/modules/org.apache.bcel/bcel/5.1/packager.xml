@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2009 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,18 +20,25 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="download.name" value="visualization-datasource"/>
-    <property name="archive" value="${download.name}-${revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://google-visualization-java.googlecode.com/files/${download.name}-${revision}.zip" sha1="0b7067a68c7598509e66b1afaa228ebe93e5f91e"/>
+    <resource url="http://archive.apache.org/dist/jakarta/${name}/source/${archive}-src.tar.gz" sha1="f6d6173adc6555a8b3a5d74405d90ab29f47886f"/>
 
     <build>
+        <unzip src="archive/${archive}.zip" dest="archive"/>
+        <unzip src="archive/${archive}-src.zip" dest="archive"/>
+
         <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${download.name}.jar"/>
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <move file="archive/${archive}/${archive}-src.jar" tofile="artifacts/sources/source.zip"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/java"/>
+        </zip>
 
-        <!-- No javadocs! -->
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
     </build>
 </packager-module>

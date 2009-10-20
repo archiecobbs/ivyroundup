@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2009 Andreas Heiduk
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,18 +20,18 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="download.name" value="visualization-datasource"/>
-    <property name="archive" value="${download.name}-${revision}"/>
-
-    <resource url="http://google-visualization-java.googlecode.com/files/${download.name}-${revision}.zip" sha1="0b7067a68c7598509e66b1afaa228ebe93e5f91e"/>
-
+    
+    <property name="download" value="http://jdbc.postgresql.org/download"/>
+    
+    <resource url="${download}/postgresql-${revision}.jdbc3.jar" tofile="artifacts/jars/postgresql-jdbc3.jar" sha1="0ec717c6a5fac71de1706d497fcab15ff57582a9"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc4.jar" tofile="artifacts/jars/postgresql-jdbc4.jar" sha1="c876c26e1ac0c268c86351dbf8e556bcfe7fd900"/>
+        
+    <resource url="${download}/postgresql-jdbc-${revision}.src.tar.gz" sha1="719004934271a9238d16877b380eb37614077362"/>
+    
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${download.name}.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/${archive}-src.jar" tofile="artifacts/sources/source.zip"/>
-
-        <!-- No javadocs! -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/postgresql-jdbc-${revision}.src"/>
+        </zip>
     </build>
 </packager-module>
