@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-10-14 14:22:33 UTC</timestamp>
-  <svnRevision>922</svnRevision>
+  <timestamp>2009-10-20 21:40:52 UTC</timestamp>
+  <svnRevision>926</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -155,6 +155,7 @@
   <org name="dk.contix.ant">
     <mod name="ant-gwt">
       <rev name="1.1.2"/>
+      <rev name="1.2"/>
     </mod>
   </org>
   <org name="edu.hawaii.ics.csdl">
@@ -385,6 +386,11 @@
       <rev name="2.6.9"/>
     </mod>
   </org>
+  <org name="net.sourceforge.jibx">
+    <mod name="jibx">
+      <rev name="1.2.1"/>
+    </mod>
+  </org>
   <org name="net.sourceforge.jsr107cache">
     <mod name="jsr107cache">
       <rev name="1.0"/>
@@ -531,6 +537,7 @@
   </org>
   <org name="org.apache.bcel">
     <mod name="bcel">
+      <rev name="5.1"/>
       <rev name="5.2"/>
     </mod>
   </org>
@@ -1046,6 +1053,12 @@
       <rev name="3.1.1.12687"/>
     </mod>
   </org>
+  <org name="org.postgresql">
+    <mod name="postgresql-jdbc">
+      <rev name="8.3-605"/>
+      <rev name="8.4-701"/>
+    </mod>
+  </org>
   <org name="org.restlet">
     <mod name="restlet">
       <rev name="1.1.1"/>
@@ -1142,6 +1155,8 @@
   </org>
   <org name="org.xmlpull.xpp3">
     <mod name="xpp3">
+      <rev name="1.1.3.3"/>
+      <rev name="1.1.3.4.O"/>
       <rev name="1.1.4c"/>
     </mod>
   </org>

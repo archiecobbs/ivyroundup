@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2008 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,18 +20,18 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="download.name" value="visualization-datasource"/>
-    <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://google-visualization-java.googlecode.com/files/${download.name}-${revision}.zip" sha1="0b7067a68c7598509e66b1afaa228ebe93e5f91e"/>
+    <resource url="http://ant-gwt.googlecode.com/files/${name}-${revision}.jar" sha1="e665253aa561eb6ccd902f990b82be69722413b2"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${download.name}.jar"/>
+        <zip destfile="artifacts/jars/${name}.jar">
+            <fileset dir="archive" excludes="**/*.java"/>
+        </zip>
 
         <!-- source -->
-        <move file="archive/${archive}/${archive}-src.jar" tofile="artifacts/sources/source.zip"/>
-
-        <!-- No javadocs! -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive" includes="**/*.java"/>
+        </zip>
     </build>
 </packager-module>
