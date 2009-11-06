@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="apache-${name}-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/wicket/1.4.3/${archive}.zip"
+      sha1="4438d8b7e9e71d517df6cf8a6b02050c82ad2e95"/>
+
+    <build>
+        <!-- jar files; strip revision numbers-->
+        <move file="archive/${archive}/lib/wicket-${revision}.jar" tofile="artifacts/jars/wicket.jar"/>
+        <move file="archive/${archive}/lib/wicket-auth-roles-${revision}.jar" tofile="artifacts/jars/wicket-auth-roles.jar"/>
+        <move file="archive/${archive}/lib/wicket-datetime-${revision}.jar" tofile="artifacts/jars/wicket-datetime.jar"/>
+        <move file="archive/${archive}/lib/wicket-devutils-${revision}.jar" tofile="artifacts/jars/wicket-devutils.jar"/>
+        <move file="archive/${archive}/lib/wicket-extensions-${revision}.jar" tofile="artifacts/jars/wicket-extensions.jar"/>
+        <move file="archive/${archive}/lib/wicket-guice-${revision}.jar" tofile="artifacts/jars/wicket-guice.jar"/>
+        <move file="archive/${archive}/lib/wicket-ioc-${revision}.jar" tofile="artifacts/jars/wicket-ioc.jar"/>
+        <move file="archive/${archive}/lib/wicket-jmx-${revision}.jar" tofile="artifacts/jars/wicket-jmx.jar"/>
+        <move file="archive/${archive}/lib/wicket-objectsizeof-agent-${revision}.jar" tofile="artifacts/jars/wicket-objectsizeof-agent.jar"/>
+        <move file="archive/${archive}/lib/wicket-spring-${revision}.jar" tofile="artifacts/jars/wicket-spring.jar"/>
+        <move file="archive/${archive}/lib/wicket-velocity-${revision}.jar" tofile="artifacts/jars/wicket-velocity.jar"/>
+
+         <!-- war file -->
+        <mkdir dir="artifacts/wars"/> 
+        <move file="archive/${archive}/lib/wicket-examples-${revision}.war" tofile="artifacts/wars/wicket-examples.war"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+        <!-- javadocs -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/apidocs"/>
+        </zip>
+    </build>
+</packager-module>
