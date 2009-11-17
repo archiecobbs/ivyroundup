@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2009 Jean-Luc Geering
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,20 +21,26 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
+    <property name="extracted" value="archive/${archive}"/>
 
-    <resource url="http://wattdepot.googlecode.com/files/${archive}.zip" sha1="efa3e4bdce33902985d246607069b800baff4a19"/>
+    <resource url="http://prdownloads.sourceforge.net/juel/${archive}.zip" sha1="173948fc6e25e3da23b9bc5e01d35039fa769e37"/>
 
     <build>
         <!-- jar -->
         <move todir="artifacts/jars">
-          <fileset dir="archive/${archive}/" includes="*.jar"/>
-	</move>
+            <fileset dir="${extracted}" includes="*-${revision}.jar"/>
+            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
+        </move>
 
         <!-- source -->
-        <move file="archive/${archive}/${name}-source.zip" tofile="artifacts/sources/source.zip"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="${extracted}/src/main/java"/>
+            <fileset dir="${extracted}/src/main/resources"/>
+        </zip>
 
         <!-- javadoc -->
-        <move file="archive/${archive}/${name}-javadoc.zip" tofile="artifacts/javadocs/javadoc.zip"/>
-
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="${extracted}/doc/api"/>
+        </zip>
     </build>
 </packager-module>
