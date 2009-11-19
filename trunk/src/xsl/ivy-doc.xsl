@@ -114,6 +114,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	    </xsl:for-each>
     </td></tr>
     <tr><td class="title">Description</td><td class="value"><xsl:copy-of select="info/description"/></td></tr>
+
+    <!-- Check for manually downloaded resources -->
     <xsl:if test="$packager/resource[starts-with(@url, 'file:')] or $packager/resource/url[starts-with(@href, 'file:')]">
       <tr>
         <td></td>
@@ -124,6 +126,30 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </td>
       </tr>
     </xsl:if>
+
+    <!-- Check for restricted build instructions -->
+    <xsl:if test="$packager/build/*[
+          local-name(.) != 'copy'
+      and local-name(.) != 'jar'
+      and local-name(.) != 'mkdir'
+      and local-name(.) != 'move'
+      and local-name(.) != 'tar'
+      and local-name(.) != 'unjar'
+      and local-name(.) != 'untar'
+      and local-name(.) != 'unwar'
+      and local-name(.) != 'unzip'
+      and local-name(.) != 'war'
+      and local-name(.) != 'zip']">
+      <tr>
+        <td></td>
+        <td><strong><span class="restricted-build">*** Note ***</span></strong> This module uses restricted
+          build instructions; You must configure your packager resolver with <span class="code">restricted="false"</span>. See the
+          <a href="http://ant.apache.org/ivy/history/latest-milestone/resolver/packager.html">Packager Resolver Documentation</a>
+          for more information.
+        </td>
+      </tr>
+    </xsl:if>
+
     </table>
 
     <xsl:if test="false() and count($repositories) > 0">
