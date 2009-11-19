@@ -61,6 +61,11 @@ span.manual-download {
   font-weight:bold;
 }
 
+span.restricted-build {
+  color:#990000;
+  font-weight:bold;
+}
+
 h2 {
     margin-bottom:2px;
     font-size:medium;
@@ -150,5 +155,9 @@ th.conf-desc {
 .build-inst {
 	font-family:courier;
     white-space:pre;
+}
+
+.code {
+	font-family:courier;
 }
 
