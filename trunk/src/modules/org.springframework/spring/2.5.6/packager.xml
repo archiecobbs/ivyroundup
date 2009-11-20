@@ -24,6 +24,8 @@
 
     <resource url="http://dist.springframework.org/release/SPR/${archive}-with-docs.zip"
       sha1="876766d13b910a1ebaf6a254bff0138fb623ec8f">
+        <include name="${archive}/dist/spring.jar"/>
+        <include name="${archive}/dist/spring-sources.jar"/>
         <include name="${archive}/dist/modules/**/*"/>
         <include name="${archive}/docs/api/**/*"/>
         <include name="${archive}/dist/module-sources/*-sources.jar"/>
@@ -32,6 +34,7 @@
     <build>
 
         <!-- jars -->
+        <move file="archive/${archive}/dist/spring.jar" todir="artifacts/jars"/>
         <move todir="artifacts/jars">
             <fileset dir="archive/${archive}/dist/modules">
                 <include name="*.jar"/>
@@ -40,6 +43,7 @@
         </move>
 
         <!-- source -->
+        <move file="archive/${archive}/dist/spring-sources.jar" tofile="artifacts/sources/spring.zip"/>
         <move todir="artifacts/sources">
             <fileset dir="archive/${archive}/dist/module-sources">
                 <include name="*.jar"/>
