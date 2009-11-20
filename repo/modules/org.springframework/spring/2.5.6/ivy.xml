@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring" revision="2.5.6" status="release" publication="20090110180000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 705 2009-05-15 12:44:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.5.6/"/>
+        <ivyauthor name="$Id: ivy.xml 962 2009-11-20 16:15:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.5.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -116,11 +116,13 @@
         <conf name="webmvc" extends="web" description="Spring Web MVC"/>
         <conf name="webmvc-portlet" extends="webmvc" description="Spring Web MVC+Portlet"/>
         <conf name="webmvc-struts" extends="webmvc" description="Spring Web MVC+Struts"/>
-        <conf name="default" description="Everything"/>
+        <conf name="full" description="Single combined JAR will all standard modules"/>
+        <conf name="default" description="Everything (all of the module JARs)"/>
     </configurations>
 
     <publications>
         <!-- jar -->
+        <artifact name="spring" conf="full"/>
         <artifact name="aop" conf="default,aop"/>
         <artifact name="beans" conf="default,beans"/>
         <artifact name="context" conf="default,context"/>
@@ -137,6 +139,7 @@
         <artifact name="webmvc-struts" conf="default,webmvc-struts"/>
 
         <!-- source -->
+        <artifact name="spring" type="source" ext="zip" conf="full"/>
         <artifact name="aop" type="source" ext="zip" conf="default,aop"/>
         <artifact name="beans" type="source" ext="zip" conf="default,beans"/>
         <artifact name="context" type="source" ext="zip" conf="default,context"/>
@@ -157,9 +160,9 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default,aop-&gt;default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
-        <dependency conf="default,core-&gt;default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
-        <dependency conf="default,jms-&gt;default" org="javax.jms" name="jms" rev="1.+"/>
+        <dependency conf="full,default,aop-&gt;default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
+        <dependency conf="full,default,core-&gt;default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
+        <dependency conf="full,default,jms-&gt;default" org="javax.jms" name="jms" rev="1.+"/>
     </dependencies>
 
 </ivy-module>
