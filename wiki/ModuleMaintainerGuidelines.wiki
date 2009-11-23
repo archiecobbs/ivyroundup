@@ -66,7 +66,7 @@ For modules that have different configurations for different JDK versions, let t
 
 ==== Source Configurations ====
 
-If a module only publishes one source artifact, don't assign it to a configuration. However, for modules that publish source artifacts that correspond to specific JAR artifacts, put the source artifacts in the same configurations as their corresponding JAR artifacts; see the [http://ivyroundup.googlecode.com/svn/trunk/src/modules/org.springframework/spring/2.5.6/ivy.xml Spring 2.5.6] module for an example of this.
+If a module only publishes one source artifact, don't assign it to a configuration. However, for modules that publish source artifacts that correspond to specific JAR artifacts, put the source artifacts in the same configurations as their corresponding JAR artifacts; see the [http://ivyroundup.googlecode.com/svn/trunk/repo/modules/org.springframework/spring/2.5.6/ivy.xml Spring 2.5.6] module for an example of this.
 
 === Dependencies ===
 
