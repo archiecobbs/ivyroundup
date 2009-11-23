@@ -100,6 +100,7 @@
     <configurations>
         <conf name="aop" extends="core, beans" description="Spring AOP"/>
         <conf name="beans" extends="core" description="Spring Beans"/>
+        <conf name="cglib" extends="aop" description="Include CGLIB support for proxied classes"/>
         <conf name="context" extends="beans, aop" description="Spring Context"/>
         <conf name="context-support" extends="context, aop, jdbc" description="Spring Context Support"/>
         <conf name="core" description="Spring Core"/>
@@ -112,10 +113,12 @@
         <conf name="webmvc" extends="web" description="Spring Web MVC"/>
         <conf name="webmvc-portlet" extends="webmvc" description="Spring Web MVC+Portlet"/>
         <conf name="webmvc-struts" extends="webmvc" description="Spring Web MVC+Struts"/>
-        <conf name="default" description="Everything"/>
+        <conf name="full" description="Single combined JAR will all standard modules"/>
+        <conf name="default" description="Everything (all of the module JARs)"/>
     </configurations>
 
     <publications>
+        <artifact name="spring" conf="full"/>
         <artifact name="aop" conf="default,aop"/>
         <artifact name="beans" conf="default,beans"/>
         <artifact name="context" conf="default,context"/>
@@ -134,9 +137,10 @@
     </publications>
 
     <dependencies>
-        <dependency conf="default,aop->default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
-        <dependency conf="default,core->default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
-        <dependency conf="default,jms->default" org="javax.jms" name="jms" rev="1.+"/>
+        <dependency conf="full,default,aop->default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
+        <dependency conf="full,default,core->default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
+        <dependency conf="full,default,jms->default" org="javax.jms" name="jms" rev="1.+"/>
+        <dependency conf="cglib->default" org="net.sourceforge.cglib" name="cglib" rev="2.2"/>
     </dependencies>
 
 </ivy-module>
