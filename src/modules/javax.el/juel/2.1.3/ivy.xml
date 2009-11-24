@@ -31,16 +31,16 @@
     </info>
 
     <configurations>
-        <conf name="api"                   description="Java Unified Expression Language API"/>
-        <conf name="impl"    extends="api" description="Java Unified Expression Language Implementation"/>
-        <conf name="all"                   description="JUEL API and Implementation"/>
-        <conf name="default" extends="all" description="JUEL default conf (one jar)"/>
+        <conf name="api"                    description="Java Unified Expression Language API (javax.el)"/>
+        <conf name="impl"                   description="Java Unified Expression Language Implementation"/>
+        <conf name="full"                   description="JUEL API and implementation (one JAR)"/>
+        <conf name="default" extends="full" description="JUEL default configuration (same as full)"/>
     </configurations>
 
     <publications>
-        <artifact name="juel-api" conf="api"/>
+        <artifact name="juel-api"  conf="api"/>
         <artifact name="juel-impl" conf="impl"/>
-        <artifact name="juel" conf="all"/>
+        <artifact name="juel"      conf="full"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
