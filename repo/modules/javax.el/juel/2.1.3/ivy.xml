@@ -22,7 +22,7 @@
 
     <info organisation="javax.el" module="juel" revision="2.1.3" status="release" publication="20091009120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 957 2009-11-17 21:39:32Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.el/juel/2.1.3/"/>
+        <ivyauthor name="$Id: ivy.xml 969 2009-11-24 21:36:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.el/juel/2.1.3/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://juel.sourceforge.net/">
             <p>Java Unified Expression Language <em>JUEL</em></p>
@@ -35,16 +35,16 @@
     </info>
 
     <configurations>
-        <conf name="api" description="Java Unified Expression Language API"/>
-        <conf name="impl" extends="api" description="Java Unified Expression Language Implementation"/>
-        <conf name="all" description="JUEL API and Implementation"/>
-        <conf name="default" extends="all" description="JUEL default conf (one jar)"/>
+        <conf name="api" description="Java Unified Expression Language API (javax.el)"/>
+        <conf name="impl" description="Java Unified Expression Language Implementation"/>
+        <conf name="full" description="JUEL API and implementation (one JAR)"/>
+        <conf name="default" extends="full" description="JUEL default configuration (same as full)"/>
     </configurations>
 
     <publications>
         <artifact name="juel-api" conf="api"/>
         <artifact name="juel-impl" conf="impl"/>
-        <artifact name="juel" conf="all"/>
+        <artifact name="juel" conf="full"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
