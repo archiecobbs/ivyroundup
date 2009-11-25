@@ -35,9 +35,16 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="core" description="SmartGWT without the skins JAR"/>
+        <conf name="skins" description="SmartGWT skins"/>
+        <conf name="all" description="SmartGWT core plus skins JAR"/>
+        <conf name="default" extends="all" description="SmartGWT core plus skins JAR"/>
+    </configurations>
+
     <publications>
-        <artifact/>
-        <artifact name="smartgwt-skins"/>
+        <artifact conf="core"/>
+        <artifact name="smartgwt-skins" conf="skins"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
