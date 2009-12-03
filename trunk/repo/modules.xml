@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2009-11-25 20:32:50 UTC</timestamp>
-  <svnRevision>972</svnRevision>
+  <timestamp>2009-12-03 15:51:36 UTC</timestamp>
+  <svnRevision>979</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -188,9 +188,19 @@
       <rev name="1.1.1"/>
     </mod>
   </org>
+  <org name="javax.annotation">
+    <mod name="jsr250-api">
+      <rev name="1.0"/>
+    </mod>
+  </org>
   <org name="javax.el">
     <mod name="juel">
       <rev name="2.1.3"/>
+    </mod>
+  </org>
+  <org name="javax.inject">
+    <mod name="javax.inject">
+      <rev name="1"/>
     </mod>
   </org>
   <org name="javax.jms">
@@ -252,6 +262,13 @@
   </org>
   <org name="javax.transaction">
     <mod name="jta">
+      <rev name="1.1"/>
+    </mod>
+  </org>
+  <org name="javax.ws.rs">
+    <mod name="jsr311-api">
+      <rev name="1.0"/>
+      <rev name="1.1.1"/>
       <rev name="1.1"/>
     </mod>
   </org>
@@ -810,6 +827,7 @@
       <rev name="2.4.4"/>
       <rev name="2.4.5"/>
       <rev name="2.4.6"/>
+      <rev name="2.4.7"/>
     </mod>
   </org>
   <org name="org.dellroad.sidekar">
@@ -911,6 +929,9 @@
   <org name="org.jasig.cas">
     <mod name="cas-client-core">
       <rev name="3.1.6"/>
+      <rev name="3.1.7"/>
+      <rev name="3.1.8"/>
+      <rev name="3.1.9"/>
     </mod>
   </org>
   <org name="org.jaspersoft">
