@@ -19,4 +19,4 @@ At the time of this writing, the following modules fall into this category:
 || ojdbc || `*` || [http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html ojdbc*.jar, orai18n.jar, and javadoc.zip] || Accept License Agreement; Click on a download link; Login to OTN from redirect to complete download; `*`NOTE`*` each version's JARs must be placed in `${java.io.tmpdir}/ojdbc/<version>/` ||
 || jnlp || 1.5, 6.0 || jardiff.jar, jnlp.jar, jnlp-servlet.jar || Extract from J2SE download (?) ||
 || jacc || 1.0 || [http://java.sun.com/j2ee/javaacc/ jacc-1_0-fr-class.zip] || ||
-|| jaxb || All || [https://jaxb.dev.java.net/ JAXB2_YYYYMMDD.jar] || Execute the JAR to extract, find archives in the lib/ subdirectory ||
+|| jaxb || All || [https://jaxb.dev.java.net/ JAXB2_YYYYMMDD.jar] || Execute the JAR to extract, then move the the lib/ subdirectory to /tmp/jaxb/X.Y.Z ||
