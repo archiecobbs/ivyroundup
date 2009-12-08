@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2009 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,11 +16,14 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<ivy-module rev="$Id$">
 
-    <property name="name" value="${ivy.packager.module}"/>
+    <info publication="20040325120000">
+        <license name="BEA Systems, Inc. Binary Code License Agreement"
+          url="http://mirrors.ibiblio.org/pub/mirrors/maven2/javax/xml/jsr173/1.0/jsr173-1.0-license.txt"/>
+        <description homepage="http://jcp.org/en/jsr/detail?id=173">
+            The Streaming API for XML (StAX) is a Java based API for pull-parsing XML. 
+        </description>
+    </info>
 
-    <resource url="file:///${java.io.tmpdir}/${name}.jar" tofile="artifacts/jars/${name}.jar"
-      sha1="548e4fc4e6a65d9d5e5b2e10b2b05babf59bad8d"/>
-
-</packager-module>
+</ivy-module>
