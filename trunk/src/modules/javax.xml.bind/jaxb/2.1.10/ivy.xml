@@ -52,7 +52,6 @@
         <conf name="runtime-1.0" extends="runtime" description="Older 1.0 runtime configuration"/>
         <conf name="compile" description="Normal compile configuration"/>
         <conf name="default" extends="runtime,compile" description="Runtime + compile configurations"/>
-        <conf name="jsr173" description="JSR 173 API JAR only"/>
     </configurations>
 
     <publications>
@@ -60,7 +59,6 @@
         <artifact name="jaxb-impl" conf="runtime"/>
         <artifact name="jaxb1-impl" conf="runtime-1.0"/>
         <artifact name="jaxb-xjc" conf="compile"/>
-        <artifact name="jsr173_1.0_api" conf="runtime,jsr173"/>
 
         <artifact name="jaxb-api" type="source" ext="zip"/>
         <artifact name="jaxb-impl" type="source" ext="zip"/>
@@ -71,6 +69,7 @@
 
     <dependencies>
         <dependency org="javax.activation" name="jaf" rev="[1.1,2.0[" conf="default->default"/>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="runtime->default"/>
     </dependencies>
 
 </ivy-module>

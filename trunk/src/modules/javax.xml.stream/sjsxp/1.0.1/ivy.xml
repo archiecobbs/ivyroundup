@@ -29,14 +29,8 @@
         </description>
     </info>
 
-    <configurations>
-        <conf name="default" description="StAX API and sjsxp reference implementation"/>
-        <conf name="api" description="StAX API only"/>
-    </configurations>
-
-    <publications>
-        <artifact conf="default"/>
-        <artifact name="jsr173_1.0_api" conf="default,api"/>
-    </publications>
+    <dependencies>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="default->default"/>
+    </dependencies>
 
 </ivy-module>
