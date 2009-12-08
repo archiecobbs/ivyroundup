@@ -22,7 +22,7 @@
 
     <info organisation="javax.xml.bind" module="jaxb" revision="2.1.7" status="release" publication="20080513120000">
         <license name="Dual license consisting of the  CDDL v1.0 and GPL v2" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 841 2009-08-04 13:48:36Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.1.7/"/>
+        <ivyauthor name="$Id: ivy.xml 982 2009-12-08 16:31:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.1.7/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jaxb.dev.java.net/">
 
@@ -56,7 +56,6 @@
         <conf name="runtime-1.0" extends="runtime" description="Older 1.0 runtime configuration"/>
         <conf name="compile" description="Normal compile configuration"/>
         <conf name="default" extends="runtime,compile" description="Runtime + compile configurations"/>
-        <conf name="jsr173" description="JSR 173 API JAR only"/>
     </configurations>
 
     <publications>
@@ -64,7 +63,6 @@
         <artifact name="jaxb-impl" conf="runtime"/>
         <artifact name="jaxb1-impl" conf="runtime-1.0"/>
         <artifact name="jaxb-xjc" conf="compile"/>
-        <artifact name="jsr173_1.0_api" conf="runtime,jsr173"/>
 
         <artifact name="jaxb-api" type="source" ext="zip"/>
         <artifact name="jaxb-impl" type="source" ext="zip"/>
@@ -75,6 +73,7 @@
 
     <dependencies>
         <dependency org="javax.activation" name="jaf" rev="[1.1,2.0[" conf="default-&gt;default"/>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="runtime-&gt;default"/>
     </dependencies>
 
 </ivy-module>
