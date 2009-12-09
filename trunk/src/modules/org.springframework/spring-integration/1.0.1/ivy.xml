@@ -66,9 +66,7 @@
         <dependency org="javax.jms" name="jms" rev="1.1" conf="default,jms-&gt;default"/>
         <dependency org="javax.mail" name="javamail" rev="1.4.1" conf="default,mail-&gt;default"/>
         <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="default,httpinvoker-&gt;default"/>
-        <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.1" conf="default,xml-&gt;default">
-            <artifact name="jsr173_1.0_api"/>
-        </dependency>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="default,xml-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-codec" rev="1.3" conf="default,security-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-collections" rev="3.2" conf="default,security-&gt;default"/>
         <dependency org="org.apache.ws.commons" name="XmlSchema" rev="[1.3.2,)" conf="default,xml-&gt;default"/>
