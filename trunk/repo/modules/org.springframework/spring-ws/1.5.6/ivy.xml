@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring-ws" revision="1.5.6" status="release" publication="20090128151000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 579 2009-03-17 16:57:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-ws/1.5.6/"/>
+        <ivyauthor name="$Id: ivy.xml 985 2009-12-09 16:15:54Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-ws/1.5.6/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-ws/sites/1.5/">
         Spring Web Services is a product of the Spring  community focused on creating
@@ -67,9 +67,7 @@
         <dependency org="javax.jms" name="jms" rev="1.1" conf="default,core-&gt;default"/>
         <dependency org="javax.mail" name="javamail" rev="1.4.1" conf="default,core-&gt;default"/>
         <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="default,core-&gt;default"/>
-        <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.1" conf="default,xml-&gt;default">
-            <artifact name="jsr173_1.0_api"/>
-        </dependency>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="default,xml-&gt;default"/>
         <dependency org="javax.xml.soap" name="saaj" rev="1.3" conf="default,security-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-codec" rev="1.3" conf="default,security-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-collections" rev="3.2" conf="default,security-&gt;default"/>
