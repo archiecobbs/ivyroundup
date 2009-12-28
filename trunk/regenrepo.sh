@@ -71,7 +71,7 @@ if svn st repo/modules 2>/dev/null | grep '^\?'; then
       | while read NAME; do
         rm -rf repo/$NAME
         svn cp src/$NAME repo/$NAME
-        svn pd svn:mergeinfo repo/$NAME
+        svn pd svn:mergeinfo repo/$NAME || true
     done
 
     # Regenerate repo (second time)
