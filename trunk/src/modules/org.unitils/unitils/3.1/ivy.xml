@@ -185,8 +185,8 @@
         <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3,5.0[" conf="test-&gt;default"/>
         <dependency org="org.hsqldb" name="hsqldb" rev="1.8.0.+" conf="test-&gt;default"/>
         <dependency org="edu.oswego.cs" name="concurrent" rev="1.3.+" conf="test-&gt;default"/>
-        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="mock-&gt;default"/>
-        <dependency org="org.objectweb.asm" name="asm" rev="3.1+" conf="mock-&gt;core,analysis,tree"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="dbmaintainer,mock-&gt;default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.1+" conf="dbmaintainer-&gt;core;mock-&gt;core,analysis,tree"/>
         <dependency org="org.easymock" name="easymock" rev="[2.3,3.0[" conf="easymock-&gt;ext"/>
         <dependency org="org.objenesis" name="objenesis" rev="1.1+" conf="mock-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.+" conf="test-&gt;default"/>
