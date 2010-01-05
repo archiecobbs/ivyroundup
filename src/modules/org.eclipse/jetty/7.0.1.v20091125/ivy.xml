@@ -42,7 +42,7 @@
 
     <configurations>
         <conf name="ajp" extends="server" description="AJP protocol support"/>
-        <conf name="all" extends="default,servlets,rewrite,annotations,jmx,deploy,start,policy,jaspi" description="All artifacts"/>
+        <conf name="all" extends="default,servlets,rewrite,annotations,jmx,deploy,start,policy,jaspi,websocket" description="All artifacts"/>
         <conf name="annotations" extends="plus" description="Annotation support for deploying servlets in jetty"/>
         <conf name="client" extends="http" description="Asynchronous HTTP Client"/>
         <conf name="continuation" description="Asynchronous API"/>
