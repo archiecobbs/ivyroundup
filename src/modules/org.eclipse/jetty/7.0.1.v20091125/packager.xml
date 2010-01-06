@@ -127,4 +127,10 @@
         <artifact classifier="sources" tofile="artifacts/sources/jetty-xml.zip" sha1="467ace226708cd6a3ccd3a3e4f9a1c4b3976ec12"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-xml.zip" sha1="c03a073767685c23e152a0046d1214d005503e77"/>
     </m2resource>
+    <m2resource groupId="org/mortbay/jetty" artifactId="jsp-api-2.1-glassfish" version="9.1.1.B60.25.p2">
+        <artifact tofile="artifacts/jars/jsp-api-2.1.jar" sha1="f7fbdf7a90959463c9a8162b3d92408706cecc89"/>
+    </m2resource>
+    <m2resource groupId="org/mortbay/jetty" artifactId="jsp-2.1-glassfish" version="9.1.1.B60.25.p2">
+        <artifact tofile="artifacts/jars/jsp-2.1.jar" sha1="61cfd241e26af3eb1042f96db6345e76c14d2a99"/>
+    </m2resource>
 </packager-module>
