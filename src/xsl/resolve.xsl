@@ -63,7 +63,11 @@
 
             <!-- Resolve all (matching) revisions -->
             <target name="resolve" description="Resolve all revisions of all modules">
-                <xsl:apply-templates select="org[not($resolve.org) or starts-with($resolve.org, @name) or contains($resolve.org, concat(',', @name))]"/>
+                <xsl:apply-templates select="org[not($resolve.org)
+                  or $resolve.org = @name
+                  or starts-with($resolve.org, concat(@name, ','))
+                  or contains($resolve.org, concat(',', @name, ','))
+                  or substring($resolve.org, string-length($resolve.org) - string-length(@name)) = concat(',', @name)]"/>
             </target>
         </project>
     </xsl:template>
@@ -72,14 +76,22 @@
         <xsl:comment>
             <xsl:value-of select="concat(' *** Organisation: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates select="mod[not($resolve.mod) or starts-with($resolve.mod, @name) or contains($resolve.mod, concat(',', @name))]"/>
+        <xsl:apply-templates select="mod[not($resolve.mod)
+          or $resolve.mod = @name
+          or starts-with($resolve.mod, concat(@name, ','))
+          or contains($resolve.mod, concat(',', @name, ','))
+          or substring($resolve.mod, string-length($resolve.mod) - string-length(@name)) = concat(',', @name)]"/>
     </xsl:template>
 
     <xsl:template match="mod">
         <xsl:comment>
             <xsl:value-of select="concat(' ***** Module: ', @name, ' ')"/>
         </xsl:comment>
-        <xsl:apply-templates select="rev[not($resolve.rev) or starts-with($resolve.rev, @name) or contains($resolve.rev, concat(',', @name))]"/>
+        <xsl:apply-templates select="rev[not($resolve.rev)
+          or $resolve.rev = @name
+          or starts-with($resolve.rev, concat(@name, ','))
+          or contains($resolve.rev, concat(',', @name, ','))
+          or substring($resolve.rev, string-length($resolve.rev) - string-length(@name)) = concat(',', @name)]"/>
     </xsl:template>
 
     <xsl:template match="rev">
