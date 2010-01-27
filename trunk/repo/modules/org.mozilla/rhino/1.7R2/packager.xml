@@ -19,10 +19,10 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="_version" value="1_7R1"/>
+    <property name="_version" value="1_7R2"/>
     <property name="archive" value="${name}${_version}"/>
 
-    <resource url="ftp://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip" sha1="4ee03d524f231a04fccff0cdbe13a41dae6d44f7">
+    <resource url="ftp://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip" sha1="3bb380cfb7f6febb87a64b2dee7fa308042f37e4">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/src/**/*"/>
         <include name="${archive}/javadoc/**/*"/>
