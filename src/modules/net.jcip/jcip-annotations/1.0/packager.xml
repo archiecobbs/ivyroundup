@@ -17,14 +17,8 @@
 -->
 
 <packager-module rev="$Id$">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="https://ivyroundup.googlecode.com/svn/trunk/files/${archive}.jar" tofile="artifacts/jars/${name}.jar"
-      sha1="5229cd34dc012ff7ceb7676182f0a46d2119ae9d"/>
-    <resource url="https://ivyroundup.googlecode.com/svn/trunk/files/${archive}-src.jar" tofile="artifacts/sources/source.zip"
-      sha1="c685e640967c817cc66d9df598772e68721161f8"/>
-
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="afba4942caaeaf46aab0b976afd57cc7c181467e"/>
+        <artifact tofile="artifacts/sources/source.zip" classifier="sources" sha1="d853625d8001c00d40abed553e670279504699f9"/>
+    </m2resource>
 </packager-module>
