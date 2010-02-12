@@ -103,7 +103,7 @@
         <conf name="aspects" extends="beans" description="Spring AspectJ"/>
         <conf name="beans" extends="core" description="Spring Beans"/>
         <conf name="cglib" extends="aop" description="Include CGLIB support for proxied classes"/>
-        <conf name="context" extends="beans, aop" description="Spring Context"/>
+        <conf name="context" extends="beans, aop, expression" description="Spring Context"/>
         <conf name="context-support" extends="context, aop, jdbc" description="Spring Context Support"/>
         <conf name="core" description="Spring Core"/>
         <conf name="expression" extends="core" description="Spring Expression Language"/>
