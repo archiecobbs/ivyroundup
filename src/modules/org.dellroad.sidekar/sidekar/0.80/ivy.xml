@@ -23,7 +23,24 @@
         <description homepage="http://sidekar.googlecode.com/">
 
         <p>
-        Sidekar is a simple, elegant, yet powerful and highly scalable persistence solution for Java applications.
+        Sidekar is an "object database" Java persistence solution. It
+        leverages the power and scalability of the
+        <a href="http://www.oracle.com/database/berkeley-db/je/index.html">Oracle Berkeley Database (Java Edition)</a>
+        while presenting a simple and natural Java programming
+        interface. Sidekar aims to make persistence technology fit the
+        Java world, instead of the other way around, so that persistence
+        becomes trivial for the Java programmer.
+        </p>
+
+        <p>
+        Sidekar is not <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">object-relational mapping</a>
+        (ORM) software; it does not rely on SQL. Beccause of this, it is dramatically simpler
+        and easier to work with than traditional ORM persistence layers. The core JAR file is only 375k.
+        </p>
+
+        <p>
+        Sidekar provides "natural" Java persistence, because you use normal Java
+        for everything related to persistence.
         </p>
 
         <p>
