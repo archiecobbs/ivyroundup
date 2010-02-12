@@ -22,7 +22,7 @@
 
     <info organisation="org.springframework" module="spring" revision="3.0.0" status="release" publication="20091216180000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 987 2009-12-18 03:06:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1062 2010-02-12 18:56:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -107,9 +107,9 @@
         <conf name="aspects" extends="beans" description="Spring AspectJ"/>
         <conf name="beans" extends="core" description="Spring Beans"/>
         <conf name="cglib" extends="aop" description="Include CGLIB support for proxied classes"/>
-        <conf name="context" extends="beans, aop" description="Spring Context"/>
+        <conf name="context" extends="beans, aop, expression" description="Spring Context"/>
         <conf name="context-support" extends="context, aop, jdbc" description="Spring Context Support"/>
-        <conf name="core" description="Spring Core"/>
+        <conf name="core" extends="asm" description="Spring Core"/>
         <conf name="expression" extends="core" description="Spring Expression Language"/>
         <conf name="instrument" description="Spring Instrument"/>
         <conf name="instrument-tomcat" extends="instrument" description="Spring Instrument Tomcat Weaver"/>
