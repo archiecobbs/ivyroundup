@@ -52,17 +52,56 @@
 
     <!-- Detect "YOUR NAME HERE" -->
     <xsl:template match="comment()[contains(., 'YOUR NAME HERE')]">
-        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: you didn't put your own name in the copyright message</xsl:message>
+        <xsl:call-template name="error">
+            <xsl:with-param name="msg" select="'you need to put your own name in the copyright message'"/>
+        </xsl:call-template>
     </xsl:template>
 
     <!-- Detect use of ${version} ant property (see issue #14) -->
     <xsl:template match="property[@name = 'version']">
-        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: don't use ${version} ant property; see http://code.google.com/p/ivyroundup/issues/detail?id=14 for details</xsl:message>
+        <xsl:call-template name="error">
+            <xsl:with-param name="msg" select="'avoid the ${version} ant property; see http://code.google.com/p/ivyroundup/issues/detail?id=14 for details'"/>
+        </xsl:call-template>
     </xsl:template>
 
-    <!-- Ensure there is a "default" configuration -->
-    <xsl:template match="configurations[not(conf[@name = 'default'])]">
-        <xsl:message>*** ERROR *** <xsl:value-of select="concat($organisation, '/', $module, '/', $revision)"/>: there is no 'default' configuration declared</xsl:message>
+    <!-- Detect redundant Maven stuff -->
+    <xsl:template match="m2resource[@groupId or @artifactId or @repo]">
+
+        <!-- Check groupId -->
+        <xsl:variable name="implicitGroupId">
+            <xsl:call-template name="slash2dot">
+                <xsl:with-param name="s" select="$organisation"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="groupIdWithDots">
+            <xsl:call-template name="slash2dot">
+                <xsl:with-param name="s" select="@groupId"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:if test="$implicitGroupId = $groupIdWithDots or @groupId = '${ivy.packager.organisation}'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="concat('redundant groupId &quot;', @groupId, '&quot; (implied by organisation name)')"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <!-- Check artifactId -->
+        <xsl:if test="@artifactId = $module or @artifactId = '${ivy.packager.module}'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="concat('redundant artifactId &quot;', @artifactId, '&quot; (implied by module name)')"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <!-- Check repository -->
+        <xsl:if test="@repo = 'http://repo1.maven.org/maven2/'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="concat('redundant maven repository &quot;', @repo, '&quot;')"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <!-- OK, proceed -->
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
     </xsl:template>
 
     <!-- Copy everything else exactly -->
@@ -70,6 +109,46 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
+    </xsl:template>
+
+    <!-- Convert slashes to dots -->
+    <xsl:template name="slash2dot">
+        <xsl:param name="s"/>
+        <xsl:choose>
+            <xsl:when test="contains($s, '/')">
+                <xsl:value-of select="concat(substring-before($s, '/'), '.', substring-after($s, '/'))"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$s"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <!-- Warning and error templates -->
+    <xsl:template name="error">
+        <xsl:param name="msg"/>
+        <xsl:call-template name="message">
+            <xsl:with-param name="msg" select="$msg"/>
+            <xsl:with-param name="kind" select="'ERROR'"/>
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="warning">
+        <xsl:param name="msg"/>
+        <xsl:call-template name="message">
+            <xsl:with-param name="msg" select="$msg"/>
+            <xsl:with-param name="kind" select="'WARNING'"/>
+        </xsl:call-template>
+    </xsl:template>
+
+    <xsl:template name="message">
+        <xsl:param name="msg"/>
+        <xsl:param name="kind"/>
+        <xsl:message>
+            <xsl:if test="$kind = 'ERROR'">&#10;**********************************************************************************</xsl:if>
+            <xsl:value-of select="concat('&#10;*** ', $kind, ': ', $organisation, '/', $module, '/', $revision, '/packager.xml: ', $msg)"/>
+            <xsl:if test="$kind = 'ERROR'">&#10;**********************************************************************************</xsl:if>
+        </xsl:message>
     </xsl:template>
 
 </xsl:transform>

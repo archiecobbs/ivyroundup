@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="javax/persistence" artifactId="${ivy.packager.module}">
+    <m2resource>
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="5725f57873e05e068803e2bf9d5a8ea3740ffec5"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="2773a7910e8f0c7d59749dc4fcef2a4b94fcf85a"/>
     </m2resource>

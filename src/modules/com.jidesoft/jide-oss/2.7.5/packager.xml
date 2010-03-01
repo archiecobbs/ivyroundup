@@ -15,7 +15,7 @@
     under the License.
 -->
 <packager-module rev="$Id$">
-    <m2resource groupId="com/jidesoft" artifactId="${ivy.packager.module}" repo="http://download.java.net/maven/2">
+    <m2resource repo="http://download.java.net/maven/2">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="78ecc527bc8ec4947c61a06c2e0a505bdfa76c08"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="8c8a42ae15e88ef2f8e203f478bc28b22d03fa63"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="2a00fcda39d21bb0b99080059b844e784a1298e3"/>
