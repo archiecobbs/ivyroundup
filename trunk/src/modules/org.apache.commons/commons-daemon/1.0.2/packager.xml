@@ -21,29 +21,19 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-    <property name="archivesrc" value="daemon-${revision}"/>
     
-    <resource url="http://archive.apache.org/dist/commons/daemon/binaries/${archive}.tar.gz" sha1="14a5d4dd4363fe391b9ec2747ec6e23504653cbc">
+    <resource url="http://archive.apache.org/dist/commons/daemon/binaries/${archive}-bin.tar.gz" sha1="34d8f5089965488d5f65105a38d751744e61b620">
         <include name="${archive}/*.jar"/>
-        <include name="${archive}/docs/api/**/*"/>
-    </resource>
-
-    <resource url="http://archive.apache.org/dist/commons/daemon/source/${archivesrc}.tar.gz" sha1="05f034b8c58a3bd367a72fe5532b354f76e1df93">
-        <include name="${archive}/src/java/**/*"/>
     </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archivesrc}/src/java"/>
-        </zip>
+        <move file="archive/${archive}/${archive}-sources.jar" tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/api"/>
-        </zip>
+        <move file="archive/${archive}/${archive}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
     </build>
 </packager-module>
