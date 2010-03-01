@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="javax/servlet" artifactId="servlet-api">
+    <m2resource artifactId="servlet-api">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="5959582d97d8b61f4d154ca9e495aafd16726e34"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="021599814ad9a605b86f3e6381571beccd861a32"/>
     </m2resource>

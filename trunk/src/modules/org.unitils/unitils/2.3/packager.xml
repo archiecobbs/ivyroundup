@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="org/${ivy.packager.module}">
+    <m2resource>
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="cbd3aba95be125b132aac03e742b464808148021"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="dbb54ad1549e43bdb7a9b8d1d4e6593e052281ea"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="0593fd8eb55ae81cd9b8ebf19e55585aaf1d729f"/>

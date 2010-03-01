@@ -17,28 +17,28 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="org/beanshell" artifactId="bsh-bsf">
+    <m2resource artifactId="bsh-bsf">
         <artifact tofile="artifacts/jars/bsh-bsf.jar" sha1="8fad5a6cca256355f0eeaca6cfc58edb370f0499"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-classgen">
+    <m2resource artifactId="bsh-classgen">
         <artifact tofile="artifacts/jars/bsh-classgen.jar" sha1="121444b13b1f53127e09cd9fb4e39b8308f72173"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-classgen">
+    <m2resource artifactId="bsh-classgen">
         <artifact tofile="artifacts/jars/bsh-classgen.jar" sha1="121444b13b1f53127e09cd9fb4e39b8308f72173"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-classpath">
+    <m2resource artifactId="bsh-classpath">
         <artifact tofile="artifacts/jars/bsh-classpath.jar" sha1="a8aa86cc3b898f4e1496a6c6f9708a4f2d8a5b73"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-commands">
+    <m2resource artifactId="bsh-commands">
         <artifact tofile="artifacts/jars/bsh-commands.jar" sha1="f067bc6f63228227425ac104db6f91a9b72f8805"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-core">
+    <m2resource artifactId="bsh-core">
         <artifact tofile="artifacts/jars/bsh-core.jar" sha1="495e25a99e29970ffe8ba0b1d551e1d1a9991fc1"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-reflect">
+    <m2resource artifactId="bsh-reflect">
         <artifact tofile="artifacts/jars/bsh-reflect.jar" sha1="92f23d944774f46046f6ebd88aa0f567300ea5cc"/>
     </m2resource>
-    <m2resource groupId="org/beanshell" artifactId="bsh-util">
+    <m2resource artifactId="bsh-util">
         <artifact tofile="artifacts/jars/bsh-util.jar" sha1="541862749ae43c21c6523b3feb9a0237e49241fd"/>
     </m2resource>
     <resource url="http://www.beanshell.org/${ivy.packager.module}-${ivy.packager.revision}-src.jar"
