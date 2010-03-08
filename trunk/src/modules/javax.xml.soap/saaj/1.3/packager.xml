@@ -23,7 +23,7 @@
     <property name="baseurl" value="https://saaj.dev.java.net"/>
     <property name="jarurl" value="${baseurl}/files/documents/52"/>
 
-    <resource url="${jarurl}/111989/${name}.zip" sha1="8aacce933ff5e75aaa968ec87ae92aec61927c71"/>
+    <resource url="${jarurl}/111989/${name}${revision}.zip" sha1="2d04a497791015c7fcb0314024ee0ec2f1bb05df"/>
     <resource url="${jarurl}/111990/${name}${revision}.src.zip"
       sha1="7047e1eb0083244622607fceb6afcfbfe865cb21" tofile="artifacts/sources/source.zip"/>
     <resource url="${baseurl}/spec-${revision}/${name}-apidocs.war"
