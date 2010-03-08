@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2010 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,19 +22,27 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://wattdepot.googlecode.com/files/${archive}.zip" sha1="3ed7bef966887e5512d6bb94bbe7f4111f1ca7cf"/>
+    <resource url="http://${name}.googlecode.com/files/${archive}.zip" sha1="ec6c1d8c9fca2fb4141f61432a2caa33424db804"/>
 
     <build>
-        <!-- jar -->
-        <move todir="artifacts/jars">
-          <fileset dir="archive/${archive}/" includes="*.jar"/>
-	</move>
 
-        <!-- source -->
-        <move file="archive/${archive}/${name}-source.zip" tofile="artifacts/sources/source.zip"/>
+        <!-- jar -->
+        <move file="archive/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- javadoc -->
-        <move file="archive/${archive}/${name}-javadoc.zip" tofile="artifacts/javadocs/javadoc.zip"/>
+        <mkdir dir="javadoc"/>
+        <unzip src="archive/${name}-javadocs-${revision}.zip" dest="javadoc"/>
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="javadoc"/>
+        </zip>
 
+        <!-- source -->
+        <mkdir dir="source"/>
+        <unzip src="archive/${name}-source-${revision}.zip" dest="source"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="source/src"/>
+            <fileset dir="source/docs"/>
+            <fileset dir="source/test"/>
+        </zip>
     </build>
 </packager-module>

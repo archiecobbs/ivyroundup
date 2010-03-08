@@ -23,32 +23,12 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="archivesrc" value="daemon-${revision}"/>
     
-    <property name="mirror1" value="http://mir2.ovh.net/ftp.apache.org/dist/commons/daemon"/>
-    <property name="mirror2" value="http://apache.cict.fr/commons/daemon"/>
-    <property name="mirror3" value="http://apache.multidist.com/commons/daemon"/>
-    <property name="mirror4" value="http://mirror.mkhelif.fr/apache/commons/daemon"/>
-    <property name="mirror5" value="http://apache.crihan.fr/dist/commons/daemon"/>
-    <property name="mirror6" value="ftp://mir1.ovh.net/ftp.apache.org/dist/commons/daemon"/>
-    <property name="mirror7" value="ftp://ftp.inria.fr/pub/Apache/commons/daemon"/>
-    
-    <resource url="${mirror1}/binaries/${archive}.tar.gz" sha1="14a5d4dd4363fe391b9ec2747ec6e23504653cbc">
-        <url href="${mirror2}/binaries/${archive}.tar.gz"/>
-        <url href="${mirror3}/binaries/${archive}.tar.gz"/>
-        <url href="${mirror4}/binaries/${archive}.tar.gz"/>
-        <url href="${mirror5}/binaries/${archive}.tar.gz"/>
-        <url href="${mirror6}/binaries/${archive}.tar.gz"/>
-        <url href="${mirror7}/binaries/${archive}.tar.gz"/>
+    <resource url="http://archive.apache.org/dist/commons/daemon/binaries/${archive}.tar.gz" sha1="14a5d4dd4363fe391b9ec2747ec6e23504653cbc">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/docs/api/**/*"/>
     </resource>
 
-    <resource url="${mirror1}/source/${archivesrc}.tar.gz" sha1="05f034b8c58a3bd367a72fe5532b354f76e1df93">
-        <url href="${mirror2}/source/${archivesrc}.tar.gz"/>
-        <url href="${mirror3}/source/${archivesrc}.tar.gz"/>
-        <url href="${mirror4}/source/${archivesrc}.tar.gz"/>
-        <url href="${mirror5}/source/${archivesrc}.tar.gz"/>
-        <url href="${mirror6}/source/${archivesrc}.tar.gz"/>
-        <url href="${mirror7}/source/${archivesrc}.tar.gz"/>
+    <resource url="http://archive.apache.org/dist/commons/daemon/source/${archivesrc}.tar.gz" sha1="05f034b8c58a3bd367a72fe5532b354f76e1df93">
         <include name="${archive}/src/java/**/*"/>
     </resource>
 

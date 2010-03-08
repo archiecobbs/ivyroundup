@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2010 Gregory Fernandez
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,19 +22,27 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://wattdepot.googlecode.com/files/${archive}.zip" sha1="3ed7bef966887e5512d6bb94bbe7f4111f1ca7cf"/>
+    <resource url="http://archive.apache.org/dist/commons/discovery/${archive}.tar.gz" sha1="4489c0b98b7d42ccd625a060f074fa68a7b1c05a">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/docs/apidocs/**/*"/>
+    </resource>
+
+    <resource url="http://archive.apache.org/dist/commons/discovery/${archive}-src.tar.gz" sha1="92ab3148ff2b94135c86b727f585297d770604bf">
+        <include name="${archive}-src/src/java/**/*"/>
+    </resource>
 
     <build>
         <!-- jar -->
-        <move todir="artifacts/jars">
-          <fileset dir="archive/${archive}/" includes="*.jar"/>
-	</move>
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <move file="archive/${archive}/${name}-source.zip" tofile="artifacts/sources/source.zip"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}-src/src/java"/>
+        </zip>
 
         <!-- javadoc -->
-        <move file="archive/${archive}/${name}-javadoc.zip" tofile="artifacts/javadocs/javadoc.zip"/>
-
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
     </build>
 </packager-module>
