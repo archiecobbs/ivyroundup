@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate-tools" revision="3.2.2.Beta1" status="milestone" publication="20080409120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 824 2009-07-21 17:28:54Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-tools/3.2.2.Beta1/"/>
+        <ivyauthor name="$Id: ivy.xml 1109 2010-03-09 17:21:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-tools/3.2.2.Beta1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://tools.hibernate.org/">
 
@@ -94,6 +94,7 @@
     </publications>
 
     <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="default-&gt;default"/>
         <dependency org="org.hibernate" name="hibernate" rev="3.2.+" conf="default-&gt;core"/>
         <dependency org="org.hibernate" name="hibernate-annotations" rev="3.3.+" conf="default-&gt;default"/>
         <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.3.+" conf="default-&gt;default"/>
