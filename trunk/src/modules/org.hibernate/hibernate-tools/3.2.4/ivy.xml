@@ -90,6 +90,7 @@
     </publications>
 
     <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="core->default"/>
         <dependency org="org.hibernate" name="hibernate" rev="3.2.+" conf="default->core"/>
         <dependency org="org.hibernate" name="hibernate-annotations" rev="3.3.+" conf="default->default"/>
         <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.3.+" conf="default->default"/>
