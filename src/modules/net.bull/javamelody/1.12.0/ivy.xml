@@ -42,6 +42,12 @@
 
     <publications>
         <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="org.jrobin" name="jrobin" rev="1.5.+" conf="default->default"/>
+    </dependencies>
 
 </ivy-module>
