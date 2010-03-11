@@ -22,7 +22,7 @@
 
     <info organisation="net.bull" module="javamelody" revision="1.12.0" status="release" publication="20100306120000">
         <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1098 2010-03-08 21:22:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.bull/javamelody/1.12.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1115 2010-03-11 00:36:33Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.bull/javamelody/1.12.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://javamelody.googlecode.com/">
 
@@ -46,6 +46,12 @@
 
     <publications>
         <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="org.jrobin" name="jrobin" rev="1.5.+" conf="default-&gt;default"/>
+    </dependencies>
 
 </ivy-module>
