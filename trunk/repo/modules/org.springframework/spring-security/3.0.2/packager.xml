@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Philip Johnson
+    Copyright 2009 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,17 +20,29 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="${name}-${revision}.RELEASE"/>
 
-    <resource url="http://simplejcs.googlecode.com/files/${archive}.zip" sha1="649179ab1e0a9165168cfad419ea63ee57d5dd21"/>
+    <resource url="http://s3.amazonaws.com/dist.springframework.org/release/SEC/${archive}.zip" sha1="1e064861197e788c5df5f4b42699dec19167d5bc"/>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}/dist">
+                <include name="${name}-*-${revision}.RELEASE.jar"/>
+            </fileset>
+            <mapper type="glob" from="${name}-*-${revision}.RELEASE.jar" to="${name}-*.jar"/>
+        </move>
 
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/"/>
+        <!-- sources -->
+        <move todir="artifacts/sources">
+            <fileset dir="archive/${archive}/dist">
+                <include name="${name}-*-${revision}.RELEASE-sources.jar"/>
+            </fileset>
+            <mapper type="glob" from="${name}-*-${revision}.RELEASE-sources.jar" to="${name}-*.zip"/>
+        </move>
+
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
         </zip>
     </build>
 </packager-module>
