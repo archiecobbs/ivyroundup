@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.3.1.GA" status="release" publication="20080910122300">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 822 2009-07-21 15:04:48Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.3.1.GA/"/>
+        <ivyauthor name="$Id: ivy.xml 1129 2010-04-03 02:30:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.3.1.GA/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
@@ -105,7 +105,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.2.3,2.0[" conf="ehcache-&gt;default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.2.3,3.0[" conf="ehcache-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-collections" rev="[3.1,4.0[" conf="core-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="[1.5.2,2.0[" conf="core-&gt;core"/>
         <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="core-&gt;default"/>
