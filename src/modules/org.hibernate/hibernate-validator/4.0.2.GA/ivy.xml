@@ -18,7 +18,7 @@
 
 <ivy-module rev="$Id$">
 
-    <info publication="20090808103300">
+    <info publication="20091106065300">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
         <description homepage="http://validator.hibernate.org/">
 
@@ -54,7 +54,7 @@
 
     <dependencies>
         <dependency org="org.slf4j" name="slf4j" rev="[1.5,2.0[" conf="default-&gt;core"/>
-        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;core"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;default"/>
     </dependencies>
 
 </ivy-module>

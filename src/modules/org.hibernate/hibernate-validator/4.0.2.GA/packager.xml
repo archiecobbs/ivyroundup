@@ -18,8 +18,8 @@
 
 <packager-module rev="$Id$">
     <m2resource repo="http://repository.jboss.org/maven2">
-        <artifact tofile="artifacts/jars/${ivy.module.name}.jar" sha1="de984a162bf585b3c85f21e3fd0124d17be88e9c"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.module.name}.zip" sha1="a4ba102e9af7c4e474af4deed664201a7529467b"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadoc/${ivy.module.name}.zip" sha1="c12e8d866cf61dfb7e2e6d99b1900f704a788a24"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="de984a162bf585b3c85f21e3fd0124d17be88e9c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="a4ba102e9af7c4e474af4deed664201a7529467b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadoc/${ivy.packager.module}.zip" sha1="c12e8d866cf61dfb7e2e6d99b1900f704a788a24"/>
     </m2resource>
 </packager-module>
