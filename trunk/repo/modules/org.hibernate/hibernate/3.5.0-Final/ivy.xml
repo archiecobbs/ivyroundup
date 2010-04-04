@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.5.0-Final" status="release" publication="20100321172700">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1131 2010-04-04 06:55:09Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.5.0-Final/"/>
+        <ivyauthor name="$Id: ivy.xml 1141 2010-04-04 08:43:00Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.5.0-Final/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
@@ -63,7 +63,7 @@
         <conf name="ehcache" extends="core" description="Integration of Hibernate with Ehcache"/>
         <conf name="entitymanager" extends="annotations,cglib" description="Hibernate Entity Manager"/>
         <conf name="envers" extends="entitymanager" description="Support for entity auditing"/>
-        <conf name="infinispan" extends="testing" description="Integration of Hibernate with Infinispan"/>
+        <conf name="infinispan" extends="core" description="Integration of Hibernate with Infinispan"/>
         <conf name="jbosscache" extends="core" description="Integration of Hibernate with JBossCache 3.x (though 2.x sould work as well)"/>
         <conf name="jmx" extends="core" description="Defines Hibernate JMX capabilities"/>
         <conf name="oscache" extends="core" description="Integration of Hibernate with OSCache"/>

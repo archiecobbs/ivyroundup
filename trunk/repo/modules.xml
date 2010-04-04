@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2010-04-04 07:42:17 UTC</timestamp>
-  <svnRevision>1138</svnRevision>
+  <timestamp>2010-04-04 08:55:29 UTC</timestamp>
+  <svnRevision>1142</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -308,6 +308,11 @@
   <org name="javax.transaction">
     <mod name="jta">
       <rev name="1.1"/>
+    </mod>
+  </org>
+  <org name="javax.validation">
+    <mod name="validation-api">
+      <rev name="1.0.0.GA"/>
     </mod>
   </org>
   <org name="javax.ws.rs">
@@ -1044,6 +1049,9 @@
     <mod name="hibernate-validator">
       <rev name="3.0.0"/>
       <rev name="3.1.0.GA"/>
+      <rev name="4.0.0.GA"/>
+      <rev name="4.0.1.GA"/>
+      <rev name="4.0.2.GA"/>
     </mod>
     <mod name="hibernate">
       <rev name="3.2.6"/>
