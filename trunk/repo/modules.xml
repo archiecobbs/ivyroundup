@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2010-04-04 06:59:14 UTC</timestamp>
-  <svnRevision>1131</svnRevision>
+  <timestamp>2010-04-04 07:25:39 UTC</timestamp>
+  <svnRevision>1136</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -1058,6 +1058,11 @@
       <rev name="1.8.0.10"/>
     </mod>
   </org>
+  <org name="org.infinispan">
+    <mod name="infinispan">
+      <rev name="4.0.0.FINAL"/>
+    </mod>
+  </org>
   <org name="org.jasig.cas">
     <mod name="cas-client-core">
       <rev name="3.1.10"/>
@@ -1078,6 +1083,11 @@
   <org name="org.javacc">
     <mod name="javacc">
       <rev name="4.2"/>
+    </mod>
+  </org>
+  <org name="org.jboss.cache">
+    <mod name="jbosscache-core">
+      <rev name="3.2.2.GA"/>
     </mod>
   </org>
   <org name="org.jboss">
