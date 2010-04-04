@@ -17,9 +17,25 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource repo="http://repository.jboss.org/maven2">
-        <artifact tofile="artifacts/jars/ijbosscache-core.jar" sha1="0a1c1bce133763cf11dac43a2b688f459c6e23fa"/>
-        <artifact classifier="sources" tofile="artifacts/sources/jbosscache-core.zip" sha1="050bad65be8dbee7c9f45d546bee79cdf6d41b0a"/>
-        <artifact classifier="doc" tofile="artifacts/javadocs/jbosscache-core.zip" sha1="67bce05b3ab3d0b257d32d182f7564da84c3a1c9"/>
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="3.2.2.GA"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="repo" value="http://repository.jboss.org/maven2"/>
+    
+    <resource url="${repo}/org/jboss/cache/${name}/${revision}/${archive}-doc.zip"
+      sha1="67bce05b3ab3d0b257d32d182f7564da84c3a1c9">
+        <include name="${archive}/doc/apidocs/**/*"/>
+    </resource>
+    <m2resource repo="${repo}">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="0a1c1bce133763cf11dac43a2b688f459c6e23fa"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="050bad65be8dbee7c9f45d546bee79cdf6d41b0a"/>
     </m2resource>
+
+    <build>
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/${name}.zip">
+            <fileset dir="archive/${archive}/doc/apidocs"/>
+        </zip>
+    </build>
+
 </packager-module>
