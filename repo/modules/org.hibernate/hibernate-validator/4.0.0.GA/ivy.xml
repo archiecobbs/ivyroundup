@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate-validator" revision="4.0.0.GA" status="release" publication="20090808103300">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1140 2010-04-04 08:37:29Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-validator/4.0.0.GA/"/>
+        <ivyauthor name="$Id: ivy.xml 1147 2010-04-04 10:08:30Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-validator/4.0.0.GA/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://validator.hibernate.org/">
 
@@ -58,7 +58,7 @@
 
     <dependencies>
         <dependency org="org.slf4j" name="slf4j" rev="[1.5,2.0[" conf="default-&gt;core"/>
-        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;core"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;default"/>
     </dependencies>
 
 </ivy-module>
