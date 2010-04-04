@@ -57,7 +57,7 @@
         <conf name="ehcache" extends="core" description="Integration of Hibernate with Ehcache"/>
         <conf name="entitymanager" extends="annotations,cglib" description="Hibernate Entity Manager"/>
         <conf name="envers" extends="entitymanager" description="Support for entity auditing"/>
-        <conf name="infinispan" extends="testing" description="Integration of Hibernate with Infinispan"/>
+        <conf name="infinispan" extends="core" description="Integration of Hibernate with Infinispan"/>
         <conf name="jbosscache" extends="core" description="Integration of Hibernate with JBossCache 3.x (though 2.x sould work as well)"/>
         <conf name="jmx" extends="core" description="Defines Hibernate JMX capabilities"/>
         <conf name="oscache" extends="core" description="Integration of Hibernate with OSCache"/>
