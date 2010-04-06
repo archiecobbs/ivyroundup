@@ -22,7 +22,7 @@
 
     <info organisation="org.hibernate" module="hibernate-tools" revision="3.2.4" status="release" publication="20090507014600">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1158 2010-04-06 21:15:40Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-tools/3.2.4/"/>
+        <ivyauthor name="$Id: ivy.xml 1160 2010-04-06 21:19:27Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-tools/3.2.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://tools.hibernate.org/">
 
@@ -94,7 +94,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="default-&gt;default"/>
         <dependency org="org.beanshell" name="bsh" rev="[2.0b4,3.0[" conf="default-&gt;default"/>
         <dependency org="net.sourceforge.freemarker" name="freemarker" rev="[2.3.8,2.4[" conf="default-&gt;default"/>
         <dependency org="net.sourceforge.jtidy" name="jtidy" rev="[8.0,9.0[" conf="default-&gt;default"/>
