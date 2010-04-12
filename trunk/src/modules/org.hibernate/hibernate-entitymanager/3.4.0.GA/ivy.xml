@@ -62,9 +62,9 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.hibernate" name="hibernate" rev="3.3+" conf="default->core"/>
-        <dependency org="org.hibernate" name="hibernate-annotations" rev="3.4+" conf="default->default"/>
-        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="[3.1.0.GA,4.0[" conf="default->default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.3.1.GA,3.5.0-Final[" conf="default->core"/>
+        <dependency org="org.hibernate" name="hibernate-annotations" rev="3.4.0.GA" conf="default->default"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="default->default"/>
         <dependency org="org.hibernate" name="ejb3-persistence" rev="[1.0.2.GA,2.0[" conf="default->default"/>
         <dependency org="org.slf4j" name="slf4j" rev="[1.4.2,2.0[" conf="default->core"/>
         <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="default->default"/>
