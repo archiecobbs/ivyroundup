@@ -29,14 +29,13 @@
     </info>
 
     <configurations>
-        <conf name="default" description="Main interfaces"/>
-        <conf name="ext" extends="default" description="Main plus extension interfaces, e.g. SVG"/>
+        <conf name="default" description="Main plus extension interfaces, e.g. SVG"/>
         <conf name="ext-only" description="Extension interfaces only"/>
     </configurations>
 
     <publications>
         <artifact name="xml-apis" conf="default"/>
-        <artifact name="xml-apis-ext" conf="ext"/>
+        <artifact name="xml-apis-ext" conf="default,ext-only"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
