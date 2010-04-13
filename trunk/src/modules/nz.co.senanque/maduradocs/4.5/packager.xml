@@ -22,8 +22,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://maduradocs.googlecode.com/files/${name}-${revision}.zip"
-      sha1="7f34d5c7c3e4cb08c5712a8acd9221215ab6e3df"/>
+    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.zip"
+      sha1="fdc687dc4612f809f6aa5e231f44721788568d94"/>
 
     <build>
         <mkdir dir="artifacts/xmls"/>
