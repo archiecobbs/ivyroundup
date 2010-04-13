@@ -190,7 +190,7 @@
         </xsl:if>
         <xsl:if test="not(contains(@conf, '-&gt;'))">
             <xsl:call-template name="error">
-                <xsl:with-param name="msg" select="'&quot;conf&quot; attribute has does not specify source configuration(s)'"/>
+                <xsl:with-param name="msg" select="'&quot;conf&quot; attribute does not specify source configuration(s)'"/>
             </xsl:call-template>
         </xsl:if>
         <xsl:if test="contains(@conf, '-&gt;*')">
