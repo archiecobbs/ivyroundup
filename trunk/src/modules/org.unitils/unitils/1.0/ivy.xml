@@ -138,7 +138,7 @@
         <dependency org="com.opensymphony" name="ognl" rev="[2.6.9,3.0[" conf="core->default"/>
         <dependency org="org.apache.commons" name="commons-dbcp" rev="[1.2.2,2.0[" conf="database->default"/>
         <dependency org="org.dbunit" name="dbunit" rev="[2.2,3.0[" conf="dataset->default"/>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.2,4.0[" conf="hibernate->core"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.2,3.5.0-Final[" conf="hibernate->core"/>
         <dependency org="org.easymock" name="easymock" rev="[2.2,3.0[" conf="mock->ext"/>
         <dependency org="org.springframework" name="spring" rev="[2.0,3.0[" conf="spring->context;spring-hibernate->orm;spring-jdbc->jdbc"/>
     </dependencies>
