@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2010 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,26 +19,25 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.dom4j" module="dom4j" revision="1.6.1" status="release" publication="20050516120000">
-        <license name="BSD License" url="http://www.dom4j.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1178 2010-04-19 15:01:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dom4j/dom4j/1.6.1/"/>
+    <info organisation="org.jvnet.jaxb2_commons" module="jaxb2-basics-tools" revision="0.5.2" status="release" publication="20080808120000">
+        <license name="The BSD Style License" url="http://static.highsource.org/jaxb2-basics/license.html"/>
+        <ivyauthor name="$Id: ivy.xml 1179 2010-04-19 15:09:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jvnet.jaxb2_commons/jaxb2-basics-tools/0.5.2/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://dom4j.sourceforge.net/">
-            dom4j is an easy to use, open source library for working
-            with XML, XPath and XSLT on the Java platform using the
-            Java Collections Framework and with full support for DOM,
-            SAX and JAXP.
-        </description>
+        <description homepage="http://static.highsource.org/jaxb2-basics/">JAXB2 Basics - Tools.</description>
     </info>
 
     <publications>
         <artifact/>
         <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.xerces" name="xerces" conf="default-&gt;apis" rev="[2.5,3.0["/>
-        <dependency org="org.codehaus.jaxen" name="jaxen" conf="default-&gt;default" rev="1.1.1"/>
+        <dependency org="org.jvnet.jaxb2_commons" name="jaxb2-basics-runtime" rev="0.5.2" force="true" conf="default-&gt;default"/>
+        <dependency org="javax.xml.bind" name="jaxb" rev="2.2" force="true" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7.0" conf="default-&gt;default"/>
     </dependencies>
 
 </ivy-module>
