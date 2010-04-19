@@ -21,7 +21,7 @@
 
     <info organisation="org.unitils" module="unitils" revision="2.4" status="release" publication="20090723002100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 868 2009-08-14 15:30:44Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/2.4/"/>
+        <ivyauthor name="$Id: ivy.xml 1183 2010-04-19 18:52:45Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/2.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.unitils.org/">
         &lt;p&gt;Unitils is an open source library aimed at making unit testing easy
@@ -142,7 +142,7 @@
         <dependency org="org.apache.commons" name="commons-dbcp" rev="[1.2.2,2.0[" conf="database-&gt;default"/>
         <dependency org="org.dbunit" name="dbunit" rev="[2.2.2,3.0[" conf="dataset-&gt;default"/>
         <dependency org="org.dbmaintain" name="dbmaintain" rev="1.+" conf="database-&gt;default"/>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.2,4.0[" conf="hibernate-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.2,3.5.0-Final[" conf="hibernate-&gt;core"/>
         <dependency org="org.easymock" name="easymock" rev="[2.3,3.0[" conf="mock-&gt;ext"/>
         <dependency org="org.springframework" name="spring" rev="[2.0,3.0[" conf="spring-&gt;context;spring-hibernate-&gt;orm;spring-jdbc-&gt;jdbc"/>
     </dependencies>

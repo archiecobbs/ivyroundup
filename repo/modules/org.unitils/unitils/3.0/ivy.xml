@@ -21,7 +21,7 @@
 
     <info organisation="org.unitils" module="unitils" revision="3.0" status="release" publication="20091011182900">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 989 2009-12-28 19:57:49Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1183 2010-04-19 18:52:45Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.unitils.org/">
         &lt;p&gt;Unitils is an open source library aimed at making unit testing easy
@@ -184,8 +184,8 @@
         <dependency org="org.junit" name="junit" rev="[4.4,5.0[" conf="core-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-dbcp" rev="[1.2.2,2.0[" conf="database-&gt;default"/>
         <dependency org="org.dbunit" name="dbunit" rev="[2.2.2,3.0[" conf="dbmaintainer-&gt;default"/>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.2,5.0[" conf="dbmaintainer-&gt;core"/>
-        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3,5.0[" conf="test-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.2,3.5.0-Final[" conf="dbmaintainer-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3,3.5.0-final[" conf="test-&gt;default"/>
         <dependency org="org.hsqldb" name="hsqldb" rev="1.8.0.+" conf="test-&gt;default"/>
         <dependency org="edu.oswego.cs" name="concurrent" rev="1.3.+" conf="test-&gt;default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="dbmaintainer,mock-&gt;default"/>
@@ -194,7 +194,7 @@
         <dependency org="org.objenesis" name="objenesis" rev="1.1+" conf="mock-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.+" conf="test-&gt;default"/>
         <dependency org="org.testng" name="testng" rev="5.8" conf="testng-&gt;jdk15"/>
-        <dependency org="javax.persistence" name="persistence-api" rev="[1.0,3.0[" conf="orm-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="1.0" conf="orm-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="[2.0,4.0[" conf="spring-&gt;tx,test;orm-&gt;orm;database-&gt;jdbc"/>
     </dependencies>
 
