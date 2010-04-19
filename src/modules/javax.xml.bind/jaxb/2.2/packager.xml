@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}-api.jar"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api.jar"
+      sha1="bcf23b1d858c6f69d67c851d497984d25345d0b1"/>
+    <resource tofile="artifacts/jars/${name}-impl.jar"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.jar"
+      sha1="2ec69bd69b66b0dabea392de713a11f975001760"/>
+    <resource tofile="artifacts/jars/${name}-xjc.jar"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.jar"
+      sha1="64d468922b85a9626178aedf564ffdbde980b3ec"/>
+    <resource tofile="artifacts/jars/${name}1-impl.jar"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}1-impl.jar"
+      sha1="f02664a059617d060bec3eba0bc002b2102aeb84"/>
+    <resource tofile="artifacts/sources/${name}-impl.zip"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.src.zip"
+      sha1="6ce35d6e3fc4e4e8cccf19ebfa18193cb55e77a9"/>
+    <resource tofile="artifacts/sources/${name}-xjc.zip"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.src.zip"
+      sha1="6ebc9bf1d1b74d096b96d060ad7c21b7f67592cb"/>
+    <resource tofile="artifacts/sources/${name}-api.zip"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-src.zip"
+      sha1="bb17675f5f7bb5654e95962944ca1e3620963460"/>
+    <resource tofile="artifacts/javadocs/${name}-api.zip"
+      url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-doc.zip"
+      sha1="798938250d6d1979f6e23ed657f5455ba812dc9f"/>
+
+</packager-module>
