@@ -118,6 +118,7 @@
         <conf name="web" extends="aop, beans, context, core" description="Spring Web"/>
         <conf name="web-portlet" extends="web" description="Spring Web Portlet"/>
         <conf name="web-servlet" extends="web" description="Spring Web Servlet"/>
+        <conf name="webmvc" extends="web-servlet" description="DEPRECATED! Spring Web + Web Servlet"/>
         <conf name="web-struts" extends="web" description="Spring Web Struts"/>
         <conf name="default" description="Everything (all of the module JARs)"/>
     </configurations>
