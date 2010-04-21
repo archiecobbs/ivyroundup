@@ -21,7 +21,7 @@
 
     <info organisation="org.springframework" module="spring" revision="3.0.1" status="release" publication="20100310180000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1118 2010-03-11 15:30:02Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1192 2010-04-21 19:59:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -121,6 +121,7 @@
         <conf name="web" extends="aop, beans, context, core" description="Spring Web"/>
         <conf name="web-portlet" extends="web" description="Spring Web Portlet"/>
         <conf name="web-servlet" extends="web" description="Spring Web Servlet"/>
+        <conf name="webmvc" extends="web-servlet" description="DEPRECATED! Spring Web + Web Servlet"/>
         <conf name="web-struts" extends="web" description="Spring Web Struts"/>
         <conf name="default" description="Everything (all of the module JARs)"/>
     </configurations>
