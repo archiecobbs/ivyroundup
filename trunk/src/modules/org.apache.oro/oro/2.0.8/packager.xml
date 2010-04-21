@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="jakarta-${name}-${revision}"/>
 
-    <resource url="http://www.urlstructure.com/apache/jakarta/${name}/binaries/${archive}.tar.gz"
+    <resource url="http://www.apache.org/dist/jakarta/oro/${archive}.tar.gz"
       sha1="23d708b77885c97149873e808fdf4bcf05fe6708">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/src/java/**/*"/>
