@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2009 Philip Johnson
+    Copyright 2010 Nathan Summers
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -75,23 +76,30 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="tool" description="The FindBugs command-line/gui tool." />
+        <conf name="ant" description="The FindBugs ant task." extends="tool" />
+        <conf name="annotations" description="The FindBugs annotations." />
+        <conf name="default" description="Everything." extends="ant, annotations" />
+    </configurations>
+
     <publications>
-        <artifact name="findbugs" conf="default"/>
-        <artifact name="findbugs-ant" conf="default"/>
-        <artifact name="default" conf="default" type="report" ext="xsl"/>
-        <artifact name="annotations" conf="default"/>
-        <artifact name="bcel" conf="default"/>
-        <artifact name="jFormatString" conf="default"/>
-        <artifact name="jsr305" conf="default"/>
+        <artifact name="findbugs" conf="tool"/>
+        <artifact name="findbugs-ant" conf="ant"/>
+        <artifact name="default" conf="tool" type="report" ext="xsl"/>
+        <artifact name="annotations" conf="annotations"/>
+        <artifact name="bcel" conf="tool"/>
+        <artifact name="jFormatString" conf="tool"/>
+        <artifact name="jsr305" conf="annotations"/>
         <artifact name="source" type="source" ext="zip"/>
         <!-- No prebuilt javadoc currently available. -->
     </publications>
 
     <dependencies>
-      <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="default->default"/>
-      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default->default"/>
-      <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="default->default"/>
-      <dependency org="org.codehaus.jaxen" name="jaxen" rev="1.1.1" conf="default->default"/>
+      <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="tool->default"/>
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="tool->default"/>
+      <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="tool->default"/>
+      <dependency org="org.codehaus.jaxen" name="jaxen" rev="1.1.1" conf="tool->default"/>
     </dependencies>
 
 </ivy-module>
