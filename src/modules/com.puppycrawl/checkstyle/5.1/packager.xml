@@ -38,8 +38,6 @@
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
         <move file="archive/${archive}/${name}-all-${revision}.jar"
           tofile="artifacts/jars/${name}-all.jar"/>
-        <move file="archive/${archive}/google-collect-1.0.jar"
-          tofile="artifacts/jars/google-collect-1.0.jar"/>
 
         <!-- stylesheets -->
         <mkdir dir="artifacts/reports"/>
