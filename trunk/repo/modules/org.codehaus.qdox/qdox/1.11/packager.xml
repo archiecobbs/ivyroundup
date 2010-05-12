@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://repository.codehaus.org/com/thoughtworks/${name}/${name}/${revision}/${name}-${revision}.jar" sha1="f4f6c013024a06dc018d5bcbafb97c8bdd7c3317" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="http://repository.codehaus.org/com/thoughtworks/${name}/${name}/${revision}/${name}-${revision}-sources.jar" sha1="2b8a803b0d9d4f07d9de534cf023e7d1a4eb7e28" tofile="artifacts/sources/source.zip"/>
+    <resource url="http://repository.codehaus.org/com/thoughtworks/${name}/${name}/${revision}/${name}-${revision}-javadoc.jar" sha1="055b431c6e93c9535198bc38984f7cf11f4c59de" tofile="artifacts/javadocs/javadoc.zip"/>
+
+</packager-module>
