@@ -21,7 +21,7 @@
 
     <info organisation="net.sourceforge.jibx" module="jibx" revision="1.2.1" status="release" publication="20090311120000">
         <license name="BSD License" url="http://jibx.sourceforge.net/jibx-license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1207 2010-05-12 22:48:56Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.jibx/jibx/1.2.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1211 2010-05-14 03:18:04Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.jibx/jibx/1.2.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jibx.sourceforge.net/">
         JiBX is a framework for XML data binding to Java. It works with
@@ -55,7 +55,7 @@
         <dependency org="org.apache.bcel" name="bcel" rev="5.1" conf="bind-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.15" conf="*-&gt;default"/>
         <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="dom4j-&gt;default"/>
-        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.1.3.4.O" conf="runtime-xpp3-&gt;default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.1.3.4.O" conf="runtime-xpp3,tools-&gt;default"/>
         <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.1" conf="runtime-stax-&gt;default"/>
         <dependency org="org.codehaus.qdox" name="qdox" rev="1.11" conf="tools-&gt;default"/>
     </dependencies>
