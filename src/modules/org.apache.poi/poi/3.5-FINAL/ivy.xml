@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20090928085200">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://poi.apache.org/">
+        <p>
+        The POI project consists of APIs for manipulating various file
+        formats based upon Microsoft's OLE 2 Compound Document format, and
+        Office OpenXML format, using pure Java. In short, you can read and
+        write MS Excel files using Java. In addition, you can read and write
+        MS Word and MS PowerPoint files using Java. POI is your Java Excel
+        solution (for Excel 97-2007). However, we have a complete API for
+        porting other OLE 2 Compound Document formats and welcome others to
+        participate.
+        </p>
+        <p>
+        OLE 2 Compound Document Format based files include most Microsoft
+        Office files such as XLS and DOC as well as MFC serialization API
+        based file formats.
+        </p>
+        <p>
+        Office OpenXML Format based files include the new (2007+) xml based
+        file formats, including Microsoft office files such as XLSX, DOCX and
+        PPTX.
+        </p>
+        <p>
+        As a general policy we try to collaborate as much as possible with
+        other projects to provide this functionality. Examples include:
+        Cocoon for which there are serializers for HSSF; Open Office.org with
+        whom we collaborate in documenting the XLS format; and Lucene for which
+        we provide format interpretors. When practical, we donate components
+        directly to those projects for POI-enabling them.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default POI configuration with base classes"/>
+        <conf name="contrib" extends="default" description="POI with contributed classes"/>
+        <conf name="scratchpad" extends="default" description="POI with scratchpad"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact name="poi-contrib" conf="contrib"/>
+        <artifact name="poi-scratchpad" conf="scratchpad"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.+" conf="default->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.13,1.3[" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
