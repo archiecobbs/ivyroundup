@@ -22,7 +22,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="PDFBox-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/pdfbox/${archive}/${archive}.zip" sha1="5e986e2e436cd3d06bc59abd1eb14f3ed7400120"/>
+    <resource url="http://downloads.sourceforge.net/project/pdfbox/PDFBox/${archive}/${archive}.zip"
+      sha1="5e986e2e436cd3d06bc59abd1eb14f3ed7400120"/>
 
     <build>
         <!-- jar -->
