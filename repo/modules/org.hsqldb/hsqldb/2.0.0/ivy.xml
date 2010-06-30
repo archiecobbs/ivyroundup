@@ -21,7 +21,7 @@
 
     <info organisation="org.hsqldb" module="hsqldb" revision="2.0.0" status="release" publication="20100606230500">
         <license name="HSQL License" url="http://hsqldb.org/web/hsqlLicense.html"/>
-        <ivyauthor name="$Id: ivy.xml 1235 2010-06-28 23:36:23Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.0.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1239 2010-06-30 19:48:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.0.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hsqldb.org/">
         HSQLDB is the leading SQL relational database engine written in Java. It
@@ -35,10 +35,16 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="default" description="Java 6 version"/>
+        <conf name="java5" description="Java 5 version"/>
+    </configurations>
+
     <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact conf="default"/>
+        <artifact name="hsqldb-j5" conf="java5"/>
+        <artifact name="source" type="source" ext="zip" conf="default,java5"/>
+        <artifact name="javadoc" type="javadoc" ext="zip" conf="default,java5"/>
     </publications>
 
 </ivy-module>
