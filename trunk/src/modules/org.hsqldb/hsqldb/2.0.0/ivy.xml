@@ -32,10 +32,16 @@
         ]]></description>
     </info>
 
+    <configurations>
+        <conf name="default" description="Java 6 version"/>
+        <conf name="java5" description="Java 5 version"/>
+    </configurations>
+
     <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact conf="default"/>
+        <artifact name="hsqldb-j5" conf="java5"/>
+        <artifact name="source" type="source" ext="zip" conf="default,java5"/>
+        <artifact name="javadoc" type="javadoc" ext="zip" conf="default,java5"/>
     </publications>
 
 </ivy-module>
