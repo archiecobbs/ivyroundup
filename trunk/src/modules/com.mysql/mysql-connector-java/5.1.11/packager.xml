@@ -25,6 +25,7 @@
     <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mirror.services.wisc.edu/mysql/"
       filename="${archive}.tar.gz" sha1="0183a6b52cfdb935826590f667e5272f6fffe943">
         <url href="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mysql.easynet.be/"/>
+        <include name="${archive}/${archive}-bin.jar"/>
         <include name="${archive}/src/com/**/*"/>
         <include name="${archive}/src/org/**/*"/>
     </resource>

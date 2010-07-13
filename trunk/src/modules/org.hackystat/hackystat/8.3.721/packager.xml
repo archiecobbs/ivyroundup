@@ -24,15 +24,15 @@
     <property name="example.package" value="hackystat-sensor-example-${revision}.zip"/>
 
     <resource url="http://hackystat.googlecode.com/files/${archive}-sensors-bin.zip" sha1="609f847e29dbdf225599666eb3c9453e7d4f91da">
-      <include name="${archive}/**/*.jar"/>
-      <include name="${archive}/**/*.el"/>
-      <include name="${archive}/**/*.zip"/>
-      <include name="${archive}/**/${example.package}"/>
+      <include name="${archive}-sensors-bin/**/*.jar"/>
+      <include name="${archive}-sensors-bin/**/*.el"/>
+      <include name="${archive}-sensors-bin/**/*.zip"/>
+      <include name="${archive}-sensors-bin/**/${example.package}"/>
     </resource>
 
     <resource url="http://hackystat.googlecode.com/files/${archive}-services-bin.zip" sha1="f271041bed7830ea75aa651184a2635f7fb7d614">
-      <include name="${archive}/**/*.jar"/>
-      <include name="${archive}/**/*.zip"/>
+      <include name="${archive}-services-bin/**/*.jar"/>
+      <include name="${archive}-services-bin/**/*.zip"/>
     </resource>
 
 

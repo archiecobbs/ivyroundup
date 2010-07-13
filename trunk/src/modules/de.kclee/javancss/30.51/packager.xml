@@ -24,8 +24,9 @@
 
     <resource url="http://www.kclee.de/clemens/java/javancss/${archive}.zip"
       sha1="83c371583a74d8dd4aaad13335598ecb170f396c">
-      <include name="${archive}/lib/*"/>
-      <include name="${archive}/xslt/*"/>
+      <include name="${archive}/lib/*.jar"/>
+      <include name="${archive}/xslt/javancss2html.xsl"/>
+      <include name="${archive}/src/**/*"/>
     </resource>
 
     <build>
