@@ -23,12 +23,13 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://archive.apache.org/dist/db/derby/db-derby-${revision}/db-derby-${revision}-bin.zip" sha1="220add1e0b00b6ff22f495d0f09755103257127a">
-       <include name="${archive}/lib/*.jar"/>
-       <include name="${archive}/javadoc/jdbc4/**"/>
+       <include name="db-derby-${revision}-bin/lib/*.jar"/>
+       <include name="db-derby-${revision}-bin/lib/${name}.war"/>
+       <include name="db-derby-${revision}-bin/javadoc/jdbc4/**"/>
     </resource>
 
     <resource url="http://archive.apache.org/dist/db/derby/db-derby-${revision}/db-derby-${revision}-src.zip" sha1="0d01d65854c05a482a24446856e022c46a880533">
-       <include name="${archive}/db-derby-${revision}-doc-src/src/**"/>
+       <include name="db-derby-${revision}-doc-src/src/**/*"/>
     </resource>
 
     <build>

@@ -24,8 +24,8 @@
 
     <resource url="http://archive.apache.org/dist/ant/binaries/${archive}-bin.tar.gz"
       sha1="70e3c9543d142a8557ebc91865dfe4edd8af898c">
-        <include name="lib/${name}.jar"/>
-        <include name="docs/manual/api/**/*"/>
+        <include name="${archive}/lib/${name}.jar"/>
+        <include name="${archive}/docs/manual/api/**/*"/>
     </resource>
 
     <build>

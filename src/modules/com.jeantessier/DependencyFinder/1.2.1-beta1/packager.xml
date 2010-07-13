@@ -22,10 +22,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
     <resource url="http://downloads.sourceforge.net/sourceforge/depfind/${archive}.bin.zip" sha1="06a8573e228751e888fb56962d04bfab22b82a4d">
-      <include name="${archive}/lib/${archive}.jar"/>
+      <include name="${archive}/lib/${name}.jar"/>
+      <include name="${archive}/etc/*.*"/>
+      <include name="${archive}/classes/*.properties"/>
       <include name="${archive}/docs/api/**/*"/>
-      <include name="${archive}/etc/**/*"/>
-      <include name="${archive}/${name}/etc/**"/>
     </resource>
     <resource url="http://downloads.sourceforge.net/sourceforge/depfind/${archive}.src.zip" sha1="cc5143ead7df3320f7dbedd0dcb0ce0c199a186b">
       <include name="${archive}/src/**/*"/>

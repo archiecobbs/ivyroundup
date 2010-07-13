@@ -23,8 +23,10 @@
     <property name="archive" value="${name}-${revision}" />
 
     <resource url="http://s3.amazonaws.com/dist.springframework.org/release/SPR/spring-framework-2.0.2.zip" sha1="6e361f939d8864d3a6f85f3df00f854ceee1001c">
-        <include name="${archive}/dist/*" />
-        <include name="${archive}/dist/modules/**/*" />
+        <include name="${archive}/dist/*.jar"/>
+        <include name="${archive}/dist/modules/*.jar"/>
+        <include name="${archive}/dist/weavers/*.jar"/>
+        <include name="${archive}/dist/spring-src.zip"/>
     </resource>
 
     <build>

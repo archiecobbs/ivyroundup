@@ -25,7 +25,8 @@
     <resource url="http://downloads.sourceforge.net/dbmaintain/${archive}.zip"
       sha1="275370c1726288c9136bc31eada42b1786d5e53d">
         <include name="${archive}/lib/*.jar"/>
-        <include name="${archive}/src"/>
+        <include name="${archive}/src/java/**/*"/>
+        <include name="${archive}/src/resources/**/*"/>
     </resource>
 
     <build>

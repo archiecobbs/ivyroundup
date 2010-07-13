@@ -24,12 +24,12 @@
     <property name="archivesrc" value="daemon-${revision}"/>
     
     <resource url="http://archive.apache.org/dist/commons/daemon/binaries/${archive}.tar.gz" sha1="14a5d4dd4363fe391b9ec2747ec6e23504653cbc">
-        <include name="${archive}/*.jar"/>
+        <include name="${archive}/${name}.jar"/>
         <include name="${archive}/docs/api/**/*"/>
     </resource>
 
     <resource url="http://archive.apache.org/dist/commons/daemon/source/${archivesrc}.tar.gz" sha1="05f034b8c58a3bd367a72fe5532b354f76e1df93">
-        <include name="${archive}/src/java/**/*"/>
+        <include name="${archivesrc}/src/java/**/*"/>
     </resource>
 
     <build>

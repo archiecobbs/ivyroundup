@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://hamcrest.googlecode.com/files/${archive}.tgz" sha1="e7c8511e3702545eb50b38e5aa2c3d887d8393ef">
-        <include name="*.jar"/>
+        <include name="${archive}/*.jar"/>
     </resource>
 
     <build>
