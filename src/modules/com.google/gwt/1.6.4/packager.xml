@@ -27,15 +27,18 @@
     <resource url="http://google-web-toolkit.googlecode.com/files/${archive1}.tar.bz2"
       sha1="480882f630993da727eaae464341a5ff86f9b7d7">
         <include name="${archive1}/*.jar"/>
+        <include name="${archive1}/*.so"/>
         <include name="${archive1}/doc/javadoc/**/*"/>
     </resource>
     <resource url="http://google-web-toolkit.googlecode.com/files/${archive2}.zip"
       sha1="8cb8f447aa100655a8755e3388407a627ac142d4">
-        <include name="${archive2}/gwt-dev-windows.jar"/>
+        <include name="${archive2}/*.jar"/>
+        <include name="${archive2}/*.dll"/>
     </resource>
     <resource url="http://google-web-toolkit.googlecode.com/files/${archive3}.tar.gz"
       sha1="5bb0f14596fc1f3e651cad4d5421338708602142">
-        <include name="${archive3}/gwt-dev-mac.jar"/>
+        <include name="${archive3}/*.jar"/>
+        <include name="${archive3}/*.jnilib"/>
     </resource>
 
     <build>
