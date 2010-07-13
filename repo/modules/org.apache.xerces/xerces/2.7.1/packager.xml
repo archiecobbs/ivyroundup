@@ -29,6 +29,7 @@
     <resource dest="binarchive" url="http://archive.apache.org/dist/xml/${name}-j/${binarchive}.tar.gz" sha1="79da603389dcb4c908267762d2e10d1221e9f46a">
         <include name="${archdir}/${name}Impl.jar"/>
         <include name="${archdir}/xml-apis.jar"/>
+        <include name="${archdir}/docs/javadocs/**/*"/>
     </resource>
     <resource dest="srcarchive" url="http://archive.apache.org/dist/xml/${name}-j/${srcarchive}.tar.gz" sha1="a89ca0ed0c121d4c79f6d5253a5f673241121900">
         <include name="${archdir}/src/**/*"/>
