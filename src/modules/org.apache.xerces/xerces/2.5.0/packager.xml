@@ -31,6 +31,7 @@
       sha1="02ed90693a9746d5cebddf51bcd1076b1f86655f">
         <include name="${archdir}/${name}Impl.jar"/>
         <include name="${archdir}/xml-apis.jar"/>
+        <include name="${archdir}/docs/javadocs/**/*"/>
     </resource>
     <resource dest="srcarchive" url="http://archive.apache.org/dist/xml/${name}-j/${srcarchive}.tar.gz"
       sha1="3245cc20a48f6c9e1ff2a62318a643b765497253">
