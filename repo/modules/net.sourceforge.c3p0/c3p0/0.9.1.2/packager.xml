@@ -23,6 +23,8 @@
 
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.bin.tgz" sha1="c2774046f1b15af4599a0f0ebe265119c76a6342">
         <include name="${archive}/lib/*.jar"/>
+        <include name="${archive}/lib/${name}-oracle-thin-extras-${revision}.jar"/>
+        <include name="${archive}/doc/apidocs/**/*"/>
     </resource>
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.src.tgz" sha1="79699771d4e62e61ac2e3a8b203f518665623042">
         <include name="${archive}.src/src/classes/**/*"/>
