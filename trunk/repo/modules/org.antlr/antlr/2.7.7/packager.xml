@@ -23,6 +23,7 @@
 
     <resource url="http://www.antlr2.org/download/${name}-${revision}.tar.gz" sha1="802655c343cc7806aaf1ec2177a0e663ff209de1">
         <include name="${archive}/${name}.jar"/>
+        <include name="${archive}/${name}/**/*"/>
     </resource>
 
     <build>
@@ -30,9 +31,7 @@
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}">
-                <include name="antlr/**/*"/>
-            </fileset>
+            <fileset dir="archive/${archive}" includes="${name}/**/*"/>
         </zip>
     </build>
 

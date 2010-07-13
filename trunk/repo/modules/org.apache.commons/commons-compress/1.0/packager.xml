@@ -30,8 +30,7 @@
         <url href="${mirror2}/binaries/${archive}-bin.tar.gz"/>
         <url href="${mirror3}/binaries/${archive}-bin.tar.gz"/>
         <url href="${backup}/binaries/${archive}-bin.tar.gz"/>
-        <include name="${bin}/*.jar"/>
-        <include name="${bin}/docs/api/**/*"/>
+        <include name="${archive}/*.jar"/>
     </resource>
 
     <build>

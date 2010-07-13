@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Mark Thomas
+    Copyright 2010 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,23 +19,20 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="apache-${name}-${revision}"/>
 
-    <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mirror.services.wisc.edu/mysql/" filename="${archive}.tar.gz" sha1="037fa4cb9cbcfddd32b37d65fd451f498f9b5c91">
-        <url href="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.tar.gz/from/http://mysql.easynet.be/"/>
-        <include name="${archive}/${archive}-bin.jar"/>
-        <include name="${archive}/src/com/**/*"/>
-        <include name="${archive}/src/org/**/*"/>
+    <resource url="http://archive.apache.org/dist/ant/binaries/${archive}-bin.tar.gz" sha1="6fc40553c10f9d5a2b57b8b19ba07aeed7fe9fea">
+        <include name="${archive}/lib/${name}.jar"/>
+        <include name="${archive}/docs/manual/api/**/*"/>
     </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${archive}-bin.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/lib/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/com"/>
-            <fileset dir="archive/${archive}/src/org"/>
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/manual/api"/>
         </zip>
     </build>
 </packager-module>

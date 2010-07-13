@@ -22,17 +22,16 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="https://quartz.dev.java.net/files/documents/1267/128858/quartz-1.6.5.zip" sha1="f4e82ed66061efc9cb647f55d19fb03367c24b2c">
-        <include name="${archive}/*.jar"/>
-        <include name="${archive}/docs/api/**/*"/>
-        <include name="${archive}/src/**/*"/>
+        <include name="*.jar"/>
+        <include name="docs/api/**/*"/>
+        <include name="src/**/*"/>
    </resource>
 
     <build>
+
         <!-- jars -->
         <move todir="artifacts/jars" verbose="true">
-            <fileset dir="archive/">
-                <include name="*.*"/>
-            </fileset>
+            <fileset dir="archive/" includes="*.jar"/>
             <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
         </move>
 
