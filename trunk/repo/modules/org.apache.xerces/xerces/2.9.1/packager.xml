@@ -30,6 +30,8 @@
         <url href="http://archive.apache.org/dist/xml/${name}-j/${binarchive}.tar.gz"/>
         <include name="${archdir}/${name}Impl.jar"/>
         <include name="${archdir}/xml-apis.jar"/>
+        <include name="${archdir}/docs/javadocs/**/*"/>
+        <include name="${archdir}/serializer.jar"/>
     </resource>
     <resource dest="srcarchive" url="http://archive.apache.org/dist/${name}/j/${srcarchive}.tar.gz" sha1="78786a120c10b3d7079384cecbd2860260e47445">
         <url href="http://archive.apache.org/dist/xml/${name}-j/${srcarchive}.tar.gz"/>
