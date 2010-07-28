@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-3_0-fr"/>
+
+    <resource url="file:///${java.io.tmpdir}/${archive}-api.zip"
+      sha1="6528a1322fc353eb4ce17eef257cfaf18250ccff"/>
+    <resource url="file:///${java.io.tmpdir}/${archive}-javadoc.zip"
+      sha1="9293cd7d8614a0ea00c72253ae4ad178f047d6c5"/>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${name}-3_0-api.jar" tofile="artifacts/jars/ejb.jar"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/${name}.zip">
+            <fileset dir="archive"/>
+        </zip>
+    </build>
+</packager-module>
