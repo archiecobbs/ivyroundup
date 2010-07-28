@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2010-07-28 02:47:13 UTC</timestamp>
-  <svnRevision>1263</svnRevision>
+  <timestamp>2010-07-28 20:25:29 UTC</timestamp>
+  <svnRevision>1270</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -1069,6 +1069,9 @@
     </mod>
   </org>
   <org name="org.eclipse">
+    <mod name="eclipselink">
+      <rev name="1.2.0"/>
+    </mod>
     <mod name="jdt">
       <rev name="3.1.1"/>
     </mod>
@@ -1314,6 +1317,11 @@
   <org name="org.json.simple">
     <mod name="json-simple">
       <rev name="1.1"/>
+    </mod>
+  </org>
+  <org name="org.json">
+    <mod name="json">
+      <rev name="20090211"/>
     </mod>
   </org>
   <org name="org.junit">
