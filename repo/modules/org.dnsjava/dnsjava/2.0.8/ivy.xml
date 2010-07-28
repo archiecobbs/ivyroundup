@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dnsjava" module="dnsjava" revision="2.0.8" status="release" publication="20091121144200">
+        <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+        <ivyauthor name="$Id: ivy.xml 1262 2010-07-28 02:23:24Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dnsjava/dnsjava/2.0.8/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.dnsjava.org/">
+        <p>
+        dnsjava is an implementation of DNS in Java. It supports all defined record types
+        (including the DNSSEC types), and unknown types. It can be used for queries, zone
+        transfers, and dynamic updates. It includes a cache which can be used by clients,
+        and a minimal implementation of a server. It supports TSIG authenticated messages,
+        partial DNSSEC verification, and EDNS0.
+        </p>
+        <p>
+        dnsjava provides functionality above and beyond that of the InetAddress class.
+        Since it is written in pure Java, dnsjava is fully threadable, and in many cases
+        is faster than using InetAddress.
+        </p>
+        <p>
+        dnsjava provides both high and low level access to DNS. The high level functions
+        perform queries for records of a given name, type, and class, and return the
+        answer or reason for failure. There are also functions similar to those in the
+        InetAddress class. A cache is used to reduce the number of DNS queries sent. The
+        low level functions allow direct manipulation of DNS messages and records, as
+        well as allowing additional resolver properties to be set. 
+        </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
