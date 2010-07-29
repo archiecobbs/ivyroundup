@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/${name}/${name}-bin-${revision}.tgz"
+      sha1="98764e5f888c224c65ea78f670940a97221fe45d">
+        <include name="lib/*.jar"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/${name}/${name}-src-${revision}.tgz"
+      sha1="b2982dcb915e98c62ed30d86ccf47d08af3e2fa5">
+        <include name="src/**/*"/>
+    </resource>
+
+    <build>
+
+        <!-- jars -->
+        <move file="archive/lib/ant_doxygen.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/${name}.zip">
+            <fileset dir="archive/src">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+
+    </build>
+</packager-module>
