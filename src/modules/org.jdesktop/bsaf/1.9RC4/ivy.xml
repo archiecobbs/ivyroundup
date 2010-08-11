@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Grégory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20100419120000">
+        <license name="GNU Lesser General Public License, version 2.1" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+        <description homepage="http://kenai.com/projects/bsaf">
+        This is a fork of the Swing Application Framework (JSR 296).
+        Primary goals for the upcoming release: improve stability,
+        keep backward compatibility with last public release of the SAF
+        (1.03), bug fixing, documentation update (javadoc, introduction),
+        unit tests update, examples update.
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
