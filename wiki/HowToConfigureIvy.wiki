@@ -43,7 +43,7 @@ Instead, they define artifacts. Artifacts have the following attributes:
   * Artifact name
   * Artifact type
   * Artifact extension
-The only thing guaranteed to be unique for an artifact is the combination of _all_ of the above attributes (and that guarantee only applies within a single repository). (Actually I don't think two artifacts can differ only in their extension... anyone?)
+The only thing guaranteed to be unique for an artifact is the combination of _all_ of the above attributes (and that guarantee only applies within a single repository).
 
 Filename collisions can only happen when ivy actually retrieves the artifacts. They are only possible when you specify a retrieval filename pattern that is "degenerate". Of course, many times you can get lucky, but that just makes the error even more mysterious when it does finally occur. You may see an exception that says {{{Multiple artifacts of the module xxx#yyy;zzz are retrieved to the same file! Update the retrieve pattern  to fix this error}}}.
 
