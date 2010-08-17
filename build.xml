@@ -276,11 +276,20 @@
     <target name="_init-xalan" depends="_download-xalan, _provided-xalan-classpath" />
 
     <target name="_download-xalan" if="download-xalan">
-      <!-- Find xalan -->
-      <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
-        organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
-      <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
-        organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+
+        <!-- Reset xalan files in case they got corrupted -->
+        <exec executable="svn" searchpath="true" failonerror="true">
+            <arg value="revert"/>
+            <arg value="-R"/>
+            <arg value="${target.repo}/modules/org.apache.xml/xalan-j"/>
+            <arg value="${target.repo}/modules/org.apache.xerces/xerces"/>
+        </exec>
+
+        <!-- Find xalan -->
+        <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
+          organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+        <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
+          organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
     </target>
 
     <target name="_provided-xalan-classpath" unless="download-xalan">
