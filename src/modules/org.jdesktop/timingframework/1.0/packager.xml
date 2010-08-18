@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Grégory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="TimingFramework"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="https://timingframework.dev.java.net/files/documents/2564/67073/${archive}.jar"
+        tofile="artifacts/jars/${ivy.packager.module}.jar"
+        sha1="2c12a328bfd82ddb0c4389e915229ea3df1740b8"/>
+    <resource url="https://timingframework.dev.java.net/files/documents/2564/67074/${archive}-doc.zip"
+        tofile="artifacts/javadocs/javadoc.zip"
+        sha1="45ac6d27992e0b0052cc3b168534fada20126172"/>
+    <resource url="https://timingframework.dev.java.net/files/documents/2564/67075/${archive}-src.zip"
+        tofile="artifacts/sources/source.zip"
+        sha1="2038bfdf3a1468cdc467f9a407598f49cf49df79"/>
+
+</packager-module>
