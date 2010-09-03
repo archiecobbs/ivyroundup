@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<!-- $Id: modules.xsl 1254 2010-07-16 21:31:34Z archie.cobbs $ -->
+<!-- $Id: modules.xsl 1291 2010-08-31 21:37:10Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/modules">
@@ -65,7 +65,7 @@
       <td>
       <xsl:for-each select="rev">
           <xsl:sort select="@name"/>
-          <xsl:if test="(position() - 1) mod 6 = 0 and position() &lt; last()">
+          <xsl:if test="position() != 1 and (position() - 1) mod 6 = 0 and position() &lt; last()">
               <br/>
           </xsl:if>
           <xsl:element name="a">
