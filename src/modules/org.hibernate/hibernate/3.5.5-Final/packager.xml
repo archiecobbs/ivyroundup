@@ -15,11 +15,6 @@
     under the License.
 -->
 <packager-module rev="$Id$">
-    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" groupId="org/hibernate/javax/persistence" artifactId="hibernate-jpa-2.0-api" version="1.0.0.Final">
-        <artifact tofile="artifacts/jars/hibernate-jpa-2.0-api.jar" sha1="6728add2c60f6621c3a77ba71fe6f6b798d14ee0"/>
-        <artifact classifier="sources" tofile="artifacts/sources/hibernate-jpa-2.0-api.zip" sha1="128bc9abe5471c31890b014ed6579b292f652a5b"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/hibernate-jpa-2.0-api.zip" sha1="7a57bd01be15ffcba42e0667c9f004fe68554349"/>
-    </m2resource>
     <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-annotations">
         <artifact tofile="artifacts/jars/hibernate-annotations.jar" sha1="5f31ea189f9f951bbd0b4635bb568ff69d6a31ad"/>
         <artifact classifier="sources" tofile="artifacts/sources/hibernate-annotations.zip" sha1="89135b7a8d7ad4117b2928b751b3913716d3537c"/>
