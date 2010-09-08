@@ -76,7 +76,6 @@
         <artifact name="hibernate-infinispan" conf="infinispan"/>
         <artifact name="hibernate-jbosscache" conf="jbosscache"/>
         <artifact name="hibernate-jmx" conf="jmx"/>
-        <artifact name="hibernate-jpa-2.0-api" conf="annotations"/>
         <artifact name="hibernate-oscache" conf="oscache"/>
         <artifact name="hibernate-proxool" conf="proxool"/>
         <artifact name="hibernate-swarmcache" conf="swarmcache"/>
@@ -91,19 +90,16 @@
         <artifact name="hibernate-infinispan" type="source" ext="zip" conf="infinispan"/>
         <artifact name="hibernate-jbosscache" type="source" ext="zip" conf="jbosscache"/>
         <artifact name="hibernate-jmx" type="source" ext="zip" conf="jmx"/>
-        <artifact name="hibernate-jpa-2.0-api" type="source" ext="zip" conf="annotations"/>
         <artifact name="hibernate-oscache" type="source" ext="zip" conf="oscache"/>
         <artifact name="hibernate-proxool" type="source" ext="zip" conf="proxool"/>
         <artifact name="hibernate-swarmcache" type="source" ext="zip" conf="swarmcache"/>
-
-        <!-- javadoc -->
-        <artifact name="hibernate-jpa-2.0-api" type="javadoc" ext="zip" conf="annotations"/>
 
     </publications>
 
     <dependencies>
         <dependency org="com.opensymphony" name="oscache" rev="[2.1,3.0[" conf="oscache-&gt;default"/>
         <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="core-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="annotations-&gt;default"/>
         <dependency org="net.sourceforge.c3p0" name="c3p0" rev="[0.9.1,2.0[" conf="c3p0-&gt;default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="cglib-&gt;default"/>
         <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.5.0,3.0[" conf="ehcache-&gt;default"/>
