@@ -21,14 +21,25 @@
     <info publication="20060717110900">
         <license name="Common Development and Distribution License (CDDL) v1.0"
           url="http://www.sun.com/cddl/cddl.html"/>
-        <description homepage="http://www.jcp.org/en/jsr/detail?id=220">
-        <p>
-        The Enterprise JavaBeans architecture is a component architecture for
-        the development and deployment of component-based business
-        applications. The purpose of Enterprise JavaBeans (EJB) 3.0 is to
-        improve the EJB architecture by reducing its complexity from the
-        developer's point of view.
-        </p>
+        <description homepage="http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html">
+            <p>
+                The Java Persistence API simplifies the programming model for entity
+                persistence and adds capabilities that were not in EJB 2.1. Here's a
+                quick list of its simplifications and additions:
+                <ul>
+                    <li>Requires fewer classes and interfaces</li>
+                    <li>Virtually eliminates lengthy deployment descriptors through annotations</li>
+                    <li>Addresses most typical specifications through annotation defaults</li>
+                    <li>Provides cleaner, easier, standardized object-relational mapping</li>
+                    <li>Eliminates the need for lookup code</li>
+                    <li>Adds support for inheritance, polymorphism, and polymorphic queries.</li>
+                    <li>Adds support for named (static) and dynamic queries.</li>
+                    <li>Provides a Java Persistence query language -- an enhanced EJB QL</li>
+                    <li>Makes it easier to test entities outside of the EJB container</li>
+                    <li>Can be used outside of the container</li>
+                    <li>Can be used with pluggable, third-party persistence providers</li>
+                </ul>
+            </p>
         </description>
     </info>
 
