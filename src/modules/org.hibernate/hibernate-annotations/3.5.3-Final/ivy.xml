@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20100617120000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://annotations.hibernate.org/">
+
+            <p>
+            Hibernate, like all other object/relational mapping
+            tools, requires metadata that governs the transformation
+            of data from one representation to the other (and vice
+            versa). As an option, you can now use JDK 5.0 annotations
+            for object/relational mapping with Hibernate 3.2. You can
+            use annotations in addition to or as a replacement of XML
+            mapping metadata.
+            </p>
+
+            <p>
+            The Hibernate Annotations package includes:
+            <ul>
+                <li>Standardized Java Persistence and EJB 3.0 (JSR 220)
+                object/relational mapping annotations</li>
+                <li>Hibernate-specific extension annotations for performance
+                optimization and special mappings</li>
+            </ul>
+            </p>
+
+            <p>
+            You can use Hibernate extension annotations on top of
+            standardized Java Persistence annotations to utilize all
+            native Hibernate features.
+            </p>
+
+            <p>
+            Requirements: At a minimum, you need JDK 5.0 and Hibernate
+            Core, but no application server or EJB 3.0 container. You
+            can use Hibernate Core and Hibernate Annotations in any Java
+            EE 5.0 or Java SE 5.0 environment.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.3.1.GA,3.5.0-Final[" conf="default->core"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="default->default"/>
+        <dependency org="org.hibernate" name="ejb3-persistence" rev="[1.0.2.GA,2.0[" conf="default->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.4.2,2.0[" conf="default->core"/>
+        <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
