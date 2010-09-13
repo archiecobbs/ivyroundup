@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/repositories/public">
         <artifact tofile="artifacts/jars/hibernate-annotations.jar" sha1="0c4975772be5d9ec713bf475cf3315aad83b9046"/>
         <artifact classifier="sources" tofile="artifacts/sources/hibernate-annotations.zip" sha1="7fc93a468b912e2f70fb34ee4943de2f8b0709e1"/>
     </m2resource>

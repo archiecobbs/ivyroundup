@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/repositories/public">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="be6483b6ed60a15588f54f91c25a09c745df0760"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="653e73df771a0c38dbed3e6081c0fce7900a0a72"/>
     </m2resource>
