@@ -21,7 +21,7 @@
 
     <info organisation="org.hibernate" module="hibernate-annotations" revision="3.5.1-Final" status="release" publication="20080926204400">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1304 2010-09-13 22:18:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-annotations/3.5.1-Final/"/>
+        <ivyauthor name="$Id: ivy.xml 1306 2010-09-14 22:23:47Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate-annotations/3.5.1-Final/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://annotations.hibernate.org/">
 
@@ -67,9 +67,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.hibernate" name="hibernate" rev="[3.3.1.GA,3.5.0-Final[" conf="default-&gt;core"/>
-        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="default-&gt;default"/>
-        <dependency org="org.hibernate" name="ejb3-persistence" rev="[1.0.2.GA,2.0[" conf="default-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="3.5.1-Final" conf="default-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.2.0.Final" conf="default-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="[1.4.2,2.0[" conf="default-&gt;core"/>
         <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="default-&gt;default"/>
     </dependencies>
