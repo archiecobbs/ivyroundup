@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.junit" module="junit" revision="4.8.2" status="release" publication="20100408120000">
+        <license name="Common Public License, Version 1.0" url="http://opensource.org/licenses/cpl/1.0.php"/>
+        <ivyauthor name="$Id: ivy.xml 1313 2010-09-16 00:12:20Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.junit/junit/4.8.2/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.junit.org/">A Java unit testing framework.</description>
+    </info>
+
+    <configurations>
+        <conf name="nodeps" description="Minimal configuration without the hamcrest-core dependency"/>
+        <conf name="default" description="Default configuration (includes hamcrest-core dependency)"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact name="junit-dep" conf="nodeps"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
