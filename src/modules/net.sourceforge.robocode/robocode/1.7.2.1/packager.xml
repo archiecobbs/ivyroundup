@@ -24,6 +24,9 @@
 
     <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/${name}/${archive}-setup.jar" sha1="946a58ddbc90fb67818c46f759dcb94192320a02"/>
 
+    <resource dest="archive/${archive}/testing" url="http://downloads.sourceforge.net/${name}/${name}.testing-${revision}-setup.jar" sha1="07a4a4fcd892dae9816c02b97895e1fde21ba271">
+    </resource>
+
     <resource dest="archive/${archive}/sources/" url="http://downloads.sourceforge.net/${name}/${archive}-src.zip" sha1="22b3add46b7edf5a8a4fe843ac2cd1855369b0b1">
       <include name="${archive}/robocode.*/**/*.java"/>
     </resource>
@@ -34,6 +37,7 @@
         <mkdir dir="artifacts/libs"/>
         <move todir="artifacts/libs" flatten="true">
            <fileset dir="archive/${archive}/libs" includes="*.jar"/>
+           <fileset dir="archive/${archive}/testing/libs" includes="robocode.testing.jar"/>
 	</move>
 
         <!-- move all top-level scripts to the scripts dir. -->
