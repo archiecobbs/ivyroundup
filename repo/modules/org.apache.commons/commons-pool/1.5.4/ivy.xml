@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2010 Adrian Woodhead.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,23 +19,22 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.junit" module="junit" revision="4.8.2" status="release" publication="20100408120000">
-        <license name="Common Public License, Version 1.0" url="http://opensource.org/licenses/cpl/1.0.php"/>
-        <ivyauthor name="$Id: ivy.xml 1313 2010-09-16 00:12:20Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.junit/junit/4.8.2/"/>
+    <info organisation="org.apache.commons" module="commons-pool" revision="1.5.4" status="release" publication="20091113013800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1322 2010-09-21 16:39:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-pool/1.5.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://www.junit.org/">A Java unit testing framework.</description>
+        <description homepage="http://commons.apache.org/pool/">
+         Pool provides an Object-pooling API, with three major aspects:
+         <ol>
+            <li>A generic object pool interface that clients and implementors can use to provide easily interchangable pooling implementations.</li>
+            <li>A toolkit for creating modular object pools.</li>
+            <li>Several general purpose pool implementations.</li>
+         </ol>
+        </description>
     </info>
 
-    <configurations>
-        <conf name="nodeps" description="Minimal configuration without the hamcrest-core dependency"/>
-        <conf name="default" description="Default configuration (includes hamcrest-core dependency)"/>
-    </configurations>
-
     <publications>
-        <artifact conf="default"/>
-        <artifact name="junit-dep" conf="nodeps"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact/>
     </publications>
 
 </ivy-module>

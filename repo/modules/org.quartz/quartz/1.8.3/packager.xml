@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2010 Adrian Woodhead.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,24 +19,23 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}${revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://github.com/downloads/KentBeck/junit/${archive}.zip" sha1="15209b0933816c8e940a8375459be6e61e5f1662">
-        <include name="${archive}/*.jar"/>
-        <include name="${archive}/javadoc/**/*"/>
-    </resource>
+    <resource url="http://s3.amazonaws.com/tcdistributions/quartz-1.8.3.tar.gz" sha1="2be97a14dfc32c2e200ec9ea85d2b5f371a526f0">
+        <include name="*.jar"/>
+        <include name="docs/api/**/*"/>
+   </resource>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${name}-dep-${revision}.jar" tofile="artifacts/jars/${name}-dep.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/${name}-${revision}-src.jar" tofile="artifacts/sources/${name}.zip"/>
-
+        <!-- jars -->
+        <move todir="artifacts/jars" verbose="true">
+            <fileset dir="archive/quartz-1.8.3/" includes="*.jar"/>
+            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
+        </move>
+        
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/${name}.zip">
-            <fileset dir="archive/${archive}/javadoc"/>
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/quartz-1.8.3/docs/api"/>
         </zip>
     </build>
 </packager-module>
