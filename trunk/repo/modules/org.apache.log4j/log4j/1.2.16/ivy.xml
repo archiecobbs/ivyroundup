@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2009 Philip Johnson
+    Copyright 2008 Archie L. Cobbs.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,27 +19,32 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.wattdepot" module="wattdepot" revision="1.4.903" status="release" publication="20100903120000">
-        <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 1310 2010-09-15 20:46:27Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/1.4.903/"/>
+    <info organisation="org.apache.log4j" module="log4j" revision="1.2.16" status="release" publication="20100331000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1322 2010-09-21 16:39:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.log4j/log4j/1.2.16/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://code.google.com/p/wattdepot/">
-WattDepot is a RESTful web service that collects electricity data (such as current power utilization or cumulative power utilization) from meters and stores it in a database. The data can then be retrieved by other tools for visualization and analysis.
+        <description homepage="http://projects.apache.org/projects/log4j.html">
+            Apache log4j provides logging services for Java.
         </description>
     </info>
 
+    <configurations>
+        <conf name="default" description="Default configuration"/>
+        <conf name="jmx" extends="default" description="JMX support"/>
+        <conf name="jms" extends="default" description="JMS support"/>
+        <conf name="mail" extends="default" description="JavaMail support"/>
+    </configurations>
+
     <publications>
-        <artifact name="wattdepot-client-monitor"/>
-        <artifact name="wattdepot-client-snapshot"/>
-        <artifact name="wattdepot-converter-oscar"/>
-        <artifact name="wattdepot-lib-client"/>
-        <artifact name="wattdepot-sensor-bmo"/>
-        <artifact name="wattdepot-sensor-examplestreaming"/>
-        <artifact name="wattdepot-sensor-tabular"/>
-        <artifact name="wattdepot-sensor-ted5000"/>
-        <artifact name="wattdepot-server"/>
+        <artifact/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="javax.mail" name="javamail" rev="[1.4,2.0[" conf="mail-&gt;default"/>
+        <dependency org="javax.jms" name="jms" rev="[1.1,2.0[" conf="jms-&gt;default"/>
+        <dependency org="javax.management" name="jmx" rev="[1.2.1,2.0[" conf="jmx-&gt;default,tools"/>
+    </dependencies>
 
 </ivy-module>
