@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Andreas Heiduk
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20100920000000">
+        <license name="BSD License" url="http://jdbc.postgresql.org/license.html"/>
+        <description homepage="http://jdbc.postgresql.org/">
+            <p>The PostgreSQL JDBC driver allows Java programs to connect to a
+            PostgreSQL database using standard, database independent Java code.</p>
+            
+            <p>It is a pure Java (Type IV) implementation, so all you need is one
+            jar file.</p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="jdbc3" description="JDBC 3 (JDK 1.4, 1.5)" />
+        <conf name="jdbc4" description="JDBC 4 (JDK 1.6)" />
+        <conf name="default" extends="jdbc4" description="Default configuration (=jdbc4)" />
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="postgresql-jdbc3" conf="jdbc3" />
+        <artifact name="postgresql-jdbc4" conf="jdbc4" />
+        
+        <!-- source -->
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+</ivy-module>
