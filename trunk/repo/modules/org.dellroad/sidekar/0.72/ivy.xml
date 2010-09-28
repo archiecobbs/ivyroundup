@@ -19,31 +19,14 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.dellroad.sidekar" module="sidekar" revision="0.80" status="release" publication="20100212120000">
+    <info organisation="org.dellroad" module="sidekar" revision="0.72" status="release" publication="20100108120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1065 2010-02-12 21:28:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad.sidekar/sidekar/0.80/"/>
+        <ivyauthor name="$Id: ivy.xml 1332 2010-09-28 22:32:38Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/sidekar/0.72/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://sidekar.googlecode.com/">
 
         <p>
-        Sidekar is an "object database" Java persistence solution. It
-        leverages the power and scalability of the
-        <a href="http://www.oracle.com/database/berkeley-db/je/index.html">Oracle Berkeley Database (Java Edition)</a>
-        while presenting a simple and natural Java programming
-        interface. Sidekar aims to make persistence technology fit the
-        Java world, instead of the other way around, so that persistence
-        becomes trivial for the Java programmer.
-        </p>
-
-        <p>
-        Sidekar is not <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">object-relational mapping</a>
-        (ORM) software; it does not rely on SQL. Beccause of this, it is dramatically simpler
-        and easier to work with than traditional ORM persistence layers. The core JAR file is only 375k.
-        </p>
-
-        <p>
-        Sidekar provides "natural" Java persistence, because you use normal Java
-        for everything related to persistence.
+        Sidekar is a simple, elegant, yet powerful and highly scalable persistence solution for Java applications.
         </p>
 
         <p>
@@ -69,7 +52,7 @@
     <configurations>
         <conf name="util" description="Sidekar utility classes only"/>
         <conf name="core" extends="util" description="Sidekar core classes"/>
-        <conf name="spring" extends="core,xml" description="Sidekar Spring integration classes"/>
+        <conf name="spring" extends="core" description="Sidekar Spring integration classes"/>
         <conf name="aop" extends="core" description="Sidekar AOP interceptors"/>
         <conf name="xml" extends="core" description="Sidekar XML import/export"/>
         <conf name="default" extends="core,spring,aop,xml" description="Default configuration containing all classes"/>
@@ -89,8 +72,8 @@
         <dependency org="org.aopalliance" name="aopalliance" rev="[1.0,2.0)" conf="aop-&gt;default"/>
         <dependency org="com.sleepycat" name="berkeley-db-java" rev="3.3.82" conf="core,util-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,1.3)" conf="core,util,xml-&gt;default"/>
-        <dependency org="org.springframework" name="spring" rev="[3.0,3.1)" conf="spring-&gt;tx,web-servlet"/>
-        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2.1" conf="core-&gt;runtime-base;xml-&gt;runtime-xpp3"/>
+        <dependency org="org.springframework" name="spring" rev="[2.5,3.0)" conf="spring-&gt;tx,web,webmvc"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2.1" conf="xml-&gt;runtime-xpp3"/>
     </dependencies>
 
 </ivy-module>

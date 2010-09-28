@@ -19,9 +19,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.dellroad.sidekar" module="sidekar" revision="0.70" status="release" publication="20091103120000">
+    <info organisation="org.dellroad" module="sidekar" revision="0.66" status="release" publication="20090422120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 942 2009-11-04 04:23:38Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad.sidekar/sidekar/0.70/"/>
+        <ivyauthor name="$Id: ivy.xml 1332 2010-09-28 22:32:38Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/sidekar/0.66/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://sidekar.googlecode.com/">
 
@@ -41,7 +41,6 @@
             <li>Java object identity is equivalent to database identity</li>
             <li>No Java serialization</li>
             <li>Sophisticated support for schema changes, including schema verification and update tracking</li>
-            <li>Ability to export and import database in XML format</li>
         </ul>
         </p>
 
@@ -66,10 +65,9 @@
 
     <dependencies>
         <dependency org="org.aopalliance" name="aopalliance" rev="[1.0,2.0)" conf="aop-&gt;default"/>
-        <dependency org="com.sleepycat" name="berkeley-db-java" rev="3.3.82" conf="core,util,spring-&gt;default"/>
+        <dependency org="com.sleepycat" name="berkeley-db-java" rev="3.3.75" conf="core,util,spring-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,1.3)" conf="core,util-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="[2.5,3.0)" conf="spring-&gt;tx"/>
-        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2.1" conf="core-&gt;runtime-xpp3"/>
     </dependencies>
 
 </ivy-module>
