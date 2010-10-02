@@ -4,7 +4,7 @@
 
 The main work required is adding new modules and new revisions of existing modules. All that is required for a new revision is an {{{ivy.xml}}} file and a {{{packager.xml}}} file. The format of {{{packager.xml}}} files is [http://ant.apache.org/ivy/history/latest-milestone/resolver/packager.html documented here].
 
-If the module already exists (i.e., you're just adding a new revision), typically all you need to do is copy the files from the previous revision and update the release timestamp and resource SHA1 checksums.
+If the module already exists (i.e., you're just adding a new revision), typically all you need to do is svn copy the files from the previous revision and update the release timestamp and resource SHA1 checksums.
 
 For new modules, there are plenty of examples to work from. But you should always start with an SVN copy of the [http://code.google.com/p/ivyroundup/source/browse/trunk/src/boilerplate boilerplate files].
 
@@ -13,11 +13,11 @@ Please create issues in the [http://code.google.com/p/ivyroundup/issues/list iss
 *Please follow these guidelines when creating issues for new revisions:*
   # Read and understand the ModuleMaintainerGuidelines.
   # Make sure that running {{{ant repo}}} with your new files in place under {{{src/modules}}} doesn't generate any (new) warnings or errors.
-  # Make sure that running {{{ant -Dresolve.mod=foo}}} doesn't generate any errors (where "foo" is the name of your module; you can also use {{{resolve.org}}} and/or {{{resolve.rev}}})
+  # Make sure that running {{{ant -Dresolve.mod=foo}}} doesn't generate any errors (where "foo" is the name of your module; you can also use {{{resolve.org}}} and/or {{{resolve.rev}}}; these properties also accept specify multiple names separated by commas)
   # Don't forget to set the "publication" attribute to the release date of the module.
   # Include your new modules as a subversion patch file attached to the issue:
     * If the module is new, the patch should be against an "svn copy" of the boilerplate files
-    * If the revision is new but the module already exists, the patch should be against the previous revision
+    * If the revision is new but the module already exists, the patch should be against the previous revision (happens automatically when you "svn copy" the previous revision)
 
 If you're interested in developing the Ivy !RoundUp infrastructure, or becoming a regular contributor with SVN commit access, join us on the [http://groups.google.com/group/ivyroundup mailing list].
 
