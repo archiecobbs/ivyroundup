@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Andreas Heiduk
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <!-- 
+        For some reason the module name and the jar name are different. 
+	For more details see:
+	http://groups.google.com/group/ivysvn/browse_thread/thread/ad94e8589ec02544
+    -->
+    <property name="name" value="ivysvnresolver"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://ivysvn.googlecode.com/files/${name}-${revision}-bin.tgz" 
+        sha1="2a0fd341a2413fc4805fcb9314dbf1af5dff7090"
+        dest="archive-bin" />
+
+    <resource url="http://ivysvn.googlecode.com/files/${name}-${revision}-src.tgz"
+        sha1="b019f4b1687b7ab68e18ad7c13336a3ef837ea4f"
+        dest="archive-src" />
+
+    <build>
+        <!-- jar -->
+        <move file="archive-bin/${name}-${revision}/${name}.jar" todir="artifacts/jars" />
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive-src/${name}-${revision}/src/java"/>
+        </zip>
+    </build>
+</packager-module>
