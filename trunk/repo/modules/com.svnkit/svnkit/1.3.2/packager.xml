@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Philip Johnson
+    Copyright 2009 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,20 +19,23 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="${name}-${revision}.6267"/>
 
-    <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/eclemma/${name}-${revision}.zip" sha1="359ca31a124168260cea64fceab4ce91cdbe6029"/>
-
+    <resource url="http://www.svnkit.com/org.tmatesoft.svn_${revision}.standalone.nojna.zip" sha1="ac703d5ae8b292add6f844233d56b81cbbcffa11"/>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/jacocoant.jar" tofile="artifacts/jars/jacocoant.jar"/>
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}" includes="*.jar"/>
+        </move>
 
-        <!-- source not yet available in distributions -->
+        <!-- source -->
+        <move file="archive/${archive}/svnkitsrc.zip" tofile="artifacts/sources/source.zip"/>
+        <move file="archive/${archive}/svnkitclisrc.zip" tofile="artifacts/sources/clisource.zip"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
+            <fileset dir="archive/${archive}/doc/javadoc"/>
         </zip>
     </build>
 </packager-module>
