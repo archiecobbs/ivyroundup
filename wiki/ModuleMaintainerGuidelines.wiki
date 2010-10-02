@@ -13,19 +13,42 @@ Ivy !RoundUp has the following overall goals:
 
 It is an explicit _non-goal_ that organization, module, and configuration names be consistent with other Ivy repositories that may already exist.
 
+=== Development Setup ===
+
+Ivy !RoundUp works best on UNIX based systems like Linux or Mac OS. Windows is currently not supported.
+
+Sometimes the configuration of ant causes problems. First, ensure that you have the Xalan libraries installed in your ant lib so that the ant `<xslt>` task can work. Alternately, you can prepend the *get-xalan* target each time you run ant to have it downloaded (if necessary) and installed in the classpath for you. You'll know to do this if you get `java.lang.ClassNotFoundException: org.apache.xalan.processor.TransformerFactoryImpl` when you run ant.
+
 === Subversion Operations ===
 
 ==== Adding new modules ====
 
-When adding a new module, create the module subdirectory using {{{svn mkdir}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{packager.xml}}} files.
+When adding a new module, create the module's subdirectory using {{{svn mkdir --parents}}} and then do an {{{svn copy}}} of {{{src/boilerplate}}} to the initial revision subdirectory give yourself a well-formed starting point for the {{{ivy.xml}}} and {{{packager.xml}}} files. Example:
+{{{
+$ svn mkdir --parents src/modules/com.example/foo-util
+$ svn cp src/boilerplate src/modules/com.example/foo-util/1.2
+$ vi src/modules/com.example/foo-util/1.2/*
+}}}
 
 ==== Adding new revisions ====
 
-When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{packager.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{packager.xml}}}.
+When adding a new revision of an existing module, do an {{{svn copy}}} of the previous revision's directory and then edit the contents. With well-designed {{{ivy.xml}}} and {{{packager.xml}}} and a minor revision bump, the only changes that should be necessary are to update the publication timestamp in {{{ivy.xml}}} and the SHA1 checksum(s) in {{{packager.xml}}}. Example:
+{{{
+$ svn cp src/modules/com.example/foo-util/1.2 src/modules/com.example/foo-util/1.3
+$ vi src/modules/com.example/foo-util/1.3/*
+}}}
+
+==== Testing a new Module or Revision ====
+
+If you have added a new module or revision, you can test it like this:
+{{{
+$ ant -Dresolve.mod=foo-util clean repo resolve
+}}}
+Make sure your `~/.ivy2/packager/cache` does not already contain the downloaded archives, otherwise you won't be testing the validity of the download URLs.
 
 ==== Regenerating the Repository ====
 
-Follow these steps to regenerate the repository:
+To regenerate the repository, simply run the {{{regenrepo.sh}}} script, which automates what used to be the following manual steps:
 
   # Ensure there aren't any outstanding changes in the {{{src/}}} directory hierarchy
   # Run {{{svn update}}} to ensure the correct SVN revision number for the top level directory.
@@ -36,9 +59,8 @@ Follow these steps to regenerate the repository:
     * Run {{{svn copy src/modules/foo/bar repo/modules/foo/bar}}}
     * Run {{{svn propdel svn:mergeinfo repo/modules/foo/bar}}}
   # If any {{{svn copy}}}ing was done in the previous step, Re-run {{{ant repo}}}
-  # Finally, {{{svn commit repo}}}
 
-Alternately, just run the shell script {{{regenrepo.sh}}} in the top directory (UNIX only).
+Once the repository has been updated, a single {{{svn commit repo}}} atomically updates it.
 
 == Ivy Module Definitions ({{{ivy.xml}}} files) ==
 
@@ -47,6 +69,8 @@ Alternately, just run the shell script {{{regenrepo.sh}}} in the top directory (
 Try to discover and follow existing precedents (if any) for the value of the "organisation" attribute.
 
 Ivy !RoundUp attempts to follow Java package naming conventions whenever possible. Be sure that the entity that owns the associated DNS domain is the same as the entity that created the software.
+
+This rule is not entirely strict. For example, the current reference implementation of the JSR 303 Validation API lives under `javax.validation`, even though the code is provided by the Hibernate project.
 
 === Configurations ===
 
@@ -68,7 +92,7 @@ Some modules have their code split into several JARs, e.g., {{{foo-core.jar}}}, 
 
 ==== Source Configurations ====
 
-If a module only publishes one source artifact, don't assign it to a configuration. However, for modules that publish source artifacts that correspond to specific JAR artifacts, put the source artifacts in the same configurations as their corresponding JAR artifacts; see the [http://ivyroundup.googlecode.com/svn/trunk/repo/modules/org.springframework/spring/2.5.6/ivy.xml Spring 2.5.6] module for an example of this.
+If a module only publishes one source artifact, don't assign it to a configuration. However, for modules that publish source artifacts that correspond to specific JAR artifacts, put the source artifacts in the same configurations as their corresponding JAR artifacts; see the [http://ivyroundup.googlecode.com/svn/trunk/repo/modules/org.springframework/spring/3.0.4/ivy.xml Spring 3.0.4] module for an example of this.
 
 === Dependencies ===
 
@@ -86,9 +110,11 @@ An important special case of this is when you make assumptions about the future:
 
 Of course, if you know there are no future 1.x revisions forthcoming (2.0 has been released and is stable, etc.) then you are no longer "predicting the future" so the dependency's correctness can be verified first.
 
+Note however that how ivy handles revision ranges is up to the user. Ivy's default conflict manager is currently `latest-revision` which ignores dependency upper bounds! The `latest-compatible` is supposed to make a more careful decision. There is also the possibility of setting `force="true"` on dependencies. This is an area for discussion.
+
 ==== Transitive Dependencies ====
 
-If module A depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you, as that could change in the future.
+If module A explicitly depends on modules B and C, then even if module B also depends on module C, both dependencies need to be explicitly stated in A's dependency list. In other words, don't rely on some other module to do your depending for you, as that could change in the future.
 
 ==== Avoid {{{<artifact>}}} tags ====
 
