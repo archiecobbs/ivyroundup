@@ -25,3 +25,5 @@ Once you've satisfied the prerequisites:
  # Run *ant*.
 
 After downloading all of the resources and resolving every module in Ivy !RoundUp, your completed "normal" repository will be in *build/repo-with-artifacts*.
+
+If ant fails with `java.lang.ClassNotFoundException: org.apache.xalan.processor.TransformerFactoryImpl` then instead of running *ant* run *ant get-xalan all* or install the Xalan libraries into your ant lib.
