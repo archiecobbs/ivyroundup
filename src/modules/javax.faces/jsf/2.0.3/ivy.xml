@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20080406120000">
+        <license name="CDDL+GPL License" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
+        <description homepage="https://javaserverfaces.dev.java.net/">
+            <p>
+                JavaServer(TM) Faces technology simplifies building user interfaces for JavaServer applications.
+                Developers of various skill levels can quickly build web applications by: assembling reusable UI
+                components in a page; connecting these components to an application data source; and wiring
+                client-generated events to server-side event handlers.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api" description="API only"/>
+        <conf name="default" extends="api" description="Default config with API and implementation"/>
+        <conf name="injectionproviders" description="Injection providers for Tomcat 6, Jetty 6, and GlassFish"/>
+    </configurations>
+
+    <publications>
+        <artifact name="jsf-api" conf="api"/>
+        <artifact name="jsf-impl" conf="default"/>
+        <artifact name="injectionproviders" conf="injectionproviders"/>
+
+        <artifact name="jsf-api" type="source" ext="zip" conf="api"/>
+        <artifact name="jsf-impl" type="source" ext="zip" conf="default"/>
+        <artifact name="injectionproviders" type="source" ext="zip" conf="injectionproviders"/>
+
+        <artifact name="jsf" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency force="true" org="javax.el" name="juel" rev="2.+" conf="api->default"/>
+        <dependency force="true" org="javax.servlet" name="servletapi" rev="2.5" conf="api->default"/>
+        <dependency force="true" org="javax.servlet.jsp" name="jsp-api" rev="2.1" conf="api->default"/>
+        <dependency force="true" org="javax.servlet.jsp.jstl" name="jstl" rev="1.2" conf="api->default"/>
+    </dependencies>
+
+</ivy-module>
