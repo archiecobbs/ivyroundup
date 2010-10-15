@@ -38,15 +38,15 @@
     </info>
 
     <configurations>
-        <conf name="runtime" description="Runtime only"/>
+        <conf name="runtime" extends="compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
         <conf name="default" extends="runtime" description="Default config"/>
         <conf name="bayeux" extends="runtime" description="Bayeux support"/>
         <conf name="jersey" extends="annotations" description="Jersey support"/>
         <conf name="commons" extends="jersey" description="Commons code"/>
         <conf name="annotations" extends="runtime" description="Annotations support"/>
-        <conf name="compat-tomcat" extends="runtime" description="Tomcat compatibility"/>
-        <conf name="compat-weblogic" extends="runtime" description="Weblogic compatibility"/>
-        <conf name="compat-jbossweb" extends="compat-tomcat" description="JBoss web compatibility"/>
+        <conf name="compat-tomcat" description="Tomcat compatibility"/>
+        <conf name="compat-weblogic" description="Weblogic compatibility"/>
+        <conf name="compat-jbossweb" description="JBoss web compatibility"/>
         <conf name="guice" extends="jersey" description="Guice support"/>
         <conf name="grizzly" extends="jersey" description="Grizzly support"/>
         <conf name="jgroups" extends="annotations" description="JGroups support"/>
@@ -61,7 +61,7 @@
         <artifact name="atmosphere-commons" conf="commons"/>
         <artifact name="atmosphere-compat-jbossweb" conf="compat-jbossweb"/>
         <artifact name="atmosphere-compat-tomcat" conf="compat-tomcat"/>
-        <artifact name="atmosphere-compat-weblogic" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-weblogic" conf="compat-weblogic"/>
         <artifact name="atmosphere-guice" conf="guice"/>
         <artifact name="atmosphere-grizzly-adapter" conf="grizzly"/>
         <artifact name="atmosphere-jersey" conf="jersey"/>
@@ -76,7 +76,7 @@
         <artifact name="atmosphere-commons" type="source" ext="zip" conf="commons"/>
         <artifact name="atmosphere-compat-jbossweb" type="source" ext="zip" conf="compat-jbossweb"/>
         <artifact name="atmosphere-compat-tomcat" type="source" ext="zip" conf="compat-tomcat"/>
-        <artifact name="atmosphere-compat-weblogic" type="source" ext="zip" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-weblogic" type="source" ext="zip" conf="compat-weblogic"/>
         <artifact name="atmosphere-guice" type="source" ext="zip" conf="guice"/>
         <artifact name="atmosphere-grizzly-adapter" type="source" ext="zip" conf="grizzly"/>
         <artifact name="atmosphere-jersey" type="source" ext="zip" conf="jersey"/>
@@ -89,7 +89,7 @@
         <artifact name="atmosphere-annotations" type="javadoc" ext="zip" conf="annotations"/>
         <artifact name="atmosphere-bayeux" type="javadoc" ext="zip" conf="bayeux"/>
         <artifact name="atmosphere-commons" type="javadoc" ext="zip" conf="commons"/>
-        <artifact name="atmosphere-compat-weblogic" type="javadoc" ext="zip" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-weblogic" type="javadoc" ext="zip" conf="compat-weblogic"/>
         <artifact name="atmosphere-guice" type="javadoc" ext="zip" conf="guice"/>
         <artifact name="atmosphere-grizzly-adapter" type="javadoc" ext="zip" conf="grizzly"/>
         <artifact name="atmosphere-jersey" type="javadoc" ext="zip" conf="jersey"/>
