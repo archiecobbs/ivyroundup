@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20100930171100">
+        <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <description homepage="http://www.metawidget.org/">
+            <p>
+                Metawidget is a 'smart User Interface widget' that populates itself, at runtime, with UI components to match the
+                properties of your business objects.
+            </p>
+            <p>
+                Metawidget does this without introducing new technologies. It inspects your existing back-end architecture (such as
+                JavaBeans, existing annotations, existing XML configuration files) and creates widgets native to your existing
+                front-end framework (such as Swing, Java Server Faces, Struts, Android).
+            </p>
+            <p>
+                Metawidget does not replace or hide your existing UI framework and guarantees that your investment in its
+                technology and knowledge is as valid as always. The LGPL Open Source license allows the use of Metawidget in open
+                source and commercial projects.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
