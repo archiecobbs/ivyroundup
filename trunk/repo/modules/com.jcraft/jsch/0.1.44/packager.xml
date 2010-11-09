@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Adrian Woodhead
+    Copyright 2010 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,18 +21,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.zip" sha1="1b6d5e97796601b9e2c53dbfec007fa163308c8c">
-        <include name="${archive}/*.jar"/>
-    </resource>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="563d2c4728da8351559154925b5903c259382c5b"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="5da6c086f544c71990c93dbe4af8f8c94deaa4ba"/>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/${name}-${revision}-sources.jar" tofile="artifacts/sources/source.zip"/>
-
-        <!-- javadoc -->
-        <move file="archive/${archive}/${name}-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
     </build>
 </packager-module>

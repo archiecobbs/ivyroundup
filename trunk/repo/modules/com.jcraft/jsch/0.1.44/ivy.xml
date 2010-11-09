@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2009 Adrian Woodhead
+    Copyright 2010 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,25 +19,28 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.joda" module="joda-time" revision="1.6.2" status="release" publication="20100913000000">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1372 2010-11-04 05:48:06Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.joda/joda-time/1.6.2/"/>
+    <info organisation="com.jcraft" module="jsch" revision="0.1.44" status="release" publication="20101102120000">
+        <license name="BSD Style" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
+        <ivyauthor name="$Id: ivy.xml 1375 2010-11-04 14:04:37Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.jcraft/jsch/0.1.44/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://joda-time.sourceforge.net/">
+        <description homepage="http://www.jcraft.com/jsch/">
+
             <p>
-            Joda-Time provides a quality replacement for the Java date and time classes. The design allows for 
-            multiple calendar systems, while still providing a simple API. The 'default' calendar is the ISO8601 
-            standard which is used by XML. The Gregorian, Julian, Buddhist, Coptic, Ethiopic and Islamic systems 
-            are also included, and we welcome further additions. Supporting classes include time zone, duration, 
-            format and parsing.
+            JSch is a pure Java implementation of <a href="http://ietf.org/html.charters/secsh-charter.html">SSH2</a>.
             </p>
+
+            <p>
+            JSch allows you to connect to an sshd server and use port
+            forwarding, X11 forwarding, file transfer, etc., and you can
+            integrate its functionality into your own Java programs.
+            </p>
+
         </description>
     </info>
 
     <publications>
         <artifact/>
         <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
