@@ -24,9 +24,9 @@
 
     <resource url="https://javaserverfaces.dev.java.net/files/documents/1866/151249/${archive}-binary.zip"
       sha1="235920ab6dda82b61460efc56af75d16aeafae7d">
-        <include name="lib/${name}-api.jar"/>
-        <include name="lib/${name}-impl.jar"/>
-        <include name="docs/javadocs-${revision}-SNAPSHOT.zip"/>
+        <include name="${archive}/lib/${name}-api.jar"/>
+        <include name="${archive}/lib/${name}-impl.jar"/>
+        <include name="${archive}/docs/javadocs-${revision}-SNAPSHOT.zip"/>
     </resource>
     <resource url="https://javaserverfaces.dev.java.net/files/documents/1866/151250/${archive}-source.zip"
       sha1="2dedeb73e1ef237a254483eae3bb296faefacf27"/>
