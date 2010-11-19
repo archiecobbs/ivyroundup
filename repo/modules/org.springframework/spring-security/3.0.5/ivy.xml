@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
     Copyright 2010 Mark Thomas
@@ -15,11 +16,13 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-<ivy-module rev="$Id$">
-
-    <info publication="20101118072600">
+    <info organisation="org.springframework" module="spring-security" revision="3.0.5" status="release" publication="20101118072600">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1390 2010-11-19 14:44:15Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/3.0.5/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-security/site/">
 
             <p>
@@ -91,39 +94,39 @@
 
     <publications>
 
-        <artifact name="spring-security-acl"        conf="acl"/>
-        <artifact name="spring-security-aspects"    conf="aspects"/>
+        <artifact name="spring-security-acl" conf="acl"/>
+        <artifact name="spring-security-aspects" conf="aspects"/>
         <artifact name="spring-security-cas-client" conf="cas-client"/>
-        <artifact name="spring-security-config"     conf="config"/>
-        <artifact name="spring-security-core"       conf="core"/>
-        <artifact name="spring-security-ldap"       conf="ldap"/>
-        <artifact name="spring-security-openid"     conf="openid"/>
-        <artifact name="spring-security-taglibs"    conf="taglibs"/>
-        <artifact name="spring-security-web"        conf="web"/>
+        <artifact name="spring-security-config" conf="config"/>
+        <artifact name="spring-security-core" conf="core"/>
+        <artifact name="spring-security-ldap" conf="ldap"/>
+        <artifact name="spring-security-openid" conf="openid"/>
+        <artifact name="spring-security-taglibs" conf="taglibs"/>
+        <artifact name="spring-security-web" conf="web"/>
 
-        <artifact name="spring-security-acl"        conf="acl"          type="source" ext="zip"/>
-        <artifact name="spring-security-aspects"    conf="aspects"      type="source" ext="zip"/>
-        <artifact name="spring-security-cas-client" conf="cas-client"   type="source" ext="zip"/>
-        <artifact name="spring-security-config"     conf="config"       type="source" ext="zip"/>
-        <artifact name="spring-security-core"       conf="core"         type="source" ext="zip"/>
-        <artifact name="spring-security-ldap"       conf="ldap"         type="source" ext="zip"/>
-        <artifact name="spring-security-openid"     conf="openid"       type="source" ext="zip"/>
-        <artifact name="spring-security-taglibs"    conf="taglibs"      type="source" ext="zip"/>
-        <artifact name="spring-security-web"        conf="web"          type="source" ext="zip"/>
+        <artifact name="spring-security-acl" conf="acl" type="source" ext="zip"/>
+        <artifact name="spring-security-aspects" conf="aspects" type="source" ext="zip"/>
+        <artifact name="spring-security-cas-client" conf="cas-client" type="source" ext="zip"/>
+        <artifact name="spring-security-config" conf="config" type="source" ext="zip"/>
+        <artifact name="spring-security-core" conf="core" type="source" ext="zip"/>
+        <artifact name="spring-security-ldap" conf="ldap" type="source" ext="zip"/>
+        <artifact name="spring-security-openid" conf="openid" type="source" ext="zip"/>
+        <artifact name="spring-security-taglibs" conf="taglibs" type="source" ext="zip"/>
+        <artifact name="spring-security-web" conf="web" type="source" ext="zip"/>
 
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency org="org.springframework" name="spring" rev="[3.0.0,3.1[" conf="core->aop,core,beans,context,jdbc"/>
-        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0[" conf="core->default"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="[3.2,4.0[" conf="core->default"/>
-        <dependency org="org.apache.commons" name="commons-codec" rev="[1.3,2.0[" conf="core->default"/>
-        <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="core->default"/>
-        <dependency org="org.aspectj" name="aspectj" rev="[1.5.4,1.6[" conf="core->default"/>
-        <dependency org="org.openid4java" name="openid4java" rev="[0.9.3,2.0[" conf="openid->default"/>
-        <dependency org="javax.servlet" name="servletapi" rev="2.+" conf="web->default"/>
-        <dependency org="org.jasig.cas" name="cas-client-core" rev="3.1.+" conf="cas-client->default"/>
+        <dependency org="org.springframework" name="spring" rev="[3.0.0,3.1[" conf="core-&gt;aop,core,beans,context,jdbc"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[3.2,4.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.3,2.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="core-&gt;default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="[1.5.4,1.6[" conf="core-&gt;default"/>
+        <dependency org="org.openid4java" name="openid4java" rev="[0.9.3,2.0[" conf="openid-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.+" conf="web-&gt;default"/>
+        <dependency org="org.jasig.cas" name="cas-client-core" rev="3.1.+" conf="cas-client-&gt;default"/>
     </dependencies>
 
 </ivy-module>

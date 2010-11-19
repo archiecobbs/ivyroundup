@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
     Copyright 2010 Mark Thomas
@@ -15,11 +16,13 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-<ivy-module rev="$Id$">
-
-    <info publication="20101020225400">
+    <info organisation="uk.org.lidalia" module="sysout-over-slf4j" revision="1.0.1" status="release" publication="20101020225400">
         <license name="iMIT X11 License" url="http://projects.lidalia.org.uk/sysout-over-slf4j/license.html"/>
+        <ivyauthor name="$Id: ivy.xml 1391 2010-11-19 14:59:25Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/uk.org.lidalia/sysout-over-slf4j/1.0.1/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://projects.lidalia.org.uk/sysout-over-slf4j/">
             <p>
                 The sysout-over-slf4j module allows a user to redirect all calls to System.out and System.err
@@ -36,7 +39,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.slf4j" name="slf4j" rev="[1.6.0,)" conf="default->core"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.0,)" conf="default-&gt;core"/>
     </dependencies>
 
 </ivy-module>
