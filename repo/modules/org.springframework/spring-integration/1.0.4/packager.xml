@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
     Copyright 2010 Mark Thomas <spatialguru.net@gmail.com>
 
@@ -15,16 +14,15 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
-<packager-module rev="$Id$">
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}.RELEASE"/>
     <property name="archive" value="${name}-${revision}"/>
     <property name="extract" value="archive/${archive}"/>
 
-    <resource url="http://s3.amazonaws.com/dist.springframework.org/release/INT/${archive}.zip"
-        sha1="c21590275e72cd3345333ba1afd1d99d181a988c"/>
+    <resource url="http://s3.amazonaws.com/dist.springframework.org/release/INT/${archive}.zip" sha1="c21590275e72cd3345333ba1afd1d99d181a988c"/>
 
     <build>
         <!-- jar -->
