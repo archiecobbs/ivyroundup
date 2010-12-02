@@ -24,10 +24,27 @@
     <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="5575ecb5c09b0b88aa78511b3e38377c2dfdab68"/>
 
     <build>
-        <!-- jars -->
-        <move todir="artifacts/jars">
-            <fileset dir="archive/${name}/lib" includes="${name}-*.jar"/>
-        </move>
+        <!-- Copy JARs but also zero out Class-Path attributes in manifests -->
+        <jar destfile="artifacts/jars/${name}-bind.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-bind.jar" includes="**/*"/>
+            <manifest><attribute name="Class-Path" value=""/></manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-extras.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-extras.jar" includes="**/*"/>
+            <manifest><attribute name="Class-Path" value=""/></manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-run.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-run.jar" includes="**/*"/>
+            <manifest><attribute name="Class-Path" value=""/></manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-schema.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-schema.jar" includes="**/*"/>
+            <manifest><attribute name="Class-Path" value=""/></manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-tools.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-tools.jar" includes="**/*"/>
+            <manifest><attribute name="Class-Path" value=""/></manifest>
+        </jar>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
