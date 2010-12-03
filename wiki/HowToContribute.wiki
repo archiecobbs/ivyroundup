@@ -10,7 +10,7 @@ For new modules, there are plenty of examples to work from. But you should alway
 
 In either case, patches should be created using {{{svn diff}}} from the top directory.
 
-Note that Ivy RoundUp has separate a _source_ (under {{{src/modules}}}) and _repository_ (under {{{repo/modules}}}) trees. The files in the source tree are slightly different from normal {{{ivy.xml}}} and {{{packager.xml}}} files. For example, they don't specify {{{organisation="..."}}}, {{{module="..."}}}, or {{{revision="..."}}}. Instead, this informaion gets added automatically during the build process.
+Note that Ivy !RoundUp has separate a _source_ (under {{{src/modules}}}) and _repository_ (under {{{repo/modules}}}) trees. The files in the source tree are slightly different from normal {{{ivy.xml}}} and {{{packager.xml}}} files. For example, they don't specify {{{organisation="..."}}}, {{{module="..."}}}, or {{{revision="..."}}}. Instead, this informaion gets added automatically during the build process.
 
 Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules.
 
