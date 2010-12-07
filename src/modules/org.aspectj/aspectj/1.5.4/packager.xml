@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.eclipse.org/downloads/download.php?file=/tools/${name}/downloads/${name}-${revision}.jar&amp;mirror_id=1&amp;url=http://download.eclipse.org/tools/${name}/downloads/${name}-${revision}.jar"
+    <resource url="http://www.eclipse.org/downloads/download.php?file=/tools/${name}/downloads/${archive}.jar"
       sha1="9af12d400446c4d088aba5fffc4a1dd56c26f9be">
         <include name="lib/*.jar"/>
         <include name="doc/*-api/**/*"/>
