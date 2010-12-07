@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.aspectj" module="aspectj" revision="1.6.10" status="release" publication="20080603120000">
+        <license name="Eclipse Public License Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+        <ivyauthor name="$Id: ivy.xml 1409 2010-12-07 16:09:20Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.aspectj/aspectj/1.6.10/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.eclipse.org/aspectj/">
+
+            <p>
+            Some aspects of system implementation, such as logging, error
+            handling, standards enforcement and feature variations are
+            notoriously difficult to implement in a modular way. The result
+            is that code is tangled across a system and leads to quality,
+            productivity and maintenance problems. AspectJ is a seamless
+            aspect-oriented extension to the Java programming language that
+            enables clean modularization of these 'crosscutting concerns'. For
+            the best AspectJ development experience, the AspectJ Development
+            Tools (AJDT) project provides Eclipse platform based tool support
+            for AOSD with AspectJ - see <a href="http://eclipse.org/ajdt">Eclipse AJDT project</a>.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="AspectJ runtime support"/>
+        <conf name="tools" description="AspectJ tools"/>
+        <conf name="weaver" extends="default" description="AspectJ weaving support"/>
+    </configurations>
+
+    <publications>
+        <artifact name="rt"/>
+        <artifact name="matcher"/>
+        <artifact name="tools" conf="tools"/>
+        <artifact name="weaver" conf="weaver"/>
+
+        <artifact type="source" ext="zip" name="rt"/>
+        <artifact type="source" ext="zip" name="matcher"/>
+        <artifact type="source" ext="zip" name="tools" conf="tools"/>
+        <artifact type="source" ext="zip" name="weaver" conf="weaver"/>
+
+        <artifact type="javadoc" ext="zip" name="rt"/>
+        <artifact type="javadoc" ext="zip" name="runtime"/>
+        <artifact type="javadoc" ext="zip" name="weaver" conf="weaver"/>
+    </publications>
+
+</ivy-module>
