@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20100928120000">
+        <license name="GNU Affero General Public License, Version 3.0" url="http://www.gnu.org/licenses/agpl-3.0.html"/>
+        <description homepage="http://vaadin.com/directory#addon/lazy-query-container">
+
+            <p>
+            Lazy Query Container is a <a href="http://www.vaadin.com/">Vaadin framework</a>
+            addon which provides lazy loading container for Vaadin tables. Lazy Query
+            Container supports buffered reads and writes of items. Data
+            reads and writes are delegated through Query interface to
+            an application specific business delegate.
+            </p>
+
+            <p>
+            The QueryFactory and Query interface implementations are
+            designed to be application specific and should invoke a data
+            source like WebService client, JDBC connection, JPA context
+            or Java service class to read and write data items. The data
+            source has to support querying data in batches.
+            </p>
+
+            <p>
+            Lazy Query Container supports the following features: lazy
+            loading of items, loading items in batches, item caching with
+            limited cache size, sorting, query statistics, changing item
+            set and changing property set. Since version 1.1.0 Lazy Query
+            Container also supports adding items, modifying items and
+            removing items. The changes are buffered and can be either
+            commited or discarded. Row status icons and status column
+            generator are also included to allow for visualization of row
+            states. See the demo for hands on experience on the features.
+            </p>
+
+            <p>
+            Specialized classes (see
+            <a href="http://vaadin.com/wiki/-/wiki/Main/Lazy%20Query%20Container/">Wiki</a>
+            page for examples):
+            <ul>
+            <li>CompositeItem for combining beans and dynamic properties.</li>
+            <li>EntityContainer specialized container for easy use of JPA with LQC.</li>
+            <li>BeanQueryFactory for queries loading JavaBeans.</li>
+            </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.vaadin" name="vaadin" rev="[6.2,7.0[" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
