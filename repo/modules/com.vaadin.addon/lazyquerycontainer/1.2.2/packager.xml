@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Mark Thomas
+    Copyright 2010 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,11 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
     <property name="name" value="${ivy.packager.module}"/>
-    <m2resource groupId="net/${name}" repo="http://download.java.net/maven/2/">
-        <artifact tofile="artifacts/jars/${name}.jar" sha1="b4b8fcba119f8fab1c1aceaeeacd56e2754cd72d"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="c03f5dc772b7b048d39ad7a50cd20ef08563c32e"/>
-    </m2resource>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="vaadin-${name}-${revision}"/>
+
+    <resource url="file:///${java.io.tmpdir}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="daa2563736e3bf728ea47cf6b1321dfaa70c7af8"/>
+
 </packager-module>
