@@ -21,7 +21,7 @@
 
     <info organisation="org.apache.poi" module="poi" revision="3.5-FINAL" status="release" publication="20090928085200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1222 2010-06-16 15:10:12Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.5-FINAL/"/>
+        <ivyauthor name="$Id: ivy.xml 1419 2010-12-22 15:52:21Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.5-FINAL/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://poi.apache.org/">
         <p>
@@ -65,6 +65,8 @@
         <artifact conf="default"/>
         <artifact name="poi-contrib" conf="contrib"/>
         <artifact name="poi-scratchpad" conf="scratchpad"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>

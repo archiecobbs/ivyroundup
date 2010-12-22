@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="zipname" value="${name}-${revision}"/>
+
+    <resource url="http://testng.org/${zipname}.zip" sha1="427a368c4909e243793e50640ca195cd53604b39">
+        <include name="${zipname}/src/**/*"/>
+        <include name="${zipname}/javadocs/**/*"/>
+        <include name="${zipname}/*.jar"/>
+    </resource>
+
+    <build>
+
+        <!-- jar  -->
+        <move file="archive/${zipname}/${zipname}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${zipname}/src">
+                <include name="**/*.java"/>
+            </fileset>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${zipname}/javadocs"/>
+        </zip>
+    </build>
+</packager-module>
