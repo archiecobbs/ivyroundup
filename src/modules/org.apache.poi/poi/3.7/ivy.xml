@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20101029085200">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://poi.apache.org/">
+
+        <p>
+        The Apache POI Project's mission is to create and maintain Java APIs
+        for manipulating various file formats based upon the Office Open XML
+        standards (OOXML) and Microsoft's OLE 2 Compound Document format (OLE2).
+        In short, you can read and write MS Excel files using Java.  In addition,
+        you can read and write MS Word and MS PowerPoint files using Java.
+        Apache POI is your Java Excel solution (for Excel 97-2008). We have a
+        complete API for porting other OOXML and OLE2 formats and welcome others
+        to participate.
+        </p>
+
+        <p>
+        OLE2 files include most Microsoft Office files such
+        as XLS, DOC, and PPT as well as MFC serialization API
+        based file formats.  The project provides APIs for the
+        <a href="http://poi.apache.org/poifs/index.html">OLE2 Filesystem
+        (POIFS)</a> and <a href="http://poi.apache.org/hpsf/index.html">OLE2
+        Document Properties (HPSF)</a>.
+        </p>
+
+        <p>
+        Office OpenXML Format is the new standards based XML file format found in
+        Microsoft Office 2007 and 2008.  This includes XLSX, DOCX and PPTX. The
+        project provides a low level API to support the Open Packaging Conventions
+        using <a href="http://poi.apache.org/oxml4j/index.html">openxml4j</a>.
+        </p>
+
+        <p>
+        For each MS Office application there exists a component module
+        that attempts to provide a common high level Java api to both
+        OLE2 and OOXML document formats. This is most developed for
+        <a href="http://poi.apache.org/spreadsheet/index.html">Excel
+        workbooks (SS=HSSF+XSSF)</a>.  Work is progressing for
+        <a href="http://poi.apache.org/hwpf/index.html">Word
+        documents (HWPF+XWPF)</a> and
+        <a href="http://poi.apache.org/slideshow/index.html">PowerPoint
+        presentations (HSLF+XSLF)</a>.
+        </p>
+
+        <p>
+        The project has recently added support for
+        <a href="http://poi.apache.org/hsmf/index.html">Outlook (HSMF)</a>.
+        Microsoft opened the specifications to this format in October 2007.
+        We would welcome contributions.
+        </p>
+
+        <p>
+        There are also projects for
+        <a href="http://poi.apache.org/hdgf/index.html">Visio (HDGF)</a> and
+        <a href="http://poi.apache.org/hpbf/index.html">Publisher (HPBF)</a>.
+        </p>
+
+        <p>
+        As a general policy we collaborate as much as possible with other
+        projects to provide this functionality.  Examples include:
+        <a href="http://xml.apache.org/cocoon">Cocoon</a> for which there are
+        serializers for HSSF; <a href="http://www.openoffice.org">Open
+        Office.org</a> with whom we collaborate in documenting the
+        XLS format; and <a href="http://tika.apache.org/">Tika</a> /
+        <a href="http://lucene.apache.org/">Lucene</a>, for which we provide format
+        interpretors.  When practical, we donate components directly to those
+        projects for POI-enabling them.
+        </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default POI configuration with base classes"/>
+        <conf name="scratchpad" extends="default" description="POI with scratchpad"/>
+        <conf name="ooxml" extends="default, ooxml-schemas" description="POI with OOXML classes"/>
+        <conf name="ooxml-schemas" description="POI OOXML schema classes"/>
+        <conf name="examples" extends="scratchpad, ooxml" description="POI with examples"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="poi-scratchpad" conf="scratchpad"/>
+        <artifact name="poi-ooxml" conf="ooxml"/>
+        <artifact name="poi-ooxml-schemas" conf="ooxml-schemas"/>
+        <artifact name="poi-examples" conf="examples"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.+" conf="default->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.13,1.3[" conf="default->default"/>
+        <dependency org="org.dom4j" name="dom4j" rev="1.6+" conf="ooxml->default"/>
+    </dependencies>
+
+</ivy-module>
