@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
     Copyright 2010 Mark Thomas
 
@@ -15,15 +14,14 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
-<packager-module rev="$Id$">
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://subclipse.tigris.org/files/documents/906/46267/${archive}.zip"
-      sha1="40a08822e67cadd5fed37f11a979e1064c2db57d"/>
+    <resource url="http://subclipse.tigris.org/files/documents/906/46267/${archive}.zip" sha1="40a08822e67cadd5fed37f11a979e1064c2db57d"/>
 
     <build>
         <!-- jar -->
