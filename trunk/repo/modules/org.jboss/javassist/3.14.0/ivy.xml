@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2010 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,13 +15,11 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-<!-- GENERATED FILE - DO NOT EDIT -->
-<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.jboss" module="javassist" revision="3.9.0" status="release" publication="20081009120000">
+<ivy-module rev="$Id$">
+
+    <info publication="20100611083343">
         <license name="Mozilla Public License, Version 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1424 2010-12-31 04:26:07Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jboss/javassist/3.9.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jboss.org/javassist/">
 
         <p>
@@ -65,8 +62,8 @@
 
     <publications>
         <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
