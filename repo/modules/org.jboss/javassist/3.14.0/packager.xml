@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Copyright 2010 Mark Thomas
 
@@ -15,14 +14,13 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
-<packager-module rev="$Id$">
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/jboss/Javassist/${revision}.GA/${archive}-GA.zip"
-      sha1="4516be10e680c0c9de42932191cb992fbe9362e3">
+    <resource url="http://downloads.sourceforge.net/project/jboss/Javassist/${revision}.GA/${archive}-GA.zip" sha1="4516be10e680c0c9de42932191cb992fbe9362e3">
         <include name="${archive}-GA/${name}.jar"/>
         <include name="${archive}-GA/html/**/*"/>
         <include name="${archive}-GA/src/main/**/*"/>
