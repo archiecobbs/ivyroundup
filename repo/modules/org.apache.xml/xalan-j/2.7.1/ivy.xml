@@ -21,7 +21,7 @@
 
     <info organisation="org.apache.xml" module="xalan-j" revision="2.7.1" status="release" publication="20071122120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 689 2009-04-28 19:05:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xalan-j/2.7.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1440 2011-01-07 22:14:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xalan-j/2.7.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xml.apache.org/xalan-j/">
             <p>
@@ -64,7 +64,6 @@
     <publications>
         <artifact conf="interp" name="xalan"/>
         <artifact conf="compiler" name="xsltc"/>
-        <artifact conf="xml-apis" name="xml-apis"/>
         <artifact conf="serializer" name="serializer"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
@@ -73,6 +72,7 @@
     <!-- TODO: separate out BCEL, java_cup runtime, regexp also -->
     <dependencies>
         <dependency org="org.apache.xerces" name="xerces" rev="2.7+" conf="*-&gt;default"/>
+        <dependency org="org.apache.xml" name="xml-commons-external" rev="1.3+" conf="xml-apis-&gt;default"/>
     </dependencies>
 
 </ivy-module>

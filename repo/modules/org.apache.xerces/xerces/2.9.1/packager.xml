@@ -29,7 +29,6 @@
     <resource dest="binarchive" url="http://archive.apache.org/dist/${name}/j/${binarchive}.tar.gz" sha1="1e11122b9477d355cfbb63fe8fb2929bedd147e6">
         <url href="http://archive.apache.org/dist/xml/${name}-j/${binarchive}.tar.gz"/>
         <include name="${archdir}/${name}Impl.jar"/>
-        <include name="${archdir}/xml-apis.jar"/>
         <include name="${archdir}/docs/javadocs/**/*"/>
         <include name="${archdir}/serializer.jar"/>
     </resource>
@@ -41,7 +40,6 @@
     <build>
         <!-- jars -->
         <move file="binarchive/${archdir}/${name}Impl.jar" todir="artifacts/jars"/>
-        <move file="binarchive/${archdir}/xml-apis.jar" todir="artifacts/jars"/>
         <move file="binarchive/${archdir}/serializer.jar" todir="artifacts/jars"/>
 
         <!-- source -->
