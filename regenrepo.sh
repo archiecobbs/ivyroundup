@@ -45,6 +45,9 @@ regenerate_repo()
     rm -f regen.out
 }
 
+# Revert any changes to existing repo
+svn revert -R repo/
+
 # Update to get lastest stuff
 echo 'regenrepo: updating from SVN'
 svn up
