@@ -42,7 +42,6 @@
 
     <publications>
         <artifact name="xercesImpl" conf="impl"/>
-        <artifact name="xml-apis" conf="apis"/>
         <artifact name="serializer" conf="serializer"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
@@ -51,5 +50,9 @@
         <artifact name="javadoc-xni" type="javadoc" ext="zip"/>
         <artifact name="javadoc-xs" type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="org.apache.xml" name="xml-commons-external" rev="1.3+" conf="apis->default"/>
+    </dependencies>
 
 </ivy-module>
