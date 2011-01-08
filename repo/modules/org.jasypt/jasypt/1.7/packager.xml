@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Vladimir Ritz Bossicard
+    Copyright (c) 2010, The JASYPT team (http://www.jasypt.org)
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,22 +21,17 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-bin.zip" sha1="fe4489365253e475d728645fe4d846ed8bf9aeb4"/>
-
-    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-src.zip" sha1="7eace8ba0cc4c3cd7d5d8d31bc394b5b28613ed8"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}%20${revision}/${archive}-dist.zip" sha1="2f580a2911e6092ee59bd4d31836d72d0bdae38d"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/dist/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/dist/${name}-${revision}-lite.jar" tofile="artifacts/jars/${name}-lite.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/xstream/src/java"/>
-        </zip>
+        <move file="archive/${archive}/dist/${name}-${revision}-sources.jar" tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/javadoc"/>
-        </zip>
+        <move file="archive/${archive}/dist/${name}-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
     </build>
 </packager-module>
