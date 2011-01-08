@@ -22,10 +22,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://repository.codehaus.org/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-bin.zip"
+    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-bin.zip"
         sha1="fe4489365253e475d728645fe4d846ed8bf9aeb4"/>
 
-    <resource url="http://repository.codehaus.org/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-src.zip"
+    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-src.zip"
         sha1="7eace8ba0cc4c3cd7d5d8d31bc394b5b28613ed8"/>
 
     <build>
