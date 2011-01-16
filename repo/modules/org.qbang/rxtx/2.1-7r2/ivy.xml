@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.qbang" module="rxtx" revision="2.1-7r2" status="release" publication="20060301120000">
+        <license name="RXTX License" url="http://users.frii.com/jarvi/rxtx/license.html"/>
+        <ivyauthor name="$Id: ivy.xml 1447 2011-01-16 00:36:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.qbang/rxtx/2.1-7r2/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://rxtx.qbang.org/wiki/index.php/Main_Page">
+        <p>
+        RXTX is a native lib providing serial and parallel communication for the Java Development Toolkit (JDK).
+        </p>
+
+        <p>
+        RXTX can be used as a replacement for
+        <a href="http://java.sun.com/products/javacomm/index.jsp">Sun's comm implementation</a>.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="RXTX Java classes"/>
+        <conf name="default" extends="core" description="Default configuration containing only the Java classes"/>
+        <conf name="linux-x86" extends="core" description="RXTX native libraries for Linux/x86"/>
+        <conf name="linux-x86_64" extends="core" description="RXTX native libraries for Linux/x86_64"/>
+        <conf name="linux-ia64" extends="core" description="RXTX native libraries for Linux/ia64"/>
+        <conf name="solaris-sparc32" extends="core" description="RXTX native libraries for Solaris/Sparc32"/>
+        <conf name="solaris-sparc64" extends="core" description="RXTX native libraries for Solaris/Sparc64"/>
+        <conf name="windows" extends="core" description="RXTX native DLLs for Windows"/>
+        <conf name="macos" extends="core" description="RXTX native library for Mac OS X"/>
+    </configurations>
+
+    <publications>
+        <artifact name="RXTXcomm"/>
+        <artifact name="linux-x86-librxtxParallel" conf="linux-x86" type="so" ext="so"/>
+        <artifact name="linux-x86-librxtxSerial" conf="linux-x86" type="so" ext="so"/>
+        <artifact name="linux-x86_64-librxtxSerial" conf="linux-x86_64" type="so" ext="so"/>
+        <artifact name="linux-ia64-librxtxSerial" conf="linux-ia64" type="so" ext="so"/>
+        <artifact name="solaris-sparc32-librxtxSerial" conf="solaris-sparc32" type="so" ext="so"/>
+        <artifact name="solaris-sparc64-librxtxSerial" conf="solaris-sparc64" type="so" ext="so"/>
+        <artifact name="rxtxParallel" conf="windows" type="dll" ext="dll"/>
+        <artifact name="rxtxSerial" conf="windows" type="dll" ext="dll"/>
+        <artifact name="librxtxSerial" conf="macos" type="jnilib" ext="jnilib"/>
+    </publications>
+
+</ivy-module>
