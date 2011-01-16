@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="archive" value="${name}-2.1-7-bins-r2"/>
+
+    <resource url="http://rxtx.qbang.org/pub/rxtx/${archive}.zip" sha1="4a26bdf9163b89d0e21ae4263d941ca866409820"/>
+
+    <build>
+        <move file="archive/${archive}/RXTXcomm.jar" todir="artifacts/jars"/>
+
+        <mkdir dir="artifacts/sos"/>
+        <mkdir dir="artifacts/dlls"/>
+        <mkdir dir="artifacts/jnilibs"/>
+
+        <move file="archive/${archive}/Linux/i686-unknown-linux-gnu/librxtxParallel.so"
+            tofile="artifacts/sos/linux-x86-librxtxParallel.so"/>
+        <move file="archive/${archive}/Linux/i686-unknown-linux-gnu/librxtxSerial.so"
+            tofile="artifacts/sos/linux-x86-librxtxSerial.so"/>
+        <move file="archive/${archive}/Linux/x86_64-unknown-linux-gnu/librxtxSerial.so"
+            tofile="artifacts/sos/linux-x86_64-librxtxSerial.so"/>
+        <move file="archive/${archive}/Linux/ia64-unkown-linux-gnu/librxtxSerial.so"
+            tofile="artifacts/sos/linux-ia64-librxtxSerial.so"/>
+        <move file="archive/${archive}/Solaris/sparc-solaris/sparc32-sun-solaris2.8/librxtxSerial.so"
+            tofile="artifacts/sos/solaris-sparc32-librxtxSerial.so"/>
+        <move file="archive/${archive}/Solaris/sparc-solaris/sparc64-sun-solaris2.8/librxtxSerial.so"
+            tofile="artifacts/sos/solaris-sparc64-librxtxSerial.so"/>
+
+        <move file="archive/${archive}/Windows/i368-mingw32/rxtxParallel.dll" todir="artifacts/dlls"/>
+        <move file="archive/${archive}/Windows/i368-mingw32/rxtxSerial.dll" todir="artifacts/dlls"/>
+
+        <move file="archive/${archive}/Mac_OS_X/librxtxSerial.jnilib" todir="artifacts/jnilibs"/>
+    </build>
+</packager-module>
+
