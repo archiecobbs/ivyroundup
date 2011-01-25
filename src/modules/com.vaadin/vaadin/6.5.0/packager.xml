@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://vaadin.com/download/release/6.5/${revision}/${archive}.jar"
+      tofile="artifacts/jars/${name}.jar"
+      sha1="9f03d7a7123561eae1d608a929b251ad6caa47f4"/>
+    <resource url="http://vaadin.com/download/release/6.5/${revision}/other/${archive}-sources.jar"
+      tofile="artifacts/sources/source.zip"
+      sha1="ab7ed2c2724eac52f006568c1497532c08dd3b2a"/>
+    <resource url="http://vaadin.com/download/release/6.5/${revision}/other/${archive}-javadoc.jar"
+      tofile="artifacts/javadocs/javadoc.zip"
+      sha1="d30d21c3e056ff319f9a178e2665f2b037f10e03"/>
+</packager-module>
