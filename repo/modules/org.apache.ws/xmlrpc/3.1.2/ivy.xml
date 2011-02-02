@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.ws" module="xmlrpc" revision="3.1.2" status="release" publication="20090420194900">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1471 2011-02-02 14:51:55Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ws/xmlrpc/3.1.2/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://ws.apache.org/xmlrpc/">
+        Apache XML-RPC is a Java implementation of <a href="http://www.xmlrpc.com/">XML-RPC</a>,
+        a popular protocol that uses XML over HTTP to implement remote procedure calls.
+
+        Version 3 of Apache XML-RPC is still compliant to the <a href="http://www.xmlrpc.com/spec">XML-RPC
+        specification</a>. However, the user may enable several vendor extensions are available,
+        that greatly extend the power of XML-RPC:
+
+        <ul>
+        <li>All primitive Java types are supported, including long, byte, short, and double.</li>
+        <li>Calendar objects are supported. In particular, timezone settings, and
+            milliseconds may be sent.</li>
+        <li>DOM nodes, or JAXB objects, can be transmitted. So are objects implementing
+            the <code>java.io.Serializable</code> interface.</li>
+        <li>Both server and client can operate in a streaming mode,
+            which preserves resources much better than the default mode,
+            which is based on large internal byte arrays.</li>
+        </ul>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="common" description="Code common to client and server"/>
+        <conf name="server" extends="common" description="Server-side support"/>
+        <conf name="client" extends="common" description="Client-side support"/>
+        <conf name="default" extends="server,client" description="Server and client-side support"/>
+    </configurations>
+
+    <publications>
+        <artifact name="xmlrpc-client" conf="client"/>
+        <artifact name="xmlrpc-common" conf="common"/>
+        <artifact name="xmlrpc-server" conf="server"/>
+        <artifact name="ws-commons-util-1.0.2" conf="common"/> <!-- TODO: should be in its own "ws-common-util" module -->
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <!-- <dependency org="org.apache.wc" name="commons-util" rev="1.0.2" conf="common->default"/> -->
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.+" conf="common-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
