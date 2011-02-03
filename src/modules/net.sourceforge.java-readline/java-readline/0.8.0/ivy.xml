@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20030107120000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://java-readline.sourceforge.net/">
+
+            <p>
+            Java-Readline is a port of GNU Readline for Java. Or, to be
+            more precise, it is a JNI-wrapper to Readline. It is distributed
+            under the LGPL.
+            </p>
+
+            <p>
+            Although Java-Readline is distributed under the LGPL, the
+            underlying Readline library is GPL code. The consequence is,
+            that any program linking with Java-Readline+Readline, will fall
+            under the GPL.
+            </p>
+
+            <p>
+            There is a Readline replacement called Editline with a more
+            liberal license. Starting with version 0.6, you have the choice of
+            linking against Editline. This version also features a fallback
+            solution (System.in) for platforms without Readline or Editline
+            support, making your programs portable again.
+            </p>
+
+            <p>
+            The code should compile for every platform supporting the
+            readline, history and termcap libraries.
+            </p>
+
+            <p>
+            <b>NOTE:</b> this module requires setting <code>restricted="false"</code>
+            on the packager resolver definition and <code>sh</code> and <code>rpm2cpio</code>
+            executables available in the <code>$PATH</code>; see the
+            <a href="http://ant.apache.org/ivy/history/latest-milestone/resolver/packager.html">Packager Resolver</a>
+            documentation for more information on <code>restricted="false"</code>.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Java classes"/>
+        <conf name="linux-32bit-so" description="Linux shared library for x86 architectures"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="libJavaReadline" conf="linux-32bit-so" type="so" ext="so"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
