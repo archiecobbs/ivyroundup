@@ -21,19 +21,29 @@
     <info publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://www.example.com/">
+
+            <p>
+            The Foobar Project has these amazing features...
+            </p>
+
         </description>
     </info>
 
     <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="extra" description="Extra classes"/>
+        <conf name="default" extends="core,extra" description="All classes"/>
     </configurations>
 
     <publications>
-        <artifact/>
+        <artifact conf="core"/>
+        <artifact name="foo-extra" conf="extra"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="core->default"/>
     </dependencies>
 
 </ivy-module>
