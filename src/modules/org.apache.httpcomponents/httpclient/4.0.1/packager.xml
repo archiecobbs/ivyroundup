@@ -22,34 +22,15 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="httpcomponents-client-${revision}"/>
 
-    <property name="mirror1" value="http://mir2.ovh.net/ftp.apache.org/dist/"/>
-    <property name="mirror2" value="http://apache.cict.fr/"/>
-    <property name="mirror3" value="http://apache.multidist.com/"/>
-    <property name="mirror4" value="http://mirror.mkhelif.fr/apache/"/>
-    <property name="mirror5" value="http://apache.crihan.fr/dist/"/>
-    <property name="mirror6" value="ftp://mir1.ovh.net/ftp.apache.org/dist/"/>
-    <property name="mirror7" value="ftp://ftp.inria.fr/pub/Apache/"/>
-
-    <resource url="${mirror1}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz" sha1="e8b4b209715134f61fffe231bc51a1d2556a5884">
-        <url href="${mirror2}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <url href="${mirror3}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <url href="${mirror4}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <url href="${mirror5}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <url href="${mirror6}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <url href="${mirror7}/httpcomponents/httpclient/binary/${archive}-bin.tar.gz"/>
-        <include name="${archive}/lib/*.jar"/>
+    <resource url="http://archive.apache.org/dist/httpcomponents/httpclient/binary/httpcomponents-client-4.0.1-bin.tar.gz"
+      sha1="e8b4b209715134f61fffe231bc51a1d2556a5884">
 	<!-- No Javadoc for 4.0.1 (See https://issues.apache.org/jira/browse/HTTPCLIENT-921) -->
 	<!-- Anyway, this should be the right setting for future release : 
         <include name="${archive}/javadoc/**/*"/> -->
     </resource>
 
-    <resource url="${mirror1}/httpcomponents/httpclient/source/${archive}-src.tar.gz" sha1="be8750a8ab1a2c244b329fdcab5f2c27a1ebe2a9">
-        <url href="${mirror2}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
-        <url href="${mirror3}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
-        <url href="${mirror4}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
-        <url href="${mirror5}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
-        <url href="${mirror6}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
-        <url href="${mirror7}/httpcomponents/httpclient/source/${archive}-src.tar.gz"/>
+    <resource url="http://archive.apache.org/dist/httpcomponents/httpclient/source/httpcomponents-client-4.0.1-src.tar.gz"
+      sha1="be8750a8ab1a2c244b329fdcab5f2c27a1ebe2a9">
         <include name="${archive}/httpmime/src/main/resources/**/*"/>
         <include name="${archive}/httpmime/src/main/java/**/*"/>
         <include name="${archive}/httpclient/src/main/resources/**/*"/>
