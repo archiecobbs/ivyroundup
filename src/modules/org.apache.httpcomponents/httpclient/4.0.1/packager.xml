@@ -22,14 +22,14 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="httpcomponents-client-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/httpcomponents/httpclient/binary/httpcomponents-client-4.0.1-bin.tar.gz"
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/binary/${archive}-bin.tar.gz"
       sha1="e8b4b209715134f61fffe231bc51a1d2556a5884">
 	<!-- No Javadoc for 4.0.1 (See https://issues.apache.org/jira/browse/HTTPCLIENT-921) -->
 	<!-- Anyway, this should be the right setting for future release : 
         <include name="${archive}/javadoc/**/*"/> -->
     </resource>
 
-    <resource url="http://archive.apache.org/dist/httpcomponents/httpclient/source/httpcomponents-client-4.0.1-src.tar.gz"
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/source/${archive}-src.tar.gz"
       sha1="be8750a8ab1a2c244b329fdcab5f2c27a1ebe2a9">
         <include name="${archive}/httpmime/src/main/resources/**/*"/>
         <include name="${archive}/httpmime/src/main/java/**/*"/>
