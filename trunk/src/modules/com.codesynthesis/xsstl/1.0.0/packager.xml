@@ -28,7 +28,10 @@
     <build>
         <!-- XSD -->
         <mkdir dir="artifacts/xsds"/>
-        <replaceregexp file="archive/${archive}/xsstl.xsd" match='schemaLocation="xsslt/' replace='schemaLocation="'/>
+        <replaceregexp flags="g" file="archive/${archive}/xsstl.xsd">
+            <regexp pattern="(.*)(xsstl/)(.*)"/>
+            <substitution expression="\1\3"/>
+        </replaceregexp>
         <move todir="artifacts/xsds">
             <fileset dir="archive/${archive}" includes="*.xsd"/>
             <fileset dir="archive/${archive}/xsstl" includes="*.xsd"/>
