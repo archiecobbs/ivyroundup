@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<packager-module rev="$Id$">
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-c3p0">
+        <artifact tofile="artifacts/jars/hibernate-c3p0.jar" sha1="6a382e5eaaed4672b65bd20940cda15a510b7a58"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-c3p0.zip" sha1="4d1baa74f973028f8c9dde3b45f5206888481c43"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-core">
+        <artifact tofile="artifacts/jars/hibernate-core.jar" sha1="58be72e3a6640d73aa79b2094c65f0558298d1ff"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-core.zip" sha1="61e6d1499fdb61b75b5680491dc6a2f0edc32812"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-ehcache">
+        <artifact tofile="artifacts/jars/hibernate-ehcache.jar" sha1="1543d4b32e8d28d26c5de1cff462dbbb98e716d1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-ehcache.zip" sha1="04edce4d138afe6c651e940ce043f273045236cd"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-entitymanager">
+        <artifact tofile="artifacts/jars/hibernate-entitymanager.jar" sha1="4590f2a3f82f31f16e80988e17b7888caf14965e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-entitymanager.zip" sha1="56d231e11add8304e1b069dc7df16dfec47b4baa"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-envers">
+        <artifact tofile="artifacts/jars/hibernate-envers.jar" sha1="2ff74a7d4f75c0ecf8b9b589d576d26a92b6ddbb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-envers.zip" sha1="7c27d13f86cf593a75039e81fed08786d53aa6ca"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-infinispan">
+        <artifact tofile="artifacts/jars/hibernate-infinispan.jar" sha1="9cab1549972f67d44a0ee58e2e074909ef3eed51"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-infinispan.zip" sha1="2741aa03cb8015e264e79bda7e8e4215d1770c37"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-jbosscache">
+        <artifact tofile="artifacts/jars/hibernate-jbosscache.jar" sha1="e59dd7043276fa621cd6fc16f3140769aeb3054f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-jbosscache.zip" sha1="94cfffdb00c5148886c7d28bec06eea838232197"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-oscache">
+        <artifact tofile="artifacts/jars/hibernate-oscache.jar" sha1="8d278e5b9891104f4880842b824f8caad599726e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-oscache.zip" sha1="e0c0f1fd86b71ea92003cf99256458ea9017a6a8"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-proxool">
+        <artifact tofile="artifacts/jars/hibernate-proxool.jar" sha1="b3002947df1f5dfa50a527af5a81d70e75781acc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-proxool.zip" sha1="16b129e8ffd81bd5b55b71f5afced443979cbbaf"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-swarmcache">
+        <artifact tofile="artifacts/jars/hibernate-swarmcache.jar" sha1="40c1af3344dad3e4482adb23ad4e21ee1150f586"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-swarmcache.zip" sha1="8ba9a3c39fc0b0a77931aca81bc131ab9071b054"/>
+    </m2resource>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" artifactId="hibernate-testing">
+        <artifact tofile="artifacts/jars/hibernate-testing.jar" sha1="7f9be83ef68a4470be45d3cf93929e4daa829881"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-testing.zip" sha1="b1ac5a27d32491763df7d3c92fc1c6219778dcf5"/>
+    </m2resource>
+</packager-module>
