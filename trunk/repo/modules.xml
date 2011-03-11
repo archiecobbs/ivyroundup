@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2011-03-10 16:06:04 UTC</timestamp>
-  <svnRevision>1508</svnRevision>
+  <timestamp>2011-03-11 15:54:09 UTC</timestamp>
+  <svnRevision>1512</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -1114,6 +1114,7 @@
   <org name="org.atmosphere">
     <mod name="atmosphere">
       <rev name="0.6.3"/>
+      <rev name="0.7"/>
     </mod>
   </org>
   <org name="org.beanshell">
@@ -1357,6 +1358,8 @@
       <rev name="3.5.5-Final"/>
       <rev name="3.5.6-Final"/>
       <rev name="3.6.0.Final"/>
+      <rev name="3.6.1.Final"/>
+      <rev name="3.6.2.Final"/>
     </mod>
   </org>
   <org name="org.hsqldb">
@@ -1811,6 +1814,11 @@
       <rev name="1.1.3.3"/>
       <rev name="1.1.3.4.O"/>
       <rev name="1.1.4c"/>
+    </mod>
+  </org>
+  <org name="redis.clients">
+    <mod name="jedis">
+      <rev name="1.5.2"/>
     </mod>
   </org>
   <org name="rome">
