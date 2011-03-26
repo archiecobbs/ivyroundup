@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.drewnoakes" module="metadata-extractor" revision="2.4.0-beta-1" status="release" publication="20110120000000">
+        <license name="Public domain"/>
+        <ivyauthor name="$Id: ivy.xml 1526 2011-03-26 02:39:20Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.drewnoakes/metadata-extractor/2.4.0-beta-1/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.drewnoakes.com/code/exif/">
+            <p>What began as a simple utility to extract the date-taken from a digital still
+               camera (DSC) Jpeg file is now a general metadata extraction framework. Support
+               currently exists for Exif and Iptc metadata segments. Extraction of these segments
+               is provided for Jpeg files. It is hoped that individuals with specific needs will
+               extend the framework by adding their own classes.</p>
+
+            <p>Information extracted by this library might be of use to you if you're writing an
+               image browser, image categoriser, photo album, etc... I started coding this library
+               for use in my own photo gallery.</p>
+
+            <p>This is the only Java based Exif extraction library I know of.</p>
+
+
+            <p>This metadata library is available with Java source code for usage in the public domain.</p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="metadata-extractor" type="source" ext="zip"/>
+    </publications>
+
+
+</ivy-module>
