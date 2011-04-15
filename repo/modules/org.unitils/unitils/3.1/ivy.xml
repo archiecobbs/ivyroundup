@@ -21,7 +21,7 @@
 
     <info organisation="org.unitils" module="unitils" revision="3.1" status="release" publication="20091011182900">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1547 2011-04-15 15:21:45Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1549 2011-04-15 16:27:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.unitils.org/">
         &lt;p&gt;Unitils is an open source library aimed at making unit testing easy
@@ -190,7 +190,7 @@
         <dependency org="edu.oswego.cs" name="concurrent" rev="1.3.+" conf="test-&gt;default"/>
         <dependency org="org.easymock" name="easymock" rev="[2.3,3.0[" conf="easymock-&gt;ext"/>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.+" conf="test-&gt;default"/>
-        <dependency org="org.testng" name="testng" rev="[5.8,)" conf="testng-&gt;jdk15"/>
+        <dependency org="org.testng" name="testng" rev="[5.8,)" conf="testng-&gt;default"/>
         <dependency org="javax.persistence" name="persistence-api" rev="[1.0,)" conf="orm-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="[2.0,4.0[" conf="spring-&gt;tx,test;orm-&gt;orm;database-&gt;jdbc"/>
     </dependencies>
