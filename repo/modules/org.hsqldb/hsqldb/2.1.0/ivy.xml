@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.hsqldb" module="hsqldb" revision="2.1.0" status="release" publication="20110313230000">
+        <license name="HSQL License" url="http://hsqldb.org/web/hsqlLicense.html"/>
+        <ivyauthor name="$Id: ivy.xml 1551 2011-04-15 16:52:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.1.0/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://hsqldb.org/">
+        HSQLDB is the leading SQL relational database engine written in Java. It
+        has a JDBC driver and supports a rich subset of ANSI-92 SQL (BNF tree
+        format) plus SQL 99 and 2003 enhancements. It offers a small (less than
+        100k in one version for applets), fast database engine which offers both
+        in-memory and disk-based tables and supports embedded and server modes.
+        Additionally, it includes tools such as a minimal web server, in-memory
+        query and management tools (can be run as applets) and a number of
+        demonstration examples.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default version"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact type="source" ext="zip" conf="default"/>
+        <artifact type="javadoc" ext="zip" conf="default"/>
+    </publications>
+
+</ivy-module>
