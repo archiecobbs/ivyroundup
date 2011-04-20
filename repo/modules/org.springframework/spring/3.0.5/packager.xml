@@ -35,7 +35,7 @@
             <fileset dir="archive/${archive}/dist">
                 <include name="*.jar"/>
             </fileset>
-            <mapper type="glob" from="org.springframework.*-${distrev}.jar" to="*.jar"/>
+            <mapper type="glob" from="org.springframework.*-${distrev}.jar" to="${name}-*.jar"/>
         </move>
 
         <!-- source -->
@@ -43,7 +43,7 @@
             <fileset dir="archive/${archive}/src">
                 <include name="*.jar"/>
             </fileset>
-            <mapper type="glob" from="org.springframework.*-sources-${distrev}.jar" to="*.zip"/>
+            <mapper type="glob" from="org.springframework.*-sources-${distrev}.jar" to="${name}-*.zip"/>
         </move>
 
         <!-- javadoc -->
