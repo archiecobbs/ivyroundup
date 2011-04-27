@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jrobin" module="jrobin" revision="1.5.12" status="release" publication="20110406163800">
+        <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <ivyauthor name="$Id: ivy.xml 1574 2011-04-27 00:46:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jrobin/jrobin/1.5.12/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.jrobin.org/">
+
+        <p>
+        <b>JRobin is a 100% pure java implementation of RRDTool's functionality.
+        </b> It follows the same logic and uses the same data sources, archive 
+        types and definitions as RRDTool does. JRobin supports all standard 
+        operations on Round Robin Database (RRD) files: CREATE, UPDATE, FETCH, 
+        LAST, DUMP, XPORT  and GRAPH. JRobin's API is made for those who are 
+        familiar with RRDTool's concepts and logic, but prefer to work with pure 
+        java. If you provide the same data to RRDTool and JRobin, you will get 
+        exactly the same results and graphs. JRobin is made from the scratch and 
+        it uses very limited portions of RRDTool's original source code. JRobin 
+        does not use native functions and libraries, has no Runtime.exec() calls 
+        and does not require RRDTool to be present.
+        </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
