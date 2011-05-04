@@ -8,20 +8,20 @@ If the module already exists (i.e., you're just adding a new revision), typicall
 
 For new modules, there are plenty of examples to work from. But you should always start with an SVN copy of the [http://code.google.com/p/ivyroundup/source/browse/trunk/src/boilerplate boilerplate files].
 
-In either case, patches should be created using {{{svn diff}}} from the top directory.
+In either case, patches should be created using the command {{{svn diff src/modules}}} run from the top-level directory.
 
-Note that Ivy !RoundUp has separate _source_ (under {{{src/modules}}}) and _repository_ (under {{{repo/modules}}}) trees. The files in the source tree are slightly different from normal {{{ivy.xml}}} and {{{packager.xml}}} files. For example, they don't specify {{{organisation="..."}}}, {{{module="..."}}}, or {{{revision="..."}}}. Instead, this informaion gets added automatically during the build process.
+Note that Ivy !RoundUp has separate _source_ (under {{{src/modules}}}) and _repository_ (under {{{repo/modules}}}) trees. All of the files under {{{repo}}} are automatically generated. *The files in the source tree are slightly different from normal* {{{ivy.xml}}} and {{{packager.xml}}} files. For example, they don't specify {{{organisation="..."}}}, {{{module="..."}}}, or {{{revision="..."}}}. Instead, this information gets added automatically during the build process based on the parent (revision), grandparent (module), and great-grandparent (organization) directory names. Also, they contain {{{rev="$Id$"}}} revision tags.
 
 Please create issues in the [http://code.google.com/p/ivyroundup/issues/list issue tracker] to submit new or updated modules.
 
 *Please follow these guidelines when creating issues for new revisions:*
+  # Include your new modules as a subversion patch file attached to the issue:
+    * If the module is new, the patch should be against an "svn copy" of the boilerplate files
+    * If the revision is new but the module already exists, the patch should be against the previous revision (happens automatically when you "svn copy" the previous revision)
   # Read and understand the ModuleMaintainerGuidelines.
   # Make sure that running {{{ant repo}}} with your new files in place under {{{src/modules}}} doesn't generate any (new) warnings or errors.
   # Make sure that running {{{ant -Dresolve.mod=foo}}} doesn't generate any errors (where "foo" is the name of your module; you can also use {{{resolve.org}}} and/or {{{resolve.rev}}}; these properties also accept specify multiple names separated by commas)
   # Don't forget to set the "publication" attribute to the release date of the module.
-  # Include your new modules as a subversion patch file attached to the issue:
-    * If the module is new, the patch should be against an "svn copy" of the boilerplate files
-    * If the revision is new but the module already exists, the patch should be against the previous revision (happens automatically when you "svn copy" the previous revision)
 
 If you're interested in developing the Ivy !RoundUp infrastructure, or becoming a regular contributor with SVN commit access, join us on the [http://groups.google.com/group/ivyroundup mailing list].
 
