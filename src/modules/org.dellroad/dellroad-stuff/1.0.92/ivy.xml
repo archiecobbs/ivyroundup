@@ -39,7 +39,7 @@
         <conf name="jibx" extends="core" description="JiBX related classes"/>
         <conf name="main" extends="core" description="Main related classes"/>
         <conf name="servlet" extends="core" description="Servlet related classes"/>
-        <conf name="default" extends="core" description="Everything"/>
+        <conf name="default" extends="core,spring,vaadin,validation-hibernate,jibx,main,servlet" description="All classes and all dependencies"/>
     </configurations>
 
     <publications>
@@ -56,7 +56,7 @@
         <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8.0" conf="main->default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core->default"/>
         <dependency org="org.springframework" name="spring" rev="3.0+"
-          conf="spring->context-support,expression,jdbc,tx,web-servlet"/>
+          conf="spring->context-support,expression,jdbc,tx,web-servlet;jibx->expression,oxm;main->context-support;servlet->aop,tx,web-servlet"/>
         <dependency org="org.hibernate" name="hibernate-validator" rev="4.1+" conf="validation-hibernate->default"/>
     </dependencies>
 
