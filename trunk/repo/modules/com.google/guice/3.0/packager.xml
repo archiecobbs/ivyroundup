@@ -86,7 +86,9 @@
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/javadoc"/>
+            <fileset dir="archive">
+                <include name="javadoc/**/*"/>
+            </fileset>
         </zip>
     </build>
 </packager-module>
