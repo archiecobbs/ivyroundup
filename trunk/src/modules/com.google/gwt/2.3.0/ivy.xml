@@ -124,5 +124,8 @@
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
+    <dependencies>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="compile-&gt;default"/>
+    </dependencies>
 </ivy-module>
 
