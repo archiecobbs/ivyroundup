@@ -21,7 +21,7 @@
 
     <info organisation="org.dellroad" module="dellroad-stuff" revision="1.0.92" status="release" publication="20110425120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1571 2011-04-25 20:32:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.92/"/>
+        <ivyauthor name="$Id: ivy.xml 1596 2011-05-04 22:01:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.92/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://dellroad-stuff.googlecode.com/">
 
@@ -42,7 +42,7 @@
         <conf name="jibx" extends="core" description="JiBX related classes"/>
         <conf name="main" extends="core" description="Main related classes"/>
         <conf name="servlet" extends="core" description="Servlet related classes"/>
-        <conf name="default" extends="core" description="Everything"/>
+        <conf name="default" extends="core,spring,vaadin,validation-hibernate,jibx,main,servlet" description="All classes and all dependencies"/>
     </configurations>
 
     <publications>
@@ -58,7 +58,7 @@
         <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;default"/>
         <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8.0" conf="main-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core-&gt;default"/>
-        <dependency org="org.springframework" name="spring" rev="3.0+" conf="spring-&gt;context-support,expression,jdbc,tx,web-servlet"/>
+        <dependency org="org.springframework" name="spring" rev="3.0+" conf="spring-&gt;context-support,expression,jdbc,tx,web-servlet;jibx-&gt;expression,oxm;main-&gt;context-support;servlet-&gt;aop,tx,web-servlet"/>
         <dependency org="org.hibernate" name="hibernate-validator" rev="4.1+" conf="validation-hibernate-&gt;default"/>
     </dependencies>
 
