@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2009 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,26 +19,25 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="jakarta-${name}-${revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/jakarta/oro/${archive}.tar.gz" sha1="23d708b77885c97149873e808fdf4bcf05fe6708">
-        <include name="${archive}/${archive}.jar"/>
-        <include name="${archive}/src/java/**/*"/>
-        <include name="${archive}/docs/api/**/*"/>
-    </resource>
+    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="a4c7de32686afa5802a3165c4a818a0b068d4648"/>
+    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="2c1eaedd7b2f600fe81d493272ab597dcec18574"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move todir="artifacts/jars/">
+            <fileset dir="archive/${archive}" includes="*.jar"/>
+        </move>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/${name}.zip">
-            <fileset dir="archive/${archive}/src/java"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/" includes="org/**/*.java,javax/**/*.java"/>
         </zip>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/api"/>
+            <fileset dir="archive/${archive}/docs/javadoc"/>
         </zip>
     </build>
 </packager-module>
