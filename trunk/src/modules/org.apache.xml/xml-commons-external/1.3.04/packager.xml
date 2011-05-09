@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://apache.osuosl.org/xml/commons/${archive}-bin.zip"
+    <resource url="http://archive.apache.org/xml/commons/${archive}-bin.zip"
       sha1="64ae8484579f2738ceb265dc72d07ed12163e19b"/>
-    <resource url="http://apache.osuosl.org/xml/commons/${archive}-src.zip"
+    <resource url="http://archive.apache.org/xml/commons/${archive}-src.zip"
       sha1="56cca753ebebe468865e3b00c82e2f3365b2c95e"/>
 
     <build>
