@@ -17,30 +17,9 @@
 -->
 
 <packager-module rev="$Id$">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="https://oscache.dev.java.net/files/documents/629/61427/${archive}-full.zip"
-      sha1="f9b66b1da8945621a285c5ca1a9a9cb3ad383fe9">
-        <include name="${archive}.jar"/>
-        <include name="src/java/**/*"/>
-        <include name="docs/api/**/*"/>
-    </resource>
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/src/java"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/docs/api"/>
-        </zip>
-    </build>
+    <m2resource groupId="opensymphony">
+        <artifact tofile="artifacts/jars/oscache.jar" sha1="0a65e13a27a470b83d6492474f65369c0e75bb5a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="02b51da431af5ea479c72b33fd05e50a8df91c91"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="c640c9a34dcd93cb3728be4011cd2b653800e7eb"/>
+    </m2resource>
 </packager-module>

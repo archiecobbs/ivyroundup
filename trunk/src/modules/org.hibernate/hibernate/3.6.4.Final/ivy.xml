@@ -112,35 +112,3 @@
         <dependency org="net.sourceforge.swarmcache" name="swarmcache" rev="[1.0RC2,2.0[" conf="swarmcache-&gt;default"/>
     </dependencies>
 </ivy-module>
-
-    <publications>
-        <!-- jar -->
-        <artifact name="hibernate-c3p0" conf=""/>
-        <artifact name="hibernate-core" conf=""/>
-        <artifact name="hibernate-ehcache" conf=""/>
-        <artifact name="hibernate-entitymanager" conf=""/>
-        <artifact name="hibernate-envers" conf=""/>
-        <artifact name="hibernate-infinispan" conf=""/>
-        <artifact name="hibernate-jbosscache" conf=""/>
-        <artifact name="hibernate-oscache" conf=""/>
-        <artifact name="hibernate-proxool" conf=""/>
-        <artifact name="hibernate-swarmcache" conf=""/>
-        <artifact name="hibernate-testing" conf=""/>
-
-        <!-- source -->
-        <artifact name="hibernate-c3p0" type="source" ext="zip"/>
-        <artifact name="hibernate-core" type="source" ext="zip"/>
-        <artifact name="hibernate-ehcache" type="source" ext="zip"/>
-        <artifact name="hibernate-entitymanager" type="source" ext="zip"/>
-        <artifact name="hibernate-envers" type="source" ext="zip"/>
-        <artifact name="hibernate-infinispan" type="source" ext="zip"/>
-        <artifact name="hibernate-jbosscache" type="source" ext="zip"/>
-        <artifact name="hibernate-oscache" type="source" ext="zip"/>
-        <artifact name="hibernate-proxool" type="source" ext="zip"/>
-        <artifact name="hibernate-swarmcache" type="source" ext="zip"/>
-        <artifact name="hibernate-testing" type="source" ext="zip"/>
-
-        <!-- javadoc -->
-    </publications>
-
-</ivy-module>
