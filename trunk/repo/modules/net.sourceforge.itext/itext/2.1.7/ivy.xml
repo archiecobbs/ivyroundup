@@ -21,7 +21,7 @@
 
     <info organisation="net.sourceforge.itext" module="itext" revision="2.1.7" status="release" publication="20090707102100">
         <license name="GNU Library General Public License, Version 2" url="http://www.lowagie.com/iText/lgpl.txt"/><license name="Mozilla Public License, Version 1.1" url="http://www.lowagie.com/iText/MPL-1.1.txt"/>
-        <ivyauthor name="$Id: ivy.xml 819 2009-07-17 14:24:09Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.itext/itext/2.1.7/"/>
+        <ivyauthor name="$Id: ivy.xml 1610 2011-05-11 01:49:20Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.itext/itext/2.1.7/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.lowagie.com/iText/">
         <p>
@@ -72,7 +72,6 @@
         <conf name="core" description="iText core classes"/>
         <conf name="rtf" extends="core" description="iText RTF support"/>
         <conf name="rups" extends="core" description="iText RUPS support"/>
-        <conf name="toolbox" extends="core" description="iText toolbox classes"/>
         <conf name="default" extends="core,rtf,rups" description="iText core + RTF + RUPS"/>
     </configurations>
 
@@ -80,7 +79,6 @@
         <artifact conf="core"/>
         <artifact name="itext-rtf" conf="rtf"/>
         <artifact name="itext-rups" conf="rups"/>
-        <artifact name="itext-toolbox" conf="toolbox"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
