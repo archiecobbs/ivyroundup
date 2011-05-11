@@ -21,7 +21,7 @@
 
     <info organisation="org.primefaces" module="primefaces" revision="2.2.M1" status="release" publication="20101007183700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1353 2010-10-07 21:08:26Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.primefaces/primefaces/2.2.M1/"/>
+        <ivyauthor name="$Id: ivy.xml 1611 2011-05-11 01:53:58Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.primefaces/primefaces/2.2.M1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.example.com/">
             <p>
@@ -56,7 +56,7 @@
 
     <dependencies>
         <dependency org="javax.faces" name="jsf" rev="2.0.+" conf="default-&gt;api"/>
-        <dependency org="net.sourceforge.itext" name="itext" rev="2.1.+" conf="dataexport-&gt;default"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="2.1+" force="true" conf="dataexport-&gt;default"/>
         <dependency org="org.apache.poi" name="poi" rev="3.+" conf="dataexport-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-io" rev="1.4" conf="fileupload-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-fileupload" rev="1.2.+" conf="fileupload-&gt;default"/>

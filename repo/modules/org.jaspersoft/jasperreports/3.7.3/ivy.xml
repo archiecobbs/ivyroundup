@@ -21,7 +21,7 @@
 
     <info organisation="org.jaspersoft" module="jasperreports" revision="3.7.3" status="release" publication="20100601141700">
         <license name="LGPL, Version 2.1" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1223 2010-06-16 15:10:27Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/3.7.3/"/>
+        <ivyauthor name="$Id: ivy.xml 1611 2011-05-11 01:53:58Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/3.7.3/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jasperforge.org/projects/jasperreports/">
         <p>
@@ -63,7 +63,7 @@
         <dependency org="org.apache.commons" name="commons-digester" rev="[1.7,)" conf="core-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="[1.0,)" conf="core-&gt;default"/>
         <dependency org="org.hibernate" name="hibernate" rev="[3.0.1,)" conf="hibernate-&gt;core"/>
-        <dependency org="net.sourceforge.itext" name="itext" rev="[2.1,)" conf="core-&gt;default"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="2.1+" force="true" conf="core-&gt;default"/>
         <dependency org="org.jfree" name="jcommon" rev="[1.0.0,)" conf="charts-&gt;default"/>
         <dependency org="org.jfree" name="jfreechart" rev="[1.0.0,)" conf="charts-&gt;default"/>
         <dependency org="org.apache.poi" name="poi" rev="[3.5-FINAL,)" conf="poi-&gt;default"/>

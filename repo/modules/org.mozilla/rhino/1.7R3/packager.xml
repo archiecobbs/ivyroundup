@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="_version" value="1_7R3"/>
+    <property name="archive" value="${name}${_version}"/>
+
+    <resource url="ftp://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip" sha1="81f39d6e24529d62b23a6a92a1a09af95495d7c1">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/src/**/*"/>
+        <include name="${archive}/javadoc/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/js.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/js-14.jar" todir="artifacts/jars/"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+    </build>
+</packager-module>
