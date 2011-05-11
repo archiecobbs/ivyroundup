@@ -70,7 +70,6 @@
         <conf name="core" description="iText core classes"/>
         <conf name="rtf" extends="core" description="iText RTF support"/>
         <conf name="rups" extends="core" description="iText RUPS support"/>
-        <conf name="toolbox" extends="core" description="iText toolbox classes"/>
         <conf name="default" extends="core,rtf,rups" description="iText core + RTF + RUPS"/>
     </configurations>
 
@@ -78,7 +77,6 @@
         <artifact conf="core"/>
         <artifact name="itext-rtf" conf="rtf"/>
         <artifact name="itext-rups" conf="rups"/>
-        <artifact name="itext-toolbox" conf="toolbox"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
