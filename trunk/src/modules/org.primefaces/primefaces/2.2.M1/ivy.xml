@@ -53,7 +53,7 @@
 
     <dependencies>
         <dependency org="javax.faces" name="jsf" rev="2.0.+" conf="default->api"/>
-        <dependency org="net.sourceforge.itext" name="itext" rev="2.1.+" conf="dataexport->default"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="2.1+" force="true" conf="dataexport->default"/>
         <dependency org="org.apache.poi" name="poi" rev="3.+" conf="dataexport->default"/>
         <dependency org="org.apache.commons" name="commons-io" rev="1.4" conf="fileupload->default"/>
         <dependency org="org.apache.commons" name="commons-fileupload" rev="1.2.+" conf="fileupload->default"/>
