@@ -22,10 +22,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz" sha1="1139baf1ae3d4b025775c72ec9cf1397f396a5ff"/>
+    <resource url="http://sourceforge.net/projects/ireport/files/${name}/${name}-${revision}/${name}-${revision}.tar.gz"
+      sha1="1139baf1ae3d4b025775c72ec9cf1397f396a5ff"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/ireport/modules/ext/${ivy.packager.module}-${revision}.jar" tofile="artifacts/jars/${ivy.packager.module}.jar"/>
+        <move file="archive/${archive}/ireport/modules/ext/${ivy.packager.module}-${revision}.jar"
+          tofile="artifacts/jars/${ivy.packager.module}.jar"/>
     </build>
 </packager-module>
