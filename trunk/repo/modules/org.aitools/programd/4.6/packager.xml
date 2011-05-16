@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2011 Mark Thomas
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,14 +17,23 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <property name="name" value="iReport"/>
+    <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://sourceforge.net/projects/ireport/files/${name}/${name}-${revision}/${name}-${revision}.tar.gz" sha1="1139baf1ae3d4b025775c72ec9cf1397f396a5ff"/>
+    <resource url="http://aitools.org/${name}/${revision}-bin/${name}-${revision}-bin.tar.bz2" sha1="01ab4e03a787ad6219e1e439f5fe9daefbf42b93">
+        <include name="ProgramD/distrib/${name}-main.jar"/>
+    </resource>
+    <resource url="http://aitools.org/${name}/${revision}-src/${name}-${revision}-src.tar.bz2" sha1="66dbfe304a5228dedd8ec6cf1b4c71d491c7d69c">
+        <include name="ProgramD/JavaSource/**/*"/>
+    </resource>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/ireport/modules/ext/${ivy.packager.module}-${revision}.jar" tofile="artifacts/jars/${ivy.packager.module}.jar"/>
+        <move file="archive/ProgramD/distrib/${name}-main.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/ProgramD/JavaSource"/>
+        </zip>
     </build>
 </packager-module>

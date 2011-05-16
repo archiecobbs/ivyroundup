@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.aitools" module="programd" revision="4.6" status="release" publication="20060312120000">
+        <license name="GNU Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
+        <ivyauthor name="$Id: ivy.xml 1617 2011-05-16 02:27:41Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.aitools/programd/4.6/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://aitools.org/Program_D">
+
+            <p>Program D is the most widely used <a href="http://en.wikipedia.org/wiki/free_software" class="extiw" title="wikipedia:free software">free</a> ("open source")
+            <a href="http://en.wikipedia.org/wiki/AIML" class="extiw" title="wikipedia:AIML">AIML</a> bot platform in the world. It
+            is the most feature-complete, best-tested implementation of the
+            current <a href="http://aitools.org/aiml/spec/" class="external             text" title="http://aitools.org/aiml/spec/" rel="nofollow">AIML
+            specification</a>. It supports unlimited multiple bots in a
+            single server instance, and has an open-ended architecture for
+            interacting via any interface imaginable. The standard release
+            provides a <a href="http://en.wikipedia.org/wiki/J2EE" class="extiw" title="wikipedia:J2EE">J2EE</a> <a href="http://en.wikipedia.org/wiki/web_application" class="extiw" title="wikipedia:web application">web application</a> implementation that
+            can be deployed as a .war file. Drop-in listeners are available for <a href="/IRC_Listener" title="IRC Listener">IRC</a>, <a href="/AIM_Listener" title="AIM Listener">AIM</a>, and <a href="/Yahoo_Listener" title="Yahoo             Listener">Yahoo</a>. It includes an automated testing framework for
+            testing knowledge bases, and is packaged with an AIML Test Suite that
+            verifies that the program itself complies to the AIML specification.
+
+            </p><p>Program D is known to work with many different languages /
+            character sets. Its component-oriented architecture allows it to be
+            integrated into any application framework desirable. It is implemented
+            in <a href="http://en.wikipedia.org/wiki/Java_programming_language" class="extiw" title="wikipedia:Java programming             language">Java</a>, and uses many features of the latest
+            <a href="http://en.wikipedia.org/wiki/JDK" class="extiw" title="wikipedia:JDK">JDK</a> to provide optimum code reliability. It
+            is actively maintained and supported.  </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
