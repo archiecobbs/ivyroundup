@@ -21,7 +21,7 @@
 
     <info organisation="org.jaspersoft" module="jasperreports-chart-themes" revision="4.0.1" status="release" publication="20110228152700">
         <license name="LGPL, Version 2.1" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1577 2011-04-29 19:29:34Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports-chart-themes/4.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1621 2011-05-16 20:50:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports-chart-themes/4.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jasperforge.org/projects/jasperreports/">
         <p>
@@ -37,7 +37,7 @@
 
     <dependencies>
         <dependency org="org.jaspersoft" name="jasperreports" rev="4.0.1" conf="default-&gt;charts"/>
-        <dependency org="org.codehaus.castor" name="castor" rev="[1.2,)" conf="default-&gt;core"/>
+        <dependency org="org.codehaus.castor" name="castor" rev="1.2+" conf="default-&gt;core"/>
     </dependencies>
 
 </ivy-module>
