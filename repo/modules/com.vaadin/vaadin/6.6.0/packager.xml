@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2011 Mark Thomas
+    Copyright 2010 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,14 +17,11 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <property name="name" value="iReport"/>
+    <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://sourceforge.net/projects/ireport/files/${name}/${name}-${revision}/${name}-${revision}.tar.gz" sha1="1139baf1ae3d4b025775c72ec9cf1397f396a5ff"/>
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/ireport/modules/ext/${ivy.packager.module}-${revision}.jar" tofile="artifacts/jars/${ivy.packager.module}.jar"/>
-    </build>
+    <resource url="http://vaadin.com/download/release/6.6/${revision}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="3aafae5705342ec9a93e46d35275e187fbc2c2ed"/>
+    <resource url="http://vaadin.com/download/release/6.6/${revision}/other/${archive}-sources.jar" tofile="artifacts/sources/source.zip" sha1="267a252625f22ff12aeb7d0d19194f7310a6aee3"/>
+    <resource url="http://vaadin.com/download/release/6.6/${revision}/other/${archive}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip" sha1="420d87ec40712a0f64315ff1170dd645141a77a9"/>
 </packager-module>
