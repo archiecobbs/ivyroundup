@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.codehaus.jackson" module="jackson" revision="1.7.7" status="release" publication="20110517120000">
+        <license name="Apache License, Version 2.0 OR LGPL" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1629 2011-05-18 18:17:46Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.jackson/jackson/1.7.7/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://jackson.codehaus.org/">
+            <p>
+                Jackson is a:
+                <ul>
+                    <li>Streaming (reading, writing)</li>
+                    <li>FAST (measured to be faster than any other Java json parser and data binder)</li>
+                    <li>Powerful (full data binding for common JDK classes as well as any Java bean class, Collection, Map or Enum)</li>
+                    <li>Zero-dependency (does not rely on other packages beyond JDK)</li>
+                    <li>Open Source (LGPL or AL)</li>
+                    <li>Fully conformant</li>
+                </ul>
+                JSON processor (JSON parser + JSON generator) written in Java. Beyond basic JSON
+                reading/writing (parsing, generating), it also offers full node-based Tree Model,
+                as well as full OJM (Object/Json Mapper) data binding functionality.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core API"/>
+        <conf name="mapper" extends="core" description="Contains functionality for data binding"/>
+        <conf name="default" extends="core" description="Default config (equivalent to core conf)"/>
+        <conf name="jaxrs" extends="mapper" description="Contains class(es) needed to make a JAX-RS implementation use Jackson for simple, convenient and lightning fast binding of JSON to/from Java objects"/>
+        <conf name="mrbean" extends="mapper" description="Contains functionality for Materialized Beans -- ability to let Jackson create implementation classes (not just instances!) for interfaces and abstract classes. Depends on mappper and core modules"/>
+        <conf name="smile" extends="core" description="Contains support for JSON-compatible binary format called 'Smile'. It depends on core module."/>
+        <conf name="xc" extends="mapper" description="Contains classes needed to add XML compatibility support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="jackson-core" conf="core"/>
+        <artifact name="jackson-jaxrs" conf="jaxrs"/>
+        <artifact name="jackson-mapper" conf="mapper"/>
+        <artifact name="jackson-mrbean" conf="mrbean"/>
+        <artifact name="jackson-smile" conf="smile"/>
+        <artifact name="jackson-xc" conf="xc"/>
+
+        <!-- source -->
+        <artifact name="jackson-core" type="source" ext="zip" conf="core"/>
+        <artifact name="jackson-jaxrs" type="source" ext="zip" conf="jaxrs"/>
+        <artifact name="jackson-mapper" type="source" ext="zip" conf="mapper"/>
+        <artifact name="jackson-mrbean" type="source" ext="zip" conf="mrbean"/>
+        <artifact name="jackson-smile" type="source" ext="zip" conf="smile"/>
+        <artifact name="jackson-xc" type="source" ext="zip" conf="xc"/>
+    </publications>
+
+</ivy-module>
