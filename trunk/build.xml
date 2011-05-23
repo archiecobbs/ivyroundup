@@ -124,11 +124,6 @@
                 <include name="xsd/packager-1.0.xsd"/>
                 <include name="xsd/ivy.xsd"/>
             </fileset>
-            <fileset dir="src">
-                <include name="modules/**/*"/>
-                <exclude name="ivy.xml"/>
-                <exclude name="packager.xml"/>
-            </fileset>
         </copy>
 
         <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
