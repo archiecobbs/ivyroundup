@@ -126,6 +126,15 @@
             </fileset>
         </copy>
 
+        <!-- Copy directory structure -->
+        <copy todir="${target.repo}">
+            <fileset dir="src">
+                <include name="modules/**/*"/>
+                <exclude name="**/ivy.xml"/>
+                <exclude name="**/packager.xml"/>
+            </fileset>
+        </copy>
+
         <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
         <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
