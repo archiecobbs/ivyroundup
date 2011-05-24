@@ -19,23 +19,17 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="net.sourceforge.jline" module="jline" revision="0.9.94" status="release" publication="20080222120000">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1640 2011-05-24 17:11:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.jline/jline/0.9.94/"/>
+    <info organisation="org.sonatype.jline" module="jline" revision="2.5" status="release" publication="20101112102024">
+        <license name="The BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
+        <ivyauthor name="$Id: ivy.xml 1640 2011-05-24 17:11:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.sonatype.jline/jline/2.5/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://jline.sourceforge.net/">
+        <description homepage="https://github.com/jline/jline2">
 
-        <p>
             JLine is a Java library for handling console input. It is similar
             in functionality to BSD editline and GNU readline. People familiar
             with the readline/editline capabilities for modern shells (such
             as bash and tcsh) will find most of the command editing features
             of JLine to be familiar.
-        </p>
-
-        <p>
-            <b>Note:</b> Newer versions of this module have been moved to organization <b>org.sonatype.jline</b>
-        </p>
 
         </description>
     </info>
@@ -43,6 +37,7 @@
     <publications>
         <artifact/>
         <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
