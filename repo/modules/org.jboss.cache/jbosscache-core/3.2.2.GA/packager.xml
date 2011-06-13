@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="3.2.2.GA"/>
     <property name="archive" value="${name}-${revision}"/>
-    <property name="repo" value="http://repository.jboss.org/maven2"/>
+    <property name="repo" value="http://repository.jboss.org/nexus/content/groups/public"/>
     
     <resource url="${repo}/org/jboss/cache/${name}/${revision}/${archive}-doc.zip" sha1="67bce05b3ab3d0b257d32d182f7564da84c3a1c9">
         <include name="${archive}/doc/apidocs/**/*"/>
