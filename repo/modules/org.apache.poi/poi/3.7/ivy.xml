@@ -21,7 +21,7 @@
 
     <info organisation="org.apache.poi" module="poi" revision="3.7" status="release" publication="20101029085200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1420 2010-12-22 16:20:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.7/"/>
+        <ivyauthor name="$Id: ivy.xml 1651 2011-06-25 19:04:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.7/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://poi.apache.org/">
 
@@ -112,6 +112,7 @@
 
     <dependencies>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.1.+" conf="default-&gt;default"/>
+        <dependency org="org.apache.xmlbeans" name="xmlbeans" rev="[2.3,3.0[" conf="ooxml-schemas-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="[1.2.13,1.3[" conf="default-&gt;default"/>
         <dependency org="org.dom4j" name="dom4j" rev="1.6+" conf="ooxml-&gt;default"/>
     </dependencies>
