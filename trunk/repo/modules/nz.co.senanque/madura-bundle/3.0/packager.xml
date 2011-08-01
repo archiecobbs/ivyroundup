@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Oliver Mannion
+    Copyright 2010 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,15 +21,30 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://fastutil.dsi.unimi.it/${archive}-bin.tar.gz" sha1="62ad70774887295aef13118f80e76b6fc93364e3"/>
+    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.zip" sha1="b298f95e9ab16dc610244d3f6ed7dab9372f53b7"/>
 
     <build>
+
         <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- javadoc -->
+        <mkdir dir="javadoc"/>
+        <unzip src="archive/${name}-javadocs-${revision}.zip" dest="javadoc"/>
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs"/>
+            <fileset dir="javadoc"/>
         </zip>
+
+        <!-- source -->
+        <mkdir dir="source"/>
+        <unzip src="archive/${name}-source-${revision}.zip" dest="source"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="source/src"/>
+            <fileset dir="source/docs"/>
+            <fileset dir="source/test"/>
+        </zip>
+        <mkdir dir="artifacts/docs"/>
+        <move file="archive/MaduraBundle.pdf" tofile="artifacts/docs/MaduraBundle.pdf"/>
     </build>
+
 </packager-module>
