@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2011 Razorcat Development GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.eclipse" module="eclipselink" revision="2.3.0" status="release" publication="20110615183900">
+        <license name="Eclipse Public License v1.0" url="http://www.eclipse.org/legal/epl-v10.html"/><license name="Eclipse Distribution License v1.0" url="http://www.eclipse.org/org/documents/edl-v10.php"/>
+        <ivyauthor name="$Id: ivy.xml 1685 2011-09-09 12:14:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/eclipselink/2.3.0/"/>
+        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://www.eclipse.org/eclipselink/index.php">
+        The EclipseLink project delivers a comprehensive open-source Java persistence solution
+        addressing relational, XML, and database web services.
+         </description>
+    </info>
+   <configurations>
+   <conf name="default" description="Full functionality - non OSGI"/>
+   <!-- j2se resembles jdk13 from other modules -->
+   <conf name="j2se" extends="default" description="For use outside of a Java EE container"/>
+
+   </configurations>
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="j2se-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
