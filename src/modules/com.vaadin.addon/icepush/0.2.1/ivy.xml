@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20110219202600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://vaadin.com/directory#addon/icepush">
+        <p>
+            A component that adds push support to Vaadin!
+        </p>
+        <p>
+            Add the component to your application and call push() in a background server thread to update the application. 
+        </p>
+        <p>
+            Note that you must use org.vaadin.artur.icepush.ICEPushServlet instead of com.vaadin.terminal.gwt.server.ApplicationServlet. 
+        </p>
+        <p>
+            Based on ICEPush 2.0.0 alpha 3. Make sure that you add icepush.jar and icepush-gwt.jar to your WEB-INF/lib.
+        </p>
+        <p>
+            To use in a portlet you can use the same servlet to provide push capabilities. You need to add a web.xml that contians the following (headers, footers omitted):
+        </p>
+        <p>
+            <code>
+                <servlet>
+                    <servlet-name>ICEPush for Portlets</servlet-name>
+                    <servlet-class>org.vaadin.artur.icepush.ICEPushServlet</servlet-class>
+                    <load-on-startup>1</load-on-startup>
+                </servlet>
+                <servlet-mapping>
+                    <servlet-name>ICEPush for Portlets</servlet-name>
+                    <url-pattern>/*</url-pattern>
+                </servlet-mapping>
+            </code>
+        </p>
+        <p>
+            Please note that the add-on uses Servlet API 2.5 so you need a servlet container that supports that version (e.g. Tomcat 6.0 or newer)
+        </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="icepush-gwt"/>
+        <artifact name="icepush-gwt"/>
+    </publications>
+
+</ivy-module>
