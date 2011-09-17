@@ -21,7 +21,7 @@
 
     <info organisation="org.jmock" module="jmock" revision="2.5.1" status="release" publication="20080826120000">
         <license name="BSD Style" url="http://jmock.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1698 2011-09-17 19:34:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jmock/jmock/2.5.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1701 2011-09-17 20:02:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jmock/jmock/2.5.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jmock.org/">
 
@@ -50,7 +50,7 @@
         <conf name="legacy" description="Legacy classes"/>
         <conf name="junit3" description="Support for JUnit 3"/>
         <conf name="junit4" description="Support for JUnit 4"/>
-        <conf name="default" extends="core" description="All classes"/>
+        <conf name="default" extends="core" description="Same as core configuration"/>
     </configurations>
 
     <publications>
@@ -68,8 +68,8 @@
         <dependency org="org.beanshell" name="bsh" rev="2.0b4" conf="script-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="3+" conf="junit3-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="4+" conf="junit4-&gt;default"/>
-        <dependency org="org.hamcrest" name="hamcrest" rev="1.1" conf="default-&gt;default"/>
-        <dependency org="org.objenesis" name="objenesis" rev="1.0" conf="default-&gt;default"/>
+        <dependency org="org.hamcrest" name="hamcrest" rev="1.1" conf="core-&gt;default"/>
+        <dependency org="org.objenesis" name="objenesis" rev="1.0" conf="core-&gt;default"/>
     </dependencies>
 
 </ivy-module>
