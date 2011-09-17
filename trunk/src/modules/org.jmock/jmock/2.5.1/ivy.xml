@@ -65,8 +65,8 @@
         <dependency org="org.beanshell" name="bsh" rev="2.0b4" conf="script-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="3+" conf="junit3-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="4+" conf="junit4-&gt;default"/>
-        <dependency org="org.hamcrest" name="hamcrest" rev="1.1" conf="default-&gt;default"/>
-        <dependency org="org.objenesis" name="objenesis" rev="1.0" conf="default-&gt;default"/>
+        <dependency org="org.hamcrest" name="hamcrest" rev="1.1" conf="core-&gt;default"/>
+        <dependency org="org.objenesis" name="objenesis" rev="1.0" conf="core-&gt;default"/>
     </dependencies>
 
 </ivy-module>
