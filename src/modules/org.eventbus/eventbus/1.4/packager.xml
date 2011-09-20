@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="org.bushe">
+        <artifact tofile="artifacts/jars/eventbus.jar" sha1="e30d4442e9628fb2ddc1e544d801505f83bf77b2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="cee97288b92ff451723c476ddbc6921c1784f893"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8330b4c152a93db67421e3d87447d965fad832a7"/>
+    </m2resource>
+</packager-module>
