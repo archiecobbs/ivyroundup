@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2010 Philip Johnson
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,18 +18,29 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
-    <info organisation="org.jacoco" module="jacoco" revision="0.5.3.201107060350" status="release" publication="20110706035000">
-        <license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-        <ivyauthor name="$Id: ivy.xml 1708 2011-09-18 22:00:20Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jacoco/jacoco/0.5.3.201107060350/"/>
+
+    <info organisation="org.eventbus" module="eventbus" revision="1.4" status="release" publication="20100213120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor name="$Id: ivy.xml 1714 2011-09-20 18:12:04Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eventbus/eventbus/1.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://www.eclemma.org/jacoco/trunk/index.html">
-JaCoCo is a free, instrumentation-based code coverage tool for Java VM based environments. Jacoco is designed to provide a lightweight, flexible and well-documented library for integration with various build and development tools. 
+        <description homepage="http://eventbus.org/">
+
+            <p>
+            The EventBus is a simple but powerful publish/subscribe
+            API with annotations that allows POJOs to communicate with
+            each other anywhere in a JVM without having to refer to each
+            other. EventBus subscriptions are based on class semantics
+            and/or string (topic) matching. The EventBus is fit for
+            general purpose usage and has extensions for UI development.
+            </p>
+
         </description>
     </info>
 
     <publications>
-      <artifact name="jacocoant" ext="jar"/>
-      <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

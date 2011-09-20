@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Philip Johnson
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,23 +16,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/eclemma/${name}-${revision}.zip" sha1="466238abb107b90cd1fd0217b94962c765dd9747"/>
-
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/jacocoant.jar" tofile="artifacts/jars/jacocoant.jar"/>
-
-        <!-- source not yet available in distributions -->
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
-        </zip>
-    </build>
+    <m2resource groupId="org.bushe">
+        <artifact tofile="artifacts/jars/eventbus.jar" sha1="e30d4442e9628fb2ddc1e544d801505f83bf77b2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="cee97288b92ff451723c476ddbc6921c1784f893"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8330b4c152a93db67421e3d87447d965fad832a7"/>
+    </m2resource>
 </packager-module>
