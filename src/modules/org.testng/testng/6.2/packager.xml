@@ -35,14 +35,14 @@
         <move file="archive/${zipname}/${zipname}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
+        <zip destfile="artifacts/sources/${name}.zip">
             <fileset dir="archive/${zipname}/src/main/java">
                 <include name="**/*.java"/>
             </fileset>
         </zip>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
+        <zip destfile="artifacts/javadocs/${name}.zip">
             <fileset dir="archive/${zipname}/javadocs"/>
         </zip>
     </build>

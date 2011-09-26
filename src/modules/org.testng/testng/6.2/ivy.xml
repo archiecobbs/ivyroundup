@@ -31,8 +31,14 @@
 
     <publications>
         <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="com.beust" name="jcommander" rev="1.+" conf="default->default"/>
+        <dependency org="org.yaml" name="snakeyaml" rev="1.+" conf="default->default"/>
+        <dependency org="org.beanshell" name="bsh" rev="2.+" conf="default->default"/>
+    </dependencies>
 
 </ivy-module>
