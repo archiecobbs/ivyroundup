@@ -34,7 +34,9 @@
 
     <dependencies>
         <dependency org="org.slf4j" name="slf4j" rev="[1.6,)" conf="default->default"/>
-        <dependency org="org.atmosphere" name="atmosphere" rev="[0.7.2,)" conf="default->gwt"/>
+        <dependency org="org.atmosphere" name="atmosphere" rev="[0.7.2,)" conf="default->gwt">
+            <exclude name="atmosphere-ping.*"/>
+        </dependency>
     </dependencies>
 
 </ivy-module>
