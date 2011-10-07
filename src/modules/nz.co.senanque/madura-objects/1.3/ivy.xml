@@ -47,8 +47,8 @@
     </publications>
 
     <dependencies>
-		<dependency org="nz.co.senanque" name="maduraconfiguration" rev="3.1" conf="default->default"/>
-		<dependency org="org.jvnet.jaxb2_commons" name="jaxb2-basics-ant" rev="0.5.2" conf="generate->default"/>
+                <dependency org="nz.co.senanque" name="maduraconfiguration" rev="3.1" conf="default->default"/>
+                <dependency org="org.jvnet.jaxb2_commons" name="jaxb2-basics-ant" rev="0.5.2" conf="generate->default"/>
         <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-plugin" rev="0.5.4" conf="generate->default">
             <exclude module="hyperjaxb3-ejb-roundtrip"/><!-- not needed outside of hyperjaxb3 testing -->
             <exclude org="org.springframework" module="spring"/>
@@ -56,16 +56,16 @@
             <exclude org="org.apache.commons" module="commons-lang"/>
             <exclude org="org.apache.commons" module="commons-beanutils"/>
             <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
-			<exclude org="javax.persistence" module="persistence-api"/>
-		</dependency>
-		<dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="generate,default->default"/>
+                        <exclude org="javax.persistence" module="persistence-api"/>
+                </dependency>
+                <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="generate,default->default"/>
         <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="generate->default"/>
-		<dependency org="org.hibernate" name="hibernate" rev="3.5.6-Final" conf="default->default">
-			<exclude org="net.sourceforge.ehcache" module="ehcache"/>
-		</dependency>
-		<dependency org="net.sourceforge.ehcache" name="ehcache" rev="2.3.0" conf="default->default">
-			<exclude org="org.slf4j" module="slf4j"/>
-		</dependency>
+                <dependency org="org.hibernate" name="hibernate" rev="3.5.6-Final" conf="default->default">
+                        <exclude org="net.sourceforge.ehcache" module="ehcache"/>
+                </dependency>
+                <dependency org="net.sourceforge.ehcache" name="ehcache" rev="2.3.0" conf="default->default">
+                        <exclude org="org.slf4j" module="slf4j"/>
+                </dependency>
         <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-runtime" rev="0.5.4" conf="default->default">
             <exclude module="hyperjaxb3-ejb-roundtrip"/><!-- not needed outside of hyperjaxb3 testing -->
             <exclude org="org.springframework" module="spring"/>
@@ -73,7 +73,7 @@
             <exclude org="org.apache.commons" module="commons-lang"/>
             <exclude org="org.apache.commons" module="commons-beanutils"/>
             <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
-			<exclude org="javax.persistence" module="persistence-api"/>
+                        <exclude org="javax.persistence" module="persistence-api"/>
         </dependency>
         <dependency org="org.springframework" name="spring" rev="3.0.0" conf="default->orm,oxm,test,context-support,tx,jdbc">
             <exclude org="javax.jms" module="jms"/>
