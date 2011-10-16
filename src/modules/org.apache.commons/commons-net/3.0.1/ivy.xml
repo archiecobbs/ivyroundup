@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Stephen Woods
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20110602120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0" />
+        <description homepage="http://commons.apache.org/net/">
+            <p>
+                Jakarta Commons Net implements the client side of many basic Internet protocols. The purpose of the library is to
+                provide fundamental protocol access, not higher-level abstractions. Therefore, some of the design violates
+                object-oriented design principles. Our philosophy is to make the global functionality of a protocol accessible (e.g.,
+                TFTP send file and receive file) when possible, but also provide access to the fundamental protocols where applicable
+                so that the programmer may construct his own custom implementations (e.g, the TFTP packet classes and the TFTP packet
+                send and receive methods are exposed).
+            </p>
+            <p>
+                Supported protocols are:
+                <ul>
+                    <li>FTP/FTPS</li>
+                    <li>NNTP</li>
+                    <li>SMTP</li>
+                    <li>POP3</li>
+                    <li>Telnet</li>
+                    <li>TFTP</li>
+                    <li>Finger</li>
+                    <li>Whois</li>
+                    <li>rexec/rcmd/rlogin</li>
+                    <li>Time (rdate) and Daytime</li>
+                    <li>Echo</li>
+                    <li>Discard</li>
+                    <li>NTP/SNTP</li>
+                </ul>
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Main commons-net classes"/>
+        <conf name="ftp" description="The FTP client classes"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="commons-net-ftp" conf="ftp"/>
+        <artifact name="source" type="source" ext="zip" />
+        <artifact name="javadoc" type="javadoc" ext="zip" />
+    </publications>
+</ivy-module>
