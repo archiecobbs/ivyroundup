@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="mojarra-${revision}-FCS"/>
+
+    <resource url="http://java.net/projects/javaserverfaces/downloads/download/release/${archive}-binary.zip" sha1="d20c93bc9bd190d44e85dcd19d64b6c87d9ce5a2">
+        <include name="${archive}/lib/${name}-api.jar"/>
+        <include name="${archive}/lib/${name}-impl.jar"/>
+        <include name="${archive}/docs/${archive}-documentation.zip"/>
+    </resource>
+    <resource url="http://java.net/projects/javaserverfaces/downloads/download/release/${archive}-source.zip" sha1="2faf0e2f273cce62a7701d2022e074ac434bedc4"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/lib/${name}-api.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/${name}-impl.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}-source/lib/injectionproviders.jar" todir="artifacts/jars/"/>
+
+        <!-- javadoc -->
+        <move file="archive/${archive}/docs/${archive}-documentation.zip" tofile="artifacts/javadocs/${name}.zip"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}-api.zip">
+            <fileset dir="archive/${archive}-source/jsf-api/src/main/java"/>
+        </zip>
+        <zip destfile="artifacts/sources/${name}-impl.zip">
+            <fileset dir="archive/${archive}-source/jsf-tools/src/main/java"/>
+            <fileset dir="archive/${archive}-source/jsf-ri/src/main/java"/>
+        </zip>
+        <zip destfile="artifacts/sources/injectionproviders.zip">
+            <fileset dir="archive/${archive}-source/injectionprovider/src/java"/>
+        </zip>
+
+    </build>
+</packager-module>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Mark Thomas
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,12 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="009b600a91502363c55ec58c43588fb49954867e"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="4d14f3a695d9c2db276f29cc5aeec8cbcee4ced5"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="b46e5b023d6efa0e73182a193aad878f235b350f"/>
-    </m2resource>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}.jar" url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="05c725ffbb3e0d4f2a0d185a169ce6e16c35188c"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="3bb4ee82d97e1f3de456b17f589a0cb0a839fc6c"/>
+    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="43f7d1beab3338da41de400a4aa9648f7b299fad"/>
+
 </packager-module>
