@@ -21,12 +21,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="mojarra-${revision}-FCS"/>
 
-    <resource url="https://javaserverfaces.dev.java.net/files/documents/1866/151249/${archive}-binary.zip" sha1="235920ab6dda82b61460efc56af75d16aeafae7d">
+    <resource url="http://java.net/downloads/javaserverfaces/release/${revision}/${archive}-binary.zip" sha1="235920ab6dda82b61460efc56af75d16aeafae7d">
         <include name="${archive}/lib/${name}-api.jar"/>
         <include name="${archive}/lib/${name}-impl.jar"/>
         <include name="${archive}/docs/javadocs-${revision}-SNAPSHOT.zip"/>
     </resource>
-    <resource url="https://javaserverfaces.dev.java.net/files/documents/1866/151250/${archive}-source.zip" sha1="2dedeb73e1ef237a254483eae3bb296faefacf27"/>
+    <resource url="http://java.net/downloads/javaserverfaces/release/${revision}/${archive}-source.zip" sha1="2dedeb73e1ef237a254483eae3bb296faefacf27"/>
 
     <build>
         <!-- jar -->
