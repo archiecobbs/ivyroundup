@@ -21,98 +21,99 @@
 
     <info organisation="org.unitils" module="unitils" revision="2.4" status="release" publication="20090723002100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1183 2010-04-19 18:52:45Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/2.4/"/>
+        <ivyauthor name="$Id: ivy.xml 1774 2011-10-26 15:45:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/2.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.unitils.org/">
-        &lt;p&gt;Unitils is an open source library aimed at making unit testing easy
+        <p>Unitils is an open source library aimed at making unit testing easy
         and maintainable. Unitils builds further on existing libraries like
-        dbunit and integrates with JUnit and TestNG.&lt;/p&gt;
+        dbunit and integrates with JUnit and TestNG.</p>
         
-        &lt;p&gt;Unitils provides general asserion utilities, support for database
+        <p>Unitils provides general asserion utilities, support for database
         testing, support for testing with mock objects and offers integration
         with Spring, Hibernate and the Java Persistence API (JPA). It has been
         designed to offer these services to unit tests in a very configurable
         and loosely coupled way. As a result, services can be added and
-        extended very easily.&lt;/p&gt;
+        extended very easily.</p>
 
-        &lt;p&gt;Unitils offers following features:
-            &lt;ul&gt;
-                &lt;li&gt;General testing utilities
-                    &lt;ul&gt;
-                        &lt;li&gt;Equality assertion through reflection, with different
+        <p>Unitils offers following features:
+            <ul>
+                <li>General testing utilities
+                    <ul>
+                        <li>Equality assertion through reflection, with different
                             options like ignoring Java core/null values and
                             ignoring order of collections
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li&gt;Mock objects support
-                    &lt;ul&gt;
-                        &lt;li&gt;Dynamically define stub behavior of and verify
+                        </li>
+                    </ul>
+                </li>
+                <li>Mock objects support
+                    <ul>
+                        <li>Dynamically define stub behavior of and verify
                             invocations on mock object using a simple syntax
-                        &lt;/li&gt;
-                        &lt;li&gt;Optimal feedback including a simple and extended
+                        </li>
+                        <li>Optimal feedback including a simple and extended
                             execution scenario report and suggested assert
                             statements
-                        &lt;/li&gt;
-                        &lt;li&gt;Use argument matchers for relaxing method parameter
+                        </li>
+                        <li>Use argument matchers for relaxing method parameter
                             constraints and mix them with concrete objects. Use
                             null when the actual argument value is not important
-                        &lt;/li&gt;
-                        &lt;li&gt;Use dummy objects when stub data objects without any
+                        </li>
+                        <li>Use dummy objects when stub data objects without any
                             required behavior are needed
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li&gt;Persistence layer testing support
-                    &lt;ul&gt;
-                        &lt;li&gt;Automatic maintenance of databases, with support for
+                        </li>
+                    </ul>
+                </li>
+                <li>Persistence layer testing support
+                    <ul>
+                        <li>Automatic maintenance of databases, with support for
                             incremental, repeatable and post processing scripts
-                        &lt;/li&gt;
-                        &lt;li&gt;Automatically disable constraints and set sequences to
+                        </li>
+                        <li>Automatically disable constraints and set sequences to
                             a minimum value
-                            &lt;ul&gt;
-                                &lt;li&gt;Support for Oracle, Hsqldb, MySql, DB2,
+                            <ul>
+                                <li>Support for Oracle, Hsqldb, MySql, DB2,
                                     Postgresql, MsSql and Derby
-                                &lt;/li&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;Simplify test database connection setup&lt;/li&gt;
-                        &lt;li&gt;Simple insertion of test data with DBUnit
-                            &lt;ul&gt;
-                                &lt;li&gt;Run tests in a transaction&lt;/li&gt;
-                                &lt;li&gt;JPA entity manager creation and injection for
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Simplify test database connection setup</li>
+                        <li>Simple insertion of test data with DBUnit
+                            <ul>
+                                <li>Run tests in a transaction</li>
+                                <li>JPA entity manager creation and injection for
                                     hibernate, toplink and openjpa.
-                                &lt;/li&gt;
-                            &lt;/ul&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;Hibernate SessionFactory creation and session
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Hibernate SessionFactory creation and session
                             management
-                        &lt;/li&gt;
-                        &lt;li&gt;Automatically test the mapping of JPA entities /
+                        </li>
+                        <li>Automatically test the mapping of JPA entities /
                             hibernate mapped objects with the database
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li&gt;EasyMock integration support
-                    &lt;ul&gt;
-                        &lt;li&gt;Simplify EasyMock mock object creation&lt;/li&gt;
-                        &lt;li&gt;Simplify mock object injection&lt;/li&gt;
-                        &lt;li&gt;EasyMock argument matching using reflection
+                        </li>
+                    </ul>
+                </li>
+                <li>EasyMock integration support
+                    <ul>
+                        <li>Simplify EasyMock mock object creation</li>
+                        <li>Simplify mock object injection</li>
+                        <li>EasyMock argument matching using reflection
                             equality
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li&gt;Spring integration
-                    &lt;ul&gt;
-                        &lt;li&gt;ApplicationContext configuration and easy injection
+                        </li>
+                    </ul>
+                </li>
+                <li>Spring integration
+                    <ul>
+                        <li>ApplicationContext configuration and easy injection
                             of spring managed beans into a unit test
-                        &lt;/li&gt;
-                        &lt;li&gt;Support for using a Spring-configured Hibernate
+                        </li>
+                        <li>Support for using a Spring-configured Hibernate
                             SessionFactory in unit tests
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/p&gt;
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
         </description>
     </info>
 
