@@ -21,7 +21,7 @@
 
     <info organisation="org.atmosphere" module="atmosphere" revision="0.7.2" status="release" publication="20110610150000">
         <license name="CDDL+GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 1683 2011-09-08 16:46:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.7.2/"/>
+        <ivyauthor name="$Id: ivy.xml 1791 2011-11-03 14:13:14Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.7.2/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://atmosphere.dev.java.net/">
             <p>
@@ -54,7 +54,8 @@
         <conf name="jms" extends="annotations" description="JMS support"/>
         <conf name="spade" extends="runtime" description="Spade server"/>
         <conf name="xmpp" extends="jersey" description="XMPP support"/>
-        <conf name="gwt" extends="runtime" description="GWT support"/>
+        <conf name="gwt" extends="runtime" description="GWT server-side support"/>
+        <conf name="gwt-client" extends="runtime" description="GWT client-side support"/>
         <conf name="redis" extends="jersey" description="REDIS support"/>
     </configurations>
 
@@ -72,8 +73,8 @@
         <artifact name="atmosphere-runtime" conf="runtime"/>
         <artifact name="atmosphere-spade-server" conf="spade"/>
         <artifact name="atmosphere-di-guice" conf="guice"/>
-        <artifact name="atmosphere-gwt-client" conf="gwt"/>
-        <artifact name="atmosphere-gwt-common" conf="gwt"/>
+        <artifact name="atmosphere-gwt-client" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" conf="gwt, gwt-client"/>
         <artifact name="atmosphere-gwt-poll" conf="gwt"/>
         <artifact name="atmosphere-gwt-server" conf="gwt"/>
         <artifact name="atmosphere-ping" conf="runtime"/>
@@ -93,9 +94,9 @@
         <artifact name="atmosphere-runtime" type="source" ext="zip" conf="runtime"/>
         <artifact name="atmosphere-spade-server" type="source" ext="zip" conf="spade"/>
         <artifact name="atmosphere-di-guice" type="source" ext="zip" conf="guice"/>
-        <artifact name="atmosphere-gwt-client" type="source" ext="zip" conf="gwt"/>
-        <artifact name="atmosphere-gwt-common" type="source" ext="zip" conf="gwt"/>
-        <artifact name="atmosphere-gwt-js" type="source" ext="zip" conf="gwt"/>
+        <artifact name="atmosphere-gwt-client" type="source" ext="zip" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" type="source" ext="zip" conf="gwt, gwt-client"/>
+        <artifact name="atmosphere-gwt-js" type="source" ext="zip" conf="gwt-client"/>
         <artifact name="atmosphere-gwt-poll" type="source" ext="zip" conf="gwt"/>
         <artifact name="atmosphere-gwt-server" type="source" ext="zip" conf="gwt"/>
         <artifact name="atmosphere-ping" type="source" ext="zip" conf="runtime"/>
@@ -113,9 +114,9 @@
         <artifact name="atmosphere-runtime" type="javadoc" ext="zip" conf="runtime"/>
         <artifact name="atmosphere-spade-server" type="javadoc" ext="zip" conf="spade"/>
         <artifact name="atmosphere-di-guice" type="javadoc" ext="zip" conf="guice"/>
-        <artifact name="atmosphere-gwt-client" type="javadoc" ext="zip" conf="gwt"/>
-        <artifact name="atmosphere-gwt-common" type="javadoc" ext="zip" conf="gwt"/>
-        <artifact name="atmosphere-gwt-js" type="javadoc" ext="zip" conf="gwt"/>
+        <artifact name="atmosphere-gwt-client" type="javadoc" ext="zip" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" type="javadoc" ext="zip" conf="gwt, gwt-client"/>
+        <artifact name="atmosphere-gwt-js" type="javadoc" ext="zip" conf="gwt-client"/>
         <artifact name="atmosphere-gwt-poll" type="javadoc" ext="zip" conf="gwt"/>
         <artifact name="atmosphere-gwt-server" type="javadoc" ext="zip" conf="gwt"/>
         <artifact name="atmosphere-ping" type="javadoc" ext="zip" conf="runtime"/>
@@ -127,7 +128,7 @@
         <dependency org="org.cometd.java" name="cometd" rev="1.+" conf="bayeux-&gt;server"/>
         <dependency org="com.sun.jersey" name="jersey" rev="1.+" conf="jersey-&gt;server;guice-&gt;guice"/>
         <dependency org="com.google" name="guice" rev="2.0" conf="guice-&gt;servlet"/>
-        <dependency org="com.google" name="gwt" rev="2.+" conf="gwt-&gt;compile,runtime"/>
+        <dependency org="com.google" name="gwt" rev="2.+" conf="gwt-&gt;runtime;gwt-client-&gt;compile"/>
         <dependency org="org.jgroups" name="jgroups" rev="2.7.0" conf="jgroups-&gt;default"/>
         <dependency org="javax.jms" name="jms" rev="1.1" conf="jms-&gt;default"/>
         <dependency org="redis.clients" name="jedis" rev="1.5.+" conf="redis-&gt;default"/>
