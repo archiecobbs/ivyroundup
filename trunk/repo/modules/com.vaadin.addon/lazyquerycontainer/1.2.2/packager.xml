@@ -16,11 +16,8 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="vaadin-${name}-${revision}"/>
-
-    <resource url="file:///${java.io.tmpdir}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="daa2563736e3bf728ea47cf6b1321dfaa70c7af8"/>
-
+    <m2resource repo="http://maven.vaadin.com/vaadin-addons" groupId="org/vaadin/addons/${name}" artifactId="vaadin-${name}">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="daa2563736e3bf728ea47cf6b1321dfaa70c7af8"/>
+    </m2resource>
 </packager-module>
