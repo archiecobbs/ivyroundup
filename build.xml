@@ -101,6 +101,7 @@
     <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
 
     <target name="gen-repo" depends="_init-xalan, modules" description="Regenerate the repository">
+        <property name="svn-cmd" value="svn" />
 
         <!-- Wipe repository clean -->
         <delete>
