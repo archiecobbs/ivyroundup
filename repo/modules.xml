@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2011-11-22 14:53:43 UTC</timestamp>
-  <svnRevision>1803</svnRevision>
+  <timestamp>2011-11-26 00:10:06 UTC</timestamp>
+  <svnRevision>1806</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -255,6 +255,11 @@
   <org name="com.sun.jersey">
     <mod name="jersey">
       <rev name="1.4"/>
+    </mod>
+  </org>
+  <org name="com.sun.xml.fastinfoset">
+    <mod name="FastInfoset">
+      <rev name="1.2.9"/>
     </mod>
   </org>
   <org name="com.svcon">
@@ -1098,6 +1103,11 @@
       <rev name="1.5"/>
     </mod>
   </org>
+  <org name="org.apache.cxf">
+    <mod name="cxf-bundle">
+      <rev name="2.4.3"/>
+    </mod>
+  </org>
   <org name="org.apache.derby">
     <mod name="derby">
       <rev name="10.5.1.1"/>
@@ -1187,6 +1197,11 @@
       <rev name="2.4.1"/>
     </mod>
   </org>
+  <org name="org.apache.neethi">
+    <mod name="neethi">
+      <rev name="3.0.1"/>
+    </mod>
+  </org>
   <org name="org.apache.oro">
     <mod name="oro">
       <rev name="2.0.8"/>
@@ -1220,6 +1235,11 @@
     <mod name="XmlSchema">
       <rev name="1.4.3"/>
       <rev name="2.0.1"/>
+    </mod>
+  </org>
+  <org name="org.apache.ws.security">
+    <mod name="wss4j">
+      <rev name="1.6.3"/>
     </mod>
   </org>
   <org name="org.apache.ws">
@@ -1347,6 +1367,14 @@
     <mod name="qdox">
       <rev name="1.11"/>
       <rev name="1.12"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.woodstox">
+    <mod name="stax2-api">
+      <rev name="3.1.1"/>
+    </mod>
+    <mod name="woodstox-core-asl">
+      <rev name="4.1.1"/>
     </mod>
   </org>
   <org name="org.codehaus.xstream">
@@ -1816,6 +1844,11 @@
       <rev name="0.5.2"/>
     </mod>
   </org>
+  <org name="org.jvnet.mimepull">
+    <mod name="mimepull">
+      <rev name="1.4"/>
+    </mod>
+  </org>
   <org name="org.jwebsocket">
     <mod name="jwebsocket">
       <rev name="0.10"/>
@@ -1879,6 +1912,17 @@
   <org name="org.openid4java">
     <mod name="openid4java">
       <rev name="0.9.4.339"/>
+    </mod>
+  </org>
+  <org name="org.opensaml">
+    <mod name="opensaml">
+      <rev name="2.5.1-1"/>
+    </mod>
+    <mod name="openws">
+      <rev name="1.4.2-1"/>
+    </mod>
+    <mod name="xmltooling">
+      <rev name="1.3.2-1"/>
     </mod>
   </org>
   <org name="org.openxri">

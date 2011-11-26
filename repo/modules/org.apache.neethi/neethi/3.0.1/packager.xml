@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Mark Thomas
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,23 +21,17 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="64ae8484579f2738ceb265dc72d07ed12163e19b"/>
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="56cca753ebebe468865e3b00c82e2f3365b2c95e"/>
+    <resource url="http://mirror.its.uidaho.edu/pub/apache//ws/${name}/${revision}/${archive}-bin.zip" sha1="ab3beaf89da5cb312c5cb2579784a56d01d90c02"/>
+    <resource url="http://mirror.its.uidaho.edu/pub/apache//ws/${name}/${revision}/${archive}-source-release.zip" sha1="7dc9edd3e33cdcb58fcb4f971b86229036374365"/>
 
     <build>
         <!-- jar -->
-        <move todir="artifacts/jars/">
-            <fileset dir="archive/${archive}" includes="*.jar"/>
-        </move>
+        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/" includes="org/**/*.java,javax/**/*.java"/>
+            <fileset dir="archive/${archive}/src/main/java"/>
         </zip>
 
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/javadoc"/>
-        </zip>
     </build>
 </packager-module>

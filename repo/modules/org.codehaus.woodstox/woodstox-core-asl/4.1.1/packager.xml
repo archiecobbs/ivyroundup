@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Mark Thomas
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,23 +21,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="64ae8484579f2738ceb265dc72d07ed12163e19b"/>
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="56cca753ebebe468865e3b00c82e2f3365b2c95e"/>
-
+    <resource tofile="archive/${archive}/${name}-${revision}.jar" url="http://repo1.maven.org/maven2/org/codehaus/woodstox/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="1fc79e0ddf0c72408ddbbc7e558f46a15d7ba84f">
+    </resource>
     <build>
         <!-- jar -->
-        <move todir="artifacts/jars/">
-            <fileset dir="archive/${archive}" includes="*.jar"/>
-        </move>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/" includes="org/**/*.java,javax/**/*.java"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/javadoc"/>
-        </zip>
+        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
     </build>
 </packager-module>
