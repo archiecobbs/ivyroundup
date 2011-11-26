@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009 Mark Thomas
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,23 +21,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="64ae8484579f2738ceb265dc72d07ed12163e19b"/>
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="56cca753ebebe468865e3b00c82e2f3365b2c95e"/>
-
-    <build>
-        <!-- jar -->
-        <move todir="artifacts/jars/">
-            <fileset dir="archive/${archive}" includes="*.jar"/>
-        </move>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/" includes="org/**/*.java,javax/**/*.java"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/javadoc"/>
-        </zip>
-    </build>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="0063bcc38c9f9cf5df3d059b9da14b64993be7d4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="ec29720ce84c8b0e7ef3ed7163af392f28f279f8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="285f22612381cc618e5af883fad39789d1268267"/>
+    </m2resource>
 </packager-module>
