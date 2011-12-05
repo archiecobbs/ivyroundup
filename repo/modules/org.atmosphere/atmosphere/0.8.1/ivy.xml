@@ -21,7 +21,7 @@
 
     <info organisation="org.atmosphere" module="atmosphere" revision="0.8.1" status="release" publication="20111125000000">
         <license name="CDDL+GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 1813 2011-12-03 22:45:02Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.8.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1815 2011-12-05 18:30:37Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.8.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://atmosphere.dev.java.net/">
             <p>
@@ -41,7 +41,7 @@
     </info>
 
     <configurations>
-        <conf name="runtime" extends="compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
+        <conf name="runtime" extends="compat-jetty,compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
         <conf name="default" extends="runtime" description="Default config"/>
         <conf name="jersey" extends="annotations" description="Jersey support"/>
         <conf name="annotations" extends="runtime" description="Annotations support"/>
