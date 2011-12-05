@@ -38,7 +38,7 @@
     </info>
 
     <configurations>
-        <conf name="runtime" extends="compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
+        <conf name="runtime" extends="compat-jetty,compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
         <conf name="default" extends="runtime" description="Default config"/>
         <conf name="jersey" extends="annotations" description="Jersey support"/>
         <conf name="annotations" extends="runtime" description="Annotations support"/>
