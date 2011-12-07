@@ -21,7 +21,7 @@
 
     <info organisation="org.dellroad" module="jvser" revision="1.0.41" status="release" publication="20110322120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1517 2011-03-22 17:30:45Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/jvser/1.0.41/"/>
+        <ivyauthor name="$Id: ivy.xml 1817 2011-12-07 15:43:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/jvser/1.0.41/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jvser.googlecode.com/">
 
@@ -58,7 +58,7 @@
 
     <dependencies>
         <dependency org="javax.comm" name="comm" rev="3.0.u1" conf="default-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-net" rev="2.0" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-net" rev="3.0.1" conf="default-&gt;default"/>
         <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,1.3)" conf="default-&gt;default"/>
     </dependencies>
 
