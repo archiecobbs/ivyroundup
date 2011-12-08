@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}-core.jar" url="http://${name}.googlecode.com/files/${name}-core-${revision}.jar" sha1="5341e4f561e2be6c4576f28e59db5bc37a76172f"/>
+    <resource tofile="artifacts/jars/${name}-pidf.jar" url="http://${name}.googlecode.com/files/${name}-pidf-${revision}.jar" sha1="fd4a3ea474a83f881eeb47039c0d438fd05716de"/>
+    <resource tofile="artifacts/jars/${name}-twilio.jar" url="http://${name}.googlecode.com/files/${name}-twilio-${revision}.jar" sha1="e1c09f6c6784910f11207f5699f405a7e6d8944d"/>
+
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="798504cb1850bea0ab2ee3f5dabde98da5e9d734"/>
+    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="3e2416ae6e356ff0f22ca09ce9b062838ff14923"/>
+
+</packager-module>
