@@ -21,7 +21,7 @@
 
     <info organisation="nz.co.senanque" module="madura-objects" revision="1.0" status="release" publication="20100424025334">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1198 2010-04-26 20:23:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/madura-objects/1.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/madura-objects/1.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/madura-objects/">
             <p>
@@ -101,8 +101,8 @@
         </dependency>
         <dependency org="org.hibernate" name="hibernate" rev="3.3.2.GA" conf="compile-&gt;default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="compile-&gt;default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile-&gt;jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile-&gt;default"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile-&gt;jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile-&gt;default"/>
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>
         <exclude org="javax.servlet" ext="jar"/>

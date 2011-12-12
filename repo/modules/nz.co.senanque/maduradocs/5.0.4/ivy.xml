@@ -21,7 +21,7 @@
 
     <info organisation="nz.co.senanque" module="maduradocs" revision="5.0.4" status="release" publication="20110621021041">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1649 2011-06-21 20:57:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduradocs/5.0.4/"/>
+        <ivyauthor name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduradocs/5.0.4/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/maduradocs/">
         Generates PDFs from MD XML files. Also converts Word to MD XML and renders MD XML to HTML.
@@ -39,7 +39,7 @@
         <artifact name="style" type="xml" ext="xsl" conf="default"/>
         <artifact name="note" type="xml" ext="png" conf="default"/>
         <artifact name="rant" type="xml" ext="gif" conf="default"/>
-        <artifact name="warning" type="xml" ext="gif" conf="default"/>        
+        <artifact name="warning" type="xml" ext="gif" conf="default"/>
         <artifact name="translate" type="jar" ext="jar" conf="default"/>
     </publications>
 

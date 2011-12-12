@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Roger Parkinson
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,34 +17,33 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <property name="name" value="${ivy.packager.module}"/>
+    <property name="download.name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.zip" sha1="ab6caee0cf2d394f2922a5e5a84f853d237d0f48"/>
+    <resource url="http://madura-objects.googlecode.com/files/${download.name}-${revision}.zip" sha1="2ef615e262b28597366b9cc761506c5267068c37"/>
 
     <build>
 
         <!-- jar -->
-        <move file="archive/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${download.name}-${revision}.jar" tofile="artifacts/jars/${download.name}.jar"/>
 
         <!-- javadoc -->
         <mkdir dir="javadoc"/>
-        <unzip src="archive/${name}-javadocs-${revision}.zip" dest="javadoc"/>
+        <unzip src="archive/${download.name}-javadocs-${revision}.zip" dest="javadoc"/>
         <zip destfile="artifacts/javadocs/javadoc.zip">
             <fileset dir="javadoc"/>
         </zip>
-
         <!-- source -->
         <mkdir dir="source"/>
-        <unzip src="archive/${name}-source-${revision}.zip" dest="source"/>
+        <unzip src="archive/${download.name}-source-${revision}.zip" dest="source"/>
         <zip destfile="artifacts/sources/source.zip">
             <fileset dir="source/src"/>
             <fileset dir="source/docs"/>
             <fileset dir="source/test"/>
         </zip>
         <mkdir dir="artifacts/docs"/>
-        <move file="archive/MaduraConfiguration.pdf" tofile="artifacts/docs/MaduraConfiguration.pdf"/>
+        <move file="archive/MaduraObjects.pdf" tofile="artifacts/docs/MaduraObjects.pdf"/>
 
     </build>
 </packager-module>
