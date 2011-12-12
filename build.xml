@@ -188,11 +188,11 @@
         </xslt>
         <exec executable="/bin/bash" logError="false" failonerror="false">
             <arg value="-c"/>
-            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot"/>
+            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot || true"/>
         </exec>
         <exec executable="/bin/bash" logError="false" failonerror="false">
             <arg value="-c"/>
-            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot"/>
+            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot || true"/>
         </exec>
     </target>
 
