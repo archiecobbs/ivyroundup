@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2010 Roger Parkinson
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,31 +19,33 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="nz.co.senanque" module="schema-builder" revision="1.1" status="release" publication="20110502084221">
+    <info organisation="nz.co.senanque" module="madura-objects" revision="1.7" status="release" publication="20111212023230">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/schema-builder/1.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/madura-objects/1.7/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://code.google.com/p/schema-builder/">
-            <p>
-            This extracts definitions from a database using JDBC and makes an XSD file with
-            HyperJAXB3 annotations.
-            </p>
+        <description homepage="http://code.google.com/p/madura-objects/">
+        <p>This is essentially a JAXB/XJC plugin that adds automatic validation to the generated Java classes.
+        You define business objects in an XSD file, pass it through XJC and the plugin will add the validation code.
+        It uses information in the XSD to pick up validation, and you can specify extensions to that in the XSD. The resulting
+        Java classes check for validity when the setter is called and they reject attempts to set invalid values (this is a
+        difference from other validation frameworks). The Java classes also expose a metadata interface to make it easy for
+        UIs to generate, say, lists of options for a select box.</p>
+        <p>The validation framework handles single field validation but you can inject a rule engine (or several) to handle cross field validation.</p>
+        <p>But to any Java code the objects still look like ordinary Java beans. The surrounding application is unaware that they are anything
+        different until they throw an exception. This makes it easy to use with frameworks that expect Java beans, and most of them do.</p>
         </description>
     </info>
-
     <configurations>
-        <conf name="default"/>
         <conf name="generate"/>
+        <conf name="default"/>
     </configurations>
-
     <publications>
         <artifact conf="generate"/>
         <artifact conf="default"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
         <artifact name="source" type="source" ext="zip" conf="default"/>
-        <artifact name="SchemaBuilder" type="doc" ext="pdf" conf="default"/>
+        <artifact name="MaduraObjects" type="doc" ext="pdf" conf="default"/>
     </publications>
-
     <dependencies>
         <dependency org="org.jvnet.jaxb2_commons" name="jaxb2-basics-ant" rev="0.5.2" conf="generate-&gt;default"/>
         <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-plugin" rev="0.5.4" conf="generate-&gt;default">
@@ -72,17 +74,15 @@
             <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
             <exclude org="javax.persistence" module="persistence-api"/>
         </dependency>
-        <dependency org="org.springframework" name="spring" rev="3.0.0" conf="default-&gt;orm,oxm,test,context-support,tx,jdbc">
+        <dependency org="org.springframework" name="spring" rev="3.0.6" conf="default-&gt;orm,oxm,test,context-support,tx,jdbc">
             <exclude org="javax.jms" module="jms"/>
             <exclude org="org.apache.commons" module="commons-logging"/>
         </dependency>
         <dependency org="org.jdom" name="jdom" rev="1.1" conf="default-&gt;default"/>
-        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="default-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default-&gt;jcl-migration"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default-&gt;core"/>
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>
         <exclude org="javax.servlet" ext="jar"/>
     </dependencies>
-
 </ivy-module>
