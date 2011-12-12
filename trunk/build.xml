@@ -97,10 +97,20 @@
         </exec>
     </target>
 
+    <!-- Remove modules defined in ignore list -->
+    <target name="modules-ignore" depends="modules, _init-xalan" if="ignore.list" 
+        description="Remove ignored modules from repo/modules.xml, use -Dignore.list=&lt;module_list.xml&gt;">
+        <property name="ignore.list.full" location="${ignore.list}"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/ignore-modules.xsl" in="${target.repo}/modules.xml" out="${target.repo}/modules-tmp.xml">
+            <param name="ignore.list" expression="${ignore.list.full}"/>
+        </xslt>
+        <move file="${target.repo}/modules-tmp.xml" tofile="${target.repo}/modules.xml"/>
+    </target>
+
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
     <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
 
-    <target name="gen-repo" depends="_init-xalan, modules" description="Regenerate the repository">
+    <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
         <property name="svn-cmd" value="svn" />
 
         <!-- Wipe repository clean -->
