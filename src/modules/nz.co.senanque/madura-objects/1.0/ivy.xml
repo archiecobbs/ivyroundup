@@ -99,8 +99,8 @@
         </dependency>
         <dependency org="org.hibernate" name="hibernate" rev="3.3.2.GA" conf="compile->default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="compile->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->default"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->default"/>
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>
         <exclude org="javax.servlet" ext="jar"/>
