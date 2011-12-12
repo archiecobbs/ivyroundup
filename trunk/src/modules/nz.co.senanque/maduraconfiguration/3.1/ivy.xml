@@ -45,8 +45,8 @@
         <dependency org="org.apache.commons" name="commons-configuration" rev="1.6" conf="default->default">
             <exclude org="org.apache.commons" module="commons-logging"/>
         </dependency>
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/>
         <exclude org="commons-logging" ext="*"/> <!-- ensures any logging can be used (log4j, logback etc) -->
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>

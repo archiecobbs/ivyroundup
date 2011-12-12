@@ -39,8 +39,8 @@
         <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default->default"/>
         <dependency org="org.apache.commons" name="commons-configuration" rev="1.6" conf="default->default"/>
         <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7.0" conf="default->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="default->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="default->default"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="default->default"/>
         <exclude org="commons-logging" ext="*"/> <!-- ensures any logging can be used (log4j, logback etc) -->
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>

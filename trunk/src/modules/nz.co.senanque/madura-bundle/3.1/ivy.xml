@@ -37,8 +37,8 @@
             <exclude org="javax.jms" ext="jms"/>
             <exclude org="org.apache.commons" module="commons-logging" ext="*"/>
         </dependency>
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/>
     </dependencies>
 
 </ivy-module>

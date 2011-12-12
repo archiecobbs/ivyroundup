@@ -21,14 +21,14 @@
     <info publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://code.google.com/p/madura-objects/">
-        <p>This is essentially a JAXB/XJC plugin that adds automatic validation to the generated Java classes. 
-        You define business objects in an XSD file, pass it through XJC and the plugin will add the validation code. 
-        It uses information in the XSD to pick up validation, and you can specify extensions to that in the XSD. The resulting 
-        Java classes check for validity when the setter is called and they reject attempts to set invalid values (this is a 
-        difference from other validation frameworks). The Java classes also expose a metadata interface to make it easy for 
+        <p>This is essentially a JAXB/XJC plugin that adds automatic validation to the generated Java classes.
+        You define business objects in an XSD file, pass it through XJC and the plugin will add the validation code.
+        It uses information in the XSD to pick up validation, and you can specify extensions to that in the XSD. The resulting
+        Java classes check for validity when the setter is called and they reject attempts to set invalid values (this is a
+        difference from other validation frameworks). The Java classes also expose a metadata interface to make it easy for
         UIs to generate, say, lists of options for a select box.</p>
         <p>The validation framework handles single field validation but you can inject a rule engine (or several) to handle cross field validation.</p>
-        <p>But to any Java code the objects still look like ordinary Java beans. The surrounding application is unaware that they are anything 
+        <p>But to any Java code the objects still look like ordinary Java beans. The surrounding application is unaware that they are anything
         different until they throw an exception. This makes it easy to use with frameworks that expect Java beans, and most of them do.</p>
         </description>
     </info>
@@ -79,8 +79,8 @@
         </dependency>
         <dependency org="org.jdom" name="jdom" rev="1.1" conf="default->default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="default->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/>
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>
         <exclude org="javax.servlet" ext="jar"/>

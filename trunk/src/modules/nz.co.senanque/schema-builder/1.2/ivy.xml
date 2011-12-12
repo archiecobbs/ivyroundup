@@ -75,8 +75,8 @@
         </dependency>
         <dependency org="org.jdom" name="jdom" rev="1.1" conf="default->default"/>
         <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="default->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/> 
-        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/> 
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/>
         <exclude org="avalon-framework" ext="jar"/>
         <exclude org="logkit" ext="jar"/>
         <exclude org="javax.servlet" ext="jar"/>
