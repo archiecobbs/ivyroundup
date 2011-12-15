@@ -25,11 +25,13 @@
     <property name="mirror1" value="http://ftp.wayne.edu/apache/commons/compress"/>
     <property name="mirror2" value="http://download.filehat.com/apache/commons/compress"/>
     <property name="mirror3" value="http://mirror.cloudera.com/apache/commons/compress"/>
+    <property name="mirror4" value="http://archive.apache.org/dist/commons/compress"/>
     <property name="backup" value="http://www.apache.org/dist/commons/compress"/>
 
     <resource url="${mirror1}/binaries/${archive}-bin.tar.gz" sha1="b88607fad17d06c27d6701d6e7e656bb52f33b4c">
         <url href="${mirror2}/binaries/${archive}-bin.tar.gz"/>
         <url href="${mirror3}/binaries/${archive}-bin.tar.gz"/>
+        <url href="${mirror4}/binaries/${archive}-bin.tar.gz"/>
         <url href="${backup}/binaries/${archive}-bin.tar.gz"/>
         <include name="${archive}/*.jar"/>
     </resource>

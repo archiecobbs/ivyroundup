@@ -18,7 +18,7 @@
 
 <ivy-module rev="$Id$">
 
-    <info publication="20110712041220">
+    <info publication="20111210120000">
                 <license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
                 <description homepage="http://ws.apache.org/neethi/">
                 Apache Neethi provides general framework for the programmers to use WS Policy. It is compliant with latest WS Policy specification which was published in March 2006. This framework is specifically written to enable the Apache Web services stack to use WS Policy as a way of expressing it's requirements and capabilities.
@@ -33,7 +33,7 @@
         </publications>
         <dependencies>
                 <dependency org="net.sourceforge.wsdl4j" name="wsdl4j" rev="1.6.2" force="true" conf="default->default"/>
-                <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="4.0.8" force="true" conf="default->default"/>
+                <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="4.1.1" force="true" conf="default->default"/>
         </dependencies>
 
 </ivy-module>
