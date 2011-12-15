@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/junit/${archive}.zip"
+      sha1="ec97c2eef7135dc0e94e7ba7a8bf25e311724e55">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/javadoc/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <move file="archive/${archive}/${name}-${revision}-src.jar" tofile="artifacts/sources/${name}.zip"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/${name}.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+    </build>
+</packager-module>
