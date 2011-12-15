@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="ext-name" value="${name}classextension"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="ext-archive" value="${ext-name}-${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="5d9d2e32658fd71c203dbba01eb6bbe124978456"/>
+    <resource url="http://downloads.sourceforge.net/${name}/${ext-archive}.zip" sha1="9535c9ecacea7e9a8b2e40379e7fdf6cdf192df6"/>
+
+    <build>
+
+        <!-- jars -->
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${ext-archive}/${ext-archive}.jar" tofile="artifacts/jars/${ext-name}.jar"/>
+
+        <!-- sources -->
+        <move file="archive/${archive}/${archive}-sources.jar" tofile="artifacts/sources/${name}.zip"/>
+        <move file="archive/${ext-archive}/${ext-archive}-sources.jar" tofile="artifacts/sources/${ext-name}.zip"/>
+
+        <!-- javadocs -->
+        <move file="archive/${archive}/${archive}-javadoc.jar" tofile="artifacts/javadocs/${name}.zip"/>
+        <move file="archive/${ext-archive}/${ext-archive}-javadoc.jar" tofile="artifacts/javadocs/${ext-name}.zip"/>
+    </build>
+</packager-module>
