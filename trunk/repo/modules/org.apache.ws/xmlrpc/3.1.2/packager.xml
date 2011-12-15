@@ -22,7 +22,7 @@
     <property name="archive" value="apache-${name}-${revision}"/>
 
     <resource url="http://archive.apache.org/dist/ws/${name}/binaries/${archive}-bin.tar.gz" sha1="f17ab82fd64fc9846043fdef6a8aa721b2edfb7e"/>
-    <resource url="http://archive.apache.org/dist/ws/${name}/binaries/${archive}-src.tar.gz" sha1="da013b5ad6c50d86cfbc6b56de5c89ce16a45fae"/>
+    <resource url="http://archive.apache.org/dist/ws/${name}/sources/${archive}-src.tar.gz" sha1="da013b5ad6c50d86cfbc6b56de5c89ce16a45fae"/>
 
     <build>
         <!-- jars -->

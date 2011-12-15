@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}-api.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api.jar" sha1="184d5f1060c41a8fa28e55b8b7d2c96bec99b079"/>
+    <resource tofile="artifacts/jars/${name}-impl.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.jar" sha1="11f85f19a107c35af457854c6778a63d6a05ca8b"/>
+    <resource tofile="artifacts/jars/${name}-xjc.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.jar" sha1="9343ded4f0dbb0c414360feba95736235fc0c282"/>
+    <resource tofile="artifacts/jars/${name}1-impl.jar" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}1-impl.jar" sha1="54bb20f95a83fe4d04bd705e3937ab92bb60f962"/>
+    <resource tofile="artifacts/sources/${name}-impl.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-impl.src.zip" sha1="76293548461f44955ddd07f4d0e0a097c2e2aea2"/>
+    <resource tofile="artifacts/sources/${name}1-impl.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}1-impl-src.zip" sha1="fde3e2fb19dc27f429bbf9b840f3b06fa2169213"/>
+    <resource tofile="artifacts/sources/${name}-xjc.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-xjc.src.zip" sha1="7e34daf19ce93e1334a0ffb7ad4a24722f95eb6c"/>
+    <resource tofile="artifacts/sources/${name}-api.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-src.zip" sha1="863e87961a175c749ea09a4d17bec9d7a0752778"/>
+    <resource tofile="artifacts/javadocs/${name}-api.zip" url="file:///${java.io.tmpdir}/${name}/${revision}/${name}-api-doc.zip" sha1="0d867e56fdf9c7742d3ac7abb5c8df1278ead3ac"/>
+
+</packager-module>
