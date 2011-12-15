@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Nathan Summers
+    Copyright 2011 Ales Nosek
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,20 +21,24 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.jdom.org/dist/binary/archive/${archive}.zip" sha1="e887ce82ccc1f03991b48ba8a190b2d42b2129da"/>
+    <resource url="file:///${java.io.tmpdir}/${name}1_4_4.zip" sha1="9749af2a1ddf703602af212dc8260d5c30c27d19">
+        <include name="${archive}/mail.jar"/>
+        <include name="${archive}/lib/*.jar"/>
+        <include name="${archive}/docs/javadocs/**/*"/>
+    </resource>
 
     <build>
-        <!-- jar -->
-        <move file="archive/${name}/build/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}/src/java"/>
-        </zip>
+        <!-- jars -->
+        <move file="archive/${archive}/mail.jar" todir="artifacts/jars"/>
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}/lib">
+                <include name="*.jar"/>
+            </fileset>
+        </move>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${name}/build/apidocs"/>
+            <fileset dir="archive/${archive}/docs/javadocs"/>
         </zip>
     </build>
 </packager-module>

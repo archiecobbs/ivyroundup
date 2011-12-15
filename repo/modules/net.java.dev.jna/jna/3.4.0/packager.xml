@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Nathan Summers
+    Copyright 2011 Ales Nosek
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,23 +18,9 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.jdom.org/dist/binary/archive/${archive}.zip" sha1="e887ce82ccc1f03991b48ba8a190b2d42b2129da"/>
+    <resource url="http://cloud.github.com/downloads/twall/jna/jna.jar" tofile="artifacts/jars/${name}.jar" sha1="f4e1672a22b63e37a5d929603cb67e093e3729d5"/>
 
-    <build>
-        <!-- jar -->
-        <move file="archive/${name}/build/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="http://cloud.github.com/downloads/twall/jna/platform.jar" tofile="artifacts/jars/platform.jar" sha1="4b58af397fd3156d700ad5016bcdd307a7a62ef5"/>
 
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}/src/java"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${name}/build/apidocs"/>
-        </zip>
-    </build>
 </packager-module>

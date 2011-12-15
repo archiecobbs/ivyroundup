@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2010 Nathan Summers
+    Copyright 2011 Ales Nosek
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,20 +21,16 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.jdom.org/dist/binary/archive/${archive}.zip" sha1="e887ce82ccc1f03991b48ba8a190b2d42b2129da"/>
+    <resource url="http://www.jdom.org/dist/binary/${archive}.zip" sha1="55665c30c2e3a641cbd3b2b8e58f34c7d4ded8a9"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${name}/build/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${name}/build/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}/src/java"/>
-        </zip>
+        <move file="archive/${name}/build/${archive}-sources.jar" tofile="artifacts/sources/source.jar"/>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${name}/build/apidocs"/>
-        </zip>
+        <move file="archive/${name}/build/${archive}-javadoc.jar" tofile="artifacts/javadocs/javadoc.jar"/>
     </build>
 </packager-module>

@@ -19,9 +19,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.neethi" module="neethi" revision="3.0.1" status="release" publication="20110712041220">
+    <info organisation="org.apache.neethi" module="neethi" revision="3.0.1" status="release" publication="20111210120000">
         <license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-        <ivyauthor name="$Id: ivy.xml 1805 2011-11-25 16:57:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.neethi/neethi/3.0.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1834 2011-12-15 17:19:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.neethi/neethi/3.0.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ws.apache.org/neethi/">
                 Apache Neethi provides general framework for the programmers to use WS Policy. It is compliant with latest WS Policy specification which was published in March 2006. This framework is specifically written to enable the Apache Web services stack to use WS Policy as a way of expressing it's requirements and capabilities.
@@ -36,7 +36,7 @@
         </publications>
         <dependencies>
                 <dependency org="net.sourceforge.wsdl4j" name="wsdl4j" rev="1.6.2" force="true" conf="default-&gt;default"/>
-                <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="4.0.8" force="true" conf="default-&gt;default"/>
+                <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="4.1.1" force="true" conf="default-&gt;default"/>
         </dependencies>
 
 </ivy-module>
