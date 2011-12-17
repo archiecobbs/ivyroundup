@@ -40,7 +40,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.1.+" conf="ext->default"/>
+        <dependency org="org.objenesis" name="objenesis" rev="[1.2,)" conf="ext->default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="ext->default"/>
         <dependency org="org.junit" name="junit" rev="4.+" conf="ext->default"/>
     </dependencies>
 
