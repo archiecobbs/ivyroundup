@@ -21,7 +21,7 @@
 
     <info organisation="org.easymock" module="easymock" revision="3.1" status="release" publication="20111011020400">
         <license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 1836 2011-12-15 17:57:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.easymock/easymock/3.1/"/>
+        <ivyauthor name="$Id: ivy.xml 1846 2011-12-17 03:30:36Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.easymock/easymock/3.1/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://easymock.sourceforge.net/">
         EasyMock provides Mock Objects for interfaces in JUnit tests by generating them on the fly using Java's proxy mechanism. Due to EasyMock's unique style of recording expectations, most refactorings will not affect the Mock Objects. So EasyMock is a perfect fit for Test-Driven Development.
@@ -43,7 +43,8 @@
     </publications>
 
     <dependencies>
-        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.1.+" conf="ext-&gt;default"/>
+        <dependency org="org.objenesis" name="objenesis" rev="[1.2,)" conf="ext-&gt;default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="ext-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="4.+" conf="ext-&gt;default"/>
     </dependencies>
 
