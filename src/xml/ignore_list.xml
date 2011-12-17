@@ -98,50 +98,6 @@
       <rev name="5.2.0"/>
     </mod>
   </org>
-  <!--  Error opening connection sun.net.ftp.FtpProtocolException: PORT :501 Command not allowed after EPSV ALL (Stingray Traffic Manager FTP proxy). -->
-  <org name="org.mozilla">
-    <mod name="rhino">
-      <rev name="1.7R1"/>
-      <rev name="1.7R2"/>
-      <rev name="1.7R3"/>
-    </mod>
-  </org>
-  <!-- requires org.mozilla/rhino -->
-  <org name="org.apache.xmlgraphics">
-    <mod name="batik">
-      <rev name="1.7"/>
-    </mod>
-  </org>
-  <!-- requires org.mozilla/rhino -->
-  <org name="org.apache.cxf">
-    <mod name="cxf-bundle">
-      <rev name="2.4.3"/>
-    </mod>
-  </org>
-  <!-- requires org.mozilla/rhino -->
-  <org name="nz.co.senanque">
-    <mod name="maduradocs">
-      <rev name="4.5"/>
-      <rev name="5.0.1"/>
-      <rev name="5.0.3"/>
-      <rev name="5.0.4"/>
-    </mod>
-  </org>
-  <!-- requires org.mozilla/rhino -->
-  <org name="org.jaspersoft">
-    <mod name="jasperreports">
-      <rev name="3.5.0"/>
-      <rev name="3.5.1"/>
-      <rev name="3.5.2"/>
-      <rev name="3.5.3"/>
-      <rev name="3.7.3"/>
-      <rev name="4.0.1"/>
-    </mod>
-    <!-- requires jasperreports -->
-    <mod name="jasperreports-chart-themes">
-      <rev name="4.0.1"/>
-    </mod>
-  </org>
   <!-- cannot find the link to download this version -->
   <org name="org.jets3t">
     <mod name="jets3t">
@@ -185,12 +141,6 @@
       <rev name="0.19.1"/>
       <rev name="0.19.2"/>
       <rev name="0.20.0"/>
-    </mod>
-  </org>
-  <!-- requires batik -->
-  <org name="org.apache.xmlgraphics">
-    <mod name="fop">
-      <rev name="0.95"/>
     </mod>
   </org>
   <!-- fails to download from sourceforge.net -->
