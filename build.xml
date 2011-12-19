@@ -108,7 +108,7 @@
     </target>
 
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
-    <target name="repo" depends="gen-repo, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
+    <target name="repo" depends="gen-repo, graph, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
 
     <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
         <property name="svn-cmd" value="svn" />
@@ -189,6 +189,9 @@
             </fileset>
         </xmlvalidate>
 
+    </target>
+
+    <target name="graph" depends="gen-repo" unless="skip-graph">
         <!-- Create graphs of module dependencies -->
         <mkdir dir="build/graph"/>
         <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
