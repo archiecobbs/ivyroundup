@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module rev="$Id$">
+
+    <info publication="20111222071256">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/maduraconfiguration/">
+        Connects Apache Commons Configration with Spring Beans.
+        Useful for injecting configuration information into Spring Beans from an external
+        configuration file.
+        </description>
+    </info>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
+        <artifact name="source" type="source" ext="zip" conf="default"/>
+        <artifact name="MaduraConfiguration" type="doc" ext="pdf" conf="default"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.jdom" name="jdom" rev="1.1" conf="default->default"/>
+        <dependency org="org.springframework" name="spring" rev="3.0.6" conf="default->context">
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default->default">
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-configuration" rev="1.6" conf="default->default">
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/>
+        <exclude org="commons-logging" ext="*"/> <!-- ensures any logging can be used (log4j, logback etc) -->
+        <exclude org="avalon-framework" ext="jar"/>
+        <exclude org="logkit" ext="jar"/>
+        <exclude org="javax.servlet" ext="jar"/>
+    </dependencies>
+
+</ivy-module>
