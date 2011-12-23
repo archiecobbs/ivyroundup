@@ -31,7 +31,7 @@
         <artifact name="MaduraDateTime" type="doc" ext="pdf" conf="default"/>
     </publications>
     <dependencies>
-        <dependency org="org.jdom" name="jdom" rev="1.1"/>
+        <dependency org="org.jdom" name="jdom" rev="1.1" conf="default->default"/>
         <dependency org="org.springframework" name="spring" rev="3.0.6" conf="default->context">
             <exclude org="javax.jms" ext="jms"/>
             <exclude org="org.apache.commons" module="commons-logging" ext="*"/>
