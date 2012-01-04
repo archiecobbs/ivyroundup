@@ -109,6 +109,8 @@
 
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
     <target name="repo" depends="gen-repo, graph, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
+    <target name="repo-for-module" depends="gen-repo-for-module, post-repo-gen-svn-ops" description="Regenerate the repository for single module and revision and apply svn operations." />
+    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />-->
 
     <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
         <property name="svn-cmd" value="svn" />
@@ -189,6 +191,102 @@
             </fileset>
         </xmlvalidate>
 
+    </target>
+
+    <target name="gen-repo-for-module" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
+        <property name="svn-cmd" value="svn" />
+        <property name="repo.org" value=""/>
+        <property name="repo.mod" value=""/>
+        <property name="repo.rev" value=""/>
+
+        <!-- Wipe repository clean -->
+        <delete>
+            <fileset dir="${target.repo}">
+                <include name="modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml"/>
+                <include name="modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml"/>
+                <include name="images/**/*"/>
+                <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
+            </fileset>
+        </delete>
+
+        <!-- Copy support files into repository -->
+        <copy todir="${target.repo}">
+            <fileset dir="src">
+                <include name="images/**/*"/>
+                <include name="xsl/ivy-doc.xsl"/>
+                <include name="xsl/modules.xsl"/>
+                <include name="css/ivy-style.css"/>
+                <include name="xsd/packager-1.0.xsd"/>
+                <include name="xsd/ivy.xsd"/>
+            </fileset>
+        </copy>
+
+        <!-- Create directory structure -->
+        <mkdir dir="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}"/>
+
+        <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
+        <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
+              | grep -E '^URL:' || echo '/unknown' )
+              | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
+        </exec>
+        <mkdir dir="build/xsl"/>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl">
+            <filterset>
+                <filter token="SVNROOTPATH" value="${svn.path}"/>
+            </filterset>
+        </copy>
+
+        <!-- Generate ivy.xml files -->
+        <xslt classpathref="xalan.classpath" style="build/xsl/ivy-repo.xsl" in="src/modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml"
+          out="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml" force="true">
+            <param name="organisation" expression="${repo.org}"/>
+            <param name="module" expression="${repo.mod}"/>
+            <param name="revision" expression="${repo.rev}"/>
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Generate packager.xml files -->
+        <xslt classpathref="xalan.classpath" style="src/xsl/packager-repo.xsl" in="src/modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml"
+          out="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml" force="true">
+            <param name="organisation" expression="${repo.org}"/>
+            <param name="module" expression="${repo.mod}"/>
+            <param name="revision" expression="${repo.rev}"/>
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Validate all generated XML files -->
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}">
+                <include name="**/ivy.xml"/>
+                <include name="**/packager.xml"/>
+            </fileset>
+        </xmlvalidate>
+
+    </target>
+
+    <target name="graph-single" depends="gen-repo-for-module" unless="skip-graph">
+        <!-- Create graphs of module dependencies -->
+        <mkdir dir="build/graph"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
+            <param name="node.shape" expression="ellipse"/>
+            <param name="graph.rankdir" expression="LR"/>
+            <param name="graph.size" expression="11,11"/>
+        </xslt>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot || true"/>
+        </exec>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot || true"/>
+        </exec>
     </target>
 
     <target name="graph" depends="gen-repo" unless="skip-graph">
