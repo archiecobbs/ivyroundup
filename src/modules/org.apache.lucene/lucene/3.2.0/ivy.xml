@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Stephen Woods
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20110604050800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0" />
+        <description homepage="http://lucene.apache.org/">
+            Apache Lucene is a high-performance, full-featured text search engine library written
+            entirely in Java. It is a technology suitable for nearly any application that requires
+            full-text search, especially cross-platform.
+        </description>
+    </info>
+    <configurations>
+        <conf name="default" description="Lucene Core" />
+        <conf name="analyzers" extends="default" description="Bundled analyzers" />
+        <conf name="smartcn" extends="default" description="smartcn analyzer" />
+        <conf name="stempel" extends="default" description="stempelanalyzers" />
+        <conf name="benchmark" extends="default" description="Benchmark support" />
+        <conf name="grouping" extends="default" description="Grouping support" />
+        <conf name="highlighter" extends="default" description="Highlighter support" />
+        <conf name="icu" extends="default" description="ICU support" />
+        <conf name="instantiated" extends="default" description="Instantiated support" />
+        <conf name="memory" extends="default" description="Memory support" />
+        <conf name="misc" extends="default" description="Miscellaneous" />
+        <conf name="queries" extends="default" description="MoreLikeThis FuzzyLikeThis BoostingQuery TermsFilter" />
+        <conf name="queryparser" extends="default" description="Query Parser support" />
+        <conf name="remote" extends="default" description="Remote support" />
+        <conf name="spatial" extends="default" description="Spatial support" />
+        <conf name="spellchecker" extends="default" description="Spellchecker support" />
+        <conf name="wordnet" extends="default" description="Wordnet support" />
+        <conf name="xml-query-parser" extends="default" description="XML query parser support" />
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="lucene-analyzers" conf="analyzers" />
+        <artifact name="lucene-smartcn" conf="smartcn" />
+        <artifact name="lucene-stempel" conf="stempel" />
+        <artifact name="lucene-benchmark" conf="benchmark" />
+        <artifact name="lucene-core" />
+        <artifact name="lucene-grouping" conf="grouping" />
+        <artifact name="lucene-highlighter" conf="highlighter" />
+        <artifact name="lucene-icu" conf="icu" />
+        <artifact name="lucene-instantiated" conf="instantiated" />
+        <artifact name="lucene-memory" conf="memory" />
+        <artifact name="lucene-misc" conf="misc" />
+        <artifact name="lucene-queries" conf="queries" />
+        <artifact name="lucene-queryparser" conf="queryparser" />
+        <artifact name="lucene-remote" conf="remote" />
+        <artifact name="lucene-spatial" conf="spatial" />
+        <artifact name="lucene-spellchecker" conf="spellchecker" />
+        <artifact name="lucene-wordnet" conf="wordnet" />
+        <artifact name="lucene-xml-query-parser" conf="xml-query-parser" />
+
+        <!-- source -->
+        <artifact name="lucene-analyzers" type="source" ext="zip" conf="analyzers" />
+        <artifact name="lucene-smartcn" type="source" ext="zip" conf="smartcn" />
+        <artifact name="lucene-stempel" type="source" ext="zip" conf="stempel" />
+        <artifact name="lucene-benchmark" type="source" ext="zip" conf="benchmark" />
+        <artifact name="lucene-core" type="source" ext="zip" />
+	<artifact name="lucene-grouping" type="source" ext="zip" conf="grouping" />
+        <artifact name="lucene-highlighter" type="source" ext="zip" conf="highlighter" />
+	<artifact name="lucene-icu" type="source" ext="zip" conf="icu" />
+        <artifact name="lucene-instantiated" type="source" ext="zip" conf="instantiated" />
+        <artifact name="lucene-memory" type="source" ext="zip" conf="memory" />
+        <artifact name="lucene-misc" type="source" ext="zip" conf="misc" />
+        <artifact name="lucene-queries" type="source" ext="zip" conf="queries" />
+	<artifact name="lucene-queryparser" type="source" ext="zip" conf="queryparser" />
+        <artifact name="lucene-remote" type="source" ext="zip" conf="remote" />
+        <artifact name="lucene-spatial" type="source" ext="zip" conf="spatial" />
+        <artifact name="lucene-spellchecker" type="source" ext="zip" conf="spellchecker" />
+        <artifact name="lucene-wordnet" type="source" ext="zip" conf="wordnet" />
+        <artifact name="lucene-xml-query-parser" type="source" ext="zip" conf="xml-query-parser" />
+
+        <!-- javadoc -->
+        <artifact name="lucene-analyzers" type="javadoc" ext="zip" conf="analyzers" />
+        <artifact name="lucene-smartcn" type="javadoc" ext="zip" conf="smartcn" />
+        <artifact name="lucene-stempel" type="javadoc" ext="zip" conf="stempel" />
+        <artifact name="lucene-benchmark" type="javadoc" ext="zip" conf="benchmark" />
+        <artifact name="lucene-core" type="javadoc" ext="zip" />
+        <artifact name="lucene-grouping" type="javadoc" ext="zip" conf="grouping" />
+        <artifact name="lucene-highlighter" type="javadoc" ext="zip" conf="highlighter" />
+        <artifact name="lucene-icu" type="javadoc" ext="zip" conf="icu" />
+        <artifact name="lucene-instantiated" type="javadoc" ext="zip" conf="instantiated" />
+        <artifact name="lucene-memory" type="javadoc" ext="zip" conf="memory" />
+        <artifact name="lucene-misc" type="javadoc" ext="zip" conf="misc" />
+        <artifact name="lucene-queries" type="javadoc" ext="zip" conf="queries" />
+        <artifact name="lucene-queryparser" type="javadoc" ext="zip" conf="queryparser" />
+        <artifact name="lucene-remote" type="javadoc" ext="zip" conf="remote" />
+        <artifact name="lucene-spatial" type="javadoc" ext="zip" conf="spatial" />
+        <artifact name="lucene-spellchecker" type="javadoc" ext="zip" conf="spellchecker" />
+        <artifact name="lucene-wordnet" type="javadoc" ext="zip" conf="wordnet" />
+        <artifact name="lucene-xml-query-parser" type="javadoc" ext="zip" conf="xml-query-parser" />
+
+    </publications>
+
+</ivy-module>
+
