@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://google-gson.googlecode.com/files/${archive}-release.zip" sha1="ed4d4178830718ee060700d21e087ea71e9b60c7"/>
+    <resource url="http://google-gson.googlecode.com/files/${name}-stream-${revision}.jar" tofile="artifacts/jars/${name}-stream.jar" sha1="594c21acc371c21e6d8b1e4fe907cc2f5e6bd778"/>
+
+    <build>
+        <move file="archive/${archive}/gson-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/gson-${revision}-sources.jar" tofile="artifacts/sources/source.zip"/>
+        <move file="archive/${archive}/gson-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
+    </build>
+</packager-module>
