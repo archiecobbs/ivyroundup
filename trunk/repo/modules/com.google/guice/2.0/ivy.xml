@@ -21,7 +21,7 @@
 
     <info organisation="com.google" module="guice" revision="2.0" status="release" publication="20090519180100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1359 2010-10-15 14:21:55Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/guice/2.0/"/>
+        <ivyauthor name="$Id: ivy.xml 1925 2012-02-08 02:32:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/guice/2.0/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/google-guice/">
             Guice (pronounced 'juice') is a lightweight dependency injection framework for Java 5
@@ -31,6 +31,7 @@
 
     <configurations>
         <conf name="default" description="The core library"/>
+        <conf name="noaop" description="The core library but with no AOP support, suitable for Android development"/>
         <conf name="servlet" extends="default" description="Include support for servlets"/>
         <conf name="spring" extends="default" description="Include support for spring"/>
         <conf name="struts2" extends="default" description="Include plugin for struts2"/>
@@ -42,7 +43,8 @@
     </configurations>
 
     <publications>
-        <artifact/>
+        <artifact name="guice" conf="default"/>
+        <artifact name="guice-no_aop" conf="noaop"/>
         <artifact name="guice-throwingproviders" conf="throwingproviders"/>
         <artifact name="guice-multibindings" conf="multibindings"/>
         <artifact name="guice-jndi" conf="jndi"/>

@@ -22,6 +22,7 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://google-guice.googlecode.com/files/${archive}.zip" sha1="fe744639549c5f4abbea878902dadf70a50c4c9f"/>
+    <resource url="http://google-guice.googlecode.com/files/${archive}-no_aop.jar" sha1="2be04047e69a1819a60f111cacced6a81cdbd630" tofile="artifacts/jars/${name}-no_aop.jar"/>
 
     <build>
         <!-- jar -->
