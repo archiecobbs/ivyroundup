@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+    Copyright 2011 Andrei Polushin
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120109120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/guava-libraries/">
+        The Guava project contains several of Google's core libraries
+        that we rely on in our Java-based projects: collections, caching,
+        primitives support, concurrency libraries, common annotations,
+        string processing, I/O, and so forth.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Guava Java classes"/>
+        <conf name="gwt" description="Guava GWT version"/>
+    </configurations>
+
+    <publications>
+        <artifact name="guava" conf="default"/>
+        <artifact name="guava" conf="default" type="source" ext="zip"/>
+        <artifact name="guava" conf="default" type="javadoc" ext="zip"/>
+        <artifact name="guava-gwt" conf="gwt"/>
+        <artifact name="guava-gwt" conf="gwt" type="source" ext="zip"/>
+        <artifact name="guava-gwt" conf="gwt" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

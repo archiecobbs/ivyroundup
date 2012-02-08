@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+    Copyright 2011 Andrei Polushin
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="com.google.guava" artifactId="guava">
+        <artifact tofile="artifacts/jars/guava.jar" sha1="57b40a943725d43610c898ac0169adf1b2d55742"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="1bafd51e7c4782378dfea2587eb18ff96fc3d5e3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="06101fb9881e05d563c8c971757edb19bfced011"/>
+    </m2resource>
+    <m2resource groupId="com.google.guava" artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="90dd11690b63030166b4f4e38c4073a191cfb7fb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="fe5846f5d909681563f3d7f39aa78ab322966d4a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="affc60cd1c3ececa8481a2ac1baec2e4a542a6c7"/>
+    </m2resource>
+</packager-module>
