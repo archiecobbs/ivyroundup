@@ -28,6 +28,7 @@
 
     <configurations>
         <conf name="default" description="The core library"/>
+        <conf name="noaop" description="The core library but with no AOP support, suitable for Android development"/>
         <conf name="servlet" extends="default" description="Include support for servlets"/>
         <conf name="spring" extends="default" description="Include support for spring"/>
         <conf name="struts2" extends="default" description="Include plugin for struts2"/>
@@ -39,7 +40,8 @@
     </configurations>
 
     <publications>
-        <artifact/>
+        <artifact name="guice" conf="default"/>
+        <artifact name="guice-no_aop" conf="noaop"/>
         <artifact name="guice-throwingproviders" conf="throwingproviders"/>
         <artifact name="guice-multibindings" conf="multibindings"/>
         <artifact name="guice-jndi" conf="jndi"/>

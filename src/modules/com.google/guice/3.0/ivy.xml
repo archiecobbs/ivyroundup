@@ -29,6 +29,7 @@
 
     <configurations>
         <conf name="default" description="The core library"/>
+        <conf name="noaop" description="The core library but with no AOP support, suitable for Android development"/>
         <conf name="assistedinject" extends="default" description="Include plugin for assistedinject"/>
         <conf name="grapher" extends="default" description="Include plugin for grapher"/>
         <conf name="jmx" extends="default" description="Include plugin for JMX"/>
@@ -43,7 +44,8 @@
 
     <publications>
         <!-- jar -->
-        <artifact/>
+        <artifact name="guice" conf="default"/>
+        <artifact name="guice-no_aop" conf="noaop"/>
         <artifact name="guice-assistedinject" conf="assistedinject"/>
         <artifact name="guice-grapher" conf="grapher"/>
         <artifact name="guice-jmx" conf="jmx"/>

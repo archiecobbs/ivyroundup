@@ -32,6 +32,9 @@
          <include name="${archive}-src/extensions/*/src/**/*"/>
          <include name="${archive}-src/javadoc/**/*"/>
     </resource>
+    
+    <resource url="http://google-guice.googlecode.com/files/${archive}-no_aop.jar"
+        sha1="7ec98e8ddabcf9b010b13b815914da82c437e3a7" tofile="artifacts/jars/${name}-no_aop.jar"/>
 
     <build>
         <move file="archive-zip/${archive}/" tofile="archive"/>
