@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2008 Archie L. Cobbs.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,19 +19,20 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.vaadin.addon" module="locationtextfield" revision="1.0.5" status="release" publication="20120211104853">
+    <info organisation="org.apache.commons" module="commons-codec" revision="1.5" status="release" publication="20110324000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1930 2012-02-10 18:26:46Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/locationtextfield/1.0.5/"/>
+        <ivyauthor name="$Id: ivy.xml 1933 2012-02-13 16:11:27Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-codec/1.5/"/>
         <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://vaadin.com/directory#addon/locationtextfield">
-            <p>
-                LocationTextField add-on for Vaadin using Atmosphere Framework
-            </p>
+        <description homepage="http://commons.apache.org/codec/">
+            Commons Codec provides implementations of common encoders
+            and decoders such as Base64, Hex, Phonetic and URLs.
         </description>
     </info>
 
     <publications>
         <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

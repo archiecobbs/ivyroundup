@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2008 Archie L. Cobbs.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,7 +16,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource groupId="org/vaadin/addons" repo="http://maven.vaadin.com/vaadin-addons">
-        <artifact tofile="artifacts/jars/locationtextfield.jar" sha1="2f3e224496054d8e8b875fa60671633e1905b33e"/>
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="cf993e250ff71804754ec2734a16f23c0be99f70"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="d722a84cf737fe479c0844f1dabb4e3e6222d2f7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="1100638866461d41fbed0e89d722b161c579fe23"/>
     </m2resource>
 </packager-module>
