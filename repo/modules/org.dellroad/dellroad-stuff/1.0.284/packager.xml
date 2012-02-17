@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,10 +16,12 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
     <property name="name" value="${ivy.packager.module}"/>
-    <m2resource groupId="net/bull/${name}" artifactId="${name}-core" repo="http://maven.glassfish.org/content/groups/public">
-        <artifact tofile="artifacts/jars/${name}.jar" sha1="f6f3f4b3ee019df77cebdc5d53288c28dcfe55d5"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="5b397c9f55d4e89b5a9a7bdb44ad3e2b1aa5f69f"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="8b00b170a4d8aa34ee669d878f583b6ab28a9299"/>
-    </m2resource>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}.jar" url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="8e81ceb85374288b45b78a08c07ed8a33760d5e6"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="954875aa66b82324a3855f8fce0d81fab58ce1c1"/>
+    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="78ec117344c45ae2bc223fa39443e19638c27828"/>
+
 </packager-module>
