@@ -85,7 +85,8 @@ if svn st "repo/modules/$ORG/$MOD/$REV" 2>/dev/null | grep '^\?'; then
 
     rm -rf "repo/modules/$ORG/$MOD/$REV"
     svn cp "src/modules/$ORG/$MOD/$REV" "repo/modules/$ORG/$MOD/$REV"
-    svn pd svn:mergeinfo "repo/modules/$ORG/$MOD/$REV" || true
+    svn pd --recursive --quiet svn:mergeinfo "repo/modules/$ORG/$MOD/$REV" || true
+    svn pd --recursive --quiet svn:keywords  "repo/modules/$ORG/$MOD/$REV" || true
 
     # Regenerate repo (second time)
     regenerate_repo '(again)'
