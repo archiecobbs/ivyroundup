@@ -51,7 +51,7 @@
        <dependency org="org.apache.xml" name="xalan-j" rev="2.7.1" conf="default->default">
            <exclude org="org.apache.xerces" module="xerces"/>
        </dependency>
-       <dependency org="org.apache.xmlgraphics" name="fop" rev="1.0">
+       <dependency org="org.apache.xmlgraphics" name="fop" rev="1.0" conf="default->default">
            <exclude org="commons-logging" module="commons-logging"/>
            <exclude org="org.apache.xerces" module="xerces"/>
            <exclude org="org.mozilla" module="rhino"/>
