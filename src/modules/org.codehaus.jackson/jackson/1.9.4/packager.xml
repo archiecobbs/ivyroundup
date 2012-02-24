@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="jackson-core-asl">
+        <artifact tofile="artifacts/jars/jackson-core.jar" sha1="8d8b2a3e5bc77ee1be67d060b44ac77d48a27d6e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-core.zip" sha1="6900e0981e0cb1dbef3f5478fea10d08697943f0"/>
+    </m2resource>
+    <m2resource artifactId="jackson-jaxrs">
+        <artifact tofile="artifacts/jars/jackson-jaxrs.jar" sha1="d8bc9143b5c3ed0ba2f6c26586eb1136e25f3197"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs.zip" sha1="61fe9fb03134ca51320a637e425e24bd88c5397f"/>
+    </m2resource>
+    <m2resource artifactId="jackson-mapper-asl">
+        <artifact tofile="artifacts/jars/jackson-mapper.jar" sha1="5206191b35112f50b8e25fcbd3f3b84e12e11cee"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-mapper.zip" sha1="b02c74ecea713097e92b037a27cdf9bbd2d96615"/>
+    </m2resource>
+    <m2resource artifactId="jackson-mrbean">
+        <artifact tofile="artifacts/jars/jackson-mrbean.jar" sha1="9ba4f9943adf0627a015cc4f61e6adb2414922dc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-mrbean.zip" sha1="9865e99ac0a174f4c3969b36b2df0627b3210684"/>
+    </m2resource>
+    <m2resource artifactId="jackson-smile">
+        <artifact tofile="artifacts/jars/jackson-smile.jar" sha1="ffabd4a1aea728f42ec7b8fb1f7f5c0bb9c565f5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-smile.zip" sha1="71944b4866536492631bced9eb03d8d98bc25d51"/>
+    </m2resource>
+    <m2resource artifactId="jackson-xc">
+        <artifact tofile="artifacts/jars/jackson-xc.jar" sha1="576dfa6604c247b9e84e374a842b8cf3ff513bcc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-xc.zip" sha1="e47da62999e2918ce8f5d561cd136d42fdc8b321"/>
+    </m2resource>
+</packager-module>
