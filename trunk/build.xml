@@ -108,9 +108,9 @@
     </target>
 
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
-    <target name="repo" depends="gen-repo, graph, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />
-    <target name="repo-for-module" depends="gen-repo-for-module, post-repo-gen-svn-ops" description="Regenerate the repository for single module and revision and apply svn operations." />
-    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single, post-repo-gen-svn-ops" description="Regenerate the repository and apply svn operations." />-->
+    <target name="repo" depends="gen-repo, graph" description="Regenerate the repository and apply svn operations." />
+    <target name="repo-for-module" depends="gen-repo-for-module" description="Regenerate the repository for single module and revision and apply svn operations." />
+    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single" description="Regenerate the repository and apply svn operations." />-->
 
     <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
         <property name="svn-cmd" value="svn" />
@@ -304,27 +304,6 @@
         <exec executable="/bin/bash" logError="false" failonerror="false">
             <arg value="-c"/>
             <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot || true"/>
-        </exec>
-    </target>
-
-    <target name="post-repo-gen-svn-ops" unless="skip-svn" description="Regenerate the repository">
-
-        <!-- Make sure keyword expansion turned off -->
-        <exec executable="svn" logError="true" failonerror="true">
-            <arg value="propdel"/>
-            <arg value="--quiet"/>
-            <arg value="--recursive"/>
-            <arg value="svn:keywords"/>
-            <arg value="${target.repo}"/>
-        </exec>
-
-        <!-- Disable merge tracking -->
-        <exec executable="svn" logError="true" failonerror="true">
-            <arg value="propdel"/>
-            <arg value="--quiet"/>
-            <arg value="--recursive"/>
-            <arg value="svn:mergeinfo"/>
-            <arg value="${target.repo}"/>
         </exec>
     </target>
 
