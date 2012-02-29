@@ -63,12 +63,12 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jcl" ivyde:javadoc="slf4j-jcl" name="slf4j-jcl" conf="jcl"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcl104-over-slf4j" ivyde:javadoc="jcl104-over-slf4j" name="jcl104-over-slf4j" conf="jcl104"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jdk14" ivyde:javadoc="slf4j-jdk14" name="slf4j-jdk14" conf="jul"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-log4j12" ivyde:javadoc="slf4j-log4j12" name="slf4j-log4j12" conf="default, log4j"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-nop" ivyde:javadoc="slf4j-nop" name="slf4j-nop" conf="nop"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-simple" ivyde:javadoc="slf4j-simple" name="slf4j-simple" conf="simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="slf4j-jcl" conf="jcl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jcl104-over-slf4j" conf="jcl104"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="slf4j-jdk14" conf="jul"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="slf4j-log4j12" conf="default, log4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="slf4j-nop" conf="nop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="slf4j-simple" conf="simple"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

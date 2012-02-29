@@ -43,10 +43,10 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="filterbuilder" ivyde:javadoc="filterbuilder" name="filterbuilder" conf="default,filterbuilder"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="htmllexer" ivyde:javadoc="htmllexer" name="htmllexer" conf="default,htmllexer"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="htmlparser" ivyde:javadoc="htmlparser" name="htmlparser" conf="default,htmlparser"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="thumbelina" ivyde:javadoc="thumbelina" name="thumbelina" conf="default,thumbelina"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="filterbuilder" conf="default,filterbuilder"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="htmllexer" conf="default,htmllexer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="htmlparser" conf="default,htmlparser"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="thumbelina" conf="default,thumbelina"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -59,9 +59,9 @@
 
     <publications>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-api" ivyde:javadoc="jaxb-api" name="jaxb-api" conf="runtime"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-impl" ivyde:javadoc="jaxb-impl" name="jaxb-impl" conf="runtime"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb1-impl" ivyde:javadoc="jaxb1-impl" name="jaxb1-impl" conf="runtime-1.0"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-xjc" ivyde:javadoc="jaxb-xjc" name="jaxb-xjc" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-impl" ivyde:javadoc="jaxb-api" name="jaxb-impl" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb1-impl" ivyde:javadoc="jaxb-api" name="jaxb1-impl" conf="runtime-1.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-xjc" ivyde:javadoc="jaxb-api" name="jaxb-xjc" conf="compile"/>
 
         <artifact name="jaxb-api" type="source" ext="zip" conf="runtime"/>
         <artifact name="jaxb-impl" type="source" ext="zip" conf="runtime"/>

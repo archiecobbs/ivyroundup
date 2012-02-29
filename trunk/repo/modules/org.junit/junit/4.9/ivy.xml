@@ -33,7 +33,7 @@
 
     <publications>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit" ivyde:javadoc="junit" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit-dep" ivyde:javadoc="junit-dep" name="junit-dep" conf="nodeps"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit" ivyde:javadoc="junit" name="junit-dep" conf="nodeps"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>

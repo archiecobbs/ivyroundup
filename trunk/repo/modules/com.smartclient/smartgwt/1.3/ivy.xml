@@ -46,8 +46,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="smartgwt" conf="core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="smartgwt-skins" name="smartgwt-skins" conf="skins"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="smartgwt-skins" conf="skins"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

@@ -47,12 +47,12 @@
 
     <publications> 
         <!--  jars  -->
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-all" name="quartz-all" conf="all"/> 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz" name="quartz" conf="default,core"/> 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-examples" name="quartz-examples" conf="default,examples"/> 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-jboss" name="quartz-jboss" conf="default,jboss"/> 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-oracle" name="quartz-oracle" conf="default,oracle"/> 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-weblogic" name="quartz-weblogic" conf="default,weblogic"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz-all" conf="all"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz" conf="default,core"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz-examples" conf="default,examples"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz-jboss" conf="default,jboss"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz-oracle" conf="default,oracle"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="quartz-weblogic" conf="default,weblogic"/> 
 
         <!--  javadoc -->
         <artifact name="javadoc" type="javadoc" ext="zip"/>

@@ -75,10 +75,10 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-benchmark-viewer" name="gwt-benchmark-viewer" conf="benchmark-viewer"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-dev-linux" name="gwt-dev-linux" conf="default,compile"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-servlet" name="gwt-servlet" conf="runtime"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-user" name="gwt-user" conf="default,compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-benchmark-viewer" conf="benchmark-viewer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev-linux" conf="default,compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-servlet" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-user" conf="default,compile"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

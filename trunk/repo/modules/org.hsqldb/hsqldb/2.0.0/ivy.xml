@@ -41,8 +41,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hsqldb" ivyde:javadoc="hsqldb" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hsqldb-j5" ivyde:javadoc="hsqldb-j5" name="hsqldb-j5" conf="java5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="hsqldb-j5" conf="java5"/>
         <artifact name="source" type="source" ext="zip" conf="default,java5"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default,java5"/>
     </publications>

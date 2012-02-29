@@ -44,46 +44,46 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-agent" name="appengine-agent" conf="agent"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-agentimpl" name="appengine-agentimpl" conf="agent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-agent" conf="agent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-agentimpl" conf="agent"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-local-runtime-shared" name="appengine-local-runtime-shared" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-el_1.0_spec-1.0.1" name="geronimo-el_1.0_spec-1.0.1" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-jsp_2.1_spec-1.0.1" name="geronimo-jsp_2.1_spec-1.0.1" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-servlet_2.5_spec-1.2" name="geronimo-servlet_2.5_spec-1.2" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-ant-1.6.5" name="repackaged-appengine-ant-1.6.5" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-ant-launcher-1.6.5" name="repackaged-appengine-ant-launcher-1.6.5" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-commons-el-1.0" name="repackaged-appengine-commons-el-1.0" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-commons-logging-1.1.1" name="repackaged-appengine-commons-logging-1.1.1" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-jasper-compiler-5.0.28" name="repackaged-appengine-jasper-compiler-5.0.28" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-jasper-runtime-5.0.28" name="repackaged-appengine-jasper-runtime-5.0.28" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-local-runtime-shared" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-el_1.0_spec-1.0.1" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-jsp_2.1_spec-1.0.1" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-servlet_2.5_spec-1.2" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-ant-1.6.5" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-ant-launcher-1.6.5" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-commons-el-1.0" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-commons-logging-1.1.1" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-jasper-compiler-5.0.28" conf="shared"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-jasper-runtime-5.0.28" conf="shared"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-testing" name="appengine-testing" conf="testing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-testing" conf="testing"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-jakarta-jstl-1.1.2" name="repackaged-appengine-jakarta-jstl-1.1.2" conf="tools-jsp"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="repackaged-appengine-jakarta-standard-1.1.2" name="repackaged-appengine-jakarta-standard-1.1.2" conf="tools-jsp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-jakarta-jstl-1.1.2" conf="tools-jsp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="repackaged-appengine-jakarta-standard-1.1.2" conf="tools-jsp"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="asm-3.1" name="asm-3.1" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-core-1.1.5" name="datanucleus-core-1.1.5" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-enhancer-1.1.4" name="datanucleus-enhancer-1.1.4" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-jpa-1.1.5" name="datanucleus-jpa-1.1.5" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-jpa_3.0_spec-1.1.1" name="geronimo-jpa_3.0_spec-1.1.1" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-jta_1.1_spec-1.1.1" name="geronimo-jta_1.1_spec-1.1.1" conf="tools-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jdo2-api-2.3-eb" name="jdo2-api-2.3-eb" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="asm-3.1" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-core-1.1.5" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-enhancer-1.1.4" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-jpa-1.1.5" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-jpa_3.0_spec-1.1.1" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-jta_1.1_spec-1.1.1" conf="tools-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="jdo2-api-2.3-eb" conf="tools-orm"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-tools-api" name="appengine-tools-api" conf="tools-combined"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-tools-api" conf="tools-combined"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-api-1.0-sdk" name="appengine-api-1.0-sdk" conf="user-base"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-api-labs" name="appengine-api-labs" conf="user-base"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="appengine-jsr107cache" name="appengine-jsr107cache" conf="user-base"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jsr107cache-1.1" name="jsr107cache-1.1" conf="user-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-api-1.0-sdk" conf="user-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-api-labs" conf="user-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="appengine-jsr107cache" conf="user-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="jsr107cache-1.1" conf="user-base"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-appengine-1.0.6.final" name="datanucleus-appengine-1.0.6.final" conf="user-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-core-1.1.5" name="datanucleus-core-1.1.5" conf="user-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="datanucleus-jpa-1.1.5" name="datanucleus-jpa-1.1.5" conf="user-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-jpa_3.0_spec-1.1.1" name="geronimo-jpa_3.0_spec-1.1.1" conf="user-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-jta_1.1_spec-1.1.1" name="geronimo-jta_1.1_spec-1.1.1" conf="user-orm"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jdo2-api-2.3-eb" name="jdo2-api-2.3-eb" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-appengine-1.0.6.final" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-core-1.1.5" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="datanucleus-jpa-1.1.5" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-jpa_3.0_spec-1.1.1" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="geronimo-jta_1.1_spec-1.1.1" conf="user-orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="jdo2-api-2.3-eb" conf="user-orm"/>
 
         <artifact name="ant-macros" ext="xml" type="ant" conf="ant-macros"/>
 

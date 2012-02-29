@@ -61,9 +61,9 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-beanutils" ivyde:javadoc="commons-beanutils" name="commons-beanutils" conf="complete"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-beanutils-core" ivyde:javadoc="commons-beanutils-core" name="commons-beanutils-core" conf="core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-beanutils-bean-collections" ivyde:javadoc="commons-beanutils-bean-collections" name="commons-beanutils-bean-collections" conf="bean-collections"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="commons-beanutils" conf="complete"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="commons-beanutils-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="commons-beanutils-bean-collections" conf="bean-collections"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -53,7 +53,7 @@
 
     <publications>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="groovy" ivyde:javadoc="groovy" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="groovy-all" ivyde:javadoc="groovy-all" name="groovy-all" conf="embeddable"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="groovy" ivyde:javadoc="groovy" name="groovy-all" conf="embeddable"/>
         <artifact type="source" ext="zip" conf="default,embeddable"/>
         <artifact type="javadoc" ext="zip" conf="default,embeddable"/>
     </publications>

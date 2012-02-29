@@ -40,9 +40,9 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-api" ivyde:javadoc="jsf-api" name="jsf-api" conf="api"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-impl" ivyde:javadoc="jsf-impl" name="jsf-impl" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="injectionproviders" ivyde:javadoc="injectionproviders" name="injectionproviders" conf="injectionproviders"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-api" ivyde:javadoc="jsf" name="jsf-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-impl" ivyde:javadoc="jsf" name="jsf-impl" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="injectionproviders" ivyde:javadoc="jsf" name="injectionproviders" conf="injectionproviders"/>
 
         <artifact name="jsf-api" type="source" ext="zip" conf="api"/>
         <artifact name="jsf-impl" type="source" ext="zip" conf="default"/>

@@ -36,9 +36,9 @@ ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode a
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="icu4j" ivyde:javadoc="icu4j" name="icu4j" conf="default" ext="jar"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="icu4j-charsets" ivyde:javadoc="icu4j-charsets" name="icu4j-charsets" conf="charsets" ext="jar"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="icu4j-localespi" ivyde:javadoc="icu4j-localespi" name="icu4j-localespi" conf="localespi" ext="jar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="icu4j" conf="default" ext="jar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="icu4j-charsets" conf="charsets" ext="jar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="icu4j-localespi" conf="localespi" ext="jar"/>
         <artifact name="source" conf="all" type="source" ext="zip"/>
         <artifact name="javadoc" conf="all" type="javadoc" ext="zip"/>
     </publications>

@@ -87,13 +87,13 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="findbugs" name="findbugs" conf="tool"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="findbugs-ant" name="findbugs-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="findbugs" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="findbugs-ant" conf="ant"/>
         <artifact name="default" conf="tool" type="report" ext="xsl"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="annotations" name="annotations" conf="annotations"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bcel" name="bcel" conf="tool"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jFormatString" name="jFormatString" conf="tool"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsr305" name="jsr305" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="bcel" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jFormatString" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jsr305" conf="annotations"/>
         <artifact name="source" type="source" ext="zip"/>
         <!-- No prebuilt javadoc currently available. -->
     </publications>

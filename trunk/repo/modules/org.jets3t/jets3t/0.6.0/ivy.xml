@@ -107,14 +107,14 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jets3t" ivyde:javadoc="jets3t"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bcprov-jdk14-138" ivyde:javadoc="bcprov-jdk14-138" name="bcprov-jdk14-138" conf="bouncycastle"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jets3t-gui" ivyde:javadoc="jets3t-gui" name="jets3t-gui" conf="guiapp"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="BareBonesBrowserLaunch" ivyde:javadoc="BareBonesBrowserLaunch" name="BareBonesBrowserLaunch" conf="guiapp"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cockpit" ivyde:javadoc="cockpit" name="cockpit" conf="cockpit"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cockpitlite" ivyde:javadoc="cockpitlite" name="cockpitlite" conf="cockpitlite"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="synchronize" ivyde:javadoc="synchronize" name="synchronize" conf="synchronize"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="uploader" ivyde:javadoc="uploader" name="uploader" conf="uploader"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bcprov-jdk14-138" conf="bouncycastle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jets3t-gui" conf="guiapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="BareBonesBrowserLaunch" conf="guiapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="cockpit" conf="cockpit"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="cockpitlite" conf="cockpitlite"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="synchronize" conf="synchronize"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="uploader" conf="uploader"/>
 
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>

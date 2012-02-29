@@ -39,8 +39,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng-jdk14" ivyde:javadoc="testng-jdk14" name="testng-jdk14" conf="jdk14"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng-jdk15" ivyde:javadoc="testng-jdk15" name="testng-jdk15" conf="default,jdk15"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" ivyde:javadoc="javadoc" name="testng-jdk14" conf="jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" ivyde:javadoc="javadoc" name="testng-jdk15" conf="default,jdk15"/>
         <artifact type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

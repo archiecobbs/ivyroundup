@@ -47,18 +47,18 @@ powerful, reusable components written with plain Java and HTML.
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket" name="wicket" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-auth-roles" name="wicket-auth-roles" conf="auth"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-datetime" name="wicket-datetime" conf="datetime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-auth-roles" conf="auth"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-datetime" conf="datetime"/>
         <artifact name="wicket-examples" type="war" ext="war" conf="examples"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-extensions" name="wicket-extensions" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-guice" name="wicket-guice" conf="guice"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-ioc" name="wicket-ioc" conf="ioc"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-jmx" name="wicket-jmx" conf="jmx"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-objectsizeof-agent" name="wicket-objectsizeof-agent" conf="objectsize"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-spring" name="wicket-spring" conf="spring"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-spring-annot" name="wicket-spring-annot" conf="spring"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-velocity" name="wicket-velocity" conf="velocity"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-extensions" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-ioc" conf="ioc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-objectsizeof-agent" conf="objectsize"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-spring-annot" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="wicket-velocity" conf="velocity"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

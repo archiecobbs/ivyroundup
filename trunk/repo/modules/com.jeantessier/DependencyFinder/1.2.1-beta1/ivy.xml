@@ -37,7 +37,7 @@ Finally, Dependency Finder has a tool for computing object-oriented software met
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="DependencyFinder" ivyde:javadoc="DependencyFinder" name="DependencyFinder" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="DependencyFinder" conf="default"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
         <artifact name="DependencyGraphToHTML" type="report" ext="xsl" conf="default"/>

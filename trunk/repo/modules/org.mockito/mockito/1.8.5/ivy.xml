@@ -32,8 +32,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mockito-core" name="mockito-core" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mockito-all" name="mockito-all" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="mockito-core" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="mockito-all" conf="all"/>
         <!-- the bin jars include the source as well. -->
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

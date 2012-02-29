@@ -57,10 +57,10 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="httpcore" name="httpcore" type="jar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="httpcore" type="jar"/>
         <artifact name="httpcore-source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="httpcore-nio" name="httpcore-nio" type="jar" conf="nio"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="httpcore-nio" type="jar" conf="nio"/>
         <artifact name="httpcore-nio-source" type="source" ext="zip" conf="nio"/>
     </publications>
 </ivy-module>

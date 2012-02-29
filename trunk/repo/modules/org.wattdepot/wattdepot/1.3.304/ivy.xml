@@ -29,14 +29,14 @@ WattDepot is a RESTful web service that collects electricity data (such as curre
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-client-monitor" ivyde:javadoc="wattdepot-client-monitor" name="wattdepot-client-monitor"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-converter-oscar" ivyde:javadoc="wattdepot-converter-oscar" name="wattdepot-converter-oscar"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-lib-client" ivyde:javadoc="wattdepot-lib-client" name="wattdepot-lib-client"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-bmo" ivyde:javadoc="wattdepot-sensor-bmo" name="wattdepot-sensor-bmo"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-examplestreaming" ivyde:javadoc="wattdepot-sensor-examplestreaming" name="wattdepot-sensor-examplestreaming"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-tabular" ivyde:javadoc="wattdepot-sensor-tabular" name="wattdepot-sensor-tabular"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-ted5000" ivyde:javadoc="wattdepot-sensor-ted5000" name="wattdepot-sensor-ted5000"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-server" ivyde:javadoc="wattdepot-server" name="wattdepot-server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-client-monitor"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-converter-oscar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-lib-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-sensor-bmo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-sensor-examplestreaming"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-sensor-tabular"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-sensor-ted5000"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-server"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
