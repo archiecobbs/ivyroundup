@@ -297,9 +297,10 @@
 
     <!-- Get artifact name -->
     <xsl:template name="get-artifact-name">
+        <xsl:param name="artifact" select="."/>
         <xsl:choose>
-            <xsl:when test="@name">
-                <xsl:value-of select="@name"/>
+            <xsl:when test="$artifact/@name">
+                <xsl:value-of select="$artifact/@name"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$module"/>
