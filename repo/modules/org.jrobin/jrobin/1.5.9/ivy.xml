@@ -21,8 +21,8 @@
 
     <info organisation="org.jrobin" module="jrobin" revision="1.5.9" status="release" publication="20100306120000">
         <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1114 2010-03-11 00:33:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jrobin/jrobin/1.5.9/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1114 2010-03-11 00:33:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jrobin/jrobin/1.5.9/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jrobin.org/">
 
         <p>
@@ -43,7 +43,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jrobin" ivyde:javadoc="jrobin"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>

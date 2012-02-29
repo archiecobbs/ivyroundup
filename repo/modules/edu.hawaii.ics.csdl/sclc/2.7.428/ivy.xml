@@ -21,8 +21,8 @@
 
     <info organisation="edu.hawaii.ics.csdl" module="sclc" revision="2.7.428" status="release" publication="20080428120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 723 2009-05-22 14:49:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.hawaii.ics.csdl/sclc/2.7.428/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 723 2009-05-22 14:49:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.hawaii.ics.csdl/sclc/2.7.428/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://sclc.googlecode.com/">
 SCLC (Source Code Line Counter) counts the size of different types of source code files, providing the number of comment, non-comment, blank, and total lines. In addition, a count of "tokens" is provided for organizations where code layout variability makes line-oriented size counts unreliable for analysis purposes. 
         </description>

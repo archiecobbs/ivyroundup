@@ -21,8 +21,8 @@
 
     <info organisation="org.jaspersoft" module="jasperreports" revision="4.5.0" status="release" publication="20111207152700">
         <license name="LGPL, Version 2.1" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1908 2012-01-21 22:30:28Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/4.5.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1908 2012-01-21 22:30:28Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/4.5.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jasperforge.org/projects/jasperreports/">
         <p>
         100% pure Java report library for superior portability with flexible and
@@ -51,8 +51,8 @@
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
-        <artifact name="commons-javaflow" conf="javaflow"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jasperreports" ivyde:javadoc="jasperreports" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-javaflow" ivyde:javadoc="commons-javaflow" name="commons-javaflow" conf="javaflow"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>

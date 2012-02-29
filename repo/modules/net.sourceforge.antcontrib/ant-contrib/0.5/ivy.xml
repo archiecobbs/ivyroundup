@@ -21,15 +21,15 @@
 
     <info organisation="net.sourceforge.antcontrib" module="ant-contrib" revision="0.5" status="release" publication="20061102104600">
         <license name="Apache License, Version 1.1" url="http://www.apache.org/licenses/LICENSE-1.1"/>
-        <ivyauthor name="$Id: ivy.xml 488 2009-02-25 05:07:14Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.antcontrib/ant-contrib/0.5/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 488 2009-02-25 05:07:14Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.antcontrib/ant-contrib/0.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ant-contrib.sourceforge.net/">The Ant-Contrib project
         is a collection of tasks (and at one point maybe types and other tools) for Apache
         Ant.</description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="ant-contrib" ivyde:javadoc="ant-contrib"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

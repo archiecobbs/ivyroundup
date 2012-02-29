@@ -21,8 +21,8 @@
 
     <info organisation="javax.activation" module="jaf" revision="1.1.1" status="release" publication="20071017120000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <ivyauthor name="$Id: ivy.xml 210 2008-05-06 16:11:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.activation/jaf/1.1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 210 2008-05-06 16:11:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.activation/jaf/1.1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/javase/technologies/desktop/javabeans/jaf/index.jsp">
             JavaBeans Activation Framework (JAF) is a standard extension
             to the Java platform that lets you take advantage of standard
@@ -33,7 +33,7 @@
     </info>
 
     <publications>
-        <artifact name="activation"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="activation" name="activation"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

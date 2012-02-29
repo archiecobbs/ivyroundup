@@ -21,8 +21,8 @@
 
     <info organisation="javax.mail" module="javamail" revision="1.4.1" status="release" publication="20071017120000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <ivyauthor name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.mail/javamail/1.4.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.mail/javamail/1.4.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/products/javamail/">
             The JavaMail API provides a platform-independent and protocol-independent
             framework to build mail and messaging applications. The JavaMail API is
@@ -41,12 +41,12 @@
     </configurations>
 
     <publications>
-        <artifact name="mail" conf="default"/>
-        <artifact name="mailapi" conf="api"/>
-        <artifact name="imap" conf="default,imap"/>
-        <artifact name="smtp" conf="default,smtp"/>
-        <artifact name="pop3" conf="default,pop3"/>
-        <artifact name="dsn" conf="default,dsn"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mail" name="mail" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mailapi" name="mailapi" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="imap" name="imap" conf="default,imap"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="smtp" name="smtp" conf="default,smtp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="pop3" name="pop3" conf="default,pop3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="dsn" name="dsn" conf="default,dsn"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

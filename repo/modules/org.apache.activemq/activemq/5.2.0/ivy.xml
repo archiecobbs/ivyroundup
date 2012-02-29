@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.activemq" module="activemq" revision="5.2.0" status="release" publication="20081106032600">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 615 2009-03-23 22:39:34Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.activemq/activemq/5.2.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 615 2009-03-23 22:39:34Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.activemq/activemq/5.2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://activemq.apache.org/">
         <p>
         Apache ActiveMQ is the most popular and powerful open source Message
@@ -58,18 +58,18 @@
     </configurations>
 
     <publications>
-        <artifact name="activemq-camel" conf="camel"/>
-        <artifact name="activemq-console" conf="console"/>
-        <artifact name="activemq-core" conf="core"/>
-        <artifact name="activemq-jaas" conf="jaas"/>
-        <artifact name="activemq-jmdns_1.0" conf="jmdns"/>
-        <artifact name="activemq-jpa-store" conf="jpa"/>
-        <artifact name="activemq-openwire-generator" conf="openwire"/>
-        <artifact name="activemq-optional" conf="optional"/>
-        <artifact name="activemq-pool" conf="pool"/>
-        <artifact name="activemq-ra" conf="ra"/>
-        <artifact name="activemq-web" conf="web"/>
-        <artifact name="activemq-xmpp" conf="xmpp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-camel" ivyde:javadoc="activemq-camel" name="activemq-camel" conf="camel"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-console" ivyde:javadoc="activemq-console" name="activemq-console" conf="console"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-core" ivyde:javadoc="activemq-core" name="activemq-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jaas" ivyde:javadoc="activemq-jaas" name="activemq-jaas" conf="jaas"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jmdns_1.0" ivyde:javadoc="activemq-jmdns_1.0" name="activemq-jmdns_1.0" conf="jmdns"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jpa-store" ivyde:javadoc="activemq-jpa-store" name="activemq-jpa-store" conf="jpa"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-openwire-generator" ivyde:javadoc="activemq-openwire-generator" name="activemq-openwire-generator" conf="openwire"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-optional" ivyde:javadoc="activemq-optional" name="activemq-optional" conf="optional"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-pool" ivyde:javadoc="activemq-pool" name="activemq-pool" conf="pool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-ra" ivyde:javadoc="activemq-ra" name="activemq-ra" conf="ra"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-web" ivyde:javadoc="activemq-web" name="activemq-web" conf="web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-xmpp" ivyde:javadoc="activemq-xmpp" name="activemq-xmpp" conf="xmpp"/>
 
         <artifact name="activemq-camel" type="source" ext="zip" conf="camel"/>
         <artifact name="activemq-console" type="source" ext="zip" conf="console"/>

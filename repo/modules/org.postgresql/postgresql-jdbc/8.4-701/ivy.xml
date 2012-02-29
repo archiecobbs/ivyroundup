@@ -21,8 +21,8 @@
 
     <info organisation="org.postgresql" module="postgresql-jdbc" revision="8.4-701" status="release" publication="20090701023900">
         <license name="BSD License" url="http://jdbc.postgresql.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 926 2009-10-20 21:37:15Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.postgresql/postgresql-jdbc/8.4-701/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 926 2009-10-20 21:37:15Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.postgresql/postgresql-jdbc/8.4-701/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jdbc.postgresql.org/">
             <p>The PostgreSQL JDBC driver allows Java programs to connect to a
             PostgreSQL database using standard, database independent Java code.</p>
@@ -40,8 +40,8 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="postgresql-jdbc3" conf="jdbc3"/>
-        <artifact name="postgresql-jdbc4" conf="jdbc4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc3" name="postgresql-jdbc3" conf="jdbc3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc4" name="postgresql-jdbc4" conf="jdbc4"/>
         
         <!-- source -->
         <artifact name="source" type="source" ext="zip"/>

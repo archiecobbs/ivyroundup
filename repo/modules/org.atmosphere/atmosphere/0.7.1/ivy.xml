@@ -21,8 +21,8 @@
 
     <info organisation="org.atmosphere" module="atmosphere" revision="0.7.1" status="release" publication="20110405120000">
         <license name="CDDL+GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 1791 2011-11-03 14:13:14Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.7.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1791 2011-11-03 14:13:14Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/0.7.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://atmosphere.dev.java.net/">
             <p>
                 Atmosphere is a POJO based framework using Inversion of Control (IoC) to bring push/Comet
@@ -61,25 +61,25 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="atmosphere-annotations" conf="annotations"/>
-        <artifact name="atmosphere-bayeux" conf="bayeux"/>
-        <artifact name="atmosphere-compat-jbossweb" conf="compat-jbossweb"/>
-        <artifact name="atmosphere-compat-tomcat" conf="compat-tomcat"/>
-        <artifact name="atmosphere-compat-weblogic" conf="compat-weblogic"/>
-        <artifact name="atmosphere-guice" conf="guice"/>
-        <artifact name="atmosphere-jersey" conf="jersey"/>
-        <artifact name="atmosphere-jgroups" conf="jgroups"/>
-        <artifact name="atmosphere-jms" conf="jms"/>
-        <artifact name="atmosphere-runtime" conf="runtime"/>
-        <artifact name="atmosphere-spade-server" conf="spade"/>
-        <artifact name="atmosphere-di-guice" conf="guice"/>
-        <artifact name="atmosphere-gwt-client" conf="gwt-client"/>
-        <artifact name="atmosphere-gwt-common" conf="gwt, gwt-client"/>
-        <artifact name="atmosphere-gwt-poll" conf="gwt"/>
-        <artifact name="atmosphere-gwt-server" conf="gwt"/>
-        <artifact name="atmosphere-ping" conf="runtime"/>
-        <artifact name="atmosphere-redis" conf="redis"/>
-        <artifact name="atmosphere-xmpp" conf="xmpp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-annotations" ivyde:javadoc="atmosphere-annotations" name="atmosphere-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-bayeux" ivyde:javadoc="atmosphere-bayeux" name="atmosphere-bayeux" conf="bayeux"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-jbossweb" name="atmosphere-compat-jbossweb" conf="compat-jbossweb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-tomcat" name="atmosphere-compat-tomcat" conf="compat-tomcat"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-weblogic" ivyde:javadoc="atmosphere-compat-weblogic" name="atmosphere-compat-weblogic" conf="compat-weblogic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-guice" ivyde:javadoc="atmosphere-guice" name="atmosphere-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jersey" ivyde:javadoc="atmosphere-jersey" name="atmosphere-jersey" conf="jersey"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jgroups" ivyde:javadoc="atmosphere-jgroups" name="atmosphere-jgroups" conf="jgroups"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jms" ivyde:javadoc="atmosphere-jms" name="atmosphere-jms" conf="jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-runtime" ivyde:javadoc="atmosphere-runtime" name="atmosphere-runtime" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-spade-server" ivyde:javadoc="atmosphere-spade-server" name="atmosphere-spade-server" conf="spade"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-di-guice" ivyde:javadoc="atmosphere-di-guice" name="atmosphere-di-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-gwt-client" ivyde:javadoc="atmosphere-gwt-client" name="atmosphere-gwt-client" conf="gwt-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-gwt-common" ivyde:javadoc="atmosphere-gwt-common" name="atmosphere-gwt-common" conf="gwt, gwt-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-gwt-poll" ivyde:javadoc="atmosphere-gwt-poll" name="atmosphere-gwt-poll" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-gwt-server" ivyde:javadoc="atmosphere-gwt-server" name="atmosphere-gwt-server" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-ping" ivyde:javadoc="atmosphere-ping" name="atmosphere-ping" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-redis" ivyde:javadoc="atmosphere-redis" name="atmosphere-redis" conf="redis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-xmpp" ivyde:javadoc="atmosphere-xmpp" name="atmosphere-xmpp" conf="xmpp"/>
 
         <!-- source -->
         <artifact name="atmosphere-annotations" type="source" ext="zip" conf="annotations"/>

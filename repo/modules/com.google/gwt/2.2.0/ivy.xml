@@ -21,8 +21,8 @@
 
     <info organisation="com.google" module="gwt" revision="2.2.0" status="release" publication="20110210120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1519 2011-03-22 21:09:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/gwt/2.2.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1519 2011-03-22 21:09:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/gwt/2.2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/webtoolkit/">
 
             <p>
@@ -117,11 +117,11 @@
     </configurations>
 
     <publications>
-        <artifact name="gwt-user" conf="compile"/>
-        <artifact name="gwt-dev" conf="compile"/>
-        <artifact name="gwt-soyc-vis" conf="compile"/>
-        <artifact name="gwt-api-checker" conf="api-checker"/>
-        <artifact name="gwt-servlet" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-user" name="gwt-user" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-dev" name="gwt-dev" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-soyc-vis" name="gwt-soyc-vis" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-api-checker" name="gwt-api-checker" conf="api-checker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-servlet" name="gwt-servlet" conf="runtime"/>
         <artifact name="gwt-module" type="dtd" conf="module-dtd"/>
         <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>

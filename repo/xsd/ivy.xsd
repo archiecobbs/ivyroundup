@@ -17,7 +17,12 @@
    specific language governing permissions and limitations
    under the License.    
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/"
+  elementFormDefault="qualified">
+
+	<xs:import namespace="http://ant.apache.org/ivy/ivyde/ns/" schemaLocation="ivyde.xsd"/>
 
 	<xs:complexType name="configurations-conf">
         <xs:attribute name="name" type="xs:string" use="required"/>
@@ -116,6 +121,8 @@
 						            <xs:attribute name="ext" type="xs:string"/>
 						            <xs:attribute name="conf" type="xs:string"/>
 						            <xs:attribute name="url" type="xs:string"/>
+						            <xs:attribute ref="ivyde:source"/>
+						            <xs:attribute ref="ivyde:javadoc"/>
 				            	</xs:complexType>
 				      		</xs:element>
 				        </xs:sequence>

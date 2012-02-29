@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.xmlunit" module="xmlunit" revision="1.3" status="release" publication="20090921120000">
         <license name="BSD Style" url="http://xmlunit.svn.sourceforge.net/viewvc/xmlunit/trunk/xmlunit/LICENSE.txt?revision=HEAD"/>
-        <ivyauthor name="$Id: ivy.xml 1918 2012-01-31 15:35:41Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.xmlunit/xmlunit/1.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1918 2012-01-31 15:35:41Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.xmlunit/xmlunit/1.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xmlunit.sourceforge.net/">
 
         <p>
@@ -49,7 +49,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlunit" ivyde:javadoc="xmlunit"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,22 +21,22 @@
 
     <info organisation="org.wattdepot" module="wattdepot" revision="1.3.304" status="release" publication="20100304120000">
         <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 1092 2010-03-06 01:50:01Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/1.3.304/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1092 2010-03-06 01:50:01Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/1.3.304/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/wattdepot/">
 WattDepot is a RESTful web service that collects electricity data (such as current power utilization or cumulative power utilization) from meters and stores it in a database. The data can then be retrieved by other tools for visualization and analysis.
         </description>
     </info>
 
     <publications>
-        <artifact name="wattdepot-client-monitor"/>
-        <artifact name="wattdepot-converter-oscar"/>
-        <artifact name="wattdepot-lib-client"/>
-        <artifact name="wattdepot-sensor-bmo"/>
-        <artifact name="wattdepot-sensor-examplestreaming"/>
-        <artifact name="wattdepot-sensor-tabular"/>
-        <artifact name="wattdepot-sensor-ted5000"/>
-        <artifact name="wattdepot-server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-client-monitor" ivyde:javadoc="wattdepot-client-monitor" name="wattdepot-client-monitor"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-converter-oscar" ivyde:javadoc="wattdepot-converter-oscar" name="wattdepot-converter-oscar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-lib-client" ivyde:javadoc="wattdepot-lib-client" name="wattdepot-lib-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-bmo" ivyde:javadoc="wattdepot-sensor-bmo" name="wattdepot-sensor-bmo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-examplestreaming" ivyde:javadoc="wattdepot-sensor-examplestreaming" name="wattdepot-sensor-examplestreaming"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-tabular" ivyde:javadoc="wattdepot-sensor-tabular" name="wattdepot-sensor-tabular"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-sensor-ted5000" ivyde:javadoc="wattdepot-sensor-ted5000" name="wattdepot-sensor-ted5000"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-server" ivyde:javadoc="wattdepot-server" name="wattdepot-server"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,18 +21,18 @@
 
     <info organisation="org.wattdepot" module="wattdepot" revision="0.5.1021" status="release" publication="20091021120000">
         <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 931 2009-10-22 16:00:44Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/0.5.1021/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 931 2009-10-22 16:00:44Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/0.5.1021/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/wattdepot/">
 WattDepot is a RESTful web service that collects electricity data (such as current power utilization or cumulative power utilization) from meters and stores it in a database. The data can then be retrieved by other tools for visualization and analysis.
         </description>
     </info>
 
     <publications>
-        <artifact name="wattdepot-bmoclient"/>
-        <artifact name="wattdepot-clientlib"/>
-        <artifact name="wattdepot-tabularclient"/>
-        <artifact name="wattdepot-server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-bmoclient" ivyde:javadoc="wattdepot-bmoclient" name="wattdepot-bmoclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-clientlib" ivyde:javadoc="wattdepot-clientlib" name="wattdepot-clientlib"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-tabularclient" ivyde:javadoc="wattdepot-tabularclient" name="wattdepot-tabularclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-server" ivyde:javadoc="wattdepot-server" name="wattdepot-server"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="org.codehaus.castor" module="castor" revision="1.2" status="release" publication="20080204203400">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1621 2011-05-16 20:50:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.castor/castor/1.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1621 2011-05-16 20:50:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.castor/castor/1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.castor.org/">
             <p>
                 Castor is an Open Source data binding framework for Java[tm]. It's the shortest path
@@ -44,12 +44,12 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="castor-anttasks" conf="anttasks"/>
-        <artifact name="castor-codegen" conf="codegen"/>
-        <artifact name="castor-core" conf="core"/>
-        <artifact name="castor-ddlgen" conf="ddlgen"/>
-        <artifact name="castor-jdo" conf="jdo"/>
-        <artifact name="castor-xml-schema" conf="xml-schema"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-anttasks" ivyde:javadoc="castor-anttasks" name="castor-anttasks" conf="anttasks"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-codegen" ivyde:javadoc="castor-codegen" name="castor-codegen" conf="codegen"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-core" ivyde:javadoc="castor-core" name="castor-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-ddlgen" ivyde:javadoc="castor-ddlgen" name="castor-ddlgen" conf="ddlgen"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-jdo" ivyde:javadoc="castor-jdo" name="castor-jdo" conf="jdo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="castor-xml-schema" ivyde:javadoc="castor-xml-schema" name="castor-xml-schema" conf="xml-schema"/>
 
         <!-- source -->
         <artifact name="castor-anttasks" type="source" ext="zip" conf="anttasks"/>

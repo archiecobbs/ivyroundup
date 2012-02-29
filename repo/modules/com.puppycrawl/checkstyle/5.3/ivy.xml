@@ -21,8 +21,8 @@
 
     <info organisation="com.puppycrawl" module="checkstyle" revision="5.3" status="release" publication="20101019033200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1475 2011-02-04 01:26:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1475 2011-02-04 01:26:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
             Java code that adheres to a coding standard. It automates the
@@ -44,8 +44,8 @@
     </configurations>
 
     <publications>
-        <artifact name="checkstyle" conf="default"/>
-        <artifact name="checkstyle-all" conf="bundled"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle" ivyde:javadoc="checkstyle" name="checkstyle" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle-all" ivyde:javadoc="checkstyle-all" name="checkstyle-all" conf="bundled"/>
         <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="source" type="source" ext="zip"/>

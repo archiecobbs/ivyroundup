@@ -21,8 +21,8 @@
 
     <info organisation="com.mysql" module="mysql-connector-java" revision="5.1.7" status="release" publication="20081020210200">
         <license name="GNU Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-        <ivyauthor name="$Id: ivy.xml 484 2009-02-24 20:52:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.mysql/mysql-connector-java/5.1.7/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 484 2009-02-24 20:52:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.mysql/mysql-connector-java/5.1.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.mysql.com/products/connector/j/">
             MySQL Connector/J is a native Java driver that converts JDBC
             (Java Database Connectivity) calls into the network protocol
@@ -36,7 +36,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mysql-connector-java"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

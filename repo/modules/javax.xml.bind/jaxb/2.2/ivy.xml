@@ -21,8 +21,8 @@
 
     <info organisation="javax.xml.bind" module="jaxb" revision="2.2" status="release" publication="20091104120000">
         <license name="Dual license consisting of the  CDDL v1.0 and GPL v2" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 1176 2010-04-19 14:50:41Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1176 2010-04-19 14:50:41Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.xml.bind/jaxb/2.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jaxb.dev.java.net/">
 
             <p>
@@ -58,10 +58,10 @@
     </configurations>
 
     <publications>
-        <artifact name="jaxb-api" conf="runtime"/>
-        <artifact name="jaxb-impl" conf="runtime"/>
-        <artifact name="jaxb1-impl" conf="runtime-1.0"/>
-        <artifact name="jaxb-xjc" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-api" ivyde:javadoc="jaxb-api" name="jaxb-api" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-impl" ivyde:javadoc="jaxb-impl" name="jaxb-impl" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jaxb1-impl" name="jaxb1-impl" conf="runtime-1.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb-xjc" ivyde:javadoc="jaxb-xjc" name="jaxb-xjc" conf="compile"/>
 
         <artifact name="jaxb-api" type="source" ext="zip"/>
         <artifact name="jaxb-impl" type="source" ext="zip"/>

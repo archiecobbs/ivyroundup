@@ -21,15 +21,15 @@
 
     <info organisation="org.fontbox" module="fontbox" revision="0.1.0" status="release" publication="20061118120000">
         <license name="BSD-like" url="http://fontbox.cvs.sourceforge.net/viewvc/fontbox/FontBox/licenses/fontbox/LICENSE?revision=1.2&amp;view=markup"/>
-        <ivyauthor name="$Id: ivy.xml 1102 2010-03-08 22:18:01Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.fontbox/fontbox/0.1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1102 2010-03-08 22:18:01Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.fontbox/fontbox/0.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.apache.org/dist/pdfbox/fontbox/1.0.0/RELEASE-NOTES.txt">
             Low-level font parsing library.
         </description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="fontbox" ivyde:javadoc="fontbox"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="com.svcon" module="jdbf" revision="1.0" status="release" publication="20030114120000">
         <license name="Free, Unspecified" url="http://www.svcon.com/jdbf/"/>
-        <ivyauthor name="$Id: ivy.xml 1292 2010-09-03 18:30:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.svcon/jdbf/1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1292 2010-09-03 18:30:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.svcon/jdbf/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.svcon.com/jdbf/">
             JDBF is pure Java library for reading and writing DBF
             files. It is very light weight and very simple, yet it
@@ -32,7 +32,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jdbf"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

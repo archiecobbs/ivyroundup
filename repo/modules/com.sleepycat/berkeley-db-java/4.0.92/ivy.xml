@@ -21,8 +21,8 @@
 
     <info organisation="com.sleepycat" module="berkeley-db-java" revision="4.0.92" status="release" publication="20100129120000">
         <license name="Oracle Berkeley DB Java Open Source License" url="http://www.oracle.com/technology/software/products/berkeley-db/htdocs/jeoslicense.html"/>
-        <ivyauthor name="$Id: ivy.xml 1112 2010-03-10 22:27:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sleepycat/berkeley-db-java/4.0.92/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1112 2010-03-10 22:27:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sleepycat/berkeley-db-java/4.0.92/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technology/products/berkeley-db/je/index.html">
 
         <p>
@@ -119,7 +119,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="berkeley-db-java" ivyde:javadoc="berkeley-db-java"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

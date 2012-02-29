@@ -20,8 +20,8 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="org.apache.ws.security" module="wss4j" revision="1.6.3" status="release" publication="20111003110305">
-        <ivyauthor name="$Id: ivy.xml 1805 2011-11-25 16:57:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ws.security/wss4j/1.6.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1805 2011-11-25 16:57:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ws.security/wss4j/1.6.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ws.apache.org/wss4j/">
                 The Apache WSS4J project provides a Java implementation of the primary security standards 
         for Web Services, namely the OASIS Web Services Security (WS-Security) specifications 

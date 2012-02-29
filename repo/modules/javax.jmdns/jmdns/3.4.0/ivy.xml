@@ -21,8 +21,8 @@
 
     <info organisation="javax.jmdns" module="jmdns" revision="3.4.0" status="release" publication="20110120000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1524 2011-03-25 21:30:28Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jmdns/jmdns/3.4.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1524 2011-03-25 21:30:28Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jmdns/jmdns/3.4.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jmdns.sourceforge.net/">
             <p>JmDNS is a Java implementation of multi-cast DNS and can be
             used for service registration and discovery in local area networks.
@@ -48,7 +48,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmdns" ivyde:javadoc="jmdns"/>
         <artifact name="jmdns" type="source" ext="zip"/>
         <artifact name="jmdns" type="javadoc" ext="zip"/>
     </publications>

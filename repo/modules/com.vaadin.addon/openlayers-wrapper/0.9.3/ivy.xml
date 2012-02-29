@@ -21,8 +21,8 @@
 
     <info organisation="com.vaadin.addon" module="openlayers-wrapper" revision="0.9.3" status="release" publication="20120123140800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1911 2012-01-23 14:47:38Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/openlayers-wrapper/0.9.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1911 2012-01-23 14:47:38Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/openlayers-wrapper/0.9.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/directory#addon/openlayers-wrapper">
             <p>
                 Add-on contains server side wrapper component for OpenLayers Map. It also provides API's for different types of layers.

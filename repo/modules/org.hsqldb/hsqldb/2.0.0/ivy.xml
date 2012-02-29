@@ -21,8 +21,8 @@
 
     <info organisation="org.hsqldb" module="hsqldb" revision="2.0.0" status="release" publication="20100606230500">
         <license name="HSQL License" url="http://hsqldb.org/web/hsqlLicense.html"/>
-        <ivyauthor name="$Id: ivy.xml 1239 2010-06-30 19:48:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.0.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1239 2010-06-30 19:48:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hsqldb.org/">
         HSQLDB is the leading SQL relational database engine written in Java. It
         has a JDBC driver and supports a rich subset of ANSI-92 SQL (BNF tree
@@ -41,8 +41,8 @@
     </configurations>
 
     <publications>
-        <artifact conf="default"/>
-        <artifact name="hsqldb-j5" conf="java5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hsqldb" ivyde:javadoc="hsqldb" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hsqldb-j5" ivyde:javadoc="hsqldb-j5" name="hsqldb-j5" conf="java5"/>
         <artifact name="source" type="source" ext="zip" conf="default,java5"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default,java5"/>
     </publications>

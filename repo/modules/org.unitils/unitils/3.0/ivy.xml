@@ -21,8 +21,8 @@
 
     <info organisation="org.unitils" module="unitils" revision="3.0" status="release" publication="20091011182900">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1774 2011-10-26 15:45:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1774 2011-10-26 15:45:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.unitils/unitils/3.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.unitils.org/">
         <p>Unitils is an open source library aimed at making unit testing easy
         and maintainable. Unitils builds further on existing libraries like
@@ -138,17 +138,17 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="unitils-core" conf="core"/>
-        <artifact name="unitils-database" conf="database"/>
-        <artifact name="unitils-dbmaintainer" conf="dbmaintainer"/>
-        <artifact name="unitils-dbunit" conf="dbunit"/>
-        <artifact name="unitils-easymock" conf="easymock"/>
-        <artifact name="unitils-inject" conf="inject"/>
-        <artifact name="unitils-mock" conf="mock"/>
-        <artifact name="unitils-orm" conf="orm"/>
-        <artifact name="unitils-spring" conf="spring"/>
-        <artifact name="unitils-test" conf="test"/>
-        <artifact name="unitils-testng" conf="testng"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-core" ivyde:javadoc="unitils-core" name="unitils-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-database" ivyde:javadoc="unitils-database" name="unitils-database" conf="database"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-dbmaintainer" ivyde:javadoc="unitils-dbmaintainer" name="unitils-dbmaintainer" conf="dbmaintainer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-dbunit" ivyde:javadoc="unitils-dbunit" name="unitils-dbunit" conf="dbunit"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-easymock" ivyde:javadoc="unitils-easymock" name="unitils-easymock" conf="easymock"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-inject" ivyde:javadoc="unitils-inject" name="unitils-inject" conf="inject"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-mock" ivyde:javadoc="unitils-mock" name="unitils-mock" conf="mock"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-orm" ivyde:javadoc="unitils-orm" name="unitils-orm" conf="orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-spring" ivyde:javadoc="unitils-spring" name="unitils-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-test" ivyde:javadoc="unitils-test" name="unitils-test" conf="test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="unitils-testng" ivyde:javadoc="unitils-testng" name="unitils-testng" conf="testng"/>
 
         <!-- source -->
         <artifact name="unitils-core" type="source" conf="core" ext="zip"/>

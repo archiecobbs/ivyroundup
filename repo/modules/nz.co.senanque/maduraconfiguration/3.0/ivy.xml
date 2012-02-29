@@ -21,8 +21,8 @@
 
     <info organisation="nz.co.senanque" module="maduraconfiguration" revision="3.0" status="release" publication="20101118083214">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduraconfiguration/3.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1824 2011-12-12 15:19:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduraconfiguration/3.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/maduraconfiguration/">
         Connects Apache Commons Configration with Spring Beans.
         Useful for injecting configuration information into Spring Beans from an external
@@ -31,7 +31,7 @@
     </info>
 
     <publications>
-        <artifact conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="maduraconfiguration" ivyde:javadoc="maduraconfiguration" conf="default"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
         <artifact name="source" type="source" ext="zip" conf="default"/>
         <artifact name="MaduraConfiguration" type="doc" ext="pdf" conf="default"/>

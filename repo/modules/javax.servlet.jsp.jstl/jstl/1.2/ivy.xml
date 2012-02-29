@@ -21,8 +21,8 @@
 
     <info organisation="javax.servlet.jsp.jstl" module="jstl" revision="1.2" status="release" publication="20060720084500">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <ivyauthor name="$Id: ivy.xml 680 2009-04-28 10:16:13Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.servlet.jsp.jstl/jstl/1.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 680 2009-04-28 10:16:13Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.servlet.jsp.jstl/jstl/1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/products/jsp/jstl/">
         The JavaServer Pages Standard Tag Library (JSTL) encapsulates as simple tags the core functionality
         common to many Web applications. JSTL has support for common, structural tasks such as iteration
@@ -32,7 +32,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jstl"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

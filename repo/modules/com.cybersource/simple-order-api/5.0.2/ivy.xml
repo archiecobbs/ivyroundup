@@ -21,8 +21,8 @@
 
     <info organisation="com.cybersource" module="simple-order-api" revision="5.0.2" status="release" publication="20070525171800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 689 2009-04-28 19:05:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.cybersource/simple-order-api/5.0.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 689 2009-04-28 19:05:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.cybersource/simple-order-api/5.0.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.cybersource.com/support_center/implementation/downloads/simple_order/">
         CyberSource APIs provide access to every eCommerce payment management solution CyberSource offers. It is the right
         choice for merchants who want scalability, a full range of services, and greater control of the buying experience.
@@ -35,9 +35,9 @@
     </configurations>
 
     <publications>
-        <artifact name="cybssecurity" conf="default,java14"/>
-        <artifact name="cybsclients14" conf="java14"/>
-        <artifact name="cybsclients15" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="cybssecurity" name="cybssecurity" conf="default,java14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="cybsclients14" name="cybsclients14" conf="java14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="cybsclients15" name="cybsclients15" conf="default"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

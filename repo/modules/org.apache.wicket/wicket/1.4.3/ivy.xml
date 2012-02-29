@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.wicket" module="wicket" revision="1.4.3" status="release" publication="20091023120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 944 2009-11-06 18:02:36Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.wicket/wicket/1.4.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 944 2009-11-06 18:02:36Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.wicket/wicket/1.4.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://wicket.apache.org/">
 Apache Wicket is an open source, java, component based, web application
 framework. With proper mark-up/logic separation, a POJO data model, and a
@@ -48,18 +48,18 @@ powerful, reusable components written with plain Java and HTML.
     </configurations>
 
     <publications>
-        <artifact name="wicket" conf="default"/>
-        <artifact name="wicket-auth-roles" conf="auth"/>
-        <artifact name="wicket-datetime" conf="datetime"/>
-        <artifact name="wicket-devutils" conf="devutils"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket" ivyde:javadoc="wicket" name="wicket" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-auth-roles" ivyde:javadoc="wicket-auth-roles" name="wicket-auth-roles" conf="auth"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-datetime" ivyde:javadoc="wicket-datetime" name="wicket-datetime" conf="datetime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-devutils" ivyde:javadoc="wicket-devutils" name="wicket-devutils" conf="devutils"/>
         <artifact name="wicket-examples" type="war" ext="war" conf="examples"/>
-        <artifact name="wicket-extensions" conf="default"/>
-        <artifact name="wicket-guice" conf="guice"/>
-        <artifact name="wicket-ioc" conf="ioc"/>
-        <artifact name="wicket-jmx" conf="jmx"/>
-        <artifact name="wicket-objectsizeof-agent" conf="objectsize"/>
-        <artifact name="wicket-spring" conf="spring"/>
-        <artifact name="wicket-velocity" conf="velocity"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-extensions" ivyde:javadoc="wicket-extensions" name="wicket-extensions" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-guice" ivyde:javadoc="wicket-guice" name="wicket-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-ioc" ivyde:javadoc="wicket-ioc" name="wicket-ioc" conf="ioc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-jmx" ivyde:javadoc="wicket-jmx" name="wicket-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-objectsizeof-agent" ivyde:javadoc="wicket-objectsizeof-agent" name="wicket-objectsizeof-agent" conf="objectsize"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-spring" ivyde:javadoc="wicket-spring" name="wicket-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wicket-velocity" ivyde:javadoc="wicket-velocity" name="wicket-velocity" conf="velocity"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

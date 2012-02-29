@@ -21,8 +21,8 @@
 
     <info organisation="net.jcip" module="jcip-annotations" revision="1.0" status="release" publication="20091204120000">
         <license name="Creative Commons Attribution License" url="http://creativecommons.org/licenses/by/2.5"/>
-        <ivyauthor name="$Id: ivy.xml 1055 2010-02-09 16:51:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.jcip/jcip-annotations/1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1055 2010-02-09 16:51:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.jcip/jcip-annotations/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jcip.net/">
 
              <p>
@@ -56,7 +56,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcip-annotations"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

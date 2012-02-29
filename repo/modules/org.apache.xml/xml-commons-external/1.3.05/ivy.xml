@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.xml" module="xml-commons-external" revision="1.3.05" status="release" publication="20091215120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1603 2011-05-09 19:36:09Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xml-commons-external/1.3.05/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1603 2011-05-09 19:36:09Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xml-commons-external/1.3.05/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xml.apache.org/commons/">
         The External Components portion of xml-commons contains interfaces that
         are defined by external standards organizations. For DOM, that's the
@@ -37,8 +37,8 @@
     </configurations>
 
     <publications>
-        <artifact name="xml-apis" conf="default"/>
-        <artifact name="xml-apis-ext" conf="default,ext-only"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xml-apis" ivyde:javadoc="xml-apis" name="xml-apis" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xml-apis-ext" ivyde:javadoc="xml-apis-ext" name="xml-apis-ext" conf="default,ext-only"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

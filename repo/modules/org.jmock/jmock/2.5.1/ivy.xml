@@ -21,8 +21,8 @@
 
     <info organisation="org.jmock" module="jmock" revision="2.5.1" status="release" publication="20080826120000">
         <license name="BSD Style" url="http://jmock.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1701 2011-09-17 20:02:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jmock/jmock/2.5.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1701 2011-09-17 20:02:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jmock/jmock/2.5.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jmock.org/">
 
         <p>JMock is a library that supports
@@ -54,11 +54,11 @@
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
-        <artifact name="jmock-script" conf="script"/>
-        <artifact name="jmock-legacy" conf="legacy"/>
-        <artifact name="jmock-junit3" conf="junit3"/>
-        <artifact name="jmock-junit4" conf="junit4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmock" ivyde:javadoc="jmock" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmock-script" ivyde:javadoc="jmock-script" name="jmock-script" conf="script"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmock-legacy" ivyde:javadoc="jmock-legacy" name="jmock-legacy" conf="legacy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmock-junit3" ivyde:javadoc="jmock-junit3" name="jmock-junit3" conf="junit3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmock-junit4" ivyde:javadoc="jmock-junit4" name="jmock-junit4" conf="junit4"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="javax.jnlp" module="jnlp" revision="6.0" status="release" publication="20090117013500">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://java.sun.com/products/jms/docs.html"/>
-        <ivyauthor name="$Id: ivy.xml 619 2009-03-24 13:32:50Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jnlp/jnlp/6.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 619 2009-03-24 13:32:50Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jnlp/jnlp/6.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/javase/technologies/desktop/javawebstart/index.jsp">
         <p>
         Java Web Start is a helper application that gets associated with a Web

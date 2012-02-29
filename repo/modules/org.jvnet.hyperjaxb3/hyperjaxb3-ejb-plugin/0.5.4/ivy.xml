@@ -21,13 +21,13 @@
 
     <info organisation="org.jvnet.hyperjaxb3" module="hyperjaxb3-ejb-plugin" revision="0.5.4" status="release" publication="20080808120000">
         <license name="The BSD Style License" url="http://confluence.highsource.org/display/HJ3/License"/>
-        <ivyauthor name="$Id: ivy.xml 1179 2010-04-19 15:09:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jvnet.hyperjaxb3/hyperjaxb3-ejb-plugin/0.5.4/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1179 2010-04-19 15:09:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jvnet.hyperjaxb3/hyperjaxb3-ejb-plugin/0.5.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://confluence.highsource.org/display/HJ3/Home">Hyperjaxb3 EJB Plugin</description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hyperjaxb3-ejb-plugin" ivyde:javadoc="hyperjaxb3-ejb-plugin"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

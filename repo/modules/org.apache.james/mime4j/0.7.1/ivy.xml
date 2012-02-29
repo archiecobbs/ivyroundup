@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.james" module="mime4j" revision="0.7.1" status="release" publication="20111014120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1819 2011-12-08 22:00:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.james/mime4j/0.7.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1819 2011-12-08 22:00:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.james/mime4j/0.7.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://james.apache.org/mime4j/index.html">
         <p>
         mime4j provides a parser, MimeStreamParser, for e-mail message streams in plain rfc822 and MIME format. 
@@ -42,10 +42,10 @@
     <publications>
 
         <!-- jars -->
-        <artifact conf="core" name="core"/>
-        <artifact conf="dom" name="dom"/>
-        <artifact conf="storage" name="storage"/>
-        <artifact conf="benchmark" name="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="core" ivyde:javadoc="core" conf="core" name="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="dom" ivyde:javadoc="dom" conf="dom" name="dom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="storage" ivyde:javadoc="storage" conf="storage" name="storage"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="benchmark" ivyde:javadoc="benchmark" conf="benchmark" name="benchmark"/>
         <artifact conf="examples" name="examples" type="javadoc" ext="zip"/>
 
         <!-- sources -->

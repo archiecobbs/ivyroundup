@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring-ws" revision="2.0.0-M1" status="release" publication="20100301135800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1194 2010-04-21 20:53:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-ws/2.0.0-M1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1194 2010-04-21 20:53:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-ws/2.0.0-M1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-ws/sites/1.5/">
         Spring Web Services is a product of the Spring  community focused on creating
         document-driven Web services. Spring Web Services aims to facilitate contract-first SOAP
@@ -38,10 +38,10 @@
     </configurations>
 
     <publications>
-        <artifact name="spring-ws-core" conf="core"/>
-        <artifact name="spring-ws-security" conf="security"/>
-        <artifact name="spring-ws-support" conf="core"/>
-        <artifact name="spring-xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-ws-core" ivyde:javadoc="spring-ws-core" name="spring-ws-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-ws-security" ivyde:javadoc="spring-ws-security" name="spring-ws-security" conf="security"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-ws-support" ivyde:javadoc="spring-ws-support" name="spring-ws-support" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-xml" ivyde:javadoc="spring-xml" name="spring-xml" conf="xml"/>
 
 
         <artifact name="spring-ws-core" type="source" ext="zip" conf="core"/>

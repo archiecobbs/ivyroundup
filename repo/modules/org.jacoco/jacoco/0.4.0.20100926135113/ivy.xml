@@ -21,15 +21,15 @@
 
     <info organisation="org.jacoco" module="jacoco" revision="0.4.0.20100926135113" status="release" publication="20100926135113">
         <license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-        <ivyauthor name="$Id: ivy.xml 1341 2010-10-01 20:25:19Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jacoco/jacoco/0.4.0.20100926135113/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1341 2010-10-01 20:25:19Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jacoco/jacoco/0.4.0.20100926135113/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.eclemma.org/jacoco/trunk/index.html">
 JaCoCo is a free, instrumentation-based code coverage tool for Java VM based environments. Jacoco is designed to provide a lightweight, flexible and well-documented library for integration with various build and development tools. 
         </description>
     </info>
 
     <publications>
-      <artifact name="jacocoant" ext="jar"/>
+      <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jacocoant" name="jacocoant" ext="jar"/>
       <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

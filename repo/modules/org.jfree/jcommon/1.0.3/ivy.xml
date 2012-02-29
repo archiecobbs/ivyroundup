@@ -21,16 +21,16 @@
 
     <info organisation="org.jfree" module="jcommon" revision="1.0.3" status="release" publication="20060417134500">
         <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 430 2009-01-13 18:38:54Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jfree/jcommon/1.0.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 430 2009-01-13 18:38:54Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jfree/jcommon/1.0.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jfree.org/jcommon/">JCommon is
           a collection of useful classes used by JFreeChart, JFreeReport and other
           projects.</description>
     </info>
 
     <publications>
-        <artifact name="jcommon"/>
-        <artifact name="jcommon-xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcommon" name="jcommon"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcommon-xml" name="jcommon-xml"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

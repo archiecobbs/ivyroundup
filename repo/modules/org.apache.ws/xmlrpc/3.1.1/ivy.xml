@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.ws" module="xmlrpc" revision="3.1.1" status="release" publication="20080810120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 331 2008-12-12 23:16:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ws/xmlrpc/3.1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 331 2008-12-12 23:16:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ws/xmlrpc/3.1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ws.apache.org/xmlrpc/">
         Apache XML-RPC is a Java implementation of <a href="http://www.xmlrpc.com/">XML-RPC</a>,
         a popular protocol that uses XML over HTTP to implement remote procedure calls.
@@ -52,10 +52,10 @@
     </configurations>
 
     <publications>
-        <artifact name="xmlrpc-client" conf="client"/>
-        <artifact name="xmlrpc-common" conf="common"/>
-        <artifact name="xmlrpc-server" conf="server"/>
-        <artifact name="ws-commons-util-1.0.2" conf="common"/> <!-- TODO: should be in its own "ws-common-util" module -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-client" ivyde:javadoc="xmlrpc-client" name="xmlrpc-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-common" ivyde:javadoc="xmlrpc-common" name="xmlrpc-common" conf="common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-server" ivyde:javadoc="xmlrpc-server" name="xmlrpc-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="ws-commons-util-1.0.2" ivyde:javadoc="ws-commons-util-1.0.2" name="ws-commons-util-1.0.2" conf="common"/> <!-- TODO: should be in its own "ws-common-util" module -->
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

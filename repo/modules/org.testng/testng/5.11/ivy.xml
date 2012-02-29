@@ -21,8 +21,8 @@
 
     <info organisation="org.testng" module="testng" revision="5.11" status="release" publication="20091102103300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1231 2010-06-28 20:39:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.testng/testng/5.11/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1231 2010-06-28 20:39:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.testng/testng/5.11/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.testng.org/">
             TestNG is a testing framework designed to simply a broad range of
             testing needs, from unit testing (testing a class in isolation of
@@ -39,8 +39,8 @@
     </configurations>
 
     <publications>
-        <artifact name="testng-jdk14" conf="jdk14"/>
-        <artifact name="testng-jdk15" conf="default,jdk15"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng-jdk14" ivyde:javadoc="testng-jdk14" name="testng-jdk14" conf="jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng-jdk15" ivyde:javadoc="testng-jdk15" name="testng-jdk15" conf="default,jdk15"/>
         <artifact type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

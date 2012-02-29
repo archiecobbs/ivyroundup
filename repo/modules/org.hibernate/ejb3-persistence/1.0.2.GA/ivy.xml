@@ -21,8 +21,8 @@
 
     <info organisation="org.hibernate" module="ejb3-persistence" revision="1.0.2.GA" status="release" publication="20080429013300">
         <license name="Common Development and Distribution License (CDDL) v1.0" url="http://www.sun.com/cddl/cddl.html"/>
-        <ivyauthor name="$Id: ivy.xml 822 2009-07-21 15:04:48Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/ejb3-persistence/1.0.2.GA/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 822 2009-07-21 15:04:48Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/ejb3-persistence/1.0.2.GA/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jcp.org/en/jsr/detail?id=220">
         <p>
         The Enterprise JavaBeans architecture is a component architecture for
@@ -35,7 +35,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="ejb3-persistence"/>
         <artifact type="source" ext="zip"/>
     </publications>
 

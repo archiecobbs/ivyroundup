@@ -21,8 +21,8 @@
 
     <info organisation="com.codesynthesis" module="xsstl" revision="1.0.0" status="release" publication="20060427062700">
         <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 1499 2011-02-19 22:31:40Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.codesynthesis/xsstl/1.0.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1499 2011-02-19 22:31:40Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.codesynthesis/xsstl/1.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.codesynthesis.com/projects/xsstl/">
             <p>
                 XML Schema Standard Type Library (XSSTL) is a collection of universally-useful data

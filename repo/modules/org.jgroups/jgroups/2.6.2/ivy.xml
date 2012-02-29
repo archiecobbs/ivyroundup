@@ -21,8 +21,8 @@
 
     <info organisation="org.jgroups" module="jgroups" revision="2.6.2" status="release" publication="20080226120000">
         <license name="GNU Lesser Public License, Version 2.1" url="http://www.opensource.org/licenses/lgpl-2.1.php"/>
-        <ivyauthor name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jgroups/jgroups/2.6.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jgroups/jgroups/2.6.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jgroups.org/">
             <p>
             JGroups is a toolkit for reliable multicast communication.
@@ -43,7 +43,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jgroups"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

@@ -21,8 +21,8 @@
 
     <info organisation="org.hibernate" module="hibernate" revision="3.5.5-Final" status="release" publication="20100818154830">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1300 2010-09-08 16:46:13Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.5.5-Final/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1300 2010-09-08 16:46:13Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hibernate/hibernate/3.5.5-Final/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hibernate.org/">
 
             <p>
@@ -72,18 +72,18 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="hibernate-annotations" conf="annotations"/>
-        <artifact name="hibernate-c3p0" conf="c3p0"/>
-        <artifact name="hibernate-core" conf="core"/>
-        <artifact name="hibernate-ehcache" conf="ehcache"/>
-        <artifact name="hibernate-entitymanager" conf="entitymanager"/>
-        <artifact name="hibernate-envers" conf="envers"/>
-        <artifact name="hibernate-infinispan" conf="infinispan"/>
-        <artifact name="hibernate-jbosscache" conf="jbosscache"/>
-        <artifact name="hibernate-jmx" conf="jmx"/>
-        <artifact name="hibernate-oscache" conf="oscache"/>
-        <artifact name="hibernate-proxool" conf="proxool"/>
-        <artifact name="hibernate-swarmcache" conf="swarmcache"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-annotations" name="hibernate-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-c3p0" name="hibernate-c3p0" conf="c3p0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-core" name="hibernate-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-ehcache" name="hibernate-ehcache" conf="ehcache"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-entitymanager" name="hibernate-entitymanager" conf="entitymanager"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-envers" name="hibernate-envers" conf="envers"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-infinispan" name="hibernate-infinispan" conf="infinispan"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-jbosscache" name="hibernate-jbosscache" conf="jbosscache"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-jmx" name="hibernate-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-oscache" name="hibernate-oscache" conf="oscache"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-proxool" name="hibernate-proxool" conf="proxool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-swarmcache" name="hibernate-swarmcache" conf="swarmcache"/>
 
         <!-- source -->
         <artifact name="hibernate-annotations" type="source" ext="zip" conf="annotations"/>

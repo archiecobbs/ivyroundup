@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.backport-jsr166" module="backport-util-concurrent" revision="3.1" status="release" publication="20070802105600">
         <license name="Creative Commons" url="http://creativecommons.org/licenses/publicdomain/"/>
-        <ivyauthor name="$Id: ivy.xml 566 2009-03-17 11:27:35Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.backport-jsr166/backport-util-concurrent/3.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 566 2009-03-17 11:27:35Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.backport-jsr166/backport-util-concurrent/3.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://backport-jsr166.sourceforge.net/">
         This package is the backport of java.util.concurrent API, introduced in
         Java 5.0 and further refined in Java 6.0, to older Java platforms. The
@@ -41,10 +41,10 @@
     </configurations>
 
     <publications>
-        <artifact name="backport-util-concurrent-Java12" conf="Java12"/>
-        <artifact name="backport-util-concurrent-Java14" conf="Java14"/>
-        <artifact name="backport-util-concurrent-Java50" conf="Java50"/>
-        <artifact name="backport-util-concurrent-Java60" conf="Java60"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="backport-util-concurrent-Java12" ivyde:javadoc="backport-util-concurrent-Java12" name="backport-util-concurrent-Java12" conf="Java12"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="backport-util-concurrent-Java14" ivyde:javadoc="backport-util-concurrent-Java14" name="backport-util-concurrent-Java14" conf="Java14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="backport-util-concurrent-Java50" ivyde:javadoc="backport-util-concurrent-Java50" name="backport-util-concurrent-Java50" conf="Java50"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="backport-util-concurrent-Java60" ivyde:javadoc="backport-util-concurrent-Java60" name="backport-util-concurrent-Java60" conf="Java60"/>
         <artifact name="backport-util-concurrent-Java12" type="source" ext="zip"/>
         <artifact name="backport-util-concurrent-Java14" type="source" ext="zip"/>
         <artifact name="backport-util-concurrent-Java50" type="source" ext="zip"/>

@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring" revision="2.0.2" status="release" publication="20070108202100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 629 2009-03-25 09:08:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.0.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 629 2009-03-25 09:08:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.0.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
             published in Expert One-on-One J2EE Design and Development by Rod Johnson
@@ -153,32 +153,32 @@
     </configurations>
 
     <publications>
-        <artifact name="spring" type="jar" ext="jar" conf="all"/>
-        <artifact name="spring-agent" type="jar" ext="jar" conf="agent"/>
-        <artifact name="spring-aspects" type="jar" ext="jar" conf="aspects"/>
-        <artifact name="spring-aop" type="jar" ext="jar" conf="aop, remoting, jmx, aspects"/>
-        <artifact name="spring-beans" type="jar" ext="jar" conf="beans, context, support, web, struts, portlet, webmvc, jmx, jms, jdbc, jdo, jca, jpa, hibernate2, hibernate3, toplink, ibatis"/>
-        <artifact name="spring-context" type="jar" ext="jar" conf="context, support, web, struts, portlet, webmvc"/>
-        <artifact name="spring-core" type="jar" ext="jar" conf="core, aop, remoting, dao, beans, context, support, web, struts, portlet, webmvc, jmx, jms, jdbc, jdo, jca, jpa, hibernate2, hibernate3, toplink, ibatis, mock"/>
-        <artifact name="spring-dao" type="jar" ext="jar" conf="dao, jms, jca, jdbc, jpa, jdo, hibernate2, hibernate3, toplink, ibatis"/>
-        <artifact name="spring-hibernate2" type="jar" ext="jar" conf="hibernate2"/>
-        <artifact name="spring-hibernate3" type="jar" ext="jar" conf="hibernate3"/>
-        <artifact name="spring-ibatis" type="jar" ext="jar" conf="ibatis"/>
-        <artifact name="spring-jca" type="jar" ext="jar" conf="jca"/>
-        <artifact name="spring-jdbc" type="jar" ext="jar" conf="jdbc, jpa, jdo, hibernate2, hibernate3, toplink, ibatis"/>
-        <artifact name="spring-jdo" type="jar" ext="jar" conf="jdo"/>
-        <artifact name="spring-jms" type="jar" ext="jar" conf="jms"/>
-        <artifact name="spring-jmx" type="jar" ext="jar" conf="jmx"/>
-        <artifact name="spring-jpa" type="jar" ext="jar" conf="jpa"/>
-        <artifact name="spring-portlet" type="jar" ext="jar" conf="portlet"/>
-        <artifact name="spring-remoting" type="jar" ext="jar" conf="remoting"/>
-        <artifact name="spring-struts" type="jar" ext="jar" conf="struts"/>
-        <artifact name="spring-support" type="jar" ext="jar" conf="support"/>
-        <artifact name="spring-tomcat-weaver" type="jar" ext="jar" conf="tomcat-weaver"/>
-        <artifact name="spring-toplink" type="jar" ext="jar" conf="toplink"/>
-        <artifact name="spring-web" type="jar" ext="jar" conf="web, struts, portlet, webmvc"/>
-        <artifact name="spring-webmvc" type="jar" ext="jar" conf="webmvc"/>
-        <artifact name="spring-mock" type="jar" ext="jar" conf="mock"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring" name="spring" type="jar" ext="jar" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-agent" name="spring-agent" type="jar" ext="jar" conf="agent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-aspects" name="spring-aspects" type="jar" ext="jar" conf="aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-aop" name="spring-aop" type="jar" ext="jar" conf="aop, remoting, jmx, aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-beans" name="spring-beans" type="jar" ext="jar" conf="beans, context, support, web, struts, portlet, webmvc, jmx, jms, jdbc, jdo, jca, jpa, hibernate2, hibernate3, toplink, ibatis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-context" name="spring-context" type="jar" ext="jar" conf="context, support, web, struts, portlet, webmvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-core" name="spring-core" type="jar" ext="jar" conf="core, aop, remoting, dao, beans, context, support, web, struts, portlet, webmvc, jmx, jms, jdbc, jdo, jca, jpa, hibernate2, hibernate3, toplink, ibatis, mock"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-dao" name="spring-dao" type="jar" ext="jar" conf="dao, jms, jca, jdbc, jpa, jdo, hibernate2, hibernate3, toplink, ibatis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-hibernate2" name="spring-hibernate2" type="jar" ext="jar" conf="hibernate2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-hibernate3" name="spring-hibernate3" type="jar" ext="jar" conf="hibernate3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-ibatis" name="spring-ibatis" type="jar" ext="jar" conf="ibatis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jca" name="spring-jca" type="jar" ext="jar" conf="jca"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jdbc" name="spring-jdbc" type="jar" ext="jar" conf="jdbc, jpa, jdo, hibernate2, hibernate3, toplink, ibatis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jdo" name="spring-jdo" type="jar" ext="jar" conf="jdo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jms" name="spring-jms" type="jar" ext="jar" conf="jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jmx" name="spring-jmx" type="jar" ext="jar" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jpa" name="spring-jpa" type="jar" ext="jar" conf="jpa"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-portlet" name="spring-portlet" type="jar" ext="jar" conf="portlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-remoting" name="spring-remoting" type="jar" ext="jar" conf="remoting"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-struts" name="spring-struts" type="jar" ext="jar" conf="struts"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-support" name="spring-support" type="jar" ext="jar" conf="support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-tomcat-weaver" name="spring-tomcat-weaver" type="jar" ext="jar" conf="tomcat-weaver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-toplink" name="spring-toplink" type="jar" ext="jar" conf="toplink"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-web" name="spring-web" type="jar" ext="jar" conf="web, struts, portlet, webmvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-webmvc" name="spring-webmvc" type="jar" ext="jar" conf="webmvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-mock" name="spring-mock" type="jar" ext="jar" conf="mock"/>
         <artifact name="spring-src" type="source" ext="zip"/>
     </publications>
 

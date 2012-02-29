@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.cobertura" module="cobertura" revision="1.9.2" status="release" publication="20090625101800">
         <license name="GNU General Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-        <ivyauthor name="$Id: ivy.xml 790 2009-06-30 12:15:23Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.cobertura/cobertura/1.9.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 790 2009-06-30 12:15:23Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.cobertura/cobertura/1.9.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://cobertura.sourceforge.net/">
             Cobertura is a free Java tool that calculates the percentage
             of code accessed by tests. It can be used to identify which
@@ -32,7 +32,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cobertura"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

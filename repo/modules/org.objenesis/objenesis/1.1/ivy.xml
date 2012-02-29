@@ -21,8 +21,8 @@
 
     <info organisation="org.objenesis" module="objenesis" revision="1.1" status="release" publication="20090105120000">
         <license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 357 2009-01-06 15:25:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objenesis/objenesis/1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 357 2009-01-06 15:25:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objenesis/objenesis/1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://objenesis.googlecode.com/svn/docs/index.html">A library for instantiating Java objects.</description>
     </info>
 
@@ -32,8 +32,8 @@
     </configurations>
 
     <publications>
-        <artifact conf="default"/>
-        <artifact name="objenesis-tck" conf="tck"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="objenesis" ivyde:javadoc="objenesis" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="objenesis-tck" ivyde:javadoc="objenesis-tck" name="objenesis-tck" conf="tck"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

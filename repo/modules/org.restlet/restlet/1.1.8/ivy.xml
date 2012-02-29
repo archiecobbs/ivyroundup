@@ -21,8 +21,8 @@
 
     <info organisation="org.restlet" module="restlet" revision="1.1.8" status="release" publication="20100129120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1029 2010-01-30 18:50:17Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.restlet/restlet/1.1.8/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1029 2010-01-30 18:50:17Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.restlet/restlet/1.1.8/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.restlet.org/">
         Lightweight REST framework for Java
         </description>
@@ -62,33 +62,33 @@
     <publications>
 
         <!-- JARs -->
-        <artifact name="com.noelios.restlet" conf="nre"/>
-        <artifact name="com.noelios.restlet.ext.grizzly_1.9" conf="grizzly"/>
-        <artifact name="com.noelios.restlet.ext.gwt_1.5" conf="gwt"/>
-        <artifact name="com.noelios.restlet.ext.httpclient_3.1" conf="httpclient"/>
-        <artifact name="com.noelios.restlet.ext.javamail_1.4" conf="javamail"/>
-        <artifact name="com.noelios.restlet.ext.jdbc_3.0" conf="jdbc"/>
-        <artifact name="com.noelios.restlet.ext.jetty_6.1" conf="jetty6"/>
-        <artifact name="com.noelios.restlet.ext.net" conf="net"/>
-        <artifact name="com.noelios.restlet.ext.oauth_1.0" conf="oauth"/>
-        <artifact name="com.noelios.restlet.ext.servlet_2.5" conf="servlet"/>
-        <artifact name="com.noelios.restlet.ext.simple_3.1" conf="simple"/>
-        <artifact name="com.noelios.restlet.ext.spring_2.5" conf="spring"/>
-        <artifact name="com.noelios.restlet.ext.ssl" conf="ssl"/>
-        <artifact name="com.noelios.restlet.ext.xdb_11.1" conf="xdb"/>
-        <artifact name="org.restlet" conf="api"/>
-        <artifact name="org.restlet.example" conf="examples"/>
-        <artifact name="org.restlet.ext.atom_1.0" conf="atom"/>
-        <artifact name="org.restlet.ext.fileupload_1.2" conf="fileupload"/>
-        <artifact name="org.restlet.ext.freemarker_2.3" conf="freemarker"/>
-        <artifact name="org.restlet.ext.jaxb_2.1" conf="jaxb"/>
-        <artifact name="org.restlet.ext.jaxrs_1.0" conf="jaxrs"/>
-        <artifact name="org.restlet.ext.jibx_1.1" conf="jibx"/>
-        <artifact name="org.restlet.ext.json_2.0" conf="json"/>
-        <artifact name="org.restlet.ext.spring_2.5" conf="spring"/>
-        <artifact name="org.restlet.ext.velocity_1.5" conf="velocity"/>
-        <artifact name="org.restlet.ext.wadl_1.0" conf="wadl"/>
-        <artifact name="org.restlet.gwt" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet" name="com.noelios.restlet" conf="nre"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.grizzly_1.9" name="com.noelios.restlet.ext.grizzly_1.9" conf="grizzly"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.gwt_1.5" name="com.noelios.restlet.ext.gwt_1.5" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.httpclient_3.1" name="com.noelios.restlet.ext.httpclient_3.1" conf="httpclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.javamail_1.4" name="com.noelios.restlet.ext.javamail_1.4" conf="javamail"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.jdbc_3.0" name="com.noelios.restlet.ext.jdbc_3.0" conf="jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.jetty_6.1" name="com.noelios.restlet.ext.jetty_6.1" conf="jetty6"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.net" name="com.noelios.restlet.ext.net" conf="net"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.oauth_1.0" name="com.noelios.restlet.ext.oauth_1.0" conf="oauth"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.servlet_2.5" name="com.noelios.restlet.ext.servlet_2.5" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.simple_3.1" name="com.noelios.restlet.ext.simple_3.1" conf="simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.spring_2.5" name="com.noelios.restlet.ext.spring_2.5" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.ssl" name="com.noelios.restlet.ext.ssl" conf="ssl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="com.noelios.restlet.ext.xdb_11.1" name="com.noelios.restlet.ext.xdb_11.1" conf="xdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet" name="org.restlet" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.example" name="org.restlet.example" conf="examples"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.atom_1.0" name="org.restlet.ext.atom_1.0" conf="atom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.fileupload_1.2" name="org.restlet.ext.fileupload_1.2" conf="fileupload"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.freemarker_2.3" name="org.restlet.ext.freemarker_2.3" conf="freemarker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxb_2.1" name="org.restlet.ext.jaxb_2.1" conf="jaxb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxrs_1.0" name="org.restlet.ext.jaxrs_1.0" conf="jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jibx_1.1" name="org.restlet.ext.jibx_1.1" conf="jibx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.json_2.0" name="org.restlet.ext.json_2.0" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.spring_2.5" name="org.restlet.ext.spring_2.5" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.velocity_1.5" name="org.restlet.ext.velocity_1.5" conf="velocity"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.wadl_1.0" name="org.restlet.ext.wadl_1.0" conf="wadl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.gwt" name="org.restlet.gwt" conf="gwt"/>
 
          <!-- 
            The following artifact should ideally be a dependency. However, after some digging I was unable

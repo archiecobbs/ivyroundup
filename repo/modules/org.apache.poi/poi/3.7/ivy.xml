@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.poi" module="poi" revision="3.7" status="release" publication="20101029085200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1651 2011-06-25 19:04:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.7/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1651 2011-06-25 19:04:51Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.poi/poi/3.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://poi.apache.org/">
 
         <p>
@@ -101,11 +101,11 @@
     </configurations>
 
     <publications>
-        <artifact/>
-        <artifact name="poi-scratchpad" conf="scratchpad"/>
-        <artifact name="poi-ooxml" conf="ooxml"/>
-        <artifact name="poi-ooxml-schemas" conf="ooxml-schemas"/>
-        <artifact name="poi-examples" conf="examples"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="poi" ivyde:javadoc="poi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="poi-scratchpad" ivyde:javadoc="poi-scratchpad" name="poi-scratchpad" conf="scratchpad"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="poi-ooxml" ivyde:javadoc="poi-ooxml" name="poi-ooxml" conf="ooxml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="poi-ooxml-schemas" ivyde:javadoc="poi-ooxml-schemas" name="poi-ooxml-schemas" conf="ooxml-schemas"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="poi-examples" ivyde:javadoc="poi-examples" name="poi-examples" conf="examples"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

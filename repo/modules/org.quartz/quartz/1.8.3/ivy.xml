@@ -21,8 +21,8 @@
 
     <info organisation="org.quartz" module="quartz" revision="1.8.3" status="release" publication="20102206000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1322 2010-09-21 16:39:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.quartz/quartz/1.8.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1322 2010-09-21 16:39:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.quartz/quartz/1.8.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.quartz-scheduler.org/">
             <p>
             Quartz is a full-featured, open source job scheduling system that can be integrated with, or used along 
@@ -47,12 +47,12 @@
 
     <publications> 
         <!--  jars  -->
-        <artifact name="quartz-all" conf="all"/> 
-        <artifact name="quartz" conf="default,core"/> 
-        <artifact name="quartz-examples" conf="default,examples"/> 
-        <artifact name="quartz-jboss" conf="default,jboss"/> 
-        <artifact name="quartz-oracle" conf="default,oracle"/> 
-        <artifact name="quartz-weblogic" conf="default,weblogic"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-all" name="quartz-all" conf="all"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz" name="quartz" conf="default,core"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-examples" name="quartz-examples" conf="default,examples"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-jboss" name="quartz-jboss" conf="default,jboss"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-oracle" name="quartz-oracle" conf="default,oracle"/> 
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="quartz-weblogic" name="quartz-weblogic" conf="default,weblogic"/> 
 
         <!--  javadoc -->
         <artifact name="javadoc" type="javadoc" ext="zip"/>

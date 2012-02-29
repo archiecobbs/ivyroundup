@@ -21,8 +21,8 @@
 
     <info organisation="javax.faces" module="jsf" revision="2.0.3" status="release" publication="20100701072500">
         <license name="CDDL+GPL License" url="http://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor name="$Id: ivy.xml 1770 2011-10-23 20:38:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.faces/jsf/2.0.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1770 2011-10-23 20:38:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.faces/jsf/2.0.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://javaserverfaces.dev.java.net/">
             <p>
                 JavaServer(TM) Faces technology simplifies building user interfaces for JavaServer applications.
@@ -40,9 +40,9 @@
     </configurations>
 
     <publications>
-        <artifact name="jsf-api" conf="api"/>
-        <artifact name="jsf-impl" conf="default"/>
-        <artifact name="injectionproviders" conf="injectionproviders"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-api" ivyde:javadoc="jsf-api" name="jsf-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsf-impl" ivyde:javadoc="jsf-impl" name="jsf-impl" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="injectionproviders" ivyde:javadoc="injectionproviders" name="injectionproviders" conf="injectionproviders"/>
 
         <artifact name="jsf-api" type="source" ext="zip" conf="api"/>
         <artifact name="jsf-impl" type="source" ext="zip" conf="default"/>

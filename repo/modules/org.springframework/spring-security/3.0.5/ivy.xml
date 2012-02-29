@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring-security" revision="3.0.5" status="release" publication="20101118072600">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1390 2010-11-19 14:44:15Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/3.0.5/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1390 2010-11-19 14:44:15Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/3.0.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-security/site/">
 
             <p>
@@ -94,15 +94,15 @@
 
     <publications>
 
-        <artifact name="spring-security-acl" conf="acl"/>
-        <artifact name="spring-security-aspects" conf="aspects"/>
-        <artifact name="spring-security-cas-client" conf="cas-client"/>
-        <artifact name="spring-security-config" conf="config"/>
-        <artifact name="spring-security-core" conf="core"/>
-        <artifact name="spring-security-ldap" conf="ldap"/>
-        <artifact name="spring-security-openid" conf="openid"/>
-        <artifact name="spring-security-taglibs" conf="taglibs"/>
-        <artifact name="spring-security-web" conf="web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-acl" ivyde:javadoc="spring-security-acl" name="spring-security-acl" conf="acl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-aspects" ivyde:javadoc="spring-security-aspects" name="spring-security-aspects" conf="aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-cas-client" ivyde:javadoc="spring-security-cas-client" name="spring-security-cas-client" conf="cas-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-config" ivyde:javadoc="spring-security-config" name="spring-security-config" conf="config"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-core" ivyde:javadoc="spring-security-core" name="spring-security-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-ldap" ivyde:javadoc="spring-security-ldap" name="spring-security-ldap" conf="ldap"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-openid" ivyde:javadoc="spring-security-openid" name="spring-security-openid" conf="openid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-taglibs" ivyde:javadoc="spring-security-taglibs" name="spring-security-taglibs" conf="taglibs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-web" ivyde:javadoc="spring-security-web" name="spring-security-web" conf="web"/>
 
         <artifact name="spring-security-acl" conf="acl" type="source" ext="zip"/>
         <artifact name="spring-security-aspects" conf="aspects" type="source" ext="zip"/>

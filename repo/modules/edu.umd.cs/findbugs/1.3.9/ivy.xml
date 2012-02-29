@@ -22,8 +22,8 @@
 
     <info organisation="edu.umd.cs" module="findbugs" revision="1.3.9" status="release" publication="20090821203949">
         <license name="Lesser GNU Public License" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1187 2010-04-21 01:44:24Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.umd.cs/findbugs/1.3.9/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1187 2010-04-21 01:44:24Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.umd.cs/findbugs/1.3.9/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://findbugs.sourceforge.net/">
 
             <p>
@@ -87,13 +87,13 @@
     </configurations>
 
     <publications>
-        <artifact name="findbugs" conf="tool"/>
-        <artifact name="findbugs-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="findbugs" name="findbugs" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="findbugs-ant" name="findbugs-ant" conf="ant"/>
         <artifact name="default" conf="tool" type="report" ext="xsl"/>
-        <artifact name="annotations" conf="annotations"/>
-        <artifact name="bcel" conf="tool"/>
-        <artifact name="jFormatString" conf="tool"/>
-        <artifact name="jsr305" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="annotations" name="annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bcel" name="bcel" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jFormatString" name="jFormatString" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsr305" name="jsr305" conf="annotations"/>
         <artifact name="source" type="source" ext="zip"/>
         <!-- No prebuilt javadoc currently available. -->
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="com.jeantessier" module="DependencyFinder" revision="1.2.1-beta1" status="release" publication="20080917120000">
         <license name="DependencyFinder License" url="http://depfind.sourceforge.net/License.txt"/>
-        <ivyauthor name="$Id: ivy.xml 1401 2010-12-02 16:35:31Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.jeantessier/DependencyFinder/1.2.1-beta1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1401 2010-12-02 16:35:31Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.jeantessier/DependencyFinder/1.2.1-beta1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://depfind.sourceforge.net/">
 Dependency Finder is a suite of tools for analyzing compiled Java code. At the core is a powerful dependency analysis application that extracts dependency graphs and mines them for useful information. This application comes in many forms for your ease of use, including command-line tools, a Swing-based application, a web application ready to be deployed in an application server, and a set of Ant tasks.
 
@@ -37,7 +37,7 @@ Finally, Dependency Finder has a tool for computing object-oriented software met
     </configurations>
 
     <publications>
-        <artifact name="DependencyFinder" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="DependencyFinder" ivyde:javadoc="DependencyFinder" name="DependencyFinder" conf="default"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
         <artifact name="DependencyGraphToHTML" type="report" ext="xsl" conf="default"/>

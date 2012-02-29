@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.pmd" module="pmd" revision="4.2.5" status="release" publication="20090208120000">
         <license name="BSD License" url="http://pmd.sourceforge.net/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 715 2009-05-21 02:53:46Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.pmd/pmd/4.2.5/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 715 2009-05-21 02:53:46Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.pmd/pmd/4.2.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://pmd.sourceforge.net/">
         <p>
         PMD scans Java source code and looks for potential problems like:
@@ -38,7 +38,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="pmd" ivyde:javadoc="pmd"/>
         <artifact name="pmd-report-per-class" type="report" ext="xslt"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>

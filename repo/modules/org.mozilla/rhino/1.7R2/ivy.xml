@@ -21,8 +21,8 @@
 
     <info organisation="org.mozilla" module="rhino" revision="1.7R2" status="release" publication="20090322120000">
         <license name="MPL/GPL" url="https://developer.mozilla.org/en/Rhino_License"/>
-        <ivyauthor name="$Id: ivy.xml 1024 2010-01-26 21:32:57Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mozilla/rhino/1.7R2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1024 2010-01-26 21:32:57Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mozilla/rhino/1.7R2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.mozilla.org/rhino/">
             Rhino is an open-source implementation of JavaScript
             written entirely in Java. It is typically embedded into Java
@@ -36,8 +36,8 @@
     </configurations>
 
     <publications>
-        <artifact name="js" conf="default"/>
-        <artifact name="js-14" conf="jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="js" ivyde:javadoc="js" name="js" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="js-14" ivyde:javadoc="js-14" name="js-14" conf="jdk14"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

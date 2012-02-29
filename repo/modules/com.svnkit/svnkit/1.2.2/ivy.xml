@@ -21,8 +21,8 @@
 
     <info organisation="com.svnkit" module="svnkit" revision="1.2.2" status="release" publication="20081128120000">
         <license name="The TMate Open Source License" url="http://svnkit.com/license.html"/><license name="TriLead License" url="http://www.trilead.com/Products/Trilead_SSH_for_Java/License/"/>
-        <ivyauthor name="$Id: ivy.xml 340 2008-12-18 20:19:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.svnkit/svnkit/1.2.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 340 2008-12-18 20:19:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.svnkit/svnkit/1.2.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.svnkit.com/">
 
         <p>
@@ -54,11 +54,11 @@
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
-        <artifact name="svnkit-cli" conf="cli"/>
-        <artifact name="svnkit-javahl" conf="javahl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="svnkit" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="svnkit-cli" name="svnkit-cli" conf="cli"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="svnkit-javahl" name="svnkit-javahl" conf="javahl"/>
     <!-- XXX until an unmodified version of TriLead works ... -->
-        <artifact name="trilead" conf="ssh"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="trilead" name="trilead" conf="ssh"/>
 
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="clisource" type="source" ext="zip"/>

@@ -21,8 +21,8 @@
 
     <info organisation="org.dellroad" module="jibx-bindings" revision="1.0.46" status="release" publication="20111202120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1811 2011-12-02 20:05:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/jibx-bindings/1.0.46/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1811 2011-12-02 20:05:26Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/jibx-bindings/1.0.46/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jibx-bindings.googlecode.com/">
 
             <p>
@@ -64,9 +64,9 @@
     </configurations>
 
     <publications>
-        <artifact name="jibx-bindings-core" conf="core"/>
-        <artifact name="jibx-bindings-pidf" conf="pidf"/>
-        <artifact name="jibx-bindings-twilio" conf="twilio"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-core" ivyde:javadoc="jibx-bindings-core" name="jibx-bindings-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-pidf" ivyde:javadoc="jibx-bindings-pidf" name="jibx-bindings-pidf" conf="pidf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-twilio" ivyde:javadoc="jibx-bindings-twilio" name="jibx-bindings-twilio" conf="twilio"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,13 +21,13 @@
 
     <info organisation="org.jvnet.jaxb2_commons" module="jaxb2-basics-ant" revision="0.5.2" status="release" publication="20080808120000">
         <license name="The BSD Style License" url="http://static.highsource.org/jaxb2-basics/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1383 2010-11-17 17:32:58Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jvnet.jaxb2_commons/jaxb2-basics-ant/0.5.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1383 2010-11-17 17:32:58Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jvnet.jaxb2_commons/jaxb2-basics-ant/0.5.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.highsource.org/jaxb2-basics/">JAXB2 Basics - Ant.</description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxb2-basics-ant" ivyde:javadoc="jaxb2-basics-ant"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

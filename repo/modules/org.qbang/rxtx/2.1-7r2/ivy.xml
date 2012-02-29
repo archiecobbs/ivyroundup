@@ -21,8 +21,8 @@
 
     <info organisation="org.qbang" module="rxtx" revision="2.1-7r2" status="release" publication="20060301120000">
         <license name="RXTX License" url="http://users.frii.com/jarvi/rxtx/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1447 2011-01-16 00:36:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.qbang/rxtx/2.1-7r2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1447 2011-01-16 00:36:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.qbang/rxtx/2.1-7r2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://rxtx.qbang.org/wiki/index.php/Main_Page">
         <p>
         RXTX is a native lib providing serial and parallel communication for the Java Development Toolkit (JDK).
