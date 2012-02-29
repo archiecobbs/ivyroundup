@@ -21,8 +21,8 @@
 
     <info organisation="net.miginfocom" module="miglayout" revision="3.6.2" status="release" publication="20081216120000">
         <license name="BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 431 2009-01-13 18:48:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.miginfocom/miglayout/3.6.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 431 2009-01-13 18:48:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.miginfocom/miglayout/3.6.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.miglayout.com/">
 
         <p>
@@ -69,11 +69,11 @@
     </configurations>
 
     <publications>
-        <artifact name="miglayout" conf="default"/>
-        <artifact name="miglayout-swing" conf="swing"/>
-        <artifact name="miglayout-swing-java14" conf="swing-jdk14"/>
-        <artifact name="miglayout-swt" conf="swt"/>
-        <artifact name="miglayout-swt-java14" conf="swt-jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout" ivyde:javadoc="miglayout" name="miglayout" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swing" ivyde:javadoc="miglayout-swing" name="miglayout-swing" conf="swing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swing-java14" ivyde:javadoc="miglayout-swing-java14" name="miglayout-swing-java14" conf="swing-jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swt" ivyde:javadoc="miglayout-swt" name="miglayout-swt" conf="swt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swt-java14" ivyde:javadoc="miglayout-swt-java14" name="miglayout-swt-java14" conf="swt-jdk14"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

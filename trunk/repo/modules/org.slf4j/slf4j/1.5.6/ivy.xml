@@ -21,8 +21,8 @@
 
     <info organisation="org.slf4j" module="slf4j" revision="1.5.6" status="release" publication="20081120120000">
         <license name="SLF4J License" url="http://www.slf4j.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.slf4j/slf4j/1.5.6/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.slf4j/slf4j/1.5.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.slf4j.org/">
 
         <p>
@@ -68,17 +68,17 @@
     </configurations>
 
     <publications>
-        <artifact name="jcl-over-slf4j" conf="jcl-migration"/>
-        <artifact name="jul-to-slf4j" conf="jul-migration"/>
-        <artifact name="log4j-over-slf4j" conf="log4j-migration"/>
-        <artifact name="slf4j-api" conf="core"/>
-        <artifact name="slf4j-ext" conf="ext"/>
-        <artifact name="slf4j-jcl" conf="jcl"/>
-        <artifact name="slf4j-jdk14" conf="jul"/>
-        <artifact name="slf4j-log4j12" conf="default, log4j"/>
-        <artifact name="slf4j-migrator" conf="migrator"/>
-        <artifact name="slf4j-nop" conf="nop"/>
-        <artifact name="slf4j-simple" conf="simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcl-over-slf4j" ivyde:javadoc="jcl-over-slf4j" name="jcl-over-slf4j" conf="jcl-migration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jul-to-slf4j" ivyde:javadoc="jul-to-slf4j" name="jul-to-slf4j" conf="jul-migration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-over-slf4j" ivyde:javadoc="log4j-over-slf4j" name="log4j-over-slf4j" conf="log4j-migration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-api" ivyde:javadoc="slf4j-api" name="slf4j-api" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-ext" ivyde:javadoc="slf4j-ext" name="slf4j-ext" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jcl" ivyde:javadoc="slf4j-jcl" name="slf4j-jcl" conf="jcl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jdk14" ivyde:javadoc="slf4j-jdk14" name="slf4j-jdk14" conf="jul"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-log4j12" ivyde:javadoc="slf4j-log4j12" name="slf4j-log4j12" conf="default, log4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-migrator" ivyde:javadoc="slf4j-migrator" name="slf4j-migrator" conf="migrator"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-nop" ivyde:javadoc="slf4j-nop" name="slf4j-nop" conf="nop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-simple" ivyde:javadoc="slf4j-simple" name="slf4j-simple" conf="simple"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

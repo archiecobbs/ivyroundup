@@ -21,8 +21,8 @@
 
     <info organisation="javax.comm" module="comm" revision="3.0.u1" status="release" publication="20050923023200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1263 2010-07-28 02:45:20Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.comm/comm/3.0.u1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1263 2010-07-28 02:45:20Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.comm/comm/3.0.u1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/products/javacomm/">
             <p>
             The Java Communications 3.0 API is a Java extension that
@@ -46,7 +46,7 @@
     </configurations>
 
     <publications>
-        <artifact conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="comm" conf="api"/>
         <artifact name="libLinuxSerialParallel" type="so" conf="default"/>
         <artifact name="libLinuxSerialParallel_g" type="so" conf="debug"/>
         <artifact type="javadoc" ext="zip" conf="api"/>

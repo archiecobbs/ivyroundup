@@ -21,8 +21,8 @@
 
     <info organisation="org.aspectj" module="aspectj" revision="1.6.10" status="release" publication="20080603120000">
         <license name="Eclipse Public License Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-        <ivyauthor name="$Id: ivy.xml 1409 2010-12-07 16:09:20Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.aspectj/aspectj/1.6.10/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1409 2010-12-07 16:09:20Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.aspectj/aspectj/1.6.10/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.eclipse.org/aspectj/">
 
             <p>
@@ -48,10 +48,10 @@
     </configurations>
 
     <publications>
-        <artifact name="rt"/>
-        <artifact name="matcher"/>
-        <artifact name="tools" conf="tools"/>
-        <artifact name="weaver" conf="weaver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="rt" ivyde:javadoc="rt" name="rt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="matcher" name="matcher"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="tools" name="tools" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="weaver" ivyde:javadoc="weaver" name="weaver" conf="weaver"/>
 
         <artifact type="source" ext="zip" name="rt"/>
         <artifact type="source" ext="zip" name="matcher"/>

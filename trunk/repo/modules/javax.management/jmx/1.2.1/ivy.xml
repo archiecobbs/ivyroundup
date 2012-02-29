@@ -21,8 +21,8 @@
 
     <info organisation="javax.management" module="jmx" revision="1.2.1" status="release" publication="20030715120000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <ivyauthor name="$Id: ivy.xml 209 2008-05-06 14:38:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.management/jmx/1.2.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 209 2008-05-06 14:38:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.management/jmx/1.2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/javase/technologies/core/mntr-mgmt/javamanagement/">
 
             <p>
@@ -49,8 +49,8 @@
     </configurations>
 
     <publications>
-        <artifact name="jmxri"/>
-        <artifact name="jmxtools" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jmxri" name="jmxri"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jmxtools" name="jmxtools" conf="tools"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

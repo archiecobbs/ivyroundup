@@ -21,15 +21,15 @@
 
     <info organisation="javax.ws.rs" module="jsr311-api" revision="1.1" status="release" publication="20090430081400">
         <license name="CDDL v1.0" url="http://www.opensource.org/licenses/cddl1.php"/>
-        <ivyauthor name="$Id: ivy.xml 976 2009-12-03 13:59:19Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.ws.rs/jsr311-api/1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 976 2009-12-03 13:59:19Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.ws.rs/jsr311-api/1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jsr311.dev.java.net">
         JAX-RS: Java API for RESTful Web Services
         </description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsr311-api" ivyde:javadoc="jsr311-api"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

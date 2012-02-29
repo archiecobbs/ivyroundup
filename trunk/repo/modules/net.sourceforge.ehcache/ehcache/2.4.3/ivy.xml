@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.ehcache" module="ehcache" revision="2.4.3" status="release" publication="20110707000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1672 2011-08-15 16:30:53Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.ehcache/ehcache/2.4.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1672 2011-08-15 16:30:53Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.ehcache/ehcache/2.4.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://ehcache.sourceforge.net/">
             <p>
             Ehcache is a widely used java distributed cache for general
@@ -45,7 +45,7 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="ehcache-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="ehcache-core" ivyde:javadoc="ehcache-core" name="ehcache-core"/>
 
         <!-- source -->
         <artifact name="ehcache-core" type="source" ext="zip"/>

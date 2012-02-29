@@ -21,8 +21,8 @@
 
     <info organisation="com.google" module="guice" revision="1.0" status="release" publication="20080508120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 345 2009-01-05 22:15:47Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/guice/1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 345 2009-01-05 22:15:47Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google/guice/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/google-guice/">Guice (pronounced 'juice') is a lightweight dependency injection framework for Java 5 and above, brought to you by Google.</description>
     </info>
 
@@ -34,10 +34,10 @@
     </configurations>
 
     <publications>
-        <artifact/>
-        <artifact name="guice-servlet" conf="servlet"/>
-        <artifact name="guice-spring" conf="spring"/>
-        <artifact name="guice-struts2-plugin" conf="struts2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice-servlet" name="guice-servlet" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice-spring" name="guice-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice-struts2-plugin" name="guice-struts2-plugin" conf="struts2"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

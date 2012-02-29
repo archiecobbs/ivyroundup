@@ -21,8 +21,8 @@
 
     <info organisation="org.easymock" module="easymock" revision="2.3" status="release" publication="20060417212000">
         <license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 555 2009-03-13 07:49:11Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.easymock/easymock/2.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 555 2009-03-13 07:49:11Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.easymock/easymock/2.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://easymock.sourceforge.net/">
         EasyMock provides Mock Objects for interfaces in JUnit tests by generating them on the fly using Java's proxy mechanism. Due to EasyMock's unique style of recording expectations, most refactorings will not affect the Mock Objects. So EasyMock is a perfect fit for Test-Driven Development.
         </description>
@@ -34,8 +34,8 @@
     </configurations>
 
     <publications>
-        <artifact name="easymock" conf="default"/>
-        <artifact name="easymockclassextension" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="easymock" ivyde:javadoc="easymock" name="easymock" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="easymockclassextension" ivyde:javadoc="easymockclassextension" name="easymockclassextension" conf="default"/>
         <artifact name="easymock" type="source" ext="zip"/>
         <artifact name="easymockclassextension" type="source" ext="zip"/>
         <artifact name="easymock" type="javadoc" ext="zip"/>

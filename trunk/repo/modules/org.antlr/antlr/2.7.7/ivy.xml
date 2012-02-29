@@ -21,8 +21,8 @@
 
     <info organisation="org.antlr" module="antlr" revision="2.7.7" status="release" publication="20061101000000">
         <license name="Public Domain" url="http://www.antlr2.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 287 2008-10-21 14:31:00Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.antlr/antlr/2.7.7/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 287 2008-10-21 14:31:00Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.antlr/antlr/2.7.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.antlr2.org/">
             ANTLR, ANother Tool for Language Recognition, (formerly
             PCCTS) is a language tool that provides a framework for
@@ -35,7 +35,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="antlr"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

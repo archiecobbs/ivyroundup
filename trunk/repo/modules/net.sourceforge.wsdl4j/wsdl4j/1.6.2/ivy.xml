@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.wsdl4j" module="wsdl4j" revision="1.6.2" status="release" publication="20061107000500">
         <license name="Common Public License - v 1.0" url="http://www.eclipse.org/legal/cpl-v10.html"/>
-        <ivyauthor name="$Id: ivy.xml 548 2009-03-12 12:46:32Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.wsdl4j/wsdl4j/1.6.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 548 2009-03-12 12:46:32Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.wsdl4j/wsdl4j/1.6.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://sourceforge.net/projects/wsdl4j">
         The Web Services Description Language for Java Toolkit (WSDL4J) allows the creation,
         representation, and manipulation of WSDL documents. Is the reference implementation for
@@ -31,7 +31,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wsdl4j"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

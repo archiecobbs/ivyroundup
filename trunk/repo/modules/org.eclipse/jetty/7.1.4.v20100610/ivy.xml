@@ -21,8 +21,8 @@
 
     <info organisation="org.eclipse" module="jetty" revision="7.1.4.v20100610" status="release" publication="20100611004300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1224 2010-06-16 15:10:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.1.4.v20100610/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1224 2010-06-16 15:10:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.eclipse/jetty/7.1.4.v20100610/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.eclipse.org/jetty/">
             <p>
             Jetty is an open-source project providing a HTTP server, HTTP
@@ -74,28 +74,28 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="jetty-ajp" conf="ajp"/>
-        <artifact name="jetty-annotations" conf="annotations"/>
-        <artifact name="jetty-client" conf="client"/>
-        <artifact name="jetty-continuation" conf="continuation"/>
-        <artifact name="jetty-deploy" conf="deploy"/>
-        <artifact name="jetty-http" conf="http"/>
-        <artifact name="jetty-io" conf="io"/>
-        <artifact name="jetty-jaspi" conf="jaspi"/>
-        <artifact name="jetty-jmx" conf="jmx"/>
-        <artifact name="jetty-jndi" conf="jndi"/>
-        <artifact name="jetty-policy" conf="policy"/>
-        <artifact name="jetty-plus" conf="plus"/>
-        <artifact name="jetty-rewrite" conf="rewrite"/>
-        <artifact name="jetty-security" conf="security"/>
-        <artifact name="jetty-server" conf="server"/>
-        <artifact name="jetty-servlet" conf="servlet"/>
-        <artifact name="jetty-servlets" conf="servlets"/>
-        <artifact name="jetty-start" conf="start"/>
-        <artifact name="jetty-util" conf="util"/>
-        <artifact name="jetty-webapp" conf="webapp"/>
-        <artifact name="jetty-websocket" conf="websocket"/>
-        <artifact name="jetty-xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-ajp" ivyde:javadoc="jetty-ajp" name="jetty-ajp" conf="ajp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-annotations" ivyde:javadoc="jetty-annotations" name="jetty-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-client" ivyde:javadoc="jetty-client" name="jetty-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-continuation" ivyde:javadoc="jetty-continuation" name="jetty-continuation" conf="continuation"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-deploy" ivyde:javadoc="jetty-deploy" name="jetty-deploy" conf="deploy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-http" ivyde:javadoc="jetty-http" name="jetty-http" conf="http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-io" ivyde:javadoc="jetty-io" name="jetty-io" conf="io"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jaspi" ivyde:javadoc="jetty-jaspi" name="jetty-jaspi" conf="jaspi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jmx" ivyde:javadoc="jetty-jmx" name="jetty-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jndi" ivyde:javadoc="jetty-jndi" name="jetty-jndi" conf="jndi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-policy" ivyde:javadoc="jetty-policy" name="jetty-policy" conf="policy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-plus" ivyde:javadoc="jetty-plus" name="jetty-plus" conf="plus"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-rewrite" ivyde:javadoc="jetty-rewrite" name="jetty-rewrite" conf="rewrite"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-security" ivyde:javadoc="jetty-security" name="jetty-security" conf="security"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-server" ivyde:javadoc="jetty-server" name="jetty-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-servlet" ivyde:javadoc="jetty-servlet" name="jetty-servlet" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-servlets" ivyde:javadoc="jetty-servlets" name="jetty-servlets" conf="servlets"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-start" ivyde:javadoc="jetty-start" name="jetty-start" conf="start"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-util" ivyde:javadoc="jetty-util" name="jetty-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-webapp" ivyde:javadoc="jetty-webapp" name="jetty-webapp" conf="webapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-websocket" ivyde:javadoc="jetty-websocket" name="jetty-websocket" conf="websocket"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-xml" ivyde:javadoc="jetty-xml" name="jetty-xml" conf="xml"/>
         <artifact name="jsp-2.1" conf="jsp"/>
         <artifact name="jsp-api-2.1" conf="jsp"/>
 

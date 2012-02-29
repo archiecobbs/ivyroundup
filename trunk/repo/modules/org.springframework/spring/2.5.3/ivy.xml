@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring" revision="2.5.3" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 967 2009-11-23 16:40:03Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.5.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 967 2009-11-23 16:40:03Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/2.5.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
             published in Expert One-on-One J2EE Design and Development by Rod Johnson
@@ -121,21 +121,21 @@
     </configurations>
 
     <publications>
-        <artifact name="spring" conf="full"/>
-        <artifact name="aop" conf="default,aop"/>
-        <artifact name="beans" conf="default,beans"/>
-        <artifact name="context" conf="default,context"/>
-        <artifact name="context-support" conf="default,context-support"/>
-        <artifact name="core" conf="default,core"/>
-        <artifact name="jdbc" conf="default,jdbc"/>
-        <artifact name="jms" conf="default,jms"/>
-        <artifact name="orm" conf="default,orm"/>
-        <artifact name="test" conf="default,test"/>
-        <artifact name="tx" conf="default,tx"/>
-        <artifact name="web" conf="default,web"/>
-        <artifact name="webmvc" conf="default,webmvc"/>
-        <artifact name="webmvc-portlet" conf="default,webmvc-portlet"/>
-        <artifact name="webmvc-struts" conf="default,webmvc-struts"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="spring" name="spring" conf="full"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="aop" name="aop" conf="default,aop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="beans" name="beans" conf="default,beans"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="context" name="context" conf="default,context"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="context-support" name="context-support" conf="default,context-support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="core" name="core" conf="default,core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jdbc" name="jdbc" conf="default,jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jms" name="jms" conf="default,jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="orm" name="orm" conf="default,orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="test" name="test" conf="default,test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="tx" name="tx" conf="default,tx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="web" name="web" conf="default,web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="webmvc" name="webmvc" conf="default,webmvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="webmvc-portlet" name="webmvc-portlet" conf="default,webmvc-portlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="webmvc-struts" name="webmvc-struts" conf="default,webmvc-struts"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

@@ -21,8 +21,8 @@
 
     <info organisation="org.restlet" module="restlet" revision="2.0.11" status="release" publication="20120115120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1913 2012-01-27 17:03:12Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.restlet/restlet/2.0.11/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1913 2012-01-27 17:03:12Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.restlet/restlet/2.0.11/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.restlet.org/">
 
             <p>
@@ -99,39 +99,39 @@
     <publications>
 
         <!-- JARs -->
-        <artifact name="org.restlet" conf="default"/>
-        <artifact name="org.restlet.example" conf="example"/>
-        <artifact name="org.restlet.ext.atom" conf="atom"/>
-        <artifact name="org.restlet.ext.crypto" conf="crypto"/>
-        <artifact name="org.restlet.ext.fileupload" conf="fileupload"/>
-        <artifact name="org.restlet.ext.freemarker" conf="freemarker"/>
-        <artifact name="org.restlet.ext.grizzly" conf="grizzly"/>
-        <artifact name="org.restlet.ext.gwt" conf="gwt"/>
-        <artifact name="org.restlet.ext.httpclient" conf="httpclient"/>
-        <artifact name="org.restlet.ext.jaas" conf="jaas"/>
-        <artifact name="org.restlet.ext.jackson" conf="jackson"/>
-        <artifact name="org.restlet.ext.javamail" conf="javamail"/>
-        <artifact name="org.restlet.ext.jaxb" conf="jaxb"/>
-        <artifact name="org.restlet.ext.jaxrs" conf="jaxrs"/>
-        <artifact name="org.restlet.ext.jdbc" conf="jdbc"/>
-        <artifact name="org.restlet.ext.jetty" conf="jetty"/>
-        <artifact name="org.restlet.ext.jibx" conf="jibx"/>
-        <artifact name="org.restlet.ext.json" conf="json"/>
-        <artifact name="org.restlet.ext.lucene" conf="lucene"/>
-        <artifact name="org.restlet.ext.net" conf="net"/>
-        <artifact name="org.restlet.ext.netty" conf="netty"/>
-        <artifact name="org.restlet.ext.odata" conf="odata"/>
-        <artifact name="org.restlet.ext.rdf" conf="rdf"/>
-        <artifact name="org.restlet.ext.rome" conf="rome"/>
-        <artifact name="org.restlet.ext.simple" conf="simple"/>
-        <artifact name="org.restlet.ext.slf4j" conf="slf4j"/>
-        <artifact name="org.restlet.ext.spring" conf="spring"/>
-        <artifact name="org.restlet.ext.ssl" conf="ssl"/>
-        <artifact name="org.restlet.ext.velocity" conf="velocity"/>
-        <artifact name="org.restlet.ext.wadl" conf="wadl"/>
-        <artifact name="org.restlet.ext.xml" conf="xml"/>
-        <artifact name="org.restlet.ext.xstream" conf="xstream"/>
-        <artifact name="org.restlet.test" conf="test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet" name="org.restlet" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.example" name="org.restlet.example" conf="example"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.atom" name="org.restlet.ext.atom" conf="atom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.crypto" name="org.restlet.ext.crypto" conf="crypto"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.fileupload" name="org.restlet.ext.fileupload" conf="fileupload"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.freemarker" name="org.restlet.ext.freemarker" conf="freemarker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.grizzly" name="org.restlet.ext.grizzly" conf="grizzly"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.gwt" name="org.restlet.ext.gwt" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.httpclient" name="org.restlet.ext.httpclient" conf="httpclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaas" name="org.restlet.ext.jaas" conf="jaas"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jackson" name="org.restlet.ext.jackson" conf="jackson"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.javamail" name="org.restlet.ext.javamail" conf="javamail"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxb" name="org.restlet.ext.jaxb" conf="jaxb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxrs" name="org.restlet.ext.jaxrs" conf="jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jdbc" name="org.restlet.ext.jdbc" conf="jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jetty" name="org.restlet.ext.jetty" conf="jetty"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jibx" name="org.restlet.ext.jibx" conf="jibx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.json" name="org.restlet.ext.json" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.lucene" name="org.restlet.ext.lucene" conf="lucene"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.net" name="org.restlet.ext.net" conf="net"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.netty" name="org.restlet.ext.netty" conf="netty"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.odata" name="org.restlet.ext.odata" conf="odata"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.rdf" name="org.restlet.ext.rdf" conf="rdf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.rome" name="org.restlet.ext.rome" conf="rome"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.simple" name="org.restlet.ext.simple" conf="simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.slf4j" name="org.restlet.ext.slf4j" conf="slf4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.spring" name="org.restlet.ext.spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.ssl" name="org.restlet.ext.ssl" conf="ssl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.velocity" name="org.restlet.ext.velocity" conf="velocity"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.wadl" name="org.restlet.ext.wadl" conf="wadl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.xml" name="org.restlet.ext.xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.xstream" name="org.restlet.ext.xstream" conf="xstream"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.test" name="org.restlet.test" conf="test"/>
 
         <!-- Sources -->
         <artifact name="org.restlet" conf="default" type="source" ext="zip"/>

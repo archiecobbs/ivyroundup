@@ -21,8 +21,8 @@
 
     <info organisation="org.mortbay" module="jetty" revision="6.1.9" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 56 2008-04-10 17:59:03Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mortbay/jetty/6.1.9/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 56 2008-04-10 17:59:03Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mortbay/jetty/6.1.9/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.mortbay.org/">
             Jetty is an open-source, standards-based, full-featured
             web server implemented entirely in Java. It is released
@@ -55,42 +55,42 @@
     </configurations>
 
     <publications>
-        <artifact name="jetty" conf="core"/>
-        <artifact name="jetty-util" conf="core"/>
-        <artifact name="servlet-api-2.5" conf="servlet-api"/>
-        <artifact name="geronimo-annotation_1.0_spec-1.0" conf="annotations"/>
-        <artifact name="jetty-annotations" conf="annotations"/>
-        <artifact name="cometd-api-0.9.20080221" conf="cometd"/>
-        <artifact name="cometd-bayeux" conf="cometd"/>
-        <artifact name="jetty-ajp" conf="ext"/>
-        <artifact name="jetty-client" conf="ext"/>
-        <artifact name="jetty-html" conf="ext"/>
-        <artifact name="jetty-java5-threadpool" conf="ext"/>
-        <artifact name="jetty-servlet-tester" conf="ext"/>
-        <artifact name="jetty-setuid" conf="ext"/>
-        <artifact name="jetty-sslengine" conf="ext"/>
-        <artifact name="ant-1.6.5" conf="jsp-2.0, jsp-2.1"/>
-        <artifact name="commons-el-1.0" conf="jsp-2.0"/>
-        <artifact name="jasper-compiler-5.5.15" conf="jsp-2.0"/>
-        <artifact name="jasper-compiler-jdt-5.5.15" conf="jsp-2.0"/>
-        <artifact name="jasper-runtime-5.5.15" conf="jsp-2.0"/>
-        <artifact name="jcl104-over-slf4j-1.3.1" conf="jsp-2.0"/>
-        <artifact name="jsp-api-2.0" conf="jsp-2.0"/>
-        <artifact name="slf4j-api-1.3.1" conf="jsp-2.0"/>
-        <artifact name="slf4j-simple-1.3.1" conf="jsp-2.0"/>
-        <artifact name="xercesImpl-2.6.2" conf="jsp-2.0"/>
-        <artifact name="xmlParserAPIs-2.6.2" conf="jsp-2.0"/>
-        <artifact name="core-3.1.1" conf="jsp-2.1"/>
-        <artifact name="jsp-2.1" conf="jsp-2.1"/>
-        <artifact name="jsp-api-2.1" conf="jsp-2.1"/>
-        <artifact name="jetty-management" conf="management"/>
-        <artifact name="mx4j-3.0.1" conf="management"/>
-        <artifact name="mx4j-tools-3.0.1" conf="management"/>
-        <artifact name="activation-1.1" conf="naming"/>
-        <artifact name="jetty-naming" conf="naming"/>
-        <artifact name="mail-1.4" conf="naming"/>
-        <artifact name="jetty-plus" conf="plus"/>
-        <artifact name="jetty-xbean" conf="xbean"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty" name="jetty" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-util" name="jetty-util" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="servlet-api-2.5" name="servlet-api-2.5" conf="servlet-api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="geronimo-annotation_1.0_spec-1.0" name="geronimo-annotation_1.0_spec-1.0" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-annotations" name="jetty-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="cometd-api-0.9.20080221" name="cometd-api-0.9.20080221" conf="cometd"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="cometd-bayeux" name="cometd-bayeux" conf="cometd"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-ajp" name="jetty-ajp" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-client" name="jetty-client" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-html" name="jetty-html" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-java5-threadpool" name="jetty-java5-threadpool" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-servlet-tester" name="jetty-servlet-tester" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-setuid" name="jetty-setuid" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-sslengine" name="jetty-sslengine" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="ant-1.6.5" name="ant-1.6.5" conf="jsp-2.0, jsp-2.1"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="commons-el-1.0" name="commons-el-1.0" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jasper-compiler-5.5.15" name="jasper-compiler-5.5.15" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jasper-compiler-jdt-5.5.15" name="jasper-compiler-jdt-5.5.15" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jasper-runtime-5.5.15" name="jasper-runtime-5.5.15" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jcl104-over-slf4j-1.3.1" name="jcl104-over-slf4j-1.3.1" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jsp-api-2.0" name="jsp-api-2.0" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="slf4j-api-1.3.1" name="slf4j-api-1.3.1" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="slf4j-simple-1.3.1" name="slf4j-simple-1.3.1" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="xercesImpl-2.6.2" name="xercesImpl-2.6.2" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="xmlParserAPIs-2.6.2" name="xmlParserAPIs-2.6.2" conf="jsp-2.0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="core-3.1.1" name="core-3.1.1" conf="jsp-2.1"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jsp-2.1" name="jsp-2.1" conf="jsp-2.1"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jsp-api-2.1" name="jsp-api-2.1" conf="jsp-2.1"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-management" name="jetty-management" conf="management"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mx4j-3.0.1" name="mx4j-3.0.1" conf="management"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mx4j-tools-3.0.1" name="mx4j-tools-3.0.1" conf="management"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="activation-1.1" name="activation-1.1" conf="naming"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-naming" name="jetty-naming" conf="naming"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mail-1.4" name="mail-1.4" conf="naming"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-plus" name="jetty-plus" conf="plus"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jetty-xbean" name="jetty-xbean" conf="xbean"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

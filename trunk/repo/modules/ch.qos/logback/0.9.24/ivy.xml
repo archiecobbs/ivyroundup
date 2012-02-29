@@ -21,8 +21,8 @@
 
     <info organisation="ch.qos" module="logback" revision="0.9.24" status="release" publication="20100630120000">
         <license name="Logback License (GNU Lesser General Public License version 2.1)" url="http://logback.qos.ch/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1255 2010-07-21 01:52:04Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/0.9.24/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1255 2010-07-21 01:52:04Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/0.9.24/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://logback.qos.ch/">
             <p>
                 Logback is intended as a successor to the popular log4j
@@ -63,9 +63,9 @@
     </configurations>
 
     <publications>
-        <artifact name="logback-core" conf="core"/>
-        <artifact name="logback-classic" conf="classic"/>
-        <artifact name="logback-access" conf="access"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-core" name="logback-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-classic" name="logback-classic" conf="classic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-access" name="logback-access" conf="access"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

@@ -21,8 +21,8 @@
 
     <info organisation="org.mockito" module="mockito" revision="1.6" status="release" publication="20090105120000">
         <license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-        <ivyauthor name="$Id: ivy.xml 357 2009-01-06 15:25:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mockito/mockito/1.6/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 357 2009-01-06 15:25:19Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mockito/mockito/1.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/mockito/">Simpler &amp; better mocking.</description>
     </info>
 
@@ -32,8 +32,8 @@
     </configurations>
 
     <publications>
-        <artifact name="mockito-core" conf="default"/>
-        <artifact name="mockito-all" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mockito-core" name="mockito-core" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="mockito-all" name="mockito-all" conf="all"/>
         <!-- the bin jars include the source as well. -->
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,15 +21,15 @@
 
     <info organisation="twitter4j" module="twitter4j" revision="2.0.8" status="release" publication="20090613120000">
         <license name="BSD License" url="http://yusuke.homeip.net/twitter4j/en/index.html#license"/>
-        <ivyauthor name="$Id: ivy.xml 796 2009-07-02 15:30:09Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/twitter4j/twitter4j/2.0.8/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 796 2009-07-02 15:30:09Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/twitter4j/twitter4j/2.0.8/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://yusuke.homeip.net/twitter4j/en/index.html">
 Twitter4J is a Java library for TwitterAPI.
         </description>
     </info>
 
     <publications>
-      <artifact/>
+      <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="twitter4j" ivyde:javadoc="twitter4j"/>
       <artifact name="source" type="source" ext="zip"/>
       <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

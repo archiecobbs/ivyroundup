@@ -21,8 +21,8 @@
 
     <info organisation="javax.persistence" module="persistence-api" revision="1.0" status="release" publication="20060717110900">
         <license name="Common Development and Distribution License (CDDL) v1.0" url="http://www.sun.com/cddl/cddl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1297 2010-09-08 16:27:00Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.persistence/persistence-api/1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1297 2010-09-08 16:27:00Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.persistence/persistence-api/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html">
             <p>
                 The Java Persistence API simplifies the programming model for entity
@@ -46,7 +46,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="persistence-api"/>
         <artifact type="source" ext="zip"/>
     </publications>
 

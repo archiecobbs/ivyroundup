@@ -21,8 +21,8 @@
 
     <info organisation="nz.co.senanque" module="maduradocs" revision="5.0.5" status="release" publication="20120225092101">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1961 2012-02-24 23:42:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduradocs/5.0.5/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1961 2012-02-24 23:42:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/maduradocs/5.0.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/maduradocs/">
         Generates PDFs from MD XML files. Also converts Word to MD XML and renders MD XML to HTML.
         </description>

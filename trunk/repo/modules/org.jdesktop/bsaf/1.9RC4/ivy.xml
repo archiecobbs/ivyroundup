@@ -21,8 +21,8 @@
 
     <info organisation="org.jdesktop" module="bsaf" revision="1.9RC4" status="release" publication="20100419120000">
         <license name="GNU Lesser General Public License, version 2.1" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1276 2010-08-11 14:49:16Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jdesktop/bsaf/1.9RC4/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1276 2010-08-11 14:49:16Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jdesktop/bsaf/1.9RC4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://kenai.com/projects/bsaf">
         This is a fork of the Swing Application Framework (JSR 296).
         Primary goals for the upcoming release: improve stability,
@@ -33,7 +33,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bsaf" ivyde:javadoc="bsaf"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

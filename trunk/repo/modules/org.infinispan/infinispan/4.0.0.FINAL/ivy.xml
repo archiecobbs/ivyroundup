@@ -21,8 +21,8 @@
 
     <info organisation="org.infinispan" module="infinispan" revision="4.0.0.FINAL" status="release" publication="20100223121300">
         <license name="LGPL" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
-        <ivyauthor name="$Id: ivy.xml 1136 2010-04-04 07:23:02Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.infinispan/infinispan/4.0.0.FINAL/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1136 2010-04-04 07:23:02Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.infinispan/infinispan/4.0.0.FINAL/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.jboss.org/infinispan/">
         <p>
         Infinispan is an extremely scalable, highly available data grid platform
@@ -57,16 +57,16 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="infinispan-cachestore-bdbje" conf="all"/>
-        <artifact name="infinispan-cachestore-cloud" conf="all"/>
-        <artifact name="infinispan-cachestore-jdbc" conf="all"/>
-        <artifact name="infinispan-cachestore-jdbm" conf="all"/>
-        <artifact name="infinispan-core" conf="all,default"/>
-        <artifact name="infinispan-jopr-plugin" conf="all"/>
-        <artifact name="infinispan-lucene-directory" conf="all"/>
-        <artifact name="infinispan-query" conf="all"/>
-        <artifact name="infinispan-tools" conf="all"/>
-        <artifact name="infinispan-tree" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-cachestore-bdbje" name="infinispan-cachestore-bdbje" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-cachestore-cloud" name="infinispan-cachestore-cloud" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-cachestore-jdbc" name="infinispan-cachestore-jdbc" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-cachestore-jdbm" name="infinispan-cachestore-jdbm" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-core" name="infinispan-core" conf="all,default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-jopr-plugin" name="infinispan-jopr-plugin" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-lucene-directory" name="infinispan-lucene-directory" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-query" name="infinispan-query" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-tools" name="infinispan-tools" conf="all"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="infinispan-tree" name="infinispan-tree" conf="all"/>
 
         <!-- source -->
         <artifact name="infinispan-cachestore-bdbje" type="source" conf="all" ext="zip"/>

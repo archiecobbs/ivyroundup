@@ -21,8 +21,8 @@
 
     <info organisation="ch.qos" module="logback" revision="0.9.17" status="release" publication="20090809120000">
         <license name="Logback License (GNU Lesser General Public License version 2.1)" url="http://logback.qos.ch/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 963 2009-11-20 16:36:17Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/0.9.17/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 963 2009-11-20 16:36:17Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/0.9.17/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://logback.qos.ch/">
             <p>
                 Logback is intended as a successor to the popular log4j
@@ -63,9 +63,9 @@
     </configurations>
 
     <publications>
-        <artifact name="logback-core" conf="core"/>
-        <artifact name="logback-classic" conf="classic"/>
-        <artifact name="logback-access" conf="access"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-core" ivyde:javadoc="logback-core" name="logback-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-classic" ivyde:javadoc="logback-classic" name="logback-classic" conf="classic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="logback-access" ivyde:javadoc="logback-access" name="logback-access" conf="access"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

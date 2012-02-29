@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.mx4j" module="mx4j" revision="3.0.2" status="release" publication="20061012181200">
         <license name="MX4J License, Version 1.0" url="LICENSE.txt"/>
-        <ivyauthor name="$Id: ivy.xml 601 2009-03-23 15:09:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.mx4j/mx4j/3.0.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 601 2009-03-23 15:09:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.mx4j/mx4j/3.0.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://mx4j.sourceforge.net/">
         MX4J is a project to build an Open Source implementation of the Java(TM)
         Management Extensions (JMX) and of the JMX Remote API (JSR 160)
@@ -40,10 +40,10 @@
     </configurations>
 
     <publications>
-        <artifact name="mx4j-jmx" conf="core"/>
-        <artifact name="mx4j-impl" conf="core-impl"/>
-        <artifact name="mx4j-rjmx" conf="remote"/>
-        <artifact name="mx4j-rimpl" conf="remote-impl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mx4j-jmx" ivyde:javadoc="mx4j-jmx" name="mx4j-jmx" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mx4j-impl" ivyde:javadoc="mx4j-impl" name="mx4j-impl" conf="core-impl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mx4j-rjmx" ivyde:javadoc="mx4j-rjmx" name="mx4j-rjmx" conf="remote"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mx4j-rimpl" ivyde:javadoc="mx4j-rimpl" name="mx4j-rimpl" conf="remote-impl"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

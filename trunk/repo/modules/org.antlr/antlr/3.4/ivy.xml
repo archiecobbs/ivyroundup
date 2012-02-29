@@ -21,8 +21,8 @@
 
     <info organisation="org.antlr" module="antlr" revision="3.4" status="release" publication="20110719163600">
         <license name="BSD License" url="http://www.antlr.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 1903 2012-01-19 15:44:37Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.antlr/antlr/3.4/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1903 2012-01-19 15:44:37Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.antlr/antlr/3.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.antlr.org/">
             ANTLR, ANother Tool for Language Recognition, (formerly
             PCCTS) is a language tool that provides a framework for
@@ -45,11 +45,11 @@
         <artifact type="source" ext="zip" conf="default"/>
         <artifact type="javadoc" ext="zip" conf="default"/>
 
-        <artifact name="antlr-runtime" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="antlr-runtime" ivyde:javadoc="antlr-runtime" name="antlr-runtime" conf="runtime"/>
         <artifact name="antlr-runtime" type="source" ext="zip" conf="runtime"/>
         <artifact name="antlr-runtime" type="javadoc" ext="zip" conf="runtime"/>
 
-        <artifact name="gunit" conf="gunit"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gunit" ivyde:javadoc="gunit" name="gunit" conf="gunit"/>
         <artifact name="gunit" type="source" ext="zip" conf="gunit"/>
         <artifact name="gunit" type="javadoc" ext="zip" conf="gunit"/>
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="edu.hawaii.ics.csdl" module="simplejcs" revision="1.0.322" status="release" publication="20100322120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1122 2010-03-23 02:04:52Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.hawaii.ics.csdl/simplejcs/1.0.322/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1122 2010-03-23 02:04:52Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.hawaii.ics.csdl/simplejcs/1.0.322/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/simplejcs/">
 SimpleJCS provides a wrapper around Apache JCS that preconfigures the system to support the following:
 (1) Write-through caching with an indexed disk cache backing store;
@@ -34,7 +34,7 @@ SimpleJCS provides a wrapper around Apache JCS that preconfigures the system to 
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="simplejcs"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

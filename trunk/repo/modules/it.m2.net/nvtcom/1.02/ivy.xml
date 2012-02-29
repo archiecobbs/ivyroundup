@@ -21,8 +21,8 @@
 
     <info organisation="it.m2.net" module="nvtcom" revision="1.02" status="release" publication="20060424120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1379 2010-11-10 16:14:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.m2.net/nvtcom/1.02/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1379 2010-11-10 16:14:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.m2.net/nvtcom/1.02/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.viara.cn/en/nvtcom.htm">
 
         <p>
@@ -51,7 +51,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="nvtcom" ivyde:javadoc="nvtcom"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

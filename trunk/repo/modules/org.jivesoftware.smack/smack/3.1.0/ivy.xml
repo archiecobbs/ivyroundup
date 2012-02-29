@@ -21,8 +21,8 @@
 
     <info organisation="org.jivesoftware.smack" module="smack" revision="3.1.0" status="release" publication="20081120120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 440 2009-01-15 20:25:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jivesoftware.smack/smack/3.1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 440 2009-01-15 20:25:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jivesoftware.smack/smack/3.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.igniterealtime.org/projects/smack/">
             Smack is an Open Source XMPP (Jabber) client library for instant messaging and presence. 
             A pure Java library, it can be embedded into your applications to create anything from 
@@ -40,10 +40,10 @@
     </configurations>
 
     <publications>
-        <artifact name="smack" conf="core"/>
-        <artifact name="smackx" conf="ext"/>
-        <artifact name="smackx-jingle" conf="jingle"/>
-        <artifact name="smackx-debug" conf="debug"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="smack" ivyde:javadoc="smack" name="smack" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="smackx" ivyde:javadoc="smackx" name="smackx" conf="ext"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="smackx-jingle" ivyde:javadoc="smackx-jingle" name="smackx-jingle" conf="jingle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="smackx-debug" ivyde:javadoc="smackx-debug" name="smackx-debug" conf="debug"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

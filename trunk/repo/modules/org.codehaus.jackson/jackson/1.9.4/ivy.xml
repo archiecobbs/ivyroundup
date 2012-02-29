@@ -21,8 +21,8 @@
 
     <info organisation="org.codehaus.jackson" module="jackson" revision="1.9.4" status="release" publication="20120120120000">
         <license name="Apache License, Version 2.0 OR LGPL" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1959 2012-02-24 23:05:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.jackson/jackson/1.9.4/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1959 2012-02-24 23:05:10Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.jackson/jackson/1.9.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jackson.codehaus.org/">
             <p>
                 Jackson is a:
@@ -53,12 +53,12 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="jackson-core" conf="core"/>
-        <artifact name="jackson-jaxrs" conf="jaxrs"/>
-        <artifact name="jackson-mapper" conf="mapper"/>
-        <artifact name="jackson-mrbean" conf="mrbean"/>
-        <artifact name="jackson-smile" conf="smile"/>
-        <artifact name="jackson-xc" conf="xc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-core" name="jackson-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-jaxrs" name="jackson-jaxrs" conf="jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-mapper" name="jackson-mapper" conf="mapper"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-mrbean" name="jackson-mrbean" conf="mrbean"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-smile" name="jackson-smile" conf="smile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jackson-xc" name="jackson-xc" conf="xc"/>
 
         <!-- source -->
         <artifact name="jackson-core" type="source" ext="zip" conf="core"/>

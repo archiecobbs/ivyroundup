@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.httpcomponents" module="httpclient" revision="4.1" status="release" publication="20101121120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1491 2011-02-14 16:01:05Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1491 2011-02-14 16:01:05Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hc.apache.org/httpcomponents-client/index.html">
         <p>
             HttpClient is a standards based, pure Java, implementation of HTTP versions 1.0 and 1.1 and HTTP methods (GET, POST, PUT, DELETE, HEAD, OPTIONS, and TRACE).
@@ -45,9 +45,9 @@
     </configurations>
 
     <publications>
-        <artifact name="httpmime" type="jar" conf="default,mime"/>
-        <artifact name="httpclient" type="jar" conf="default,client"/>
-        <artifact name="httpclient-cache" type="jar" conf="default,cache"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="httpmime" ivyde:javadoc="httpmime" name="httpmime" type="jar" conf="default,mime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="httpclient" ivyde:javadoc="httpclient" name="httpclient" type="jar" conf="default,client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="httpclient-cache" ivyde:javadoc="httpclient-cache" name="httpclient-cache" type="jar" conf="default,cache"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

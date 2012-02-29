@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.xerces" module="xerces" revision="2.7.1" status="release" publication="20050726120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 179 2008-05-01 22:28:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xerces/xerces/2.7.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 179 2008-05-01 22:28:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xerces/xerces/2.7.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xerces.apache.org/">
             Apache Xerces is a collaborative software development
             project dedicated to providing robust, full-featured,
@@ -43,8 +43,8 @@
     </configurations>
 
     <publications>
-        <artifact name="xercesImpl" conf="impl"/>
-        <artifact name="xml-apis" conf="apis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xercesImpl" name="xercesImpl" conf="impl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xml-apis" name="xml-apis" conf="apis"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
         <artifact name="javadoc-other" type="javadoc" ext="zip"/>

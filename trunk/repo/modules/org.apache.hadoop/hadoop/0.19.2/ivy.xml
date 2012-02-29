@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.hadoop" module="hadoop" revision="0.19.2" status="release" publication="20090630113800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 854 2009-08-08 07:07:24Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.hadoop/hadoop/0.19.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 854 2009-08-08 07:07:24Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.hadoop/hadoop/0.19.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hadoop.apache.org/">
             <p>
                 Apache Hadoop Core is a software platform that lets one
@@ -65,9 +65,9 @@
     </configurations>
 
     <publications>
-        <artifact name="hadoop-ant"/>
-        <artifact name="hadoop-core"/>
-        <artifact name="hadoop-tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-ant" name="hadoop-ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-core" name="hadoop-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-tools" name="hadoop-tools"/>
 
         <artifact name="hadoop-ant-source" type="source" ext="zip"/>
         <artifact name="hadoop-core-source" type="source" ext="zip"/>

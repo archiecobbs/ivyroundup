@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.freemarker" module="freemarker" revision="2.3.13" status="release" publication="20080505120000">
         <license name="BSD style" url="http://freemarker.sourceforge.net/docs/app_license.html"/>
-        <ivyauthor name="$Id: ivy.xml 238 2008-05-21 16:53:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.freemarker/freemarker/2.3.13/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 238 2008-05-21 16:53:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.freemarker/freemarker/2.3.13/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://freemarker.sourceforge.net/">
 
             <p>
@@ -81,7 +81,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="freemarker" ivyde:javadoc="freemarker"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

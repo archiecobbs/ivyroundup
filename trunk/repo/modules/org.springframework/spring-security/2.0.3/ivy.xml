@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring-security" revision="2.0.3" status="release" publication="20080624120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 261 2008-07-02 21:23:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 261 2008-07-02 21:23:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/2.0.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://static.springframework.org/spring-security/site/">
 
             <p>
@@ -96,18 +96,18 @@
     </configurations>
 
     <publications>
-        <artifact name="spring-security-acl" conf="acl"/>
-        <artifact name="spring-security-cas-client" conf="cas-client"/>
-        <artifact name="spring-security-catalina" conf="catalina"/>
-        <artifact name="spring-security-core" conf="core"/>
-        <artifact name="spring-security-core-tiger" conf="core-tiger"/>
-        <artifact name="spring-security-jboss" conf="jboss"/>
-        <artifact name="spring-security-jetty" conf="jetty"/>
-        <artifact name="spring-security-ntlm" conf="ntlm"/>
-        <artifact name="spring-security-openid" conf="openid"/>
-        <artifact name="spring-security-portlet" conf="portlet"/>
-        <artifact name="spring-security-resin" conf="resin"/>
-        <artifact name="spring-security-taglibs" conf="taglibs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-acl" name="spring-security-acl" conf="acl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-cas-client" name="spring-security-cas-client" conf="cas-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-catalina" name="spring-security-catalina" conf="catalina"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-core" name="spring-security-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-core-tiger" name="spring-security-core-tiger" conf="core-tiger"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-jboss" name="spring-security-jboss" conf="jboss"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-jetty" name="spring-security-jetty" conf="jetty"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-ntlm" name="spring-security-ntlm" conf="ntlm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-openid" name="spring-security-openid" conf="openid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-portlet" name="spring-security-portlet" conf="portlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-resin" name="spring-security-resin" conf="resin"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-taglibs" name="spring-security-taglibs" conf="taglibs"/>
 
         <artifact name="spring-security-acl" type="source" ext="zip"/>
         <artifact name="spring-security-cas-client" type="source" ext="zip"/>

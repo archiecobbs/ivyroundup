@@ -21,15 +21,15 @@
 
     <info organisation="javax.annotation" module="jsr250-api" revision="1.0" status="release" publication="20060427103100">
         <license name="CDDL v1.0" url="https://glassfish.dev.java.net/public/CDDLv1.0.html"/>
-        <ivyauthor name="$Id: ivy.xml 975 2009-12-03 13:51:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.annotation/jsr250-api/1.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 975 2009-12-03 13:51:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.annotation/jsr250-api/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jcp.org/aboutJava/communityprocess/final/jsr250/index.html">
         JSR-250 Reference Implementation by Glassfish
         </description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsr250-api"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

@@ -21,8 +21,8 @@
 
     <info organisation="org.cometd.java" module="cometd" revision="1.1.2" status="release" publication="20100706203000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1360 2010-10-15 15:09:49Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.cometd.java/cometd/1.1.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1360 2010-10-15 15:09:49Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.cometd.java/cometd/1.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://cometd.org/">
             CometD is a scalable HTTP-based event routing bus that uses a Ajax Push technology pattern known as Comet.
         </description>
@@ -38,10 +38,10 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="cometd-api" conf="api"/>
-        <artifact name="cometd-java-client" conf="client"/>
-        <artifact name="cometd-java-oort" conf="oort"/>
-        <artifact name="cometd-java-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-api" ivyde:javadoc="cometd-api" name="cometd-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-client" ivyde:javadoc="cometd-java-client" name="cometd-java-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-oort" ivyde:javadoc="cometd-java-oort" name="cometd-java-oort" conf="oort"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-server" ivyde:javadoc="cometd-java-server" name="cometd-java-server" conf="server"/>
 
         <!-- source -->
         <artifact name="cometd-api" type="source" ext="zip" conf="api"/>

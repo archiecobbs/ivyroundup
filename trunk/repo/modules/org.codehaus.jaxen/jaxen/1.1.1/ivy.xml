@@ -21,8 +21,8 @@
 
     <info organisation="org.codehaus.jaxen" module="jaxen" revision="1.1.1" status="release" publication="20070505120000">
         <license name="BSD style" url="http://jaxen.codehaus.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 196 2008-05-05 21:10:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.jaxen/jaxen/1.1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 196 2008-05-05 21:10:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.jaxen/jaxen/1.1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jaxen.codehaus.org/">
              Jaxen is an open source XPath library written in Java. It
              is adaptable to many different object models, including DOM,
@@ -34,7 +34,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jaxen" ivyde:javadoc="jaxen"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

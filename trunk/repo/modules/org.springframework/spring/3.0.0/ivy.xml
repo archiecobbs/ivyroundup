@@ -21,8 +21,8 @@
 
     <info organisation="org.springframework" module="spring" revision="3.0.0" status="release" publication="20091216180000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1192 2010-04-21 19:59:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1192 2010-04-21 19:59:57Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/3.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springframework.org/">
             Spring is a layered Java/J2EE application framework, based on code
             published in Expert One-on-One J2EE Design and Development by Rod Johnson
@@ -128,26 +128,26 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="aop" conf="default,aop"/>
-        <artifact name="asm" conf="default,asm"/>
-        <artifact name="aspects" conf="default,aspects"/>
-        <artifact name="beans" conf="default,beans"/>
-        <artifact name="context" conf="default,context"/>
-        <artifact name="context.support" conf="default,context-support"/>
-        <artifact name="core" conf="default,core"/>
-        <artifact name="expression" conf="default,expression"/>
-        <artifact name="instrument" conf="default,instrument"/>
-        <artifact name="instrument.tomcat" conf="default,instrument-tomcat"/>
-        <artifact name="jdbc" conf="default,jdbc"/>
-        <artifact name="jms" conf="default,jms"/>
-        <artifact name="orm" conf="default,orm"/>
-        <artifact name="oxm" conf="default,oxm"/>
-        <artifact name="test" conf="default,test"/>
-        <artifact name="transaction" conf="default,tx"/>
-        <artifact name="web" conf="default,web"/>
-        <artifact name="web.portlet" conf="default,web-portlet"/>
-        <artifact name="web.servlet" conf="default,web-servlet"/>
-        <artifact name="web.struts" conf="default,web-struts"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="aop" ivyde:javadoc="aop" name="aop" conf="default,aop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm" conf="default,asm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="aspects" ivyde:javadoc="aspects" name="aspects" conf="default,aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="beans" ivyde:javadoc="beans" name="beans" conf="default,beans"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="context" ivyde:javadoc="context" name="context" conf="default,context"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="context.support" ivyde:javadoc="context.support" name="context.support" conf="default,context-support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="core" ivyde:javadoc="core" name="core" conf="default,core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="expression" ivyde:javadoc="expression" name="expression" conf="default,expression"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="instrument" ivyde:javadoc="instrument" name="instrument" conf="default,instrument"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="instrument.tomcat" ivyde:javadoc="instrument.tomcat" name="instrument.tomcat" conf="default,instrument-tomcat"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jdbc" ivyde:javadoc="jdbc" name="jdbc" conf="default,jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jms" ivyde:javadoc="jms" name="jms" conf="default,jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="orm" ivyde:javadoc="orm" name="orm" conf="default,orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="oxm" ivyde:javadoc="oxm" name="oxm" conf="default,oxm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="test" ivyde:javadoc="test" name="test" conf="default,test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="transaction" ivyde:javadoc="transaction" name="transaction" conf="default,tx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="web" ivyde:javadoc="web" name="web" conf="default,web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="web.portlet" ivyde:javadoc="web.portlet" name="web.portlet" conf="default,web-portlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="web.servlet" ivyde:javadoc="web.servlet" name="web.servlet" conf="default,web-servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="web.struts" ivyde:javadoc="web.struts" name="web.struts" conf="default,web-struts"/>
 
         <!-- source -->
         <artifact type="source" ext="zip" name="aop" conf="default,aop"/>

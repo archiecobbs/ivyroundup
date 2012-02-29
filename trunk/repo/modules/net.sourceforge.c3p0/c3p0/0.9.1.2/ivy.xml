@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.c3p0" module="c3p0" revision="0.9.1.2" status="release" publication="20070521120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 286 2008-10-21 14:24:23Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.c3p0/c3p0/0.9.1.2/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 286 2008-10-21 14:24:23Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.c3p0/c3p0/0.9.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://c3p0.sourceforge.net/">
             <p>
             c3p0 is an easy-to-use library for making traditional
@@ -79,8 +79,8 @@
     </configurations>
 
     <publications>
-        <artifact/>
-        <artifact name="c3p0-oracle-thin-extras" conf="oracle-thin-extras"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="c3p0" ivyde:javadoc="c3p0"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="c3p0-oracle-thin-extras" ivyde:javadoc="c3p0-oracle-thin-extras" name="c3p0-oracle-thin-extras" conf="oracle-thin-extras"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

@@ -21,8 +21,8 @@
 
     <info organisation="com.ibm.xml" module="thinclient" revision="1.0.0.7" status="release" publication="20100817120000">
         <license name="IBM Proprietary" url="http://www-01.ibm.com/software/webservers/appserv/was/featurepacks/xml/features/"/>
-        <ivyauthor name="$Id: ivy.xml 1535 2011-04-07 15:09:27Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.ibm.xml/thinclient/1.0.0.7/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1535 2011-04-07 15:09:27Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.ibm.xml/thinclient/1.0.0.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www-01.ibm.com/software/webservers/appserv/was/featurepacks/xml/features/">
 
             <p>
@@ -38,7 +38,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="thinclient"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

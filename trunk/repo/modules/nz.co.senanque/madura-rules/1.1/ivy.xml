@@ -20,8 +20,8 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
     <info organisation="nz.co.senanque" module="madura-rules" revision="1.1" status="release" publication="20120216124044">
         <license name="GNU Affero General Public License, Version 3.0" url="http://www.gnu.org/licenses/agpl.html"/><license name="Commercial Madura Rules License, Version 1.0" url="http://sites.google.com/site/madurasoftware/home/madura-rules/commercially-licensed-version-of-madura-rules"/>
-        <ivyauthor name="$Id: ivy.xml 1944 2012-02-17 03:34:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/madura-rules/1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1944 2012-02-17 03:34:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/nz.co.senanque/madura-rules/1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description>
         This is a plugin to Madura Objects. It provides a rules/constraint engine to assist with validation,
         deriving new values from user inputs (eg total of invoices entered on this customer) an manipulating metadata
@@ -37,8 +37,8 @@
         <conf name="default"/>
     </configurations>
     <publications>
-        <artifact conf="generate"/>
-        <artifact conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="madura-rules" ivyde:javadoc="madura-rules" conf="generate"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="madura-rules" ivyde:javadoc="madura-rules" conf="default"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
         <artifact name="source" type="source" ext="zip" conf="default"/>
         <artifact name="MaduraRules" type="doc" ext="pdf" conf="default"/>

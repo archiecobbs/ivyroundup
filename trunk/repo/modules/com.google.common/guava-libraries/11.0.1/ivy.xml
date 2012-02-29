@@ -22,8 +22,8 @@
 
     <info organisation="com.google.common" module="guava-libraries" revision="11.0.1" status="release" publication="20120109120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1927 2012-02-08 17:55:43Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google.common/guava-libraries/11.0.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1927 2012-02-08 17:55:43Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.google.common/guava-libraries/11.0.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/guava-libraries/">
         The Guava project contains several of Google's core libraries
         that we rely on in our Java-based projects: collections, caching,
@@ -38,10 +38,10 @@
     </configurations>
 
     <publications>
-        <artifact name="guava" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guava" ivyde:javadoc="guava" name="guava" conf="default"/>
         <artifact name="guava" conf="default" type="source" ext="zip"/>
         <artifact name="guava" conf="default" type="javadoc" ext="zip"/>
-        <artifact name="guava-gwt" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guava-gwt" ivyde:javadoc="guava-gwt" name="guava-gwt" conf="gwt"/>
         <artifact name="guava-gwt" conf="gwt" type="source" ext="zip"/>
         <artifact name="guava-gwt" conf="gwt" type="javadoc" ext="zip"/>
     </publications>

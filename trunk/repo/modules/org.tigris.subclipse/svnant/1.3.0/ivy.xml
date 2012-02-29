@@ -21,8 +21,8 @@
 
     <info organisation="org.tigris.subclipse" module="svnant" revision="1.3.0" status="release" publication="20090717182835">
         <license name="Apache License, Version 1.1" url="http://www.apache.org/licenses/LICENSE-1.1"/>
-        <ivyauthor name="$Id: ivy.xml 1426 2010-12-31 05:29:59Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.tigris.subclipse/svnant/1.3.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1426 2010-12-31 05:29:59Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.tigris.subclipse/svnant/1.3.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://subclipse.tigris.org/svnant.html">Ant tasks for working with SVN repositories.</description>
     </info>
 

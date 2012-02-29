@@ -21,8 +21,8 @@
 
     <info organisation="com.sun.jersey" module="jersey" revision="1.4" status="release" publication="20080406120000">
         <license name="CDDL 1.1 + GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
-        <ivyauthor name="$Id: ivy.xml 1364 2010-10-15 16:57:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sun.jersey/jersey/1.4/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1364 2010-10-15 16:57:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sun.jersey/jersey/1.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jersey.dev.java.net">
             <p>
                 Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation
@@ -50,15 +50,15 @@
 
     <publications>
         <!-- jar -->
-        <artifact name="jersey-atom" conf="atom"/>
-        <artifact name="jersey-client" conf="client"/>
-        <artifact name="jersey-core" conf="core"/>
-        <artifact name="jersey-fastinfoset" conf="fastinfoset"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-atom" name="jersey-atom" conf="atom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-client" ivyde:javadoc="jersey-client" name="jersey-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-core" ivyde:javadoc="jersey-core" name="jersey-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-fastinfoset" name="jersey-fastinfoset" conf="fastinfoset"/>
         <artifact name="jersey-jrebel" conf="jrebel"/>
-        <artifact name="jersey-json" conf="json"/>
-        <artifact name="jersey-server" conf="server"/>
-        <artifact name="jersey-guice" conf="guice"/>
-        <artifact name="jersey-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-json" ivyde:javadoc="jersey-json" name="jersey-json" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server" ivyde:javadoc="jersey-server" name="jersey-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-guice" ivyde:javadoc="jersey-guice" name="jersey-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-spring" ivyde:javadoc="jersey-spring" name="jersey-spring" conf="spring"/>
 
         <!-- source -->
         <artifact name="jersey-atom" type="source" ext="zip" conf="atom"/>

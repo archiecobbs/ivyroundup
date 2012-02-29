@@ -21,8 +21,8 @@
 
     <info organisation="pl.bristleback" module="bristleServer" revision="0.0.5" status="release" publication="20101220133800">
         <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1555 2011-04-17 07:53:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/pl.bristleback/bristleServer/0.0.5/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1555 2011-04-17 07:53:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/pl.bristleback/bristleServer/0.0.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/bristleback/">
             <p>
                 Bristleback plugin entirely changes the way of using Jwebsocket library, allowing fast and easy creation of Spring integrated websocket applications.
@@ -52,7 +52,7 @@
     </configurations>
 
     <publications>
-        <artifact conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bristleServer" ivyde:javadoc="bristleServer" conf="server"/>
         <artifact name="bristle" type="javascript" ext="js" conf="javascript-client"/>
         <artifact type="source" ext="zip" conf="server"/>
         <artifact type="javadoc" ext="zip" conf="server"/>

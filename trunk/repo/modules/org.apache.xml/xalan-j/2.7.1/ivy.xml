@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.xml" module="xalan-j" revision="2.7.1" status="release" publication="20071122120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1440 2011-01-07 22:14:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xalan-j/2.7.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1440 2011-01-07 22:14:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xml/xalan-j/2.7.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xml.apache.org/xalan-j/">
             <p>
             Xalan-Java is an XSLT processor for transforming XML documents
@@ -62,9 +62,9 @@
     </configurations>
 
     <publications>
-        <artifact conf="interp" name="xalan"/>
-        <artifact conf="compiler" name="xsltc"/>
-        <artifact conf="serializer" name="serializer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xalan" ivyde:javadoc="xalan" conf="interp" name="xalan"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xsltc" ivyde:javadoc="xsltc" conf="compiler" name="xsltc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="serializer" ivyde:javadoc="serializer" conf="serializer" name="serializer"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

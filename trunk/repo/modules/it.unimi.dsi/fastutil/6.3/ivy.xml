@@ -21,8 +21,8 @@
 
     <info organisation="it.unimi.dsi" module="fastutil" revision="6.3" status="release" publication="20110509120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 1662 2011-08-01 15:04:55Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1662 2011-08-01 15:04:55Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://fastutil.dsi.unimi.it/">
             fastutil extends the Java Collections Framework by providing type-specific
             maps, sets, lists and queues with a small memory footprint and fast
@@ -32,7 +32,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="fastutil"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

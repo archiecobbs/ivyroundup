@@ -21,15 +21,15 @@
 
     <info organisation="net.sourceforge.saxon" module="saxon-he" revision="9.2.1.1" status="release" publication="20100426120000">
         <license name="Mozilla Public License" url="http://www.mozilla.org/MPL"/>
-        <ivyauthor name="$Id: ivy.xml 1217 2010-06-09 17:44:57Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.saxon/saxon-he/9.2.1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1217 2010-06-09 17:44:57Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.saxon/saxon-he/9.2.1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://saxon.sourceforge.net/">
             Open Source SAXON XSLT processor developed by Michael Kay of Saxonica Limited.
         </description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="saxon-he"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
 

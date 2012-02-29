@@ -21,8 +21,8 @@
 
     <info organisation="net.sourceforge.htmlparser" module="htmlparser" revision="1.6" status="release" publication="20060610120000">
         <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-        <ivyauthor name="$Id: ivy.xml 246 2008-05-29 22:04:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.htmlparser/htmlparser/1.6/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 246 2008-05-29 22:04:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.htmlparser/htmlparser/1.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://htmlparser.sourceforge.net/">
             <p>
             HTML Parser is a Java library used to parse HTML in either a
@@ -43,10 +43,10 @@
     </configurations>
 
     <publications>
-        <artifact name="filterbuilder" conf="default,filterbuilder"/>
-        <artifact name="htmllexer" conf="default,htmllexer"/>
-        <artifact name="htmlparser" conf="default,htmlparser"/>
-        <artifact name="thumbelina" conf="default,thumbelina"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="filterbuilder" ivyde:javadoc="filterbuilder" name="filterbuilder" conf="default,filterbuilder"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="htmllexer" ivyde:javadoc="htmllexer" name="htmllexer" conf="default,htmllexer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="htmlparser" ivyde:javadoc="htmlparser" name="htmlparser" conf="default,htmlparser"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="thumbelina" ivyde:javadoc="thumbelina" name="thumbelina" conf="default,thumbelina"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

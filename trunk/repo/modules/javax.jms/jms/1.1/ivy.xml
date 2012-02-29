@@ -21,8 +21,8 @@
 
     <info organisation="javax.jms" module="jms" revision="1.1" status="release" publication="20020430000000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://java.sun.com/products/jms/docs.html"/>
-        <ivyauthor name="$Id: ivy.xml 222 2008-05-08 17:02:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jms/jms/1.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 222 2008-05-08 17:02:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jms/jms/1.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.sun.com/products/jms/docs.html">
             The Java Message Service (JMS) API is a messaging standard
             that allows application components based on the Java 2
@@ -41,7 +41,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jms" ivyde:javadoc="jms"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

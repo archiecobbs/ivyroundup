@@ -21,8 +21,8 @@
 
     <info organisation="org.jaspersoft" module="jasperreports" revision="3.5.3" status="release" publication="20090729165800">
         <license name="LGPL, Version 2.1" url="http://www.gnu.org/licenses/lgpl.html"/>
-        <ivyauthor name="$Id: ivy.xml 1611 2011-05-11 01:53:58Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/3.5.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1611 2011-05-11 01:53:58Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jaspersoft/jasperreports/3.5.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jasperforge.org/projects/jasperreports/">
         <p>
         100% pure Java report library for superior portability with flexible and
@@ -52,10 +52,10 @@
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
-        <artifact name="jasperreports-applet" conf="applet"/>
-        <artifact name="jasperreports-javaflow" conf="javaflow"/>
-        <artifact name="commons-javaflow" conf="javaflow"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jasperreports" ivyde:javadoc="jasperreports" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jasperreports-applet" ivyde:javadoc="jasperreports-applet" name="jasperreports-applet" conf="applet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jasperreports-javaflow" ivyde:javadoc="jasperreports-javaflow" name="jasperreports-javaflow" conf="javaflow"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-javaflow" ivyde:javadoc="commons-javaflow" name="commons-javaflow" conf="javaflow"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

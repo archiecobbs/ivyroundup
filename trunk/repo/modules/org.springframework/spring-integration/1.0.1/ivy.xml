@@ -18,8 +18,8 @@
 
     <info organisation="org.springframework" module="spring-integration" revision="1.0.1" status="release" publication="20081217181900">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 985 2009-12-09 16:15:54Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-integration/1.0.1/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 985 2009-12-09 16:15:54Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-integration/1.0.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.springsource.org/spring-integration/">Spring Integration
         is a new addition to the Spring portfolio. It provides an extension of the Spring programming model
         to support the well-known Enterprise Integration Patterns while building on the Spring Framework's
@@ -48,18 +48,18 @@
     </configurations>
     
     <publications>
-        <artifact name="spring-integration-adapter" conf="default,adapter"/>
-        <artifact name="spring-integration-core" conf="default,core"/>
-        <artifact name="spring-integration-event" conf="default,event"/>
-        <artifact name="spring-integration-file" conf="default,file"/>
-        <artifact name="spring-integration-httpinvoker" conf="default,httpinvoker"/>
-        <artifact name="spring-integration-jms" conf="default,jms"/>
-        <artifact name="spring-integration-mail" conf="default,mail"/>
-        <artifact name="spring-integration-rmi" conf="default,rmi"/>
-        <artifact name="spring-integration-security" conf="default,security"/>
-        <artifact name="spring-integration-stream" conf="default,stream"/>
-        <artifact name="spring-integration-ws" conf="default,ws"/>
-        <artifact name="spring-integration-xml" conf="default,xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-adapter" name="spring-integration-adapter" conf="default,adapter"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-core" name="spring-integration-core" conf="default,core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-event" name="spring-integration-event" conf="default,event"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-file" name="spring-integration-file" conf="default,file"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-httpinvoker" name="spring-integration-httpinvoker" conf="default,httpinvoker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-jms" name="spring-integration-jms" conf="default,jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-mail" name="spring-integration-mail" conf="default,mail"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-rmi" name="spring-integration-rmi" conf="default,rmi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-security" name="spring-integration-security" conf="default,security"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-stream" name="spring-integration-stream" conf="default,stream"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-ws" name="spring-integration-ws" conf="default,ws"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-integration-xml" name="spring-integration-xml" conf="default,xml"/>
         <artifact name="source" type="source" ext="zip"/>
     </publications>
     

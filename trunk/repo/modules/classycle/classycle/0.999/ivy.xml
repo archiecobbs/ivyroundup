@@ -21,8 +21,8 @@
 
     <info organisation="classycle" module="classycle" revision="0.999" status="release" publication="20050605161500">
         <license name="Proprietary" url="LICENSE.txt"/>
-        <ivyauthor name="$Id: ivy.xml 517 2009-03-06 18:24:14Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/classycle/classycle/0.999/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 517 2009-03-06 18:24:14Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/classycle/classycle/0.999/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://classycle.sourceforge.net/">
         Classycle's Analyser analyses the static class and package dependencies
         in Java applications or libraries. It is especially helpful for finding
@@ -38,7 +38,7 @@
     </info>
 
     <publications>
-        <artifact name="classycle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="classycle" ivyde:javadoc="classycle" name="classycle"/>
         <artifact name="reportXMLtoHTML" type="report" ext="xsl"/>
         <artifact name="images" type="report" ext="zip"/>
         <artifact name="source" type="source" ext="zip"/>

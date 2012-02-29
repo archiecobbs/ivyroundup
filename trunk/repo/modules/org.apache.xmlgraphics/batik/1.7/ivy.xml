@@ -21,8 +21,8 @@
 
     <info organisation="org.apache.xmlgraphics" module="batik" revision="1.7" status="release" publication="20080106120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor name="$Id: ivy.xml 660 2009-04-17 15:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xmlgraphics/batik/1.7/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 660 2009-04-17 15:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.xmlgraphics/batik/1.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xmlgraphics.apache.org/batik/">
              <p>
              Batik is a Java-based toolkit for applications or applets
@@ -62,29 +62,29 @@
     </configurations>
 
     <publications>
-        <artifact name="batik-anim" conf="core"/>
-        <artifact name="batik-awt-util" conf="minimal"/>
-        <artifact name="batik-bridge" conf="minimal"/>
-        <artifact name="batik-codec" conf="minimal"/>
-        <artifact name="batik-css" conf="minimal"/>
-        <artifact name="batik-dom" conf="minimal"/>
-        <artifact name="batik-ext" conf="minimal"/>
-        <artifact name="batik-extension" conf="default"/>
-        <artifact name="batik-gui-util" conf="minimal"/>
-        <artifact name="batik-gvt" conf="minimal"/>
-        <artifact name="batik-parser" conf="minimal"/>
-        <artifact name="batik-rasterizer" conf="rasterizer"/>
-        <artifact name="batik-script" conf="minimal"/>
-        <artifact name="batik-slideshow" conf="slideshow"/>
-        <artifact name="batik-squiggle" conf="squiggle"/>
-        <artifact name="batik-svg-dom" conf="minimal"/>
-        <artifact name="batik-svggen" conf="svggen"/>
-        <artifact name="batik-svgpp" conf="svgpp"/>
-        <artifact name="batik-swing" conf="default"/>
-        <artifact name="batik-transcoder" conf="default"/>
-        <artifact name="batik-ttf2svg" conf="ttf2svg"/>
-        <artifact name="batik-util" conf="minimal"/>
-        <artifact name="batik-xml" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-anim" ivyde:javadoc="batik-anim" name="batik-anim" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-awt-util" ivyde:javadoc="batik-awt-util" name="batik-awt-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-bridge" ivyde:javadoc="batik-bridge" name="batik-bridge" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-codec" ivyde:javadoc="batik-codec" name="batik-codec" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-css" ivyde:javadoc="batik-css" name="batik-css" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-dom" ivyde:javadoc="batik-dom" name="batik-dom" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-ext" ivyde:javadoc="batik-ext" name="batik-ext" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-extension" ivyde:javadoc="batik-extension" name="batik-extension" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-gui-util" ivyde:javadoc="batik-gui-util" name="batik-gui-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-gvt" ivyde:javadoc="batik-gvt" name="batik-gvt" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-parser" ivyde:javadoc="batik-parser" name="batik-parser" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-rasterizer" ivyde:javadoc="batik-rasterizer" name="batik-rasterizer" conf="rasterizer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-script" ivyde:javadoc="batik-script" name="batik-script" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-slideshow" ivyde:javadoc="batik-slideshow" name="batik-slideshow" conf="slideshow"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-squiggle" ivyde:javadoc="batik-squiggle" name="batik-squiggle" conf="squiggle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-svg-dom" ivyde:javadoc="batik-svg-dom" name="batik-svg-dom" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-svggen" ivyde:javadoc="batik-svggen" name="batik-svggen" conf="svggen"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-svgpp" ivyde:javadoc="batik-svgpp" name="batik-svgpp" conf="svgpp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-swing" ivyde:javadoc="batik-swing" name="batik-swing" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-transcoder" ivyde:javadoc="batik-transcoder" name="batik-transcoder" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-ttf2svg" ivyde:javadoc="batik-ttf2svg" name="batik-ttf2svg" conf="ttf2svg"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-util" ivyde:javadoc="batik-util" name="batik-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="batik-xml" ivyde:javadoc="batik-xml" name="batik-xml" conf="minimal"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

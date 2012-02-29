@@ -21,8 +21,8 @@
 
     <info organisation="org.liquibase" module="liquibase" revision="2.0.0" status="release" publication="20101218120000">
         <license name="GNU Lesser Public License, Version 2.1" url="http://www.opensource.org/licenses/lgpl-2.1.php"/>
-        <ivyauthor name="$Id: ivy.xml 1434 2011-01-06 18:19:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.liquibase/liquibase/2.0.0/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1434 2011-01-06 18:19:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.liquibase/liquibase/2.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.liquibase.org/">
 
             <p>
@@ -52,7 +52,7 @@
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="liquibase"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

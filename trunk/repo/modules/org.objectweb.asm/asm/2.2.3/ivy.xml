@@ -21,8 +21,8 @@
 
     <info organisation="org.objectweb.asm" module="asm" revision="2.2.3" status="release" publication="20070606000000">
         <license name="BSD License" url="http://asm.objectweb.org/license.html"/>
-        <ivyauthor name="$Id: ivy.xml 461 2009-01-27 17:28:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.asm/asm/2.2.3/"/>
-        <repository pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 461 2009-01-27 17:28:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.asm/asm/2.2.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://asm.objectweb.org/">
             <p>
             ASM is an all purpose Java bytecode manipulation and
@@ -59,13 +59,13 @@
     </configurations>
 
     <publications>
-        <artifact name="asm" conf="core"/>
-        <artifact name="asm-analysis" conf="analysis"/>
-        <artifact name="asm-attrs" conf="attrs"/>
-        <artifact name="asm-commons" conf="commons"/>
-        <artifact name="asm-tree" conf="tree"/>
-        <artifact name="asm-util" conf="util"/>
-        <artifact name="asm-xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-analysis" ivyde:javadoc="asm-analysis" name="asm-analysis" conf="analysis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-attrs" ivyde:javadoc="asm-attrs" name="asm-attrs" conf="attrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-commons" ivyde:javadoc="asm-commons" name="asm-commons" conf="commons"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-tree" ivyde:javadoc="asm-tree" name="asm-tree" conf="tree"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-util" ivyde:javadoc="asm-util" name="asm-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-xml" ivyde:javadoc="asm-xml" name="asm-xml" conf="xml"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
