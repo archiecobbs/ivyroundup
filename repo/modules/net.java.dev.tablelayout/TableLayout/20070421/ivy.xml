@@ -46,11 +46,11 @@
         <conf name="ext1.5" extends="jdk1.5" description="Extensions classes for JDK version 1.5"/>
     </configurations>
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="TableLayout-jdk1.1" ivyde:javadoc="TableLayout-jdk1.1" name="TableLayout-jdk1.1" conf="oldjdk"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="TableLayout-jdk1.4" ivyde:javadoc="TableLayout-jdk1.4" name="TableLayout-jdk1.4" conf="jdk1.4"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="TableLayout-jdk1.5" ivyde:javadoc="TableLayout-jdk1.5" name="TableLayout-jdk1.5" conf="jdk1.5"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="TableLayoutExtensions-jdk1.4" ivyde:javadoc="TableLayoutExtensions-jdk1.4" name="TableLayoutExtensions-jdk1.4" conf="ext1.4"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="TableLayoutExtensions-jdk1.5" ivyde:javadoc="TableLayoutExtensions-jdk1.5" name="TableLayoutExtensions-jdk1.5" conf="ext1.5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.1" conf="oldjdk"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.4" conf="jdk1.4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.5" conf="jdk1.5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayoutExtensions-jdk1.4" conf="ext1.4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayoutExtensions-jdk1.5" conf="ext1.5"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

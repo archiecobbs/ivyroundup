@@ -34,7 +34,7 @@ The Google Collections Library is a set of new collection types, implementations
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="google-collect" ivyde:javadoc="google-collect" name="google-collect" conf="default" ext="jar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="google-collect" conf="default" ext="jar"/>
         <artifact name="source" conf="all" type="source" ext="zip"/>
         <artifact name="javadoc" conf="all" type="javadoc" ext="zip"/>
     </publications>

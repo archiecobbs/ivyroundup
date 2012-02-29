@@ -37,8 +37,8 @@
         <conf name="default"/>
     </configurations>
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="madura-rules" ivyde:javadoc="madura-rules" conf="generate"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="madura-rules" ivyde:javadoc="madura-rules" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="generate"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="default"/>
         <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
         <artifact name="source" type="source" ext="zip" conf="default"/>
         <artifact name="MaduraRules" type="doc" ext="pdf" conf="default"/>

@@ -52,10 +52,10 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-client" ivyde:javadoc="xmlrpc-client" name="xmlrpc-client" conf="client"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-common" ivyde:javadoc="xmlrpc-common" name="xmlrpc-common" conf="common"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="xmlrpc-server" ivyde:javadoc="xmlrpc-server" name="xmlrpc-server" conf="server"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="ws-commons-util-1.0.2" ivyde:javadoc="ws-commons-util-1.0.2" name="ws-commons-util-1.0.2" conf="common"/> <!-- TODO: should be in its own "ws-common-util" module -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="xmlrpc-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="xmlrpc-common" conf="common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="xmlrpc-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="ws-commons-util-1.0.2" conf="common"/> <!-- TODO: should be in its own "ws-common-util" module -->
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

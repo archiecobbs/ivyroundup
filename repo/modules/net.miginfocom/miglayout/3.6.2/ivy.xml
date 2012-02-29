@@ -69,11 +69,11 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout" ivyde:javadoc="miglayout" name="miglayout" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swing" ivyde:javadoc="miglayout-swing" name="miglayout-swing" conf="swing"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swing-java14" ivyde:javadoc="miglayout-swing-java14" name="miglayout-swing-java14" conf="swing-jdk14"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swt" ivyde:javadoc="miglayout-swt" name="miglayout-swt" conf="swt"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="miglayout-swt-java14" ivyde:javadoc="miglayout-swt-java14" name="miglayout-swt-java14" conf="swt-jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swing" conf="swing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swing-java14" conf="swing-jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swt" conf="swt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swt-java14" conf="swt-jdk14"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

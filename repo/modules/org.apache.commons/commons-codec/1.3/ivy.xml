@@ -36,7 +36,7 @@
   </configurations>
 
   <publications>
-    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-codec" ivyde:javadoc="commons-codec" conf="build"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-codec-source" ivyde:javadoc="commons-codec-javadoc" conf="build"/>
     <artifact name="commons-codec-source" type="source" conf="source" ext="zip"/>
     <artifact name="commons-codec-javadoc" type="javadoc" conf="javadoc" ext="zip"/>
   </publications>

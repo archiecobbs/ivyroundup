@@ -80,8 +80,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-benchmark-viewer" name="gwt-benchmark-viewer" conf="benchmark-viewer"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-dev-linux" name="gwt-dev-linux" conf="default,linux"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-benchmark-viewer" conf="benchmark-viewer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev-linux" conf="default,linux"/>
         <artifact name="libswt-mozilla17-profile-gtk-3235" type="so" conf="linux-swt"/>
         <artifact name="libswt-mozilla-gtk-3235" type="so" conf="linux-swt"/>
         <artifact name="libswt-mozilla17-profile-gcc3-gtk-3235" type="so" conf="linux-swt"/>
@@ -96,10 +96,10 @@
         <artifact name="libgwt-ll" type="jnilib" conf="mac-swt"/>
         <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
         <artifact name="swt-win32-3235" type="dll" conf="windows-swt"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-dev-windows" name="gwt-dev-windows" conf="windows"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-dev-mac" name="gwt-dev-mac" conf="mac"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-servlet" name="gwt-servlet" conf="runtime"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="gwt-user" name="gwt-user" conf="default,linux,windows,mac"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev-windows" conf="windows"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev-mac" conf="mac"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-servlet" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-user" conf="default,linux,windows,mac"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

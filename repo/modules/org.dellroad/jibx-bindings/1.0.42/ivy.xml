@@ -64,9 +64,9 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-core" ivyde:javadoc="jibx-bindings-core" name="jibx-bindings-core" conf="core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-pidf" ivyde:javadoc="jibx-bindings-pidf" name="jibx-bindings-pidf" conf="pidf"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bindings-twilio" ivyde:javadoc="jibx-bindings-twilio" name="jibx-bindings-twilio" conf="twilio"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-pidf" conf="pidf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-twilio" conf="twilio"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

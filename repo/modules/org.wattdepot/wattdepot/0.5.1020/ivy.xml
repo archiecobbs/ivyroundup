@@ -29,10 +29,10 @@ WattDepot is a RESTful web service that collects electricity data (such as curre
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-bmoclient" ivyde:javadoc="wattdepot-bmoclient" name="wattdepot-bmoclient"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-clientlib" ivyde:javadoc="wattdepot-clientlib" name="wattdepot-clientlib"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-tabularclient" ivyde:javadoc="wattdepot-tabularclient" name="wattdepot-tabularclient"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="wattdepot-server" ivyde:javadoc="wattdepot-server" name="wattdepot-server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-bmoclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-clientlib"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-tabularclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="wattdepot-server"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>

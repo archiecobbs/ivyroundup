@@ -36,26 +36,26 @@ Apache Derby, an Apache DB subproject, is an open source relational database imp
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derby" ivyde:javadoc="derby" name="derby" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbytools" ivyde:javadoc="derbytools" name="derbytools" conf="tools"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbynet" ivyde:javadoc="derbynet" name="derbynet" conf="tools"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyclient" ivyde:javadoc="derbyclient" name="derbyclient" conf="tools"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyrun" ivyde:javadoc="derbyrun" name="derbyrun" conf="tools"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derby" ivyde:javadoc="derby" name="derby" ext="war" conf="war"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derby" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbytools" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbynet" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyclient" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyrun" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derby" ext="war" conf="war"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_cs" ivyde:javadoc="derbyLocale_cs" name="derbyLocale_cs" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_de_DE" ivyde:javadoc="derbyLocale_de_DE" name="derbyLocale_de_DE" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_es" ivyde:javadoc="derbyLocale_es" name="derbyLocale_es" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_fr" ivyde:javadoc="derbyLocale_fr" name="derbyLocale_fr" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_hu" ivyde:javadoc="derbyLocale_hu" name="derbyLocale_hu" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_it" ivyde:javadoc="derbyLocale_it" name="derbyLocale_it" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_ja_JP" ivyde:javadoc="derbyLocale_ja_JP" name="derbyLocale_ja_JP" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_ko_KR" ivyde:javadoc="derbyLocale_ko_KR" name="derbyLocale_ko_KR" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_pl" ivyde:javadoc="derbyLocale_pl" name="derbyLocale_pl" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_pt_BR" ivyde:javadoc="derbyLocale_pt_BR" name="derbyLocale_pt_BR" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_ru" ivyde:javadoc="derbyLocale_ru" name="derbyLocale_ru" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_zh_CN" ivyde:javadoc="derbyLocale_zh_CN" name="derbyLocale_zh_CN" conf="locale"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="derbyLocale_zh_TW" ivyde:javadoc="derbyLocale_zh_TW" name="derbyLocale_zh_TW" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_cs" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_de_DE" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_es" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_fr" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_hu" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_it" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_ja_JP" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_ko_KR" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_pl" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_pt_BR" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_ru" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_zh_CN" conf="locale"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="derbyLocale_zh_TW" conf="locale"/>
 
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>

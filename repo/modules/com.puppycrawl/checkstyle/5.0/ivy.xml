@@ -44,13 +44,13 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle" ivyde:javadoc="checkstyle" name="checkstyle" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle-all" ivyde:javadoc="checkstyle-all" name="checkstyle-all" conf="bundled"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="checkstyle" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="checkstyle-all" conf="bundled"/>
         <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="google-collect-snapshot-20090211" ivyde:javadoc="google-collect-snapshot-20090211" name="google-collect-snapshot-20090211" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="google-collect-snapshot-20090211" conf="default"/>
     </publications>
 
     <dependencies>

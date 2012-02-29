@@ -42,10 +42,10 @@
 
     <publications>
         <!-- jar -->
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc2" name="postgresql-jdbc2" conf="jdbc2"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc2ee" name="postgresql-jdbc2ee" conf="jdbc2ee"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc3" name="postgresql-jdbc3" conf="jdbc3"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="postgresql-jdbc4" name="postgresql-jdbc4" conf="jdbc4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="postgresql-jdbc2" conf="jdbc2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="postgresql-jdbc2ee" conf="jdbc2ee"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="postgresql-jdbc3" conf="jdbc3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="postgresql-jdbc4" conf="jdbc4"/>
         
         <!-- source -->
         <artifact name="source" type="source" ext="zip"/>

@@ -44,8 +44,8 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle" ivyde:javadoc="checkstyle" name="checkstyle" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="checkstyle-all" ivyde:javadoc="checkstyle-all" name="checkstyle-all" conf="bundled"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="checkstyle" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="checkstyle-all" conf="bundled"/>
         <artifact name="checkstyle-frames" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="checkstyle-noframes" type="report" ext="xsl" conf="default,bundled"/>
         <artifact name="source" type="source" ext="zip"/>

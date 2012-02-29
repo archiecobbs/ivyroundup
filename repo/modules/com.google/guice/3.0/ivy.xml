@@ -47,18 +47,18 @@
 
     <publications>
         <!-- jar -->
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice" ivyde:javadoc="guice" name="guice" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice-no_aop" name="guice-no_aop" conf="noaop"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-assistedinject" ivyde:javadoc="guice-assistedinject" name="guice-assistedinject" conf="assistedinject"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-grapher" ivyde:javadoc="guice-grapher" name="guice-grapher" conf="grapher"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-jmx" ivyde:javadoc="guice-jmx" name="guice-jmx" conf="jmx"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-jndi" ivyde:javadoc="guice-jndi" name="guice-jndi" conf="jndi"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-multibindings" ivyde:javadoc="guice-multibindings" name="guice-multibindings" conf="multibindings"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-persist" ivyde:javadoc="guice-persist" name="guice-persist" conf="persist"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-servlet" ivyde:javadoc="guice-servlet" name="guice-servlet" conf="servlet"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-spring" ivyde:javadoc="guice-spring" name="guice-spring" conf="spring"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="guice-struts2-plugin" name="guice-struts2-plugin" conf="struts2"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-throwingproviders" ivyde:javadoc="guice-throwingproviders" name="guice-throwingproviders" conf="throwingproviders"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice" ivyde:javadoc="javadoc" name="guice" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="guice-no_aop" conf="noaop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-assistedinject" ivyde:javadoc="javadoc" name="guice-assistedinject" conf="assistedinject"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-grapher" ivyde:javadoc="javadoc" name="guice-grapher" conf="grapher"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-jmx" ivyde:javadoc="javadoc" name="guice-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-jndi" ivyde:javadoc="javadoc" name="guice-jndi" conf="jndi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-multibindings" ivyde:javadoc="javadoc" name="guice-multibindings" conf="multibindings"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-persist" ivyde:javadoc="javadoc" name="guice-persist" conf="persist"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-servlet" ivyde:javadoc="javadoc" name="guice-servlet" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-spring" ivyde:javadoc="javadoc" name="guice-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="guice-struts2-plugin" conf="struts2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="guice-throwingproviders" ivyde:javadoc="javadoc" name="guice-throwingproviders" conf="throwingproviders"/>
 
         <!-- source -->
         <artifact type="source" ext="zip" name="guice"/>

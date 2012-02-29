@@ -33,8 +33,8 @@ EMMA is an open-source toolkit for measuring and reporting Java code coverage. E
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="emma" name="emma" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="emma_ant" name="emma_ant" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="emma" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="emma_ant" conf="default"/>
         <artifact name="source" type="source" ext="zip"/>
         <!-- javadocs not available in source or binary distributions. -->
     </publications>

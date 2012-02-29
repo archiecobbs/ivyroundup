@@ -65,9 +65,9 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-ant" name="hadoop-ant"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-core" name="hadoop-core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-tools" name="hadoop-tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-javadoc" name="hadoop-ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-javadoc" name="hadoop-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="hadoop-javadoc" name="hadoop-tools"/>
 
         <artifact name="hadoop-ant-source" type="source" ext="zip"/>
         <artifact name="hadoop-core-source" type="source" ext="zip"/>
