@@ -20,6 +20,7 @@
 <xsl:transform
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/"
   version="1.0">
 
     <xsl:output encoding="UTF-8" method="xml" indent="no" media-type="text/xml"/>
@@ -145,6 +146,61 @@
         </xsl:copy>
     </xsl:template>
 
+    <xsl:template match="/ivy-module/publications/artifact[not(@type) or @type = 'jar']">
+        <xsl:copy>
+
+            <!-- Get this JAR artifact's name -->
+            <xsl:variable name="name">
+                <xsl:call-template name="get-artifact-name"/>
+            </xsl:variable>
+
+            <!-- Try to map it to a source artifact -->
+            <xsl:if test="not(@ivyde:source)">
+                <xsl:variable name="sources" select="../artifact[@type = 'source']"/>
+                <xsl:choose>
+                    <xsl:when test="count($sources) = 1">
+                        <xsl:attribute name="ivyde:source">
+                            <xsl:call-template name="get-artifact-name">
+                                <xsl:with-param name="artifact" select="$sources[1]"/>
+                            </xsl:call-template>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:when test="$sources[@name = $name]">
+                        <xsl:attribute name="ivyde:source">
+                            <xsl:call-template name="get-artifact-name">
+                                <xsl:with-param name="artifact" select="$sources[@name = $name][1]"/>
+                            </xsl:call-template>
+                        </xsl:attribute>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:if>
+
+            <!-- Try to map it to a source artifact -->
+            <xsl:if test="not(@ivyde:javadoc)">
+                <xsl:variable name="javadocs" select="../artifact[@type = 'javadoc']"/>
+                <xsl:choose>
+                    <xsl:when test="count($javadocs) = 1">
+                        <xsl:attribute name="ivyde:javadoc">
+                            <xsl:call-template name="get-artifact-name">
+                                <xsl:with-param name="artifact" select="$javadocs[1]"/>
+                            </xsl:call-template>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:when test="$javadocs[@name = $name]">
+                        <xsl:attribute name="ivyde:javadoc">
+                            <xsl:call-template name="get-artifact-name">
+                                <xsl:with-param name="artifact" select="$javadocs[@name = $name][1]"/>
+                            </xsl:call-template>
+                        </xsl:attribute>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:if>
+
+            <!-- Proceed -->
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
     <xsl:template match="/ivy-module/configurations">
         <!-- Various style and consistency checks -->
         <xsl:if test="count(conf) = 0">
@@ -237,6 +293,18 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
+    </xsl:template>
+
+    <!-- Get artifact name -->
+    <xsl:template name="get-artifact-name">
+        <xsl:choose>
+            <xsl:when test="@name">
+                <xsl:value-of select="@name"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$module"/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <!-- Warning and error templates -->
