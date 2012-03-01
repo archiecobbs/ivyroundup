@@ -157,7 +157,7 @@
               | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
         </exec>
         <mkdir dir="build/xsl"/>
-        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl">
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true">
             <filterset>
                 <filter token="SVNROOTPATH" value="${svn.path}"/>
             </filterset>
@@ -236,7 +236,7 @@
               | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
         </exec>
         <mkdir dir="build/xsl"/>
-        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl">
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true">
             <filterset>
                 <filter token="SVNROOTPATH" value="${svn.path}"/>
             </filterset>
