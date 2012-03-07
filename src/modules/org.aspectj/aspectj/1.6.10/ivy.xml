@@ -45,10 +45,10 @@
     </configurations>
 
     <publications>
-        <artifact name="rt"/>
-        <artifact name="matcher"/>
-        <artifact name="tools" conf="tools"/>
-        <artifact name="weaver" conf="weaver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="rt" ivyde:javadoc="rt" name="aspectjrt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="matcher" ivyde:javadoc="matcher" name="aspectjmatcher"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="tools" ivyde:javadoc="tools" name="aspectjtools" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="weaver" ivyde:javadoc="weaver" name="aspectjweaver" conf="weaver"/>
 
         <artifact type="source" ext="zip" name="rt"/>
         <artifact type="source" ext="zip" name="matcher"/>

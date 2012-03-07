@@ -37,9 +37,8 @@
         <!-- jar -->
         <move todir="artifacts/jars">
             <fileset dir="archive/lib" includes="aspectj*.jar"/>
-            <mapper type="glob" from="aspectj*.jar" to="*.jar"/>
         </move>
-        <move file="archive/lib/org.aspectj.matcher.jar" tofile="artifacts/jars/matcher.jar"/>
+        <move file="archive/lib/org.aspectj.matcher.jar" tofile="artifacts/jars/aspectjmatcher.jar"/>
 
         <!-- source -->
         <move todir="artifacts/sources">
