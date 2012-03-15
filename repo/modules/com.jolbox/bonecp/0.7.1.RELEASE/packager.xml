@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/bonecp.jar" sha1="83a491a03db1222b33d4e55b54e8f5702e280a0e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/bonecp.zip" sha1="ba6ad562d67fd85e06ab796462a16aad1843967f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/bonecp.zip" sha1="af1815fa6df20df181101db7b48d3f98a7186c24"/>
+        <artifact classifier="jdk5" tofile="artifacts/jars/bonecp-jdk5.jsr" sha1="39396a2222e47860ece01d7c3f64f00f197198d3"/>
+    </m2resource>
+    <m2resource artifactId="bonecp-provider">
+        <artifact tofile="artifacts/jars/bonecp-provider.jar" sha1="87fa57648cee3f6e8db14bb16b8a4cd37f078f92"/>
+        <artifact classifier="sources" tofile="artifacts/sources/bonecp-provider.zip" sha1="f84768a4970b6b51dcb84c938ae69e563d7a4811"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/bonecp-provider.zip" sha1="203102562a8c564837264f5036e13f3411664496"/>
+        <artifact classifier="jdk5" tofile="artifacts/jars/bonecp-provider-jdk5.jar" sha1="7994520e45ac82a8238855d45e60ecde50963c49"/>
+    </m2resource>
+    <m2resource artifactId="bonecp-spring">
+        <artifact tofile="artifacts/jars/bonecp-spring.jar" sha1="6a40e85682f98258ccf6c4749fdc7fd7d78580c1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/bonecp-spring.zip" sha1="7c8433cccec437b26a8d2463e4f1e923731da8d5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/bonecp-spring.zip" sha1="5dbec98401312ef0a311b4f287ab74cfcf9b6fb9"/>
+        <artifact classifier="jdk5" tofile="artifacts/jars/bonecp-spring-jdk5.jar" sha1="0efb5b9152e3050f3a1e7199d57e3d62ab86c7af"/>
+    </m2resource>
+</packager-module>
