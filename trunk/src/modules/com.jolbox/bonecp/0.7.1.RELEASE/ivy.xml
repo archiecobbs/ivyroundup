@@ -37,8 +37,8 @@
         <conf name="spring-jdk5" extends="core-jdk5" description="Spring classes for JDK 5"/>
         <conf name="hibernate-no-datasource" extends="core" description="Classes for > JDK 5 when using Hibernate without a DataSource"/>
         <conf name="hibernate-no-datasource-jdk5" extends="core-jdk5" description="Classes for JDK 5 when using Hibernate without a DataSource"/>
-        <conf name="spring-hibernate" extends="spring,hibernate-no-datasource" description"Configuration for using Spring + Hibernate on > JDK 5"/>
-        <conf name="spring-hibernate-jdk5" extends="spring-jdk5,hibernate-no-datasource-jdk5" description"Configuration for using Spring + Hibernate on JDK 5"/>
+        <conf name="spring-hibernate" extends="spring,hibernate-no-datasource" description="Configuration for using Spring + Hibernate on > JDK 5"/>
+        <conf name="spring-hibernate-jdk5" extends="spring-jdk5,hibernate-no-datasource-jdk5" description="Configuration for using Spring + Hibernate on JDK 5"/>
         <conf name="default" extends="core" description="Alias for core configuration"/>
     </configurations>
 
