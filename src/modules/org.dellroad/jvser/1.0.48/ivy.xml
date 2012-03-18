@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120318120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://jvser.googlecode.com/">
+
+        <p>
+        <b>jvser</b> (Java Virtual Serial Port) is a Java library implementing the
+        client side of the <a href="http://tools.ietf.org/html/rfc2217">RFC 2217</a>
+        protocol.
+        </p>
+
+        <p>
+        RFC 2217 defines a TCP protocol for virtualizing traditional serial
+        ports over a telnet stream. This allows clients to connect to remote
+        serial lines using access servers that support this protocol.
+        </p>
+
+        <p>
+        <b>jvser</b> provides the <code>TelnetSerialPort</code> class which implements the Java
+        standard <code>javax.comm.SerialPort</code> API, and so is backward compatible with
+        existing Java software that works with serial ports.
+        </p>
+
+        <p>
+        <b>jvser</b> utilizes the Apache commons-net library.
+        </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.comm" name="comm" rev="3.0.u1" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-net" rev="3.0.1" conf="default->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,1.3)" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
