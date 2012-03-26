@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,12 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource groupId="org/vaadin" repo="http://maven.vaadin.com/vaadin-addons">
-        <artifact tofile="artifacts/jars/dontpush-addon-ozonelayer.jar" sha1="fedaf8be298609312e101fe4d69045b7d928958b"/>
-        <artifact classifier="sources" tofile="artifacts/sources/dontpush-addon-ozonelayer.zip" sha1="4418e9ad31d47538416f5515e147832646642272"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/dontpush-addon-ozonelayer.zip" sha1="e03e21cf3c6b9f42e50bc60feeac123e81b26893"/>
-    </m2resource>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}.jar" url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="737689abcf3415291260e938574a3e8c72f2c790"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="3347fc8504797e13c919f2470adfb058b5eed9ef"/>
+    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="edfabd18df79080ba364d052f7e9b9d1db0d2457"/>
+
 </packager-module>
