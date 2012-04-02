@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+  <property name="name" value="${ivy.packager.module}"/>
+  <property name="revision" value="${ivy.packager.revision}"/>
+  <property name="archive" value="${name}-${revision}"/>
+
+  <!-- core -->
+  <m2resource>
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}.jar" sha1="4fdc454f4925cca53a7140bfc7a61c74f80b2dd8"/>
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-source.zip" sha1="b8ef9eec7c2a1e935ece5e5be67d4ac9f0a5ddf9"/>
+    <!-- javadoc -->
+    <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-javadoc.zip" sha1="26ef2593c005be4d541dc40bf699d20be9a7b907"/>
+  </m2resource>
+
+  <!-- ant tasks -->
+  <m2resource artifactId="pdfbox-ant">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-ant.jar" sha1="fbae6e8817014003314271564b8349f5887fe73a"/>
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-ant-source.zip" sha1="aa930cc7c9acf40dde3f85a66bc109a8e6503718"/>
+    <!-- javadoc -->
+    <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-ant-javadoc.zip" sha1="2f62960ca30355475841babfc2aa073ba01a25f2"/>
+  </m2resource>
+
+  <!-- lucence integration -->
+  <m2resource artifactId="pdfbox-lucene">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-lucene.jar" sha1="321de9e4c5aa642a417ab00e4d746534a582b796"/>
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-lucene-source.zip" sha1="bf718ce040006e857c17d3f36effe7b510aec00c"/>
+    <!-- javadoc -->
+    <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-lucene-javadoc.zip" sha1="700c39e577c1a0841b11a11e0bda292f48bd32cd"/>
+  </m2resource>
+
+  <!-- web application sample-->
+  <!-- 
+  <m2resource artifactId="pdfbox-war" >
+    <artifact ext="war" tofile="artifacts/jars/${name}.war" sha1="a0e32813c8d68fa45c3db834629ff0fb84129bb0" />
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-war-source.zip" sha1="cba7cde6b9e714d03886c68fe8a69a4fdff4ea60" />
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-war-javadoc.zip" sha1="942a27a98c7f7b84a3f17f3a1d73768ca9f68ff9" />
+  </m2resource>
+   -->
+
+</packager-module>
