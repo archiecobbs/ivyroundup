@@ -10,7 +10,7 @@ BEGIN {
 }
 
 {
-    if ($4 != MOD) {
+    if ($4 != MOD || $3 != ORG) {
         if (MOD != "")
             printf "    </mod>\n"
         MOD = ""
