@@ -77,14 +77,8 @@
     <dependency conf="default->default" org="org.apache.commons"
       name="commons-logging" rev="1.1.1" />
 
-    <dependency conf="encrypt_support->default" org="org.bouncycastle" name="bcmail-jdk15" rev="1.44" />
-    <dependency conf="encrypt_support->default" org="org.bouncycastle" name="bcprov-jdk15" rev="1.44" />
-    <dependency conf="bidir_support->default" org="com.ibm.icu" name="icu4j" rev="3.8" />
-
-    <!-- the Ant tasks log thru commons-logging via log4j via AntLogAppender.class 
-      to the Ant log -->
-    <!-- <dependency conf="ant->default" org="org.apache.log4j" name="log4j" 
-      rev="[1.2.16,1.3.0[" /> -->
+    <dependency conf="encrypt_support->jdk15" org="org.bouncycastle" name="bcmail" rev="1.44" />
+    <dependency conf="bidir_support->default" org="com.ibm.icu" name="icu4j" rev="3.8.1" />
   </dependencies>
 
 </ivy-module>
