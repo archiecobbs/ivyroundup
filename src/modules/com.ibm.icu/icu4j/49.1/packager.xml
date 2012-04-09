@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module
+  rev="$Id$">
+
+  <property name="name" value="${ivy.packager.module}" />
+  <property name="revision" value="${ivy.packager.revision}" />
+  <property name="archive" value="${name}-${revision}" />
+  <property name="url"
+    value="http://download.icu-project.org/files/icu4j/49.1/" />
+
+  <!-- jar -->
+  <resource url="${url}/icu4j-49_1.jar" tofile="artifacts/jars/${name}.jar"
+    sha1="fbf7a438e6bf3660e0da2fd77dd1df1635fe503c" />
+  <resource url="${url}/icu4j-charset-49_1.jar" tofile="artifacts/jars/${name}-charset.jar"
+    sha1="14881eefd7d04f9288fc981d4b4b8527809fa363" />
+  <resource url="${url}/icu4j-localespi-49_1.jar" tofile="artifacts/jars/${name}-localespi.jar"
+    sha1="fb89464047de7a2358b0602c95c50bc8d74a452b" />
+  <!-- source -->
+  <resource url="${url}/icu4j-49_1-src.jar" tofile="artifacts/sources/source.zip"
+    sha1="8f3c54f19f3c2e5797ca03656fa3c30aafdb8b6b" />
+  <resource url="${url}/icu4j-charset-49_1-src.jar" tofile="artifacts/sources/charset-source.zip"
+    sha1="ff9ddb08b72ad584296eb5e5bee37d0f80cc5964" />
+  <resource url="${url}/icu4j-localespi-49_1-src.jar" tofile="artifacts/sources/localespi-source.zip"
+    sha1="209c012aa7698fc193bda7209ec17bac2d7fed41" />
+  <!-- javadoc -->
+  <resource url="${url}/icu4j-49_1-docs.jar" tofile="artifacts/javadocs/javadoc.zip"
+    sha1="add4c5ccbe876776ef88ce899f69413b22c6e081" />
+
+</packager-module>
