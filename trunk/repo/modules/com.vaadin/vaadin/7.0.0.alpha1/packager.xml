@@ -16,7 +16,12 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource groupId="org/vaadin/addons" repo="http://maven.vaadin.com/vaadin-addons">
-        <artifact tofile="artifacts/jars/locationtextfield.jar" sha1="3a77ef52cf04912306e10a5a03754f988001de6a"/>
-    </m2resource>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="cb2b566bbfd199adc298cf9e2ed3ddfdc2943fe6"/>
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/other/${archive}-sources.jar" tofile="artifacts/sources/${name}.zip" sha1="b8a16910be38704a3205b40af32e5611f58abdc9"/>
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/other/${archive}-javadoc.jar" tofile="artifacts/javadocs/${name}.zip" sha1="ab07e9937b6de0c223c1dbd5650c18cf67f2e25a"/>
 </packager-module>

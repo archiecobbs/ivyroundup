@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,19 +19,35 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.vaadin.addon" module="locationtextfield" revision="1.2.1" status="release" publication="20120411120000">
+    <info organisation="org.vaadin.addons" module="customfield" revision="1.0.0" status="release" publication="20120410120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2036 2012-04-11 16:59:38Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/locationtextfield/1.2.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2038 2012-04-11 18:08:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.vaadin.addons/customfield/1.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://vaadin.com/directory#addon/locationtextfield">
+        <description homepage="http://vaadin.com/directory#addon/customfield">
             <p>
-                LocationTextField add-on for Vaadin using Atmosphere Framework
+            Custom fields offer the possibility to create Vaadin form
+            fields with customized presentation and logic.
+            </p>
+
+            <p>
+            Fields can be composed of standard or custom Vaadin components
+            on the server side. The field logic can either be reused
+            directly for the CustomField or partly overridden for
+            customized behavior.
+            </p>
+
+            <p>
+            This also allows the creation of custom editors for
+            sub-objects on forms, including nesting of forms in
+            CustomFields within other forms.
             </p>
         </description>
     </info>
 
     <publications>
-        <artifact/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
