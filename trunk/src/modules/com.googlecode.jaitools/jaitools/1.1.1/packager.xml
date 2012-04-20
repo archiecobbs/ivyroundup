@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="jt-all">
+        <artifact tofile="artifacts/jars/jt-all.jar" sha1="96cdf74d523c4d99818b3434b542d666c578098c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jt-all.zip" sha1="a87ca1be0e548e3df18079168978f6bc0b9c9e31"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jt-all.zip" sha1="1272b6b3e0a1899b974427482cd78f98ccfc4d07"/>
+    </m2resource>
+</packager-module>
