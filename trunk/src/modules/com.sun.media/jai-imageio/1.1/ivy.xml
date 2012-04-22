@@ -18,23 +18,16 @@
 
 <ivy-module rev="$Id$">
 
-    <info publication="20060911172500">
+    <info publication="20061013141900">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.sun.com/"/>
-        <description homepage="http://java.net/projects/jai">
-            Java Advanced Imaging Codecs supporting support BMP, GIF (read only), FlashPix (read only), JPEG, PNG, PNM, TIFF, and WBMP.
+        <description homepage="http://java.net/projects/jai-imageio">
+            Java Advanced Imaging I/O classes
         </description>
     </info>
 
-    <configurations>
-        <conf name="default" extends="codec" description="All classes"/>
-        <conf name="core" description="Core classes"/>
-        <conf name="codec" extends="core" description="Codec classes"/>
-    </configurations>
-
     <publications>
-        <artifact name="jai_core" conf="core"/>
-        <artifact name="jai_codec" conf="codec"/>
-        <artifact type="javadoc" ext="zip" conf="core"/>
+        <artifact name="jai_imageio"/>
+        <artifact name="jai_imageio" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

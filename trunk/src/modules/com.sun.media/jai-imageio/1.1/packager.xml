@@ -19,24 +19,20 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="1.1.3"/>
-    <property name="_version" value="1_1_3"/>
+    <property name="revision" value="1.1"/>
+    <property name="_version" value="1_1"/>
     <property name="archive" value="${name}-${revision}"/>
-    <property name="_archive" value="${name}-${_version}"/>
+    <property name="_archive" value="jai_imageio-${_version}"/>
 
-    <resource url="http://download.java.net/media/${name}/builds/release/${_version}/${_archive}-lib.zip"
-      sha1="71e8ef10830b0d08c55f7d5d45697ed1d602e473">
-        <include name="${_archive}/lib/*.jar"/>
+    <resource url="http://download.java.net/media/${name}/builds/release/${revision}/${_archive}-lib-linux-amd64.tar.gz"
+      sha1="8d560631c234f337168f8558f3898c2e2b13047a">
+        <include name="${_archive}/lib/jai_imageio.jar"/>
     </resource>
-    <resource url="http://download.java.net/media/${name}/builds/release/${_version}/${name}-1_1-mr-doc.zip"
-      sha1="a5c76abb057e90404d70621695690fc4111c9490" tofile="artifacts/javadocs/${name}.zip"/>
+    <resource url="http://download.java.net/media/${name}/builds/release/${revision}/${_archive}-doc.zip"
+      sha1="cdced89884612abc86c38af117a9623ca7a99af4" tofile="artifacts/javadocs/jai_imageio.zip"/>
 
     <build>
         <!-- jars -->
-        <move todir="artifacts/jars">
-            <fileset dir="archive/${_archive}/lib">
-                <include name="*.jar"/>
-            </fileset>
-        </move>
+        <move todir="artifacts/jars/" file="archive/${_archive}/lib/jai_imageio.jar"/>
     </build>
 </packager-module>
