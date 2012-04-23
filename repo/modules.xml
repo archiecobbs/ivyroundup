@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2012-04-20 18:45:47 UTC</timestamp>
-  <svnRevision>2042</svnRevision>
+  <timestamp>2012-04-23 15:46:58 UTC</timestamp>
+  <svnRevision>2060</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -141,9 +141,19 @@
       <rev name="3.1.2"/>
     </mod>
   </org>
+  <org name="com.googlecode.jaitools">
+    <mod name="jaitools">
+      <rev name="1.1.1"/>
+    </mod>
+  </org>
   <org name="com.googlecode.jslint4java">
     <mod name="jslint4java">
       <rev name="1.4.7"/>
+    </mod>
+  </org>
+  <org name="com.googlecode.json-simple">
+    <mod name="json-simple">
+      <rev name="1.1.1"/>
     </mod>
   </org>
   <org name="com.googlecode.swfobject">
@@ -295,6 +305,14 @@
     <mod name="jersey">
       <rev name="1.4"/>
       <rev name="1.8"/>
+    </mod>
+  </org>
+  <org name="com.sun.media">
+    <mod name="jai-imageio">
+      <rev name="1.1"/>
+    </mod>
+    <mod name="jai">
+      <rev name="1.1.3"/>
     </mod>
   </org>
   <org name="com.sun.xml.fastinfoset">
@@ -450,6 +468,7 @@
       <rev name="6.7.5"/>
       <rev name="6.7.6"/>
       <rev name="7.0.0.alpha1"/>
+      <rev name="7.0.0.alpha2"/>
     </mod>
   </org>
   <org name="com.vividsolutions">
@@ -490,6 +509,14 @@
   <org name="edu.oswego.cs">
     <mod name="concurrent">
       <rev name="1.3.4"/>
+    </mod>
+  </org>
+  <org name="edu.ucar">
+    <mod name="netcdf">
+      <rev name="4.2.20"/>
+    </mod>
+    <mod name="unidataCommon">
+      <rev name="4.2.20"/>
     </mod>
   </org>
   <org name="edu.umd.cs">
@@ -703,6 +730,11 @@
       <rev name="2.0.16"/>
     </mod>
   </org>
+  <org name="net.java.dev.java3d">
+    <mod name="vecmath">
+      <rev name="1.5.2"/>
+    </mod>
+  </org>
   <org name="net.java.dev.jawr">
     <mod name="jawr">
       <rev name="3.2.1"/>
@@ -866,6 +898,11 @@
       <rev name="0.8.0"/>
     </mod>
   </org>
+  <org name="net.sourceforge.javacsv">
+    <mod name="javacsv">
+      <rev name="2.0"/>
+    </mod>
+  </org>
   <org name="net.sourceforge.jexcelapi">
     <mod name="jexcelapi">
       <rev name="2.6.12"/>
@@ -887,6 +924,11 @@
       <rev name="0.9.92"/>
       <rev name="0.9.93"/>
       <rev name="0.9.94"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.jsqlparser">
+    <mod name="jsqlparser">
+      <rev name="0.3.14"/>
     </mod>
   </org>
   <org name="net.sourceforge.jsr107cache">
@@ -1883,6 +1925,9 @@
     </mod>
   </org>
   <org name="org.jfree">
+    <mod name="eastwood">
+      <rev name="1.1.0"/>
+    </mod>
     <mod name="jcommon">
       <rev name="1.0.0"/>
       <rev name="1.0.1"/>
@@ -2115,6 +2160,11 @@
     <mod name="mondrian">
       <rev name="2.3.2.8944"/>
       <rev name="3.1.1.12687"/>
+    </mod>
+  </org>
+  <org name="org.postgis">
+    <mod name="postgis-jdbc">
+      <rev name="1.3.3"/>
     </mod>
   </org>
   <org name="org.postgresql">
