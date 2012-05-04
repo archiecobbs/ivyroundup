@@ -21,8 +21,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://mirror.its.uidaho.edu/pub/apache//ws/${name}/${revision}/${archive}-bin.zip" sha1="ab3beaf89da5cb312c5cb2579784a56d01d90c02"/>
-    <resource url="http://mirror.its.uidaho.edu/pub/apache//ws/${name}/${revision}/${archive}-source-release.zip" sha1="7dc9edd3e33cdcb58fcb4f971b86229036374365"/>
+    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/${name}/${revision}/${archive}-bin.zip" sha1="ab3beaf89da5cb312c5cb2579784a56d01d90c02">
+        <url href="http://www.us.apache.org/dist/ws/${name}/${revision}/${archive}-bin.zip"/>
+    </resource>
+    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/${name}/${revision}/${archive}-source-release.zip" sha1="7dc9edd3e33cdcb58fcb4f971b86229036374365">
+        <url href="http://www.us.apache.org/dist/ws/${name}/${revision}/${archive}-source-release.zip"/>
+    </resource>
 
     <build>
         <!-- jar -->
