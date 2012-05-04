@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+  <property name="name" value="${ivy.packager.module}" />
+  <property name="revision" value="${ivy.packager.revision}" />
+  <property name="archive" value="${name}-${revision}" />
+
+  <!-- core -->
+  <m2resource artifactId="flyway-core">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}.jar" sha1="da0bd2ddb7cd51dbd2326e1e44c05724bdbab85f" />
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-source.zip"
+      sha1="2fd5abc9a32049369eb193a968081dfbbee521fb" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-javadoc.zip" sha1="9a8095bfcb350005c8403faeed180e3b79e36fa3" />
+  </m2resource>
+
+  <!-- ant tasks -->
+  <m2resource artifactId="flyway-ant">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-ant.jar" sha1="0e185a3514346c1103fbe23d18b330498e6d0089" />
+    <!-- source -->
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-ant-source.zip" sha1="4457a4ca7dde3d2e0426268bddaab2264cea1eb3" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-ant-javadoc.zip" sha1="9a8da0e542baeab4551ad37e23b0771324bb089e" />
+  </m2resource>
+
+  <!-- sample application -->
+  <m2resource artifactId="flyway-sample">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-sample.jar" sha1="60bfbf1bb3775970ca7cfda0b45577f327d1c518" />
+    <!-- source -->
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-sample-source.zip" sha1="80fee142506d47a0fa6d8b6d331f65ae1b3473d5" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-sample-javadoc.zip" sha1="cdb5dbb5f3e8156618e854c9782445f63b3a8015" />
+  </m2resource>
+</packager-module>
