@@ -21,18 +21,18 @@
 
     <info organisation="org.objectweb.howl" module="howl" revision="1.0.0" status="release" publication="20051207120800">
         <license name="BSD" url="http://howl.objectweb.org/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 596 2009-03-23 14:05:06Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.howl/howl/1.0.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2077 2012-05-23 15:52:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.objectweb.howl/howl/1.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://howl.objectweb.org/">
-         &lt;p&gt;HOWL is a logger implementation providing features required by the
+         <p>HOWL is a logger implementation providing features required by the
          ObjectWeb JOTM project, with a public API that is generally usable by
          any Transaction Manager. HOWL uses unformatted binary logs to maximize
          performance and specifies a journalization API with methods necessary
-         to support JOTM recovery operations.&lt;/p&gt;
+         to support JOTM recovery operations.</p>
 
-        &lt;p&gt;HOWL is intended to be used for logging of temporary data such as XA
+        <p>HOWL is intended to be used for logging of temporary data such as XA
         transaction events. HOWL is not a replacement for traditional log kits
-        such as LOG4J and Java SE Logging.&lt;/p&gt; 
+        such as LOG4J and Java SE Logging.</p> 
         </description>
     </info>
 

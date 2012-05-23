@@ -21,7 +21,7 @@
 
     <info organisation="org.apache.commons" module="commons-digester" revision="1.4.1" status="release" publication="20080406120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 347 2009-01-05 22:22:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-digester/1.4.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2077 2012-05-23 15:52:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-digester/1.4.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/digester/">
             <p>
@@ -33,7 +33,7 @@
             </p>
 
             <p>
-            Basically, the Digester package lets you configure an XML -&gt;
+            Basically, the Digester package lets you configure an XML to
             Java object mapping module, which triggers certain actions
             called rules whenever a particular pattern of nested XML
             elements is recognized. A rich set of predefined rules

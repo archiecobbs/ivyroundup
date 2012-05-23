@@ -21,7 +21,7 @@
 
     <info organisation="net.java.dev.jawr" module="jawr" revision="3.3.1" status="release" publication="20100629163100">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1411 2010-12-08 19:43:28Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.java.dev.jawr/jawr/3.3.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2077 2012-05-23 15:52:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.java.dev.jawr/jawr/3.3.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://jawr.dev.java.net/">
         <p>
@@ -49,7 +49,7 @@
         </p>
         <p>
         A JSP tag library (Facelets also supported) is used to import the resources to pages. In development
-        mode, the tags generate &lt;script&gt; and &lt;style&gt; links for each resource mapped to a bundle.
+        mode, the tags generate <b>script</b> and <b>style</b> links for each resource mapped to a bundle.
         In production mode, the tags generate a single link pointing to the bundle file. Thus, there is no
         need to change code in pages when switching from development to production mode.
         </p>
