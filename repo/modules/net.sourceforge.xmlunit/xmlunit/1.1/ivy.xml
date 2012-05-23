@@ -21,25 +21,25 @@
 
     <info organisation="net.sourceforge.xmlunit" module="xmlunit" revision="1.1" status="release" publication="20080610113000">
         <license name="Proprietary" url="LICENSE.txt"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 584 2009-03-18 17:32:36Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.xmlunit/xmlunit/1.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2077 2012-05-23 15:52:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.xmlunit/xmlunit/1.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xmlunit.sourceforge.net/">
-        &lt;p&gt;XMLUnit for Java provides two JUnit extension classes, XMLAssert and
+        <p>XMLUnit for Java provides two JUnit extension classes, XMLAssert and
         XMLTestCase, and a set of supporting classes (e.g. Diff, DetailedDiff,
         Transform,SimpleXpathEngine,Validator,NodeTest) that allow assertions
-        to be made about:&lt;/p&gt;
-        &lt;p&gt;&lt;ul&gt;
-            &lt;li&gt;The differences between two pieces of XML&lt;/li&gt;
-            &lt;li&gt;The outcome of transforming a piece of XML using XSLT&lt;/li&gt;
-            &lt;li&gt;The evaluation of an XPath expression on a piece of XML&lt;/li&gt;
-            &lt;li&gt;The validity of a piece of XML&lt;/li&gt;
-            &lt;li&gt;Individual nodes in a piece of XML that are exposed by DOM
+        to be made about:</p>
+        <p><ul>
+            <li>The differences between two pieces of XML</li>
+            <li>The outcome of transforming a piece of XML using XSLT</li>
+            <li>The evaluation of an XPath expression on a piece of XML</li>
+            <li>The validity of a piece of XML</li>
+            <li>Individual nodes in a piece of XML that are exposed by DOM
                 Traversal
-            &lt;/li&gt;
-        &lt;/ul&gt;&lt;/p&gt;
-        &lt;p&gt;XMLUnit for Java can also treat HTML content (even badly-formed
+            </li>
+        </ul></p>
+        <p>XMLUnit for Java can also treat HTML content (even badly-formed
         HTML) as valid XML to allow these assertions to be made about the
-        content of web pages too.&lt;/p&gt;
+        content of web pages too.</p>
         </description>
     </info>
 
