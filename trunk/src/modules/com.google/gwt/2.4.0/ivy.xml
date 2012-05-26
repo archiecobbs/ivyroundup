@@ -118,7 +118,7 @@
         <artifact name="gwt-dev" conf="compile"/>
         <artifact name="gwt-soyc-vis" conf="compile"/>
         <artifact name="gwt-api-checker" conf="api-checker"/>
-        <artifact name="gwt-servlet" conf="runtime"/>
+        <artifact name="gwt-servlet" xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gwt-user" conf="runtime"/>
         <artifact name="gwt-module" type="dtd" conf="module-dtd"/>
         <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
