@@ -121,7 +121,7 @@
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev" conf="compile"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-soyc-vis" conf="compile"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-api-checker" conf="api-checker"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-servlet" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-servlet" ivyde:source="gwt-user" conf="runtime"/>
         <artifact name="gwt-module" type="dtd" conf="module-dtd"/>
         <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
