@@ -21,7 +21,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.jdom.org/dist/binary/${archive}.zip" sha1="55665c30c2e3a641cbd3b2b8e58f34c7d4ded8a9"/>
+    <resource url="http://www.jdom.org/dist/binary/archive/${archive}.zip" sha1="55665c30c2e3a641cbd3b2b8e58f34c7d4ded8a9"/>
 
     <build>
         <!-- jar -->
