@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Daniel Atallah
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <property name="mirror1" value="http://apache.osuosl.org/commons/jexl"/>
+    <property name="mirror2" value="http://mirrors.gigenet.com/apache/commons/jexl"/>
+    <property name="mirror3" value="http://mirror.olnevhost.net/pub/apache/commons/jexl"/>
+    <property name="mirror4" value="http://www.eng.lsu.edu/mirrors/apache/commons/jexl"/>
+    <property name="backup" value="http://www.apache.org/dist/commons/jexl"/>
+
+    <resource url="${mirror1}/binaries/${archive}.zip" sha1="f2f8b0d80c2d08c82e112e2f5c34870a496c8b63">
+        <url href="${mirror2}/binaries/${archive}.zip"/>
+        <url href="${mirror3}/binaries/${archive}.zip"/>
+        <url href="${mirror4}/binaries/${archive}.zip"/>
+        <url href="${backup}/binaries/${archive}.zip"/>
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/docs/apidocs/**/*"/>
+    </resource>
+
+    <resource url="${mirror1}/source/${archive}-src.zip" sha1="6d53691503277078ce6e7c5b19397627016feab9">
+        <url href="${mirror2}/source/${archive}.zip"/>
+        <url href="${mirror3}/source/${archive}.zip"/>
+        <url href="${mirror4}/source/${archive}.zip"/>
+        <url href="${backup}/source/${archive}.zip"/>
+        <include name="${archive}-src/src/java/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}-src/src/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
+    </build>
+</packager-module>
+
