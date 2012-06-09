@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,25 +19,9 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-bin-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/sourceforge/pmd/${name}-bin-${revision}.zip" sha1="3e46d0ad80cb14443fca0db08120ada9cdf432e1">
-      <include name="${archive}/lib/*"/>
-      <include name="${archive}/etc/xslt/*"/>
-      <include name="${archive}/docs/apidocs/**/*"/>
-    </resource>
+    <resource tofile="artifacts/jars/${name}.jar" url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="6c1a2255b7636d68f5c0d9e9a0560d173866b702"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="9c8ac0619117920b8c96011c404f464070db4f8d"/>
+    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="dc9a7ef61a45ddb70dc0c5700f8002404451e889"/>
 
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- default xslt report. -->
-        <mkdir dir="artifacts/reports"/>
-        <move file="archive/${archive}/etc/xslt/pmd-report-per-class.xslt" tofile="artifacts/reports/pmd-report-per-class.xslt"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/${name}.zip">
-            <fileset dir="archive/${archive}/docs/apidocs"/>
-        </zip>
-    </build>
 </packager-module>
