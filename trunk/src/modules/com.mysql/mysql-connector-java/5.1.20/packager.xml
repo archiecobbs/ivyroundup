@@ -23,7 +23,7 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip/from/http://mirror.services.wisc.edu/mysql/"
-      filename="${archive}.zip" sha1="2480d2bb99f8b81143764fe3b5a50d3876c5ca0b">
+      filename="${archive}.zip" sha1="748722c9444b24e177cda5067b58a2dbe91dc594">
         <url href="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip/from/http://mysql.easynet.be/"/>
         <include name="${archive}/${archive}-bin.jar"/>
         <include name="${archive}/src/com/**/*"/>
