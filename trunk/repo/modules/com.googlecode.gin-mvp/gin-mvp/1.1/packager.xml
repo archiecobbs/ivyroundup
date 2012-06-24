@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Stephen Lynn
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,10 +17,24 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <m2resource groupId="${ivy.packager.module}">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="cd8d6ffc833cc63c30d712a180f4663d8f55799b"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="b461dcfd42820f613df68c9592d407bfe260f9cb"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="ba0ce5e28373e2a21f71395e711b961563ff619d"/>
-    </m2resource>
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
+    <resource url="http://gin-mvp.googlecode.com/files/${name}-${revision}.zip" sha1="9e77a1a1ff37843506a4185b61687f3982f6d65a"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/javadoc"/>
+        </zip>
+    </build>
 </packager-module>
