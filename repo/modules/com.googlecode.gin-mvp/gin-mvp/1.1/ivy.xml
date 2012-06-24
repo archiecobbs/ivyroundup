@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Stephen Lynn
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,22 +19,17 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.commons" module="commons-io" revision="2.3" status="release" publication="20120410000000">
+    <info organisation="com.googlecode.gin-mvp" module="gin-mvp" revision="1.1" status="release" publication="20120616120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2103 2012-06-12 19:34:02Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-io/2.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2109 2012-06-24 19:08:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.googlecode.gin-mvp/gin-mvp/1.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://commons.apache.org/io/">
-        <p>Commons IO is a library of utilities to assist with developing IO functionality.</p>
+        <description homepage="http://code.google.com/p/gin-mvp">
 
-        There are six main areas included:
-        <ul>
-            <ul>Utility classes - with static methods to perform common tasks</ul>
-            <ul>Input - useful Input Stream and Reader implementations</ul>
-            <ul>Output - useful Output Stream and Writer implementations</ul>
-            <ul>Filters - various implementations of file filters</ul>
-            <ul>Comparators - various implementations of java.util.Comparator for files</ul>
-            <ul>File Monitor - a component for monitoring file system events</ul>
-        </ul>
+            <p>
+                Provides a simple module to add the native MVP framework support to a GWT/GIN project, 
+                similar to how other guice/gin extensions modules (such as guice-persist) work.
+            </p>
+
         </description>
     </info>
 
@@ -43,5 +38,9 @@
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="com.google" name="gin" rev="1.5-gwt-2.2" conf="default-&gt;default"/>
+    </dependencies>
 
 </ivy-module>

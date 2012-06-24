@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Andreas Heiduk
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,23 +19,18 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip/from/http://mirror.services.wisc.edu/mysql/" filename="${archive}.zip" sha1="748722c9444b24e177cda5067b58a2dbe91dc594">
-        <url href="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip/from/http://mysql.easynet.be/"/>
-        <include name="${archive}/${archive}-bin.jar"/>
-        <include name="${archive}/src/com/**/*"/>
-        <include name="${archive}/src/org/**/*"/>
-    </resource>
-
+    
+    <property name="download" value="http://jdbc.postgresql.org/download"/>
+    
+    <resource url="${download}/postgresql-${revision}.jdbc3.jar" tofile="artifacts/jars/postgresql-jdbc3.jar" sha1="81ba85969e3a8f02a7f979e3d19497f82e371c74"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc4.jar" tofile="artifacts/jars/postgresql-jdbc4.jar" sha1="6575779fd3331a182e3d8a8a8875b41fc4954e4f"/>
+        
+    <resource url="${download}/postgresql-jdbc-${revision}.src.tar.gz" sha1="c133fb16dc8dcd6e435cff08ca31f4bb05ae7929"/>
+    
     <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}-bin.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/${name}.zip">
-            <fileset dir="archive/${archive}/src/com"/>
-            <fileset dir="archive/${archive}/src/org"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/postgresql-jdbc-${revision}.src"/>
         </zip>
     </build>
 </packager-module>
