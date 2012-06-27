@@ -18,9 +18,7 @@
 
 <packager-module rev="$Id$">
     <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
-        <artifact tofile="artifacts/jars/hibernate-commons-annotations.jar" sha1="ce990611448fc2865469e3b68d2fe76b050e3c4f"/>
-        <artifact classifier="sources" tofile="artifacts/sources/hibernate-commons-annotations.zip" sha1="6afdc971f4d4dbe7650dbc5ea4a67101779ca001"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/hibernate-commons-annotations.zip" sha1="e4298ce8193768a664822856f21021ae4c132436"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="eac2db0a9d86a9749724fe93d43afffa8106f25e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="a41e980a54e139faae6eb7054dc545b14125e090"/>
     </m2resource>
 </packager-module>
-
