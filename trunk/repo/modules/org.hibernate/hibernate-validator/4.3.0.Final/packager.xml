@@ -17,8 +17,8 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
     <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
-        <artifact tofile="artifacts/jars/hibernate-commons-annotations.jar" sha1="ce990611448fc2865469e3b68d2fe76b050e3c4f"/>
-        <artifact classifier="sources" tofile="artifacts/sources/hibernate-commons-annotations.zip" sha1="6afdc971f4d4dbe7650dbc5ea4a67101779ca001"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/hibernate-commons-annotations.zip" sha1="e4298ce8193768a664822856f21021ae4c132436"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="f2d0447bcdb27a48398215a33eb351b8a594e3a4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="6fe24823ab6c9bf1b5e3e1bd406af48dde257ef5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="911420812382725aad54e2d8115a86f87dfc405d"/>
     </m2resource>
 </packager-module>
