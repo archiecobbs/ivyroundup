@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<packager-module rev="$Id$">
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="274baf416ee347950a568278ac9f7b13226f6959"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="03477186ea9dc9b2d90e99ea0beb54b7277123ba"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="347901f5d109a17cb383c3dc72c42b8b43f1a1ff"/>
+    </m2resource>
+</packager-module>
+

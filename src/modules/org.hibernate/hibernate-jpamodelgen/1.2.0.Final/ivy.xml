@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module rev="$Id$">
+
+    <info publication="20120306124903">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+        <description homepage="http://hibernate.org/">
+            <p>
+                JPA 2 defines a new typesafe Criteria API which allows criteria queries to be constructed in a
+                strongly-typed manner, using metamodel objects to provide type safety. For developers it is important
+                that the task of the metamodel generation can be automated. Hibernate Metamodel Generator is an
+                annotation processor based on the <a href="http://jcp.org/en/jsr/detail?id=269">Pluggable Annotation
+                Processing API</a> with the task of creating JPA 2 static metamodel classes.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="default-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.5.6,2.0[" conf="default-&gt;core"/>
+    </dependencies>
+
+</ivy-module>
