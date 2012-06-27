@@ -33,4 +33,8 @@
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
+    <dependencies>
+        <dependency name="javassist" org="org.jboss" rev="3.11.0" conf="default-&gt;default"/>
+    </dependencies>
+
 </ivy-module>
