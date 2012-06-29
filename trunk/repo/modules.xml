@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2012-06-29 16:35:53 UTC</timestamp>
-  <svnRevision>2123</svnRevision>
+  <timestamp>2012-06-29 16:58:16 UTC</timestamp>
+  <svnRevision>2125</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -84,9 +84,21 @@
       <rev name="12.0"/>
     </mod>
   </org>
+  <org name="com.google.gwt">
+    <mod name="gwt-ajaxloader">
+      <rev name="1.1.1"/>
+    </mod>
+    <mod name="gwt-gadgets">
+      <rev name="1.2.1"/>
+    </mod>
+    <mod name="gwt-visualization">
+      <rev name="1.1.2"/>
+    </mod>
+  </org>
   <org name="com.google.visualization">
     <mod name="google-visualization-java">
       <rev name="1.0.2"/>
+      <rev name="1.1.1"/>
     </mod>
   </org>
   <org name="com.google">
@@ -2390,6 +2402,9 @@
     <mod name="refresher">
       <rev name="1.1.1.7"/>
       <rev name="1.1.1"/>
+    </mod>
+    <mod name="visualizationsforvaadin">
+      <rev name="1.1.2"/>
     </mod>
   </org>
   <org name="org.w3c.css">

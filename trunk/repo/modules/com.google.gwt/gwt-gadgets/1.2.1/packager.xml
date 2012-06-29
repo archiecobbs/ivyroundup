@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,18 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource groupId="org/vaadin/addons" repo="http://maven.vaadin.com/vaadin-addons">
-        <artifact tofile="artifacts/jars/locationtextfield.jar" sha1="6de49fd629cf0b96b0e3fcbdfc0e5ca4d1f2182c"/>
-        <artifact classifier="sources" tofile="artifacts/sources/locationtextfield.zip" sha1="7a0ac99e0b9f77211a0ba72460a43a3f177a7521"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/locationtextfield.zip" sha1="11c184969064f773c537ce6b8be8829f1ef6bc44"/>
-    </m2resource>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://gwt-google-apis.googlecode.com/files/${archive}.zip" sha1="3621fca031292190d0b029761da3d0536ee85455"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${name}-noredist.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- javadoc -->
+        <move file="archive/${archive}/${name}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
+    </build>
 </packager-module>
