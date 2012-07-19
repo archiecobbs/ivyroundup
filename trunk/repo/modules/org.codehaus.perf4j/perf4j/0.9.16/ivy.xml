@@ -21,7 +21,7 @@
 
     <info organisation="org.codehaus.perf4j" module="perf4j" revision="0.9.16" status="release" publication="20111128002700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2089 2012-06-01 21:34:17Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.perf4j/perf4j/0.9.16/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2136 2012-07-19 19:07:02Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.perf4j/perf4j/0.9.16/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://perf4j.codehaus.org/">
             Performance statistics logging and monitoring toolkit extension to log4j, logback, slf4j, commons-logging and the java.util.logging framework.
@@ -53,7 +53,7 @@
     <dependencies>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.14+" conf="log4jonly,default-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.0.3+" conf="commonslogonly,default-&gt;default"/>
-        <dependency org="ch.qos" name="logback" rev="0.9.17+" conf="commonslogonly,default-&gt;classic"/>
+        <dependency org="ch.qos" name="logback" rev="0.9.17+" conf="logbackonly,default-&gt;classic"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.5.6+" conf="slf4jonly,default-&gt;core"/>
         <dependency org="org.aspectj" name="aspectj" rev="1.6.1+" conf="aop-&gt;weaver"/>
         <dependency org="org.apache.commons" name="commons-jexl" rev="1.1" conf="aop-&gt;default"/>
