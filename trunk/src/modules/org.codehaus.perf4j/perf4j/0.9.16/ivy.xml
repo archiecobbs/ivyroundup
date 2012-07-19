@@ -50,7 +50,7 @@
     <dependencies>
         <dependency org="org.apache.log4j" name="log4j" rev="1.2.14+" conf="log4jonly,default->default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.0.3+" conf="commonslogonly,default->default"/>
-        <dependency org="ch.qos" name="logback" rev="0.9.17+" conf="commonslogonly,default->classic"/>
+        <dependency org="ch.qos" name="logback" rev="0.9.17+" conf="logbackonly,default->classic"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.5.6+" conf="slf4jonly,default->core"/>
         <dependency org="org.aspectj" name="aspectj" rev="1.6.1+" conf="aop->weaver"/>
         <dependency org="org.apache.commons" name="commons-jexl" rev="1.1" conf="aop->default"/>
