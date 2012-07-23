@@ -15,7 +15,7 @@
     under the License.
 -->
 
-<project name="check" default="check-urls">
+<project name="check">
   <description>Checks for resources that no longer are available at the
     URLs specified in their packager.xml files.
   </description>
@@ -24,10 +24,9 @@
 
 
   <!--
-      Resolve every artifact into the temporary cache and then
-      build a normal repository that includes artifacts.
+      Verify every artifact URL.
 
-      You can restrict what gets resolved by defining one or more of:
+      You can restrict what gets verified by defining one or more of:
 
           ${resolve.org}  - Only resolve when organization matches
           ${resolve.mod}  - Only resolve when module matches
@@ -47,7 +46,6 @@
           <param name="resolve.org" expression="${resolve.org}"/>
           <param name="resolve.mod" expression="${resolve.mod}"/>
           <param name="resolve.rev" expression="${resolve.rev}"/>
-          <param name="stylesheet" expression="packager-url-check.xsl"/>
       </xslt>
 
       <!-- Run the build -->
