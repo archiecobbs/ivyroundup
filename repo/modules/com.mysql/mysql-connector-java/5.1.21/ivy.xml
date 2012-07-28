@@ -19,28 +19,25 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.vaadin.addon" module="dontpush-addon-ozonelayer" revision="0.4.9" status="release" publication="20120726120000">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2141 2012-07-26 14:13:31Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/dontpush-addon-ozonelayer/0.4.9/"/>
+    <info organisation="com.mysql" module="mysql-connector-java" revision="5.1.21" status="release" publication="20120705120000">
+        <license name="GNU Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2139 2012-07-22 16:05:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.mysql/mysql-connector-java/5.1.21/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://vaadin.com/directory#addon/dontpush-ozonelayer">
-            <p>
-                DontPush OzoneLayer add-on for Vaadin using Atmosphere Framework
-            </p>
+        <description homepage="http://www.mysql.com/products/connector/j/">
+            MySQL Connector/J is a native Java driver that converts JDBC
+            (Java Database Connectivity) calls into the network protocol
+            used by the MySQL database. It lets developers working with
+            the Java programming language easily build programs and
+            applets that interact with MySQL and connect all corporate
+            data, even in a heterogeneous environment. MySQL Connector/J
+            is a Type IV JDBC driver and has a complete JDBC feature
+            set that supports the capabilities of MySQL.
         </description>
     </info>
 
-
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="dontpush-addon-ozonelayer" ivyde:javadoc="dontpush-addon-ozonelayer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="mysql-connector-java"/>
         <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
     </publications>
-
-    <dependencies>
-        <dependency org="org.atmosphere" name="atmosphere" rev="[0.7.2,)" conf="default-&gt;gwt">
-            <exclude name="atmosphere-ping"/>
-        </dependency>
-    </dependencies>
 
 </ivy-module>
