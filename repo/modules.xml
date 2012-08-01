@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2012-07-30 15:28:53 UTC</timestamp>
-  <svnRevision>2147</svnRevision>
+  <timestamp>2012-08-01 15:08:35 UTC</timestamp>
+  <svnRevision>2149</svnRevision>
   <org name="ca.slashdev">
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
@@ -254,6 +254,11 @@
   <org name="com.jquery">
     <mod name="jquery">
       <rev name="1.6.2"/>
+    </mod>
+  </org>
+  <org name="com.lmax.disruptor">
+    <mod name="disruptor">
+      <rev name="2.8"/>
     </mod>
   </org>
   <org name="com.mysql">
@@ -1281,6 +1286,9 @@
       <rev name="1.1.1"/>
       <rev name="1.1"/>
     </mod>
+    <mod name="commons-math">
+      <rev name="3.0"/>
+    </mod>
     <mod name="commons-net">
       <rev name="1.4.1"/>
       <rev name="2.0"/>
@@ -1894,6 +1902,7 @@
       <rev name="0.4.0.20100926135113"/>
       <rev name="0.5.1.20110321224001"/>
       <rev name="0.5.3.201107060350"/>
+      <rev name="0.5.9.201207300726"/>
     </mod>
   </org>
   <org name="org.jasig.cas">

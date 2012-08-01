@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Danny Yates, Dalibor Novak
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,19 +19,23 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.commons" module="commons-compress" revision="1.4.1" status="release" publication="20120522000200">
+    <info organisation="org.apache.commons" module="commons-math" revision="3.0" status="release" publication="20120305101700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2147 2012-07-30 14:15:45Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-compress/1.4.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2149 2012-08-01 13:46:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-math/3.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://commons.apache.org/compress/">
-             Commons Compress defines an API for working with ar, cpio, tar, zip, gzip and bzip2 files.
+        <description homepage="http://commons.apache.org/math/">
+
+            <p>
+            Commons Math is a library of lightweight, self-contained mathematics and statistics components addressing the most common problems not available in the Java programming language or Commons Lang.
+            </p>
+
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-compress" ivyde:javadoc="commons-compress"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
-    </publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>    
 
 </ivy-module>
