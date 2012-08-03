@@ -71,8 +71,8 @@
         <conf name="testng-agent" extends="testng-common, javaagent" description="TestNG javaagent module"/>
         <conf name="tests-utils" extends="core" description="Test utility classes"/>
         <conf name="default" extends="core" description="Core classes"/>
-        <conf name="mockito-full" extends="api-mockito,junit4,junit4-legacy,testng,classloading-base" description="Full Mockito support"/>
-        <conf name="easymock-full" extends="api-easymock,junit4,junit4-legacy,testng,classloading-base" description="Full EasyMock support"/>
+        <conf name="mockito-full" extends="api-mockito,junit4,testng,classloading-base" description="Full Mockito support"/>
+        <conf name="easymock-full" extends="api-easymock,junit4,testng,classloading-base" description="Full EasyMock support"/>
         <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
         <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
     </configurations>
