@@ -17,11 +17,11 @@
     under the License.
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
-<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="org.powermock" module="powermock" revision="1.4.10" status="release" publication="20110823000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1836 2011-12-15 17:57:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.powermock/powermock/1.4.10/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2151 2012-08-03 21:46:20Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.powermock/powermock/1.4.10/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/powermock/">
             <p>
@@ -74,8 +74,8 @@
         <conf name="testng-agent" extends="testng-common, javaagent" description="TestNG javaagent module"/>
         <conf name="tests-utils" extends="core" description="Test utility classes"/>
         <conf name="default" extends="core" description="Core classes"/>
-        <conf name="mockito-full" extends="api-mockito,junit4,junit4-legacy,testng,classloading-base" description="Full Mockito support"/>
-        <conf name="easymock-full" extends="api-easymock,junit4,junit4-legacy,testng,classloading-base" description="Full EasyMock support"/>
+        <conf name="mockito-full" extends="api-mockito,junit4,testng,classloading-base" description="Full Mockito support"/>
+        <conf name="easymock-full" extends="api-easymock,junit4,testng,classloading-base" description="Full EasyMock support"/>
         <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
         <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
     </configurations>
