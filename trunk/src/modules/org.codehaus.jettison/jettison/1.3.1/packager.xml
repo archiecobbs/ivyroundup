@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource>
+        <artifact tofile="artifacts/jars/jettison.jar" sha1="056dcc8480ecd2c03ec004aa76278d1f2d621561"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jettison.zip" sha1="2af44d34fc8c783d538cae0c4da3cee09fd2d393"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jettison.zip" sha1="d2d9ecba08f92bd65dfa27b1750b75748a34a105"/>
+    </m2resource>
+</packager-module>
