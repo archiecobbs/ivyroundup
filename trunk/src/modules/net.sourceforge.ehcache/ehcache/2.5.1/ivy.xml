@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120130000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://ehcache.sourceforge.net/">
+            <p>
+            Ehcache is a widely used java distributed cache for general
+            purpose caching, Java EE and light-weight containers.
+            </p>
+
+            <p>
+            It features memory and disk stores, replicate by copy and
+            invalidate, listeners, cache loaders, cache extensions,
+            cache exception handlers, a gzip caching servlet filter and
+            much more...
+            </p>
+
+            <p>
+            Ehcache is available under an Apache open source license
+            and is actively developed, maintained and supported.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="ehcache-core"/>
+
+        <!-- source -->
+        <artifact name="ehcache-core" type="source" ext="zip"/>
+
+        <!-- javadoc -->
+        <artifact name="ehcache-core" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.+" conf="default-&gt;core"/>
+    </dependencies>
+
+</ivy-module>
