@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Andreas Heiduk
+    Copyright 2012 Danny Yates
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,18 +19,11 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    
-    <property name="download" value="http://jdbc.postgresql.org/download"/>
-    
-    <resource url="${download}/postgresql-${revision}.jdbc3.jar" tofile="artifacts/jars/postgresql-jdbc3.jar" sha1="34b79e9d83a3d945d7b6a620c42f0c7ef12d5da8"/>
-        
-    <resource url="${download}/postgresql-${revision}.jdbc4.jar" tofile="artifacts/jars/postgresql-jdbc4.jar" sha1="298df5c9535050d66e2cd5aeaedfdb6fd17330eb"/>
-        
-    <resource url="${download}/postgresql-jdbc-${revision}.src.tar.gz" sha1="b02533d4e9455ba8e233f1b0c6ab78055e885d33"/>
-    
-    <build>
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive"/>
-        </zip>
-    </build>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="66fad5029732305ab7863c140eafd9de4972dd34"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="5bb78e04e583b6c2ef92e9b0989450f650d65d0d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="eb35454d757637518f9cab69e5b2437cdff1f59d"/>
+    </m2resource>
 </packager-module>

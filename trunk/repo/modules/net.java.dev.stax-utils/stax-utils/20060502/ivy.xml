@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Danny Yates
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,28 +19,28 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="edu.ucar" module="netcdf" revision="4.2.20" status="release" publication="20110303233600">
-        <license name="Lesser General Public License (LGPL)" url="http://www.gnu.org/copyleft/lesser.txt"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2046 2012-04-20 19:33:28Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/edu.ucar/netcdf/4.2.20/"/>
+    <info organisation="net.java.dev.stax-utils" module="stax-utils" revision="20060502" status="release" publication="20060502120000">
+        <license name="Prorietary License" url="http://java.net/projects/stax-utils/sources/svn/content/trunk/LICENSE?rev=238"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2173 2012-08-10 14:13:26Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.java.dev.stax-utils/stax-utils/20060502/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://www.unidata.ucar.edu/software/netcdf-java/">
+        <description homepage="http://java.net/projects/stax-utils/">
+
             <p>
-                The NetCDF-Java Library is a Java interface to NetCDF files,
-                as well as to many other types of scientific data formats.
+            The purpose of this project is to help facilitate the adoption of JSR-173: Streaming API for 
+            XML (StAX) by providing a set of utility classes that make it easy for developers to integrate 
+            StAX into their existing XML processing applications.
             </p>
+
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="netcdf" ivyde:javadoc="netcdf"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
-        <dependency org="edu.ucar" name="unidataCommon" rev="4.2.20" conf="default-&gt;default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="default-&gt;core"/>
-        <dependency org="org.apache.commons" name="commons-httpclient" rev="[0,)" conf="default-&gt;default"/>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="default-&gt;default"/>
     </dependencies>
-
 </ivy-module>
