@@ -27,16 +27,65 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="all" description="Everything"/>
+        <conf name="default" description="Alias for 'all' conf"/>
+        <conf name="attributeop" description="An OpImage class that derives one or more attributes from a source image. Source image pixels are passed through to the destination image unchanged (similar to JAI's StatisticsOpImage)."/>
+        <conf name="contour" extends="attributeop,utils" description="Contour operator"/>
+        <conf name="kernelstats" extends="utils" description="KernelStats operator"/>
+        <conf name="maskedconvolve" description="Adds selectivity to the JAI convolve operation. An ROI canbe used to control which source image pixels are convolved and/orwhich neighbourhood pixels are included in the convolution."/>
+        <conf name="rangelookup" extends="utils" description="A Lookup operation that can handle both integral and continuous data types"/>
+        <conf name="regionalize" extends="utils" description="Identifies (sufficiently) uniform regions in the source image, allocateseach a unique integer ID, and generates an output image with these IDsas pixel values"/>
+        <conf name="utils" description="Support and utility classes used by other JAI-tools components and available for general use."/>
+        <conf name="vectorbinarize" extends="utils" description="Creates a binary image from an input JTS Polygon or MultiPolygon"/>
+        <conf name="vectorize" extends="attributeop,utils" description="Vectorizes the boundaries of regions with uniform value"/>
+        <conf name="zonalstats" extends="utils" description="Calculates summary statistics, optionally within zones defined bya zone image, for values in a data image"/>
+    </configurations>
+
     <publications>
-        <artifact/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <!-- jar -->
+        <artifact name="jt-all" conf="all"/>
+        <artifact name="jt-attributeop" conf="attributeop"/>
+        <artifact name="jt-contour" conf="contour"/>
+        <artifact name="jt-kernelstats" conf="kernelstats"/>
+        <artifact name="jt-maskedconvolve" conf="maskedconvolve"/>
+        <artifact name="jt-rangelookup" conf="rangelookup"/>
+        <artifact name="jt-regionalize" conf="regionalize"/>
+        <artifact name="jt-utils" conf="utils"/>
+        <artifact name="jt-vectorbinarize" conf="vectorbinarize"/>
+        <artifact name="jt-vectorize" conf="vectorize"/>
+        <artifact name="jt-zonalstats" conf="zonalstats"/>
+
+        <!-- source -->
+        <artifact name="jt-all" type="source" ext="zip" conf="all"/>
+        <artifact name="jt-attributeop" type="source" ext="zip" conf="attributeop"/>
+        <artifact name="jt-contour" type="source" ext="zip" conf="contour"/>
+        <artifact name="jt-kernelstats" type="source" ext="zip" conf="kernelstats"/>
+        <artifact name="jt-maskedconvolve" type="source" ext="zip" conf="maskedconvolve"/>
+        <artifact name="jt-rangelookup" type="source" ext="zip" conf="rangelookup"/>
+        <artifact name="jt-regionalize" type="source" ext="zip" conf="regionalize"/>
+        <artifact name="jt-utils" type="source" ext="zip" conf="utils"/>
+        <artifact name="jt-vectorbinarize" type="source" ext="zip" conf="vectorbinarize"/>
+        <artifact name="jt-vectorize" type="source" ext="zip" conf="vectorize"/>
+        <artifact name="jt-zonalstats" type="source" ext="zip" conf="zonalstats"/>
+
+        <!-- javadoc -->
+        <artifact name="jt-all" type="javadoc" ext="zip" conf="all"/>
+        <artifact name="jt-attributeop" type="javadoc" ext="zip" conf="attributeop"/>
+        <artifact name="jt-contour" type="javadoc" ext="zip" conf="contour"/>
+        <artifact name="jt-kernelstats" type="javadoc" ext="zip" conf="kernelstats"/>
+        <artifact name="jt-maskedconvolve" type="javadoc" ext="zip" conf="maskedconvolve"/>
+        <artifact name="jt-rangelookup" type="javadoc" ext="zip" conf="rangelookup"/>
+        <artifact name="jt-regionalize" type="javadoc" ext="zip" conf="regionalize"/>
+        <artifact name="jt-utils" type="javadoc" ext="zip" conf="utils"/>
+        <artifact name="jt-vectorbinarize" type="javadoc" ext="zip" conf="vectorbinarize"/>
+        <artifact name="jt-vectorize" type="javadoc" ext="zip" conf="vectorize"/>
+        <artifact name="jt-zonalstats" type="javadoc" ext="zip" conf="zonalstats"/>
     </publications>
 
     <dependencies>
         <dependency org="javax.media" name="jai" rev="[1.1,)" conf="default->code,codec,imageio"/>
-        <dependency org="com.vividsolutions" name="jts" rev="[1.11,)" conf="default->default"/>
+        <dependency org="com.vividsolutions" name="jts" rev="[1.11,)" conf="default,utils->default"/>
     </dependencies>
 
 </ivy-module>
-
