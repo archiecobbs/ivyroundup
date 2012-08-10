@@ -92,7 +92,7 @@
         <dependency org="org.hibernate" name="hibernate-tools" rev="[3.2.0,5.0.0[" conf="envers-&gt;default"/>
         <dependency org="org.infinispan" name="infinispan" rev="[4.0.0.FINAL,)" conf="infinispan-&gt;default"/>
         <dependency org="org.jboss" name="javassist" rev="[3.9,4.0[" conf="core-&gt;default"/>
-        <dependency org="org.jboss.logging" name="jboss-logging" rev="[3.1,4.0[" conf="default->default"/>
+        <dependency org="org.jboss.logging" name="jboss-logging" rev="[3.1,4.0[" conf="core-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="[1.6,2.0[" conf="core-&gt;core"/>
     </dependencies>
 </ivy-module>
