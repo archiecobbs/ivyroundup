@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.geotools" module="geotools" revision="2.7.4" status="release" publication="20111221073400">
+        <license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2176 2012-08-10 16:16:21Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.geotools/geotools/2.7.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://geotools.org/">
+            <p>
+                GeoTools is an open source Java library that provides tools for geospatial data.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api" extends="referencing" description="API classes"/>
+        <conf name="app-schema-resolver" extends="xsd" description="App schema resolver module"/>
+        <conf name="app-schema" extends="app-schema-resolver,data,cql,render" description="App schema module"/>
+        <conf name="arcgrid" extends="coverage" description="ArcGrid datasource classes"/>
+        <conf name="arcsde-common" description="ArcSDE support classes"/>
+        <conf name="arcsde" extends="arcsde-common,jdbc,coverage" description="ArcSDE DataStore classes"/>
+        <conf name="brewer" extends="main" description="Brewer module"/>
+        <conf name="charts" extends="render" description="Charts module"/>
+        <conf name="caching" extends="shapefile-renderer" description="Caching classes"/>
+        <conf name="coverage" extends="main" description="Grid Coverage classes"/>
+        <conf name="coverageio-netcdf" extends="coverageio" description="Coverage I/O for NetCDF format"/>
+        <conf name="coverageio" extends="metadata,coverage" description="Base classes for image and coverage I/O operations. Contains some codecs for ASCII grids."/>
+        <conf name="coveragetools" extends="arcgrid,geotiff,image,imagemosaic,imagepyramid,imageio-ext-gdal" description="Coverage tools (tools for building overviews, pyramids and the like)"/>
+        <conf name="cql" extends="epsg-wkt" description="A parser that takes an OGC Common Query Language input string and produces an equivalent org.opengis.filter.Filter."/>
+        <conf name="csv" extends="data,epsg-hsql" description="DataStore for CSV files; mostly used as a tutorial in how to write a datastore."/>
+        <conf name="data" extends="main" description="Abstract datastore implementation and helper classes."/>
+        <conf name="db2" extends="jdbc" description="Provides a standard interface to the DB2 Spatial Extender. More information can be found at: http://www.software.ibm.com/data/spatial."/>
+        <conf name="default" extends="app-schema,jts-wrapper,jdbc,epsg-extension,coverageio,caching,temporal,validation,grid,geometry,feature-pregeneralized,geojson,geotiff,image,imageio-ext-gdal,jai-tools,property,referencing3D,xml,wps,wfs,wms,vpf,svg,sfs" description="My attempt at a good default configuration with supprt for some vector and raster data formats and web-based services (WMS, WFS, etc.)"/>
+        <conf name="epsg-extension" extends="referencing" description="Contains extra CRS defined by ESRI (and other parties) in the EPSG namespace. Those CRS are not defined in the official ESPG database, but are used widely enough to warant an optional plugin in Geotools. This plugin do not contains any definition already found in the official EPSG database - it is not a replacement for epsg-hsql or epsg-postgresql. One of the above plugins (at user choice) should be in the classpath."/>
+        <conf name="epsg-h2" extends="referencing" description="Connection to an embedded EPSG database in H2 format. This database is built from the SQL scripts delivered by EPSG."/>
+        <conf name="epsg-hsql" extends="referencing" description="Connection to an embedded EPSG database in HSQL format. This database is built from the SQL scripts delivered by EPSG."/>
+        <conf name="epsg-oracle" extends="referencing" description="This plugin allows you to make use of an oracle database as the host of your CoordinateReferenceSystem definitions. The table names and content are provided by the EPSG database (distributed in access format) and can be loaded using a provided SQL script."/>
+        <conf name="epsg-postgresql" extends="referencing" description="Connection to an EPSG postgreSQL database. This database should be built by the user from the SQL scripts delivered by EPSG."/>
+        <conf name="epsg-wkt" extends="referencing" description="EPSG and AUTO authority factories are defined for data.crs.CRSService. These codes are used to provide CoordinateRegerenceSystem for GCE and DataStore implementations that do not define their own native definition. Contains a Property file based CoordinateSystemAuthority (the property file is too large to be included in the main geotools release). This class will need to be ported to the new GeoAPI CoordinateReferenceSystem interfaces."/>
+        <conf name="feature-pregeneralized" extends="metadata,shapefile" description="Feature Source with prebuild generalizations"/>
+        <conf name="geojson" extends="main" description="Provides GeoJSON Encoding and Parsing support"/>
+        <conf name="geometry" extends="main" description="Implementations of ISO 19107 (Spatial Schema)"/>
+        <conf name="geotiff" extends="coverage" description="Datasource created to read GeoTIFF raster format"/>
+        <conf name="graph" extends="main" description="Graph classes that builds and walk networks based on Feature relationships. The original graph package has been developed using the JUMP Feature API. Its intension is to be able to aid automated skeletonization of water bodies by computing directionality of generated skeletons. The work for the original JUMP based library has been funded by the BC Proventional Government department of BMGS. This library has been ported to geotools2 as part of the VWFS project sponcered by Geo Innovations."/>
+        <conf name="grassraster" extends="coverage,epsg-hsql" description="This datasource reads the GRASS DEM format"/>
+        <conf name="grid" extends="main" description="The grid module allows users to create vector grids (also known as lattices) that can be used for display and analysis."/>
+        <conf name="gtopo30" extends="coverage,epsg-hsql" description="This datasource reads the GTOPO30 DEM format"/>
+        <conf name="image" extends="coverage" description="Datasource created to read images georeferenced by a world file"/>
+        <conf name="imageio-ext-gdal" extends="coverage,epsg-hsql" description="Extension of the of Grid Coverage plugins, leveraging on the GDAL raster data access capabilities by means of the ImageIO-Ext Project"/>
+        <conf name="imagemosaic-jdbc" extends="coverage,epsg-hsql,shapefile,jdbc,metadata" description="Plugin for reading tiled images from a JDBC Data Source"/>
+        <conf name="imagemosaic" extends="shapefile,jdbc,geotiff,image,jp2k,imageio-ext-gdal" description="Datasource created to read a mosaic of georeferenced images or geotiff, jp2k, ..."/>
+        <conf name="imagepyramid" extends="imagemosaic" description="Datasource created to read a pyramid of georeferenced images or geotiff (and in future also JPEG2K)."/>
+        <conf name="jai-tools" extends="coverage" description="A module working as a Bridge to jai-tools operations"/>
+        <conf name="jdbc" extends="data" description="Abstract datastore implementation and helper classes / apis to be extended by datastores backed by releational databases accesible via jdbc."/>
+        <conf name="jp2k" extends="coverage,epsg-hsql" description="Extension of the of Grid Coverage plugins, leveraging on the JP2K raster data access capabilities."/>
+        <conf name="jts-wrapper" extends="main" description="This is a basic 2D ISO 19107 implementation which uses JTS for the computational geometry."/>
+        <conf name="main" extends="api" description="The main module contains the key interfaces and default implementations that are used by other GeoTools modules."/>
+        <conf name="matfile5" extends="coverage,epsg-hsql" description="Extension of the of Grid Coverage plugins, to read matlab files with georefencing information"/>
+        <conf name="metadata" extends="opengis" description="Contains implementations of metadata and some core utilities classes"/>
+        <conf name="mysql" extends="jdbc" description="The MySQL module contains an implementation of the DataStore interface (found in data), as well as the older DataSource interface (found in core), for use with MySQL."/>
+        <conf name="opengis" description="Standard interfaces implemented throughout the library"/>
+        <conf name="oracle-spatial" extends="jdbc" description="Module offers GeoTools DataStore support for Oracle Spatial"/>
+        <conf name="postgis-versioned" extends="postgis" description="Used to extract and edit features from a PostGIS database along with feature versioning. PostGIS was developed by Refractions Research. It is an extension to the excellent Postgresql database, adding support for Geographic objects. It is open source and freely available."/>
+        <conf name="postgis" extends="jdbc" description="Used to extract and edit features from a PostGIS database. PostGIS was developed by Refractions Research. It is an extension to the excellent Postgresql database, adding support for Geographic objects. It is open source and freely available."/>
+        <conf name="process" extends="coverage,shapefile,cql" description="An API for creating custom processes/operations plus a collection of pre-written processes including vector/raster conversion"/>
+        <conf name="property" extends="main" description="DataStore based on standard Java properties files, originally created as demo; now serves as a useful reference implementation."/>
+        <conf name="referencing" extends="metadata" description="Contains implementations of Coordinate Reference Systems (CRS), conversion and transformation services."/>
+        <conf name="referencing3D" extends="referencing" description="Transforms coordinates from &quot;heights above the ellipsoid&quot; to &quot;heights above the geoid&quot;. This module provides the algorithms from an Earth Gravitational Model as a MathTransform implementation. Installing the JAR on the classpath should be sufficient for making vertical transformations available to an application like any other transforms."/>
+        <conf name="render" extends="coverage,cql" description="The render module contains a renderer built around the interface in api and main. This is a first class geotools module as creating a visual representation of features is considered key to most geospatial applications."/>
+        <conf name="sde-dummy" description="ArcSDE dummy API"/>
+        <conf name="sfs" extends="data,geojson" description="SFS classes"/>
+        <conf name="shapefile-renderer" extends="shapefile,render" description="Renderer optimized for shapefiles"/>
+        <conf name="shapefile" extends="data" description="Shapefile module"/>
+        <conf name="svg" extends="render" description="Dynamic symbolizers for SVG symbols"/>
+        <conf name="swing" extends="render,wms" description="Provides widgets for map display and other GUI elements"/>
+        <conf name="temporal" extends="referencing,metadata" description="Provides a Temporal (ISO 19108) implementation. This module contains temporal aspects implementations for geographic information."/>
+        <conf name="validation" extends="graph" description="Validation module (and validator batch tool) for use with geotools2. This library has been ported to geotools2 as part of the VWFS project sponsered by Geo Innovations."/>
+        <conf name="vpf" extends="main" description="VPF plugin"/>
+        <conf name="wfs" extends="xml" description="Implementation of DataStore allowing geotools code to work with an OGC Web Feature Service. Offers client code for WFS 1.0 and WFS 1.1."/>
+        <conf name="wms" extends="xml,render" description="An OGC Web Map Server client implementation that can be used directly or as through the GridCoverageExchange API. Direct usage is recommended, as the GridCoverageExchange access for WMS is not well tested and is complicated to use. It supports WMS versions 1.0.0, 1.1.0, 1.1.1, and 1.3.0."/>
+        <conf name="wps" extends="process" description="Web Processing Service implementation."/>
+        <conf name="xml" extends="main" description="XML Parser based on the XDO design"/>
+        <conf name="xsd" description="XSD classes"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-api" name="gt-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-app-schema-resolver" name="gt-app-schema-resolver" conf="app-schema-resolver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-app-schema" name="gt-app-schema" conf="app-schema"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-arcgrid" name="gt-arcgrid" conf="arcgrid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-arcsde-common" name="gt-arcsde-common" conf="arcsde-common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-arcsde" name="gt-arcsde" conf="arcsde"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-brewer" name="gt-brewer" conf="brewer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-caching" name="gt-caching" conf="caching"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-charts" name="gt-charts" conf="charts"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-coverage" name="gt-coverage" conf="coverage"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-coverageio-netcdf" name="gt-coverageio-netcdf" conf="coverageio-netcdf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-coverageio" name="gt-coverageio" conf="coverageio"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-coveragetools" name="gt-coveragetools" conf="coveragetools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-cql" name="gt-cql" conf="cql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-csv" name="gt-csv" conf="csv"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-data" name="gt-data" conf="data"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-db2" name="gt-db2" conf="db2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-extension" name="gt-epsg-extension" conf="epsg-extension"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-h2" name="gt-epsg-h2" conf="epsg-h2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-hsql" name="gt-epsg-hsql" conf="epsg-hsql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-oracle" name="gt-epsg-oracle" conf="epsg-oracle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-postgresql" name="gt-epsg-postgresql" conf="epsg-postgresql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-epsg-wkt" name="gt-epsg-wkt" conf="epsg-wkt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-feature-pregeneralized" name="gt-feature-pregeneralized" conf="feature-pregeneralized"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-geojson" name="gt-geojson" conf="geojson"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-geometry" name="gt-geometry" conf="geometry"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-geotiff" name="gt-geotiff" conf="geotiff"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-graph" name="gt-graph" conf="graph"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-grassraster" name="gt-grassraster" conf="grassraster"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-grid" name="gt-grid" conf="grid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-gtopo30" name="gt-gtopo30" conf="gtopo30"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-image" name="gt-image" conf="image"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-imageio-ext-gdal" name="gt-imageio-ext-gdal" conf="imageio-ext-gdal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-imagemosaic-jdbc" name="gt-imagemosaic-jdbc" conf="imagemosaic-jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-imagemosaic" name="gt-imagemosaic" conf="imagemosaic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-imagepyramid" name="gt-imagepyramid" conf="imagepyramid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-jai-tools" name="gt-jai-tools" conf="jai-tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-jdbc" name="gt-jdbc" conf="jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-jp2k" name="gt-jp2k" conf="jp2k"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-jts-wrapper" name="gt-jts-wrapper" conf="jts-wrapper"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-main" name="gt-main" conf="main"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-matfile5" name="gt-matfile5" conf="matfile5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-metadata" name="gt-metadata" conf="metadata"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-mysql" name="gt-mysql" conf="mysql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-opengis" name="gt-opengis" conf="opengis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-oracle-spatial" name="gt-oracle-spatial" conf="oracle-spatial"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-postgis-versioned" name="gt-postgis-versioned" conf="postgis-versioned"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-postgis" name="gt-postgis" conf="postgis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-process" name="gt-process" conf="process"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-property" name="gt-property" conf="property"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-referencing" name="gt-referencing" conf="referencing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-referencing3D" name="gt-referencing3D" conf="referencing3D"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-render" name="gt-render" conf="render"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-sde-dummy" name="gt-sde-dummy" conf="sde-dummy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-sfs" name="gt-sfs" conf="sfs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-shapefile-renderer" name="gt-shapefile-renderer" conf="shapefile-renderer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-shapefile" name="gt-shapefile" conf="shapefile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-svg" name="gt-svg" conf="svg"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-swing" name="gt-swing" conf="swing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-temporal" name="gt-temporal" conf="temporal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-validation" name="gt-validation" conf="validation"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-vpf" name="gt-vpf" conf="vpf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-wfs" name="gt-wfs" conf="wfs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-wms" name="gt-wms" conf="wms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-wps" name="gt-wps" conf="wps"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gt-xml" name="gt-xml" conf="xml"/>
+
+        <!-- source -->
+        <artifact name="gt-api" type="source" ext="zip" conf="api"/>
+        <artifact name="gt-app-schema-resolver" type="source" ext="zip" conf="app-schema-resolver"/>
+        <artifact name="gt-app-schema" type="source" ext="zip" conf="app-schema"/>
+        <artifact name="gt-arcgrid" type="source" ext="zip" conf="arcgrid"/>
+        <artifact name="gt-arcsde-common" type="source" ext="zip" conf="arcsde-common"/>
+        <artifact name="gt-arcsde" type="source" ext="zip" conf="arcsde"/>
+        <artifact name="gt-brewer" type="source" ext="zip" conf="brewer"/>
+        <artifact name="gt-caching" type="source" ext="zip" conf="caching"/>
+        <artifact name="gt-charts" type="source" ext="zip" conf="charts"/>
+        <artifact name="gt-coverage" type="source" ext="zip" conf="coverage"/>
+        <artifact name="gt-coverageio-netcdf" type="source" ext="zip" conf="coverageio-netcdf"/>
+        <artifact name="gt-coverageio" type="source" ext="zip" conf="coverageio"/>
+        <artifact name="gt-coveragetools" type="source" ext="zip" conf="coveragetools"/>
+        <artifact name="gt-cql" type="source" ext="zip" conf="cql"/>
+        <artifact name="gt-csv" type="source" ext="zip" conf="csv"/>
+        <artifact name="gt-data" type="source" ext="zip" conf="data"/>
+        <artifact name="gt-db2" type="source" ext="zip" conf="db2"/>
+        <artifact name="gt-epsg-extension" type="source" ext="zip" conf="epsg-extension"/>
+        <artifact name="gt-epsg-h2" type="source" ext="zip" conf="epsg-h2"/>
+        <artifact name="gt-epsg-hsql" type="source" ext="zip" conf="epsg-hsql"/>
+        <artifact name="gt-epsg-oracle" type="source" ext="zip" conf="epsg-oracle"/>
+        <artifact name="gt-epsg-postgresql" type="source" ext="zip" conf="epsg-postgresql"/>
+        <artifact name="gt-epsg-wkt" type="source" ext="zip" conf="epsg-wkt"/>
+        <artifact name="gt-feature-pregeneralized" type="source" ext="zip" conf="feature-pregeneralized"/>
+        <artifact name="gt-geojson" type="source" ext="zip" conf="geojson"/>
+        <artifact name="gt-geometry" type="source" ext="zip" conf="geometry"/>
+        <artifact name="gt-geotiff" type="source" ext="zip" conf="geotiff"/>
+        <artifact name="gt-graph" type="source" ext="zip" conf="graph"/>
+        <artifact name="gt-grassraster" type="source" ext="zip" conf="grassraster"/>
+        <artifact name="gt-grid" type="source" ext="zip" conf="grid"/>
+        <artifact name="gt-gtopo30" type="source" ext="zip" conf="gtopo30"/>
+        <artifact name="gt-image" type="source" ext="zip" conf="image"/>
+        <artifact name="gt-imageio-ext-gdal" type="source" ext="zip" conf="imageio-ext-gdal"/>
+        <artifact name="gt-imagemosaic-jdbc" type="source" ext="zip" conf="imagemosaic-jdbc"/>
+        <artifact name="gt-imagemosaic" type="source" ext="zip" conf="imagemosaic"/>
+        <artifact name="gt-imagepyramid" type="source" ext="zip" conf="imagepyramid"/>
+        <artifact name="gt-jai-tools" type="source" ext="zip" conf="jai-tools"/>
+        <artifact name="gt-jdbc" type="source" ext="zip" conf="jdbc"/>
+        <artifact name="gt-jp2k" type="source" ext="zip" conf="jp2k"/>
+        <artifact name="gt-jts-wrapper" type="source" ext="zip" conf="jts-wrapper"/>
+        <artifact name="gt-main" type="source" ext="zip" conf="main"/>
+        <artifact name="gt-matfile5" type="source" ext="zip" conf="matfile5"/>
+        <artifact name="gt-metadata" type="source" ext="zip" conf="metadata"/>
+        <artifact name="gt-mysql" type="source" ext="zip" conf="mysql"/>
+        <artifact name="gt-opengis" type="source" ext="zip" conf="opengis"/>
+        <artifact name="gt-oracle-spatial" type="source" ext="zip" conf="oracle-spatial"/>
+        <artifact name="gt-postgis-versioned" type="source" ext="zip" conf="postgis-versioned"/>
+        <artifact name="gt-postgis" type="source" ext="zip" conf="postgis"/>
+        <artifact name="gt-process" type="source" ext="zip" conf="process"/>
+        <artifact name="gt-property" type="source" ext="zip" conf="property"/>
+        <artifact name="gt-referencing" type="source" ext="zip" conf="referencing"/>
+        <artifact name="gt-referencing3D" type="source" ext="zip" conf="referencing3D"/>
+        <artifact name="gt-render" type="source" ext="zip" conf="render"/>
+        <artifact name="gt-sde-dummy" type="source" ext="zip" conf="sde-dummy"/>
+        <artifact name="gt-sfs" type="source" ext="zip" conf="sfs"/>
+        <artifact name="gt-shapefile-renderer" type="source" ext="zip" conf="shapefile-renderer"/>
+        <artifact name="gt-shapefile" type="source" ext="zip" conf="shapefile"/>
+        <artifact name="gt-svg" type="source" ext="zip" conf="svg"/>
+        <artifact name="gt-swing" type="source" ext="zip" conf="swing"/>
+        <artifact name="gt-temporal" type="source" ext="zip" conf="temporal"/>
+        <artifact name="gt-validation" type="source" ext="zip" conf="validation"/>
+        <artifact name="gt-vpf" type="source" ext="zip" conf="vpf"/>
+        <artifact name="gt-wfs" type="source" ext="zip" conf="wfs"/>
+        <artifact name="gt-wms" type="source" ext="zip" conf="wms"/>
+        <artifact name="gt-wps" type="source" ext="zip" conf="wps"/>
+        <artifact name="gt-xml" type="source" ext="zip" conf="xml"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.vividsolutions" name="jts" rev="[1.11,)" conf="api-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-digester" rev="[1.7,)" conf="app-schema-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[3.1,)" conf="app-schema,jdbc-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.7.0,)" conf="app-schema,imagemosaic-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.1,)" conf="wfs,wms-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[1.2,)" conf="app-schema,imagemosaic,jp2k,wfs-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-pool" rev="[1.5.4,)" conf="arcsde-common,coveragetools,opengis-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-cli" rev="[1.2,)" conf="coveragetools-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-dbcp" rev="[1.3,)" conf="jdbc-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,)" conf="jts-wrapper-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.2,)" conf="sfs-&gt;default"/>
+        <dependency org="com.ibm.icu" name="icu4j" rev="[3.4.4,)" conf="arcsde-common-&gt;default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="[1.1.3.4.O,)" conf="app-schema,wfs-&gt;default"/>
+        <!-- TODO
+        <dependency org="org.geotools.xsd" name="gt-xsd" rev="2.7.4" conf="app-schema-resolver->core;app-schema->gml3;xml->wfs;wps->ows"/>
+        -->
+        <!-- TODO
+        <dependency org="org.geotools.ogc" name="net.opengis.wfs" rev="2.7.4" conf="xml->wfs;wps->wps"/>
+        -->
+        <!--<dependency org="it.geosolutions.imageio-ext" name="imageio-ext" rev="1.1M012010" conf="matfile5->imagereadmt,mat-sas"/>-->
+        <!-- TODO
+        <dependency org="it.geosolutions.imageio-ext" name="imageio-ext" rev="[1.0.8,)"
+          conf="arcgrid->arcgrid;coverage->tiff;imageio-ext-gdal->gdal,imagereadmt;jp2k->kakadu,utilities;matfile5->imagereadmt,mat-sas"/>
+          -->
+        <dependency org="net.sourceforge.jsqlparser" name="jsqlparser" rev="[0.3.14,)" conf="arcsde-&gt;default"/>
+        <!-- the next two dependencies require native libraries specific to the OS and architecture of the user's system thus it is the user's
+        responsibility to correctly install the binaries.  these packages simply include the java classes -->
+        <dependency org="com.sun.media" name="jai" rev="[1.1,)" conf="arcsde,coverage,jai-tools,imagemosaic,imagemosaic-jdbc-&gt;codec"/>
+        <dependency org="com.sun.media" name="jai-imageio" rev="[1.1,)" conf="arcsde,coverage,jai-tools,imagemosaic,imagemosaic-jdbc-&gt;default"/>
+        <dependency org="org.jfree" name="eastwood" rev="[1.1.0,)" conf="charts-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.0,)" conf="coverageio-netcdf-&gt;default"/>
+        <dependency org="edu.ucar" name="netcdf" rev="[2.2.0,)" conf="coverageio-netcdf-&gt;default"/>
+        <dependency org="net.sourceforge.javacsv" name="javacsv" rev="[2.0,)" conf="csv-&gt;default"/>
+        <dependency org="com.h2database" name="h2" rev="[1.1.119,)" conf="epsg-h2-&gt;default"/>
+        <dependency org="org.hsqldb" name="hsqldb" rev="[1.8.0.7,)" conf="epsg-hsql-&gt;default"/>
+        <dependency org="com.googlecode.jaitools" name="jaitools" rev="[1.1.1,)" conf="jai-tools,imagemosaic-&gt;utils;jai-tools-&gt;zonalstats;imagemosaic-&gt;vectorbinarize"/>
+        <!--
+             User responsibility
+        <dependency org="com.oracle" name="ojdbc" rev="[10.2.0.3,)" conf="epsg-oracle,oracle-spatial->default"/>
+        -->
+        <!-- TODO
+        <dependency org="com.oracle" name="sdoapi" rev="[10.2.0,)" conf="oracle-spatial->default"/>
+        -->
+        <dependency org="org.postgresql" name="postgresql-jdbc" rev="[8.4-702,)" conf="epsg-postgresql,postgis-&gt;default"/>
+        <dependency org="org.postgis" name="postgis-jdbc" rev="[1.0,)" conf="postgis-&gt;default"/>
+        <!-- TODO
+        <dependency org="com.ibm" name="db2jcc" rev="[9,)" conf="db2->default"/>
+        -->
+        <dependency org="com.googlecode.json-simple" name="json-simple" rev="[1.1,)" conf="geojson-&gt;default"/>
+        <!-- TODO
+        <dependency org="net.java.dev.jsr-275" name="jsr-275" rev="[1.0-beta-2,)" conf="imagemosaic,geometry,opengis->default"/>
+        -->
+        <dependency org="net.java.dev.java3d" name="vecmath" rev="[1.3.2,)" conf="imagemosaic-jdbc,imagemosaic,opengis-&gt;default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.6.2,)" conf="imagemosaic-&gt;default"/>
+        <dependency org="org.jdom" name="jdom" rev="[1.0,)" conf="main-&gt;default"/>
+        <dependency org="com.mysql" name="mysql-connector-java" rev="[5.1.17,)" conf="mysql-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="postgis-&gt;default"/>
+        <dependency org="org.apache.xmlgraphics" name="batik" rev="[1.7,)" conf="svg-&gt;default"/>
+        <!-- TODO
+        <dependency org="com.miglayout" name="miglayout" rev="[3.7,)" conf="swing->swing"/>
+        -->
+    </dependencies>
+
+</ivy-module>
