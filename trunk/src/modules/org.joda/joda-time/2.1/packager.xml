@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Adrian Woodhead
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource groupId="joda-time">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="8f79e353ef77da6710e1f10d34fc3698eaaacbca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="cccb93a1f210293d699b14da949f5016c7b90379"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="e4fb55e2e35656974d78363afaa19720670ce867"/>
+    </m2resource>
+</packager-module>
+
