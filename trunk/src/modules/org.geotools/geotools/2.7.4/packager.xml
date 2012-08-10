@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-api">
+        <artifact tofile="artifacts/jars/gt-api.jar" sha1="02887016832b21d76f10085bd676ae2d4aa91b9f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-api.zip" sha1="981a1026ddca6b24802b952a7ae83772cad04509"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-app-schema-resolver">
+        <artifact tofile="artifacts/jars/gt-app-schema-resolver.jar" sha1="9fe3d4ab9b3281d0ee8d485f15e3e5d5c387bab1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-app-schema-resolver.zip" sha1="cb9dec5e11997a190c3628c055cd547967f0f727"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-app-schema">
+        <artifact tofile="artifacts/jars/gt-app-schema.jar" sha1="99ee67cfc516c887b0621773e554f8b489024586"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-app-schema.zip" sha1="ee3bfd6d6297c83bab3534e12b2ef268d5ad6521"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-arcgrid">
+        <artifact tofile="artifacts/jars/gt-arcgrid.jar" sha1="0fa5ca21c4b67aff762125b74f45f4fe8c7c3b4b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-arcgrid.zip" sha1="12cafa9125badb59b3280292972657e6cc8d0c02"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-arcsde-common">
+        <artifact tofile="artifacts/jars/gt-arcsde-common.jar" sha1="4794a5391833495ed62eaccdaf7514090583ee8e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-arcsde-common.zip" sha1="012e81db79576fa6154196935a1cb5acaad9c258"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-arcsde">
+        <artifact tofile="artifacts/jars/gt-arcsde.jar" sha1="4121cebc27340bff032067b3e68736902afdb5bc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-arcsde.zip" sha1="4ca377b17620e3ecaa83f842fcc69182d56ef9a3"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-brewer">
+        <artifact tofile="artifacts/jars/gt-brewer.jar" sha1="79ae30c83048af6d2aabb614dba372393ab21684"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-brewer.zip" sha1="e5e9d011ab5f414a017edbe47d549f724699e8df"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-caching">
+        <artifact tofile="artifacts/jars/gt-caching.jar" sha1="a0f1e356baa9277b47abbf815d395da766f54636"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-caching.zip" sha1="86292a4e52452b0985d16bb6d27a1a7ba2181ebf"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-charts">
+        <artifact tofile="artifacts/jars/gt-charts.jar" sha1="a34e5e9df20c650f6ec1b6ca493ff312c3ed33b7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-charts.zip" sha1="ad8971cce0972c1b54748da2e4c594fbc2c9708a"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-coverage">
+        <artifact tofile="artifacts/jars/gt-coverage.jar" sha1="57022773962c8f335a09affc40e5a99396121cd5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-coverage.zip" sha1="3b0a07ce3798abc45062eaf019f8586dabc3b0d5"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-coverageio-netcdf">
+        <artifact tofile="artifacts/jars/gt-coverageio-netcdf.jar" sha1="c5b481551e49f7d6cbd1ce56d66d49880c9bb82a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-coverageio-netcdf.zip" sha1="f7817a9abb5a8f261e424a4d4d74036b1adb9975"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-coverageio">
+        <artifact tofile="artifacts/jars/gt-coverageio.jar" sha1="80178809e63fb5db6e04d52fb333771e21e36463"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-coverageio.zip" sha1="7faadf2d04c85faabe4e0eae21a35b6928d2c0a4"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-coveragetools">
+        <artifact tofile="artifacts/jars/gt-coveragetools.jar" sha1="c8fcb88e02320d07baf84140a868946b448306ff"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-coveragetools.zip" sha1="1098a67b72f3144085fcb90faa343985cfb41214"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-cql">
+        <artifact tofile="artifacts/jars/gt-cql.jar" sha1="6c55a9464de5951127ee173d514ded727b94423b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-cql.zip" sha1="5926e9ff5a0f6732750bb368b0dcc91f384b4236"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-csv">
+        <artifact tofile="artifacts/jars/gt-csv.jar" sha1="d5775f8f6ef478077c07655806d45f94592d2c9d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-csv.zip" sha1="416103be64766f666dff02c471dffa1e4e8aa952"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-data">
+        <artifact tofile="artifacts/jars/gt-data.jar" sha1="d90737e9dec3b13556e3b1cac61bc4fc0eedafa1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-data.zip" sha1="2d64859413ada4f6f27f2ba7db274585b5027a8d"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-db2">
+        <artifact tofile="artifacts/jars/gt-db2.jar" sha1="1ae159bc18f0b51fa80a9bac0ba3badca27ad1f2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-db2.zip" sha1="b8a2ddaee904c432bc8ba580e65f29093cd9a9a3"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-extension">
+        <artifact tofile="artifacts/jars/gt-epsg-extension.jar" sha1="85497333e08488892d0c6e2d6d060ccef9531da8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-extension.zip" sha1="aef8561a990a250c556bd159887ffc480d75a95c"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-h2">
+        <artifact tofile="artifacts/jars/gt-epsg-h2.jar" sha1="b7a38fc96cdc116faba9f1db86f35d464f16112e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-h2.zip" sha1="adda7d4720f0c3232745ecc8731c8ee737b03721"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-hsql">
+        <artifact tofile="artifacts/jars/gt-epsg-hsql.jar" sha1="d4552d627685737f3610f30f8d4869192eae9fea"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-hsql.zip" sha1="0310e62c65fcded286ad3ea4b05f9d77ef3579cb"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-oracle">
+        <artifact tofile="artifacts/jars/gt-epsg-oracle.jar" sha1="3d0660d8850c74d7f31847f0bcc714db04782288"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-oracle.zip" sha1="152f9c37fe4d63e06f200d81ea8694e3c97e9217"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-postgresql">
+        <artifact tofile="artifacts/jars/gt-epsg-postgresql.jar" sha1="7b836391920fcf9b87deb22c224adf54c66c0504"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-postgresql.zip" sha1="36bf93e768ae0bd8c8035a141faa44bcc40e1167"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-epsg-wkt">
+        <artifact tofile="artifacts/jars/gt-epsg-wkt.jar" sha1="469422adad70c8b271bfb10388c0d6179a8342d7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-epsg-wkt.zip" sha1="c5788431aeefefd7741f002c07a903eaaeccd096"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-feature-pregeneralized">
+        <artifact tofile="artifacts/jars/gt-feature-pregeneralized.jar" sha1="f4d9008529635bcb5291ba82a50f6dee94961e1a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-feature-pregeneralized.zip" sha1="0f1dfcc05242a6e0a6fa2bc4f0106108aae95aa5"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-geojson">
+        <artifact tofile="artifacts/jars/gt-geojson.jar" sha1="fbbff74cedefcd3a19e6773d0dedc8dc18e5759f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-geojson.zip" sha1="6db4c21e3e627bbb082b3f7e7c5a5b5795ab3fe6"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-geometry">
+        <artifact tofile="artifacts/jars/gt-geometry.jar" sha1="30aa5cbe11741958dd4baafbe8c6132f0a5302d7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-geometry.zip" sha1="548d96dab1fb91b94d77d991140e80ff23ce6f21"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-geotiff">
+        <artifact tofile="artifacts/jars/gt-geotiff.jar" sha1="8c80831a503cec79fc3e2fa7f4a5adbbe8813068"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-geotiff.zip" sha1="f83b83700092cf3b879ff557e1cc7f60a7444e06"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-graph">
+        <artifact tofile="artifacts/jars/gt-graph.jar" sha1="63ef5867b66c13ba7122a4b951335d049d841a5b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-graph.zip" sha1="21d9d7d6849f84c24aefff087bf382bec714912a"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-grassraster">
+        <artifact tofile="artifacts/jars/gt-grassraster.jar" sha1="2e3fec6f7c2f758733f2af1b7b3af97377c6c498"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-grassraster.zip" sha1="a7b2802028a721187b6d275c4222df1dcb4e103c"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-grid">
+        <artifact tofile="artifacts/jars/gt-grid.jar" sha1="c605ac80189ab5709d734a4930e3405f1257cb2d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-grid.zip" sha1="e6739a12e068d2a30e4af6c77bd207fa6657cb10"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-gtopo30">
+        <artifact tofile="artifacts/jars/gt-gtopo30.jar" sha1="e39bf4405a54d7c31d230e153bea81374a654da0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-gtopo30.zip" sha1="af8df7c6e58010fe1e0843b78a1058ad0edc099c"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-image">
+        <artifact tofile="artifacts/jars/gt-image.jar" sha1="a06dd5dee197af7a48d6384c94a772916faf625d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-image.zip" sha1="1b30ac4ce1c49f24d6d8df20a23f53afa3244983"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-imageio-ext-gdal">
+        <artifact tofile="artifacts/jars/gt-imageio-ext-gdal.jar" sha1="6ad55b41092bdd46770625eef56694bd05c8b275"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-imageio-ext-gdal.zip" sha1="4bb9d4d6127920b2407d5cde3ab2ff24cef8f170"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-imagemosaic-jdbc">
+        <artifact tofile="artifacts/jars/gt-imagemosaic-jdbc.jar" sha1="e73141d9a677fd263e93124030dce2b78c66224b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-imagemosaic-jdbc.zip" sha1="1763ee7bd7d44817c866f511beb1bd17da871620"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-imagemosaic">
+        <artifact tofile="artifacts/jars/gt-imagemosaic.jar" sha1="4521d8cb88ba33fc9733b4e506c81ea085233170"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-imagemosaic.zip" sha1="09731a1d8b64a0f0031307e7af162fbd5e75e1b6"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-imagepyramid">
+        <artifact tofile="artifacts/jars/gt-imagepyramid.jar" sha1="896bd358fb6e968a0cc03cfd71e6d593621aa04c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-imagepyramid.zip" sha1="65aa45531d4f3b4a88f5870a5a7f46b9277d7ca6"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-jai-tools">
+        <artifact tofile="artifacts/jars/gt-jai-tools.jar" sha1="d95d72ffcf93c1d1eef7ccd3fd28bbc65c1d89ea"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-jai-tools.zip" sha1="0dc61d0c0837a8562211eeb8ae35b77fd6178142"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-jdbc">
+        <artifact tofile="artifacts/jars/gt-jdbc.jar" sha1="a2c189d728ed07ea4cceae4d9ca3dd06171aebca"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-jdbc.zip" sha1="23f2b8475a1a059c12162833e851642f9e71dd06"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-jp2k">
+        <artifact tofile="artifacts/jars/gt-jp2k.jar" sha1="98b3e0ca4f4af2fdff2b6cc6e4c9b084a4a80680"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-jp2k.zip" sha1="53c7f8d4603afbb6ee291b0f6a9da1accd907bed"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-jts-wrapper">
+        <artifact tofile="artifacts/jars/gt-jts-wrapper.jar" sha1="01a918c78fcfd39c541fbfb5e90e17561743ba17"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-jts-wrapper.zip" sha1="1445c0d9894f68053f5b04ed5615a281b7eaf0b1"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-main">
+        <artifact tofile="artifacts/jars/gt-main.jar" sha1="5fe92bc7974c65ef6d8d9da88b46f8684e4f834b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-main.zip" sha1="3bb9f22745211eab65e606e3a49ecbee8022f177"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-matfile5">
+        <artifact tofile="artifacts/jars/gt-matfile5.jar" sha1="3acfbc9b79778cf3bedc3502807ba7f4da9107bc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-matfile5.zip" sha1="09a8d69fbfd72d41dc891bab2711c07530bfca97"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-metadata">
+        <artifact tofile="artifacts/jars/gt-metadata.jar" sha1="23e52c8e58f2f00c9b6d33ae088f4b98603312a2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-metadata.zip" sha1="610c20b977edd8afe6dd3860e12f8c48774f4873"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-mysql">
+        <artifact tofile="artifacts/jars/gt-mysql.jar" sha1="352712b331243a30fca63b7b4c83c1723c9990fc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-mysql.zip" sha1="247a0a045c938e7f8d3b7ab471168b4b3eb4bccc"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-opengis">
+        <artifact tofile="artifacts/jars/gt-opengis.jar" sha1="f7cd1ec1d0355beb8fccfa3c4c2cdb1e5c7d97d8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-opengis.zip" sha1="c5d42174260f4be98fada01446b902478b62bfd8"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-oracle-spatial">
+        <artifact tofile="artifacts/jars/gt-oracle-spatial.jar" sha1="2a7bcf63605729acf147d0736fe5581b0ad7c6e0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-oracle-spatial.zip" sha1="a73455a169b88d18692159d392a7a084f979b0a7"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-postgis-versioned">
+        <artifact tofile="artifacts/jars/gt-postgis-versioned.jar" sha1="f4486fa7a23c1f3f443520fbbd6d8a4458c348c3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-postgis-versioned.zip" sha1="5217fb8fd434fab059e604851d153d5b16010cc9"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-postgis">
+        <artifact tofile="artifacts/jars/gt-postgis.jar" sha1="30527414a5d8269e120e38c252bf5f6f427c6aa0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-postgis.zip" sha1="84377f7b2a31198183243f304166be913dc19118"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-process">
+        <artifact tofile="artifacts/jars/gt-process.jar" sha1="c2d5008591f4eee503b727eabb53206cba096964"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-process.zip" sha1="8b07c56d50539e4ee2a12464d079911cd36d1261"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-property">
+        <artifact tofile="artifacts/jars/gt-property.jar" sha1="d2105cbf987bc5cfd9d49513eec73231016592f3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-property.zip" sha1="5b1e94557504f72dd32b2519754407e046b54abc"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-referencing">
+        <artifact tofile="artifacts/jars/gt-referencing.jar" sha1="3dabf61823d954553d84efb070a066d5915ed193"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-referencing.zip" sha1="8a99a6de3e086e8739218fe0139ed0c884259443"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-referencing3D">
+        <artifact tofile="artifacts/jars/gt-referencing3D.jar" sha1="d93a2a1e8d97f1a4bd79969ef22ed18b250af49c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-referencing3D.zip" sha1="5574a2210067e19e47d4a12807d1e4622f03905f"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-render">
+        <artifact tofile="artifacts/jars/gt-render.jar" sha1="57590b6785af7457e211ebabcc2502162832056c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-render.zip" sha1="de91e8bc99c0213d8cbd57995d03d15005384435"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-sample-data-access">
+        <artifact tofile="artifacts/jars/gt-sample-data-access.jar" sha1="e818fb1de2c8b49e02915ed2356176e57be27c79"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-sample-data-access.zip" sha1="ae8328ffc43ffe503e2b4ac698f844b848e33538"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-sample-data">
+        <artifact tofile="artifacts/jars/gt-sample-data.jar" sha1="7eb1a4b0148038ba297ba9cd65a8f85e233d82b5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-sample-data.zip" sha1="8753fef20cee56d29d6476d1db1d3e9302f7349f"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-sde-dummy">
+        <artifact tofile="artifacts/jars/gt-sde-dummy.jar" sha1="ce932b97a5695f0df4e1022bcca9d237feae863c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-sde-dummy.zip" sha1="5ea9f24e196186d672c4b369afa094ffd8441533"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-sfs">
+        <artifact tofile="artifacts/jars/gt-sfs.jar" sha1="1e3fd86a171b4a29f387449e4a9a1bf6cb109dfe"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-sfs.zip" sha1="aa523a21489402e0a404574249585de14d7d6c56"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-shapefile-renderer">
+        <artifact tofile="artifacts/jars/gt-shapefile-renderer.jar" sha1="95b597949188f46605d2987b5db2484b1edaec59"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-shapefile-renderer.zip" sha1="8ebf88baa14c414beab39cbb8859b626148bb8e6"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-shapefile">
+        <artifact tofile="artifacts/jars/gt-shapefile.jar" sha1="d91c5593ca92f68cb6f3b267b5258bb9cf11759b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-shapefile.zip" sha1="e9f5a5458540eddf28d2e4a0f868b5ef3e6b26a4"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-svg">
+        <artifact tofile="artifacts/jars/gt-svg.jar" sha1="9813547b34a835f2200f55105b9dcc37f733b340"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-svg.zip" sha1="6fcce3ad666a0a7d7797f8fd88978ea0c592029f"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-swing">
+        <artifact tofile="artifacts/jars/gt-swing.jar" sha1="979cd360bbea60e245ec28a84ac7e006ce7d9319"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-swing.zip" sha1="3f6d1863a68a5357771c5db63b4760ebe3f08cfe"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-temporal">
+        <artifact tofile="artifacts/jars/gt-temporal.jar" sha1="876486c80b1765390efa85475508c1810fd055a6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-temporal.zip" sha1="f81acf988114a087e832b37a246533cf8c1328df"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-validation">
+        <artifact tofile="artifacts/jars/gt-validation.jar" sha1="37f59309476f3610ca8642fa1048b71c2f6df8be"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-validation.zip" sha1="901ece85764fb1a26cb61bc28b0f7a0f993c5909"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-vpf">
+        <artifact tofile="artifacts/jars/gt-vpf.jar" sha1="bcd937ec9dd4f61d6ac54235bccae70a4c582f0e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-vpf.zip" sha1="1c0d97398689c548f8a62dd9ad114a494a2bb421"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-wfs">
+        <artifact tofile="artifacts/jars/gt-wfs.jar" sha1="8f9846f9c68c1e266b2b06e26ccaf0c3f2d121e0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-wfs.zip" sha1="456b39c4aa8edce306ba6fb6fbeab5b07c4cad80"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-wms">
+        <artifact tofile="artifacts/jars/gt-wms.jar" sha1="d6df8cad637c6468306cf444b514942dab5283bb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-wms.zip" sha1="746c3c28e150281b12ad5af9dc1b021000e9e31e"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-wps">
+        <artifact tofile="artifacts/jars/gt-wps.jar" sha1="6abc918f67aebc1719b3bff1918d4ed359aec096"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-wps.zip" sha1="d0803268efeacfc020b38274fc194b1f6c94ab6e"/>
+    </m2resource>
+    <m2resource repo="http://download.osgeo.org/webdav/geotools" artifactId="gt-xml">
+        <artifact tofile="artifacts/jars/gt-xml.jar" sha1="e02992b7df5688d03ede674e5248b81a54230956"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gt-xml.zip" sha1="5ff1752fed8beec736fc2b914b0138043fc87ea8"/>
+    </m2resource>
+</packager-module>
