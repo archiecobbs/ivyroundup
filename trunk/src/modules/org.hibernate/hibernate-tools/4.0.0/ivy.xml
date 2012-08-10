@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120718154728">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://tools.hibernate.org/">
+
+            <p>
+            Working with Hibernate is very easy and developers enjoy
+            using the APIs and the query language. Even creating mapping
+            metadata is not an overly complex task once you've mastered
+            the basics. Hibernate Tools makes working with Hibernate or
+            EJB 3.0 persistence even more pleasant.
+            </p>
+
+            <p>
+            Hibernate Tools is an entirely new toolset for
+            Hibernate3, implemented as an integrated suite of
+            <a href="http://www.eclipse.org/">Eclipse</a> plugins,
+            together with a unified Ant task for integration
+            into the build cycle. Hibernate Tools is a core
+            component of <a href="http://jboss.org/tools">JBoss Tools</a>
+            and hence also part of <a href="http://www.jboss.com/products/devstudio">JBoss
+            Developer Studio</a>. See the documentation and screenshots for
+            more information or download Hibernate Tools now!
+            </p>
+
+            <p>
+            The following features are available within Eclipse:
+
+            <ul>
+            <li><b>Mapping Editor:</b> An editor for Hibernate XML mapping files,
+            supporting auto-completion and syntax highlighting. The
+            editor even supports semantic auto-completion for class names,
+            property/field names, table names and column names.</li>
+
+            <li><b>Console:</b> The Hibernate Console perspective allows you to
+            configure database connections, provides visualization of
+            classes and their relationships and allows you to execute
+            HQL queries interactively against your database and browse
+            the query results.</li>
+
+            <li><b>Reverse Engineering:</b> The most powerful feature of Hibernate
+            Tools is a database reverse engineering tool that can
+            generate domain model classes and Hibernate mapping files,
+            annotated EJB3 entity beans, HTML documentation or even an
+            entire <a href="http://jboss.com/products/seam">JBoss Seam</a>
+            application in seconds!</li>
+
+            <li><b>Wizards:</b> Several wizards are provided, including wizards to
+            quickly generate Hibernate configuration (cfg.xml) files,
+            and Hibernate console configurations.</li>
+
+            <li><b>Ant task:</b> The Hibernate3 tools include a unified Ant task that
+            allows you to run schema generation, mapping generation,
+            or Java code generation as part of your build. See the
+            documentation for more information.</li>
+            </ul>
+            </p>
+
+            <p>
+            See the Road Map for more information about future releases
+            and planned features.
+            </p>
+
+            <b>NOTE:</b> This ivy module includes only <code>hibernate-tools.jar</code>;
+            The rest (including the Eclipse plug-in) is not included.
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="default->default"/>
+        <dependency org="org.beanshell" name="bsh" rev="[2.0b4,3.0[" conf="default->default"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="[2.3.8,2.4[" conf="default->default"/>
+        <dependency org="net.sourceforge.jtidy" name="jtidy" rev="[8.0,9.0[" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
