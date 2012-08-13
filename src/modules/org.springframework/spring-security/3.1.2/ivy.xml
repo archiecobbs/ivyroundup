@@ -88,7 +88,7 @@
         <conf name="remoting" extends="core" description="Remoting module"/>
         <conf name="taglibs" extends="core" description="Taglibs module"/>
         <conf name="web" extends="core" description="Web module"/>
-        <conf name="default" extends="acl,cas-client,config,core,ldap,openid,taglibs,web"/>
+        <conf name="default" extends="acl,aspects,cas-client,config,core,crypto,ldap,openid,remoting,taglibs,web" description="Everything"/>
     </configurations>
 
     <publications>
