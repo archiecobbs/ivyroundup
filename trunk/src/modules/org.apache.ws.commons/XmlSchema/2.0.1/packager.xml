@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="xmlschema-core-${revision}"/>
 
-    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/xmlschema/${revision}/xmlschema-core-${revision}-bin.zip"
+    <resource url="http://archive.apache.org/dist/ws/xmlschema/${revision}/xmlschema-core-${revision}-bin.zip"
       sha1="342ae86f9f1bae97b4f688f831f24736646ad8cb"/>
-    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/xmlschema/${revision}/xmlschema-${revision}-source-release.zip"
+    <resource url="http://archive.apache.org/dist/ws/xmlschema/${revision}/xmlschema-${revision}-source-release.zip"
       sha1="20102baba31a28ad747067270e3cfcaca034605e"/>
 
     <build>
