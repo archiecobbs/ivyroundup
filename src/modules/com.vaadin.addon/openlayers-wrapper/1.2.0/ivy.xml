@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="201207272251">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://vaadin.com/directory#addon/openlayers-wrapper">
+            <p>
+                Add-on contains server side wrapper component for OpenLayers Map. It also provides API's for different types of layers.
+            </p>
+            <p>
+                The integration is built on its own GWT wrappers around OpenLayers javascript API.
+                The GWT part is designed so that the addon can also be used in plain GWT applications without Vaadin.
+            </p>
+            <p>
+                The add-on is evolving quite fast, thanks to numerous contributions. Some of the most essential features listed below:
+                <ul>
+                    <li>Multiple base layers (E.g. WMS, TMS, Google maps, VirtualEarth (aka Bing), OpenStreetMap)</li>
+                    <li>VectorLayer (Points, Areas, Lines, drawing, editing and styling either explicitly or via StyleMaps)</li>
+                    <li>Popups</li>
+                    <li>MarkerLayer (deprecated, users should start using VectorLayer instead. Also with plain OpenLayers)</li>
+                </ul>
+            </p>
+            <p>
+                The client side implementation is based on GWT's JavaScript overlays. Extending the API to any of OpenLayers features should be rather straightforward.
+                Contributions, feature requests and bug reports are welcome via the Google code project page. Help or support via Vaadin forums or Pro support.
+            </p>
+        </description>
+    </info>
+
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+</ivy-module>
