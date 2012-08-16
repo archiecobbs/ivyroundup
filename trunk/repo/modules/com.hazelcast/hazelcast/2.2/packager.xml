@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/hazelcast.jar" sha1="fd3a2b450e35bef995a3b6f4ce31ba6b0be28239"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast.zip" sha1="9d53950de9f091d06d572f22297ab85a9685b441"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast.zip" sha1="f995ec317f795a10d52a5683760ea5c2686d5f80"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-all">
+        <artifact tofile="artifacts/jars/hazelcast-all.jar" sha1="30874163b99490e2e865c834321abd868f7240af"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-all.zip" sha1="ff9ef9f85ccd80e7414efa997d90fe640c671424"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-all.zip" sha1="0f58861492cab9532ffe8c0991bbdaebe556d816"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-client">
+        <artifact tofile="artifacts/jars/hazelcast-client.jar" sha1="d94b2891fb4fa28eb87e86d681067ac6062075c8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-client.zip" sha1="58365ca645889cceeb5e4cd70387fb48696c1f1a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-client.zip" sha1="ab258e01952828a7926178c79b125d2b319b2a59"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-cloud">
+        <artifact tofile="artifacts/jars/hazelcast-cloud.jar" sha1="c4bbdc50cfe6434c2314ec5cf9ca7c8481528c10"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-cloud.zip" sha1="29b09f2883ee86d8ffb71c0e2ecfc9ee92c39545"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-cloud.zip" sha1="4d614679b8cd96679698acfffc9f3e40f95a9440"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-hibernate">
+        <artifact tofile="artifacts/jars/hazelcast-hibernate.jar" sha1="4473eae03b066241462e4874d2121ec9f701d29f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-hibernate.zip" sha1="7c3d308c734446392f9f57f1c7e147ebf3f85e04"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-hibernate.zip" sha1="b7b28e6f6c73b507cd65cc9403db77e9b59d37d6"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-spring">
+        <artifact tofile="artifacts/jars/hazelcast-spring.jar" sha1="aa8b7e15bcb0822a32edefa13f8ea6c446227d11"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-spring.zip" sha1="64df5d88e796f6ba6ba458606403b23b7dc0c369"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-spring.zip" sha1="6b32535da1c7fa6af0eda1b69606b022f52d3139"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-wm">
+        <artifact tofile="artifacts/jars/hazelcast-wm.jar" sha1="2c427a21d6d561fa5fa7d0b99e99d19d71f6559f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hazelcast-wm.zip" sha1="702e56ef81faff25bed7882025e64215f177922a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-wm.zip" sha1="8a1d8dc3c31f95303eae68dbb6afa598321f078f"/>
+    </m2resource>
+    <m2resource artifactId="hazelcast-ra">
+        <artifact ext="rar" tofile="artifacts/jars/hazelcast-ra.rar" sha1="4681f4b6b3775baa6b5ca01e6c27ed3d90152aa8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/hazelcast-ra.zip" sha1="0b0b31e106b428a93c536ea65d0b6216b2597105"/>
+    </m2resource>
+</packager-module>

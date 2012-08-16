@@ -2,8 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2010 Mark Thomas
-    Copyright 2012 Dalibor Novak, Danny Yates
+    Copyright 2012 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,25 +19,19 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.ant" module="ant" revision="1.8.1" status="release" publication="20100507003700">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2203 2012-08-16 18:38:56Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ant/ant/1.8.1/"/>
+    <info organisation="javax.ws.rs" module="javax.ws.rs-api" revision="2.0-m09" status="release" publication="20120618000000">
+        <license name="CDDL v1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2202 2012-08-16 18:36:22Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.ws.rs/javax.ws.rs-api/2.0-m09/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://ant.apache.org/">
-            Apache Ant is a Java-based build tool. In theory, it is kind of like Make, but without 
-            Make's wrinkles. 
+        <description homepage="http://jax-rs-spec.java.net/">
+        JAX-RS: Java API for RESTful Web Services
         </description>
     </info>
 
-    <configurations>
-        <conf name="core" description="Core classes"/>
-        <conf name="junit" extends="core" description="JUnit optional task"/>
-        <conf name="default" extends="core"/>
-    </configurations>
-
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="ant" conf="default,core,junit"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="ant-junit" conf="junit"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
+
 </ivy-module>

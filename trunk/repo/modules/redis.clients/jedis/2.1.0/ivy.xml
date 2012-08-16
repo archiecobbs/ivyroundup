@@ -2,8 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 
 <!--
-    Copyright 2010 Mark Thomas
-    Copyright 2012 Dalibor Novak, Danny Yates
+    Copyright 2012 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,25 +19,27 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.ant" module="ant" revision="1.8.1" status="release" publication="20100507003700">
+    <info organisation="redis.clients" module="jedis" revision="2.1.0" status="release" publication="20120510000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2203 2012-08-16 18:38:56Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.ant/ant/1.8.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2202 2012-08-16 18:36:22Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/redis.clients/jedis/2.1.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://ant.apache.org/">
-            Apache Ant is a Java-based build tool. In theory, it is kind of like Make, but without 
-            Make's wrinkles. 
+        <description homepage="http://code.google.com/p/jedis/">
+            <p>
+                Jedis is a blazingly small and sane redis java client.
+            </p>
+            <p>
+                Jedis was conceived to be EASY to use.
+            </p>
+            <p>
+                Jedis is fully compatible with the redis master branch.
+            </p>
         </description>
     </info>
 
-    <configurations>
-        <conf name="core" description="Core classes"/>
-        <conf name="junit" extends="core" description="JUnit optional task"/>
-        <conf name="default" extends="core"/>
-    </configurations>
-
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="ant" conf="default,core,junit"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="ant-junit" conf="junit"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jedis" ivyde:javadoc="jedis"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
+
 </ivy-module>
