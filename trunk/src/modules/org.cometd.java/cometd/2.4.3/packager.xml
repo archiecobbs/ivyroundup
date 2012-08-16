@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="bayeux-api">
+        <artifact tofile="artifacts/jars/bayeux-api.jar" sha1="70709fa04899d406bbfdd9000eebf287e75661fb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/bayeux-api.zip" sha1="6d2690bba05c108a35008cf640528c3e857d56bb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/bayeux-api.zip" sha1="9c3f9bfcf808088b273f2d8f216578988cc8d5c4"/>
+    </m2resource>
+    <m2resource artifactId="cometd-java-annotations">
+        <artifact tofile="artifacts/jars/cometd-java-annotations.jar" sha1="2ae3a3f63c773e195c9b2a968bef38c5e7f3aa38"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-java-annotations.zip" sha1="803542065df1b4207888f6d7e9abd37c2d8741be"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-java-annotations.zip" sha1="55b8cb2c2c0bd2d0f1162d1dd9af36e4adf1ad3a"/>
+    </m2resource>
+    <m2resource artifactId="cometd-java-client">
+        <artifact tofile="artifacts/jars/cometd-java-client.jar" sha1="8e07b3ac0cf8b0283a51c45813ef5d1ad247256a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-java-client.zip" sha1="54f853b9db97924af3db1d0d37abb80f55798522"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-java-client.zip" sha1="4a9e9c64cb978b2b019dc4be8eb8a02f30f4830f"/>
+    </m2resource>
+    <m2resource artifactId="cometd-java-common">
+        <artifact tofile="artifacts/jars/cometd-java-common.jar" sha1="d72bb3b05fab6a4068913cfbd2acbfcd1ee6a69b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-java-common.zip" sha1="a39ee3874e51928444be63b6228a38ca5445d8c6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-java-common.zip" sha1="3365a77dbb39b3c48dd44bb14c0d3c7619ab0c38"/>
+    </m2resource>
+    <m2resource artifactId="cometd-java-oort">
+        <artifact tofile="artifacts/jars/cometd-java-oort.jar" sha1="5d64210dbb44f275a4420fe5c25c5546ac6803ec"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-java-oort.zip" sha1="a76ae6de20866c258721b32d5996285b9c67b698"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-java-oort.zip" sha1="67559b9e8d07fe5d260975072066abcb7a47ad82"/>
+    </m2resource>
+    <m2resource artifactId="cometd-java-server">
+        <artifact tofile="artifacts/jars/cometd-java-server.jar" sha1="4056c685f6df165aab503c2b237d92ccc17dc0ad"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-java-server.zip" sha1="5f2f03d13b0505da3a7808f440b3ca1477dcb88b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-java-server.zip" sha1="ed4f8495f2ea0afb3c73c6b276f41d6b56f8a4c6"/>
+    </m2resource>
+    <m2resource artifactId="cometd-websocket-jetty">
+        <artifact tofile="artifacts/jars/cometd-websocket-jetty.jar" sha1="9c99f06f701398ee41e02a29157e8e1650689733"/>
+        <artifact classifier="sources" tofile="artifacts/sources/cometd-websocket-jetty.zip" sha1="39d1ea4b8a39fe67df9d75c5f64652bf1b4d36a1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/cometd-websocket-jetty.zip" sha1="d7d923dac64ffe4849242e60b9ea14f9a94e1dd2"/>
+    </m2resource>
+</packager-module>
