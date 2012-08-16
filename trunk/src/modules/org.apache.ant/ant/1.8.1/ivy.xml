@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2010 Mark Thomas
+    Copyright 2012 Dalibor Novak, Danny Yates
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -26,9 +27,15 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="junit" extends="core" description="JUnit optional task"/>
+        <conf name="default" extends="core"/>
+    </configurations>
+
     <publications>
-        <artifact/>
+        <artifact name="ant" conf="default,core,junit"/>
+        <artifact name="ant-junit" conf="junit"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
-
 </ivy-module>
