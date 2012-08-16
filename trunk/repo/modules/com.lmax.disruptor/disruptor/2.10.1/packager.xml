@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2012 Mark Thomas
+    Copyright 2012 Danny Yates, Dalibor Novak
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,7 +21,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://vaadin.com/download/release/6.8/${revision}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="199becb6ac6c31b246809cf4cd0183d3ebaf5dc0"/>
-    <resource url="http://vaadin.com/download/release/6.8/${revision}/other/${archive}-sources.jar" tofile="artifacts/sources/${name}.zip" sha1="2277a594dac7058d03242ea3498b9f2d5534f08f"/>
-    <resource url="http://vaadin.com/download/release/6.8/${revision}/other/${archive}-javadoc.jar" tofile="artifacts/javadocs/${name}.zip" sha1="c7799059568ff4fa85fdff6404882576cb5fee42"/>
+
+    <m2resource groupId="com.googlecode.disruptor">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="82a4bc0bec8178f78779500e6b68e1dd6a622696"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="844225a7d91639529812a7302e2f9516e3b5d1f4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b6702e5ec9890fc7c9f71f20ab94e2b5187fb95f"/>
+    </m2resource>
+    
 </packager-module>
