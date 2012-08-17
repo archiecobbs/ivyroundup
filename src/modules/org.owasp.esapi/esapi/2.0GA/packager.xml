@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="e51c5bcbbb81f1d98780af3368c537ffa1059724" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.jar" sha1="51745cf678cd465c0f19eaeb511cb97fb1194308" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.jar" sha1="f79b3d51362080d5e736b75fd7b90dcce9ab1ef4" />
+    </m2resource>
+
+</packager-module>
