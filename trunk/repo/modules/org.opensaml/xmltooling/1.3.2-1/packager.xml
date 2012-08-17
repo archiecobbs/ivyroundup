@@ -31,7 +31,7 @@
 
         <!-- jar -->
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-        
+
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
             <fileset dir="archive/${archive}/src"/>
