@@ -17,9 +17,10 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <m2resource artifactId="activation">
-        <artifact tofile="artifacts/jars/jaf.jar" sha1="485de3a253e23f645037828c07f1d7f1af40763a"/>
-        <artifact classifier="sources" tofile="artifacts/sources/jaf.zip" sha1="159e45688875fdabff19c9ceb7335aefe4df8339"/>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="e20f0960c000681c91d00de846a43cf2051b8f69"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="5a5be43f32001f28c0db16a25ffd5824e4ff8fee"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="eac60f90600d7c8b679ab69f71d070a6ab66fbef"/>
     </m2resource>
 
 </packager-module>
