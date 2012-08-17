@@ -22,18 +22,18 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource tofile="archive/${archive}/${archive}.jar" 
+    <resource tofile="archive/${archive}/${archive}.jar"
         url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar"
         type="jar"
         sha1="6446e9ac7e90667d6883ac583c402601dec75e34">
     </resource>
-    <resource 
+    <resource
         url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar"
         type="zip"
         dest="archive/${archive}/src"
         sha1="880dfd13402b56b74724b5a845f256a634b49a07">
     </resource>
-    <resource 
+    <resource
         url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar"
         type="zip"
         dest="archive/${archive}/docs"
@@ -43,7 +43,7 @@
 
         <!-- jar -->
         <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-        
+
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
             <fileset dir="archive/${archive}/src"/>
