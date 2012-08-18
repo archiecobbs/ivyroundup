@@ -19,7 +19,7 @@
 <packager-module rev="$Id$">
     <property name="name" value="${ivy.packager.module}"/>
     <m2resource groupId="net/bull/${name}" artifactId="${name}-core"
-      repo="http://maven.glassfish.org/content/groups/public">
+      repo="http://repo1.maven.org/maven2">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="68daade05cb2ac5e011ed13674b0b340ea6acb2e"/>
         <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="76c87e03abcfa9ab8b147b67d58abd3d339c6ec7"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="c89c4729afc53ae8d8a127d522b33872cbfe2edc"/>
