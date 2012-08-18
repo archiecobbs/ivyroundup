@@ -22,7 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-java-sdk-${revision}"/>
 
-    <resource url="http://googleappengine.googlecode.com/files/${archive}.zip" sha1="679779193bd6760d356ff6790f31b77af7109e69"/>
+    <resource url="http://googleappengine.googlecode.com/files/${archive}.zip" sha1="679779193bd6760d356ff6790f31b77af7109e69">
+        <url href="http://nexus.cestpasdur.com/nexus/content/groups/everything/com/google/appengine/appengine-java-sdk/${revision}/${archive}.zip" />
+    </resource>
 
     <build>
         <!-- jars -->
