@@ -244,4 +244,61 @@
       <rev name="1.2.216"/>
     </mod>
   </org>
+  <!-- depends on javax.media/jai which is not in the repository -->
+  <org name="com.googlecode.jaitools">
+    <mod name="jaitools">
+      <rev name="1.1.1"/>
+    </mod>
+  </org>
+  <!-- depends on org.codehaus.jra/jra which is not in the repository -->
+  <org name="org.apache.cxf">
+    <mod name="cxf-bundle">
+      <rev name="2.4.3"/>
+    </mod>
+  </org>
+  <!-- depends on org.springframework/spring 2.0.2+ which is on this list -->
+  <org name="org.codehaus.perf4j">
+    <mod name="perf4j">
+      <rev name="0.9.16"/>
+    </mod>
+  </org>
+  <!-- depends on com.googlecode.jaitools/jaitools which is on this list -->
+  <org name="org.geotools">
+    <mod name="geotools">
+      <rev name="2.7.4"/>
+    </mod>
+  </org>
+  <!-- cannot find a download link --> 
+  <org name="com.svcon">
+    <mod name="jdbf">
+      <rev name="1.0"/>
+    </mod>
+  </org>
+  <!-- cannot find a download link -->
+  <org name="com.vaadin.addon">
+    <mod name="dontpush-addon-ozonelayer">
+      <rev name="0.3.2"/>
+    </mod>
+  </org>
+  <!-- cannot find a download link -->
+  <org name="it.m2.net">
+    <mod name="nvtcom">
+      <rev name="1.02"/>
+    </mod>
+  </org>
+  <!-- cannot find a download link -->
+  <org name="net.bull">
+    <mod name="javamelody">
+      <rev name="1.27.0"/>
+    </mod>
+  </org>
+  <!-- cannot find download links -->
+  <org name="net.sourceforge.robocode">
+    <mod name="robocode">
+      <rev name="1.7.1.3"/>
+      <rev name="1.7.1.4-Beta"/>
+      <rev name="1.7.2.1"/>
+      <rev name="1.7.3.2"/>
+    </mod>
+  </org>
 </modules>
