@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2012 Stephen Lynn 
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,9 +16,14 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-    <m2resource groupId="${ivy.packager.module}">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="fd32786786e2adb664d5ecc965da47629dca14ba"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="f55d497638032e107a78638fac7b3622b0789fac"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="ee264b5d7a0f939d5999398c7f1ade031db3fcec"/>
+
+    <property name="geronimo-name" value="geronimo-jaxws_2.2_spec"/>
+    <property name="geronimo-rev" value="1.1"/>
+
+    <m2resource groupId="org/apache/geronimo/specs" artifactId="${geronimo-name}" version="${geronimo-rev}">
+        <artifact tofile="artifacts/jars/jaxws-api.jar" sha1="90745e1423874010d561588c944efeb9552a0091"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jaxws-api.zip" sha1="eb2ca56c38011b813a9328143bb1ff2b822a8844"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jaxws-api.zip" sha1="e33b87e1e9bc29802537e27088e6e6bf9e67f230"/>
     </m2resource>
+
 </packager-module>
