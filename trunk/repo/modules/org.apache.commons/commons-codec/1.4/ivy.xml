@@ -21,23 +21,18 @@
 
     <info organisation="org.apache.commons" module="commons-codec" revision="1.4" status="release" publication="20090809000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1076 2010-03-02 02:09:25Z philipmjohnson $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-codec/1.4/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2222 2012-08-18 14:24:40Z ales.nosek@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.commons/commons-codec/1.4/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/codec/">
             Commons Codec provides implementations of common encoders
             and decoders such as Base64, Hex, Phonetic and URLs.
         </description>
     </info>
-  <configurations>
-    <conf name="build"/>
-    <conf name="source"/>
-    <conf name="javadoc"/>
-    <conf name="default" extends="build,source,javadoc"/>
-  </configurations>
 
-  <publications>
-    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="commons-codec-source" ivyde:javadoc="commons-codec-javadoc" conf="build"/>
-    <artifact name="commons-codec-source" type="source" conf="source" ext="zip"/>
-    <artifact name="commons-codec-javadoc" type="javadoc" conf="javadoc" ext="zip"/>
-  </publications>
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
 </ivy-module>

@@ -19,9 +19,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.xmlpull.xpp3" module="xpp3" revision="1.1.4c" status="release" publication="20061110120000">
+    <info organisation="org.xmlpull.xpp3" module="xpp3" revision="1.1.4c" status="release" publication="20120818120000">
         <license name="Public domain"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 682 2009-04-28 16:51:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.xmlpull.xpp3/xpp3/1.1.4c/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2223 2012-08-18 15:27:12Z ales.nosek@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.xmlpull.xpp3/xpp3/1.1.4c/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html">
             <p>
@@ -46,7 +46,8 @@
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
