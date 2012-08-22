@@ -16,12 +16,23 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<ivy-module rev="$Id$">
 
-    <m2resource groupId="com.googlecode.disruptor">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="82a4bc0bec8178f78779500e6b68e1dd6a622696"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="844225a7d91639529812a7302e2f9516e3b5d1f4"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b6702e5ec9890fc7c9f71f20ab94e2b5187fb95f"/>
-    </m2resource>
-    
-</packager-module>
+    <info publication="20120822120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/disruptor/">
+
+            <p>
+            High Performance Inter-Thread Messaging Library
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
