@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Danny Yates
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+    <info publication="20101201120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.springsource.org/ldap">
+            <p>
+            Spring LDAP is a Java library for simplifying LDAP operations, based on the pattern of Spring's 
+            JdbcTemplate. The framework relieves the user of common chores, such as looking up and closing 
+            contexts, looping through results, encoding/decoding values and filters, and more.
+            </p>
+            <p>
+            Note, no support is provided in this Ivy descriptor for JDKs prior to 1.5. In particular, none of
+            the '*-tiger' JARs provided by spring-ldap are published, and the Sun LDAP Booster Pack (ldapbp.jar)
+            isn't referenced.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="tx" extends="core" description="Compensating transaction support"/>
+        <conf name="pool" extends="tx" description="Connection pooling support"/>
+        <conf name="odm" extends="core" description="Object-directory mapping"/>
+        <conf name="ldif-core" extends="core" description="Support for parsing LDIF files (note: support for spring-batch is not provided at this time)"/>
+        <!-- TODO requires spring-batch in Ivy Roundup
+        <conf name="ldif-batch"/>
+        -->
+        <conf name="all" description="Everything in one giant JAR"/>
+        <conf name="default" extends="all"/>
+    </configurations>
+
+    <publications>
+        <artifact name="spring-ldap-core" conf="core"/>
+        <artifact name="spring-ldap-odm" conf="odm"/>
+        <artifact name="spring-ldap-ldif-core" conf="ldif-core"/>
+        <artifact name="spring-ldap-all" conf="all"/>
+        <artifact name="source" type="source" ext="zip"/>
+        
+        <!-- No Javadoc available in Maven or on the website -->
+    </publications>
+
+    <dependencies>
+        <dependency org="org.springframework" name="spring" rev="3.0+" 
+                    conf="core->core,beans,context;tx->tx,jdbc,orm;all->core,beans,context,tx,jdbc,orm"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.1.1]" conf="core,all->default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.6,3[" conf="core,all->default"/>
+        <dependency org="org.apache.commons" name="commons-pool" rev="1.5.4" conf="pool,all->default"/>
+        <dependency org="org.apache.commons" name="commons-cli" rev="1.2" conf="odm,all->default"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3.19" conf="odm,all->default"/>
+    </dependencies>
+</ivy-module>
