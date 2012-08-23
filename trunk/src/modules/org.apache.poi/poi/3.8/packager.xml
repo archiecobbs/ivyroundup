@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Tim Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="date" value="20120326"/>
+
+    <resource url="http://archive.apache.org/dist/${name}/release/bin/${name}-bin-${revision}-${date}.tar.gz"
+      sha1="65569f306c54a215431e8143a7a444314ce11788"/>
+    <resource url="http://archive.apache.org/dist/${name}/release/src/${name}-src-${revision}-${date}.tar.gz"
+      sha1="7808a30cf3600310040e451c65fc2752a1223098"/>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}" includes="*-${revision}-${date}.jar"/>
+            <mapper type="glob" from="*-${revision}-${date}.jar" to="*.jar"/>
+        </move>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/ooxml/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/contrib/src" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/examples/src" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/scratchpad/src" includes="**/*.java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
+    </build>
+
+</packager-module>
