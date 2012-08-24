@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}.jar"
+      url="http://${name}.googlecode.com/files/${name}-${revision}.jar"
+      sha1="056ff0846fe14aedf3b613b7ff9da818c0b2ff2a"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip"
+      url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip"
+      sha1="c771b153106a4d12f2ea3ca7ec78e52d14b2468a"/>
+    <resource tofile="artifacts/sources/source.zip"
+      url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip"
+      sha1="2fa548c4034bd8c164613ca1361ac9596158a744"/>
+
+</packager-module>
