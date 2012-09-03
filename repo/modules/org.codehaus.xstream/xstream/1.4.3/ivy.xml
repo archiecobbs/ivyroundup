@@ -21,7 +21,7 @@
 
     <info organisation="org.codehaus.xstream" module="xstream" revision="1.4.3" status="release" publication="20120717163500">
         <license name="BSD License" url="http://xstream.codehaus.org/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2258 2012-08-30 22:42:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.xstream/xstream/1.4.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2260 2012-09-03 20:01:04Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.xstream/xstream/1.4.3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://xstream.codehaus.org/">
             XStream is a simple library to serialize objects to XML and back again.
@@ -53,7 +53,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="default-&gt;default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="xstream-&gt;default"/>
         <dependency org="org.hibernate" name="hibernate" rev="4.1.4.Final" conf="xstream-hibernate-&gt;core"/>
     </dependencies>
 
