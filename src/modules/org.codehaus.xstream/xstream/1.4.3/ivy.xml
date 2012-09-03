@@ -50,7 +50,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="default->default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="xstream->default"/>
         <dependency org="org.hibernate" name="hibernate" rev="4.1.4.Final" conf="xstream-hibernate->core"/>
     </dependencies>
 
