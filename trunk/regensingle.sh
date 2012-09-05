@@ -45,7 +45,8 @@ regenerate_repo()
 {
     # Regenerate repo
     echo "$SCRIPT: regenerating repository" "$1"
-    ant -Ddownload-xalan=true -Drepo.org="$ORG" -Drepo.mod="$MOD" -Drepo.rev="$REV" repo-for-module > regen.out
+    ant -Djavax.xml.transform.TransformerFactory=org.apache.xalan.processor.TransformerFactoryImpl \
+      -Ddownload-xalan=true -Drepo.org="$ORG" -Drepo.mod="$MOD" -Drepo.rev="$REV" repo-for-module > regen.out
 
     # Check for errors (fatal)
     if grep -q ERROR regen.out; then
