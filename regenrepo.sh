@@ -27,7 +27,8 @@ regenerate_repo()
 {
     # Regenerate repo
     echo 'regenrepo: regenerating repository' "$1"
-    ant -Ddownload-xalan=true repo > regen.out
+    ant -Djavax.xml.transform.TransformerFactory=org.apache.xalan.processor.TransformerFactoryImpl \
+      -Ddownload-xalan=true repo > regen.out
 
     # Check for errors (fatal)
     if grep -q ERROR regen.out; then
