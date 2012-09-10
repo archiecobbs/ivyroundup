@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120517122200">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://hc.apache.org/httpcomponents-client/index.html">
+        <p>
+            HttpClient is a standards based, pure Java, implementation of HTTP versions 1.0 and 1.1 and HTTP methods (GET, POST, PUT, DELETE, HEAD, OPTIONS, and TRACE).
+        </p>
+        <p>
+            The Hyper-Text Transfer Protocol (HTTP) is perhaps the most significant protocol used on the Internet today. Web services, network-enabled appliances and the growth of network computing continue to expand the role of the HTTP protocol beyond user-driven web browsers, while increasing the number of applications that require HTTP support.<br/><br/>
+
+            Although the java.net package provides basic functionality for accessing resources via HTTP, it doesn't provide the full flexibility or functionality needed by many applications. HttpClient seeks to fill this void by providing an efficient, up-to-date, and feature-rich package implementing the client side of the most recent HTTP standards and recommendations.<br/><br/>
+
+            Designed for extension while providing robust support for the base HTTP protocol, HttpClient may be of interest to anyone building HTTP-aware client applications such as web browsers, web service clients, or systems that leverage or extend the HTTP protocol for distributed communication.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="client" description="The API for client-side HTTP communication"/>
+        <conf name="mime" extends="client" description="Support for MIME multipart messages based on Apache Mime4J"/>
+        <conf name="nio" extends="client" description="Non-blocking IO support"/>
+        <conf name="cache" extends="client" description="Client-side caching support"/>
+        <conf name="ehcache" extends="cache" description="Client-side caching support with Ehcache"/>
+        <conf name="fluent" extends="client" description="Fluent interface API support"/>
+        <conf name="default" extends="client" description="Everything (all of the module JARs)"/>
+    </configurations>
+
+    <publications>
+        <artifact name="httpclient" type="jar" conf="client"/>
+        <artifact name="httpclient-cache" type="jar" conf="default,cache"/>
+        <artifact name="httpmime" type="jar" conf="default,mime"/>
+        <artifact name="fluent-hc" type="jar" conf="default,fluent"/>
+        <artifact name="httpclient-sources" type="source" ext="jar"/>
+        <artifact name="httpclient-cache-sources" type="source" ext="jar"/>
+        <artifact name="httpmime-sources" type="source" ext="jar"/>
+        <artifact name="fluent-hc-sources" type="source" ext="jar"/>
+        <artifact name="httpclient-javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <!-- httpclient -->
+        <dependency conf="default; nio; client->core" org="org.apache.httpcomponents" name="httpcore" rev="4.2"/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-codec" rev="1.6"/>
+
+        <!-- cache -->
+        <dependency conf="default,ehcache->default" org="net.sourceforge.ehcache" name="ehcache" rev="2.2+"/>
+        <!-- upgrade the ehcache slf4j dependency to 1.6+ -->
+        <dependency conf="ehcache->core" org="org.slf4j" name="slf4j" rev="1.6+"/>
+    </dependencies>
+
+</ivy-module>
