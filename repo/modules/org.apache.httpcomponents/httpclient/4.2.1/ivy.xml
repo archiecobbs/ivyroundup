@@ -20,7 +20,7 @@
 
     <info organisation="org.apache.httpcomponents" module="httpclient" revision="4.2.1" status="release" publication="20120629205200">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2270 2012-09-10 18:28:50Z neil.g.miller.98@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.2.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2272 2012-09-10 18:43:01Z neil.g.miller.98@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.2.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hc.apache.org/httpcomponents-client/index.html">
         <p>
@@ -60,7 +60,7 @@
 
     <dependencies>
         <!-- httpclient -->
-        <dependency conf="default; nio; client-&gt;core" org="org.apache.httpcomponents" name="httpcore" rev="4.2"/>
+        <dependency conf="default; nio; client-&gt;core" org="org.apache.httpcomponents" name="httpcore" rev="4.2.1"/>
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-codec" rev="1.6"/>
 
