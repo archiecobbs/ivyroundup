@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2012 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,19 +18,17 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.junit" module="junit" revision="4.3.1" status="release" publication="20070718211500">
-        <license name="Common Public License, Version 1.0" url="http://opensource.org/licenses/cpl/1.0.php"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1836 2011-12-15 17:57:42Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.junit/junit/4.3.1/"/>
+    <info organisation="eu.infomas" module="annotation-detector" revision="3.0.0" status="release" publication="20111219000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2274 2012-09-11 15:54:55Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/eu.infomas/annotation-detector/3.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://www.junit.org/">A Java unit testing framework.</description>
+        <description homepage="http://www.xiam.nl">
+            INFOMAS ASL :: Annotation Detector
+        </description>
     </info>
 
-    <configurations>
-        <conf name="default" description="Default configuration"/>
-    </configurations>
-
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit" ivyde:javadoc="junit" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="annotation-detector" ivyde:javadoc="annotation-detector"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>

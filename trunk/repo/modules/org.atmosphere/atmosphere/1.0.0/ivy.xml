@@ -20,7 +20,7 @@
 
     <info organisation="org.atmosphere" module="atmosphere" revision="1.0.0" status="release" publication="20120904000000">
         <license name="CDDL+GPL" url="https://glassfish.dev.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2267 2012-09-06 12:51:03Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/1.0.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2275 2012-09-11 15:55:39Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.atmosphere/atmosphere/1.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://atmosphere.dev.java.net/">
             <p>
@@ -166,6 +166,7 @@
         <dependency org="org.jivesoftware.smack" name="smack" rev="[3.1.0,)" conf="xmpp-&gt;default"/>
         <dependency org="org.cometd.java" name="cometd" rev="[2.4.3,)" conf="cometd-&gt;websocket,annotations"/>
         <dependency org="com.hazelcast" name="hazelcast" rev="[1.9.4.6,)" conf="hazelcast-&gt;default"/>
+        <dependency org="eu.infomas" name="annotation-detector" rev="[3.0.0,)" conf="runtime-&gt;default"/>
         <!--
              <dependency org="org.timepedia.exporter" name="gwtexporter" rev="2.3.0" conf="gwt-js->default/>
         -->
