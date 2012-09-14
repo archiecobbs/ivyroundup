@@ -73,7 +73,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="com.vaadin" name="vaadin" rev="6.7+" conf="vaadin->default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="[6.7.0,6.9.9]" conf="vaadin->default"/>
         <dependency org="com.vaadin" name="vaadin" rev="[7.0.0.alpha3,)" conf="vaadin7->default"/>
         <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="servlet->default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation->default"/>
