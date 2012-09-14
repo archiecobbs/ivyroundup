@@ -20,7 +20,7 @@
 
     <info organisation="org.dellroad" module="dellroad-stuff" revision="1.0.507" status="release" publication="20120828120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2254 2012-08-28 19:54:25Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.507/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2281 2012-09-14 12:29:10Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.507/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://dellroad-stuff.googlecode.com/">
 
@@ -74,7 +74,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="com.vaadin" name="vaadin" rev="6.7+" conf="vaadin-&gt;default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="[6.7.0,6.9.9]" conf="vaadin-&gt;default"/>
         <dependency org="com.vaadin" name="vaadin" rev="[7.0.0.alpha3,)" conf="vaadin7-&gt;default"/>
         <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="servlet-&gt;default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation-&gt;default"/>
