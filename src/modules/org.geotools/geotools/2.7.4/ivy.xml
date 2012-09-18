@@ -287,9 +287,7 @@
         <dependency org="com.ibm" name="db2jcc" rev="[9,)" conf="db2->default"/>
         -->
         <dependency org="com.googlecode.json-simple" name="json-simple" rev="[1.1,)" conf="geojson->default"/>
-        <!-- TODO
-        <dependency org="net.java.dev.jsr-275" name="jsr-275" rev="[1.0-beta-2,)" conf="imagemosaic,geometry,opengis->default"/>
-        -->
+        <dependency org="javax.measure" name="jsr-275" rev="[1.0.0,)" conf="imagemosaic,geometry,opengis->default"/>
         <dependency org="net.java.dev.java3d" name="vecmath" rev="[1.3.2,)" conf="imagemosaic-jdbc,imagemosaic,opengis->default"/>
         <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.6.2,)" conf="imagemosaic->default"/>
         <dependency org="org.jdom" name="jdom" rev="[1.0,)" conf="main->default"/>
