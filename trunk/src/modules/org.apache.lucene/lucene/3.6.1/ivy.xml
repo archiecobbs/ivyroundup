@@ -51,6 +51,7 @@
         <conf name="stempel" extends="analyzers" description="Stempel Analyzer"/>
         <conf name="test-framework" extends="core" description="Apache Lucene Java Test Framework"/>
         <conf name="xml-query-parser" extends="queries" description="Lucene XML Query Parser"/>
+        <conf name="default" extends="core" description="Alias for 'core'"/>
     </configurations>
 
     <publications>
