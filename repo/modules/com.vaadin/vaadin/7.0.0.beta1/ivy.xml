@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.0.0.beta1" status="release" publication="20120914120000">
         <license name="Apache License, Version 2.0" url="http://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2283 2012-09-14 19:07:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2303 2012-10-03 20:03:29Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/home">
 
@@ -80,10 +80,6 @@
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="server" ivyde:javadoc="server" name="server" conf="server"/>
         <artifact name="server" conf="server" type="source" ext="zip"/>
         <artifact name="server" conf="server" type="javadoc" ext="zip"/>
-
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="client" ivyde:javadoc="client" name="client" conf="client"/>
-        <artifact name="client" conf="client" type="source" ext="zip"/>
-        <artifact name="client" conf="client" type="javadoc" ext="zip"/>
 
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="widget-compiler" ivyde:javadoc="widget-compiler" name="widget-compiler" conf="widget-compiler"/>
         <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
