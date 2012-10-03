@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.0.0.beta3" status="release" publication="20121002120000">
         <license name="Apache License, Version 2.0" url="http://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2301 2012-10-03 18:51:46Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2304 2012-10-03 20:10:03Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/home">
 
@@ -69,16 +69,29 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="shared" conf="shared"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="client" conf="client"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="server" conf="server"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="client" conf="client"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="widget-compiler" conf="widget-compiler"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="theme-compiler" conf="theme-compiler"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="widgets" conf="widgets"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="themes" conf="themes"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="shared" ivyde:javadoc="shared" name="shared" conf="shared"/>
+        <artifact name="shared" conf="shared" type="source" ext="zip"/>
+        <artifact name="shared" conf="shared" type="javadoc" ext="zip"/>
 
-        <artifact name="javadoc" conf="*" type="javadoc" ext="zip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="client" ivyde:javadoc="client" name="client" conf="client"/>
+        <artifact name="client" conf="client" type="source" ext="zip"/>
+        <artifact name="client" conf="client" type="javadoc" ext="zip"/>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="server" ivyde:javadoc="server" name="server" conf="server"/>
+        <artifact name="server" conf="server" type="source" ext="zip"/>
+        <artifact name="server" conf="server" type="javadoc" ext="zip"/>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="widget-compiler" ivyde:javadoc="widget-compiler" name="widget-compiler" conf="widget-compiler"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="javadoc" ext="zip"/>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="theme-compiler" ivyde:javadoc="theme-compiler" name="theme-compiler" conf="theme-compiler"/>
+        <artifact name="theme-compiler" conf="theme-compiler" type="source" ext="zip"/>
+        <artifact name="theme-compiler" conf="theme-compiler" type="javadoc" ext="zip"/>
+
+        <artifact name="widgets" conf="widgets"/>
+
+        <artifact name="themes" conf="themes"/>
     </publications>
 
 </ivy-module>
