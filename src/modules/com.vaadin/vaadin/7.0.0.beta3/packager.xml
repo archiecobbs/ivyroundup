@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-shared-${revision}.jar"
+      tofile="artifacts/jars/shared.jar"
+      sha1="51857ecdee9c7c43243f17d0a93b3bd22a8bfc8b"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-client-${revision}.jar"
+      tofile="artifacts/jars/client.jar"
+      sha1="b017730eec37f15565db0a6f02c57f6b94d8c3ed"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-server-${revision}.jar"
+      tofile="artifacts/jars/server.jar"
+      sha1="c4d29519decce9ef5afcc06daab53c7c0b053b02"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-client-compiler-${revision}.jar"
+      tofile="artifacts/jars/widget-compiler.jar"
+      sha1="18dde834ef54f4f6a8d80be505e8926f4f88cce0"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-client-compiled-${revision}.jar"
+      tofile="artifacts/jars/widgets.jar"
+      sha1="c991a017f7fad479670d60562d4fe94ba49f4276"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-theme-compiler-${revision}.jar"
+      tofile="artifacts/jars/theme-compiler.jar"
+      sha1="3ba89e5e4cffe1660f120644087ecd6631aeb3a5"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-themes-${revision}.jar"
+      tofile="artifacts/jars/themes.jar"
+      sha1="e030b632696c7d4e1e89ee00e7d9e97f647dc8c6"/>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/other/${name}-all-${revision}-javadoc.jar"
+      tofile="artifacts/javadocs/javadoc.zip"
+      sha1="bb4076366a72c32cf2b6ce5fc37d84ae12e786e0"/>
+
+</packager-module>
