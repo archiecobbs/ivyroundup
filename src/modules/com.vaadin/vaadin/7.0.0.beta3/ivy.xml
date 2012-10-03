@@ -72,15 +72,28 @@
 
     <publications>
         <artifact name="shared" conf="shared"/>
-        <artifact name="client" conf="client"/>
-        <artifact name="server" conf="server"/>
-        <artifact name="client" conf="client"/>
-        <artifact name="widget-compiler" conf="widget-compiler"/>
-        <artifact name="theme-compiler" conf="theme-compiler"/>
-        <artifact name="widgets" conf="widgets"/>
-        <artifact name="themes" conf="themes"/>
+        <artifact name="shared" conf="shared" type="source" ext="zip"/>
+        <artifact name="shared" conf="shared" type="javadoc" ext="zip"/>
 
-        <artifact name="javadoc" conf="*" type="javadoc" ext="zip"/>
+        <artifact name="client" conf="client"/>
+        <artifact name="client" conf="client" type="source" ext="zip"/>
+        <artifact name="client" conf="client" type="javadoc" ext="zip"/>
+
+        <artifact name="server" conf="server"/>
+        <artifact name="server" conf="server" type="source" ext="zip"/>
+        <artifact name="server" conf="server" type="javadoc" ext="zip"/>
+
+        <artifact name="widget-compiler" conf="widget-compiler"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="javadoc" ext="zip"/>
+
+        <artifact name="theme-compiler" conf="theme-compiler"/>
+        <artifact name="theme-compiler" conf="theme-compiler" type="source" ext="zip"/>
+        <artifact name="theme-compiler" conf="theme-compiler" type="javadoc" ext="zip"/>
+
+        <artifact name="widgets" conf="widgets"/>
+
+        <artifact name="themes" conf="themes"/>
     </publications>
 
 </ivy-module>
