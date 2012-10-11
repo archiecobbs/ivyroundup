@@ -96,4 +96,8 @@
         <artifact name="themes" conf="themes"/>
     </publications>
 
+    <dependencies>
+        <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
+    </dependencies>
+
 </ivy-module>
