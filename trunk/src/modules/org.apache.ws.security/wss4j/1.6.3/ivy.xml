@@ -40,8 +40,8 @@
                         <exclude org="org.slf4j" module="slf4j" name="*" type="*" ext="*" conf="" matcher="exact"/>
                         <exclude org="org.slf4j" module="jcl-over-slf4j" name="*" type="*" ext="*" conf="" matcher="exact"/>
                         <exclude org="org.slf4j" module="jul-to-slf4j" name="*" type="*" ext="*" conf="" matcher="exact"/>
-                        <exclude org="org.bouncycastle" module="bcprov-ext-jdk15" name="*" type="*" ext="*" conf="" matcher="exact"/>
-                        <exclude org="org.bouncycastle" module="bcprov-jdk15" name="*" type="*" ext="*" conf="" matcher="exact"/>
+                        <exclude org="org.bouncycastle" module="bcprov" name="*" type="*" ext="*" conf="ext-jdk15" matcher="exact"/>
+                        <exclude org="org.bouncycastle" module="bcprov" name="*" type="*" ext="*" conf="jdk15" matcher="exact"/>
                         <exclude org="ca.juliusdavies" module="not-yet-commons-ssl" name="*" type="*" ext="*" conf="" matcher="exact"/>
                         <exclude org="net.jcip" module="jcip-annotations" name="*" type="*" ext="*" conf="" matcher="exact"/>
                         <exclude org="xml-resolver" module="xml-resolver" name="*" type="*" ext="*" conf="" matcher="exact"/>
