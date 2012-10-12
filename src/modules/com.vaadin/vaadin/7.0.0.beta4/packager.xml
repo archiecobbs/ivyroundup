@@ -17,6 +17,10 @@
 -->
 
 <packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
     <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-shared">
         <artifact tofile="artifacts/jars/shared.jar" sha1="6f9f131d0a2a904f1d40c59ba181b37a9511a40d"/>
         <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="880413d576180baf1e2d30f999d6e15c62149b82"/>
@@ -48,4 +52,14 @@
         <artifact classifier="sources" tofile="artifacts/sources/theme-compiler.zip" sha1="b44d63ad959e6144203da0adabafecf3d5736c1e"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/theme-compiler.zip" sha1="6739791ffa5c11c0bf97ccfbc88a53efa3fc09a0"/>
     </m2resource>
+
+    <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-all-${revision}.zip"
+      sha1="f9b5661aec6ad5600ec45486c5d05a5993268ee8">
+        <include name="lib/vaadin-shared-deps-1.0.0.jar"/>
+    </resource>
+
+    <build>
+        <move file="archive/lib/vaadin-shared-deps-1.0.0.jar" tofile="artifacts/jars/shared-deps.jar"/>
+    </build>
+
 </packager-module>
