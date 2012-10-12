@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.0.0.beta4" status="release" publication="20121010120000">
         <license name="Apache License, Version 2.0" url="http://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2328 2012-10-12 17:19:15Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta4/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2330 2012-10-12 17:37:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta4/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/home">
 
@@ -97,6 +97,7 @@
     <dependencies>
         <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
         <dependency org="org.jsoup" name="jsoup" rev="1.7+" conf="server-&gt;default"/>
+        <dependency org="org.apache.ant" name="ant" rev="1.8+" conf="widget-compiler-&gt;default"/>
     </dependencies>
 
 </ivy-module>
