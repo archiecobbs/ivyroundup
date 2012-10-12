@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.0.0.beta4" status="release" publication="20121010120000">
         <license name="Apache License, Version 2.0" url="http://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2330 2012-10-12 17:37:07Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta4/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2332 2012-10-12 17:56:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.0.0.beta4/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/home">
 
@@ -84,6 +84,8 @@
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="widget-compiler" ivyde:javadoc="widget-compiler" name="widget-compiler" conf="widget-compiler"/>
         <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
         <artifact name="widget-compiler" conf="widget-compiler" type="javadoc" ext="zip"/>
+
+        <artifact name="shared-deps" conf="widget-compiler"/>
 
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="theme-compiler" ivyde:javadoc="theme-compiler" name="theme-compiler" conf="theme-compiler"/>
         <artifact name="theme-compiler" conf="theme-compiler" type="source" ext="zip"/>
