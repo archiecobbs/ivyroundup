@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2009 Mark Thomas
     Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -16,12 +15,13 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="subrev" value="1.1"/>
+    <property name="subrev" value="1.0.1"/>
 
     <m2resource artifactId="geronimo-${name}_${ivy.packager.revision}_spec" version="${subrev}">
-        <artifact tofile="artifacts/jars/${name}.jar" sha1="64e87809c9cab97f3745195a8ab216a524507604"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="0a95e023aae2f373af0af1a4e39ca541256f95bd"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="ae330f23e349ff4a8b627a3b0ecf9cd33b78fc67"/>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="51ab8debbaa3a3b1de61f8ec2a1f81396ccff032"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="cc48d97626d99598dbbdc9e126ff14fff7fecb3a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="ab7fe428a09f61f3a93ad2806bcb95467a5f573d"/>
     </m2resource>
 </packager-module>
