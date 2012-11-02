@@ -84,7 +84,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="javax.media" name="jai" rev="[1.1,)" conf="default->code,codec,imageio"/>
+        <dependency org="javax.media" name="jai" rev="[1.1,)" conf="default->core,codec,imageio"/>
         <dependency org="com.vividsolutions" name="jts" rev="[1.11,)" conf="default,utils->default"/>
     </dependencies>
 
