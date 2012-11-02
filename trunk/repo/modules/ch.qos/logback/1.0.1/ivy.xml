@@ -20,7 +20,7 @@
 
   <info organisation="ch.qos" module="logback" revision="1.0.1" status="release" publication="20120310030631">
         <license name="Eclipse Public License v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/><license name="GNU Lesser General Public License version 2.1" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2041 2012-04-20 18:40:38Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/1.0.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2354 2012-11-02 14:51:48Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/1.0.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://logback.qos.ch/">
       <p>
@@ -72,7 +72,7 @@
     <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,1.7.0[" conf="classic-&gt;core"/>
     <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="access-&gt;default"/>
     <dependency org="org.codehaus.groovy" name="groovy" rev="[1.7.2,1.8.0[" conf="groovy-&gt;embeddable"/>
-    <dependency org="javax.mail" name="javamail" rev="[1.4.0,)" conf="smtp-&gt;smtp"/>
+    <dependency org="javax.mail" name="javamail" rev="[1.4.0,)" conf="smtp-&gt;default"/>
   </dependencies>
 
 </ivy-module>
