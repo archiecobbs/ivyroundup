@@ -19,9 +19,9 @@
 <ivy-module rev="$Id$">
 
   <info publication="20120310030631">
-    <license name="Eclipse Public License v 1.0" url="http://www.eclipse.org/legal/epl-v10.html" />
+    <license name="Eclipse Public License v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
     <license name="GNU Lesser General Public License version 2.1"
-      url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" />
+      url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
     <description homepage="http://logback.qos.ch/">
       <p>
         Logback is intended as a successor to the popular log4j project, picking up
@@ -51,37 +51,28 @@
   </info>
 
   <configurations>
-    <conf name="core" description="Logback core" />
-    <conf name="classic" extends="core"
-      description="Native implementation of the SLF4J API" />
-    <conf name="default" extends="classic"
-      description="SLF4J logging implementation (same as classic)" />
-    <conf name="groovy"
-      description="additional dependencies for using the Groovy configurator" />
-    <conf name="smtp"
-      description="additional dependencies for using the SMTPAppender" />
-    <conf name="access" extends="core"
-      description="HTTP-access log for Servlet containers" />
+    <conf name="core" description="Logback core"/>
+    <conf name="classic" extends="core" description="Native implementation of the SLF4J API"/>
+    <conf name="default" extends="classic" description="SLF4J logging implementation (same as classic)"/>
+    <conf name="groovy" description="additional dependencies for using the Groovy configurator"/>
+    <conf name="smtp" description="additional dependencies for using the SMTPAppender"/>
+    <conf name="access" extends="core" description="HTTP-access log for Servlet containers"/>
   </configurations>
 
   <publications>
-    <artifact name="logback-core" conf="core" />
-    <artifact name="logback-classic" conf="classic" />
-    <artifact name="logback-access" conf="access" />
-    <artifact name="logback-core" type="source" ext="zip" conf="core" />
-    <artifact name="logback-classic" type="source" ext="zip" conf="classic" />
-    <artifact name="logback-access" type="source" ext="zip" conf="access" />
+    <artifact name="logback-core" conf="core"/>
+    <artifact name="logback-classic" conf="classic"/>
+    <artifact name="logback-access" conf="access"/>
+    <artifact name="logback-core" type="source" ext="zip" conf="core"/>
+    <artifact name="logback-classic" type="source" ext="zip" conf="classic"/>
+    <artifact name="logback-access" type="source" ext="zip" conf="access"/>
   </publications>
 
   <dependencies>
-    <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,1.7.0["
-      conf="classic->core" />
-    <dependency org="javax.servlet" name="servletapi" rev="2.5"
-      conf="access->default" />
-    <dependency org="org.codehaus.groovy" name="groovy"
-      rev="[1.7.2,1.8.0[" conf="groovy->embeddable" />
-    <dependency org="javax.mail" name="javamail" rev="[1.4.0,)"
-      conf="smtp->smtp" />
+    <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,1.7.0[" conf="classic->core"/>
+    <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="access->default"/>
+    <dependency org="org.codehaus.groovy" name="groovy" rev="[1.7.2,1.8.0[" conf="groovy->embeddable"/>
+    <dependency org="javax.mail" name="javamail" rev="[1.4.0,)" conf="smtp->default"/>
   </dependencies>
 
 </ivy-module>
