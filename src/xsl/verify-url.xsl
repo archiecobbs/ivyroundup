@@ -46,14 +46,14 @@
             <!-- Define verify macro -->
             <!-- For use of the generated URL checks. Intended to be invoked as:
 
-                <my-get packagerfile="src/module/com.icu/1.3.1/packager.xml" url="http://www.icu-project.org/repos/icu/icu4j/tags/release-49-1/x1.jar"/>
+                <my-get file=="src/module/com.icu/1.3.1/packager.xml" url="http://www.icu-project.org/repos/icu/icu4j/tags/release-49-1/x1.jar"/>
             -->
             <macrodef name="my-get" description="Checks URL resources availability">
                 <attribute name="url" />
-                <attribute name="packagerfile" default="get" />
+                <attribute name="file" default="get" />
                 <attribute name="type" default="prim" />
                 <sequential>
-                    <get taskname="@{{packagerfile}} :@{{type}}" src="@{{url}}"
+                    <get taskname="@{{file}} :@{{type}}" src="@{{url}}"
                         dest="${{basedir}}" usetimestamp="true" ignoreerrors="true"
                         verbose="false">
                         <mergemapper to="timestamp" />
@@ -88,7 +88,9 @@
                 <xsl:variable name="rev" select="@name" />
                 <target name="{$org}#{$mod};{$rev}">
                     <!-- <echo message="organisation={$org} module={$mod} revision={$rev}" /> -->
-                    <!-- default group property -->
+                     <xsl:apply-templates
+                        select="document(concat('modules/', $org, '/', $mod, '/', $rev, '/ivy.xml'),.)" />
+                    <!-- default maven group property -->
                     <pathconvert property="grp" dirsep="/">
                         <path location="${{ivy.packager.organisation}}" />
                         <mapper type="unpackage" to="*" from="${{basedir}}${{file.separator}}*"/>
@@ -131,8 +133,8 @@
         <xsl:variable name="org" select="../../@name" />
         <xsl:variable name="mod" select="../@name" />
         <xsl:variable name="rev" select="@name" />
-        <xsl:variable name="packagerfile"
-            select="concat($org, '/', $mod, '/', $rev, '/packager.xml')" />
+        <xsl:variable name="modpath"
+            select="concat($org, '/', $mod, '/', $rev)" />
         <xsl:comment>
             <xsl:value-of select="concat(' ******* Revision: ', $rev, ' ')" />
         </xsl:comment>
@@ -142,7 +144,7 @@
             <param name="ivy.packager.organisation" value="{$org}" />
             <param name="ivy.packager.module" value="{$mod}" />
             <param name="ivy.packager.revision" value="{$rev}" />
-            <param name="packagerfile" value="{$packagerfile}" />
+            <param name="modpath" value="{$modpath}" />
             <xsl:if
                 test="document(concat('modules/', $org, '/', $mod, '/', $rev, '/ivy.xml'),.)/ivy-module/info/@branch">
                 <param name="ivy.packager.branch">
@@ -257,7 +259,7 @@
 
             <!-- Get resource -->
             <xsl:value-of select="'&#10;'" />
-            <my-get packagerfile="${{packagerfile}}" url="{$url}" type="mvn" />
+            <my-get file="${{modpath}}/packager.xml" url="{$url}" type="mvn" />
         </xsl:for-each>
         <xsl:value-of select="'&#10;'" />
     </xsl:template>
@@ -271,10 +273,10 @@
         <xsl:choose>
             <!-- Check for manually downloaded resources -->
             <xsl:when test="starts-with(@url, 'file:')">
-                <echo taskname="${{packagerfile}} :man" message="Must download manually: {@url}" />
+                <echo taskname="${{modpath}}/packager.xml :man" message="Must download manually: {@url}" />
             </xsl:when>
             <xsl:otherwise>
-                <my-get packagerfile="${{packagerfile}}" url="{@url}" />
+                <my-get file="${{modpath}}/packager.xml" url="{@url}" />
                 <xsl:apply-templates select="url" />
             </xsl:otherwise>
         </xsl:choose>
@@ -286,13 +288,18 @@
         <xsl:choose>
             <!-- Check for manually downloaded resources -->
             <xsl:when test="starts-with(@href, 'file:')">
-                <echo taskname="${{packagerfile}} :man" message="Must download manually: {@href}" >X${{user.dir}}X</echo>
+                <echo taskname="${{modpath}}/packager.xml :man" message="Must download manually: {@href}" >X${{user.dir}}X</echo>
             </xsl:when>
             <xsl:otherwise>
-                <my-get packagerfile="${{packagerfile}}" url="{@href}"
-                    type="alt" />
+                <my-get file="${{modpath}}/packager.xml" url="{@href}" type="alt" />
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+
+    <!-- ivy.xml: Analyse homepage URL -->
+    <xsl:template match="/ivy-module/info/description[@homepage]">
+       <xsl:value-of select="'&#10;'" />
+       <my-get file="${{modpath}}/ivy.xml" url="{@homepage}" type="homepage" />
     </xsl:template>
 
     <xsl:template match="@*|node()">
