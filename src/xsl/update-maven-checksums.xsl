@@ -103,9 +103,34 @@
         </xsl:variable>
 
         <!-- Get complete URI for checksum file -->
-        <xsl:variable name="uri">
+        <xsl:variable name="uri0">
             <xsl:value-of select="concat($repoURI, $groupURIPath, '/', $artifactId, '/',
               $version, '/', $artifactId, '-', $version, $classifierSuffix, '.jar.sha1')"/>
+        </xsl:variable>
+
+        <!-- Substitute ant variables -->
+        <xsl:variable name="uri">
+            <xsl:analyze-string select="$uri0" regex="\$\{{ivy\.packager\.(organi(s|z)ation|module|revision)\}}">
+                <xsl:matching-substring>
+                    <xsl:choose>
+                        <xsl:when test="contains(., 'org')">
+                            <xsl:value-of select="$org"/>
+                        </xsl:when>
+                        <xsl:when test="contains(., 'mod')">
+                            <xsl:value-of select="$mod"/>
+                        </xsl:when>
+                        <xsl:when test="contains(., 'rev')">
+                            <xsl:value-of select="$rev"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:message terminate="yes">ERROR: internal problem</xsl:message>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:value-of select="."/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
         </xsl:variable>
 
         <!-- Read SHA1 -->
