@@ -51,7 +51,9 @@
         <xsl:variable name="groupId">
             <xsl:choose>
                 <xsl:when test="../../@groupId">
-                    <xsl:value-of select="../../@groupId"/>
+                    <xsl:call-template name="substitute">
+                        <xsl:with-param name="string" select="../../@groupId"/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="$org"/>
@@ -63,7 +65,9 @@
         <xsl:variable name="artifactId">
             <xsl:choose>
                 <xsl:when test="../../@artifactId">
-                    <xsl:value-of select="../../@artifactId"/>
+                    <xsl:call-template name="substitute">
+                        <xsl:with-param name="string" select="../../@artifactId"/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="$mod"/>
@@ -75,7 +79,9 @@
         <xsl:variable name="version">
             <xsl:choose>
                 <xsl:when test="../../@version">
-                    <xsl:value-of select="../../@version"/>
+                    <xsl:call-template name="substitute">
+                        <xsl:with-param name="string" select="../../@version"/>
+                    </xsl:call-template>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="$rev"/>
@@ -98,39 +104,16 @@
         <!-- Get classifier suffix, if any -->
         <xsl:variable name="classifierSuffix">
             <xsl:if test="../@classifier">
-                <xsl:value-of select="concat('-', ../@classifier)"/>
+                <xsl:call-template name="substitute">
+                    <xsl:with-param name="string" select="concat('-', ../@classifier)"/>
+                </xsl:call-template>
             </xsl:if>
         </xsl:variable>
 
         <!-- Get complete URI for checksum file -->
-        <xsl:variable name="uri0">
+        <xsl:variable name="uri">
             <xsl:value-of select="concat($repoURI, $groupURIPath, '/', $artifactId, '/',
               $version, '/', $artifactId, '-', $version, $classifierSuffix, '.jar.sha1')"/>
-        </xsl:variable>
-
-        <!-- Substitute ant variables -->
-        <xsl:variable name="uri">
-            <xsl:analyze-string select="$uri0" regex="\$\{{ivy\.packager\.(organi(s|z)ation|module|revision)\}}">
-                <xsl:matching-substring>
-                    <xsl:choose>
-                        <xsl:when test="contains(., 'org')">
-                            <xsl:value-of select="$org"/>
-                        </xsl:when>
-                        <xsl:when test="contains(., 'mod')">
-                            <xsl:value-of select="$mod"/>
-                        </xsl:when>
-                        <xsl:when test="contains(., 'rev')">
-                            <xsl:value-of select="$rev"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:message terminate="yes">ERROR: internal problem</xsl:message>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:matching-substring>
-                <xsl:non-matching-substring>
-                    <xsl:value-of select="."/>
-                </xsl:non-matching-substring>
-            </xsl:analyze-string>
         </xsl:variable>
 
         <!-- Read SHA1 -->
@@ -138,7 +121,7 @@
             <xsl:value-of select="concat('Downloading ', $uri, '...')"/>
         </xsl:message>
         <xsl:variable name="sha1">
-            <xsl:value-of select="normalize-space(unparsed-text($uri, 'utf-8'))"/>
+            <xsl:value-of select="substring(normalize-space(unparsed-text($uri, 'utf-8')), 1, 40)"/>
         </xsl:variable>
 
         <!-- Replace sha1 value -->
@@ -152,6 +135,32 @@
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
+    </xsl:template>
+
+    <!-- Substitute ant variables -->
+    <xsl:template name="substitute">
+        <xsl:param name="string" select="."/>
+        <xsl:analyze-string select="$string" regex="\$\{{ivy\.packager\.(organi(s|z)ation|module|revision)\}}">
+            <xsl:matching-substring>
+                <xsl:choose>
+                    <xsl:when test="contains(., 'org')">
+                        <xsl:value-of select="$org"/>
+                    </xsl:when>
+                    <xsl:when test="contains(., 'mod')">
+                        <xsl:value-of select="$mod"/>
+                    </xsl:when>
+                    <xsl:when test="contains(., 'rev')">
+                        <xsl:value-of select="$rev"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:message terminate="yes">ERROR: internal problem</xsl:message>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
     </xsl:template>
 
 </xsl:transform>
