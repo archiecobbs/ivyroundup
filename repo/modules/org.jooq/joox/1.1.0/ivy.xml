@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jooq" module="joox" revision="1.1.0" status="release" publication="20120414164100">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2371 2012-11-21 15:46:02Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jooq/joox/1.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/joox">
+
+            <p>
+            jOOX stands for Java Object Oriented XML. It is simple wrapper for the org.w3c.dom package
+            to allow for fluent XML document creation and manipulation where DOM is required but too
+            verbose.  jOOX only wraps the underlying document and can be used to enhance DOM, not as an
+            alternative.
+            </p>
+
+            <p>jOOX's fluency is inspired by jRTF, a very nice fluent API for the creation of RTF
+            documents in Java.</p>
+
+            <p>jOOX's API itself is inspired by jQuery, an excellent JavaScript library for efficient DOM
+            manipulation of HTML and XML</p>
+
+            <p>jOOX's name is inspired by jOOQ, a fluent API for SQL building and execution</p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="joox-source" ivyde:javadoc="joox-javadoc"/>
+        <artifact name="joox-source" type="source" ext="zip"/>
+        <artifact name="joox-javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
