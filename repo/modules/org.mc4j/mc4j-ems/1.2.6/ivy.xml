@@ -20,9 +20,9 @@
 
     <info organisation="org.mc4j" module="mc4j-ems" revision="1.2.6" status="release" publication="20081125120000">
         <license name="GNU Lesser Public License, Version 2.1" url="http://www.opensource.org/licenses/lgpl-2.1.php"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 687 2009-04-28 18:47:56Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mc4j/mc4j-ems/1.2.6/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2391 2012-11-27 20:23:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.mc4j/mc4j-ems/1.2.6/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://mc4j.org/confluence/display/mc4j/Home">
+        <description homepage="http://mc4j.org/">
             EMS is the connection library behind MC4J. It is an adapter layer to allow simultaneous 
             access to any number of MBean servers from different AS vendors and different versions of 
             those. It uses classloading isolation per connection to avoid the typical serialization 
