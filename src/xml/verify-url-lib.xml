@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright 2012 Martin Weber.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<project name="verify-lib">
+  <description>Common targets and macros for the generated URL-verifier scripts.
+  </description>
+
+  <!-- For use of the generated URL checks. -->
+  <macrodef name="my-get" description="Checks URL resources availability">
+    <attribute name="url" />
+    <attribute default="get" name="file" />
+    <attribute default="prim" name="type" />
+    <sequential>
+      <get verbose="false"
+           ignoreerrors="true"
+           usetimestamp="true"
+           dest="${basedir}"
+           src="@{url}"
+           taskname="@{file} :@{type}">
+        <mergemapper to="timestamp" />
+      </get>
+    </sequential>
+  </macrodef>
+
+  <!-- Convert groupId into URL directories, where dots become slashes -->
+  <macrodef name="mvngrp2dir"
+            description="Convert maven groupId into URL directories, where dots become slashes">
+    <attribute name="property" />
+    <attribute default="${ivy.packager.organisation}" name="location" />
+    <sequential>
+      <pathconvert dirsep="/" property="@{property}">
+        <path location="@{location}" />
+        <mapper from="${basedir}${file.separator}*" to="*" type="unpackage" />
+      </pathconvert>
+    </sequential>
+  </macrodef>
+
+  <!-- strip ant log (raw report) -->
+  <macrodef name="stripRawReport">
+    <attribute name="dir" />
+    <attribute name="srcfile" />
+    <attribute name="destfile" />
+    <sequential>
+      <concat destfile="@{dir}/@{destfile}">
+        <filelist dir="@{dir}" files="@{srcfile}" />
+        <filterchain>
+          <!-- skip head of ant output -->
+          <replaceregex pattern="^(.+?)^(#(\w|[.\-])+?-(\w|[.\-])+?-.*:\n.*)"
+                        replace="\2"
+                        flags="ms"
+                        byline="false" />
+          <!-- skip tail of ant output -->
+          <replaceregex pattern="^BUILD SUCCESSFUL.*"
+                        replace=""
+                        flags="ms"
+                        byline="false" />
+          <!-- skip Getting: ... lines -->
+          <replaceregex pattern="^\[.*? Getting: .+?\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- skip lines for manual downloads -->
+          <replaceregex pattern="^\[.*? Must download manually: .+?\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- skip To: .../timestamp lines -->
+          <replaceregex pattern="^\[.*? To: .+?timestamp\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- remove FileNotFoundException lines -->
+          <replaceregex pattern="^\[.*?FileNotFoundException: .*?\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- skip Not modified - so not downloaded lines -->
+          <replaceregex pattern="^\[.*? Not modified - so not downloaded\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- shorten Can't get ... to lines -->
+          <replaceregex pattern="^(\[.*?] Can't get .+?) to.+?$$"
+                        replace="\1"
+                        flags="gm"
+                        byline="false" />
+          <!-- match '#ch.qos-logback-0.9.17:\n[  ' -->
+          <replaceregex pattern="^((#(\w|[.\-])+?-(\w|[.\-])+?-.*):\n(\[.+\n)*)$"
+                        replace="\1"
+                        flags="gm"
+                        byline="false" />
+        </filterchain>
+      </concat>
+    </sequential>
+  </macrodef>
+
+  <!-- To speed up subsequent crawler invocations, cache names of module
+       revisions that are fine -->
+  <macrodef name="cacheValidModRevs">
+    <attribute name="dir" />
+    <attribute name="reportfile" />
+    <attribute name="cachefile" />
+
+    <sequential>
+      <concat destfile="@{dir}/@{cachefile}" append="true">
+        <filelist dir="@{dir}" files="@{reportfile}" />
+        <filterchain>
+          <!-- remove target name followed by multiple non-empty lines --> 
+          <replaceregex pattern="^#((\w|[.\-])+-(\w|[.\-])+-.*):\n(\[.+\n)+\n?"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
+          <!-- any target name followed by an empty line is a module wich is fine -->
+          <replaceregex pattern="^#((\w|[.\-])+?-(\w|[.\-])+?-.*):\n$"
+                        replace="valid.\1=true${line.separator}"
+                        flags="gm"
+                        byline="false" />
+        </filterchain>
+      </concat>
+    </sequential>
+  </macrodef>
+
+  <!-- extract modules that are fine (no invalid URL found) -->
+  <!--
+  #com.mysql-mysql-connector-java-5.1.11:
+  [com.mysql/mysql-connector-java/5.1.11/ivy.xml :homepage] http://www.mysql.com/products/connector/j/ moved to http://www.mysql.com/products/connector/
+  
+  OK. Temporarily moved?
+  -->
+  <!--
+  #com.oracle-ojdbc-10.2.0.1:
+  [com.oracle/ojdbc/10.2.0.1/ivy.xml :homepage] http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/htdocs/jdbc_10201.html permanently moved to http://www.oracle.com/technetwork/indexes/downloads/index.html
+  
+  OK. Permanetly moved, URL should be updated before it becomes invalid.
+  -->
+  <!--
+  #com.google-gwt-1.4.60:
+  [com.google/gwt/1.4.60/ivy.xml :homepage] Can't get https://developers.google.com/webtoolkit/ to /home/weber/devel/src/IvyRoundup/build/check-urls/timestamp
+  
+  Invalid URL.
+  -->
+  <macrodef name="extracReportOK">
+    <attribute name="dir" />
+    <attribute name="srcfile" />
+    <attribute name="destfile" />
+    <sequential>
+      <concat destfile="@{dir}/@{destfile}">
+        <filelist dir="@{dir}" files="@{srcfile}" />
+        <filterchain>
+          <!-- any target name followed by an empty line is a module wich is fine -->
+          <replaceregex pattern="^#((\w|[.\-])+-(\w|[.\-])+-.*):\n\n"
+                        replace="\1${line.separator}"
+                        flags="gm"
+                        byline="false" />
+          <!-- target name followed by multiple non-empty lines --> 
+          <replaceregex pattern="^#((\w|[.\-])+-(\w|[.\-])+-.*):\n(\[.+\n)+\n?"
+                        flags="gm"
+                        byline="false" />
+        </filterchain>
+      </concat>
+    </sequential>
+  </macrodef>
+
+  <!-- extract modules that have problems (invalid URL found) -->
+  <macrodef name="extracReportProblems">
+    <attribute name="dir" />
+    <attribute name="srcfile" />
+    <attribute name="destfile" />
+    <sequential>
+      <concat destfile="@{dir}/@{destfile}">
+        <filelist dir="@{dir}" files="@{srcfile}" />
+        <filterchain>
+          <!-- remove any target name followed by an empty line is a module wich is fine -->
+          <replaceregex pattern="^#((\w|[.\-])+-(\w|[.\-])+-.*):\n\n"
+                        flags="gm"
+                        byline="false" />
+          <!-- target name followed by multiple non-empty lines has problems -->
+          <replaceregex pattern="^#((\w|[.\-])+-(\w|[.\-])+-.*):\n(\[.+\n)+\n?"
+                        replace="\0"
+                        flags="gm"
+                        byline="false" />
+        </filterchain>
+      </concat>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="forkAnt" description="Runs ant in a separate JVM">
+    <attribute name="buildFile" />
+    <attribute name="buildDir" />
+    <attribute name="target" />
+    <attribute name="cmdLineArgs" default="" />
+    <attribute name="javaHome" default="${java.home}" />
+    <attribute name="timeout" default="4000000" />
+    <attribute name="maxMemory" default="512m" />
+    <attribute name="output" />
+
+    <sequential>
+      <java classname="org.apache.tools.ant.launch.Launcher"
+            taskname="forkAnt"
+            jvm="@{javaHome}/bin/java"
+            fork="true"
+            failonerror="true"
+            logError="true"
+            output="@{output}"
+            dir="@{buildDir}"
+            timeout="@{timeout}"
+            maxmemory="@{maxMemory}"
+        >
+<!--
+-->
+        <classpath>
+          <pathelement location="${ant.home}/lib/ant-launcher.jar" />
+        </classpath>
+        <arg value="-buildfile" />
+        <arg file="@{buildFile}" />
+        <arg value="-DJAVA_HOME=@{javaHome}" />
+        <arg line="@{cmdLineArgs}" />
+        <arg value="@{target}" />
+      </java>
+    </sequential>
+  </macrodef>
+
+</project>
