@@ -17,32 +17,32 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource groupId="org/codehaus/castor" artifactId="castor-anttasks">
+    <m2resource artifactId="castor-anttasks">
         <artifact tofile="artifacts/jars/castor-anttasks.jar" sha1="b6f9df2b7eaf4743c20fe46eccbbed820bf9dcde"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-anttasks.zip" sha1="503d1289f623ce8a33cb15983aace63a3d9a331d"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-anttasks.zip" sha1="4ad1e5ff70b0ed1860cfdf703c4bb4d2f495b180"/>
     </m2resource>
-    <m2resource groupId="org/codehaus/castor" artifactId="castor-codegen">
+    <m2resource artifactId="castor-codegen">
         <artifact tofile="artifacts/jars/castor-codegen.jar" sha1="707686c5fd90163b604fee9f94b0cd12591f1a67"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-codegen.zip" sha1="57e05e45159c004f3235f891b538e5615ef8e3aa"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-codegen.zip" sha1="fbd321f45eb6f2a89032c89ca20ba91beb8716f0"/>
     </m2resource>
-    <m2resource groupId="org/codehaus/castor">
+    <m2resource>
         <artifact tofile="artifacts/jars/castor-core.jar" sha1="351847d8a41175565b5faa54fab42fe20fe6cc91"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-core.zip" sha1="aa3bbb6e0aa64572bdc30dd27bc409861a9a4840"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-core.zip" sha1="6864030c8f998fe86d2c2e091fb4a07e91c1510b"/>
     </m2resource>
-    <m2resource groupId="org/codehaus/castor" artifactId="castor-ddlgen">
+    <m2resource artifactId="castor-ddlgen">
         <artifact tofile="artifacts/jars/castor-ddlgen.jar" sha1="d0eff8076b7590bedf11a46162002e41979247ec"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-ddlgen.zip" sha1="14be867f3a2a02d00f5141ffe87d7d19827dfa7c"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-ddlgen.zip" sha1="be530f809e4c52685a88e44196e3f4024474922d"/>
     </m2resource>
-    <m2resource groupId="org/codehaus/castor" artifactId="castor-jdo">
+    <m2resource artifactId="castor-jdo">
         <artifact tofile="artifacts/jars/castor-jdo.jar" sha1="546e3fb415cc9767eb000ff1fe327f0ee17172e4"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-jdo.zip" sha1="8ee913a0fe5de791c3c1ad2897d033d470dc66d1"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-jdo.zip" sha1="64db470a9cf737dce494091d9001b47911a5e25e"/>
     </m2resource>
-    <m2resource groupId="org/codehaus/castor" artifactId="castor-xml-schema">
+    <m2resource artifactId="castor-xml-schema">
         <artifact tofile="artifacts/jars/castor-xml-schema.jar" sha1="032c576f67804c769859bb53d3c8f674c640ef43"/>
         <artifact classifier="sources" tofile="artifacts/sources/castor-xml-schema.zip" sha1="0d90d9e3d429fb49b678194971e535f1edf98d96"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/castor-xml-schema.zip" sha1="4f1f32b6e5099bc41819bd043bde213fb5e84129"/>
