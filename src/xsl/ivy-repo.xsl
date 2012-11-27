@@ -161,6 +161,9 @@
                 <xsl:with-param name="msg" select="'&lt;description&gt; element has no &quot;homepage&quot; attribute'"/>
             </xsl:call-template>
         </xsl:if>
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
     </xsl:template>
 
     <xsl:template match="/ivy-module/publications/artifact[not(@type) or @type = 'jar']">
