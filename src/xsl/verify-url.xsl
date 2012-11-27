@@ -302,7 +302,6 @@
         <xsl:variable name="group_prop">
             <xsl:choose>
                 <xsl:when test="../@groupId">
-                    <!-- TODO: complain if groupId="${ivy.packager.module}" -->
                     <xsl:value-of
                         select="concat('grp.', string( count(../preceding-sibling::m2resource)+1))" />
                 </xsl:when>
