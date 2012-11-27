@@ -52,11 +52,11 @@
     </m2resource>
 
     <resource url="http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-all-${revision}.zip" sha1="10b2b8f7974515aecbb0f86bb32e3c84d84a9024">
-        <include name="lib/vaadin-shared-deps-1.0.0.jar"/>
+        <include name="lib/vaadin-shared-deps-1.0.1.jar"/>
     </resource>
 
     <build>
-        <move file="archive/lib/vaadin-shared-deps-1.0.0.jar" tofile="artifacts/jars/shared-deps.jar"/>
+        <move file="archive/lib/vaadin-shared-deps-1.0.1.jar" tofile="artifacts/jars/shared-deps.jar"/>
     </build>
 
 </packager-module>
