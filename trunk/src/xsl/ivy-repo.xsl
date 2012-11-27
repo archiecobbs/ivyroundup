@@ -108,6 +108,13 @@
             <xsl:apply-templates select="@*"/>
             <xsl:value-of select="'&#10;        '"/>
             <xsl:if test="license">
+<!-- This is too strict:
+                <xsl:if test="not(@url)">
+                    <xsl:call-template name="error">
+                        <xsl:with-param name="msg" select="'&lt;license&gt; element has no &quot;url&quot; attribute'"/>
+                    </xsl:call-template>
+                </xsl:if>
+-->
                 <xsl:apply-templates select="license"/>
                 <xsl:value-of select="'&#10;        '"/>
             </xsl:if>
@@ -137,6 +144,7 @@
                     <xsl:value-of select="'&#10;        '"/>
                 </xsl:otherwise>
             </xsl:choose>
+
             <!-- Add <repository> tag pointing to Ivy RoundUp -->
             <repository name="ivyroundup" url="http://ivyroundup.googlecode.com/" ivys="true"
               pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
@@ -144,6 +152,15 @@
             <xsl:apply-templates select="description"/>
             <xsl:value-of select="'&#10;    '"/>
         </xsl:copy>
+    </xsl:template>
+
+    <!-- Check descriptions -->
+    <xsl:template match="/ivy-module/info/description">
+        <xsl:if test="not(@homepage)">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="'&lt;description&gt; element has no &quot;homepage&quot; attribute'"/>
+            </xsl:call-template>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="/ivy-module/publications/artifact[not(@type) or @type = 'jar']">

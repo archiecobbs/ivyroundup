@@ -82,14 +82,21 @@
         </xsl:variable>
         <xsl:if test="$implicitGroupId = $groupIdWithDots or @groupId = '${ivy.packager.organisation}'">
             <xsl:call-template name="error">
-                <xsl:with-param name="msg" select="concat('redundant groupId &quot;', @groupId, '&quot; (implied by organisation name)')"/>
+                <xsl:with-param name="msg" select="concat('redundant groupId attribute &quot;', @groupId, '&quot; (implied by organisation name)')"/>
             </xsl:call-template>
         </xsl:if>
 
         <!-- Check artifactId -->
         <xsl:if test="@artifactId = $module or @artifactId = '${ivy.packager.module}'">
             <xsl:call-template name="error">
-                <xsl:with-param name="msg" select="concat('redundant artifactId &quot;', @artifactId, '&quot; (implied by module name)')"/>
+                <xsl:with-param name="msg" select="concat('redundant artifactId attribute &quot;', @artifactId, '&quot; (implied by module name)')"/>
+            </xsl:call-template>
+        </xsl:if>
+
+        <!-- Check version -->
+        <xsl:if test="@version = $revision or @version = '${ivy.packager.revision}'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="concat('redundant version attribute &quot;', @version, '&quot; (implied by module revision)')"/>
             </xsl:call-template>
         </xsl:if>
 
@@ -118,7 +125,10 @@
         <xsl:param name="s"/>
         <xsl:choose>
             <xsl:when test="contains($s, '/')">
-                <xsl:value-of select="concat(substring-before($s, '/'), '.', substring-after($s, '/'))"/>
+                <xsl:value-of select="concat(substring-before($s, '/'), '.')"/>
+                <xsl:call-template name="slash2dot">
+                    <xsl:with-param name="s" select="substring-after($s, '/')"/>
+                </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$s"/>
