@@ -140,5 +140,57 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
       </srcfiles>
     </uptodate>
   </target>
+  
+  <!-- Creates a script which fixes URLs that claim to be permanently moved
+  	in ivy.xml and packager.xml
+  -->
+  <target name="prep-script" description="Creates script to fix URLs">
+    <fileset dir="${report.work.dir}"
+             includes="REPORT-problems.*.txt"
+             id="files.reported.problems" />
+    <concat destfile="${report.dir}/fix-permanently-moved.xml">
+      <header filtering="no" trimleading="yes">
+          &lt;project name="fix-perm-moved" >
+        &lt;!-- 
+        Please carefully verify this generated script 
+        (which fixes URLs that claim to be permanently moved)
+        before you run it!
+	-->
+          &lt;target name="edit-files">
+        </header>
+
+      <fileset refid="files.reported.problems" />
+      <filterchain>
+        <linecontains negate="true">
+          <!-- Orcale tries to direct people to their landing pages, which is annoying.
+          So keep the old URLs (which have more info) until someone fixes it manually.
+           -->
+          <contains value="http://www.oracle.com/technetwork/java/index.html" />
+          <contains value="http://www.oracle.com/technetwork/indexes/downloads/index.html" />
+        </linecontains>
+        <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) permanently moved to ([^ ]+?)$"
+                      replace="&lt;replaceregexp file='src/modules/\1' match='\2' replace='\3'/> "
+                      flags="gm" />
+        <linecontains>
+          <!-- only keep the ant task -->
+          <contains value="replaceregexp file=" />
+        </linecontains>
+      </filterchain>
+
+      <footer filtering="no" trimleading="yes">
+          &lt;/target>
+          &lt;/project>
+        </footer>
+    </concat>
+    <echo message="**********************************************" />
+    <echo>
+      Generated script ${report.dir}/fix-permanently-moved.xml
+
+      Please carefully verify the generated script 
+      (which fixes URLs that claim to be permanently moved)
+      before you run it!
+   </echo>
+    <echo message="**********************************************" />
+  </target>
 
 </project>

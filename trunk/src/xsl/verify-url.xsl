@@ -22,9 +22,7 @@
 -->
 
 <!-- $Id$ -->
-<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:pipe="http://xml.apache.org/xalan/PipeDocument"
-    extension-element-prefixes="pipe">
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:output encoding="UTF-8" method="xml" indent="yes"
         media-type="text/xml" />
@@ -388,7 +386,6 @@
 
     <!-- packager.xml: Analyse primary resource URL -->
     <xsl:template match="/packager-module/resource[@url]">
-        <xsl:value-of select="'&#10;'" />
         <xsl:choose>
             <!-- Check for manually downloaded resources -->
             <xsl:when test="starts-with(@url, 'file:')">
@@ -403,7 +400,6 @@
 
     <!-- packager.xml: Analyse alternative resource URL -->
     <xsl:template match="/packager-module/resource/url">
-        <xsl:value-of select="'&#10;'" />
         <xsl:choose>
             <!-- Check for manually downloaded resources -->
             <xsl:when test="starts-with(@href, 'file:')">
@@ -418,8 +414,31 @@
 
     <!-- ivy.xml: Analyse homepage URL -->
     <xsl:template match="/ivy-module/info/description[@homepage]">
-        <xsl:value-of select="'&#10;'" />
         <my-get file="${{modpath}}/ivy.xml" url="{@homepage}" type="homepage" />
+    </xsl:template>
+
+    <!-- ivy.xml: Analyse liocense URL -->
+    <xsl:template match="/ivy-module/info/license">
+        <!-- Check for valid protocol in URL -->
+        <xsl:choose>
+            <xsl:when test="starts-with(@url, 'http:')">
+                <my-get file="${{modpath}}/ivy.xml" url="{@url}" type="license" />
+            </xsl:when>
+            <xsl:when test="starts-with(@url, 'https:')">
+                <my-get file="${{modpath}}/ivy.xml" url="{@url}" type="license" />
+            </xsl:when>
+            <xsl:when test="starts-with(@url, 'ftp:')">
+                <my-get file="${{modpath}}/ivy.xml" url="{@url}" type="license" />
+            </xsl:when>
+            <xsl:when test="starts-with(@url, 'ftps:')">
+                <my-get file="${{modpath}}/ivy.xml" url="{@url}" type="license" />
+            </xsl:when>
+            <xsl:otherwise>
+                <echo taskname="${{modpath}}/packager.xml :license"
+                    message="Malformed URL (no scheme): {@url}" />
+                <xsl:apply-templates select="url" />
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="@*|node()">
