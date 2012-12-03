@@ -36,6 +36,24 @@
     </sequential>
   </macrodef>
 
+  <!-- For use of the generated URL fixing script.
+       Stops on errors.
+   -->
+  <macrodef name="my-gete" description="Checks URL resources availability">
+    <attribute name="url" />
+    <attribute default="get" name="file" />
+    <attribute default="prim" name="type" />
+    <sequential>
+      <get verbose="false"
+           usetimestamp="true"
+           dest="${basedir}"
+           src="@{url}"
+           taskname="@{file} :@{type}">
+        <mergemapper to="timestamp" />
+      </get>
+    </sequential>
+  </macrodef>
+
   <!-- Convert groupId into URL directories, where dots become slashes -->
   <macrodef name="mvngrp2dir"
             description="Convert maven groupId into URL directories, where dots become slashes">
