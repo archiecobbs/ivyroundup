@@ -16,24 +16,12 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="2298164a7c2484406f2aa5ac85b205d39019896f"/>
+        <artifact classifier="ftp" tofile="artifacts/jars/${ivy.packager.module}-ftp.jar" sha1="c5514f5684fd7e58fcb881c80ff84a3b98b7d7d6"/>
+        <artifact classifier="examples" tofile="artifacts/jars/${ivy.packager.module}-examples.jar" sha1="d0395b6dbaf2fe81606cde069b0f76b4509bec83"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="8af84765ae00b5b7669c9e5c71947eee161e8f02"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="8cc516e03d35ecf8f4ca71511f7961f1a9339820"/>
+    </m2resource>
 
-    <resource url="http://gin-mvp.googlecode.com/files/${name}-${revision}.zip" sha1="e9d734ba6c1cf9e32b456ac06780d1e393c0004f"/>
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/src"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/javadoc"/>
-        </zip>
-    </build>
 </packager-module>
