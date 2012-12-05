@@ -116,6 +116,11 @@
                         replace="\1"
                         flags="gm"
                         byline="false" />
+          <!-- Assume a 'moved to' HTTP response is caused by load balancing/mirroring mechanisms -->
+          <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) (?!permanently )moved to ([^ ]+?)\n"
+                        replace=""
+                        flags="gm"
+                        byline="false" />
           <!-- match '#ch.qos-logback-0.9.17:\n[  ' -->
           <replaceregex pattern="^((#(\w|[.\-])+?-(\w|[.\-])+?-.*):\n(\[.+\n)*)$"
                         replace="\1"
