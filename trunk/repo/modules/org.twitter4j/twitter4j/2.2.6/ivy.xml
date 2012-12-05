@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.twitter4j" module="twitter4j" revision="2.2.6" status="release" publication="20110220120000">
+        <license name="BSD License" url="http://twitter4j.org/en/index.html#license"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2415 2012-12-05 21:50:16Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.twitter4j/twitter4j/2.2.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://twitter4j.org/en/index.html">
+Twitter4J is a Java library for TwitterAPI.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="appengine" extends="core" description="Google AppEngine classes"/>
+        <conf name="media-support" extends="core" description="Media Support classes"/>
+        <conf name="httpclient-support" extends="core" description="HTTP client support classes"/>
+        <conf name="stream" extends="core" description="Stream classes"/>
+        <conf name="async" extends="core" description="Async classes"/>
+        <conf name="examples" extends="core" description="Examples"/>
+        <conf name="default" extends="core,appengine,media-support,httpclient-support,stream,async" description="Everything except examples"/>
+    </configurations>
+
+    <publications>
+
+      <artifact name="core" conf="core"/>
+      <artifact name="appengine" conf="appengine"/>
+      <artifact name="media-support" conf="media-support"/>
+      <artifact name="httpclient-support" conf="httpclient-support"/>
+      <artifact name="stream" conf="stream"/>
+      <artifact name="async" conf="async"/>
+      <artifact name="examples" conf="examples"/>
+
+      <artifact type="source" ext="zip" name="core-source" conf="core"/>
+      <artifact type="source" ext="zip" name="appengine-source" conf="appengine"/>
+      <artifact type="source" ext="zip" name="media-support-source" conf="media-support"/>
+      <artifact type="source" ext="zip" name="httpclient-support-source" conf="httpclient-support"/>
+      <artifact type="source" ext="zip" name="stream-source" conf="stream"/>
+      <artifact type="source" ext="zip" name="async-source" conf="async"/>
+      <artifact type="source" ext="zip" name="examples-source" conf="examples"/>
+
+      <artifact type="javadoc" ext="zip" name="core-javadoc" conf="core"/>
+      <artifact type="javadoc" ext="zip" name="appengine-javadoc" conf="appengine"/>
+      <artifact type="javadoc" ext="zip" name="media-support-javadoc" conf="media-support"/>
+      <artifact type="javadoc" ext="zip" name="httpclient-support-javadoc" conf="httpclient-support"/>
+      <artifact type="javadoc" ext="zip" name="stream-javadoc" conf="stream"/>
+      <artifact type="javadoc" ext="zip" name="async-javadoc" conf="async"/>
+      <artifact type="javadoc" ext="zip" name="examples-javadoc" conf="examples"/>
+    </publications>
+</ivy-module>

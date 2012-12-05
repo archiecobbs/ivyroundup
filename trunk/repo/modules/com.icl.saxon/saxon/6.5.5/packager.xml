@@ -20,7 +20,7 @@
     <property name="_revision" value="6-5-5"/>
     <property name="archive" value="${name}${_revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="15e25fcf561ff173751ae992f2608f6f2e6204ed"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}6/$${ivy.packager.revision}/${archive}.zip" sha1="15e25fcf561ff173751ae992f2608f6f2e6204ed"/>
 
     <build>
         <!-- jar -->
