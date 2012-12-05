@@ -20,9 +20,9 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="Classycle${revision}"/>
+    <property name="archive" value="${name}${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}${revision}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${ivy.packager.organisation}/${name}/Classycle%20V${revision}/${archive}.zip"
       sha1="6b6d58511759a582a14e9a6c52fcd5a94d0ef962"/>
 
     <build>
