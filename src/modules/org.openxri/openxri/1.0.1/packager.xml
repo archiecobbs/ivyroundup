@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-j-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/${name}/openxri-java/${revision}/${archive}-bin.tar.gz"
       sha1="57a0b5f1201c4b964f028d3a52abae57c62e27ec">
         <include name="${archive}/org.openxri.*/dist/*.jar"/>
         <include name="${archive}/org.openxri.*/javadoc/**/*"/>
