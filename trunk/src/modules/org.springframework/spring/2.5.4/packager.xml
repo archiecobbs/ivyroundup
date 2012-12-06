@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/springframework/${archive}-with-docs.zip"
+    <resource url="http://downloads.sourceforge.net/project/springframework/springframework-2/${revision}/${archive}-with-docs.zip"
       sha1="704494f2a6943522b8d95c19702cbdbf953f6e47">
         <include name="${archive}/dist/spring.jar"/>
         <include name="${archive}/dist/modules/**/*"/>
