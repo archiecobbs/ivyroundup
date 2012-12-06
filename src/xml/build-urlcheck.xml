@@ -127,14 +127,15 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
     <xslt classpathref="xalan.classpath"
           style="src/xsl/verify-url.xsl"
           in="${target.repo}/modules.xml"
-          out="${report.work.dir}/build.xml">
+          out="${report.work.dir}/build.xml"
+      	  force="true">
       <param name="batch.cnt" expression="${batch.cnt}" />
       <param name="libdir" expression="${verify.lib.dir}" />
     </xslt>
   </target>
 
   <target name="-crawler.uptodate">
-    <uptodate property="crawler.uptodate" targetfile="${report.dir}/build.xml">
+    <uptodate property="crawler.uptodate" targetfile="${report.work.dir}/build.xml">
       <!-- TODO: this also depends on repo/modules.xml -->
       <srcfiles dir="src/modules">
         <include name="**/ivy.xml" />
@@ -176,11 +177,11 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
           <contains value="http://www.oracle.com/technetwork/indexes/downloads/index.html" />
         </linecontains>
         <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) permanently moved to ([^ ]+?)$"
-                      replace="&lt;replaceregexp replace='\3' match='\2' file='src/modules/\1'/> "
+                      replace="&lt;replace value='\3' token='\2' file='src/modules/\1'/> "
                       flags="gm" />
         <linecontains>
           <!-- only keep the ant task -->
-          <contains value="&lt;replaceregexp " />
+          <contains value="&lt;replace " />
         </linecontains>
       </filterchain>
 
