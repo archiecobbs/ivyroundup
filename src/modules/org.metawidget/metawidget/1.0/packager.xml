@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/metawidget/${archive}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/Metawidget/${revision}/${archive}.zip"
           sha1="a657c627509d81b64aed215076dd5f5c1affe34d"/>
-    <resource url="http://downloads.sourceforge.net/metawidget/${archive}-src.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/Metawidget/${revision}/${archive}-src.zip"
           sha1="7a1925212556969a9ffba549d603800616e6e8b9"/>
 
     <build>
