@@ -143,7 +143,7 @@
             <xsl:value-of select="'&#10;'" />
 
             <target name="verify.{$fbatchno}"
-                depends="-reports.{$fbatchno}.uptodate,-report-in.{$fbatchno}"
+                depends="-report-in.{$fbatchno},-reports.{$fbatchno}.uptodate"
                 unless="reports.{$fbatchno}.uptodate" description="Invoke batch {$fbatchno}">
                 <!-- speed up subsequent crawler invocations, cache names of module
                     revisions that are fine -->
@@ -167,13 +167,16 @@
                 <stripRawReport dir="${{report.dir}}" srcfile="crawler.{$fbatchno}.log"
                     destfile="report-in.{$fbatchno}.txt" />
                 <echo message="Wrote ${{report.dir}}/report-in.{$fbatchno}.txt" />
+                <delete file="crawler.{$fbatchno}.log" quiet="true"
+                    failonerror="false" />
             </target>
 
             <target name="-crawler.{$fbatchno}" unless="crawler.disabled"
                 description="Verifies download URLs in sepate JVM. Use this when Ant goes out of memory.">
                 <forkAnt buildfile="${{ant.file}}" builddir="${{basedir}}"
                     target="batch.{$fbatchno}" output="crawler.{$fbatchno}.log" />
-                <!-- finally mark crawler log as complete -->
+                <!-- mark crawler log as complete to avoid garbled reports if crawler 
+                    was interrupted -->
                 <touch file="crawler.{$fbatchno}.log.timestamp" />
             </target>
 
@@ -186,20 +189,26 @@
             </target>
             <!-- must strip raw report? -->
             <target name="-report-in.{$fbatchno}.uptodate" depends="-crawler.{$fbatchno}">
-                <uptodate property="report-in.{$fbatchno}.uptodate"
-                    targetfile="${{report.dir}}/report-in.{$fbatchno}.txt"
-                    srcfile="${{report.dir}}/crawler.{$fbatchno}.log.timestamp" />
                 <fail
                     message="crawler.disabled but crawler must be run (in verify.{$fbatchno})">
                     <condition>
                         <and>
                             <isset property="crawler.disabled" />
                             <not>
-                                <isset property="report-in.{$fbatchno}.uptodate" />
+                                <uptodate
+                                    targetfile="${{report.dir}}/crawler.{$fbatchno}.log.timestamp">
+                                    <srcresources>
+                                        <fileset file="${{ant.file}}" />
+                                        <fileset file="{$libdir}/verify-url-lib.xml" />
+                                    </srcresources>
+                                </uptodate>
                             </not>
                         </and>
                     </condition>
                 </fail>
+                <uptodate property="report-in.{$fbatchno}.uptodate"
+                    targetfile="${{report.dir}}/report-in.{$fbatchno}.txt"
+                    srcfile="${{report.dir}}/crawler.{$fbatchno}.log.timestamp" />
             </target>
             <xsl:value-of select="'&#10;&#10;'" />
 
