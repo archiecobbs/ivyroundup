@@ -129,7 +129,7 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
           in="${target.repo}/modules.xml"
           out="${report.work.dir}/build.xml"
       	  force="true">
-      <param name="batch.cnt" expression="${batch.cnt}" />
+      <param name="batchcnt" expression="${batch.cnt}" />
       <param name="libdir" expression="${verify.lib.dir}" />
     </xslt>
   </target>
