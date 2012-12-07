@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/junit/${archive}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.zip"
       sha1="ec97c2eef7135dc0e94e7ba7a8bf25e311724e55">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/javadoc/**/*"/>
