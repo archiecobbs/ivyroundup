@@ -21,12 +21,12 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-    <resource url="http://downloads.sourceforge.net/sourceforge/emma/${archive}.zip" sha1="003b2c5066587d6c44b82b755931463bcf932687">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-release/${revision}/${archive}.zip" sha1="003b2c5066587d6c44b82b755931463bcf932687">
       <include name="${archive}/lib/${name}.jar"/>
       <include name="${archive}/lib/${name}_ant.jar"/>
     </resource>
 
-    <resource url="http://downloads.sourceforge.net/sourceforge/emma/${archive}-src.zip" sha1="3f14c6bb30a0ee91bf938984c8188ffd9665c5f2">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-release/${revision}/${archive}-src.zip" sha1="3f14c6bb30a0ee91bf938984c8188ffd9665c5f2">
       <include name="${archive}/ant/**/*"/>
       <include name="${archive}/core/**/*"/>
       <include name="${archive}/tools/**/*"/>
