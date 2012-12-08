@@ -27,7 +27,7 @@
     <property name="archdir" value="${name}-${version.major}.${version.minor}"/>
     <property name="jarname" value="${name}${version.major}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}3/${revision}.ga/${archive}.tar.gz"
       dest="archive" sha1="276d1a3424c59fef85859d5f0357bf531efab793">
         <include name="${archdir}/${jarname}.jar"/>
         <include name="${archdir}/doc/api/**/*"/>
