@@ -22,11 +22,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-bin.tar.gz"
       sha1="38b0cf9252fe79c179f8e34a2665fed576facd2e">
         <include name="${archive}/${name}.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-src.tar.gz"
       sha1="1408ad28e1a5951d634b1a943673262ab323615f"/>
 
     <build>
