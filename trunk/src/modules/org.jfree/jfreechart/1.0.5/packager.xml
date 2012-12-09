@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/jfreechart/${archive}.tar.gz" sha1="aeada2c36f9f4cb9960e8aa4b09a083faae7906e"/>
-    <resource url="http://downloads.sourceforge.net/jfreechart/${archive}-javadocs.zip" sha1="765922ec0a9ac740870f1650220611fe9f6fca78"/>
+    <resource url="http://downloads.sourceforge.net/project/jfreechart/1.%20JFreeChart/${revision}/${archive}.tar.gz" sha1="aeada2c36f9f4cb9960e8aa4b09a083faae7906e"/>
+    <resource url="http://downloads.sourceforge.net/project/jfreechart/2.%20Documentation/${revision}/${archive}-javadocs.zip" sha1="765922ec0a9ac740870f1650220611fe9f6fca78"/>
 
     <build>
         <!-- jar -->
