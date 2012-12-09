@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}%20for%20Java/XMLUnit%20for%20Java%20${revision}/${archive}-bin.zip"
       sha1="2f505f63b267ac0a424dbe17ae444bdb9e83bc44"/>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}%20for%20Java/XMLUnit%20for%20Java%20${revision}/${archive}-src.zip"
       sha1="b0d05b7a67ca2343668f61c0ba0ca2eecda86746"/>
 
     <build>
