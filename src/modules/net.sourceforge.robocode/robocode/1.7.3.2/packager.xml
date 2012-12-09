@@ -27,7 +27,7 @@
     <resource dest="archive/${archive}/testing"  url="http://downloads.sourceforge.net/${name}/${name}.testing-${revision}-setup.jar" sha1="a49cb908a81adcd068c81a77649691008b9ce2fc">
     </resource>
 
-    <resource dest="archive/${archive}/sources/" url="http://downloads.sourceforge.net/${name}/${archive}-src.zip" sha1="e23212c0e8a1b0f559e6b2c5e757b81c2be1be0a">
+    <resource dest="archive/${archive}/sources/" url="http://downloads.sourceforge.net/project/${name}/${name}%20sources/${revision}/${archive}-src.zip" sha1="e23212c0e8a1b0f559e6b2c5e757b81c2be1be0a">
       <include name="${archive}/robocode.*/**/*.java"/>
     </resource>
 
