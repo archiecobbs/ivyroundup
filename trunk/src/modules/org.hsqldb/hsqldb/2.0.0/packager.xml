@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}_2_0/${archive}.zip"
       sha1="ec2741bbe9215c471d1163e36f583a143a52d1a4"/>
     <m2resource artifactId="hsqldb-j5">
         <artifact tofile="artifacts/jars/hsqldb-j5.jar" sha1="73cd742438ea56f8e15827dbb043183fa45048f7"/>
