@@ -24,9 +24,9 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="ext-archive" value="${ext-name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/EasyMock/${revision}/${archive}.zip"
       sha1="5d9d2e32658fd71c203dbba01eb6bbe124978456"/>
-    <resource url="http://downloads.sourceforge.net/${name}/${ext-archive}.zip"
+    <resource url="http://downloads.sourceforge.net/project/${name}/EasyMock%20Class%20Extension/${revision}/${ext-archive}.zip"
       sha1="9535c9ecacea7e9a8b2e40379e7fdf6cdf192df6"/>
 
     <build>

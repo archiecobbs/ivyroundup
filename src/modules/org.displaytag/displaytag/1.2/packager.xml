@@ -22,11 +22,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-bin.zip" sha1="81917c5d457853defab5ac61c8266387ee93e48a">
+    <resource url="http://downloads.sourceforge.net/project/${name}/display%20tag%20library/${revision}/${archive}-bin.zip" sha1="81917c5d457853defab5ac61c8266387ee93e48a">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/docs/${name}/apidocs/**/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.zip" sha1="65af530f6602039328d1be0b0248153b36275429"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/display%20tag%20library/${revision}/${archive}-src.zip" sha1="65af530f6602039328d1be0b0248153b36275429"/>
 
     <build>
         <!-- jar -->
