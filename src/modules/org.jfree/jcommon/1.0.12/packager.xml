@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/jfreechart/${archive}.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/jfreechart/3.%20JCommon/${revision}/${archive}.tar.gz"
       sha1="9ef8c1b90bc868417052e269545788beab46d1fe"/>
 
     <build>
