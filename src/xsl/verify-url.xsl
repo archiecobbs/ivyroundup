@@ -443,7 +443,7 @@
                 <my-get file="${{modpath}}/ivy.xml" url="{@url}" type="license" />
             </xsl:when>
             <xsl:otherwise>
-                <echo taskname="${{modpath}}/packager.xml :license"
+                <echo taskname="${{modpath}}/ivy.xml :license"
                     message="Malformed URL (no scheme): {@url}" />
                 <xsl:apply-templates select="url" />
             </xsl:otherwise>
