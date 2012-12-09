@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/jboss/${name}3.9.GA.zip"
+    <resource url="http://downloads.sourceforge.net/project/jboss/Javassist/3.9.0.GA/${name}3.9.GA.zip"
       sha1="6dfcfdb7852dbe2dda64f451c8a9882143d99dbc">
         <include name="${archive}/${name}.jar"/>
         <include name="${archive}/html/**/*"/>
