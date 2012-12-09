@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/swarmcache/${archive}.tar.gz"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.tar.gz"
       sha1="db271e762842de22b3c80d3e1ce26be5b6268171"/>
 
     <build>
