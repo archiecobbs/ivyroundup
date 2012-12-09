@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}.GA"/>
 
-    <resource url="http://downloads.sourceforge.net/hibernate/${archive}.tar.gz"
+    <resource url="http://downloads.sourceforge.net/hibernate/${name}/${revision}.GA/${archive}.tar.gz"
       sha1="2d142cb511ed05c3b595b0623cf736e41c248998">
         <include name="${archive}/${name}.jar"/>
         <include name="${archive}/src/**/*"/>
