@@ -22,11 +22,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="JGroups-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.bin.zip"
+    <resource url="http://downloads.sourceforge.net/project/javagroups/JGroups/${revision}/${archive}.bin.zip"
       sha1="ae91e637c9276f53622d6a25f5cc5bb3eaffca00">
         <include name="${archive}.bin/${name}-all.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.src.zip"
+    <resource url="http://downloads.sourceforge.net/project/javagroups/JGroups/${revision}/${archive}.src.zip"
       sha1="39d86319d7275704441b9bf4ff5b650f3e026528">
         <include name="${archive}.src/src/**/*"/>
     </resource>
