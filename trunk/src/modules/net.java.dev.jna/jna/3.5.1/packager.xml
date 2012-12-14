@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource repo="https://maven.java.net/content/repositories/releases/">
+        <artifact tofile="artifacts/jars/jna.jar" sha1="8e20e3b9b687c5abbfbf684b2dbf9d8fb8c9691e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jna-source.zip" sha1="8aad0aae49d0555e24ebf00321956bf0c03b0173"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-javadoc.zip" sha1="61e6765578a6a810e2d5a161cbb940e794888e30"/>
+    </m2resource>
+    <m2resource repo="https://maven.java.net/content/repositories/releases/" artifactId="platform">
+        <artifact tofile="artifacts/jars/platform.jar" sha1="1f171f6ba3065d320488d3a6672852a7e04035a3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/platform-source.zip" sha1="184c0377a38b295e0738fff7ea23370e7b3a5434"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/platform-javadoc.zip" sha1="e391f76daa4f511346882152a2b6bbc53e1fa81a"/>
+    </m2resource>
+</packager-module>
