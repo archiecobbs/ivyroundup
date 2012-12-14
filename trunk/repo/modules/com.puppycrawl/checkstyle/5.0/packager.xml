@@ -20,14 +20,14 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="510d4188f74463772ed3e9d67585c2cdbe194264">
+    <resource url="http://downloads.sourceforge.net/project/${name}/OldFiles/${revision}/${archive}.zip" sha1="510d4188f74463772ed3e9d67585c2cdbe194264">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/${name}-all-${revision}.jar"/>
         <include name="${archive}/google-collect-snapshot-20090211.jar"/>
         <include name="${archive}/contrib/*.xsl"/>
         <include name="${archive}/docs/api/**/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/${name}/${name}-src-${revision}.tar.gz" sha1="9f60fd8a9c365446c681a2bc2d6194bcbd987624"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/OldFiles/${revision}/${name}-src-${revision}.tar.gz" sha1="9f60fd8a9c365446c681a2bc2d6194bcbd987624"/>
 
     <build>
 

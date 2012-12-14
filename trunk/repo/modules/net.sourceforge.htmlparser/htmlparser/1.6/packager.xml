@@ -21,7 +21,7 @@
     <property name="topdir" value="${name}1_6"/>
     <property name="archive" value="${topdir}_20060610"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="93f6b12b95fe46602d3dc68ccec3523566a38dd4">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.zip" sha1="93f6b12b95fe46602d3dc68ccec3523566a38dd4">
         <include name="${topdir}/lib/*.jar"/>
         <include name="${topdir}/src.zip"/>
         <include name="${topdir}/docs/javadoc/**/*"/>

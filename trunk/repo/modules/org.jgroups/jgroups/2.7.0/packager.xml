@@ -20,10 +20,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="JGroups-${revision}.GA"/>
 
-    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.bin.zip" sha1="8a1966e9591ad4dbb790f0e5122fa4c058a9afad">
+    <resource url="http://downloads.sourceforge.net/project/javagroups/JGroups/${revision}.GA/${archive}.bin.zip" sha1="8a1966e9591ad4dbb790f0e5122fa4c058a9afad">
         <include name="${archive}.bin/${name}-all.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/javagroups/${archive}.src.zip" sha1="a607a1cea8e712417ccd32ba04a048aa01e6be4c">
+    <resource url="http://downloads.sourceforge.net/project/javagroups/JGroups/${revision}.GA/${archive}.src.zip" sha1="a607a1cea8e712417ccd32ba04a048aa01e6be4c">
         <include name="${archive}.src/src/**/*"/>
     </resource>
 

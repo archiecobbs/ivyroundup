@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/cssparser/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="7222f4a7e50fc57a88a546a228088524bdbbdaea"/>
-    <resource url="http://downloads.sourceforge.net/cssparser/${archive}-sources.jar" tofile="artifacts/sources/${name}-source.jar" sha1="58cc6bd1c19526776abe6943d29d10bd81dbad5f"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="7222f4a7e50fc57a88a546a228088524bdbbdaea"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-sources.jar" tofile="artifacts/sources/${name}-source.jar" sha1="58cc6bd1c19526776abe6943d29d10bd81dbad5f"/>
 
 </packager-module>

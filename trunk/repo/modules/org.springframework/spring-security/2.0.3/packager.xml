@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/springframework/${archive}.zip" sha1="4a1bc64bdf61db3d44cb3f4ba6eefc38678ac87b"/>
+    <resource url="http://downloads.sourceforge.net/project/springframework/${name}/${revision}/${archive}.zip" sha1="4a1bc64bdf61db3d44cb3f4ba6eefc38678ac87b"/>
 
     <build>
         <!-- jars -->
