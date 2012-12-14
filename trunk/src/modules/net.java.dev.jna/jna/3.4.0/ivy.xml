@@ -51,9 +51,9 @@
         </p>
 
         <p>
-        The <a href="http://twall.github.com/jna/3.4.0/javadoc/">JavaDoc is
-        available online</a>, which includes detailed descriptions of JNA usage in
-        different situations.
+        JNA includes a platform library with many native functions already
+        mapped as well as a set of utility interfaces that simplify native
+        access.
         </p>
 
         </description>
@@ -66,8 +66,12 @@
     </configurations>
 
     <publications>
-        <artifact name="jna" conf="core"/>
-        <artifact name="platform" conf="platform"/>
+        <artifact conf="core" name="jna"/>
+        <artifact conf="core" name="jna-source" type="source" ext="zip"/>
+        <artifact conf="core" name="jna-javadoc" type="javadoc" ext="zip"/>
+        <artifact conf="platform" name="platform"/>
+        <artifact conf="platform" name="platform-source" type="source" ext="zip"/>
+        <artifact conf="platform" name="platform-javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

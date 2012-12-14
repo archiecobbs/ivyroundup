@@ -17,13 +17,14 @@
 -->
 
 <packager-module rev="$Id$">
-
-    <property name="name" value="${ivy.packager.module}"/>
-
-    <resource url="http://cloud.github.com/downloads/twall/jna/jna.jar"
-      tofile="artifacts/jars/${name}.jar" sha1="f4e1672a22b63e37a5d929603cb67e093e3729d5"/>
-
-    <resource url="http://cloud.github.com/downloads/twall/jna/platform.jar"
-      tofile="artifacts/jars/platform.jar" sha1="4b58af397fd3156d700ad5016bcdd307a7a62ef5"/>
-
+    <m2resource repo="https://maven.java.net/content/repositories/releases/">
+        <artifact tofile="artifacts/jars/jna.jar" sha1="803ff252fedbd395baffd43b37341dc4a150a554"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jna-source.zip" sha1="2f42653596d0044f0ab456620cba54c9cf53c5ca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-javadoc.zip" sha1="69707b8db1f5b46b23536f04e58468fbd159e7c0"/>
+    </m2resource>
+    <m2resource repo="https://maven.java.net/content/repositories/releases/" artifactId="platform">
+        <artifact tofile="artifacts/jars/platform.jar" sha1="e3f70017be8100d3d6923f50b3d2ee17714e9c13"/>
+        <artifact classifier="sources" tofile="artifacts/sources/platform-source.zip" sha1="2f42653596d0044f0ab456620cba54c9cf53c5ca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/platform-javadoc.zip" sha1="805360594738e77e7da892f7f6ea563ab246c586"/>
+    </m2resource>
 </packager-module>
