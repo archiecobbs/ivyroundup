@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="gwt-widgets-server-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/gwt-widget/${archive}.tar.gz" sha1="ffa6d43a60a7439166a07d796d68400eaa4e309e">
+    <resource url="http://downloads.sourceforge.net/project/gwt-widget/GWT%20Server%20Library/${revision}/${archive}.tar.gz" sha1="ffa6d43a60a7439166a07d796d68400eaa4e309e">
         <include name="*.jar"/>
         <include name="docs/api/**/*"/>
         <include name="src/main/java/**/*"/>

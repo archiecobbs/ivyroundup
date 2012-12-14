@@ -20,12 +20,12 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/sourceforge/pmd/${name}-bin-${revision}.zip" sha1="768e5f0bd0c54a34042b67cd53fc414e99701d23">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}-bin-${revision}.zip" sha1="768e5f0bd0c54a34042b67cd53fc414e99701d23">
       <include name="${archive}/lib/*"/>
       <include name="${archive}/etc/xslt/*"/>
       <include name="${archive}/docs/apidocs/**/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/sourceforge/pmd/${name}-src-${revision}.zip" sha1="343a21f6ca0a051428c781a418871ea1dc337daa">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}-src-${revision}.zip" sha1="343a21f6ca0a051428c781a418871ea1dc337daa">
       <include name="${archive}/src/**/*"/>
     </resource>
 

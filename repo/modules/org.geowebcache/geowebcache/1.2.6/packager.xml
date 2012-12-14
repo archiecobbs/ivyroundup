@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://download.sourceforge.net/${name}/${archive}-war.zip" sha1="fffd7e518e4c58c5312ed9f93f5ab2365289db90"/>
-    <resource url="http://download.sourceforge.net/${name}/${archive}-src.zip" sha1="88e49611d3f4059953e5dfeba832f84c5899208d"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-war.zip" sha1="fffd7e518e4c58c5312ed9f93f5ab2365289db90"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-src.zip" sha1="88e49611d3f4059953e5dfeba832f84c5899208d"/>
 
     <build>
         <!-- war -->

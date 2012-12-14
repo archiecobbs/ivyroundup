@@ -20,11 +20,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/sourceforge/${name}/${archive}.zip" sha1="92bd2eb55679d898a11123ffed3fa5b787c24ca2">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.zip" sha1="92bd2eb55679d898a11123ffed3fa5b787c24ca2">
       <include name="${archive}/lib/*"/>
       <include name="${archive}/src/xsl/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/sourceforge/${name}/${archive}-source.zip" sha1="3fee4195a71a4a2d8c000a8a9f0ccb2abd7c23f7">
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-source.zip" sha1="3fee4195a71a4a2d8c000a8a9f0ccb2abd7c23f7">
       <include name="${archive}/src/**/*"/>
     </resource>
 

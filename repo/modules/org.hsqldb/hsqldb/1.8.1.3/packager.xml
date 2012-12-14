@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}_1_8_1_3.zip" sha1="15b1ece2f131bdb007cae5762f631e8d5fd6eaae"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}_1_8_1/${name}_1_8_1_3.zip" sha1="15b1ece2f131bdb007cae5762f631e8d5fd6eaae"/>
 
     <build>
         <!-- jar -->
