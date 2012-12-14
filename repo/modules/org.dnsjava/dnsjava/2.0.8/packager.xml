@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${revision}/${archive}.tar.gz" sha1="e03d4f8db3ea1fed2011fe6d6f9b9ffaae9fe6ca"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}.tar.gz" sha1="e03d4f8db3ea1fed2011fe6d6f9b9ffaae9fe6ca"/>
 
     <m2resource groupId="dnsjava">
        <artifact tofile="artifacts/jars/${name}.jar" sha1="0b84f81f7cec3116cc8094e9dd9825f21f9d368c"/>

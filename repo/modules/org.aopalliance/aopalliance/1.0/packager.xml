@@ -17,8 +17,9 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${name}.zip" sha1="9bb519396b3f5005b22c4dd3090cd3f343a63fa0"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}.zip" sha1="9bb519396b3f5005b22c4dd3090cd3f343a63fa0"/>
 
     <build>
 

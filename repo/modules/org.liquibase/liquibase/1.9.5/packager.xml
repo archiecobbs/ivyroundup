@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}.zip" sha1="ad09957e93223979a0b9a7de15465c7ed9ab1033"/>
-    <resource url="http://downloads.sourceforge.net/${name}/${archive}-src.zip" sha1="f1e251149f4d0d884bdc1c1fdd2409c370021074"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/Liquibase%20Core/${revision}/${archive}.zip" sha1="ad09957e93223979a0b9a7de15465c7ed9ab1033"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/Liquibase%20Core/${revision}/${archive}-src.zip" sha1="f1e251149f4d0d884bdc1c1fdd2409c370021074"/>
 
     <build>
         <!-- jar -->
