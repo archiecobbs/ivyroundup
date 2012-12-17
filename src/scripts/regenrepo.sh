@@ -83,5 +83,12 @@ if svn st repo/modules 2>/dev/null | grep '^\?'; then
     regenerate_repo '(again)'
 fi
 
+# If any revisions have been removed from the source tree, remove them from the generated repo
+( cd repo/modules && find . -mindepth 3 -maxdepth 3 -type d | grep -vF .svn \
+  | xargs -n 1 -I '{}' sh -c 'test -d ../../src/modules/{} || echo {}' ) | while read DIR; do
+    echo "regenrepo: removing deleted revision ${DIR}"
+    svn rm repo/modules/"${DIR}"
+done
+
 # Done
 echo 'regenrepo: done'
