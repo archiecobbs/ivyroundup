@@ -22,7 +22,7 @@ case `uname -s` in
 esac
 
 # Find saxon
-for NAME in dsaxon{9,}; do
+for NAME in saxon{9,}; do
     SAXON=`which "${NAME}" 2>/dev/null || true`
     if [ -n "${SAXON}" ]; then
         break
