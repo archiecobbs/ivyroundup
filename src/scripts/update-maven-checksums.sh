@@ -22,7 +22,7 @@ case `uname -s` in
 esac
 
 # Find saxon
-for NAME in saxon{9,}; do
+for NAME in saxon{9,8,}; do
     SAXON=`which "${NAME}" 2>/dev/null || true`
     if [ -n "${SAXON}" ]; then
         break
@@ -49,13 +49,13 @@ for FILE; do
 
     # Apply XSLT
     echo "*** Updating ${FILE}" 1>&2
-    "${SAXON}" -xsl:src/xsl/update-maven-checksums.xsl -s:"${FILE}" \
+    "${SAXON}" "${FILE}" src/xsl/update-maven-checksums.xsl \
       org="${ORG}" mod="${MOD}" rev="${REV}" \
       | sed "${SEDFLAG}" -e 's/^(<\?xml version="1.0" encoding="UTF-8"\?>)(<!--[[:space:]]*)$/\1\
 \
 \2/g' -e 's/^(-->)(<packager-module.*)$/\1\
 \
-\2/g' \
+\2/g' -e '$a\' \
       > "${FILE}".new
 
     # Check result
