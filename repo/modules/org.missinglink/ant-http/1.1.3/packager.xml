@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2008 Archie L. Cobbs
     Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -18,8 +17,20 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="ml-${name}-${revision}"/>
 
-    <m2resource>
-      <artifact tofile="artifacts/jars/${name}.jar" sha1="67675f42f9218b7359a1ac2d4b04ded13656fa07"/>
-    </m2resource>
+    <resource url="http://missing-link.googlecode.com/files/${archive}.zip" sha1="bd18326e55b919622ec47370b626850e687b21dd">
+        <include name="${archive}*.zip"/>
+        <include name="${archive}*.jar"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <!-- source -->
+        <move file="archive/${archive}-sources.jar" tofile="artifacts/sources/source.zip"/>
+        <!-- javadoc -->
+        <move file="archive/${archive}-api.zip" tofile="artifacts/javadocs/javadoc.zip"/>
+    </build>
 </packager-module>

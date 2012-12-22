@@ -20,7 +20,7 @@
 
     <info organisation="org.dellroad" module="dellroad-stuff" revision="1.0.592" status="release" publication="20121214120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2448 2012-12-14 16:27:40Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.592/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2473 2012-12-20 23:52:52Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.dellroad/dellroad-stuff/1.0.592/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://dellroad-stuff.googlecode.com/">
 
@@ -82,7 +82,7 @@
         <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;default"/>
         <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8+" conf="readline-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core-&gt;default"/>
-        <dependency org="org.springframework" name="spring" rev="3.1+" conf="spring-&gt;beans,context-support,expression,jdbc,tx,web-servlet;jibx-&gt;expression,oxm;servlet-&gt;aop,tx,web-servlet"/>
+        <dependency org="org.springframework" name="spring" rev="3+" conf="spring-&gt;beans,context-support,expression,jdbc,tx,web-servlet;jibx-&gt;expression,oxm;servlet-&gt;aop,tx,web-servlet"/>
         <dependency org="org.hibernate" name="hibernate-validator" rev="4.1+" conf="validation-hibernate-&gt;default"/>
         <dependency org="org.aspectj" name="aspectj" rev="1.7+" conf="aspects-&gt;default"/>
         <dependency org="net.sourceforge.opencsv" name="opencsv" rev="2.2" conf="csv-&gt;default"/>
