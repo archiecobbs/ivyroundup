@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2008 Archie L. Cobbs
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,7 +21,7 @@
 
     <property name="name" value="${ivy.packager.module}"/>
 
-    <resource url="https://jna.dev.java.net/source/browse/*checkout*/jna/tags/${ivy.packager.revision}/jnalib/dist/jna.jar"
-      tofile="artifacts/jars/${name}.jar" sha1="67675f42f9218b7359a1ac2d4b04ded13656fa07"/>
-
+    <m2resource>
+      <artifact tofile="artifacts/jars/${name}.jar" sha1="67675f42f9218b7359a1ac2d4b04ded13656fa07"/>
+    </m2resource>
 </packager-module>
