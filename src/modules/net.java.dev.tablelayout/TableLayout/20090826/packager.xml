@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2009 Mark Thomas
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,8 +22,8 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="2007-04-21"/>
 
-    <resource url="https://tablelayout.dev.java.net/files/documents/3495/15742/Everything-${revision}.zip"
-      sha1="ecee9c52ea9b592d1362a6378d2d954f5ade0652"/>
+    <resource url="http://java.net/projects/tablelayout/downloads/download/Everything-${revision}.zip"
+      sha1="e68771795f6d7c2e27d60f1b348ff903926026ff"/>
 
     <build>
         <!-- jar -->
