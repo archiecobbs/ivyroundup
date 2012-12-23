@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2009 Mark Thomas
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,10 +22,9 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-bin.tar.bz2"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-bin.tar.bz2"
       sha1="ebc0c1f6b9722cbdae0187686860c94313d6e30a"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-src.tar.bz2"
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-src.tar.bz2"
       sha1="23694f563392959d8b152ef86e67747674491761"/>
 
     <build>
