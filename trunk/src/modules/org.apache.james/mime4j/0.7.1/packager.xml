@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2010 Gregory Fernandez
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,14 +23,14 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <property name="mirror1" value="http://mir2.ovh.net/ftp.apache.org/dist/"/>
-    <property name="mirror2" value="http://apache.cict.fr/"/>
-    <property name="mirror3" value="http://apache.multidist.com/"/>
-    <property name="mirror4" value="http://mirror.mkhelif.fr/apache/"/>
-    <property name="mirror5" value="http://apache.crihan.fr/dist/"/>
-    <property name="mirror6" value="ftp://mir1.ovh.net/ftp.apache.org/dist/"/>
-    <property name="mirror7" value="ftp://ftp.inria.fr/pub/Apache/"/>
-    <property name="mirror8" value="http://archive.apache.org/dist"/>
+    <property name="mirror8" value="http://mir2.ovh.net/ftp.apache.org/dist"/>
+    <property name="mirror2" value="http://apache.cict.fr"/>
+    <property name="mirror3" value="http://apache.multidist.com"/>
+    <property name="mirror4" value="http://mirror.mkhelif.fr/apache"/>
+    <property name="mirror5" value="http://apache.crihan.fr/dist"/>
+    <property name="mirror6" value="ftp://mir1.ovh.net/ftp.apache.org/dist"/>
+    <property name="mirror7" value="ftp://ftp.inria.fr/pub/Apache"/>
+    <property name="mirror1" value="http://archive.apache.org/dist"/>
 
     <resource url="${mirror1}/james/mime4j/${archive}-bin.tar.gz" sha1="0de022b6e26fd7a9bbc3d1b0d29468e3d417c5d9">
         <url href="${mirror2}/james/mime4j/${archive}-bin.tar.gz"/>
