@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2011 Ales Nosek
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -22,23 +23,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <property name="mirror1" value="http://ftp.wayne.edu/apache/commons/compress"/>
-    <property name="mirror2" value="http://download.filehat.com/apache/commons/compress"/>
-    <property name="mirror3" value="http://mirror.cloudera.com/apache/commons/compress"/>
-    <property name="mirror4" value="http://archive.apache.org/dist/commons/compress"/>
-    <property name="backup" value="http://www.apache.org/dist/commons/compress"/>
+    <m2resource> 
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="613a08bc72e2e9a43c9f87b9ff8352b47e18e3ae"/>
+        <artifact classifier="javadoc" tofile="artifacts/sources/source.zip" sha1="dbdaed8947497b8a7d47f91fd5eac0514ac26183"/>
+        <artifact classifier="sources" tofile="artifacts/javadocs/javadoc.zip" sha1="b34c14d5871ba647a1f57e6e22fbbe93a2985010"/>
+    </m2resource>
 
-    <resource url="${mirror1}/binaries/${archive}-bin.tar.gz" sha1="4af7bd22ab0ab71d10db000f370b98a504233ee5">
-        <url href="${mirror2}/binaries/${archive}-bin.tar.gz"/>
-        <url href="${mirror3}/binaries/${archive}-bin.tar.gz"/>
-        <url href="${mirror4}/binaries/${archive}-bin.tar.gz"/>
-        <url href="${backup}/binaries/${archive}-bin.tar.gz"/>
-        <include name="${archive}/*.jar"/>
-    </resource>
-
-    <build>
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${archive}-sources.jar" tofile="artifacts/sources/source.zip"/>
-        <move file="archive/${archive}/${archive}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/>
-    </build>
 </packager-module>
