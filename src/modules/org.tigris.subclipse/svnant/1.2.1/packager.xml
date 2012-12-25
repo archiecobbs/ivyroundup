@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2009 Nathan Summers
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,10 +22,11 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-
+<!-- 
     <resource url="http://subclipse.tigris.org/files/documents/906/43359/${archive}.zip"
       sha1="4f42eb500b4515aa4912bffb072099da9522c7b8"/>
-
+ -->
+    <resource url="file:///${java.io.tmpdir}/${archive}.zip" sha1="4f42eb500b4515aa4912bffb072099da9522c7b8"/>
     <build>
         <!-- jar -->
         <move file="archive/${archive}/lib/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
