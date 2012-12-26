@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2011 Roger Parkinson
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,21 +21,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/${name}/${revision}/${archive}-bin.zip" sha1="ab3beaf89da5cb312c5cb2579784a56d01d90c02">
-        <url href="http://www.us.apache.org/dist/ws/${name}/${revision}/${archive}-bin.zip"/>
-    </resource>
-    <resource url="http://mirror.cc.columbia.edu/pub/software/apache/ws/${name}/${revision}/${archive}-source-release.zip" sha1="7dc9edd3e33cdcb58fcb4f971b86229036374365">
-        <url href="http://www.us.apache.org/dist/ws/${name}/${revision}/${archive}-source-release.zip"/>
-    </resource>
+    <m2resource>
+        <artifact tofile="artifacts/jars/neethi.jar" sha1="9e4a9d3ebab53720bccbafacc7495e801a6256c6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/neethi.zip" sha1="f26d8766f80d00812128650c96896422513e0223"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/neethi.zip" sha1="0404c1a458db075357aa70f5ce7af67ba5fdcbf4"/>
+    </m2resource>
 
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${archive}/src/main/java"/>
-        </zip>
-
-    </build>
 </packager-module>
