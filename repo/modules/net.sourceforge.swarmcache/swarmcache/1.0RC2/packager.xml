@@ -24,6 +24,6 @@
 
     <build>
         <!-- jar -->
-        <move file="archive//${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
     </build>
 </packager-module>

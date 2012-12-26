@@ -2,6 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
     Copyright 2008 Archie L. Cobbs.
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,7 +21,7 @@
 
     <info organisation="org.testng" module="testng" revision="5.7" status="release" publication="20070807210300">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 37 2008-04-10 15:47:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.testng/testng/5.7/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2486 2012-12-23 18:37:18Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.testng/testng/5.7/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.testng.org/">
             TestNG is a testing framework designed to simply a broad range of
@@ -38,10 +39,9 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" ivyde:javadoc="javadoc" name="testng-jdk14" conf="jdk14"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" ivyde:javadoc="javadoc" name="testng-jdk15" conf="default,jdk15"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" name="testng-jdk14" conf="jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="testng" name="testng-jdk15" conf="default,jdk15"/>
         <artifact type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

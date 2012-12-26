@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2008 Archie L. Cobbs.
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,35 +18,12 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="zipname" value="${name}-${revision}"/>
 
-    <resource url="http://testng.org/${zipname}.zip" sha1="2ea19275dc17453306f8bb780fe6ef6e9af7756b">
-        <include name="${zipname}/src/main/**/*"/>
-        <include name="${zipname}/src/jdk15/**/*"/>
-        <include name="${zipname}/javadocs/**/*"/>
-        <include name="${zipname}/*.jar"/>
-    </resource>
-
-    <build>
-
-        <!-- jar  -->
-        <move file="archive/${zipname}/${zipname}-jdk14.jar" tofile="artifacts/jars/${name}-jdk14.jar"/>
-        <move file="archive/${zipname}/${zipname}-jdk15.jar" tofile="artifacts/jars/${name}-jdk15.jar"/>
-
+    <m2resource>
+        <artifact classifier="jdk14" tofile="artifacts/jars/${name}-jdk14.jar" sha1="ab37149bbf4de3cef4792ca031dd27def4810f2d"/>
+        <artifact classifier="jdk15" tofile="artifacts/jars/${name}-jdk15.jar" sha1="1723a8532d5dd658f94f560572c258546369edd1"/>
         <!-- source -->
-        <zip destfile="artifacts/sources/${name}.zip">
-            <fileset dir="archive/${zipname}/src/main">
-                <include name="**/*.java"/>
-            </fileset>
-            <fileset dir="archive/${zipname}/src/jdk15">
-                <include name="**/*.java"/>
-            </fileset>
-        </zip>
+        <artifact classifier="sources" tofile="artifacts/sources/testng.zip" sha1="0d13f2dd7e9f8a549e871171aa3964b393222d80"/>
+    </m2resource>
 
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${zipname}/javadocs"/>
-        </zip>
-    </build>
 </packager-module>
