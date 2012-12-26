@@ -90,5 +90,9 @@ fi
     svn rm repo/modules/"${DIR}"
 done
 
+# Fixup MIME types
+echo "regenrepo: fixing up MIME types"
+find repo -type f -name '*.xml' -print0 | xargs -0 svn ps svn:mime-type text/xml
+
 # Done
 echo 'regenrepo: done'
