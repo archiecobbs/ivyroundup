@@ -136,10 +136,12 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
 
   <target name="-crawler.uptodate">
     <uptodate property="crawler.uptodate" targetfile="${report.work.dir}/build.xml">
-      <!-- TODO: this also depends on repo/modules.xml -->
-      <srcfiles dir="src/modules">
-        <include name="**/ivy.xml" />
-        <include name="**/packager.xml" />
+      <!-- NOTE: this also depends on repo/modules.xml so users may edit 
+      	   modules.xml to only process specific moduees -->
+      <srcfiles dir="${basedir}">
+        <include name="repo/modules.xml" />
+        <include name="src/modules/**/ivy.xml" />
+        <include name="src/modules**/packager.xml" />
       </srcfiles>
     </uptodate>
   </target>
