@@ -18,23 +18,23 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-bin.tar.bz2" sha1="ebc0c1f6b9722cbdae0187686860c94313d6e30a"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-src.tar.bz2" sha1="23694f563392959d8b152ef86e67747674491761"/>
+    <property name="revision" value="2007-04-21"/>
+
+    <resource url="http://java.net/projects/tablelayout/downloads/download/Everything-${revision}.zip" sha1="e68771795f6d7c2e27d60f1b348ff903926026ff"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${name}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${name}-bin-jdk1.1-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.1.jar"/>
+        <move file="archive/${name}-bin-jdk1.4-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.4.jar"/>
+        <move file="archive/${name}-bin-jdk1.5-${revision}.jar" tofile="artifacts/jars/${name}-jdk1.5.jar"/>
+        <move file="archive/${name}Extensions-all-jdk1.4-${revision}.jar" tofile="artifacts/jars/${name}Extensions-jdk1.4.jar"/>
+        <move file="archive/${name}Extensions-all-jdk1.5-${revision}.jar" tofile="artifacts/jars/${name}Extensions-jdk1.5.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}/src/java"/>
-        </zip>
+        <move file="archive/${name}-src-${revision}.jar" tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${name}/docs/api"/>
-        </zip>
+        <move file="archive/${name}-javadoc-${revision}.jar" tofile="artifacts/javadocs/javadoc.zip"/>
     </build>
+
 </packager-module>
