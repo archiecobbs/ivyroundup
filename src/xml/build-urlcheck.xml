@@ -141,7 +141,7 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
       <srcfiles dir="${basedir}">
         <include name="repo/modules.xml" />
         <include name="src/modules/**/ivy.xml" />
-        <include name="src/modules**/packager.xml" />
+        <include name="src/modules/**/packager.xml" />
       </srcfiles>
     </uptodate>
   </target>
