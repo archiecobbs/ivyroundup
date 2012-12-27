@@ -2,6 +2,7 @@
 
 <!--
     Copyright 2012 Stephen Lynn
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,22 +19,26 @@
 
 <packager-module rev="$Id$">
 
-   <m2resource artifactId="jaxb-impl">
-        <artifact tofile="artifacts/jars/jaxb-impl.jar" sha1="62bed5d6f40049a00c48a402c3511f02eedd1c11" />
-    <artifact classifier="javadoc" tofile="artifacts/javadocs/jaxb-impl.zip" sha1="c8a30ed60f4f511ddefb9a3069ba884e52606120" />
-        <artifact classifier="sources" tofile="artifacts/sources/jaxb-impl.zip" sha1="094ee94136df7fec802bc19addec3a49715fe1df" />
-    </m2resource>
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-ri-${revision}"/>
 
-    <m2resource artifactId="jaxb-api">
-        <artifact tofile="artifacts/jars/jaxb-api.jar" sha1="71f434378f822b09a57174af6c75d37408687c57" />
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/jaxb-api.zip" sha1="a726b4bdc6832f5ef83eca4ba933f586a2def81c" />
-        <artifact classifier="sources" tofile="artifacts/sources/jaxb-api.zip" sha1="dd83a97bab49adb87efd1bf7e3f77c96d156969d" />
-    </m2resource>
+    <resource url="http://${name}.java.net/${revision}/${archive}.zip"
+      sha1="cf9252043bb71ccb632fb0d8077cb04912ca261b"/>
 
-    <m2resource artifactId="jaxb-xjc">
-        <artifact tofile="artifacts/jars/jaxb-xjc.jar" sha1="2f4761c3c2cb8fc503ec96e89e4b71b01f9054ae" />
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/jaxb-xjc.zip" sha1="3b27958990d66df358d52948209f81c3b21d17ac" />
-        <artifact classifier="sources" tofile="artifacts/sources/jaxb-xjc.zip" sha1="d93d2c3df0eed1905f7c13e2d7ea0e3cd985a4ce" />
-    </m2resource>
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${name}-api.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/${name}-impl.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/${name}-xjc.jar" todir="artifacts/jars"/>
+        <!-- source -->
+        <move file="archive/${archive}/lib/${name}-api-src.zip" tofile="artifacts/sources/${name}-api.zip"/>
+        <move file="archive/${archive}/lib/${name}-impl.src.zip" tofile="artifacts/sources/${name}-impl.zip"/>
+        <move file="archive/${archive}/lib/${name}-xjc.src.zip" tofile="artifacts/sources/${name}-xjc.zip"/>
+        <!-- javadoc -->
+        <move file="archive/${archive}/lib/${name}-api-doc.zip" tofile="artifacts/javadocs/${name}-api.zip"/>
+        <move file="archive/${archive}/lib/${name}-impl-javadoc.jar" tofile="artifacts/javadocs/${name}-impl.zip"/>
+        <move file="archive/${archive}/lib/${name}-xjc-javadoc.jar" tofile="artifacts/javadocs/${name}-xjc.zip"/>
+    </build>
 
 </packager-module>
