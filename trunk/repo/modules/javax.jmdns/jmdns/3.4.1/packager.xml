@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2010 Philip Johnson
+    Copyright 2011 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,18 +20,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/eclemma/${name}-${revision}.zip" sha1="359ca31a124168260cea64fceab4ce91cdbe6029"/>
-
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/lib/jacocoant.jar" tofile="artifacts/jars/jacocoant.jar"/>
-
-        <!-- source not yet available in distributions -->
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/api"/>
-        </zip>
-    </build>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="7ba2dcf7effb5ca9b00736b2a066fff3dd01d432"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="6827b32c8ea39faf9577bf037238b93d50458a24"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="43a76efab9c4f1c043b3fa1e00d4184d3cae8f50"/>
+    </m2resource>
+    
 </packager-module>
