@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2010 Oliver Mannion
-    Copyright 2013 Martin Weber
+    Copyright 2012 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -19,22 +18,27 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="it.unimi.dsi" module="fastutil" revision="6.3" status="release" publication="20110509120000">
+    <info organisation="org.vaadin.addons" module="refresher" revision="1.2.1.7" status="release" publication="20130109000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2520 2013-01-06 19:30:02Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2525 2013-01-09 15:31:00Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.vaadin.addons/refresher/1.2.1.7/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://fastutil.dsi.unimi.it/">
-            fastutil extends the Java Collections Framework by providing type-specific
-            maps, sets, lists and queues with a small memory footprint and fast
-            access and insertion; provides also big (64-bit) arrays and lists and fast,
-            practical I/O classes for binary and text files.
+        <description homepage="http://vaadin.com/directory#addon/refresher">
+            <p>
+            Because of the way Vaadin works, asynchronous UI changes made
+            on the server side (e.g. by a long-duration data processing
+            Thread) aren't reflected to the client side. This component
+            makes it possible to make UI changes, even if the user
+            doesn't start a transaction.
+            </p>
+
+            <p>
+            This version is for Vaadin 7.
+            </p>
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact/>
     </publications>
 
 </ivy-module>
