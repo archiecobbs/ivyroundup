@@ -153,7 +153,7 @@
         <dependency org="org.codehaus.jackson" name="jackson" rev="[1.9.8,)" conf="socketio->mapper;gwt-jackson->core,mapper"/>
         <dependency org="com.sun.jersey" name="jersey" rev="[1.12,)" conf="jersey->server,servlet;guice->guice"/>
         <dependency org="com.google" name="guice" rev="[2.0,)" conf="guice->servlet"/>
-        <dependency org="com.google" name="gwt" rev="2.+" conf="gwt,gwt-poll->runtime;gwt-client->compile"/>
+        <dependency org="com.google" name="gwt" rev="2.4+" conf="gwt,gwt-poll->runtime;gwt-client->compile"/>
         <dependency org="org.jgroups" name="jgroups" rev="[2.8.0,)" conf="jgroups->default"/>
         <dependency org="javax.jms" name="jms" rev="1.1" conf="jms->default"/>
         <dependency org="redis.clients" name="jedis" rev="[2.0,)" conf="redis->default"/>
