@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <!-- TODO: comment out until this version released by author
+    <m2resource groupId="org/vaadin/addons" repo="http://maven.vaadin.com/vaadin-addons">
+        <artifact tofile="artifacts/jars/toolbox.jar" sha1="2c34c46e274ac6ca34f990abd09a0691a62d26bc"/>
+    </m2resource>
+    -->
+    <resource tofile="artifacts/jars/toolbox.jar"
+        url="http://dl.dropbox.com/u/1286944/toolbox-0.3.1.jar"
+        sha1="dfedd28b82c2a03f1427d3e6992289f89b43e08c"/>
+</packager-module>
