@@ -39,7 +39,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.atmosphere" name="atmosphere" rev="[1.0.0,)" conf="default,widgets->gwt;widgets->gwt-client">
+        <dependency org="org.atmosphere" name="atmosphere" rev="[1.0.0,1.1.0[" conf="default,widgets->gwt;widgets->gwt-client">
             <exclude name="atmosphere-ping"/>
         </dependency>
     </dependencies>
