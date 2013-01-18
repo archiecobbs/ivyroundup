@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin.addon" module="dontpush-addon-ozonelayer" revision="1.0.3" status="release" publication="20121020170800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2344 2012-10-23 15:40:05Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/dontpush-addon-ozonelayer/1.0.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2541 2013-01-18 19:04:26Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin.addon/dontpush-addon-ozonelayer/1.0.3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://vaadin.com/directory#addon/dontpush-ozonelayer">
             <p>
@@ -41,7 +41,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.atmosphere" name="atmosphere" rev="[1.0.0,)" conf="default,widgets-&gt;gwt;widgets-&gt;gwt-client">
+        <dependency org="org.atmosphere" name="atmosphere" rev="[1.0.0,1.1.0[" conf="default,widgets-&gt;gwt;widgets-&gt;gwt-client">
             <exclude name="atmosphere-ping"/>
         </dependency>
     </dependencies>
