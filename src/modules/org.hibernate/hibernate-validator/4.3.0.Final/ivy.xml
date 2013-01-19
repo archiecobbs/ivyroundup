@@ -53,7 +53,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.slf4j" name="slf4j" rev="[1.5,2.0[" conf="default-&gt;core"/>
+        <dependency org="org.jboss.logging" name="jboss-logging" rev="[3.0,)" conf="default-&gt;default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;default"/>
     </dependencies>
 
