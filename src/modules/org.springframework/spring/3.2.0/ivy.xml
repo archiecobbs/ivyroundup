@@ -116,6 +116,7 @@
         <conf name="tx" extends="core, aop, context" description="Spring Transaction"/>
         <conf name="web" extends="aop, beans, context, core" description="Spring Web"/>
         <conf name="webmvc" extends="web" description="Spring Web MVC"/>
+        <conf name="web-servlet" extends="webmvc" description="Alias for Spring Web MVC for backwards compatibility"/>
         <conf name="webmvc-portlet" extends="webmvc" description="Spring Web MVC Portlet"/>
         <conf name="default" description="Everything (all of the module JARs)"/>
     </configurations>
