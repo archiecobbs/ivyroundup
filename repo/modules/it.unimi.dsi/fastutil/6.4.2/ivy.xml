@@ -2,6 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
     Copyright 2011 Ales Nosek
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,7 +21,7 @@
 
     <info organisation="it.unimi.dsi" module="fastutil" revision="6.4.2" status="release" publication="20111210120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1833 2011-12-15 16:23:06Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.4.2/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2553 2013-01-19 19:04:46Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.4.2/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://fastutil.dsi.unimi.it/">
             fastutil extends the Java Collections Framework by providing type-specific
@@ -31,7 +32,8 @@
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
