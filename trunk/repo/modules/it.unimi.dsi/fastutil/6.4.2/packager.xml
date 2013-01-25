@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2011 Ales Nosek
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,15 +21,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://fastutil.dsi.unimi.it/${archive}-bin.tar.gz" sha1="279b4d8885ee2a1eebdefee47f712d66303aa3af"/>
-
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs"/>
-        </zip>
-    </build>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="bda831d1fe6ef045a7dd71c412e7b1e88508e7b5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="71e0d1a646c0736904895b5323a8fdaa0bc08905"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="0140318fdf070d776986842c036fe6499b09175c"/>
+    </m2resource>
 </packager-module>
