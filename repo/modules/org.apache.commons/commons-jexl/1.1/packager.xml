@@ -36,10 +36,10 @@
     </resource>
 
     <resource url="${mirror1}/source/${archive}-src.zip" sha1="6d53691503277078ce6e7c5b19397627016feab9">
-        <url href="${mirror2}/source/${archive}.zip"/>
-        <url href="${mirror3}/source/${archive}.zip"/>
-        <url href="${mirror4}/source/${archive}.zip"/>
-        <url href="${backup}/source/${archive}.zip"/>
+        <url href="${mirror2}/source/${archive}-src.zip"/>
+        <url href="${mirror3}/source/${archive}-src.zip"/>
+        <url href="${mirror4}/source/${archive}-src.zip"/>
+        <url href="${backup}/source/${archive}-src.zip"/>
         <include name="${archive}-src/src/java/**/*"/>
     </resource>
 
