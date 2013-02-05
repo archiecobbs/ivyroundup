@@ -40,7 +40,7 @@
     </resource>
     <resource dest="srcarchive" url="${mirror1}/${name}/j/${srcarchive}.tar.gz"
       sha1="5a6eb14ed2442a702166878b5e6046a3fbb8cfc3">
-        <url href=${backup}/${name}/j/${srcarchive}.tar.gz/>
+        <url href="${backup}/${name}/j/${srcarchive}.tar.gz"/>
         <include name="${archdir}/src/**/*"/>
     </resource>
 
