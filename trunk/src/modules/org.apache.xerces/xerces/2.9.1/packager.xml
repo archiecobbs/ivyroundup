@@ -33,7 +33,7 @@
 
     <resource dest="binarchive" url="${mirror1}/${name}/j/${binarchive}.tar.gz"
       sha1="1e11122b9477d355cfbb63fe8fb2929bedd147e6">
-        <url href="url="${backup}/${name}/j/${binarchive}.tar.gz"/>
+        <url href="${backup}/${name}/j/${binarchive}.tar.gz"/>
         <include name="${archdir}/${name}Impl.jar"/>
         <include name="${archdir}/docs/javadocs/**/*"/>
         <include name="${archdir}/serializer.jar"/>
