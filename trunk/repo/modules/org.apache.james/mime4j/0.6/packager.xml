@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2010 Gregory Fernandez
     Copyright 2012 Martin Weber
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -21,35 +22,17 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <property name="mirror8" value="http://mir2.ovh.net/ftp.apache.org/dist"/>
-    <property name="mirror2" value="http://apache.cict.fr"/>
-    <property name="mirror3" value="http://apache.multidist.com"/>
-    <property name="mirror4" value="http://mirror.mkhelif.fr/apache"/>
-    <property name="mirror5" value="http://apache.crihan.fr/dist"/>
-    <property name="mirror6" value="ftp://mir1.ovh.net/ftp.apache.org/dist"/>
-    <property name="mirror7" value="ftp://ftp.inria.fr/pub/Apache"/>
-    <property name="mirror1" value="http://archive.apache.org/dist"/>
+    <property name="mirror1" value="http://ftp.crihan.fr/mirrors/www.apache.org"/>
+    <property name="backup" value="http://archive.apache.org/dist"/>
 
     <resource url="${mirror1}/james/mime4j/${archive}-bin.tar.gz" sha1="a9c20f5726462b5b02ba7518c739b644ae04b863">
-        <url href="${mirror2}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror3}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror4}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror5}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror6}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror7}/james/mime4j/${archive}-bin.tar.gz"/>
-        <url href="${mirror8}/james/mime4j/${archive}-bin.tar.gz"/>
+        <url href="${backup}/james/mime4j/${archive}-bin.tar.gz"/>
         <include name="${archive}/*.jar"/>
         <include name="${archive}/javadocs/**/*"/>
     </resource>
 
     <resource url="${mirror1}/james/mime4j/${archive}-src.tar.gz" sha1="e0d5caa382ce677335e2abcd7abb8b725b8337c7">
-        <url href="${mirror2}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror3}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror4}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror5}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror6}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror7}/james/mime4j/${archive}-src.tar.gz"/>
-        <url href="${mirror8}/james/mime4j/${archive}-src.tar.gz"/>
+        <url href="${backup}/james/mime4j/${archive}-src.tar.gz"/>
         <include name="${archive}/src/main/resources/**/*"/>
         <include name="${archive}/src/main/java/**/*"/>
     </resource>
