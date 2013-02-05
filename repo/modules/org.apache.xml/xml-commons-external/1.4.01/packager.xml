@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2009 Mark Thomas
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,11 +21,14 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-bin.zip" sha1="8459c5edf8ba7fb6512513aca466309cc4b9be03">
-        <url href="http://mirrors.gigenet.com/apache/xerces/xml-commons/binaries/${archive}-bin.zip"/>
+    <property name="mirror1" value="http://ftp.crihan.fr/mirrors/www.apache.org"/>
+    <property name="backup" value="http://archive.apache.org/dist"/>
+
+    <resource url="${mirror1}/xml/commons/${archive}-bin.zip" sha1="8459c5edf8ba7fb6512513aca466309cc4b9be03">
+        <url href="${backup}/xml/commons/${archive}-bin.zip"/>
     </resource>
-    <resource url="http://archive.apache.org/dist/xml/commons/${archive}-src.zip" sha1="e50a69eddc7d432176cb9a0acd67542c771a5723">
-        <url href="http://mirrors.gigenet.com/apache/xerces/xml-commons/binaries/${archive}-src.zip"/>
+    <resource url="${mirror1}/xml/commons/${archive}-src.zip" sha1="e50a69eddc7d432176cb9a0acd67542c771a5723">
+        <url href="${backup}/xml/commons/${archive}-src.zip"/>
     </resource>
 
     <build>
