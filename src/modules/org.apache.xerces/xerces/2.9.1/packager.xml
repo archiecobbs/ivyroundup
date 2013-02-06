@@ -28,19 +28,16 @@
     <property name="srcarchive" value="${Name}-J-src.${revision}"/>
     <property name="archdir" value="${name}-${_version}"/>
 
-    <property name="mirror1" value="http://eduunix.ccut.edu.cn/index2/mirrors/apache"/>
     <property name="backup" value="http://archive.apache.org/dist"/>
 
-    <resource dest="binarchive" url="${mirror1}/${name}/j/${binarchive}.tar.gz"
+    <resource dest="binarchive" url="${backup}/${name}/j/${binarchive}.tar.gz"
       sha1="1e11122b9477d355cfbb63fe8fb2929bedd147e6">
-        <url href="${backup}/${name}/j/${binarchive}.tar.gz"/>
         <include name="${archdir}/${name}Impl.jar"/>
         <include name="${archdir}/docs/javadocs/**/*"/>
         <include name="${archdir}/serializer.jar"/>
     </resource>
-    <resource dest="srcarchive" url="${mirror1}/${name}/j/${srcarchive}.tar.gz"
+    <resource dest="srcarchive" url="${backup}/${name}/j/${srcarchive}.tar.gz"
       sha1="78786a120c10b3d7079384cecbd2860260e47445">
-        <url href="${backup}/${name}/j/${srcarchive}.tar.gz"/>
         <include name="${archdir}/src/**/*"/>
     </resource>
 
