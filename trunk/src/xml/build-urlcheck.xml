@@ -89,7 +89,7 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
 -->
   </target>
 
-  <target name="clear-check" description="Restarts verification from scratch">
+  <target name="clear-check" description="Restarts URL verification from scratch">
 
     <!-- Clear resolve work area and repository we're going to build -->
     <delete dir="${report.dir}" />
@@ -144,94 +144,6 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
         <include name="src/modules/**/packager.xml" />
       </srcfiles>
     </uptodate>
-  </target>
-
-  <!-- Creates a script which fixes URLs that claim to be permanently moved
-  	in ivy.xml and packager.xml
-  -->
-  <target name="prep-script" description="Creates script to fix URLs">
-    <fileset dir="${report.work.dir}"
-             includes="REPORT-problems.*.txt"
-             id="files.reported.problems" />
-    <!-- Pass 1: Ant header and edit target -->
-    <concat destfile="${report.dir}/fix-permanently-moved.xml">
-      <fileset refid="files.reported.problems" />
-      <header filtering="no" trimleading="yes">
-          &lt;project name="fix-perm-moved" basedir='.' default="apply-changes">
-        &lt;!--
-        Please carefully verify this generated script
-        (which fixes URLs that claim to be permanently moved)
-        before you run it!
-	-->
-          &lt;import file="${verify.lib.dir}/verify-url-lib.xml"/>
-        &lt;!--
-	  Edits the ivy.xml and packager.xml files
-	-->
-          &lt;target name="apply-changes" depends="test-changes">
-        </header>
-
-      <filterchain>
-        <linecontains negate="true">
-          <!-- Orcale tries to direct people to their landing pages, which is annoying.
-          So keep the old URLs (which have more info) until someone fixes it manually.
-           -->
-          <contains value="http://www.oracle.com/technetwork/java/index.html" />
-          <contains value="http://www.oracle.com/technetwork/indexes/downloads/index.html" />
-        </linecontains>
-        <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) permanently moved to ([^ ]+?)$"
-                      replace="&lt;replace value='\3' token='\2' file='src/modules/\1'/> "
-                      flags="gm" />
-        <linecontains>
-          <!-- only keep the ant task -->
-          <contains value="&lt;replace " />
-        </linecontains>
-      </filterchain>
-
-      <footer filtering="no" trimleading="yes">
-          &lt;/target>
-        </footer>
-    </concat>
-
-    <!-- Pass 2: verify target and Ant footer -->
-    <concat append="true" destfile="${report.dir}/fix-permanently-moved.xml">
-      <fileset refid="files.reported.problems" />
-      <header filtering="no" trimleading="yes">
-        &lt;target name="test-changes">
-        &lt;touch file="timestamp"/>
-        </header>
-
-      <filterchain>
-        <linecontains negate="true">
-          <!-- Orcale tries to direct people to their landing pages, which is annoying.
-          So keep the old URLs (which have more info) until someone fixes it manually.
-           -->
-          <contains value="http://www.oracle.com/technetwork/java/index.html" />
-          <contains value="http://www.oracle.com/technetwork/indexes/downloads/index.html" />
-        </linecontains>
-        <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) permanently moved to ([^ ]+?)$"
-                      replace="&lt;my-gete url='\3' file='\2' type='changeURL'/> "
-                      flags="gm" />
-        <linecontains>
-          <!-- only keep the ant task -->
-          <contains value="&lt;my-gete " />
-        </linecontains>
-      </filterchain>
-
-      <footer filtering="no" trimleading="yes">
-          &lt;/target>
-          &lt;/project>
-        </footer>
-    </concat>
-
-    <echo message="**********************************************" />
-    <echo>
-      Generated script ${report.dir}/fix-permanently-moved.xml
-
-      Please carefully verify the generated script
-      (which fixes URLs that claim to be permanently moved)
-      before you run it!
-   </echo>
-    <echo message="**********************************************" />
   </target>
 
 </project>
