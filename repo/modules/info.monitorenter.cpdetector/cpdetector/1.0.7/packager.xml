@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/binaries/${name}_${revision}_binary.zip" sha1="89a873a0f19fd5060febf19198d2ca1e3cf63ea8">
+        <include name="${name}_${revision}.jar"/>
+        <include name="ext/chardet.jar"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/sources/${name}_eclipse_project_${revision}.zip" sha1="31a2c5eb0dd1d1ba84e9454a964eec6439507559">
+        <include name="${name}/src/**/*"/>
+    </resource>
+<!--
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/javadoc/${name}-javadoc_${revision}.zip"
+      sha1="7e41f1f3babe7f792d07bf870f373e50c0daed28">
+        <include name="javadoc/**/*"/>
+    </resource>
+-->
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${name}_${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/ext/chardet.jar" tofile="artifacts/jars/chardet.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+<!--
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/javadoc"/>
+        </zip>
+-->
+    </build>
+</packager-module>
