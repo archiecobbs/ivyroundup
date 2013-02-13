@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="info.monitorenter.cpdetector" module="cpdetector" revision="1.0.7" status="release" publication="20080617000000">
+        <license name="Mozilla Public License, Version 1.1" url="http://www.mozilla.org/MPL/1.1/index.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2594 2013-02-13 23:23:43Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/info.monitorenter.cpdetector/cpdetector/1.0.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://cpdetector.sourceforge.net/index.shtml">
+
+            <p>
+            The name <b>cpdetector</b> is a short form for code
+            page - detector and has nothing to do with java classpaths.
+            <b>cpdetector</b> is a framework for configurable code
+            page-detection of documents. It may be used to detect
+            the code page of documents retrieved from remote hosts.
+            Code page - detection is needed whenever it is not
+            known, which encoding a document belongs to. Therefore
+            it is a core requirement for any application in the
+            field of information mining or just information retrieval.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="chardet"/>
+        <artifact name="source" type="source" ext="zip"/>
+<!--
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+-->
+    </publications>
+
+    <dependencies>
+        <dependency org="net.sourceforge.jargs" name="jargs" rev="1.0" conf="default-&gt;default"/>
+        <dependency org="org.antlr" name="antlr" rev="2.7+" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
