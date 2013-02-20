@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module rev="$Id$">
+
+    <info publication="20120629120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://99soft.github.com/guartz/">
+            <p>
+                Guartz is the Google Guice extension for Quartz.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Core classes"/>
+    </configurations>
+
+    <publications>
+        <artifact />
+        <artifact name="guartz-sources" type="source" ext="zip"/>
+        <artifact name="guartz-javadocs" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+		<dependency org="org.quartz" name="quartz" rev="2+" conf="default->core" />
+    </dependencies>
+
+</ivy-module>
