@@ -5,27 +5,11 @@
   <timestamp>2011-12-10 20:22:18 UTC</timestamp>
   <svnRevision>1820</svnRevision>
   <!-- cannot find the link to download this version -->
-  <org name="com.ibm.xml">
-    <mod name="thinclient">
-      <rev name="1.0.0.7"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version -->
+  <!-- It's gone. Version 3.0+ are available on maven central.
+       Someone should update this. -->
   <org name="com.twilio">
     <mod name="twilio-java">
       <rev name="2.0.9"/>
-    </mod>
-  </org>
-  <!-- depends on svnkit 1.3.2 which is on this list -->
-  <org name="fm.last">
-    <mod name="ivysvn">
-      <rev name="2.1.0"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version -->
-  <org name="it.unimi.dsi">
-    <mod name="fastutil">
-      <rev name="6.3"/>
     </mod>
   </org>
   <!-- cannot find the jars having right sha1sum -->
@@ -35,30 +19,19 @@
       <rev name="6.0"/>
    </mod>
   </org>
-  <!-- cannot find the link to download this version -->
-  <org name="javax.management">
-    <mod name="j2ee_management">
-      <rev name="1.0"/>
-    </mod>
-    <mod name="jmxremote">
-      <rev name="1.0.1_04"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version -->
+  <!-- cannot find download links -->
+  <!-- Only available in source code only, no binaries. Newer releases exist. 
+       Someone should update this. -->
   <org name="net.sourceforge.robocode">
     <mod name="robocode">
       <rev name="1.7.1.3"/>
-      <rev name="1.7.1.4-Beta"/>
       <rev name="1.7.2.1"/>
-    </mod>
-  </org>
-  <!-- depends on j2ee_management -->
-  <org name="org.apache.activemq">
-    <mod name="activemq">
-      <rev name="5.2.0"/>
+      <rev name="1.7.3.2"/>
     </mod>
   </org>
   <!-- cannot find the link to download this version -->
+  <!-- Only Available on maven central, but that jar looks completely different
+       from the one from described in packager.xml -->
   <org name="org.jets3t">
     <mod name="jets3t">
       <rev name="0.6.0"/>
@@ -103,33 +76,10 @@
       <rev name="0.20.0"/>
     </mod>
   </org>
-  <!-- fails to download from sourceforge.net -->
-  <org name="org.dbmaintain">
-    <mod name="dbmaintain">
-      <rev name="1.0.2"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version -->
-  <org name="org.eclipse">
-    <mod name="eclipselink">
-      <rev name="1.2.0"/>
-    <!--  <rev name="2.3.0"/> -->
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version --> 
-  <org name="org.hsqldb">
-    <mod name="hsqldb">
-      <rev name="2.1.0"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version --> 
+  <!-- cannot find the link to download this version 
+    See issue 375 https://code.google.com/p/ivyroundup/issues/detail?id=375
+  --> 
   <org name="org.jdesktop">
-    <mod name="appframework">
-      <rev name="1.0.3"/>
-    </mod>
-    <mod name="swingworker">
-      <rev name="1.2"/>
-    </mod>
     <mod name="timingframework">
       <rev name="1.0"/>
     </mod>
@@ -139,57 +89,9 @@
     <mod name="xmltooling">
       <rev name="1.3.2-1"/>
     </mod>
-    <!-- depends on org.owasp.esapi/esapi/2.0GA and org.apache.xerces/xerces/2.10.0
-         which are not in the repository -->
-    <mod name="opensaml">
-      <rev name="2.5.1-1"/>
-    </mod>
     <!-- depends on xmltooling which is on this list -->
     <mod name="openws">
       <rev name="1.4.2-1"/>
-    </mod>
-  </org>
-  <!-- depends on org.opensaml/opensaml/2.5.1-1 which is on this list -->
-  <org name="org.apache.ws.security">
-    <mod name="wss4j">
-      <rev name="1.6.3"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version --> 
-  <org name="org.primefaces">
-    <mod name="primefaces">
-      <rev name="2.2.M1"/>
-    </mod>
-  </org>
-  <!-- requires javax.management/jmxremote/1.0.1_04 which is on this list -->
-  <org name="org.springframework">
-    <mod name="spring">
-      <rev name="2.0.2"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version --> 
-  <org name="org.testng">
-    <mod name="testng">
-      <rev name="5.7"/>
-    </mod>
-  </org>
-  <!-- cannot find the link to download this version --> 
-  <org name="org.tigris.subversion">
-    <mod name="javahl">
-      <rev name="1.5.5"/>
-    </mod>
-  </org>
-  <!-- depends on com.svnkit/svnkit/1.2.+ which is on this list -->
-  <org name="org.tigris.subclipse">
-    <mod name="svn-client-adapter">
-      <rev name="0.9.4"/>
-    </mod>
-  </org>
-  <!-- fails to download archive -->
-  <org name="org.tigris.subclipse">
-    <mod name="svnant">
-      <rev name="1.2.1"/>
-      <rev name="1.3.0"/>
     </mod>
   </org>
   <!-- SHA1 sum changed ? -->
@@ -198,43 +100,10 @@
       <rev name="1.2.216"/>
     </mod>
   </org>
-  <!-- depends on javax.media/jai which is not in the repository -->
-  <org name="com.googlecode.jaitools">
-    <mod name="jaitools">
-      <rev name="1.1.1"/>
-    </mod>
-  </org>
   <!-- depends on org.codehaus.jra/jra which is not in the repository -->
   <org name="org.apache.cxf">
     <mod name="cxf-bundle">
       <rev name="2.4.3"/>
-    </mod>
-  </org>
-  <!-- depends on org.springframework/spring 2.0.2+ which is on this list -->
-  <org name="org.codehaus.perf4j">
-    <mod name="perf4j">
-      <rev name="0.9.16"/>
-    </mod>
-  </org>
-  <!-- depends on com.googlecode.jaitools/jaitools which is on this list -->
-  <org name="org.geotools">
-    <mod name="geotools">
-      <rev name="2.7.4"/>
-    </mod>
-  </org>
-  <!-- cannot find a download link -->
-  <org name="it.m2.net">
-    <mod name="nvtcom">
-      <rev name="1.02"/>
-    </mod>
-  </org>
-  <!-- cannot find download links -->
-  <org name="net.sourceforge.robocode">
-    <mod name="robocode">
-      <rev name="1.7.1.3"/>
-      <rev name="1.7.1.4-Beta"/>
-      <rev name="1.7.2.1"/>
-      <rev name="1.7.3.2"/>
     </mod>
   </org>
 </modules>
