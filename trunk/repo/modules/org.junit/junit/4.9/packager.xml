@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2008 Archie L. Cobbs
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,24 +19,12 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}${revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://cloud.github.com/downloads/KentBeck/junit/${archive}.zip" sha1="a2000fd60172eeb14d0a2e51732b51d7513f73e8">
-        <include name="${archive}/*.jar"/>
-        <include name="${archive}/javadoc/**/*"/>
-    </resource>
+    <m2resource groupId="junit">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="1013627e3993319870863a020034004717505815"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="b9f4021d0314ceb123cf28d5eac542343824bfe9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="84b903feddab2bd58f5ab2fc0c5c636df42df74d"/>
+    </m2resource>
 
-    <build>
-        <!-- jar -->
-        <move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${name}-dep-${revision}.jar" tofile="artifacts/jars/${name}-dep.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/${name}-${revision}-src.jar" tofile="artifacts/sources/${name}.zip"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/${name}.zip">
-            <fileset dir="archive/${archive}/javadoc"/>
-        </zip>
-    </build>
 </packager-module>

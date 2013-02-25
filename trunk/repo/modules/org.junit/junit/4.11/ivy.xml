@@ -2,6 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
     Copyright 2013 Steve Newson
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -20,14 +21,18 @@
 
     <info organisation="org.junit" module="junit" revision="4.11" status="release" publication="20121114120000">
         <license name="Common Public License, Version 1.0" url="http://opensource.org/licenses/cpl1.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2569 2013-02-04 14:37:34Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.junit/junit/4.11/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2603 2013-02-24 15:52:10Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.junit/junit/4.11/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://junit.sourceforge.net/">A Java unit testing framework.</description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit" ivyde:javadoc="junit"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="junit" ivyde:javadoc="junit" conf="default"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>
+    
+        <dependencies>
+        <dependency org="org.hamcrest" name="hamcrest-core" rev="[1.1,2.0[" conf="default-&gt;default"/>
+    </dependencies>
 </ivy-module>

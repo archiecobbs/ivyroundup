@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.antlr.org/download/${archive}.tar.gz" sha1="eae2161f8391104fdd407f44055cc2d7b6db0b56"/>
+    <resource url="http://www.antlr3.org/download/${archive}.tar.gz" sha1="eae2161f8391104fdd407f44055cc2d7b6db0b56"/>
 
     <build>
         <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
