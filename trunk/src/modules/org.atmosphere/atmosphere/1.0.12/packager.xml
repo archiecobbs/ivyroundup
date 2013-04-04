@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="atmosphere-annotations">
+        <artifact tofile="artifacts/jars/atmosphere-annotations.jar" sha1="95379169d07ce436f8855363559e375526c0b46f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-annotations.zip" sha1="5b4f85f3c1c01cd55518617bf18b353f764c11a8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-annotations.zip" sha1="379f859157924510f504d294bd930c4be522ecdc"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-cometd">
+        <artifact tofile="artifacts/jars/atmosphere-cometd.jar" sha1="ec258bc93bcea6b38b0060cb33e5dd9d23529da5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-cometd.zip" sha1="e0057542ffd1654c9041513c7d32cbf0091d3cdd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-cometd.zip" sha1="0011148885120c4072ae63a197586bf0da96041c"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-compat-jbossweb">
+        <artifact tofile="artifacts/jars/atmosphere-compat-jbossweb.jar" sha1="218f8c4da306d612570eb031b1fbb43dbed03fb5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-compat-jbossweb.zip" sha1="f92eef63f3c1f0b8bc45f90dea5c75a1f4ae8f98"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-compat-jbossweb.zip" sha1="241e8eb7556e42bac9a288cb08dd93b4154fa774"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-compat-tomcat">
+        <artifact tofile="artifacts/jars/atmosphere-compat-tomcat.jar" sha1="bb163ad1123151188550d66b4bd6c029d8382718"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-compat-tomcat.zip" sha1="9a8f1443a9879eef17976b29e1029d4d77f7b68d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-compat-tomcat.zip" sha1="d465de8c4c1bd6ae9fff0dcbc16a3b258b12c05e"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-compat-tomcat7">
+        <artifact tofile="artifacts/jars/atmosphere-compat-tomcat7.jar" sha1="bcd5ed4fc0b05c9afca08c9bec1c12c115847337"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-compat-tomcat7.zip" sha1="605cfc00183a3db37ca3fa293bfcc32a313633d5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-compat-tomcat7.zip" sha1="32ab0340cdaab074cf6c123ab33a6a151a839227"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-guice">
+        <artifact tofile="artifacts/jars/atmosphere-guice.jar" sha1="cb2cd391dc65bb81a9058c0c62eeacc9872bc2e5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-guice.zip" sha1="c1314f534f4e8a345079c3f34faa21a0e38bb386"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-guice.zip" sha1="f40d9e9af99584174bc3804d620f142ef3c88a5a"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-client">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-client.jar" sha1="7dccb8a8cf0ea04a6c5e4f22983aaa438629cdd9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-client.zip" sha1="137fc17a8923e412b048c69505bf28a03cda4c5d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-client.zip" sha1="83a092a3486083a908fe3093236be14e9b68edee"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-common">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-common.jar" sha1="1fabd14fcf2fcb0a2db789529bd9d72405937912"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-common.zip" sha1="434434318ba29917e830f7922e11451860d01352"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-common.zip" sha1="179729acf77b1dc3b39bea75ebf13e3454c83fc0"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-extra">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-extra.jar" sha1="6e588b77a89f7cb23b6ae440622058b0f9253e7b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-extra.zip" sha1="ce0f5c59f4066abfa31be4e7bb6dbb9b6f41bbd8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-extra.zip" sha1="21e4b193722d476f6628c787b3d4792d3c349501"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-jackson">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-jackson.jar" sha1="1ebf8e2f2f5f526700f5d52e1743dab094d29587"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-jackson.zip" sha1="b693c64c68bb7dca3a99ffdc11e0289d36f42d42"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-jackson.zip" sha1="ca05f68ca2d61a31264bdd5602d0cf3b6801b854"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-js">
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-js.zip" sha1="a6277f1c5164aafb9e68a5aa9f956d27f5e2d473"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-js.zip" sha1="8bb2ae88df8c44aa021f42f1df8232e01637fc24"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-poll">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-poll.jar" sha1="f3f6da70933fe2912b928d4b1a8b0b69c57f2692"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-poll.zip" sha1="fdba6a1622a1bb9fc2645b9f3d0f4b8ac0aa6944"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-poll.zip" sha1="67a5cab308ceeee8317bd142fee375e2c3e1d039"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-gwt-server">
+        <artifact tofile="artifacts/jars/atmosphere-gwt-server.jar" sha1="1258d3bbb58c178f1665025ac9ea15538d2c1966"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-gwt-server.zip" sha1="6610317ba56c7b4bcbeb0882d1a3d37449dafd74"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-gwt-server.zip" sha1="f79d68b265bcbc2e020194b3bac4ce305bcd0a41"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-hazelcast">
+        <artifact tofile="artifacts/jars/atmosphere-hazelcast.jar" sha1="a25da29f6c6847a31f87221ad54b43222142396b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-hazelcast.zip" sha1="5550b0d85086fee96d964fee89f9c8b07b4da8ca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-hazelcast.zip" sha1="82ffe742ba9242ae6c7bf384d7fe908e83761710"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-jersey">
+        <artifact tofile="artifacts/jars/atmosphere-jersey.jar" sha1="dac9e2d04123ca2ceb5370b9e389aa9735e3dccc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-jersey.zip" sha1="f4ca27b5e4476f6565ee807d137144c402247167"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-jersey.zip" sha1="45dea8bd5509e71647d32d12fcc3e29da1af912a"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-jetty-websocketdraft8">
+        <artifact tofile="artifacts/jars/atmosphere-jetty-websocketdraft8.jar" sha1="a55e5097cd872e7274c92d7a6be63af4ba30a06b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-jetty-websocketdraft8.zip" sha1="6c7c27cb53de2fc4518549f1270b2c83305d8f0e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-jetty-websocketdraft8.zip" sha1="fcae2439363269713c5b02c9004217a4d442e7be"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-jgroups">
+        <artifact tofile="artifacts/jars/atmosphere-jgroups.jar" sha1="d82be44a5dbf738b9a9b970c4f072267df0ad70b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-jgroups.zip" sha1="c37f83ae590ffeeed3de557c16002a459ae354de"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-jgroups.zip" sha1="98f9c6960901b4300b3b06c6bb2c98a37a33af52"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-jms">
+        <artifact tofile="artifacts/jars/atmosphere-jms.jar" sha1="3a30ea114454d4d37443b7b09b15ebbfabd2504e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-jms.zip" sha1="5ff91f3e7a345a4df71e34bf2d786241a7bc8a23"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-jms.zip" sha1="be015751ce04234deeafd1584d88a8133fb742e8"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-redis">
+        <artifact tofile="artifacts/jars/atmosphere-redis.jar" sha1="54a44ce7e27198baed4b673730cf0376c612b090"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-redis.zip" sha1="a34ef0da97afa514c24958424806505b3adc9bca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-redis.zip" sha1="e0aff7b00cb6f48a99145d20985ea12b39b5a492"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-runtime">
+        <artifact tofile="artifacts/jars/atmosphere-runtime.jar" sha1="02fb17fb2d3f0455788ef75b2a0c1a696e8a3d01"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-runtime.zip" sha1="903735e71e9d31997339aad8ea672cdbdde1c684"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-runtime.zip" sha1="3faae75acfcc8d81d074f38f86f17ee58bbf3684"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-socketio">
+        <artifact tofile="artifacts/jars/atmosphere-socketio.jar" sha1="6c8f46bc529732f830b5ed1616c30af5c814cf99"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-socketio.zip" sha1="20722a1d69d27f6483d1970948a5825099f03670"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-socketio.zip" sha1="b782cb0ee77ad31e8bcfca9cffb20d25a45b42cd"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-spring">
+        <artifact tofile="artifacts/jars/atmosphere-spring.jar" sha1="7ce3e3b3024cde5e48bba58046db2d47859b0a0a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-spring.zip" sha1="f4746be6fa51e60145f4bdab46a37712f44c8af5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-spring.zip" sha1="6dd0386d030a5d324a8c7a5b277837dfb7da276c"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-weblogic">
+        <artifact tofile="artifacts/jars/atmosphere-weblogic.jar" sha1="741af4fcb3a86c00389be3494f1786113934f0d5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-weblogic.zip" sha1="b4a4d469ee001778c48d6d168f8a1e4a4530ba55"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-weblogic.zip" sha1="4de98afd85b8a2b02673830b6baa07c6518a4f95"/>
+    </m2resource>
+    <m2resource artifactId="atmosphere-xmpp">
+        <artifact tofile="artifacts/jars/atmosphere-xmpp.jar" sha1="1fcb4dd09bcaffb3af9fc0185fbc3da2aa646369"/>
+        <artifact classifier="sources" tofile="artifacts/sources/atmosphere-xmpp.zip" sha1="fcc1b295352416becab33829739597b374914640"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/atmosphere-xmpp.zip" sha1="784d9e18f983c9f7efa70c61ff3564b541fe7e4a"/>
+    </m2resource>
+</packager-module>
