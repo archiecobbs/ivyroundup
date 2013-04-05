@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.lucene" module="lucene" revision="4.2.1" status="release" publication="20110604050800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2634 2013-04-05 16:56:18Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.lucene/lucene/4.2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://lucene.apache.org/">
+            Apache Lucene is a high-performance, full-featured text search engine library written
+            entirely in Java. It is a technology suitable for nearly any application that requires
+            full-text search, especially cross-platform.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="analyzers" extends="core" description="Lucene Common Analyzers"/>
+        <conf name="benchmark" extends="analyzers,highlighter,memory,facet,queryparser" description="Lucene Benchmarking Module"/>
+        <conf name="classification" extends="analyzers,queries" description="Lucene Classification"/>
+        <conf name="codecs" extends="core" description="Codecs and postings formats for Apache Lucene."/>
+        <conf name="core" description="Apache Lucene Java Core"/>
+        <conf name="facet" extends="analyzers" description="Package for Faceted Indexing and Search"/>
+        <conf name="grouping" extends="queries" description="Lucene Grouping Module"/>
+        <conf name="highlighter" extends="memory,queries" description="This is the highlighter for apache lucene java"/>
+        <conf name="icu" extends="analyzers" description="Provides integration with ICU (International Components for Unicode) for stronger Unicode and internationalization support."/>
+        <conf name="join" extends="grouping" description="Lucene Join Module"/>
+        <conf name="kuromoji" extends="analyzers" description="Lucene Kuromoji Japanese Morphological Analyzer"/>
+        <conf name="memory" extends="core" description="High-performance single-document index to compare against Query"/>
+        <conf name="misc" extends="analyzers" description="Miscellaneous Lucene extensions"/>
+        <conf name="morfologik" extends="analyzers" description="A dictionary-driven lemmatizer for Polish (includes morphosyntactic annotations)"/>
+        <conf name="phonetic" extends="core" description="Provides phonetic encoding via Commons Codec."/>
+        <conf name="queries" extends="core" description="Queries - various query object exotica not in core"/>
+        <conf name="queryparser" extends="queries,sandbox" description="This is the Flexible Query Parser for apache lucene java"/>
+        <conf name="sandbox" extends="core" description="Lucene Sandbox"/>
+        <conf name="smartcn" extends="analyzers" description="Lucene Smart Chinese Analyzer"/>
+        <conf name="spatial" extends="queries" description="Spatial search package"/>
+        <conf name="stempel" extends="analyzers" description="Stempel Analyzer"/>
+        <conf name="suggest" extends="analyzers" description="Lucene Suggest Module"/>
+        <conf name="test-framework" extends="codecs" description="Apache Lucene Java Test Framework"/>
+        <conf name="uima" extends="analyzers" description="Lucene Integration with UIMA for extracting metadata from arbitrary (text) fields and enrich document with features extracted from UIMA types (language, sentences, concepts, named entities, etc.)"/>
+        <conf name="default" extends="core" description="Alias for 'core'"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-common" ivyde:javadoc="lucene-analyzers-common" name="lucene-analyzers-common" conf="analyzers"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-icu" ivyde:javadoc="lucene-analyzers-icu" name="lucene-analyzers-icu" conf="icu"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-kuromoji" ivyde:javadoc="lucene-analyzers-kuromoji" name="lucene-analyzers-kuromoji" conf="kuromoji"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-morfologik" ivyde:javadoc="lucene-analyzers-morfologik" name="lucene-analyzers-morfologik" conf="morfologik"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-phonetic" ivyde:javadoc="lucene-analyzers-phonetic" name="lucene-analyzers-phonetic" conf="phonetic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-smartcn" ivyde:javadoc="lucene-analyzers-smartcn" name="lucene-analyzers-smartcn" conf="smartcn"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-stempel" ivyde:javadoc="lucene-analyzers-stempel" name="lucene-analyzers-stempel" conf="stempel"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers-uima" ivyde:javadoc="lucene-analyzers-uima" name="lucene-analyzers-uima" conf="uima"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-benchmark" ivyde:javadoc="lucene-benchmark" name="lucene-benchmark" conf="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-classification" ivyde:javadoc="lucene-classification" name="lucene-classification" conf="classification"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-codecs" ivyde:javadoc="lucene-codecs" name="lucene-codecs" conf="codecs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-core" ivyde:javadoc="lucene-core" name="lucene-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-facet" ivyde:javadoc="lucene-facet" name="lucene-facet" conf="facet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-grouping" ivyde:javadoc="lucene-grouping" name="lucene-grouping" conf="grouping"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-highlighter" ivyde:javadoc="lucene-highlighter" name="lucene-highlighter" conf="highlighter"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-join" ivyde:javadoc="lucene-join" name="lucene-join" conf="join"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-memory" ivyde:javadoc="lucene-memory" name="lucene-memory" conf="memory"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-misc" ivyde:javadoc="lucene-misc" name="lucene-misc" conf="misc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-queries" ivyde:javadoc="lucene-queries" name="lucene-queries" conf="queries"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-queryparser" ivyde:javadoc="lucene-queryparser" name="lucene-queryparser" conf="queryparser"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-sandbox" ivyde:javadoc="lucene-sandbox" name="lucene-sandbox" conf="sandbox"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-spatial" ivyde:javadoc="lucene-spatial" name="lucene-spatial" conf="spatial"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-suggest" ivyde:javadoc="lucene-suggest" name="lucene-suggest" conf="suggest"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-test-framework" ivyde:javadoc="lucene-test-framework" name="lucene-test-framework" conf="test-framework"/>
+
+        <!-- source -->
+        <artifact name="lucene-analyzers-common" type="source" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-analyzers-icu" type="source" ext="zip" conf="icu"/>
+        <artifact name="lucene-analyzers-kuromoji" type="source" ext="zip" conf="kuromoji"/>
+        <artifact name="lucene-analyzers-morfologik" type="source" ext="zip" conf="morfologik"/>
+        <artifact name="lucene-analyzers-phonetic" type="source" ext="zip" conf="phonetic"/>
+        <artifact name="lucene-analyzers-smartcn" type="source" ext="zip" conf="smartcn"/>
+        <artifact name="lucene-analyzers-stempel" type="source" ext="zip" conf="stempel"/>
+        <artifact name="lucene-analyzers-uima" type="source" ext="zip" conf="uima"/>
+        <artifact name="lucene-benchmark" type="source" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-classification" type="source" ext="zip" conf="classification"/>
+        <artifact name="lucene-codecs" type="source" ext="zip" conf="codecs"/>
+        <artifact name="lucene-core" type="source" ext="zip" conf="core"/>
+        <artifact name="lucene-facet" type="source" ext="zip" conf="facet"/>
+        <artifact name="lucene-grouping" type="source" ext="zip" conf="grouping"/>
+        <artifact name="lucene-highlighter" type="source" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-join" type="source" ext="zip" conf="join"/>
+        <artifact name="lucene-memory" type="source" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="source" ext="zip" conf="misc"/>
+        <artifact name="lucene-queries" type="source" ext="zip" conf="queries"/>
+        <artifact name="lucene-queryparser" type="source" ext="zip" conf="queryparser"/>
+        <artifact name="lucene-sandbox" type="source" ext="zip" conf="sandbox"/>
+        <artifact name="lucene-spatial" type="source" ext="zip" conf="spatial"/>
+        <artifact name="lucene-suggest" type="source" ext="zip" conf="suggest"/>
+        <artifact name="lucene-test-framework" type="source" ext="zip" conf="test-framework"/>
+
+        <!-- javadoc -->
+        <artifact name="lucene-analyzers-common" type="javadoc" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-analyzers-icu" type="javadoc" ext="zip" conf="icu"/>
+        <artifact name="lucene-analyzers-kuromoji" type="javadoc" ext="zip" conf="kuromoji"/>
+        <artifact name="lucene-analyzers-morfologik" type="javadoc" ext="zip" conf="morfologik"/>
+        <artifact name="lucene-analyzers-phonetic" type="javadoc" ext="zip" conf="phonetic"/>
+        <artifact name="lucene-analyzers-smartcn" type="javadoc" ext="zip" conf="smartcn"/>
+        <artifact name="lucene-analyzers-stempel" type="javadoc" ext="zip" conf="stempel"/>
+        <artifact name="lucene-analyzers-uima" type="javadoc" ext="zip" conf="uima"/>
+        <artifact name="lucene-benchmark" type="javadoc" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-classification" type="javadoc" ext="zip" conf="classification"/>
+        <artifact name="lucene-codecs" type="javadoc" ext="zip" conf="codecs"/>
+        <artifact name="lucene-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="lucene-facet" type="javadoc" ext="zip" conf="facet"/>
+        <artifact name="lucene-grouping" type="javadoc" ext="zip" conf="grouping"/>
+        <artifact name="lucene-highlighter" type="javadoc" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-join" type="javadoc" ext="zip" conf="join"/>
+        <artifact name="lucene-memory" type="javadoc" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="javadoc" ext="zip" conf="misc"/>
+        <artifact name="lucene-queries" type="javadoc" ext="zip" conf="queries"/>
+        <artifact name="lucene-queryparser" type="javadoc" ext="zip" conf="queryparser"/>
+        <artifact name="lucene-sandbox" type="javadoc" ext="zip" conf="sandbox"/>
+        <artifact name="lucene-spatial" type="javadoc" ext="zip" conf="spatial"/>
+        <artifact name="lucene-suggest" type="javadoc" ext="zip" conf="suggest"/>
+        <artifact name="lucene-test-framework" type="javadoc" ext="zip" conf="test-framework"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.ibm.icu" name="icu4j" rev="[0,)" conf="benchmark,icu-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-compress" rev="[0,)" conf="benchmark-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[0,)" conf="phonetic-&gt;default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[0,)" conf="benchmark-&gt;default"/>
+        <dependency org="org.apache.regexp" name="jakarta-regexp" rev="[0,)" conf="sandbox-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="[0,)" conf="test-framework-&gt;default"/>
+        <!--
+        <dependency org="com.carrotsearch.randomizedtesting" name="randomizedtesting-runner" rev="[0,)" conf="test-framework->default"/>
+        <dependency org="com.spatial4j" name="spatial4j" rev="[0,)" conf="spatial->default"/>
+        <dependency org="net.sourceforge.nekohtml" name="nekohtml" rev="[1.9.17,)" conf="benchmark->default"/>
+        <dependency org="org.carrot2" name="morfologik-polish" rev="[0,)" conf="morfologik->default"/>
+        <dependency org="org.apache.uima" name="Tagger" rev="[0,)" conf="uima->default"/>
+        <dependency org="org.apache.uima" name="WhitespaceTokenizer" rev="[0,)" conf="uima->default"/>
+        <dependency org="org.apache.uima" name="uimaj-core" rev="[0,)" conf="uima->default"/>
+        -->
+    </dependencies>
+
+</ivy-module>
