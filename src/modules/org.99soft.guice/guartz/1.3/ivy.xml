@@ -38,6 +38,7 @@
 
     <dependencies>
         <dependency org="org.quartz" name="quartz" rev="2+" conf="default->core" />
+        <dependency org="com.google" name="guice" rev="3+" conf="default->multibindings" />
     </dependencies>
 
 </ivy-module>
