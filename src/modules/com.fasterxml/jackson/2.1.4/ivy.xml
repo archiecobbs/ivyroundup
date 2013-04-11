@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20130226120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://wiki.fasterxml.com/JacksonHome">
+
+            <p>
+            Inspired by the quality and variety of XML tooling available for the Java platform (StAX, JAXB, etc.), the Jackson is a multi-purpose Java library for processing JSON data format. Jackson aims to be the best possible combination of fast, correct, lightweight, and ergonomic for developers.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Contains streaming parser, generator"/>
+        <conf name="annotations" extends="core" description="for annotation-based configuration"/>
+        <conf name="databind" extends="core" description="for data binding, tree model" />
+        <conf name="module-jaxb-annotations" extends="databind" description="Support for using JAXB annotations as an alternative to native Jackson annotations, for configuring data binding." />
+        <conf name="jaxrs-json-provider" extends="databind" description="Functionality to handle JSON input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding." />
+        
+
+        <!-- there are other more obscure add-on modules, that aren't yet configured -->
+
+        <conf name="default" extends="databind,annotations" description="Most common configuration of core, databind, and annotations."/>
+    </configurations>
+
+    <publications>
+        <artifact name="jackson-core" conf="core"/>
+        <artifact name="jackson-core-source" conf="core" type="source" ext="zip" />
+        <artifact name="jackson-core-javadoc" conf="core" type="javadoc" ext="zip" />
+
+        <artifact name="jackson-annotations" conf="annotations" />
+        <artifact name="jackson-annotations-source" conf="annotations" type="source" ext="zip" />
+        <artifact name="jackson-annotations-javadoc" conf="annotations" type="javadoc" ext="zip" />
+
+        <artifact name="jackson-databind" conf="databind" />
+        <artifact name="jackson-databind-source" conf="databind" type="source" ext="zip" />
+        <artifact name="jackson-databind-javadoc" conf="databind" type="javadoc" ext="zip" />
+
+        <artifact name="jackson-module-jaxb-annotations" conf="module-jaxb-annotations" />
+        <artifact name="jackson-module-jaxb-annotations-source" conf="module-jaxb-annotations" type="source" ext="zip" />
+        <artifact name="jackson-module-jaxb-annotations-javadoc" conf="module-jaxb-annotations" type="javadoc" ext="zip" />
+
+        <artifact name="jackson-jaxrs-json-provider" conf="jaxrs-json-provider" />
+        <artifact name="jackson-jaxrs-json-provider-source" conf="jaxrs-json-provider" type="source" ext="zip" />
+        <artifact name="jackson-jaxrs-json-provider-javadoc" conf="jaxrs-json-provider" type="javadoc" ext="zip" />
+
+    </publications>
+
+</ivy-module>
