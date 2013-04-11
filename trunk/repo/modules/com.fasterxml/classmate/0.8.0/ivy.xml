@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2011 Archie L. Cobbs
+    Copyright 2013 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,26 +18,24 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.ibm.xml" module="thinclient" revision="1.0.0.7" status="release" publication="20100817120000">
-        <license name="IBM Proprietary" url="http://www-142.ibm.com/software/products/us/en/xmlfp"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2647 2013-04-11 19:06:59Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.ibm.xml/thinclient/1.0.0.7/"/>
+    <info organisation="com.fasterxml" module="classmate" revision="0.8.0" status="release" publication="20121120000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2648 2013-04-11 22:41:53Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.fasterxml/classmate/0.8.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="http://www-142.ibm.com/software/products/us/en/xmlfp">
+        <description homepage="https://github.com/cowtowncoder/java-classmate">
 
             <p>
-            The WebSphere Application Server V7 Feature Pack for XML
-            provides application developers with support for the Worldwide
-            Web Consortium (W3C) XML standards XSLT 2.0, XPath 2.0, and
-            XQuery 1.0. These new and updated W3C XML standards enable
-            application developers with numerous advanced capabilities
-            for building XML applications.
+            ClassMate is a zero-dependency Java library for accurately introspecting type information,
+            including reliable resolution of generic type declarations for both classes ("types")
+            and members (fields, methods and constructors).
             </p>
 
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
