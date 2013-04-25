@@ -20,16 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://sqljet.com/files/${archive}-all.zip" sha1="fbd7f0d43161a6d71a2d6a5d90be9db454b6e05c"/>
-
-    <build>
-        <!-- jars -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-        <move file="archive/${archive}/${name}-browser-${revision}.jar" tofile="artifacts/jars/${name}-browser.jar"/>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.jar">
-            <fileset dir="archive/${archive}/src"/>
-        </zip>
-    </build>
+    <m2resource repo="http://maven.tmatesoft.com/content/repositories/releases/" groupId="org.tmatesoft.sqljet">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="a618a836eef5f88232a10675ce316ec0a9fa4e2b"/>
+        <artifact tofile="artifacts/sources/source.jar" sha1="6dc9a143a4c55d0946ecb2c639d4ccc9295be1ed" classifier="sources"/>
+    </m2resource>
 </packager-module>
