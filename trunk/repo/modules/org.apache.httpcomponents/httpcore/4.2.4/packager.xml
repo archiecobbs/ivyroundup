@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/httpcore.jar" sha1="3b7f38df6de5dd8b500e602ae8c2dd5ee446f883"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpcore.zip" sha1="c3ffe3a73348645042fb0b06303b6a3de194494e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpcore.zip" sha1="02cd904c31c7d05528aeb97b709fb781089fb4dd"/>
+    </m2resource>
+    <m2resource artifactId="httpcore-nio">
+        <artifact tofile="artifacts/jars/httpcore-nio.jar" sha1="78afeee7048b6f541f0b2290a926b2af5768410f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpcore-nio.zip" sha1="b21b69044df67888990e5ef60a3d51afc743be65"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpcore-nio.zip" sha1="d9e06aa039ff43ec2a85fe7789ab918332abd07e"/>
+    </m2resource>
+    <m2resource artifactId="httpcore-ab">
+        <artifact tofile="artifacts/jars/httpcore-ab.jar" sha1="31e8ef3890b7f99a0a44fa63b82e215c29c222b7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpcore-ab.zip" sha1="9be5c1e656a1e8282739d18c4e104692ddf95a8a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpcore-ab.zip" sha1="1ea3f541c79c632b1ddfd64c3f390319c070ac27"/>
+    </m2resource>
+</packager-module>
