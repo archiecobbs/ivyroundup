@@ -22,41 +22,43 @@
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://hc.apache.org/httpcomponents-core-ga/index.html">
         <p>
-	    HttpCore is a set of low level HTTP transport components
-	    that can be used to build custom client and server side
-	    HTTP services with a minimal footprint.
+            HttpCore is a set of low level HTTP transport components
+            that can be used to build custom client and server side
+            HTTP services with a minimal footprint.
         </p>
+
         <p>
-        HttpCore is a set of components implementing the most
-        fundamental aspects of the HTTP protocol that are
-        nonetheless sufficient to develop full-featured client-side
-        and server-side HTTP services with a minimal footprint.
+            HttpCore is a set of components implementing the most
+            fundamental aspects of the HTTP protocol that are
+            nonetheless sufficient to develop full-featured client-side
+            and server-side HTTP services with a minimal footprint.
         </p>
+
         <p>
-        HttpCore has the following scope and goals:
-        <ol>
-        <li>HttpCore Scope
-            <ul>
-                <li>A consistent API for building client / proxy / server side HTTP services</li>
-                <li>A consistent API for building both synchronous and asynchronous HTTP services</li>
-                <li>A set of low level components based on blocking (classic) and non-blocking (NIO) I/O models</li>
-            </ul>
-        </li>
-        <li>HttpCore Goals
-            <ul>
-                <li>Implementation of the most fundamental HTTP transport aspects</li>
-                <li>Balance between good performance and the clarity and expressiveness of API</li> 
-                <li>Small (predictable) memory footprint</li>
-                <li>Self contained library (no external dependencies beyond JRE)</li>
-            </ul>
-        </li>
-        <li>What HttpCore is NOT
-            <ul>
-                <li>A replacement for HttpClient</li>
-                <li>A replacement for a Servlet container or a competitor to the Servlet API</li>
-            </ul>
-        </li>
-        </ol>
+            HttpCore has the following scope and goals:
+            <ol>
+            <li>HttpCore Scope
+                <ul>
+                    <li>A consistent API for building client / proxy / server side HTTP services</li>
+                    <li>A consistent API for building both synchronous and asynchronous HTTP services</li>
+                    <li>A set of low level components based on blocking (classic) and non-blocking (NIO) I/O models</li>
+                </ul>
+            </li>
+            <li>HttpCore Goals
+                <ul>
+                    <li>Implementation of the most fundamental HTTP transport aspects</li>
+                    <li>Balance between good performance and the clarity and expressiveness of API</li> 
+                    <li>Small (predictable) memory footprint</li>
+                    <li>Self contained library (no external dependencies beyond JRE)</li>
+                </ul>
+            </li>
+            <li>What HttpCore is NOT
+                <ul>
+                    <li>A replacement for HttpClient</li>
+                    <li>A replacement for a Servlet container or a competitor to the Servlet API</li>
+                </ul>
+            </li>
+            </ol>
         </p>
         </description>
     </info>
