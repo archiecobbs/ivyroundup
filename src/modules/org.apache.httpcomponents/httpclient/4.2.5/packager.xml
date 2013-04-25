@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource>
+        <artifact tofile="artifacts/jars/httpclient.jar" sha1="666e26e76f2e87d84e4f16acb546481ae1b8e9a6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpclient.zip" sha1="55d345272944d7e8dace47925336a3764ee0e24b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpclient.zip" sha1="60d79e30fab915c656f82ee36a42257c710b1aa7"/>
+    </m2resource>
+    <m2resource artifactId="httpmime">
+        <artifact tofile="artifacts/jars/httpmime.jar" sha1="412b9914d0adec6d5716df1ada8acbc4f6f2dd37"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpmime.zip" sha1="c07ce7f6b153284a9ebaf58532c2442200cf3aa2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpmime.zip" sha1="11006ab5872bd8e18802ac3ce75b81d66f214f13"/>
+    </m2resource>
+    <m2resource artifactId="httpclient-cache">
+        <artifact tofile="artifacts/jars/httpclient-cache.jar" sha1="971dc8dcc4f58b114d043d61e275db44833e4ba2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpclient-cache.zip" sha1="0fb9e8ff8288b11f64add27dd92f20236b3beaa7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/httpclient-cache.zip" sha1="8dc4f532d7752a8ee49e19f068ef36cd3d74a716"/>
+    </m2resource>
+    <m2resource artifactId="fluent-hc">
+        <artifact tofile="artifacts/jars/fluent-hc.jar" sha1="c79a222b637555b569f7c57da551caa230d4fdb2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/fluent-hc.zip" sha1="73e1c6fada9ec69dd75175a3c20ec46bc07a58b8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/fluent-hc.zip" sha1="4e9e5e624bdb4ac01c36e295ff2503d5d4ff1c8f"/>
+    </m2resource>
+</packager-module>
