@@ -156,7 +156,7 @@
         <dependency org="org.cometd.java" name="cometd" rev="[2.4.3,)" conf="cometd->websocket,annotations"/>
         <dependency org="com.hazelcast" name="hazelcast" rev="[1.9.4.6,)" conf="hazelcast->default"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,)" conf="jgroups->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="[1.6.1,)" conf="gwt->core"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.1,)" conf="runtime->core"/>
         <!-- optional
         <dependency org="eu.infomas" name="annotation-detector" rev="[3.0.0,)" conf="runtime->default"/>
         -->
