@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20130709171142">
+        <license name="New BSD License" url="http://opensource.org/licenses/BSD-3-Clause"/>
+        <description homepage="http://code.google.com/p/hamcrest/">Library of matchers for building test expressions.</description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Hamcrest core classes"/>
+        <conf name="library" extends="core" description="Hamcrest core classes and matcher library"/>
+        <conf name="default" extends="core,library" description="Hamcrest core classes and matcher library"/>
+        <conf name="integration" extends="core,library" description="Hamcrest test framework integration"/>
+        <conf name="generator" description="Hamcrest code generator"/>
+    </configurations>
+
+    <publications>
+        <artifact name="hamcrest-core" conf="core"/>
+        <artifact name="hamcrest-library" conf="library"/>
+        <artifact name="hamcrest-integration" conf="integration"/>
+        <artifact name="hamcrest-generator" conf="generator"/>
+
+        <artifact name="hamcrest-core" conf="core" type="source" ext="jar"/>
+        <artifact name="hamcrest-library" conf="library" type="source" ext="jar"/>
+        <artifact name="hamcrest-integration" conf="integration" type="source" ext="jar"/>
+        <artifact name="hamcrest-generator" conf="generator" type="source" ext="jar"/>
+
+        <artifact name="hamcrest-core" conf="core" type="javadoc" ext="jar"/>
+        <artifact name="hamcrest-library" conf="library" type="javadoc" ext="jar"/>
+        <artifact name="hamcrest-integration" conf="integration" type="javadoc" ext="jar"/>
+        <artifact name="hamcrest-generator" conf="generator" type="javadoc" ext="jar"/>
+    </publications>
+
+</ivy-module>
