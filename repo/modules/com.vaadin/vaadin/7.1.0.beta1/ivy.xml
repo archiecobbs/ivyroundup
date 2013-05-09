@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.1.0.beta1" status="release" publication="20130503000000">
         <license name="Apache License, Version 2.0" url="https://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2673 2013-05-07 22:18:54Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0.beta1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2681 2013-05-09 18:46:40Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0.beta1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://vaadin.com/home">
 
@@ -105,6 +105,8 @@
         <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
         <dependency org="org.jsoup" name="jsoup" rev="1.7+" conf="server-&gt;default"/>
         <dependency org="org.apache.ant" name="ant" rev="1.8+" conf="widget-compiler-&gt;default"/>
+        <dependency org="org.apache.tapestry" name="tapestry" rev="4.0.2" conf="widget-compiler-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3.4.4" conf="widget-compiler-&gt;default"/>
     </dependencies>
 
 </ivy-module>
