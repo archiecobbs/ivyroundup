@@ -31,6 +31,8 @@
 
       This target remembers the modules successfully verified, subsequent invocations
       will skip these modules. Use target clean-check to restart from scratch.
+      
+      You may set property crawler.disabled to disable network acces for testing.
   -->
   <target name="check-report"
           depends="-crawl"
@@ -101,8 +103,7 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
   -->
   <target name="-crawl"
           depends="-init-check-crawler"
-          unless="report-raw.uptodate"
-          description="Verify every artifact and homepage URL and generate a raw report">
+          unless="report-raw.uptodate">
     <echo>Visiting all URLs...
       ... This may take up to 10 minutes to complete.
       NOTE: Subsequent invocations will skip URLs found to be valid.
@@ -117,15 +118,13 @@ Sorry, disabled Don't know how to write a regex that matches a group of lines th
 
   <!-- Create an ant build that does the verification work -->
   <target name="-init-check-crawler"
-          depends="-crawler.uptodate,_init-xalan"
-          unless="crawler.uptodate"
-          description="Create an ant build that does the verification work">
+          depends="-crawler.uptodate"
+          unless="crawler.uptodate">
     <!-- Initialize  work area   -->
     <mkdir dir="${report.work.dir}" />
 
     <property name="batch.cnt" value="10" />
-    <xslt classpathref="xalan.classpath"
-          style="src/xsl/verify-url.xsl"
+    <xslt style="src/xsl/verify-url.xsl"
           in="${target.repo}/modules.xml"
           out="${report.work.dir}/build.xml"
       	  force="true">
