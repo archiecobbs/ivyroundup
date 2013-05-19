@@ -24,22 +24,25 @@
     <property name="src" value="${name}-src-${revision}"/>
     <property name="doc" value="${name}-docs-${revision}"/>
 
-    <resource url="http://archive.apache.org/dist/xmlgraphics/batik/${bin}.zip"
+    <property name="mirror1" value="http://www.apache.org/dist"/>
+    <property name="backup" value="http://archive.apache.org/dist"/>
+
+    <resource url="${mirror1}/xmlgraphics/batik/${bin}.zip"
       sha1="69d974ab0a4e13cbdd649fa96785776563b73fcf">
-        <url href="http://apache.mirror.clusters.cc/xmlgraphics/batik/${bin}.zip"/>
+        <url href="${backup}/xmlgraphics/batik/${bin}.zip"/>
         <include name="${name}-${revision}/*.jar"/>
         <include name="${name}-${revision}/lib/*.jar"/>
     </resource>
-    <resource url="http://archive.apache.org/dist/xmlgraphics/batik/${src}.zip"
+    <resource url="${mirror1}/xmlgraphics/batik/${src}.zip"
       sha1="806f57b0200cc755903c2f6f55463f0dd5f6f7d6">
-        <url href="http://apache.mirror.clusters.cc/xmlgraphics/batik/${src}.zip"/>
+        <url href="${backup}/xmlgraphics/batik/${src}.zip"/>
         <include name="${name}-${revision}/sources/**/*"/>
         <include name="${name}-${revision}/sources-1.4/**/*"/>
         <include name="${name}-${revision}/resources/**/*"/>
     </resource>
-    <resource url="http://archive.apache.org/dist/xmlgraphics/batik/${src}.zip"
+    <resource url="${mirror1}/xmlgraphics/batik/${src}.zip"
       sha1="180715cd140efd33934684442ee6142f10d0c49c">
-        <url href="http://apache.mirror.clusters.cc/xmlgraphics/batik/${doc}.zip"/>
+        <url href="${backup}/xmlgraphics/batik/${doc}.zip"/>
     </resource>
 
     <build>
