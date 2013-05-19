@@ -22,11 +22,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://jwebsocket.org/files/jWebSocket-${revision}/jWebSocketServer-${revision}.zip"
+    <resource url="http://jwebsocket.googlecode.com/files/jWebSocketServer-${revision}.zip"
         sha1="1392a4c7702c4c3bc993d087fa4e426e29749e01"/>
-    <resource url="http://jwebsocket.org/files/jWebSocket-${revision}/jWebSocketClient-${revision}.zip"
+    <resource url="http://jwebsocket.googlecode.com/files/jWebSocketClient-${revision}.zip"
         sha1="5dee34ab9e710e15efb3b180765f22bbb2a7de12"/>
-    <resource url="http://jwebsocket.org/files/jWebSocket-${revision}/jWebSocketFullSources-${revision}.zip"
+    <resource url="http://jwebsocket.googlecode.com/files/jWebSocketFullSources-${revision}.zip"
         sha1="782c465b8a0aa9f0359f3c674590e384bf02b2c3"/>
 
     <build>
