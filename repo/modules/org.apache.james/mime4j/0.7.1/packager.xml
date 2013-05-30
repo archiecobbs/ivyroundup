@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <property name="mirror1" value="http://apache.mirror.clusters.cc"/>
+    <property name="mirror1" value="http://www.apache.org/dist"/>
     <property name="backup" value="http://archive.apache.org/dist"/>
 
     <resource url="${mirror1}/james/mime4j/${archive}-bin.tar.gz" sha1="0de022b6e26fd7a9bbc3d1b0d29468e3d417c5d9">
