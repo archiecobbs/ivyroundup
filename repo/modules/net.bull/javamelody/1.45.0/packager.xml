@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <property name="name" value="${ivy.packager.module}"/>
+    <m2resource groupId="net/bull/${name}" artifactId="${name}-core">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="6f105e60533df6f418578fd9a679d3b5370febef"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="d6dfed8f0906a73c0afaab97ed72f2ac3ced779a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="dfe1abba1230f345b8f68d5c3b2302eba760a492"/>
+    </m2resource>
+</packager-module>
