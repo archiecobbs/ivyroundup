@@ -161,6 +161,11 @@
                 <xsl:with-param name="msg" select="'&lt;description&gt; element has no &quot;homepage&quot; attribute'"/>
             </xsl:call-template>
         </xsl:if>
+        <xsl:if test="@homepage = 'http://www.example.com/'">
+            <xsl:call-template name="error">
+                <xsl:with-param name="msg" select="concat('&quot;homepage&quot; attribute still contains default URL &quot;', @homepage, '&quot;')"/>
+            </xsl:call-template>
+        </xsl:if>
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
