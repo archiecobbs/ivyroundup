@@ -20,7 +20,7 @@
 
     <info organisation="org.rendersnake" module="rendersnake" revision="1.7.1" status="release" publication="20121016120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2581 2013-02-07 18:02:38Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.rendersnake/rendersnake/1.7.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2722 2013-06-15 14:46:43Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.rendersnake/rendersnake/1.7.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/rendersnake/">
 
@@ -42,7 +42,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.commons" name="commons-lang" rev="3.0.1" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang3" rev="[3.1,)" conf="default-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-io" rev="2.0.1" conf="default-&gt;default"/>
     </dependencies>
 
