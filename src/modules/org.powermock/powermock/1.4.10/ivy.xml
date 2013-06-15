@@ -152,7 +152,7 @@
         <dependency org="org.mockito" name="mockito" rev="[1.8.5,)" conf="api-mockito->default"/>
         <dependency org="org.easymock" name="easymock" rev="[3.0,)" conf="api-easymock->default"/>
         <dependency org="org.springframework" name="spring" rev="3.0+" conf="spring-mockito->core,context,test"/>
-        <dependency org="org.apache.commons" name="commons-lang" rev="[2.6,)" conf="spring-mockito->default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.6,3.0[" conf="spring-mockito->default"/>
     </dependencies>
 
 </ivy-module>
