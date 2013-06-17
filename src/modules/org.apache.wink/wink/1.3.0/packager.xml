@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <property name="name" value="${ivy.packager.module}"/>
+	<property name="org" value="${ivy.packager.organisation}"/>
+
+    <m2resource groupId="${org}" artifactId="${name}-client">
+        <artifact tofile="artifacts/jars/${name}-client.jar" sha1="c0a7416b12990b2ee11a5693d59236b680b86664"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-client.zip" sha1="1aebd200fe3abe1abdb3dd0b396bcca51aab73dd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-client.zip" sha1="96cfd536d45ead109c9599a2e5e2f67ab7fa17f3"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-server">
+        <artifact tofile="artifacts/jars/${name}-server.jar" sha1="3f7d18ca57756bca5df4cf2e10bb64da521c2208"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-server.zip" sha1="d3046731b696b66d01cde6d4c9b2b5fbf0f610d3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-server.zip" sha1="35e7badc9a5975dae554513b9c1ca12eb3ed9f19"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-common">
+        <artifact tofile="artifacts/jars/${name}-common.jar" sha1="25d8dc8d4357c2c1e156ca9010e2f8d121401eea"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-common.zip" sha1="b91a749d3476ac395c7925c7f8700c0de48d57eb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-common.zip" sha1="fd5ea21df2edcd93ac8a2b4f1523d7dcabda8c52"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-webdav">
+        <artifact tofile="artifacts/jars/${name}-webdav.jar" sha1="78da03985750fe032b3b16916010676e478c9cc5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-webdav.zip" sha1="433b27306c6fb457597ce03402fb69aa8fa9f448"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-webdav.zip" sha1="dca76197d67640a02b940640a128ab6eea031e79"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-spring-support">
+        <artifact tofile="artifacts/jars/${name}-spring-support.jar" sha1="24e43187d772b53064f7667b3e716a8d6cdb451c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-spring-support.zip" sha1="24a8d56dc2eca68abacc40882bcf0929996af0a3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-spring-support.zip" sha1="00e5adc54dd37ae11737bc8cf3246fe5d164d110"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-jackson-provider">
+        <artifact tofile="artifacts/jars/${name}-jackson-provider.jar" sha1="db4a2d02072326ba1eaa4a837f25593f25277fe1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-jackson-provider.zip" sha1="cf4e9fc3f3dd635097a135d2df2f410dac387f54"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-jackson-provider.zip" sha1="5c0227a26a764fde582f3af89d3a6d48ffd83ab5"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-jettison-provider">
+        <artifact tofile="artifacts/jars/${name}-jettison-provider.jar" sha1="a967766b9a28ebdc95d99ddead9cb0b8619ed3ae"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-jettison-provider.zip" sha1="af606b2ec7a09ef1dd8afa3f7126efeba2afa9be"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-jettison-provider.zip" sha1="e6ebc98534c6184b142873dc91c329427d105d05"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-json-provider">
+        <artifact tofile="artifacts/jars/${name}-json-provider.jar" sha1="692c367d7322ee85edd6add258f50fcc44ffb3f9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-json-provider.zip" sha1="68bd03145bcdd0fefb87919f762eda5a251be14e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-json-provider.zip" sha1="82867338bddfbafac80f1f7e4648493a5295e360"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-json4j-provider">
+        <artifact tofile="artifacts/jars/${name}-json4j-provider.jar" sha1="eca465446499558d10b7f41bd73005c57551e55b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-json4j-provider.zip" sha1="dfda0bba5bea1a1c8277b85b583fd3227f84f10c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-json4j-provider.zip" sha1="681f9769820553111a2e0b99701528c941b18160"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-json4j">
+        <artifact tofile="artifacts/jars/${name}-json4j.jar" sha1="8e5e8628c2a6cdffcf7504ac3c39a0dfe5088ec5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-json4j.zip" sha1="3de688d0e19f15f053551038f813ebc7663fc118"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-json4j.zip" sha1="f10960b6a6c256d8a2da292761d635d6e85748c3"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-protobuf-provider">
+        <artifact tofile="artifacts/jars/${name}-protobuf-provider.jar" sha1="22ae61f2c542a482527142276b1acbc13a416b1a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-protobuf-provider.zip" sha1="5856cf71cfd548ada0af6a7987953cd993363f0a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-protobuf-provider.zip" sha1="63e06d2902bb0e9a068fb36f81b7735192eb823e"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-thrift-provider">
+        <artifact tofile="artifacts/jars/${name}-thrift-provider.jar" sha1="58d2caea892de76a72fd1ba3bfd951b66ff3a0f1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-thrift-provider.zip" sha1="a7182420c900aeb63e858aba3ad91b2f3aed89bd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-thrift-provider.zip" sha1="6ea1f00c4576266702377d8e023ce33a6838cbb3"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-abdera-provider">
+        <artifact tofile="artifacts/jars/${name}-abdera-provider.jar" sha1="2c2e535d0c7909de68e90350a4ec437a76238f0e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-abdera-provider.zip" sha1="b9f88453f93d1a5ec1aa0ff4bb5e5eb0452e107c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-abdera-provider.zip" sha1="8e195882e3d7f7240d4bc0843dbcce9cb5ad082d"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-client-apache-httpclient">
+        <artifact tofile="artifacts/jars/${name}-client-apache-httpclient.jar" sha1="78d985cc4ddafa52b4aa9f979983d6ea5e9c0ace"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-client-apache-httpclient.zip" sha1="16c2e35648abe8ef827403091e667b4ed36486a9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-client-apache-httpclient.zip" sha1="3bf419c1f3c3d214999a6129f786b7c346b23f00"/>
+    </m2resource>
+    <m2resource groupId="${org}" artifactId="${name}-client-asynchttpclient">
+        <artifact tofile="artifacts/jars/${name}-client-asynchttpclient.jar" sha1="573f588a9355200c14c7571962904a18d1d8c3c4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-client-asynchttpclient.zip" sha1="dedaa0c41871d13f309a503be1df84c4f73e2e8f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-client-asynchttpclient.zip" sha1="b6acaaf8451ea9e1758d58c80babebd400701333"/>
+    </m2resource>
+</packager-module>
