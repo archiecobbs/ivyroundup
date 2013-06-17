@@ -15,10 +15,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="_rev" value="1_0_2"/>
-
-    <resource url="file:///${java.io.tmpdir}/${name}-${_rev}/${name}.jar" tofile="artifacts/jars/${name}.jar" sha1="348fff97c4354fd58110dd1e81ebcd48146d1da9"/>
-
+    <m2resource groupId="com.sun.xml.stream">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="348fff97c4354fd58110dd1e81ebcd48146d1da9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="d0c23491bfb187a42caa7ab5ec9df9d7c25a8f47"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="0d7a88a0cdc35cce3d1b90022045e4894ec3384b"/>
+    </m2resource>
 </packager-module>
