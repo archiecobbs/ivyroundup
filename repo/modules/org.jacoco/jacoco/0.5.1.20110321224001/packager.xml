@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/project/eclemma/07_JaCoCo/0.5.1/${name}-${revision}.zip" sha1="4499ae99a726bfcc5711d079c8ff86c38731c1f0"/>
+    <resource dest="archive/${archive}" url="http://mirrors.ibiblio.org/maven2/org/jacoco/${name}/${revision}/${name}-${revision}.zip" sha1="4499ae99a726bfcc5711d079c8ff86c38731c1f0"/>
 
 
     <build>
