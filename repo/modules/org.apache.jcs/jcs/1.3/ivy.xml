@@ -20,7 +20,7 @@
 
     <info organisation="org.apache.jcs" module="jcs" revision="1.3" status="release" publication="20070605120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2391 2012-11-27 20:23:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.jcs/jcs/1.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id$" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.jcs/jcs/1.3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://commons.apache.org/jcs/">
 JCS is a distributed caching system written in java. It is intended to speed up applications by providing a means to manage cached data of various dynamic natures. Like any caching system, JCS is most useful  for high read, low put applications. Latency times drop sharply and bottlenecks move away from the database in an effectively cached system. 
