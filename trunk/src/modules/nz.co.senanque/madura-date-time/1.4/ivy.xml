@@ -28,12 +28,12 @@
         <artifact name="MaduraDateTime" type="doc" ext="pdf" conf="default"/>
     </publications>
     <dependencies>
-        <dependency org="org.jdom" name="jdom" rev="1.1"/>
+        <dependency org="org.jdom" name="jdom" rev="1.1" conf="default->default"/>
         <dependency org="org.springframework" name="spring" rev="3.0.6" conf="default->context">
             <exclude org="javax.jms" ext="jms"/>
             <exclude org="org.apache.commons" module="commons-logging" ext="*"/>
         </dependency>
-  <dependency org="org.apache.commons" name="commons-beanutils" rev="1.8.0" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.8.0" conf="default->default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->jcl-migration"/> 
         <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default->core"/> 
         <exclude org="commons-logging" ext="*"/> <!-- ensures any logging can be used (log4j, logback etc) -->
