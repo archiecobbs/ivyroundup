@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
-    Copyright 2010 Roger Parkinson
+    Copyright 2011 Roger Parkinson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -15,14 +14,13 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
 <packager-module rev="$Id$">
 
     <property name="download.name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://maduraconfiguration.googlecode.com/files/${download.name}-${revision}.zip" sha1="b4371f578ba241478672056a0b5fb28da3ede3e3"/>
+    <resource url="file:///${java.io.tmpdir}/${download.name}-${revision}.zip" sha1="314a878c00616c1eb25f8e41b3061f14832b34a7"/>
 
     <build>
 
@@ -46,7 +44,7 @@
             -->
         </zip>
         <mkdir dir="artifacts/docs"/>
-        <move file="archive/MaduraConfiguration.pdf" tofile="artifacts/docs/MaduraConfiguration.pdf"/>
+        <move file="archive/MaduraRules.pdf" tofile="artifacts/docs/MaduraRules.pdf"/>
         
     </build>
 </packager-module>
