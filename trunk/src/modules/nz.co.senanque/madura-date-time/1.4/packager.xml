@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://maduraconfiguration.googlecode.com/files/${download.name}-${revision}.zip" sha1="b4371f578ba241478672056a0b5fb28da3ede3e3"/>
+    <resource url="http://madura-date-time.googlecode.com/files/${download.name}-${revision}.zip" sha1="c0238e11869530c35987fc43b67c297b53dae0a4"/>
 
     <build>
 
@@ -46,7 +46,7 @@
             -->
         </zip>
         <mkdir dir="artifacts/docs"/>
-        <move file="archive/MaduraConfiguration.pdf" tofile="artifacts/docs/MaduraConfiguration.pdf"/>
+        <move file="archive/MaduraDateTime.pdf" tofile="artifacts/docs/MaduraDateTime.pdf"/>
         
     </build>
 </packager-module>
