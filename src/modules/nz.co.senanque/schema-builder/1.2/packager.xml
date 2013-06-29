@@ -18,35 +18,36 @@
 
 <packager-module rev="$Id$">
 
-    <property name="name" value="${ivy.packager.module}"/>
+    <property name="download.name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.zip"
-      sha1="d4812ecd504caa6f3a258ae1f08030492b246538"/>
+    <resource url="http://schema-builder.googlecode.com/files/${download.name}-${revision}.zip" sha1="a69981a7b4cb565ea0aee6fea750c6be4473ab98"/>
 
     <build>
 
         <!-- jar -->
-        <move file="archive/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${download.name}-${revision}.jar" tofile="artifacts/jars/${download.name}.jar"/>
 
         <!-- javadoc -->
         <mkdir dir="javadoc"/>
-        <unzip src="archive/${name}-javadocs-${revision}.zip" dest="javadoc"/>
-        <zip destfile="artifacts/javadocs/javadoc.zip">
+        <unzip src="archive/${download.name}-javadocs-${revision}.zip" dest="javadoc"/>
+        <zip destfile="artifacts/javadocs/${download.name}-javadoc.zip">
             <fileset dir="javadoc"/>
         </zip>
-
         <!-- source -->
         <mkdir dir="source"/>
-        <unzip src="archive/${name}-source-${revision}.zip" dest="source"/>
-        <zip destfile="artifacts/sources/source.zip">
+        <unzip src="archive/${download.name}-source-${revision}.zip" dest="source"/>
+        <zip destfile="artifacts/sources/${download.name}-source.zip">
             <fileset dir="source/src"/>
+            <!--
             <fileset dir="source/docs"/>
             <fileset dir="source/test"/>
+            -->
         </zip>
         <mkdir dir="artifacts/docs"/>
         <move file="archive/SchemaBuilder.pdf" tofile="artifacts/docs/SchemaBuilder.pdf"/>
+        
     </build>
-
 </packager-module>
 
