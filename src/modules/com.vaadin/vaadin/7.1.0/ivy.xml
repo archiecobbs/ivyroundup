@@ -101,14 +101,24 @@
         <artifact name="widgets" conf="widgets"/>
 
         <artifact name="themes" conf="themes"/>
+
+        <!-- Vaadin custom/fixed versions: see http://dev.vaadin.com/ticket/11898 -->
+        <artifact name="atmosphere-runtime" conf="push"/>
+        <artifact name="atmosphere-compat-tomcat" conf="push"/>
+        <artifact name="atmosphere-compat-tomcat7" conf="push"/>
+        <artifact name="atmosphere-compat-jbossweb" conf="push"/>
     </publications>
 
     <dependencies>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="shared-&gt;default"/>
         <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
         <dependency org="org.jsoup" name="jsoup" rev="1.7+" conf="server-&gt;default"/>
         <dependency org="org.apache.ant" name="ant" rev="1.8+" conf="widget-compiler-&gt;default"/>
         <dependency org="org.apache.tapestry" name="tapestry" rev="4.0.2" conf="widget-compiler-&gt;default"/>
         <dependency org="org.eclipse" name="jdt" rev="3.4.4" conf="widget-compiler-&gt;default"/>
+    <!--
+        <dependency force="true" org="org.atmosphere" name="atmosphere" rev="1.0.13" conf="push->runtime"/>
+    -->
     </dependencies>
 
 </ivy-module>
