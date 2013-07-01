@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.1.0" status="release" publication="20130627000000">
         <license name="Apache License, Version 2.0" url="https://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id$" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2740 2013-07-01 18:56:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://vaadin.com/home">
 
@@ -82,9 +82,11 @@
         <artifact name="server" conf="server" type="source" ext="zip"/>
         <artifact name="server" conf="server" type="javadoc" ext="zip"/>
 
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="push" ivyde:javadoc="push" name="push" conf="push"/>
+        <artifact name="push" conf="push"/>
+    <!--
         <artifact name="push" conf="push" type="source" ext="zip"/>
         <artifact name="push" conf="push" type="javadoc" ext="zip"/>
+    -->
 
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="widget-compiler" ivyde:javadoc="widget-compiler" name="widget-compiler" conf="widget-compiler"/>
         <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
@@ -99,14 +101,24 @@
         <artifact name="widgets" conf="widgets"/>
 
         <artifact name="themes" conf="themes"/>
+
+        <!-- Vaadin custom/fixed versions: see http://dev.vaadin.com/ticket/11898 -->
+        <artifact name="atmosphere-runtime" conf="push"/>
+        <artifact name="atmosphere-compat-tomcat" conf="push"/>
+        <artifact name="atmosphere-compat-tomcat7" conf="push"/>
+        <artifact name="atmosphere-compat-jbossweb" conf="push"/>
     </publications>
 
     <dependencies>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="shared-&gt;default"/>
         <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
         <dependency org="org.jsoup" name="jsoup" rev="1.7+" conf="server-&gt;default"/>
         <dependency org="org.apache.ant" name="ant" rev="1.8+" conf="widget-compiler-&gt;default"/>
         <dependency org="org.apache.tapestry" name="tapestry" rev="4.0.2" conf="widget-compiler-&gt;default"/>
         <dependency org="org.eclipse" name="jdt" rev="3.4.4" conf="widget-compiler-&gt;default"/>
+    <!--
+        <dependency force="true" org="org.atmosphere" name="atmosphere" rev="1.0.13" conf="push->runtime"/>
+    -->
     </dependencies>
 
 </ivy-module>
