@@ -20,7 +20,7 @@
 
     <info organisation="com.vaadin" module="vaadin" revision="7.1.0" status="release" publication="20130627000000">
         <license name="Apache License, Version 2.0" url="https://vaadin.com/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2740 2013-07-01 18:56:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2742 2013-07-01 19:34:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.1.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://vaadin.com/home">
 
@@ -107,6 +107,7 @@
         <artifact name="atmosphere-compat-tomcat" conf="push"/>
         <artifact name="atmosphere-compat-tomcat7" conf="push"/>
         <artifact name="atmosphere-compat-jbossweb" conf="push"/>
+        <artifact name="vaadin-slf4j" conf="push"/>
     </publications>
 
     <dependencies>

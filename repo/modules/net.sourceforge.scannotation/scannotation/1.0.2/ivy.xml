@@ -20,7 +20,7 @@
 
     <info organisation="net.sourceforge.scannotation" module="scannotation" revision="1.0.2" status="release" publication="20080326120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id$" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.scannotation/scannotation/1.0.2/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2669 2013-05-02 17:18:31Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.scannotation/scannotation/1.0.2/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://scannotation.sourceforge.net/">
 <p><b>Scannotation</b> is a Java library that creates an annotation database from a set of .class files. This database is really just a set of maps that index what annotations are used and what classes are using them. Why do you need this? What if you are an annotation framework like an EJB 3.0 container and you want to automatically scan your classpath for EJB annotations so that you know what to deploy? Scannotation gives you apis that allow you to find archives in your classpath or WAR (web application) that you want to scan, then automatically scans them without loading each and every class within those archives</p>
