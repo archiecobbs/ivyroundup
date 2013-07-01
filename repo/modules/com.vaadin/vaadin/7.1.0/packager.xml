@@ -62,15 +62,15 @@
         <include name="lib/atmosphere-compat-tomcat-1.0.14.vaadin3.jar"/>
         <include name="lib/atmosphere-compat-tomcat7-1.0.14.vaadin3.jar"/>
         <include name="lib/atmosphere-runtime-1.0.14.vaadin3.jar"/>
-        <include name="lib/lib/vaadin-slf4j-jdk14-1.6.1.jar"/>
+        <include name="lib/vaadin-slf4j-jdk14-1.6.1.jar"/>
     </resource>
 
     <build>
         <move file="archive/lib/vaadin-shared-deps-1.0.2.jar" tofile="artifacts/jars/shared-deps.jar"/>
-        <move file="archive/lib/atmosphere-compat-jbossweb-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-runtime.jar"/>
+        <move file="archive/lib/atmosphere-runtime-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-runtime.jar"/>
+        <move file="archive/lib/atmosphere-compat-jbossweb-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-compat-jbossweb.jar"/>
         <move file="archive/lib/atmosphere-compat-tomcat-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-compat-tomcat.jar"/>
         <move file="archive/lib/atmosphere-compat-tomcat7-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-compat-tomcat7.jar"/>
-        <move file="archive/lib/atmosphere-runtime-1.0.14.vaadin3.jar" tofile="artifacts/jars/atmosphere-compat-jbossweb.jar"/>
         <move file="archive/lib/vaadin-slf4j-jdk14-1.6.1.jar" tofile="artifacts/jars/vaadin-slf4j.jar"/>
     </build>
 
