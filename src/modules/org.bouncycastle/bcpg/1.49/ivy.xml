@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+  <info publication="20130601000000">
+    <license name="MIT X11 style" url="http://www.bouncycastle.org/license.html" />
+    <description homepage="http://www.bouncycastle.org/specifications.html">
+      <p>The Bouncy Castle Java API for handling the OpenPGP protocol. The APIs can be used in conjunction with a JCE/JCA provider such as the one provided with the Bouncy Castle Cryptography APIs.</p>
+    </description>
+  </info>
+
+    <configurations>
+        <conf name="default" extends="jdk15" />
+        <conf name="jdk14" description="Classes for use with JDK 1.4 and higher"/>
+        <conf name="jdk15" description="Classes for use with JDK 1.5 and higher"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="jdk15" name="bcpg-jdk15"/>
+        <artifact conf="jdk15" name="bcpg-jdk15-source" type="source" ext="zip"/>
+        <artifact conf="jdk15" name="bcpg-jdk15-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="jdk14" name="bcpg-jdk14"/>
+        <artifact conf="jdk14" name="bcpg-jdk14-source" type="source" ext="zip"/>
+        <artifact conf="jdk14" name="bcpg-jdk14-javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.bouncycastle" name="bcprov" rev="1.49" conf="*->@"/>
+    </dependencies>
+
+</ivy-module>
