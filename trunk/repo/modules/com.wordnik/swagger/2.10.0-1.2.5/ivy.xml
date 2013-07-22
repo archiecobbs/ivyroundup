@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.wordnik" module="swagger" revision="2.10.0-1.2.5" status="release" publication="20130619120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2758 2013-07-22 15:06:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.wordnik/swagger/2.10.0-1.2.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="https://developers.helloreverb.com/swagger/">
+
+            <p>
+            Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services. The overarching goal of Swagger is to enable client and documentation systems to update at the same pace as the server. The documentation of methods, parameters, and models are tightly integrated into the server code, allowing APIs to always stay in sync. With Swagger, deploying managing, and using powerful APIs has never been easier.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Core classes"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="swagger-core" ivyde:javadoc="swagger-core" name="swagger-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="swagger-annotations" ivyde:javadoc="swagger-annotations" name="swagger-annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="swagger-jaxrs" ivyde:javadoc="swagger-jaxrs" name="swagger-jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="swagger-jersey-jaxrs" ivyde:javadoc="swagger-jersey-jaxrs" name="swagger-jersey-jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="swagger-jaxrs-utils" ivyde:javadoc="swagger-jaxrs-utils" name="swagger-jaxrs-utils"/>
+
+        <!-- source -->
+        <artifact name="swagger-core" type="source" ext="zip"/>
+        <artifact name="swagger-annotations" type="source" ext="zip"/>
+        <artifact name="swagger-jaxrs" type="source" ext="zip"/>
+        <artifact name="swagger-jersey-jaxrs" type="source" ext="zip"/>
+        <artifact name="swagger-jaxrs-utils" type="source" ext="zip"/>
+
+        <!-- javadoc -->
+        <artifact name="swagger-core" type="javadoc" ext="zip"/>
+        <artifact name="swagger-annotations" type="javadoc" ext="zip"/>
+        <artifact name="swagger-jaxrs" type="javadoc" ext="zip"/>
+        <artifact name="swagger-jersey-jaxrs" type="javadoc" ext="zip"/>
+        <artifact name="swagger-jaxrs-utils" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.9.2" conf="default-&gt;default"/>
+        <dependency org="com.sun.jersey" name="jersey" rev="1.17.1" conf="default-&gt;guice"/>
+    </dependencies>
+
+</ivy-module>
