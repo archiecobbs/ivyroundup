@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20130709120000">
+        <license name="CDDL + GPLv2 with classpath exception" url="http://hk2.java.net/license.html"/>
+        <description homepage="http://hk2.java.net/">
+
+            <p>
+            A light-weight and dynamic dependency injection framework. 
+            </p>
+            
+            <ul>
+                <li>HK2 is JSR-330 compliant and has useful utilities for marking classes as services and interfaces as contracts. JSR-330 defines services and injection points that can be dynamically discovered at runtime and which allow for Inversion of Control (IoC) and dependency injection (DI).</li>
+
+                <li>HK2 provides an API for fine control over its operation and has the ability to automatically load services into the application.  It is the foundation for the GlassFish V3 and V4 application servers as well as other products.</li>
+
+                <li>HK2 also has a powerful API that can be used to perform several tasks such as binding service descriptions into the system and looking up services, as well as several extensibility features allowing the users to customize or change the behavior of HK2.</li>
+            </ul>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="utils" description="Utilities"/>
+        <conf name="api" extends="utils" description="API Definition"/>
+        <conf name="locator" extends="utils,api" description="Locator services"/>
+        <conf name="core" extends="locator,utils" description="Core HK2 framework"/>
+        <conf name="config" extends="core" description="Configuration"/>
+        <conf name="runlevel" extends="api,locator" description="Run Level Services"/>
+        <conf name="classmodel" description="Class Model"/>
+
+        <conf name="default" extends="core" description="Includes all the Core HK2 requirements"/>
+        <conf name="all" extends="default,classmodel" description="Includes all the HK2 requirements"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="hk2-utils" conf="utils"/>
+        <artifact name="hk2-api" conf="api"/>
+        <artifact name="hk2-locator" conf="locator"/>
+        <artifact name="hk2-core" conf="core"/>
+        <artifact name="hk2-config" conf="config"/>
+        <artifact name="hk2-configtypes" conf="config"/>
+        <artifact name="hk2-runlevel" conf="runlevel"/>
+        <artifact name="hk2-classmodel" conf="classmodel"/>
+
+        <!-- source -->
+        <artifact name="hk2-utils-source" type="source" ext="jar" conf="utils"/>
+        <artifact name="hk2-api-source" type="source" ext="jar" conf="api"/>
+        <artifact name="hk2-locator-source" type="source" ext="jar" conf="locator"/>
+        <artifact name="hk2-core-source" type="source" ext="jar" conf="core"/>
+        <artifact name="hk2-config-source" type="source" ext="jar" conf="config"/>
+        <artifact name="hk2-configtypes-source" type="source" ext="jar" conf="config"/>
+        <artifact name="hk2-runlevel-source" type="source" ext="jar" conf="runlevel"/>
+        <artifact name="hk2-classmodel-source" type="source" ext="jar" conf="classmodel"/>
+
+        <!-- javadoc -->
+        <artifact name="hk2-utils-javadoc" type="javadoc" ext="jar" conf="utils"/>
+        <artifact name="hk2-api-javadoc" type="javadoc" ext="jar" conf="api"/>
+        <artifact name="hk2-locator-javadoc" type="javadoc" ext="jar" conf="locator"/>
+        <artifact name="hk2-core-javadoc" type="javadoc" ext="jar" conf="core"/>
+        <artifact name="hk2-config-javadoc" type="javadoc" ext="jar" conf="config"/>
+        <artifact name="hk2-configtypes-javadoc" type="javadoc" ext="jar" conf="config"/>
+        <artifact name="hk2-runlevel-javadoc" type="javadoc" ext="jar" conf="runlevel"/>
+        <artifact name="hk2-classmodel-javadoc" type="javadoc" ext="jar" conf="classmodel"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.glassfish.hk2" name="osgi-resource-locator" rev="1.0.1" conf="api->default"/>
+        <dependency org="javax.inject" name="inject" rev="1" conf="api,locator,utils->default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.3.1" conf="locator->default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="locator->default"/>
+    </dependencies>
+
+</ivy-module>
