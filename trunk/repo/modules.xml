@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2013-07-30 19:06:40 UTC</timestamp>
-  <svnRevision>2771</svnRevision>
+  <timestamp>2013-07-31 15:14:47 UTC</timestamp>
+  <svnRevision>2773</svnRevision>
   <org name="ca.juliusdavies">
     <mod name="not-yet-commons-ssl">
       <rev name="0.3.9"/>
@@ -2180,12 +2180,32 @@
       <rev name="3.2.0-b001"/>
     </mod>
   </org>
+  <org name="org.glassfish.gmbal">
+    <mod name="gmbal">
+      <rev name="3.2.0-b003"/>
+    </mod>
+  </org>
+  <org name="org.glassfish.grizzly">
+    <mod name="grizzly">
+      <rev name="2.3.4"/>
+    </mod>
+  </org>
   <org name="org.glassfish.hk2">
     <mod name="hk2">
       <rev name="2.2.0-b10"/>
     </mod>
     <mod name="osgi-resource-locator">
       <rev name="1.0.1"/>
+    </mod>
+  </org>
+  <org name="org.glassfish.jersey">
+    <mod name="jersey">
+      <rev name="2.1"/>
+    </mod>
+  </org>
+  <org name="org.glassfish.pfl">
+    <mod name="pfl">
+      <rev name="3.2.0-b001"/>
     </mod>
   </org>
   <org name="org.hackystat">
@@ -2751,6 +2771,11 @@
       <rev name="2.9.1"/>
       <rev name="2.9.2"/>
       <rev name="2.9.3"/>
+    </mod>
+  </org>
+  <org name="org.simpleframework">
+    <mod name="simple">
+      <rev name="5.1.5"/>
     </mod>
   </org>
   <org name="org.slf4j">
