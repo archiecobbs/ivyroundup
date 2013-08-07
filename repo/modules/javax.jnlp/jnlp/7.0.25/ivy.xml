@@ -20,7 +20,7 @@
 
     <info organisation="javax.jnlp" module="jnlp" revision="7.0.25" status="release" publication="20130605000000">
         <license name="BSD" url="http://s3.amazonaws.com/archie-public/jnlp-servlet/SAMPLES_LICENSE"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2785 2013-08-07 16:58:05Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jnlp/jnlp/7.0.25/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2790 2013-08-07 22:51:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.jnlp/jnlp/7.0.25/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technetwork/java/javase/overview/index.html">
         <p>
@@ -82,10 +82,17 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="runtime" description="JAR used by WebStart applications at runtime"/>
+        <conf name="servlet" description="JARs that implement the JNLP servlet"/>
+        <conf name="default" extends="runtime,servlet"/>
+    </configurations>
+
     <publications>
-        <artifact name="jardiff"/>
-        <artifact name="jnlp"/>
-        <artifact name="jnlp-servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jardiff" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jnlp" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jnlp-servlet" conf="servlet"/>
+        <artifact name="source" type="source" ext="zip"/>
     </publications>
 
 </ivy-module>
