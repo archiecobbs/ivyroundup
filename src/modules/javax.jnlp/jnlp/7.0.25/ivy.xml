@@ -80,10 +80,17 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="runtime" description="JAR used by WebStart applications at runtime"/>
+        <conf name="servlet" description="JARs that implement the JNLP servlet"/>
+        <conf name="default" extends="runtime,servlet"/>
+    </configurations>
+
     <publications>
-        <artifact name="jardiff"/>
-        <artifact name="jnlp"/>
-        <artifact name="jnlp-servlet"/>
+        <artifact name="jardiff" conf="servlet"/>
+        <artifact name="jnlp" conf="runtime"/>
+        <artifact name="jnlp-servlet" conf="servlet"/>
+        <artifact name="source" type="source" ext="zip"/>
     </publications>
 
 </ivy-module>

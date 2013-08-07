@@ -29,5 +29,8 @@
     <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-servlet.jar"
       sha1="02b3167eecb0a981e14b2c4f2df0072cf652c5f6"
       tofile="artifacts/jars/jnlp-servlet.jar"/>
+    <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-source.zip"
+      sha1="2b20722ad7f1ddeece9fd692ebb0d5a05352cf52"
+      tofile="artifacts/sources/source.zip"/>
 
 </packager-module>
