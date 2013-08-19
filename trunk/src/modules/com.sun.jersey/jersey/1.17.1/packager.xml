@@ -55,6 +55,11 @@
         <artifact classifier="sources" tofile="artifacts/sources/jersey-json.zip" sha1="05da8082ede6f51068534ea99234ae488e389821"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jersey-json.zip" sha1="1490a4c4b0924e76771532509e1b5490196fb9c4"/>
     </m2resource>
+    <m2resource groupId="com/sun/jersey/contribs" artifactId="jersey-multipart">
+        <artifact tofile="artifacts/jars/jersey-multipart.jar" sha1="23b26cecdd718ae330d03ff7ba369998fca0cd86"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jersey-multipart.zip" sha1="93976c34e4961ac933acff6b56fd0feb73285386"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jersey-multipart.zip" sha1="260aaecfb95d4810a3f1937169c024bb9e53dbf5"/>
+    </m2resource>
     <m2resource artifactId="jersey-server">
         <artifact tofile="artifacts/jars/jersey-server.jar" sha1="c5aa1109d50d11e3f0dca3af7ba94448255443e2"/>
         <artifact classifier="sources" tofile="artifacts/sources/jersey-server.zip" sha1="e68fe32ef46e70bc7336b441c486cf5ef60b5474"/>
