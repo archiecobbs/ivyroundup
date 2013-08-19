@@ -42,6 +42,7 @@
         <conf name="grizzly2-servlet" description="Grizzly 2.0 Servlet Container for Jersey"/>
         <conf name="guice" extends="server" description="Guice support"/>
         <conf name="json" extends="core" description="JSON support"/>
+        <conf name="multipart" extends="core" description="Integration with MIME MultiPart message formats"/>
         <conf name="server" extends="core" description="Jersey server"/>
         <conf name="server-linking" extends="server" description="Jersey server linking"/>
         <conf name="servlet" extends="server" description="Jersey servlet"/>
@@ -59,6 +60,7 @@
         <artifact name="jersey-grizzly2-servlet" conf="grizzly2-servlet"/>
         <artifact name="jersey-guice" conf="guice"/>
         <artifact name="jersey-json" conf="json"/>
+        <artifact name="jersey-multipart" conf="multipart"/>
         <artifact name="jersey-server" conf="server"/>
         <artifact name="jersey-server-linking" conf="server-linking"/>
         <artifact name="jersey-servlet" conf="servlet"/>
@@ -73,6 +75,7 @@
         <artifact name="jersey-grizzly2-servlet" type="source" ext="zip" conf="grizzly2-servlet"/>
         <artifact name="jersey-guice" type="source" ext="zip" conf="guice"/>
         <artifact name="jersey-json" type="source" ext="zip" conf="json"/>
+        <artifact name="jersey-multipart" type="source" ext="zip" conf="multipart"/>
         <artifact name="jersey-server" type="source" ext="zip" conf="server"/>
         <artifact name="jersey-server-linking" type="source" ext="zip" conf="server-linking"/>
         <artifact name="jersey-servlet" type="source" ext="zip" conf="servlet"/>
@@ -87,6 +90,7 @@
         <artifact name="jersey-grizzly2-servlet" type="javadoc" ext="zip" conf="grizzly2-servlet"/>
         <artifact name="jersey-guice" type="javadoc" ext="zip" conf="guice"/>
         <artifact name="jersey-json" type="javadoc" ext="zip" conf="json"/>
+        <artifact name="jersey-multipart" type="javadoc" ext="zip" conf="multipart"/>
         <artifact name="jersey-server" type="javadoc" ext="zip" conf="server"/>
         <artifact name="jersey-server-linking" type="javadoc" ext="zip" conf="server-linking"/>
         <artifact name="jersey-servlet" type="javadoc" ext="zip" conf="servlet"/>
