@@ -20,7 +20,7 @@
 
     <info organisation="com.sun.jersey" module="jersey" revision="1.17.1" status="release" publication="20130228120000">
         <license name="CDDL 1.1 + GPL" url="http://glassfish.dev.java.net/public/CDDL+GPL_1_1.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2758 2013-07-22 15:06:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sun.jersey/jersey/1.17.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2794 2013-08-19 13:53:14Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.sun.jersey/jersey/1.17.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://java.net/projects/jersey/">
             <p>
@@ -45,6 +45,7 @@
         <conf name="grizzly2-servlet" description="Grizzly 2.0 Servlet Container for Jersey"/>
         <conf name="guice" extends="server" description="Guice support"/>
         <conf name="json" extends="core" description="JSON support"/>
+        <conf name="multipart" extends="core" description="Integration with MIME MultiPart message formats"/>
         <conf name="server" extends="core" description="Jersey server"/>
         <conf name="server-linking" extends="server" description="Jersey server linking"/>
         <conf name="servlet" extends="server" description="Jersey servlet"/>
@@ -62,6 +63,7 @@
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-grizzly2-servlet" ivyde:javadoc="jersey-grizzly2-servlet" name="jersey-grizzly2-servlet" conf="grizzly2-servlet"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-guice" ivyde:javadoc="jersey-guice" name="jersey-guice" conf="guice"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-json" ivyde:javadoc="jersey-json" name="jersey-json" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-multipart" ivyde:javadoc="jersey-multipart" name="jersey-multipart" conf="multipart"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server" ivyde:javadoc="jersey-server" name="jersey-server" conf="server"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server-linking" ivyde:javadoc="jersey-server-linking" name="jersey-server-linking" conf="server-linking"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-servlet" ivyde:javadoc="jersey-servlet" name="jersey-servlet" conf="servlet"/>
@@ -76,6 +78,7 @@
         <artifact name="jersey-grizzly2-servlet" type="source" ext="zip" conf="grizzly2-servlet"/>
         <artifact name="jersey-guice" type="source" ext="zip" conf="guice"/>
         <artifact name="jersey-json" type="source" ext="zip" conf="json"/>
+        <artifact name="jersey-multipart" type="source" ext="zip" conf="multipart"/>
         <artifact name="jersey-server" type="source" ext="zip" conf="server"/>
         <artifact name="jersey-server-linking" type="source" ext="zip" conf="server-linking"/>
         <artifact name="jersey-servlet" type="source" ext="zip" conf="servlet"/>
@@ -90,6 +93,7 @@
         <artifact name="jersey-grizzly2-servlet" type="javadoc" ext="zip" conf="grizzly2-servlet"/>
         <artifact name="jersey-guice" type="javadoc" ext="zip" conf="guice"/>
         <artifact name="jersey-json" type="javadoc" ext="zip" conf="json"/>
+        <artifact name="jersey-multipart" type="javadoc" ext="zip" conf="multipart"/>
         <artifact name="jersey-server" type="javadoc" ext="zip" conf="server"/>
         <artifact name="jersey-server-linking" type="javadoc" ext="zip" conf="server-linking"/>
         <artifact name="jersey-servlet" type="javadoc" ext="zip" conf="servlet"/>
