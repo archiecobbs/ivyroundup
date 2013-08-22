@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120619102200">
+        <license name="New BSD License" url="http://opensource.org/licenses/BSD-3-Clause"/>
+
+        <description homepage="http://code.google.com/p/reflectasm/">
+
+            <p>
+            ReflectASM uses code generation to provide high performance reflection.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact />
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+
+    <dependencies>
+        <dependency org="org.objectweb.asm" name="asm" rev="4.0" conf="default->core"/>
+    </dependencies>
+
+</ivy-module>

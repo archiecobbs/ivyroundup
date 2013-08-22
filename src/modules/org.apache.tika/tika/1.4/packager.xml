@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <m2resource artifactId="${ivy.packager.module}-app">
+        <artifact tofile="artifacts/jars/app.jar"
+          sha1="e91c758149ce9ce799fff184e9bf3aabda394abc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/app-source.zip"
+          sha1="80b37a700b5349d0a4e4d709424b04ec93332bc5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/app-javadoc.zip"
+          sha1="05cb0d0abfe9a3b69c33d8adcf6dd35fbebfb3b5"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-bundle">
+        <artifact tofile="artifacts/jars/bundle.jar"
+          sha1="25144b8034b21b3e0a66bc5b7cf81e44acdd8d92"/>
+        <artifact classifier="sources" tofile="artifacts/sources/bundle-source.zip"
+          sha1="b43263d7550082ce2fea1b2202f9316918ebe04b"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-core">
+        <artifact tofile="artifacts/jars/core.jar"
+          sha1="30fd5d2c4c21ed908d4b74064ac7f4f4fdbe9ae7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/core-source.zip"
+          sha1="4d451b8975ca8223a1e60d07d0acfb68043645f8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/core-javadoc.zip"
+          sha1="d8ffb93625047b4cbf15c139bdd329bb23c02994"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-parsers">
+        <artifact tofile="artifacts/jars/parsers.jar"
+          sha1="58aba11789dc508f004e3352948394c9e395fb50"/>
+        <artifact classifier="sources" tofile="artifacts/sources/parsers-source.zip"
+          sha1="3c2681395f1b85e92c16229c3390f97856dceff0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/parsers-javadoc.zip"
+          sha1="06464bf80df18ca817fcf77452fe0e6a9507eebe"/>
+    </m2resource>
+
+</packager-module>
