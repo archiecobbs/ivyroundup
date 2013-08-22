@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20101006080600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/jottinger/ci-bayes">
+
+            <p>
+            A lightweight machine-learning library.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="snowball" description="Snowball stemmer"/>
+        <conf name="nekohtml" description="Nekohtml tag stripper"/>
+
+        <conf name="default" extends="core" />
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="14.0.1" conf="core->default"/>
+        <dependency org="org.apache.lucene" name="lucene" rev="3.2.0" conf="snowball->analyzers"/>
+        <dependency org="org.cyberneko" name="nekohtml" rev="1.9.14" conf="nekohtml->default"/>
+    </dependencies>
+
+</ivy-module>
