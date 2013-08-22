@@ -1,7 +1,12 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2013-08-21 17:34:00 UTC</timestamp>
-  <svnRevision>2796</svnRevision>
+  <timestamp>2013-08-22 22:59:12 UTC</timestamp>
+  <svnRevision>2799</svnRevision>
+  <org name="bixo">
+    <mod name="bixo">
+      <rev name="0.9.0"/>
+    </mod>
+  </org>
   <org name="ca.juliusdavies">
     <mod name="not-yet-commons-ssl">
       <rev name="0.3.9"/>
@@ -11,6 +16,11 @@
     <mod name="bb-ant-tools">
       <rev name="1.2.3"/>
       <rev name="1.2.4"/>
+    </mod>
+  </org>
+  <org name="cascading">
+    <mod name="cascading">
+      <rev name="2.2.0-wip-66"/>
     </mod>
   </org>
   <org name="ch.cern">
@@ -60,6 +70,22 @@
   <org name="com.drewnoakes">
     <mod name="metadata-extractor">
       <rev name="2.4.0-beta-1"/>
+    </mod>
+  </org>
+  <org name="com.enigmastation">
+    <mod name="ci-bayes">
+      <rev name="2.0.0"/>
+    </mod>
+  </org>
+  <org name="com.esotericsoftware">
+    <mod name="kryo">
+      <rev name="2.19"/>
+    </mod>
+    <mod name="minlog">
+      <rev name="1.2"/>
+    </mod>
+    <mod name="reflectasm">
+      <rev name="1.07"/>
     </mod>
   </org>
   <org name="com.fasterxml.uuid">
@@ -353,6 +379,11 @@
       <rev name="5.3"/>
       <rev name="5.4"/>
       <rev name="5.5"/>
+    </mod>
+  </org>
+  <org name="com.scaleunlimited">
+    <mod name="cascading-utils">
+      <rev name="2.1.4"/>
     </mod>
   </org>
   <org name="com.sleepycat">
@@ -1642,6 +1673,7 @@
       <rev name="0.19.1"/>
       <rev name="0.19.2"/>
       <rev name="0.20.0"/>
+      <rev name="1.1.2"/>
     </mod>
   </org>
   <org name="org.apache.httpcomponents">
@@ -1701,6 +1733,12 @@
       <rev name="4.2.1"/>
     </mod>
   </org>
+  <org name="org.apache.mahout">
+    <mod name="mahout-math">
+      <rev name="0.7"/>
+      <rev name="0.8"/>
+    </mod>
+  </org>
   <org name="org.apache.mina">
     <mod name="mina-core">
       <rev name="1.1.7"/>
@@ -1754,6 +1792,7 @@
   <org name="org.apache.tika">
     <mod name="tika">
       <rev name="0.8"/>
+      <rev name="1.4"/>
     </mod>
   </org>
   <org name="org.apache.velocity">
@@ -1939,6 +1978,11 @@
       <rev name="1.9.2"/>
       <rev name="1.9.4"/>
       <rev name="1.9.9"/>
+    </mod>
+  </org>
+  <org name="org.codehaus.janino">
+    <mod name="janino">
+      <rev name="2.6.1"/>
     </mod>
   </org>
   <org name="org.codehaus.jaxen">
@@ -2455,6 +2499,11 @@
       <rev name="1.0.9"/>
     </mod>
   </org>
+  <org name="org.jgrapht">
+    <mod name="jgrapht">
+      <rev name="0.8.1"/>
+    </mod>
+  </org>
   <org name="org.jgroups">
     <mod name="jgroups">
       <rev name="2.6.2"/>
@@ -2920,11 +2969,21 @@
       <rev name="1.1.6"/>
     </mod>
   </org>
+  <org name="org.tukaani">
+    <mod name="xz">
+      <rev name="1.3"/>
+    </mod>
+  </org>
   <org name="org.twitter4j">
     <mod name="twitter4j">
       <rev name="2.1.12"/>
       <rev name="2.2.6"/>
       <rev name="3.0.2"/>
+    </mod>
+  </org>
+  <org name="org.uncommons">
+    <mod name="uncommons-maths">
+      <rev name="1.2.3"/>
     </mod>
   </org>
   <org name="org.unitils">
