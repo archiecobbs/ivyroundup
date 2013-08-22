@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.tika" module="tika" revision="1.4" status="release" publication="20130616120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2799 2013-08-22 22:32:39Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.tika/tika/1.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://tika.apache.org/">
+
+            Apache Tika is a toolkit for detecting and extracting metadata
+            and structured text content from various documents using existing
+            parser libraries.
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="app" description="Tika application"/>
+        <conf name="bundle" description="Tika OSGi bundle"/>
+        <conf name="core" description="Tika core library"/>
+        <conf name="parsers" extends="core" description="Tika parsers"/>
+        <conf name="default" extends="core,parsers"/>
+    </configurations>
+
+    <publications>
+        <artifact name="app" conf="app"/>
+        <artifact name="bundle" conf="bundle"/>
+        <artifact name="core" conf="core"/>
+        <artifact name="parsers" conf="parsers"/>
+
+        <artifact name="app-source" conf="app" type="source" ext="zip"/>
+        <artifact name="bundle-source" conf="bundle" type="source" ext="zip"/>
+        <artifact name="core-source" conf="core" type="source" ext="zip"/>
+        <artifact name="parsers-source" conf="parsers" type="source" ext="zip"/>
+
+        <artifact name="app-javadoc" conf="app" type="javadoc" ext="zip"/>
+        <artifact name="core-javadoc" conf="core" type="javadoc" ext="zip"/>
+        <artifact name="parsers-javadoc" conf="parsers" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-compress" rev="(1.1,2.0]" conf="*-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1" conf="*-&gt;default"/>
+        <dependency org="org.apache.poi" name="poi" rev="3.7" conf="*-&gt;scratchpad,ooxml"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="*-&gt;core"/>
+        <dependency org="org.ccil.cowan" name="tagsoup" rev="1.2" conf="*-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.14" conf="*-&gt;default"/>
+
+        <!--
+            TODO: Still missing dependencies...
+
+            org.apache.pdfbox:pdfbox:jar:0.8.0-incubating
+            org.apache.geronimo.specs:geronimo-stax-api_1.0_spec:jar:1.0.1
+            com.drewnoakes:metadata-extractor:jar:2.4.0-beta-1
+        -->
+    </dependencies>
+
+</ivy-module>
