@@ -243,8 +243,9 @@
             timeout="@{timeout}"
             maxmemory="@{maxMemory}"
         >
-<!--
--->
+	<!-- workaround for temporary blocking of scala-lang by sonatype -->
+        <jvmarg value="-Dhttp.agent=Ivyroundup"/>
+
         <classpath>
           <pathelement location="${ant.home}/lib/ant-launcher.jar" />
         </classpath>
