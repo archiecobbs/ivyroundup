@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120620090900">
+        <license name="GNU Affero General Public License, Version 3.0, plus some contradictory extra restrictions" url="http://itextpdf.com/terms-of-use/agpl.php"/>
+        <description homepage="http://itextpdf.com/">
+
+            <p>
+            A library for creating and manipulating PDF files.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="extra" extends="core" description="Extra classes"/>
+        <conf name="default" extends="core"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact name="itext-extra" conf="extra"/>
+        <artifact name="source" conf="core" type="source" ext="zip"/>
+        <artifact name="javadoc" conf="core" type="javadoc" ext="zip"/>
+        <artifact name="source-extra" conf="extra" type="source" ext="zip"/>
+        <artifact name="javadoc-extra" conf="extra" type="javadoc" ext="zip"/>
+    </publications>
+</ivy-module>
