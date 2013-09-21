@@ -427,7 +427,7 @@
     </xsl:template>
 
     <!-- ivy.xml: Analyse liocense URL -->
-    <xsl:template match="/ivy-module/info/license">
+    <xsl:template match="/ivy-module/info/license[@url]">
         <!-- Check for valid protocol in URL -->
         <xsl:choose>
             <xsl:when test="starts-with(@url, 'http:')">
