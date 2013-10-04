@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20130072900000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://hc.apache.org/httpcomponents-core-ga/index.html">
+        <p>
+            HttpCore is a set of low level HTTP transport components
+            that can be used to build custom client and server side
+            HTTP services with a minimal footprint.
+        </p>
+
+        <p>
+            HttpCore is a set of components implementing the most
+            fundamental aspects of the HTTP protocol that are
+            nonetheless sufficient to develop full-featured client-side
+            and server-side HTTP services with a minimal footprint.
+        </p>
+
+        <p>
+            HttpCore has the following scope and goals:
+            <ol>
+            <li>HttpCore Scope
+                <ul>
+                    <li>A consistent API for building client / proxy / server side HTTP services</li>
+                    <li>A consistent API for building both synchronous and asynchronous HTTP services</li>
+                    <li>A set of low level components based on blocking (classic) and non-blocking (NIO) I/O models</li>
+                </ul>
+            </li>
+            <li>HttpCore Goals
+                <ul>
+                    <li>Implementation of the most fundamental HTTP transport aspects</li>
+                    <li>Balance between good performance and the clarity and expressiveness of API</li> 
+                    <li>Small (predictable) memory footprint</li>
+                    <li>Self contained library (no external dependencies beyond JRE)</li>
+                </ul>
+            </li>
+            <li>What HttpCore is NOT
+                <ul>
+                    <li>A replacement for HttpClient</li>
+                    <li>A replacement for a Servlet container or a competitor to the Servlet API</li>
+                </ul>
+            </li>
+            </ol>
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="HttpCore without async (nio) support"/>
+        <conf name="nio" extends="core" description="HttpCore with non-blocking IO support"/>
+        <conf name="ab" extends="core" description="HttpCore with Apache HTTP bench clone"/>
+        <conf name="default" extends="nio" description="HttpCore with NIO support"/>
+    </configurations>
+
+    <publications>
+        <artifact name="httpcore" conf="core"/>
+        <artifact name="httpcore" conf="core" type="source" ext="zip"/>
+        <artifact name="httpcore" conf="core" type="javadoc" ext="zip"/>
+
+        <artifact name="httpcore-nio" conf="nio"/>
+        <artifact name="httpcore-nio" conf="nio" type="source" ext="zip"/>
+        <artifact name="httpcore-nio" conf="nio" type="javadoc" ext="zip"/>
+
+        <artifact name="httpcore-ab" conf="ab"/>
+        <artifact name="httpcore-ab" conf="ab" type="source" ext="zip"/>
+        <artifact name="httpcore-ab" conf="ab" type="javadoc" ext="zip"/>
+    </publications>
+</ivy-module>
