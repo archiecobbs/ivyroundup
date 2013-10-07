@@ -20,7 +20,7 @@
 
     <info organisation="uk.ac.gate" module="gate" revision="7.1" status="release" publication="20121129194700">
         <license name="GNU Lesser General Public License, Version 3.0" url="http://www.gnu.org/licenses/lgpl-3.0.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2824 2013-09-20 21:11:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/uk.ac.gate/gate/7.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2844 2013-10-07 20:24:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/uk.ac.gate/gate/7.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://gate.ac.uk">
 
@@ -365,7 +365,7 @@
         <dependency org="gnu.getopt" name="getopt" rev="1.0.14" conf="gui-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="2.0.2" conf="spring-&gt;aop"/>
         <dependency org="org.apache.lucene" name="lucene" rev="(3.5.0,4]" conf="lucene-&gt;core"/>
-        <dependency org="org.xhtmlrenderer" name="flying-saucer" rev="9.0.1" conf="gui-&gt;core"/>
+        <dependency org="org.xhtmlrenderer" name="flying-saucer" rev="9.0.1" conf="core-&gt;core"/>
     </dependencies>
 
 </ivy-module>
