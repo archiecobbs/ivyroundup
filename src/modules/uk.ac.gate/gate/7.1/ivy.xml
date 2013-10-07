@@ -363,7 +363,7 @@
         <dependency org="gnu.getopt" name="getopt" rev="1.0.14" conf="gui->default" />
         <dependency org="org.springframework" name="spring" rev="2.0.2" conf="spring->aop" />
         <dependency org="org.apache.lucene" name="lucene" rev="(3.5.0,4]" conf="lucene->core"/>
-        <dependency org="org.xhtmlrenderer" name="flying-saucer" rev="9.0.1" conf="gui->core" />
+        <dependency org="org.xhtmlrenderer" name="flying-saucer" rev="9.0.1" conf="core->core" />
     </dependencies>
 
 </ivy-module>
