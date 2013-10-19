@@ -18,7 +18,7 @@
 
 <packager-module rev="$Id$">
     <property name="name" value="${ivy.packager.module}"/>
-    <m2resource groupId="org/${name}" repo="http://repo.opennms.org/content/repositories/opennms-repo">
+    <m2resource groupId="org/${name}" repo="http://repo.opennms.org/content/repositories/opennms-repo-local">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="bd9a84484c67de930fa841f23cd6a93108b05cd0"/>
         <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="c0252c3fda6e1a7236a5e0dd9cae6b34d051a5e4"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="2585c93c691f63e83dbd9e256421a94328d060bf"/>
