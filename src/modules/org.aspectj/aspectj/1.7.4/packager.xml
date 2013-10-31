@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2013 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -15,21 +14,20 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
 <packager-module rev="$Id$">
     <m2resource artifactId="aspectjrt">
         <artifact tofile="artifacts/jars/aspectjrt.jar" sha1="e49a5c0acee8fd66225dc1d031692d132323417f"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="0195e42628b75fee9fec4fa0b1c66222e9dc75be"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="99053f573162153489e636d610ee42ad1786e9bc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/rt.zip" sha1="0195e42628b75fee9fec4fa0b1c66222e9dc75be"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/rt.zip" sha1="99053f573162153489e636d610ee42ad1786e9bc"/>
     </m2resource>
     <m2resource artifactId="aspectjweaver">
         <artifact tofile="artifacts/jars/aspectjweaver.jar" sha1="d9d511e417710492f78bb0fb291a629d56bf4216"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="c6eb79f2d6c7efbc7bf7bf2908a18b7beed98e13"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="cb5ef344031cdcee25834bfec934d187fdc71cd9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/weaver.zip" sha1="c6eb79f2d6c7efbc7bf7bf2908a18b7beed98e13"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/weaver.zip" sha1="cb5ef344031cdcee25834bfec934d187fdc71cd9"/>
     </m2resource>
     <m2resource artifactId="aspectjtools">
         <artifact tofile="artifacts/jars/aspectjtools.jar" sha1="23e0a79664fdb42bbf9116f639bc3c2c4012844f"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="75c81434f61ffecf17c196f67c904a760e884227"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="2569b2b3b10a64922b7d2fe020910d7885a56c06"/>
+        <artifact classifier="sources" tofile="artifacts/sources/tools.zip" sha1="75c81434f61ffecf17c196f67c904a760e884227"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/tools.zip" sha1="2569b2b3b10a64922b7d2fe020910d7885a56c06"/>
     </m2resource>
 </packager-module>
