@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20131105000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.hazelcast.com/">
+            Hazelcast is an open source clustering and highly scalable data distribution platform for Java, which is:
+            <ul>
+                <li><strong>Lightning-fast;</strong> thousands of operations/sec.</li>
+                <li><strong>Fail-safe;</strong> no losing data after crashes.</li>
+                <li><strong>Dynamically scales</strong> as new servers added.</li>
+                <li><strong>Super-easy to use</strong>; include a single jar.</li>
+            </ul>
+            With its various distributed data structures, distributed caching capabilities, elastic nature, memcache support, integration with Spring and Hibernate and more importantly so many happy users, Hazelcast is feature-rich, enterprise-ready and developer-friendly in-memory data grid solution.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="client" extends="core" description="Java &quot;Native Client&quot;"/>
+        <conf name="cloud" extends="core" description="EC2 Auto Discovery"/>
+        <conf name="hibernate3" extends="client" description="Hibernate 3 support"/>
+        <conf name="hibernate4" extends="client" description="Hibernate 4 support"/>
+        <conf name="spring" extends="core" description="Spring classes"/>
+        <conf name="wm" extends="core" description="Session clustering"/>
+        <conf name="default" extends="core" description="Alias for core"/>
+        <conf name="all" description="All classes in single JAR"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="hazelcast" conf="core"/>
+        <artifact name="hazelcast-all" conf="all"/>
+        <artifact name="hazelcast-client" conf="client"/>
+        <artifact name="hazelcast-cloud" conf="cloud"/>
+        <artifact name="hazelcast-hibernate3" conf="hibernate3"/>
+        <artifact name="hazelcast-hibernate4" conf="hibernate4"/>
+        <artifact name="hazelcast-spring" conf="spring"/>
+        <artifact name="hazelcast-wm" conf="wm"/>
+
+        <!-- source -->
+        <artifact name="hazelcast" type="source" ext="zip" conf="core"/>
+        <artifact name="hazelcast-all" type="source" ext="zip" conf="all"/>
+        <artifact name="hazelcast-client" type="source" ext="zip" conf="client"/>
+        <artifact name="hazelcast-cloud" type="source" ext="zip" conf="cloud"/>
+        <artifact name="hazelcast-hibernate3" type="source" ext="zip" conf="hibernate3"/>
+        <artifact name="hazelcast-hibernate4" type="source" ext="zip" conf="hibernate4"/>
+        <artifact name="hazelcast-spring" type="source" ext="zip" conf="spring"/>
+        <artifact name="hazelcast-wm" type="source" ext="zip" conf="wm"/>
+
+        <!-- javadoc -->
+        <artifact name="hazelcast" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="hazelcast-all" type="javadoc" ext="zip" conf="all"/>
+        <artifact name="hazelcast-client" type="javadoc" ext="zip" conf="client"/>
+        <artifact name="hazelcast-cloud" type="javadoc" ext="zip" conf="cloud"/>
+        <artifact name="hazelcast-hibernate3" type="javadoc" ext="zip" conf="hibernate3"/>
+        <artifact name="hazelcast-hibernate4" type="javadoc" ext="zip" conf="hibernate4"/>
+        <artifact name="hazelcast-spring" type="javadoc" ext="zip" conf="spring"/>
+        <artifact name="hazelcast-wm" type="javadoc" ext="zip" conf="wm"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.3.2.GA,4.0)" conf="hibernate3->core"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[4.0,)" conf="hibernate4->core"/>
+        <dependency org="org.springframework" name="spring" rev="[3.1.0,)" conf="spring->context"/>
+    </dependencies>
+
+</ivy-module>
