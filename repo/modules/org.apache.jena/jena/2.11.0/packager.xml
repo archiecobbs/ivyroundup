@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="apache-${name}-${revision}"/>
+
+    <resource url="http://www.apache.org/dist/jena/binaries/${archive}.tar.gz" sha1="50d1a13092d1027221222b6f3a4c6c495837a392"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/lib/jena-arq-2.11.0.jar" tofile="artifacts/jars/jena-arq.jar"/>
+        <move file="archive/${archive}/lib/jena-core-2.11.0.jar" tofile="artifacts/jars/jena-core.jar"/>
+        <move file="archive/${archive}/lib/jena-iri-1.0.0.jar" tofile="artifacts/jars/jena-iri.jar"/>
+        <move file="archive/${archive}/lib/jena-sdb-1.4.0.jar" tofile="artifacts/jars/jena-sdb.jar"/>
+        <move file="archive/${archive}/lib/jena-tdb-1.0.0.jar" tofile="artifacts/jars/jena-tdb.jar"/>
+
+        <!-- source -->
+        <move file="archive/${archive}/lib-src/jena-arq-2.11.0-sources.jar" tofile="artifacts/sources/jena-arq-source.zip"/>
+        <move file="archive/${archive}/lib-src/jena-core-2.11.0-sources.jar" tofile="artifacts/sources/jena-core-source.zip"/>
+        <move file="archive/${archive}/lib-src/jena-iri-1.0.0-sources.jar" tofile="artifacts/sources/jena-iri-source.zip"/>
+        <move file="archive/${archive}/lib-src/jena-sdb-1.4.0-sources.jar" tofile="artifacts/sources/jena-sdb-source.zip"/>
+        <move file="archive/${archive}/lib-src/jena-tdb-1.0.0-sources.jar" tofile="artifacts/sources/jena-tdb-source.zip"/>
+
+
+        <zip destfile="artifacts/sources/jena-examples.zip">
+            <fileset dir="archive/${archive}/src-examples"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/jena-arq-javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc-arq"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/jena-core-javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc-core"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/jena-sdb-javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc-sdb"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/jena-tdb-javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc-tdb"/>
+        </zip>
+
+        <!-- binaries -->
+        <zip destfile="artifacts/binarys/jena-commandline.zip">
+            <fileset dir="archive/${archive}/bat"/>
+            <fileset dir="archive/${archive}/bin"/>
+        </zip>
+    </build>
+</packager-module>

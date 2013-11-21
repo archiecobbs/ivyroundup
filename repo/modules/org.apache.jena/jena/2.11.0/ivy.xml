@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.jena" module="jena" revision="2.11.0" status="release" publication="20130918091100">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2885 2013-11-21 17:30:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.jena/jena/2.11.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://jena.apache.org/">
+
+            <p>
+            Jena is an OWL and RDF api.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" extends="iri" description="RDF, ontology and inference API"/>
+        <conf name="arq" extends="core" description="SPARQL support"/>
+        <conf name="sdb" extends="arq" description="The SDB relational-db-based triple store"/>
+        <conf name="tdb" extends="arq" description="The TDB native triple store"/>
+        <conf name="iri" description="IRI implementation"/>
+        <conf name="commandline" extends="core" description="Commandline tools"/>
+        <conf name="examples" description="Example code"/>
+        <conf name="default" extends="core,commandline"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core" name="jena-core"/>
+        <artifact conf="core" name="jena-core-source" type="source" ext="zip"/>
+        <artifact conf="core" name="jena-core-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="arq" name="jena-arq"/>
+        <artifact conf="arq" name="jena-arq-source" type="source" ext="zip"/>
+        <artifact conf="arq" name="jena-arq-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="sdb" name="jena-sdb"/>
+        <artifact conf="sdb" name="jena-sdb-source" type="source" ext="zip"/>
+        <artifact conf="sdb" name="jena-sdb-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="tdb" name="jena-tdb"/>
+        <artifact conf="tdb" name="jena-tdb-source" type="source" ext="zip"/>
+        <artifact conf="tdb" name="jena-tdb-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="iri" name="jena-iri"/>
+        <artifact conf="iri" name="jena-iri-source" type="source" ext="zip"/>
+
+        <artifact conf="commandline" name="jena-commandline" type="binary" ext="zip"/>
+
+        <artifact conf="examples" name="jena-examples" type="source" ext="zip"/>
+
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.5" conf="arq-&gt;client"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,2)" conf="core-&gt;core"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[2.10,3)" conf="core-&gt;impl"/>
+    </dependencies>
+</ivy-module>
