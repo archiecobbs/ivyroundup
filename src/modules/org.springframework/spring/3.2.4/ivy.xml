@@ -111,6 +111,7 @@
         <conf name="jms" extends="beans, tx" description="Spring JMS"/>
         <conf name="orm" extends="jdbc, web" description="Spring ORM"/>
         <conf name="oxm" extends="core, beans" description="Spring Object/XML Mapping"/>
+        <conf name="pooling" extends="aop" description="Spring Object Pooling"/>
         <conf name="struts" extends="core, beans, web" description="Spring Struts"/>
         <conf name="test" extends="core, context, jdbc, web" description="Spring Test"/>
         <conf name="tx" extends="core, aop, context" description="Spring Transaction"/>
@@ -191,6 +192,7 @@
     <dependencies>
         <dependency conf="default,aop->default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
         <dependency conf="default,core->default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
+        <dependency conf="pooling->default" org="org.apache.commons" name="commons-pool" rev="1.3+"/>
         <dependency conf="default,jms->default" org="javax.jms" name="jms" rev="1.+"/>
     </dependencies>
 
