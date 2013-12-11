@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/guava.jar" sha1="ed727a8d9f247e2050281cb083f1c77b09dcb5cd"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="36b6a585c0f0c63bd85fb04db0dcb7b217298956"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="862ded2ffe9349409f8b666a4dcaa0c2d69f873e"/>
+    </m2resource>
+    <m2resource artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="6b837fa3238f09d2175c6b676e13408c5bfacffb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="4f28f65474b54558091b95ea6efdf73c92d2c66b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="171e6bdc2a82ec3724ed847e20caeb24dea3160e"/>
+    </m2resource>
+    <m2resource artifactId="guava-testlib">
+        <artifact tofile="artifacts/jars/guava-testlib.jar" sha1="80fc4e92b949b6d4b15e48da3ad6d1ab752de425"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-testlib.zip" sha1="bc57ffb9784b4f4622d8aaea1815236b804887c8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-testlib.zip" sha1="27910e28edb1060fcabfd62bca36cd87a2f3bf9d"/>
+    </m2resource>
+</packager-module>
