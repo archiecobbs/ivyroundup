@@ -48,4 +48,10 @@
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-json-provider.zip" sha1="7bdfe17ebb3f35dc4b27311924666c9ff422ae55" />
     </m2resource>
 
+    <m2resource groupId="com.fasterxml.jackson.module" artifactId="jackson-module-afterburner">
+        <artifact tofile="artifacts/jars/jackson-module-afterburner.jar" sha1="d6e1927f0e219d1496d1dce88f007ed2bc2e9542" />
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-afterburner.zip" sha1="6456b2bf71aee58430e0725abfd3ec44c21465a9" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-afterburner.zip" sha1="7b7e05cf93714374ef635111d9b792929f8784ed" />
+    </m2resource>
+
 </packager-module>
