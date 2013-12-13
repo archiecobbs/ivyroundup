@@ -20,7 +20,7 @@
 
     <info organisation="org.apache.httpcomponents" module="httpclient" revision="4.3" status="release" publication="20130904000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2838 2013-10-04 15:57:35Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.3/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2925 2013-12-13 06:48:16Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hc.apache.org/httpcomponents-client-ga/index.html">
         <p>
@@ -95,7 +95,7 @@
 
     <dependencies>
         <!-- httpclient -->
-        <dependency conf="client-&gt;core; nio-&gt;nio" org="org.apache.httpcomponents" name="httpcore" rev="4.3.0"/>
+        <dependency conf="client-&gt;core; nio-&gt;nio" org="org.apache.httpcomponents" name="httpcore" rev="4.3"/>
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-codec" rev="1.8"/>
 
