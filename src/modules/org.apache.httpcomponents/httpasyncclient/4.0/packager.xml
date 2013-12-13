@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource>
+        <artifact tofile="artifacts/jars/httpasyncclient.jar" sha1="7998e17d83fce5f41337bccebb73a9345e5ef256"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpasyncclient.zip" sha1="5e23adc8ee17546d4ca0bac70fef750394b11e15"/>
+    </m2resource>
+    <m2resource artifactId="httpasyncclient-cache">
+        <artifact tofile="artifacts/jars/httpasyncclient-cache.jar" sha1="8af86dbe429237e0dd3671ffa338b22b06dce5b5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpasyncclient-cache.zip" sha1="d3d8817210763fe1cb6e5f83176b560ead8fd5ee"/>
+    </m2resource>
+    <m2resource artifactId="httpasyncclient-osgi">
+        <artifact tofile="artifacts/jars/httpasyncclient-osgi.jar" sha1="ad38a23ba45754fbd75a9f908db9b51ca718ff2f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/httpasyncclient-osgi.zip" sha1="3a9222ae9326a68caa6ddf10a2620d1f549600e2"/>
+    </m2resource>
+</packager-module>
