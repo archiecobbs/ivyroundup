@@ -20,7 +20,7 @@
 
     <info organisation="org.projectreactor" module="reactor" revision="1.0.0" status="release" publication="20131022000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2928 2013-12-13 08:00:00Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.projectreactor/reactor/1.0.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2934 2013-12-13 15:31:53Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.projectreactor/reactor/1.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://github.com/reactor/reactor">
             Reactor is a foundational library building for reactive fast data applications on the JVM.
@@ -73,12 +73,11 @@
         <dependency org="org.codehaus.groovy" name="groovy" rev="[2.1.6,)" conf="groovy-&gt;embeddable"/>
         <dependency org="ch.qos" name="logback" rev="[1.0,)" conf="logback-&gt;classic"/>
         <dependency org="com.fasterxml" name="jackson" rev="[2.2.3,)" conf="core-&gt;module-afterburner"/>
+        <dependency org="com.jayway.jsonpath" name="json-path" rev="[0.9.0,)" conf="core-&gt;core"/>
+        <dependency org="net.openhft" name="chronicle" rev="[2.0.2,)" conf="core-&gt;default"/>
         <!-- Optional dependencies
         <dependency org="edu.umd.cs" name="findbugs" rev="[2.0.0,)" conf="core->annotations"/>
-        <dependency org="com.jayway.jsonpath" name="json-path" rev="0.9.0" conf="core->default"/>   ***
-        <dependency org="net.openhft" name="chronicle" rev="[2.0.2,)" conf="core->default"/>        ***
-        <dependency org="net.openhft" name="lang" rev="[6.1.1,)" conf="core->default"/>"            ***
-        <dependency org="io.netty" name="netty-all" rev="[4.0.11,)" conf="core->default"/>"         ***
+        <dependency org="io.netty" name="netty-all" rev="[4.0.11,)" conf="core->default"/>"     *** NOT IN IVYROUNDUP
         -->
     </dependencies>
 

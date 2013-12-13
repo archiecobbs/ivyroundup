@@ -18,22 +18,21 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="javax.resource" module="connector-api" revision="1.5" status="release" publication="20130816000000">
-        <license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/><license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2930 2013-12-13 08:21:29Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.resource/connector-api/1.5/"/>
+    <info organisation="net.openhft" module="compiler" revision="2.1" status="release" publication="20131008000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2933 2013-12-13 15:21:08Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.openhft/compiler/2.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="https://jcp.org/en/jsr/detail?id=322">
+        <description homepage="http://www.openhft.net/">
             <p>
-                The Java EE Connector Architecture 1.5 defines a standard architecture for connecting
-                to Enterprise Information Systems. This JSR will enhance the existing specification
-                with features requested by experts and community.
+                Java Runtime Compiler library
             </p>
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="connector-api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="compiler" ivyde:javadoc="compiler"/>
         <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
