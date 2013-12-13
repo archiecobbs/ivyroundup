@@ -34,6 +34,7 @@
         <conf name="annotations" extends="core" description="for annotation-based configuration"/>
         <conf name="databind" extends="core" description="for data binding, tree model" />
         <conf name="module-jaxb-annotations" extends="databind" description="Support for using JAXB annotations as an alternative to native Jackson annotations, for configuring data binding." />
+        <conf name="module-afterburner" extends="databind,annotations" description="Experimental extension to Jackson (http://jackson.codehaus.org) used to enhance access functionality using bytecode generation."/>
         <conf name="jaxrs-json-provider" extends="databind" description="Functionality to handle JSON input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding." />
 
         <!-- there are other more obscure add-on modules, that aren't yet configured -->
@@ -57,6 +58,10 @@
         <artifact name="jackson-module-jaxb-annotations" conf="module-jaxb-annotations" />
         <artifact name="jackson-module-jaxb-annotations" conf="module-jaxb-annotations" type="source" ext="zip" />
         <artifact name="jackson-module-jaxb-annotations" conf="module-jaxb-annotations" type="javadoc" ext="zip" />
+
+        <artifact name="jackson-module-afterburner" conf="module-afterburner" />
+        <artifact name="jackson-module-afterburner" conf="module-afterburner" type="source" ext="zip" />
+        <artifact name="jackson-module-afterburner" conf="module-afterburner" type="javadoc" ext="zip" />
 
         <artifact name="jackson-jaxrs-json-provider" conf="jaxrs-json-provider" />
         <artifact name="jackson-jaxrs-json-provider" conf="jaxrs-json-provider" type="source" ext="zip" />
