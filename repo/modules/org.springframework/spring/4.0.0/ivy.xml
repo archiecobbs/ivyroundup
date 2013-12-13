@@ -20,7 +20,7 @@
 
     <info organisation="org.springframework" module="spring" revision="4.0.0" status="release" publication="20131212000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2929 2013-12-13 08:03:11Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/4.0.0/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2934 2013-12-13 15:31:53Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/4.0.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://spring.io/">
             Spring is a layered Java/J2EE application framework, based on code
@@ -245,10 +245,10 @@
         <dependency org="org.projectreactor" name="reactor" rev="[1.0.0,)" conf="messaging->tcp"/>
         <dependency org="org.apache.commons" name="commons-fileupload" rev="[1.2,)" conf="web->default"/>
         <dependency org="javax.portlet" name="portlet-api" rev="2.0" conf="web->default"/>
-        <dependency org="com.jayway.jsonpath" name="json-path" rev="0.9.0" conf="test->default"/>                                   ***
+        <dependency org="com.jayway.jsonpath" name="json-path" rev="[0.9.0,)" conf="test->default"/>
         <dependency org="javax.servlet.jsp" name="jsp-api" rev="[2.1,)" conf="web->default"/>
         <dependency org="org.junit" name="junit" rev="[4.11,)" conf="test->default"/>
-        <dependency org="org.hamcrest" name="hamcrest-core" rev="[1.3,)" conf="test->default"/>
+        <dependency org="org.hamcrest" name="hamcrest" rev="[1.3,)" conf="test->default"/>
         <dependency org="org.testng" name="testng" rev="[6.8.5,)" conf="test->default"/>
         <dependency org="net.sourceforge.xmlunit" name="xmlunit" rev="1.3" conf="test->default"/>
         <dependency org="javax.activation" name="activation" rev="[1.1,2.0[" conf="context-support,test,web->default"/>
