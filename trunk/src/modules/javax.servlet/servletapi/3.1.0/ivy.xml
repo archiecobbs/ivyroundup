@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2010 Mark Thomas
+    Copyright 2013 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,20 +17,21 @@
 -->
 
 <ivy-module rev="$Id$">
-    <info publication="20110712153000">
+    <info publication="20130425000000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/us/sun/index.htm"/>
         <description homepage="http://www.oracle.com/technetwork/java/javaee/servlet/index.html">
-            Java Servlet technology provides Web developers with a simple, consistent 
-            mechanism for extending the functionality of a Web server and for accessing 
-            existing business systems. A servlet can almost be thought of as an applet 
-            that runs on the server side--without a face. Java servlets make many Web 
+            Java Servlet technology provides Web developers with a simple, consistent
+            mechanism for extending the functionality of a Web server and for accessing
+            existing business systems. A servlet can almost be thought of as an applet
+            that runs on the server side--without a face. Java servlets make many Web
             applications possible. &#187; <a href="http://www.oracle.com/technetwork/java/javaee/servlet/index.htmloverview.html">Read More</a>
         </description>
     </info>
 
     <publications>
         <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
