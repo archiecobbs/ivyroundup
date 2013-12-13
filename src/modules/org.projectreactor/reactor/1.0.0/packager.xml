@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-benchmark">
+        <artifact tofile="artifacts/jars/reactor-benchmark.jar" sha1="de7ec6ec48e6d04b921f0b4660988d8229b8b712"/>
+    </m2resource>
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-core">
+        <artifact tofile="artifacts/jars/reactor-core.jar" sha1="18133307026f899e718fd25ed8f1419417360922"/>
+        <artifact classifier="sources" tofile="artifacts/sources/reactor-core.zip" sha1="e80f55406d0a7d3baa7806033fd322bc5665793f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/reactor-core.zip" sha1="25d39b5c0e1f7dfe3b4095677c14ba70bb741b39"/>
+    </m2resource>
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-groovy">
+        <artifact tofile="artifacts/jars/reactor-groovy.jar" sha1="bfe9b0457749f59492a283f692053d595bb55127"/>
+        <artifact classifier="sources" tofile="artifacts/sources/reactor-groovy.zip" sha1="8fc1dfdcd6ac034877a88d1097dd1e20cae0ea55"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/reactor-groovy.zip" sha1="19e87ca6711c39c29a17972623e1f5e7ce6bdec5"/>
+    </m2resource>
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-logback">
+        <artifact tofile="artifacts/jars/reactor-logback.jar" sha1="90474ff71a3e7464caad9e79e84bc87409a3fa0d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/reactor-logback.zip" sha1="f847ffd8e97e6cbfef56ef5b6ac16febd92cc3bd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/reactor-logback.zip" sha1="c13286747c43b02900f64d3d2f486a17fe8dd907"/>
+    </m2resource>
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-spring">
+        <artifact tofile="artifacts/jars/reactor-spring.jar" sha1="9b0db425d7b114177bf20cdf0813124928d4b28c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/reactor-spring.zip" sha1="8d9df108e2d70aa0c0643c35ade9765974750fe6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/reactor-spring.zip" sha1="6f97549e3dc28d6161912f2930efbc9f638b232c"/>
+    </m2resource>
+    <m2resource version="1.0.0.RELEASE" artifactId="reactor-tcp">
+        <artifact tofile="artifacts/jars/reactor-tcp.jar" sha1="5aede85151a7a0d31e508cb04df38ed28d52bbc2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/reactor-tcp.zip" sha1="51365399045075f98539b473306f0cd60881405a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/reactor-tcp.zip" sha1="a3b82b530070bbb70f3d73b9ed1ec2f66c4355a6"/>
+    </m2resource>
+</packager-module>
