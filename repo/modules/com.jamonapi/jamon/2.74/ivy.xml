@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.jamonapi" module="jamon" revision="2.74" status="release" publication="20130102133200">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2910 2013-12-13 03:56:50Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.jamonapi/jamon/2.74/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://jamonapi.sourceforge.net/">
+            <p>
+                The Java Application Monitor (JAMon) is a free, simple, high performance, thread safe, Java API that allows developers to easily monitor production applications.
+                <ul>
+                    <li>JAMon can be used to determine application performance bottlenecks, user/application interactions, track application scalability, and more.</li>
+                    <li>JAMon 1.0 gathers aggregate performance statistics such as hits, execution times (total, average, minimum, maximum, standard deviation), as well as concurrency information such as simultaneous application requests.</li>
+                    <li>JAMon 2.7 comes with several ways to monitor your application that require no application code changes. Usually all that is required is to add a line to an xml file, and make the jamon jar file available. Some examples:
+                        <ul>
+                            <li>JDBC/SQL monitoring via the JAMon JDBC proxy driver (works with any other JDBC driver),</li>
+                            <li>Log4j monitoring via the JAMon log4j Appender,</li>
+                            <li>HTTP Monitoring. Monitor requests/responses to Tomcat, Jetty, JBoss or any other JAVA web container.</li>
+                            <li>EJB3 monitoring using the JAMon EJB interceptor.</li>
+                        </ul>
+                    </li>
+                    <li>JAMon 2.0 aggregates ANY numeric entity (such as bytes sent, dollars purchased, phone call duration) associated with a key (label and units).</li>
+                    <li>JAMon 2.1 adds the ability to track both summary statistics and detils for Interfaces/JDBC/SQL/Exceptions.</li>
+                    <li>JAMon 2.2 adds the ability to track JDBC/SQL/Exceptions vi the new JAMonDriver JDBC Driver using a URL (not changing code)</li>
+                    <li>JAMon 2.3 minor bug fixes</li>
+                    <li>JAMon 2.4/2.5 Introduction of JAMon Buffer Listeners to track details of interest such as extreme values, or most recent values</li>
+                    <li>JAMon 2.6 log4j monitoring. Track stats on log4j method calls, as well as have the ability to 'tail' data written to log4j through the JAMon web application.</li>
+                    <li>JAMon 2.7 Add the ability to flexibly monitor Tomcat, Jetty, Jboss. More flexible detail tracking was added. Also better exception tracking was added.</li>
+                    <li>JAMon data can also be programmatically accessed or queried and your program can take actions on the results.</li>
+                    <li>JAMon statistics are displayed in the clickable JAMon Report</li>
+                </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="tomcat" description="Tomcat classes"/>
+        <conf name="default" extends="core" description="Alias for core"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jamon" ivyde:javadoc="jamon" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jamon" ivyde:javadoc="jamon" name="jamontomcat" conf="tomcat"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
