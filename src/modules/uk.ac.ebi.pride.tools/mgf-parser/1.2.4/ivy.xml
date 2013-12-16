@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20120906000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/jmzreader/">
+
+            <p>
+                The mgf-parser can be used to parse MGF mass spectrometry peak list files.
+                A description about the mgf file format can be found at the
+                <a href="http://www.matrixscience.com/help/data_file_help.html" rel="nofollow">Matrix
+                Science Help page</a>.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="uk.ac.ebi.pride.tools" name="jmzreader" rev="1.2.0" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
