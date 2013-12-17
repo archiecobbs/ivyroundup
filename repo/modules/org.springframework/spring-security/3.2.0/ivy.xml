@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.springframework" module="spring-security" revision="3.2.0" status="release" publication="20131216000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2954 2013-12-17 18:48:40Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring-security/3.2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://spring.io/spring-security">
+
+            <p>
+            Formerly the Acegi Security System for Spring, Spring
+            Security provides powerful and flexible security solutions
+            for enterprise applications developed using the Spring
+            Framework. It is a stable and mature product - Acegi Security
+            1.0.0 was released in May 2006 after more than two and a
+            half years of use in large production software projects and
+            adopted as an official Spring sub-project on its release.
+            </p>
+
+            <p>
+            Spring Security builds on Acegi Security's solid foundations,
+            adding many new features:
+            <ul>
+            <li>Simplified namespace-based configuration syntax. Old
+            configurations could require hundreds of lines of XML but
+            our new convention over configuration approach ensures that
+            many deployments will now require less than 10 lines.</li>
+            <li>OpenID integration, which is the web's emerging single sign
+            on standard (supported by Google, IBM, Sun, Yahoo and others)</li>
+            <li>Windows NTLM support, providing easy enterprise-wide single
+            sign on against Windows corporate networks</li>
+            <li>Support for JSR 250 ("EJB 3") security annotations,
+            delivering a standards-based model for authorization metadata</li>
+            <li>AspectJ pointcut expression language support, allowing
+            developers to apply cross-cutting security logic across
+            their Spring managed objects</li>
+            <li>Substantial improvements to the high-performance domain
+            object instance security ("ACL") capabilities</li>
+            <li>Comprehensive support for RESTful web request authorization,
+            which works well with Spring 2.5's @MVC model for building
+            RESTful systems</li>
+            <li>Long-requested support for groups, hierarchical roles and a
+            user management API, which all combine to reduce development
+            time and significantly improve system administration</li>
+            <li>An improved, database-backed "remember me" implementation</li>
+            <li>Support for portlet authentication out-of-the-box</li>
+            <li>Support for additional languages</li>
+            <li>Numerous other general improvements, documentation and
+            new samples</li>
+            <li>New support for web state and flow transition authorization
+            through the Spring Web Flow 2.0 release</li>
+            <li>New support for visualizing secured methods, plus
+            configuration auto-completion support in Spring IDE</li>
+            <li>Enhanced WSS (formerly WS-Security) support through the
+            Spring Web Services 1.5 release</li>
+            <li>Updated support for CAS single sign-on (CAS 3 is now
+            supported).</li>
+            </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="acl" extends="core" description="ACL module"/>
+        <conf name="aspects" extends="core" description="AspectJ files"/>
+        <conf name="cas-client" extends="web" description="CAS module"/>
+        <conf name="config" extends="core" description="Config module"/>
+        <conf name="core" description="Core module"/>
+        <conf name="crypto" description="Crypto module"/>
+        <conf name="ldap" extends="core" description="LDAP module"/>
+        <conf name="openid" extends="web" description="OpenID module"/>
+        <conf name="remoting" extends="core" description="Remoting module"/>
+        <conf name="taglibs" extends="web,acl" description="Taglibs module"/>
+        <conf name="web" extends="core" description="Web module"/>
+        <conf name="default" extends="acl,aspects,cas-client,config,core,crypto,ldap,openid,remoting,taglibs,web" description="Everything"/>
+    </configurations>
+
+    <publications>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-acl" ivyde:javadoc="spring-security-acl" name="spring-security-acl" conf="acl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-aspects" ivyde:javadoc="spring-security-aspects" name="spring-security-aspects" conf="aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-cas" ivyde:javadoc="spring-security-cas" name="spring-security-cas" conf="cas-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-config" ivyde:javadoc="spring-security-config" name="spring-security-config" conf="config"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-core" ivyde:javadoc="spring-security-core" name="spring-security-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-crypto" ivyde:javadoc="spring-security-crypto" name="spring-security-crypto" conf="crypto"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-ldap" ivyde:javadoc="spring-security-ldap" name="spring-security-ldap" conf="ldap"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-openid" ivyde:javadoc="spring-security-openid" name="spring-security-openid" conf="openid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-remoting" ivyde:javadoc="spring-security-remoting" name="spring-security-remoting" conf="remoting"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-taglibs" ivyde:javadoc="spring-security-taglibs" name="spring-security-taglibs" conf="taglibs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-security-web" ivyde:javadoc="spring-security-web" name="spring-security-web" conf="web"/>
+
+        <artifact name="spring-security-acl" conf="acl" type="source" ext="zip"/>
+        <artifact name="spring-security-aspects" conf="aspects" type="source" ext="zip"/>
+        <artifact name="spring-security-cas" conf="cas-client" type="source" ext="zip"/>
+        <artifact name="spring-security-config" conf="config" type="source" ext="zip"/>
+        <artifact name="spring-security-core" conf="core" type="source" ext="zip"/>
+        <artifact name="spring-security-crypto" conf="crypto" type="source" ext="zip"/>
+        <artifact name="spring-security-ldap" conf="ldap" type="source" ext="zip"/>
+        <artifact name="spring-security-openid" conf="openid" type="source" ext="zip"/>
+        <artifact name="spring-security-remoting" conf="remoting" type="source" ext="zip"/>
+        <artifact name="spring-security-taglibs" conf="taglibs" type="source" ext="zip"/>
+        <artifact name="spring-security-web" conf="web" type="source" ext="zip"/>
+
+        <!-- javadoc -->
+        <artifact name="spring-security-acl" conf="acl" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-aspects" conf="aspects" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-cas" conf="cas-client" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-config" conf="config" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-core" conf="core" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-crypto" conf="crypto" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-ldap" conf="ldap" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-openid" conf="openid" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-remoting" conf="remoting" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-taglibs" conf="taglibs" type="javadoc" ext="zip"/>
+        <artifact name="spring-security-web" conf="web" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.springframework" name="spring" rev="[3.2.6,)" conf="core-&gt;aop,core,beans,context,jdbc,expression,tx;crypto-&gt;core;remoting,web-&gt;web"/>
+        <!-- NOT IN IVYROUNDUP
+        <dependency org="org.springframework" name="ldap" rev="[1.3.2,)" conf="ldap->core"/>
+        -->
+        <dependency org="org.openid4java" name="openid4java" rev="[0.9.3,2.0[" conf="openid-&gt;default"/>
+        <dependency org="com.google" name="guice" rev="[2.0,)" conf="openid-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.3,4.0[" conf="web-&gt;default"/>
+        <dependency org="org.jasig.cas" name="cas-client-core" rev="3.2.+" conf="cas-client-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
