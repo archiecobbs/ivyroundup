@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="binarchive" value="SaxonHE9-5-0-2J"/>
+    <property name="srcarchive" value="saxon9-5-0-2source"/>
+    <property name="resarchive" value="saxon-resources9-5"/>
+
+    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${binarchive}.zip"
+      sha1="d599b177d01cde8b2a5a2a5c0d6f61e65e7d48df">
+        <include name="saxon9he.jar"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${resarchive}.zip"
+      sha1="80a740a40674b1f080ebea0055ce5a351ff326a5">
+        <include name="doc/javadoc/**/*"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${srcarchive}.zip" tofile="artifacts/sources/source.zip"
+      sha1="c416fbcddc5f9ba48136cc74f1a67c5033a1ec97"/>
+
+    <build>
+        <move file="archive/saxon9he.jar" tofile="artifacts/jars/${name}.jar"/>
+        <zip destfile="artifacts/javadocs/javadoc.zip" basedir="archive/doc/javadoc"/>
+    </build>
+</packager-module>
