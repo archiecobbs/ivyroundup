@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20130609010500">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/ScaleUnlimited/cascading.utils">
+
+            <p>
+            Cascading-related utilities.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact />
+    </publications>
+
+
+    <dependencies>
+        <dependency org="cascading" name="cascading" rev="[2.1.6,3.0)" conf="default->core"/>
+        <dependency org="com.esotericsoftware" name="kryo" rev="2.19" conf="default->default" />
+        <dependency org="org.apache.mahout" name="mahout-math" rev="0.7" conf="default->default" />
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.6" conf="default->default" />
+        <dependency org="org.apache.commons" name="commons-io" rev="[2.1,3.0)" conf="default->default" />
+        <dependency org="net.java.dev.args4j" name="args4j" rev="[2.0.16,2.1)" conf="default->default" />
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.16" conf="default->default" />
+    </dependencies>
+</ivy-module>
