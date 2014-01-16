@@ -20,8 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <!-- When obsoleted: url="http://downloads.mysql.com/archives/mysql-connector-java-5.1/${archive}.zip" -->
-    <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip/from/http://cdn.mysql.com/" filename="${archive}.zip" sha1="003c1e9546cde7cc73d7b90345d1ae45afb3e1b4">
+    <resource url="http://downloads.mysql.com/archives/get/file/${archive}.zip" filename="${archive}.zip" sha1="003c1e9546cde7cc73d7b90345d1ae45afb3e1b4">
         <include name="${archive}/${archive}-bin.jar"/>
         <include name="${archive}/src/com/**/*"/>
         <include name="${archive}/src/org/**/*"/>
