@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2013 Mark Thomas
+    Copyright 2014 Nathan Summers
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,22 +18,22 @@
 
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
+    <property name="archive" value="${name}-core-${revision}"/>
 
-    <resource url="http://downloads.mysql.com/archives/get/file/${archive}.zip" filename="${archive}.zip" sha1="73b770ae8d0e241e687cba6d31b411377da4cb22">
-        <include name="${archive}/${archive}-bin.jar"/>
-        <include name="${archive}/src/com/**/*"/>
-        <include name="${archive}/src/org/**/*"/>
-    </resource>
-
+    <resource url="http://www.scaleunlimited.com/downloads/${name}/bixo-dist-${revision}.tgz" sha1="722fb303d2e383236f44385ec4b5cfcfc41f302a"/>
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${archive}-bin.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- source -->
-        <zip destfile="artifacts/sources/${name}.zip">
-            <fileset dir="archive/${archive}/src/com"/>
-            <fileset dir="archive/${archive}/src/org"/>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/src/main/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/doc/javadoc"/>
         </zip>
     </build>
+
 </packager-module>
