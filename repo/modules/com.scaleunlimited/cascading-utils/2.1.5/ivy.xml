@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2012 Martin Weber
+    Copyright 2013 Nathan Summers
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,21 +18,31 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.geronimo.specs" module="j2ee-management" revision="1.1" status="release" publication="20080206202656">
+    <info organisation="com.scaleunlimited" module="cascading-utils" revision="2.1.5" status="release" publication="20130609010500">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2961 2013-12-31 18:36:22Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.geronimo.specs/j2ee-management/1.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2966 2014-01-16 15:08:13Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.scaleunlimited/cascading-utils/2.1.5/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="https://jcp.org/en/jsr/detail?id=77">
-        J2EE Management API (JSR-77)
+        <description homepage="https://github.com/ScaleUnlimited/cascading.utils">
+
+            <p>
+            Cascading-related utilities.
+            </p>
+
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact/>
     </publications>
+
+
     <dependencies>
-        <dependency org="org.apache.geronimo.specs" name="ejb" rev="3.1" conf="default-&gt;default"/>
+        <dependency org="cascading" name="cascading" rev="[2.1.6,3.0)" conf="default-&gt;core"/>
+        <dependency org="com.esotericsoftware" name="kryo" rev="2.19" conf="default-&gt;default"/>
+        <dependency org="org.apache.mahout" name="mahout-math" rev="0.7" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.6" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[2.1,3.0)" conf="default-&gt;default"/>
+        <dependency org="net.java.dev.args4j" name="args4j" rev="[2.0.16,2.1)" conf="default-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.16" conf="default-&gt;default"/>
     </dependencies>
 </ivy-module>
