@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20131216120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://docs.seleniumhq.org/">
+
+            <p>
+            Selenium automates browsers. That"s it! What you do with that power is entirely up to you. Primarily it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
+            </p>
+            <p>
+            Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="server" description="Server Classes"/>
+
+        <conf name="api" description="API Classes"/>
+        <conf name="support" description="Support Classes" extends="api"/>
+        <conf name="java" description="Java Classes" extends="support"/>
+
+        <conf name="remote-driver" description="Remote Driver Classes" extends="api"/>
+        <conf name="htmlunit-driver" description="HTMLUnit Driver Classes" extends="remote-driver"/>
+        <conf name="ie-driver" description="IE Driver Classes" extends="remote-driver"/>
+        <conf name="chrome-driver" description="Chrome Driver Classes" extends="remote-driver"/>
+        <conf name="firefox-driver" description="Firefox Driver Classes" extends="remote-driver"/>
+        <conf name="iphone-driver" description="iPhone Driver Classes" extends="remote-driver"/>
+        <conf name="android-driver" description="Android Driver Classes" extends="remote-driver"/>
+        <conf name="safari-driver" description="Safari Driver Classes" extends="remote-driver"/>
+        <conf name="drivers" description="All Driver Classes" extends="htmlunit-driver,ie-driver,chrome-driver,firefox-driver,iphone-driver,android-driver,safari-driver" />
+
+        <conf name="default" description="All core classes + drivers" extends="java,drivers" />
+    </configurations>
+
+    <publications>
+        <artifact name="selenium-server" conf="server"/>
+        <artifact name="selenium-api" conf="api"/>
+        <artifact name="selenium-support" conf="support"/>
+        <artifact name="selenium-java" conf="java"/>
+        <artifact name="selenium-remote-driver" conf="remote-driver"/>
+        <artifact name="selenium-htmlunit-driver" conf="htmlunit-driver"/>
+        <artifact name="selenium-ie-driver" conf="ie-driver"/>
+        <artifact name="selenium-chrome-driver" conf="chrome-driver"/>
+        <artifact name="selenium-firefox-driver" conf="firefox-driver"/>
+        <artifact name="selenium-iphone-driver" conf="iphone-driver"/>
+        <artifact name="selenium-android-driver" conf="android-driver"/>
+        <artifact name="selenium-safari-driver" conf="safari-driver"/>
+
+        <artifact name="selenium-server" conf="server" type="source" ext="zip"/>
+        <artifact name="selenium-api" conf="api" type="source" ext="zip"/>
+        <artifact name="selenium-support" conf="support" type="source" ext="zip"/>
+        <artifact name="selenium-java" conf="java" type="source" ext="zip"/>
+        <artifact name="selenium-remote-driver" conf="remote-driver" type="source" ext="zip"/>
+        <artifact name="selenium-htmlunit-driver" conf="htmlunit-driver" type="source" ext="zip"/>
+        <artifact name="selenium-ie-driver" conf="ie-driver" type="source" ext="zip"/>
+        <artifact name="selenium-chrome-driver" conf="chrome-driver" type="source" ext="zip"/>
+        <artifact name="selenium-firefox-driver" conf="firefox-driver" type="source" ext="zip"/>
+        <artifact name="selenium-iphone-driver" conf="iphone-driver" type="source" ext="zip"/>
+        <artifact name="selenium-android-driver" conf="android-driver" type="source" ext="zip"/>
+        <artifact name="selenium-safari-driver" conf="safari-driver" type="source" ext="zip"/>
+
+        <artifact name="selenium-server" conf="server" type="javadoc" ext="zip"/>
+        <artifact name="selenium-api" conf="api" type="javadoc" ext="zip"/>
+        <artifact name="selenium-support" conf="support" type="javadoc" ext="zip"/>
+        <artifact name="selenium-java" conf="java" type="javadoc" ext="zip"/>
+        <artifact name="selenium-remote-driver" conf="remote-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-htmlunit-driver" conf="htmlunit-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-ie-driver" conf="ie-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-chrome-driver" conf="chrome-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-firefox-driver" conf="firefox-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-iphone-driver" conf="iphone-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-android-driver" conf="android-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-safari-driver" conf="safari-driver" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="latest.release" conf="api->default"/>
+        <dependency org="org.json" name="json" rev="latest.release" conf="api->default"/>
+
+        <dependency org="com.gargoylesoftware" name="htmlunit" rev="latest.release" conf="htmlunit-driver->default"/>
+
+        <dependency org="org.apache.commons" name="commons-io" rev="latest.release" conf="firefox-driver->default"/>
+
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="latest.release" conf="remote-driver->default"/>
+        <dependency org="org.json" name="json" rev="latest.release" conf="remote-driver->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="latest.release" conf="remote-driver->default"/>
+        <dependency org="com.google.guava" name="guava" rev="latest.release" conf="remote-driver->default"/>
+        <dependency org="net.java.dev.jna" name="jna" rev="latest.release" conf="remote-driver->default"/>
+    </dependencies>
+
+</ivy-module>
