@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="apache-${name}-${revision}"/>
 
-    <resource url="http://www.apache.org/dist/jena/binaries/${archive}.tar.gz" sha1="50d1a13092d1027221222b6f3a4c6c495837a392"/>
+    <resource url="http://archive.apache.org/dist/jena/binaries/${archive}.tar.gz" sha1="50d1a13092d1027221222b6f3a4c6c495837a392"/>
 
     <build>
         <!-- jar -->
