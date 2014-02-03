@@ -23,7 +23,7 @@
     <property name="distrev" value="${revision}.RELEASE"/>
     <property name="archive" value="${name}-${distrev}"/>
 
-    <resource url="http://repo.springsource.org/libs-release-local/org/springframework/spring/${distrev}/${archive}-dist.zip"
+    <resource url="http://repo.spring.io/libs-release-local/org/springframework/spring/${distrev}/${archive}-dist.zip"
       sha1="7cc17b82d694d1fbabd2e796402baea7664c9268">
         <include name="${archive}/libs/spring-*-${distrev}.jar"/>
         <include name="${archive}/libs/spring-*-${distrev}-sources.jar"/>
