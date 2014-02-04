@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}.RELEASE"/>
 
-    <resource url="http://repo.springsource.org/libs-staging-local/org/springframework/security/${name}/${revision}.RELEASE/${archive}-dist.zip" sha1="6472c9e4e7957c84e9d39c1b7873afb8bd724da4"/>
+    <resource url="http://repo.spring.io/libs-staging-local/org/springframework/security/${name}/${revision}.RELEASE/${archive}-dist.zip" sha1="6472c9e4e7957c84e9d39c1b7873afb8bd724da4"/>
 
     <build>
         <!-- jars -->
