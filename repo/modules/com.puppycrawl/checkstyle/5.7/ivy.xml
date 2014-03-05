@@ -20,7 +20,7 @@
 
     <info organisation="com.puppycrawl" module="checkstyle" revision="5.7" status="release" publication="20140203000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2989 2014-03-05 21:50:05Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.7/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2991 2014-03-05 21:56:12Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.puppycrawl/checkstyle/5.7/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://checkstyle.sourceforge.net/">
             Checkstyle is a development tool to help programmers write
@@ -46,10 +46,8 @@
     <dependencies>
         <dependency org="org.antlr" name="antlr" rev="2.7+" conf="default-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-cli" rev="1.+" conf="default-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="2.1+" conf="default-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-logging" rev="1+" conf="default-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-beanutils" rev="1.8+" conf="default-&gt;default"/>
-        <dependency org="com.google.common" name="google-collections" rev="1.0" conf="default-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="16.0" conf="default-&gt;default"/>
 
     </dependencies>
 
