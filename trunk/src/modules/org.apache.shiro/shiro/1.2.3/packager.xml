@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <m2resource artifactId="${ivy.packager.module}-core">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-core.jar" sha1="4ddf1b83360c7e39f02e3e20ca364d2c448ed01f" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-core-source.zip" sha1="3758c653223303442149304cc558e8a54c46a00b" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-core-javadoc.zip" sha1="1aed707c09671205b491757a483c53bb5c482cfc" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-web">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-web.jar" sha1="4dbcac122a883c29d32fe94f6b1525e5a81884ec" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-web-source.zip" sha1="e6c9093e3dfe8384b2f9ab3678f6ec60965bafba" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-web-javadoc.zip" sha1="96dddfda5d54607576e0dced7b697354d7a4c4eb" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-aspectj">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-aspectj.jar" sha1="7afb43ff52508205a8cd767feb9f61aed6eb8ffd" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-aspectj-source.zip" sha1="1df6d7dcade435715cdbfbebda9ff8d464b0f4ba" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-aspectj-javadoc.zip" sha1="268ef000e3f1d4df84bfe87907df5601879e6c3a" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-cas">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-cas.jar" sha1="10a4e0a86073510bc9ccdf31129e1f1f3ec7f615" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-cas-source.zip" sha1="475a8e5b45c601330926350599e246448ec6ca4a" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-cas-javadoc.zip" sha1="1feffb55254c7d171d4c313462877229c4d9e411" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-ehcache">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-ehcache.jar" sha1="d9663924e81f35eb937597819c82963473765987" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-ehcache-source.zip" sha1="40ec9629f5181eabd09b6f614c92ea626218e307" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-ehcache-javadoc.zip" sha1="3346883f1332d00dad64eef4f1356a32fa8910ac" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-guice">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-guice.jar" sha1="46b94ff6725f089d85823ef6667584a562bca8e3" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-guice-source.zip" sha1="24054c7285a50d066ec6f6b1d159c5108de29bbd" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-guice-javadoc.zip" sha1="ccb9787843a622a9399de261c06bbcea825065df" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-quartz">    
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-quartz.jar" sha1="6d478e45f9f6b53987eadfa82e63f924bef2d969" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-quartz-source.zip" sha1="33539f7d7c9f2e19a89a55e8962734d2948f1be2" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-quartz-javadoc.zip" sha1="ac6e091b522feda36b30a7119ad06d0e50bfa3f7" />
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-spring">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-spring.jar" sha1="1e1cce0a92ce3612967de861a2a94e01e47faa73" />
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-spring-source.zip" sha1="db437ca9e54bc5704e87dfd6be9e06ca98c9cdef" />
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-spring-javadoc.zip" sha1="b67fd406e624298a0df4b392295eff627b8fc41b" />
+    </m2resource>
+
+</packager-module>
