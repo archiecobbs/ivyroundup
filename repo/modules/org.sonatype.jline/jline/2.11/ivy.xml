@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2014 Archie L. Cobbs
+    Copyright 2010 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,21 +18,17 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.foundationdb" module="fdb-java" revision="2.0.4" status="release" publication="20140313000000">
-        <license name="MIT License" url="http://opensource.org/licenses/MIT"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3022 2014-04-19 17:07:47Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.foundationdb/fdb-java/2.0.4/"/>
+    <info organisation="org.sonatype.jline" module="jline" revision="2.11" status="release" publication="20130519000000">
+        <license name="The BSD License" url="http://opensource.org/licenses/bsd-license.php"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3024 2014-04-23 21:17:50Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.sonatype.jline/jline/2.11/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="https://foundationdb.com/">
+        <description homepage="https://github.com/jline/jline2">
 
-            <p>
-            Java bindings for the FoundationDB database.
-            </p>
-
-            <p>
-            These bindings require the FoundationDB client, which is under a different license.
-            The client can be obtained from
-            <a href="https://foundationdb.com/get">https://foundationdb.com/get</a>
-            </p>
+            JLine is a Java library for handling console input. It is similar
+            in functionality to BSD editline and GNU readline. People familiar
+            with the readline/editline capabilities for modern shells (such
+            as bash and tcsh) will find most of the command editing features
+            of JLine to be familiar.
 
         </description>
     </info>
