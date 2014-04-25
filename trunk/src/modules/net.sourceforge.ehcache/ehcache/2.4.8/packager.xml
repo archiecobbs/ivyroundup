@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="net/sf/ehcache" artifactId="ehcache-core">
+        <artifact tofile="artifacts/jars/ehcache-core.jar" sha1="68af5269ad947dd10cfb2dd8e234769c4a9180f2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/ehcache-core.zip" sha1="212e930930db16b186adc86ebdffb70a4f8a3cf7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/ehcache-core.zip" sha1="f887b3af16102fd2352880bc723ab3246054cd85"/>
+    </m2resource>
+</packager-module>
