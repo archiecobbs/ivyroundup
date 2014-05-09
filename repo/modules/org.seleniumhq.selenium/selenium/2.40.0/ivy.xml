@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.seleniumhq.selenium" module="selenium" revision="2.40.0" status="release" publication="20140219120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3044 2014-05-09 13:31:55Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.seleniumhq.selenium/selenium/2.40.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://docs.seleniumhq.org/">
+
+            <p>
+            Selenium automates browsers. That"s it! What you do with that power is entirely up to you. Primarily it is for automating web applications for testing purposes, but is certainly not limited to just that. Boring web-based administration tasks can (and should!) also be automated as well.
+            </p>
+            <p>
+            Selenium has the support of some of the largest browser vendors who have taken (or are taking) steps to make Selenium a native part of their browser. It is also the core technology in countless other browser automation tools, APIs and frameworks.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="server" description="Server Classes"/>
+
+        <conf name="api" description="API Classes"/>
+        <conf name="support" description="Support Classes" extends="api"/>
+        <conf name="java" description="Java Classes" extends="support"/>
+
+        <conf name="remote-driver" description="Remote Driver Classes" extends="api"/>
+        <conf name="htmlunit-driver" description="HTMLUnit Driver Classes" extends="remote-driver"/>
+        <conf name="ie-driver" description="IE Driver Classes" extends="remote-driver"/>
+        <conf name="chrome-driver" description="Chrome Driver Classes" extends="remote-driver"/>
+        <conf name="firefox-driver" description="Firefox Driver Classes" extends="remote-driver"/>
+        <!--
+        <conf name="iphone-driver" description="iPhone Driver Classes" extends="remote-driver"/>
+        <conf name="android-driver" description="Android Driver Classes" extends="remote-driver"/>
+        -->
+        <conf name="safari-driver" description="Safari Driver Classes" extends="remote-driver"/>
+        <conf name="drivers" description="All Driver Classes" extends="htmlunit-driver,ie-driver,chrome-driver,firefox-driver,safari-driver"/>
+
+        <conf name="default" description="All core classes + drivers" extends="java,drivers"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-server" ivyde:javadoc="selenium-server" name="selenium-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-api" ivyde:javadoc="selenium-api" name="selenium-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-support" ivyde:javadoc="selenium-support" name="selenium-support" conf="support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-java" ivyde:javadoc="selenium-java" name="selenium-java" conf="java"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-remote-driver" ivyde:javadoc="selenium-remote-driver" name="selenium-remote-driver" conf="remote-driver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-htmlunit-driver" ivyde:javadoc="selenium-htmlunit-driver" name="selenium-htmlunit-driver" conf="htmlunit-driver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-ie-driver" ivyde:javadoc="selenium-ie-driver" name="selenium-ie-driver" conf="ie-driver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-chrome-driver" ivyde:javadoc="selenium-chrome-driver" name="selenium-chrome-driver" conf="chrome-driver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-firefox-driver" ivyde:javadoc="selenium-firefox-driver" name="selenium-firefox-driver" conf="firefox-driver"/>
+        <!--
+        <artifact name="selenium-iphone-driver" conf="iphone-driver"/>
+        <artifact name="selenium-android-driver" conf="android-driver"/>
+        -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="selenium-safari-driver" ivyde:javadoc="selenium-safari-driver" name="selenium-safari-driver" conf="safari-driver"/>
+
+        <artifact name="selenium-server" conf="server" type="source" ext="zip"/>
+        <artifact name="selenium-api" conf="api" type="source" ext="zip"/>
+        <artifact name="selenium-support" conf="support" type="source" ext="zip"/>
+        <artifact name="selenium-java" conf="java" type="source" ext="zip"/>
+        <artifact name="selenium-remote-driver" conf="remote-driver" type="source" ext="zip"/>
+        <artifact name="selenium-htmlunit-driver" conf="htmlunit-driver" type="source" ext="zip"/>
+        <artifact name="selenium-ie-driver" conf="ie-driver" type="source" ext="zip"/>
+        <artifact name="selenium-chrome-driver" conf="chrome-driver" type="source" ext="zip"/>
+        <artifact name="selenium-firefox-driver" conf="firefox-driver" type="source" ext="zip"/>
+        <!--
+        <artifact name="selenium-iphone-driver" conf="iphone-driver" type="source" ext="zip"/>
+        <artifact name="selenium-android-driver" conf="android-driver" type="source" ext="zip"/>
+        -->
+        <artifact name="selenium-safari-driver" conf="safari-driver" type="source" ext="zip"/>
+
+        <artifact name="selenium-server" conf="server" type="javadoc" ext="zip"/>
+        <artifact name="selenium-api" conf="api" type="javadoc" ext="zip"/>
+        <artifact name="selenium-support" conf="support" type="javadoc" ext="zip"/>
+        <artifact name="selenium-java" conf="java" type="javadoc" ext="zip"/>
+        <artifact name="selenium-remote-driver" conf="remote-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-htmlunit-driver" conf="htmlunit-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-ie-driver" conf="ie-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-chrome-driver" conf="chrome-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-firefox-driver" conf="firefox-driver" type="javadoc" ext="zip"/>
+        <!--
+        <artifact name="selenium-iphone-driver" conf="iphone-driver" type="javadoc" ext="zip"/>
+        <artifact name="selenium-android-driver" conf="android-driver" type="javadoc" ext="zip"/>
+        -->
+        <artifact name="selenium-safari-driver" conf="safari-driver" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="latest.release" conf="api-&gt;default"/>
+        <dependency org="org.json" name="json" rev="latest.release" conf="api-&gt;default"/>
+
+        <dependency org="com.gargoylesoftware" name="htmlunit" rev="latest.release" conf="htmlunit-driver-&gt;default"/>
+
+        <dependency org="org.apache.commons" name="commons-io" rev="latest.release" conf="firefox-driver-&gt;default"/>
+
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="latest.release" conf="remote-driver-&gt;default"/>
+        <dependency org="org.json" name="json" rev="latest.release" conf="remote-driver-&gt;default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="latest.release" conf="remote-driver-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="latest.release" conf="remote-driver-&gt;default"/>
+        <dependency org="net.java.dev.jna" name="jna" rev="latest.release" conf="remote-driver-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
