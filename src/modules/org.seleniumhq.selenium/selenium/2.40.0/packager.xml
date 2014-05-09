@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="selenium-support">
+        <artifact tofile="artifacts/jars/selenium-support.jar" sha1="bdf917996cbb9e22f761a55265f4b35aa78501b4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-support.zip" sha1="69de2b36eaaa8c9010680d9035fda9fcd710b6c6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-support.zip" sha1="20da3cc0567b4c95851d1911f9f2b22bb8d394ef"/>
+    </m2resource>
+    <m2resource artifactId="selenium-api">
+        <artifact tofile="artifacts/jars/selenium-api.jar" sha1="f0f9033ee6520179886a99ebb7b30f48d87c109c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-api.zip" sha1="5053c490620d827e4c59ac62648718b056d52db3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-api.zip" sha1="5f615d0a5e1fea898ba30636946dd89c4773c117"/>
+    </m2resource>
+    <m2resource artifactId="selenium-java">
+        <artifact tofile="artifacts/jars/selenium-java.jar" sha1="512af6995dc21cb005b8b936a1d2da2090bcd2c8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-java.zip" sha1="7839833a8279726b8a561bce8ea9cf10d32de53c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-java.zip" sha1="bb8f20b33a463f4797211c72525b95a5394d3469"/>
+    </m2resource>
+    <m2resource artifactId="selenium-server">
+        <artifact tofile="artifacts/jars/selenium-server.jar" sha1="01bd8c9fd8aee6dcac27f6d727a15eb7c65532e0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-server.zip" sha1="3e6d9255917a811e68819dc0aa181b1b3aec028c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-server.zip" sha1="bdc59ebcee81e3d2e030f593e14c30fdd0561430"/>
+    </m2resource>
+    <m2resource artifactId="selenium-firefox-driver">
+        <artifact tofile="artifacts/jars/selenium-firefox-driver.jar" sha1="6e92fe12b65584ba409fb6062efcce179b3327d1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-firefox-driver.zip" sha1="f20972b11eed764ea9e8e671476170622703f377"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-firefox-driver.zip" sha1="186b58fc582e04d7e9befd48c86e63e9824e7c38"/>
+    </m2resource>
+    <m2resource artifactId="selenium-htmlunit-driver">
+        <artifact tofile="artifacts/jars/selenium-htmlunit-driver.jar" sha1="7c10f99f6e8980fddc790b79ad889a329270a055"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-htmlunit-driver.zip" sha1="5471a7574ee9621afa81533b529af5573ec2a8e3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-htmlunit-driver.zip" sha1="41be6dccd95c0b031a25fbc73bbbda1cba050866"/>
+    </m2resource>
+    <m2resource artifactId="selenium-ie-driver">
+        <artifact tofile="artifacts/jars/selenium-ie-driver.jar" sha1="5818222e6c206fc113fa1876bd4762718dfe685e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-ie-driver.zip" sha1="3548dd712fab281384b4174af095724b8789104b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-ie-driver.zip" sha1="c5e2c03756040c27a993f91c88d5c36d44d99576"/>
+    </m2resource>
+    <m2resource artifactId="selenium-chrome-driver">
+        <artifact tofile="artifacts/jars/selenium-chrome-driver.jar" sha1="73f7b4db2984e7a13019e6db9adf13466cd84937"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-chrome-driver.zip" sha1="a3437d1b864c65997f5f99bdfdbb4e805cf29292"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-chrome-driver.zip" sha1="d766bee26c7a87da8b0ad95463ee86b6b2b847c2"/>
+    </m2resource>
+    <m2resource artifactId="selenium-safari-driver">
+        <artifact tofile="artifacts/jars/selenium-safari-driver.jar" sha1="36c5a578b9a4074f4bb5f39679312689a0dece98"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-safari-driver.zip" sha1="730b69980d646374b0ccd3088a0b9084f12aa5ba"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-safari-driver.zip" sha1="07386cdd3320d9e10ccc4a6cda7d2dd16573b86e"/>
+    </m2resource>
+    <!--
+    <m2resource artifactId="selenium-android-driver">
+        <artifact tofile="artifacts/jars/selenium-android-driver.jar" sha1="42fced997c7df37d97cad9ed44969a8a1e18369e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-android-driver.zip" sha1="c9af8222273283bdd0b814d9096bcc465ff9aff7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-android-driver.zip" sha1="a769a9f5b63a3a5a3cee78b24b20a1addf09f9ba"/>
+    </m2resource>
+    <m2resource artifactId="selenium-iphone-driver">
+        <artifact tofile="artifacts/jars/selenium-iphone-driver.jar" sha1="0cb4e4cb5d66a92dce4884c8fd53e22e3052fd90"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-iphone-driver.zip" sha1="0fb58f22d9ee2b31eb1b17f50eb5ed992661dea8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-iphone-driver.zip" sha1="89bf7b81c0103b88d1e845f2befd39fb87ea7d84"/>
+    </m2resource>
+    -->
+    <m2resource artifactId="selenium-remote-driver">
+        <artifact tofile="artifacts/jars/selenium-remote-driver.jar" sha1="54abc2a4b02ea3c177d0200445b42b4515d7a493"/>
+        <artifact classifier="sources" tofile="artifacts/sources/selenium-remote-driver.zip" sha1="e85a0a5c5b61a0e4cbe17ba8a4651a3d6d1dbbe5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/selenium-remote-driver.zip" sha1="afdae1299e49f1c100fad6fe4c322bc3d5d36a03"/>
+    </m2resource>
+
+</packager-module>
