@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.vaadin" module="vaadin" revision="7.2.0" status="release" publication="20140514000000">
+        <license name="Apache License, Version 2.0" url="https://vaadin.com/license"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3053 2014-05-16 20:58:22Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.vaadin/vaadin/7.2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="https://vaadin.com/home">
+
+            <p>
+            <b>Vaadin is a web application framework for Rich Internet
+            Applications (RIA).</b> In contrast to Javascript libraries and
+            browser-plugin based solutions, it features a server-side
+            architecture, which means that the largest part of the logic
+            runs on the server. Ajax technology is used on the browser side
+            to ensure a rich and interactive user experience.
+            </p>
+
+            <p>
+            <b>Vaadin is a large collection of UI components.</b>  You compose the
+            application user interface from components such as the Button,
+            Table and Tree. The components use events, listeners and data
+            binding to communicate with each other and with your business
+            logic.
+            </p>
+
+            <p>
+            <b>Vaadin is a robust architecture for rapid application
+            development.</b> The component-based architecture together with the
+            data binding features help you build applications that are easily
+            modularized and refactored as needed.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="shared" description="Classes shared by both client and server-side code"/>
+        <conf name="client" extends="shared" description="Client classes (GWT and widget source)"/>
+        <conf name="server" extends="shared" description="Server-side classes"/>
+        <conf name="push" extends="server" description="Server-side push classes"/>
+        <conf name="widget-compiler" description="Classes needed to compile custom widgetsets"/>
+        <conf name="sass-compiler" description="Vaadin SASS compiler"/>
+        <conf name="widgets" description="Pre-compiled standard widgetset"/>
+        <conf name="themes" description="Vaadin standard built-in themes"/>
+
+        <conf name="build-standard" extends="client, server" description="Stuff needed at build time (standard widgets and themes)"/>
+        <conf name="build-custom" extends="build-standard, widget-compiler, sass-compiler" description="Stuff needed at build time (custom widgets and/or themes)"/>
+        <conf name="runtime-standard" extends="server, push, widgets, themes" description="Stuff needed at runtime (standard widgets)"/>
+        <conf name="runtime-custom" extends="server, push, themes" description="Stuff needed at runtime (custom widgets)"/>
+
+        <conf name="default" extends="client, server, push, widgets, themes"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="shared" ivyde:javadoc="shared" name="shared" conf="shared"/>
+        <artifact name="shared" conf="shared" type="source" ext="zip"/>
+        <artifact name="shared" conf="shared" type="javadoc" ext="zip"/>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="client" ivyde:javadoc="client" name="client" conf="client"/>
+        <artifact name="client" conf="client" type="source" ext="zip"/>
+        <artifact name="client" conf="client" type="javadoc" ext="zip"/>
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="server" ivyde:javadoc="server" name="server" conf="server"/>
+        <artifact name="server" conf="server" type="source" ext="zip"/>
+        <artifact name="server" conf="server" type="javadoc" ext="zip"/>
+
+        <artifact name="push" conf="push"/>
+    <!--
+        <artifact name="push" conf="push" type="source" ext="zip"/>
+        <artifact name="push" conf="push" type="javadoc" ext="zip"/>
+    -->
+
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="widget-compiler" ivyde:javadoc="widget-compiler" name="widget-compiler" conf="widget-compiler"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="source" ext="zip"/>
+        <artifact name="widget-compiler" conf="widget-compiler" type="javadoc" ext="zip"/>
+
+        <artifact name="sass-compiler" conf="sass-compiler"/>
+
+        <artifact name="widgets" conf="widgets"/>
+
+        <artifact name="themes" conf="themes"/>
+
+        <!-- Vaadin libs and custom/fixed versions: see http://dev.vaadin.com/ticket/11898 -->
+        <artifact name="atmosphere-runtime" conf="push"/>
+        <artifact name="vaadin-slf4j" conf="push"/>
+        <artifact name="client-compiler-deps" conf="widget-compiler"/>
+        <artifact name="sac" conf="sass-compiler"/>
+        <artifact name="cssparser" conf="sass-compiler"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="shared-&gt;default"/>
+        <dependency org="org.json" name="json" rev="20090211" conf="shared-&gt;default"/>
+        <dependency org="org.jsoup" name="jsoup" rev="1.7+" conf="server-&gt;default"/>
+        <dependency org="org.apache.ant" name="ant" rev="1.8+" conf="widget-compiler-&gt;default"/>
+        <dependency org="org.apache.tapestry" name="tapestry" rev="4.0.2" conf="widget-compiler-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3.4.4" conf="widget-compiler-&gt;default"/>
+    <!--
+        <dependency force="true" org="org.atmosphere" name="atmosphere" rev="1.0.13" conf="push->runtime"/>
+    -->
+    </dependencies>
+
+</ivy-module>
