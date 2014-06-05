@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.hornetq" module="hornetq" revision="2.4.1.Final" status="release" publication="20140128000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3068 2014-06-05 20:07:12Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hornetq/hornetq/2.4.1.Final/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://hornetq.jboss.org/">
+
+            <p>
+                Putting the buzz in messaging
+            </p>
+            <p>
+                HornetQ is an open source project to build a multi-protocol, embeddable, very high performance, clustered, asynchronous messaging system.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="aerogear-integration" extends="server" description="HornetQ Aerogear Integration"/>
+        <conf name="amqp-protocol" extends="server" description="HornetQ AQMP Protocol"/>
+        <conf name="bootstrap" description="HornetQ Bootstrap"/>
+        <conf name="commons" description="HornetQ Commons"/>
+        <conf name="core-client" extends="journal" description="HornetQ Core Client"/>
+        <conf name="default" extends="jms-server,amqp-protocol,stomp-protocol,bootstrap" description="All classes"/>
+        <conf name="jboss-as-integration" extends="server" description="HornetQ JBoss AS Integration"/>
+        <conf name="jms-client" extends="core-client" description="HornetQ JMS Client"/>
+        <conf name="jms-server" extends="jms-client,server" description="HornetQ JMS Server"/>
+        <conf name="journal" extends="commons,native" description="HornetQ Journal"/>
+        <conf name="native" description="HornetQ Native"/>
+        <conf name="ra" extends="jms-server" description="HornetQ RA"/>
+        <conf name="server" extends="core-client" description="HornetQ Server"/>
+        <conf name="service-sar" extends="jms-server,jboss-as-integration" description="HornetQ JBoss AS4 Integration"/>
+        <conf name="spring-integration" extends="jms-server" description="HornetQ Spring Integration"/>
+        <conf name="stomp-protocol" extends="server" description="HornetQ STOMP Protocol"/>
+        <conf name="tools" extends="jms-server" description="HornetQ Tools"/>
+        <conf name="twitter-integration" extends="server" description="HornetQ Twitter Integration"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-aerogear-integration" name="hornetq-aerogear-integration" conf="aerogear-integration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-twitter-integration" name="hornetq-twitter-integration" conf="twitter-integration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-spring-integration" name="hornetq-spring-integration" conf="spring-integration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-tools" name="hornetq-tools" conf="tools"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-service-sar" name="hornetq-service-sar" conf="service-sar"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-jboss-as-integration" name="hornetq-jboss-as-integration" conf="jboss-as-integration"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-ra" name="hornetq-ra" conf="ra"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-jms-server" name="hornetq-jms-server" conf="jms-server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-jms-client" name="hornetq-jms-client" conf="jms-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-bootstrap" name="hornetq-bootstrap" conf="bootstrap"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-stomp-protocol" name="hornetq-stomp-protocol" conf="stomp-protocol"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-amqp-protocol" name="hornetq-amqp-protocol" conf="amqp-protocol"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-server" name="hornetq-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-core-client" name="hornetq-core-client" conf="core-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-journal" name="hornetq-journal" conf="journal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-native" name="hornetq-native" conf="native"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hornetq-commons" name="hornetq-commons" conf="commons"/>
+
+        <!-- source -->
+        <artifact name="hornetq-aerogear-integration" type="source" ext="zip" conf="aerogear-integration"/>
+        <artifact name="hornetq-twitter-integration" type="source" ext="zip" conf="twitter-integration"/>
+        <artifact name="hornetq-spring-integration" type="source" ext="zip" conf="spring-integration"/>
+        <artifact name="hornetq-tools" type="source" ext="zip" conf="tools"/>
+        <artifact name="hornetq-service-sar" type="source" ext="zip" conf="service-sar"/>
+        <artifact name="hornetq-jboss-as-integration" type="source" ext="zip" conf="jboss-as-integration"/>
+        <artifact name="hornetq-ra" type="source" ext="zip" conf="ra"/>
+        <artifact name="hornetq-jms-server" type="source" ext="zip" conf="jms-server"/>
+        <artifact name="hornetq-jms-client" type="source" ext="zip" conf="jms-client"/>
+        <artifact name="hornetq-bootstrap" type="source" ext="zip" conf="bootstrap"/>
+        <artifact name="hornetq-stomp-protocol" type="source" ext="zip" conf="stomp-protocol"/>
+        <artifact name="hornetq-amqp-protocol" type="source" ext="zip" conf="amqp-protocol"/>
+        <artifact name="hornetq-server" type="source" ext="zip" conf="server"/>
+        <artifact name="hornetq-core-client" type="source" ext="zip" conf="core-client"/>
+        <artifact name="hornetq-journal" type="source" ext="zip" conf="journal"/>
+        <artifact name="hornetq-native" type="source" ext="zip" conf="native"/>
+        <artifact name="hornetq-commons" type="source" ext="zip" conf="commons"/>
+
+        <!-- javadoc -->
+    </publications>
+
+    <dependencies>
+        <dependency org="org.jboss.logging" name="jboss-logging-processor" rev="[0,)" conf="bootstrap,commons-&gt;default"/>
+        <dependency org="org.jboss.logging" name="jboss-logging" rev="[0,)" conf="bootstrap,commons-&gt;default"/>
+        <dependency org="io.netty" name="netty" rev="[0,)" conf="commons-&gt;all"/>
+        <dependency org="org.jgroups" name="jgroups" rev="[0,)" conf="core-client-&gt;default"/>
+        <dependency org="javax.inject" name="inject" rev="[0,)" conf="jms-client-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,)" conf="jboss-as-integration,jms-server-&gt;default"/>
+        <dependency org="org.jboss" name="jboss-transaction-spi" rev="[0,)" conf="jboss-as-integration,jms-server-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="[0,)" conf="spring-integration-&gt;jms"/>
+        <dependency org="org.twitter4j" name="twitter4j" rev="[0,)" conf="twitter-integration-&gt;core"/>
+
+        <!-- Not in repo
+        <dependency org="org.jboss.resteasy" name="resteasy-jackson-provider" rev="[2.3.2.Final,)" conf="aerogear-integration->default"/>
+        <dependency org="org.jboss.aerogear" name="unifiedpush-java-client" rev="[0.4.0,)" conf="aerogear-integration->default"/>
+        <dependency org="org.jboss.security" name="jboss-security-spi" rev="[0,)" conf="jboss-as-integration->default"/>
+        <dependency org="org.jboss.security" name="jbosssx" rev="[0,)" conf="jboss-as-integration->default"/>
+        <dependency org="org.jboss.naming" name="jnpserver" rev="[0,)" conf="jms-server->default"/>
+        <dependency org="javax.jms" name="jms" rev="[2.0,3.0[" conf="jms-client,jms-server->default"/>
+        <dependency org="org.apache.gpid" name="gpid" rev="[0,)" conf="amqp-protocol->api,jms"/>
+        <dependency org="org.jboss.microcontainer" name="jboss-kernel" rev="[0,)" conf="bootstrap->default"/>
+        -->
+    </dependencies>
+
+</ivy-module>
