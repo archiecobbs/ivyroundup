@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20131222000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+        <description homepage="http://netty.io/">
+            <p>
+                Netty is an asynchronous event-driven network application framework for 
+                rapid development of maintainable high performance protocol servers and
+                clients.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="all" description="Netty/All-in-one"/>
+        <conf name="buffer" extends="common" description="Netty/Buffer"/>
+        <conf name="codec" extends="transport" description="Netty/Codec"/>
+        <conf name="codec-http" extends="handler" description="Netty/Codec/HTTP"/>
+        <conf name="codec-socks" extends="handler" description="Netty/Codec/Socks"/>
+        <conf name="common" description="Netty/Common"/>
+        <conf name="default" extends="all" description="Alias for 'all'"/>
+        <conf name="handler" extends="codec" description="Netty/Handler"/>
+        <conf name="transport" extends="buffer" description="Netty/Transport"/>
+        <conf name="transport-native-epoll" extends="transport" description="Netty/Transport/Native/Epoll"/>
+        <conf name="transport-rxtx" extends="transport" description="Netty/Transport/RXTX"/>
+        <conf name="transport-sctp" extends="transport" description="Netty/Transport/SCTP"/>
+        <conf name="transport-udt" extends="transport" description="Netty/Transport/UDT"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="netty-all" conf="all"/>
+        <artifact name="netty-handler" conf="handler"/>
+        <artifact name="netty-codec" conf="codec"/>
+        <artifact name="netty-transport" conf="transport"/>
+        <artifact name="netty-buffer" conf="buffer"/>
+        <artifact name="netty-common" conf="common"/>
+        <artifact name="netty-transport-native-epoll" conf="transport-native-epoll"/>
+        <artifact name="netty-transport-udt" conf="transport-udt"/>
+        <artifact name="netty-transport-sctp" conf="transport-sctp"/>
+        <artifact name="netty-transport-rxtx" conf="transport-rxtx"/>
+        <artifact name="netty-codec-socks" conf="codec-socks"/>
+        <artifact name="netty-codec-http" conf="codec-http"/>
+
+        <!-- source -->
+        <artifact name="netty-all" type="source" ext="zip" conf="all"/>
+        <artifact name="netty-handler" type="source" ext="zip" conf="handler"/>
+        <artifact name="netty-codec" type="source" ext="zip" conf="codec"/>
+        <artifact name="netty-transport" type="source" ext="zip" conf="transport"/>
+        <artifact name="netty-buffer" type="source" ext="zip" conf="buffer"/>
+        <artifact name="netty-common" type="source" ext="zip" conf="common"/>
+        <artifact name="netty-transport-native-epoll" type="source" ext="zip" conf="transport-native-epoll"/>
+        <artifact name="netty-transport-udt" type="source" ext="zip" conf="transport-udt"/>
+        <artifact name="netty-transport-sctp" type="source" ext="zip" conf="transport-sctp"/>
+        <artifact name="netty-transport-rxtx" type="source" ext="zip" conf="transport-rxtx"/>
+        <artifact name="netty-codec-socks" type="source" ext="zip" conf="codec-socks"/>
+        <artifact name="netty-codec-http" type="source" ext="zip" conf="codec-http"/>
+
+        <!-- javadoc -->
+        <artifact name="netty-all" type="javadoc" ext="zip" conf="all"/>
+        <artifact name="netty-handler" type="javadoc" ext="zip" conf="handler"/>
+        <artifact name="netty-codec" type="javadoc" ext="zip" conf="codec"/>
+        <artifact name="netty-transport" type="javadoc" ext="zip" conf="transport"/>
+        <artifact name="netty-buffer" type="javadoc" ext="zip" conf="buffer"/>
+        <artifact name="netty-common" type="javadoc" ext="zip" conf="common"/>
+        <artifact name="netty-transport-native-epoll" type="javadoc" ext="zip" conf="transport-native-epoll"/>
+        <artifact name="netty-transport-udt" type="javadoc" ext="zip" conf="transport-udt"/>
+        <artifact name="netty-transport-sctp" type="javadoc" ext="zip" conf="transport-sctp"/>
+        <artifact name="netty-transport-rxtx" type="javadoc" ext="zip" conf="transport-rxtx"/>
+        <artifact name="netty-codec-socks" type="javadoc" ext="zip" conf="codec-socks"/>
+        <artifact name="netty-codec-http" type="javadoc" ext="zip" conf="codec-http"/>
+    </publications>
+
+        <!-- Not in repo
+    <dependencies>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[2.5.0,)" conf="all,codec->default"/>
+        <dependency org="com.jcraft" name="jzlib" rev="[1.1.2,)" conf="all,codec->default"/>
+        <dependency org="org.rxtx" name="rxtx" rev="[2.1.7,)" conf="all,transport-rxtx->default"/>
+        <dependency org="com.barchart.udt" name="barchart-udt-bundle" rev="[2.3.0,)" conf="all,transport-udt->default"/>
+    </dependencies>
+        -->
+
+</ivy-module>
