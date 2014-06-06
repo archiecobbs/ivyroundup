@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2014-06-05 20:16:35 UTC</timestamp>
-  <svnRevision>3069</svnRevision>
+  <timestamp>2014-06-06 16:20:22 UTC</timestamp>
+  <svnRevision>3099</svnRevision>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -48,9 +48,19 @@
       <rev name="1.3"/>
     </mod>
   </org>
+  <org name="com.amazonaws">
+    <mod name="aws-java-sdk">
+      <rev name="1.7.12"/>
+    </mod>
+  </org>
   <org name="com.ancientprogramming">
     <mod name="fixedformat4j">
       <rev name="1.3.4"/>
+    </mod>
+  </org>
+  <org name="com.barchart.udt">
+    <mod name="barchart-udt-bundle">
+      <rev name="2.3.0"/>
     </mod>
   </org>
   <org name="com.beust">
@@ -82,6 +92,11 @@
   <org name="com.enigmastation">
     <mod name="ci-bayes">
       <rev name="2.0.0"/>
+    </mod>
+  </org>
+  <org name="com.enterprisedt">
+    <mod name="edtFTPj">
+      <rev name="1.5.3"/>
     </mod>
   </org>
   <org name="com.esotericsoftware">
@@ -118,6 +133,11 @@
   <org name="com.gargoylesoftware">
     <mod name="htmlunit">
       <rev name="2.7"/>
+    </mod>
+  </org>
+  <org name="com.github.romix">
+    <mod name="java-concurrent-hash-trie-map">
+      <rev name="0.2.0"/>
     </mod>
   </org>
   <org name="com.github.sclassen">
@@ -165,6 +185,11 @@
     </mod>
     <mod name="gwt-visualization">
       <rev name="1.1.2"/>
+    </mod>
+  </org>
+  <org name="com.google.protobuf">
+    <mod name="protobuf-java">
+      <rev name="2.5.0"/>
     </mod>
   </org>
   <org name="com.google.visualization">
@@ -309,6 +334,11 @@
       <rev name="6.5.5"/>
     </mod>
   </org>
+  <org name="com.intellij">
+    <mod name="annotations">
+      <rev name="9.0.4"/>
+    </mod>
+  </org>
   <org name="com.itextpdf">
     <mod name="itext">
       <rev name="5.3.0"/>
@@ -327,6 +357,10 @@
   <org name="com.jcraft">
     <mod name="jsch">
       <rev name="0.1.44"/>
+      <rev name="0.1.51"/>
+    </mod>
+    <mod name="jzlib">
+      <rev name="1.1.3"/>
     </mod>
   </org>
   <org name="com.jeantessier">
@@ -462,6 +496,14 @@
   <org name="com.stripe">
     <mod name="stripe-java">
       <rev name="1.5.1"/>
+    </mod>
+  </org>
+  <org name="com.sun.grizzly">
+    <mod name="grizzly-lzma">
+      <rev name="1.9.59"/>
+    </mod>
+    <mod name="grizzly-utils">
+      <rev name="1.9.59"/>
     </mod>
   </org>
   <org name="com.sun.jersey">
@@ -695,6 +737,7 @@
   <org name="com.vividsolutions">
     <mod name="jts">
       <rev name="1.12"/>
+      <rev name="1.13"/>
     </mod>
   </org>
   <org name="com.vladium">
@@ -793,6 +836,7 @@
   <org name="it.sauronsoftware.cron4j">
     <mod name="cron4j">
       <rev name="2.2.2"/>
+      <rev name="2.2.5"/>
     </mod>
   </org>
   <org name="it.unimi.dsi">
@@ -917,6 +961,7 @@
     <mod name="persistence-api">
       <rev name="1.0"/>
       <rev name="2.0"/>
+      <rev name="2.1"/>
     </mod>
   </org>
   <org name="javax.portlet">
@@ -1201,6 +1246,11 @@
       <rev name="2.8.2"/>
     </mod>
   </org>
+  <org name="net.sourceforge.ezmorph">
+    <mod name="ezmorph">
+      <rev name="1.0.6"/>
+    </mod>
+  </org>
   <org name="net.sourceforge.fb-contrib">
     <mod name="fb-contrib">
       <rev name="3.8.1"/>
@@ -1290,6 +1340,11 @@
   <org name="net.sourceforge.joost">
     <mod name="joost">
       <rev name="0.9.1"/>
+    </mod>
+  </org>
+  <org name="net.sourceforge.json-lib">
+    <mod name="json-lib">
+      <rev name="2.4"/>
     </mod>
   </org>
   <org name="net.sourceforge.jsqlparser">
@@ -1611,6 +1666,7 @@
     </mod>
     <mod name="commons-configuration">
       <rev name="1.6"/>
+      <rev name="1.8"/>
     </mod>
     <mod name="commons-daemon">
       <rev name="1.0.1"/>
@@ -1658,6 +1714,7 @@
       <rev name="1.4"/>
       <rev name="2.0.1"/>
       <rev name="2.3"/>
+      <rev name="2.4"/>
     </mod>
     <mod name="commons-jexl">
       <rev name="1.1"/>
@@ -2482,6 +2539,12 @@
       <rev name="3.2.0-b001"/>
     </mod>
   </org>
+  <org name="org.gridgain">
+    <mod name="gridgain">
+      <rev name="6.1.5"/>
+      <rev name="6.1.6"/>
+    </mod>
+  </org>
   <org name="org.hackystat">
     <mod name="hackystat">
       <rev name="8.3.1030"/>
@@ -2513,6 +2576,7 @@
       <rev name="3.1.0.GA"/>
       <rev name="3.2.0.Final"/>
       <rev name="4.0.1.Final"/>
+      <rev name="4.0.4.Final"/>
     </mod>
     <mod name="hibernate-entitymanager">
       <rev name="3.3.2"/>
@@ -2563,6 +2627,7 @@
       <rev name="4.1.9.Final"/>
       <rev name="4.2.3.Final"/>
       <rev name="4.2.8.Final"/>
+      <rev name="4.3.5.Final"/>
     </mod>
   </org>
   <org name="org.hornetq">
@@ -2663,6 +2728,7 @@
     </mod>
     <mod name="jboss-logging">
       <rev name="3.1.1.GA"/>
+      <rev name="3.1.4.GA"/>
     </mod>
   </org>
   <org name="org.jboss.narayana">
@@ -2671,6 +2737,9 @@
     </mod>
   </org>
   <org name="org.jboss">
+    <mod name="jandex">
+      <rev name="1.2.0.Final"/>
+    </mod>
     <mod name="javassist">
       <rev name="3.11.0"/>
       <rev name="3.14.0"/>
@@ -3007,6 +3076,11 @@
       <rev name="2.0GA"/>
     </mod>
   </org>
+  <org name="org.pcollections">
+    <mod name="pcollections">
+      <rev name="2.1.2"/>
+    </mod>
+  </org>
   <org name="org.pdfbox">
     <mod name="pdfbox">
       <rev name="0.7.3"/>
@@ -3092,22 +3166,34 @@
       <rev name="2.1.4"/>
     </mod>
   </org>
+  <org name="org.rxtx">
+    <mod name="rxtx">
+      <rev name="2.1.7"/>
+    </mod>
+  </org>
   <org name="org.samba.jcifs">
     <mod name="jcifs">
       <rev name="1.2.19"/>
     </mod>
   </org>
   <org name="org.scala-lang">
+    <mod name="scala-compiler">
+      <rev name="2.11.1"/>
+    </mod>
     <mod name="scala-library">
       <rev name="2.10.0"/>
       <rev name="2.10.1"/>
       <rev name="2.10.2"/>
+      <rev name="2.11.1"/>
       <rev name="2.8.0"/>
       <rev name="2.8.1"/>
       <rev name="2.9.0"/>
       <rev name="2.9.1"/>
       <rev name="2.9.2"/>
       <rev name="2.9.3"/>
+    </mod>
+    <mod name="scala-reflect">
+      <rev name="2.11.1"/>
     </mod>
   </org>
   <org name="org.seleniumhq.selenium">
@@ -3216,6 +3302,7 @@
       <rev name="4.0.0"/>
       <rev name="4.0.1"/>
       <rev name="4.0.3"/>
+      <rev name="4.0.5"/>
     </mod>
   </org>
   <org name="org.subethamail">

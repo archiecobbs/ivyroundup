@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="56ea2e6c025e0821f28d73ca271218b8dd04926a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="b031d401aabbf7f5f725db500575da3dff90065f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="51ae4b6c6d782c52a20cf1386fcbfa7491c1d26d"/>
+    </m2resource>
+    <m2resource groupId="org.scala-lang.modules" artifactId="scala-xml_2.11" version="1.0.2">
+        <artifact tofile="artifacts/jars/scala-xml_2.11.jar" sha1="820fbca7e524b530fdadc594c39d49a21ea0337e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/scala-xml_2.11.zip" sha1="312c3557d1ca0b34820f3b3fc5404a47936ceb26"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/scala-xml_2.11.zip" sha1="a06d053a9d8ccf4518b0db56c66abea9f47fee7c"/>
+    </m2resource>
+    <m2resource groupId="org.scala-lang.modules" artifactId="scala-parser-combinators_2.11" version="1.0.1">
+        <artifact tofile="artifacts/jars/scala-parser-combinators_2.11.jar" sha1="f05d7345bf5a58924f2837c6c1f4d73a938e1ff0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/scala-parser-combinators_2.11.zip" sha1="34d013c02d0b73794ba2911552896dd9c00f34c3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/scala-parser-combinators_2.11.zip" sha1="1078474ef0f67e27e5c53bfbe404c2a99fadaf6f"/>
+    </m2resource>
+</packager-module>
