@@ -146,6 +146,7 @@
         <dependency org="org.antlr" name="antlr" rev="[0,)" conf="compiler->default"/>
         <dependency org="org.mvel" name="mvel2" rev="[0,)" conf="core->default"/>
         <dependency org="org.eclipse" name="jdt" rev="[0,)" conf="compiler->default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[0,)" conf="persistence-jpa->default"/>
 
         <!-- missing in ivy roundup; patches welcome ;0)
         <dependency org="jsr94" name="jsr94" rev="[0,)" conf="jsr94->default"/>
@@ -157,7 +158,6 @@
         <dependency org="simple-jndi" name="simple-jndi" rev="[0,)" conf="pipeline->default"/>
         <dependency org="org.milyn" name="milyn-smooks-javabean" rev="[0,)" conf="pipeline->default"/>
         <dependency org="org.apache.camel" name="camel" rev="[0,)" conf="camel->core,spring,test,cxf,xstream,jaxb"/>
-        <dependency org="com.google.protobuf" name="protobuf-java" rev="[0,)" conf="persistence-jpa->default"/>
         -->
     </dependencies>
 
