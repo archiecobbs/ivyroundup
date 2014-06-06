@@ -89,13 +89,11 @@
         <artifact name="netty-codec-http" type="javadoc" ext="zip" conf="codec-http"/>
     </publications>
 
-        <!-- Not in repo
     <dependencies>
-        <dependency org="com.google.protobuf" name="protobuf-java" rev="[2.5.0,)" conf="all,codec->default"/>
         <dependency org="com.jcraft" name="jzlib" rev="[1.1.2,)" conf="all,codec->default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[2.5.0,)" conf="all,codec->default"/>
         <dependency org="org.rxtx" name="rxtx" rev="[2.1.7,)" conf="all,transport-rxtx->default"/>
         <dependency org="com.barchart.udt" name="barchart-udt-bundle" rev="[2.3.0,)" conf="all,transport-udt->default"/>
     </dependencies>
-        -->
 
 </ivy-module>
