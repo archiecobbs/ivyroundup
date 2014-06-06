@@ -38,8 +38,8 @@
     <publications>
         <artifact conf="core"/>
         <artifact name="foo-extra" conf="extra"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
