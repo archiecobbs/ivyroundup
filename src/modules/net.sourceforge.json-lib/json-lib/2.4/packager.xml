@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="net/sf/json-lib">
+        <artifact classifier="jdk15" tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="136743e0d12df4e785e62b48618cee169b2ae546"/>
+        <artifact classifier="jdk15-sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="c8bff762572de371c5bf472a023f401cd99d71c5"/>
+        <artifact classifier="jdk15-javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="7322ae8831d13bfb99e04f4bd413757e45fd3305"/>
+    </m2resource>
+</packager-module>
