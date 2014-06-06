@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2014-06-06 18:28:47 UTC</timestamp>
-  <svnRevision>3103</svnRevision>
+  <timestamp>2014-06-06 20:29:47 UTC</timestamp>
+  <svnRevision>3114</svnRevision>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -23,11 +23,6 @@
       <rev name="2.2.0-wip-66"/>
       <rev name="2.2.0"/>
       <rev name="2.2.1"/>
-    </mod>
-  </org>
-  <org name="ch.cern">
-    <mod name="colt">
-      <rev name="1.2.0"/>
     </mod>
   </org>
   <org name="ch.qos">
@@ -103,6 +98,7 @@
     <mod name="kryo">
       <rev name="2.19"/>
       <rev name="2.21"/>
+      <rev name="2.24.0"/>
     </mod>
     <mod name="minlog">
       <rev name="1.2"/>
@@ -123,6 +119,7 @@
     <mod name="jackson">
       <rev name="2.1.4"/>
       <rev name="2.3.0"/>
+      <rev name="2.3.3"/>
     </mod>
   </org>
   <org name="com.foundationdb">
@@ -152,6 +149,11 @@
     </mod>
     <mod name="mustachejava">
       <rev name="0.8.13"/>
+    </mod>
+  </org>
+  <org name="com.goldmansachs">
+    <mod name="gs-collections">
+      <rev name="5.1.0"/>
     </mod>
   </org>
   <org name="com.google.common">
@@ -414,6 +416,7 @@
       <rev name="2.10.4"/>
       <rev name="2.8"/>
       <rev name="3.2.0"/>
+      <rev name="3.2.1"/>
     </mod>
   </org>
   <org name="com.microsoft">
@@ -1152,12 +1155,14 @@
   <org name="net.openhft">
     <mod name="chronicle">
       <rev name="2.0.2"/>
+      <rev name="2.0.3"/>
     </mod>
     <mod name="compiler">
       <rev name="2.1"/>
     </mod>
     <mod name="lang">
       <rev name="6.1.1"/>
+      <rev name="6.1.4"/>
     </mod>
   </org>
   <org name="net.sourceforge.ant-doxygen">
@@ -3050,6 +3055,7 @@
       <rev name="1.0"/>
       <rev name="1.1"/>
       <rev name="1.2"/>
+      <rev name="2.1"/>
     </mod>
   </org>
   <org name="org.openid4java">
@@ -3130,6 +3136,7 @@
   <org name="org.projectreactor">
     <mod name="reactor">
       <rev name="1.0.0"/>
+      <rev name="1.1.2"/>
     </mod>
   </org>
   <org name="org.prototypejs">
@@ -3433,6 +3440,11 @@
       <rev name="1.5.1015"/>
       <rev name="2.0.0403"/>
       <rev name="2.1.0803"/>
+    </mod>
+  </org>
+  <org name="org.xerial.snappy">
+    <mod name="snappy-java">
+      <rev name="1.1.0.1"/>
     </mod>
   </org>
   <org name="org.xhtmlrenderer">
