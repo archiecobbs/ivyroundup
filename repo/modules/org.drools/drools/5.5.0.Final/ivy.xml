@@ -20,7 +20,7 @@
 
     <info organisation="org.drools" module="drools" revision="5.5.0.Final" status="release" publication="20121112000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3030 2014-04-29 19:12:02Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.drools/drools/5.5.0.Final/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3091 2014-06-06 15:57:52Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.drools/drools/5.5.0.Final/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://drools.jboss.org/">
             <p>
@@ -147,6 +147,7 @@
         <dependency org="org.antlr" name="antlr" rev="[0,)" conf="compiler-&gt;default"/>
         <dependency org="org.mvel" name="mvel2" rev="[0,)" conf="core-&gt;default"/>
         <dependency org="org.eclipse" name="jdt" rev="[0,)" conf="compiler-&gt;default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[0,)" conf="persistence-jpa-&gt;default"/>
 
         <!-- missing in ivy roundup; patches welcome ;0)
         <dependency org="jsr94" name="jsr94" rev="[0,)" conf="jsr94->default"/>
@@ -158,7 +159,6 @@
         <dependency org="simple-jndi" name="simple-jndi" rev="[0,)" conf="pipeline->default"/>
         <dependency org="org.milyn" name="milyn-smooks-javabean" rev="[0,)" conf="pipeline->default"/>
         <dependency org="org.apache.camel" name="camel" rev="[0,)" conf="camel->core,spring,test,cxf,xstream,jaxb"/>
-        <dependency org="com.google.protobuf" name="protobuf-java" rev="[0,)" conf="persistence-jpa->default"/>
         -->
     </dependencies>
 

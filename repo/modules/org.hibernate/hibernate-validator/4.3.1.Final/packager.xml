@@ -15,11 +15,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <m2resource groupId="${ivy.packager.module}">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="3b5b0183c509963d5ffdf0d9d452a4a7521aeaa3"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="f2d8698c46d1167ff24b06a840a87d91a02db891"/>
+    <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="49b31d8ea51fa21cc78a89e9d4ddb11d6bfb4669"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="baa1c6895a34d8d6423da93d09cb3bed665b1b24"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="67ec171739651b4b23ed5be67a7035e649135011"/>
     </m2resource>
-
 </packager-module>
