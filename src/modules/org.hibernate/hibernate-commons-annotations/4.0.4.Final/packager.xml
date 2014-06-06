@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="org.hibernate.common">
+        <artifact tofile="artifacts/jars/hibernate-commons-annotations.jar" sha1="f1af75eca4e13ac0578750a497159695feceebfc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/hibernate-commons-annotations.zip" sha1="2b74fdecf50d43e6603179261c9254a9db9fc34d"/>
+    </m2resource>
+</packager-module>
+
