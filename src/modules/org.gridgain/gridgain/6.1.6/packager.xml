@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="gridgain-streaming">
+        <artifact tofile="artifacts/jars/gridgain-streaming.jar" sha1="ad39dfd4b6086ed5a96c3c8b4f4c8d8efab7bb32"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gridgain-streaming.zip" sha1="bd22c593e7f5ee277e073777b551b8cf96eb8c3e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gridgain-streaming.zip" sha1="2ee79f0056d52e36d184aae3223b28467c66b46e"/>
+    </m2resource>
+    <m2resource artifactId="gridgain-hadoop2">
+        <artifact tofile="artifacts/jars/gridgain-hadoop2.jar" sha1="f09ea20afaee3dce019db40d8ed285e8c10020c0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gridgain-hadoop2.zip" sha1="bd22c593e7f5ee277e073777b551b8cf96eb8c3e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gridgain-hadoop2.zip" sha1="2ee79f0056d52e36d184aae3223b28467c66b46e"/>
+    </m2resource>
+    <m2resource artifactId="gridgain-hadoop1">
+        <artifact tofile="artifacts/jars/gridgain-hadoop1.jar" sha1="f09ea20afaee3dce019db40d8ed285e8c10020c0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gridgain-hadoop1.zip" sha1="bd22c593e7f5ee277e073777b551b8cf96eb8c3e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gridgain-hadoop1.zip" sha1="2ee79f0056d52e36d184aae3223b28467c66b46e"/>
+    </m2resource>
+    <m2resource artifactId="gridgain-datagrid">
+        <artifact tofile="artifacts/jars/gridgain-datagrid.jar" sha1="5fcfea19eec7aad92d662baa2de50d08e0a45e3f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gridgain-datagrid.zip" sha1="bd22c593e7f5ee277e073777b551b8cf96eb8c3e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gridgain-datagrid.zip" sha1="2ee79f0056d52e36d184aae3223b28467c66b46e"/>
+    </m2resource>
+    <m2resource artifactId="gridgain-hpc">
+        <artifact tofile="artifacts/jars/gridgain-hpc.jar" sha1="f40ab24900b7a0d9541c9d66735a24e3984a321e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gridgain-hpc.zip" sha1="bd22c593e7f5ee277e073777b551b8cf96eb8c3e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gridgain-hpc.zip" sha1="2ee79f0056d52e36d184aae3223b28467c66b46e"/>
+    </m2resource>
+</packager-module>
