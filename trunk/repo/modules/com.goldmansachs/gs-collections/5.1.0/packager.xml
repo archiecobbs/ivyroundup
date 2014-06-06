@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/gs-collections.jar" sha1="07114c5349c816ea645b1ea3ffcc21fa073cbabc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gs-collections.zip" sha1="c04f78fcf966737cfcaaed227180014339b582e8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gs-collections.zip" sha1="b0fd2fc70d74756d43bd056351e4fbf8efcde0cf"/>
+    </m2resource>
+    <m2resource artifactId="gs-collections-api">
+        <artifact tofile="artifacts/jars/gs-collections-api.jar" sha1="ea605cdf64cab5fc7b48c99f061d4c8db05b6ff1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gs-collections-api.zip" sha1="3b76d9d61b891a09d41b24c60d5f6c644a2e2535"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gs-collections-api.zip" sha1="ed72804d1a294dd62a263f66ef07d5832862ef8d"/>
+    </m2resource>
+    <m2resource artifactId="gs-collections-forkjoin">
+        <artifact tofile="artifacts/jars/gs-collections-forkjoin.jar" sha1="4ee1c4173307d465b4ba43298d8a63450d19b279"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gs-collections-forkjoin.zip" sha1="e512415c6e27d2a0e333dbc9249c00407032e5fd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gs-collections-forkjoin.zip" sha1="e0bb4119c79b01b7609d45784c39b92ea5ca939a"/>
+    </m2resource>
+    <m2resource artifactId="gs-collections-testutils">
+        <artifact tofile="artifacts/jars/gs-collections-testutils.jar" sha1="ab4897c421fd1ee55b91cec496124b89d681aa01"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gs-collections-testutils.zip" sha1="aadfc0cb058bad9d6d087965b8b7c189e0438369"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gs-collections-testutils.zip" sha1="4eaf9e80f1beedf7156778b306c62b4a5c5abe9f"/>
+    </m2resource>
+</packager-module>

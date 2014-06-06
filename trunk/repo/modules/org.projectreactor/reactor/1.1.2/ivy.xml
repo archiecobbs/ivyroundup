@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.projectreactor" module="reactor" revision="1.1.2" status="release" publication="20140603000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3114 2014-06-06 20:28:59Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.projectreactor/reactor/1.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="https://github.com/reactor/reactor">
+            Reactor is a foundational library building for reactive fast data applications on the JVM.
+            It provides abstractions for Java, Groovy and other JVM languages to make building event
+            and data-driven applications easier. It’s also really fast. On modest hardware, it's possible
+            to process around 15,000,000 events per second with the fastest non-blocking Dispatcher.
+            Other dispatchers are available to provide the developer with a range of choices from
+            thread-pool style, long-running task execution to non-blocking, high-volume task dispatching.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core Reactor components"/>
+        <conf name="groovy" extends="groovy-extensions" description="Reactor Groovy components"/>
+        <conf name="groovy-extensions" extends="core" description="Reactor Groovy Ext components"/>
+        <conf name="logback" extends="core" description="Processor-based Logback async appender implementation"/>
+        <conf name="net" extends="core" description="Reactor TCP components"/>
+        <conf name="spring" extends="spring-messaging,spring-webmvc" description="All Reactor Spring components"/>
+        <conf name="spring-core" extends="core" description="Reactor Spring Core components"/>
+        <conf name="spring-context" extends="spring-core" description="Reactor Spring Context components"/>
+        <conf name="spring-messaging" extends="spring-context,net" description="Reactor Spring Messaging components"/>
+        <conf name="spring-webmvc" extends="spring-context" description="Reactor Spring WebMVC components"/>
+        <conf name="default" extends="core" description="Alias for core"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-core" ivyde:javadoc="reactor-core" name="reactor-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-groovy" ivyde:javadoc="reactor-groovy" name="reactor-groovy" conf="groovy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-groovy-extensions" ivyde:javadoc="reactor-groovy-extensions" name="reactor-groovy-extensions" conf="groovy-extensions"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-logback" ivyde:javadoc="reactor-logback" name="reactor-logback" conf="logback"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-net" ivyde:javadoc="reactor-net" name="reactor-net" conf="net"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-spring-context" ivyde:javadoc="reactor-spring-context" name="reactor-spring-context" conf="spring-context"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-spring-core" ivyde:javadoc="reactor-spring-core" name="reactor-spring-core" conf="spring-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-spring-messaging" ivyde:javadoc="reactor-spring-messaging" name="reactor-spring-messaging" conf="spring-messaging"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="reactor-spring-webmvc" ivyde:javadoc="reactor-spring-webmvc" name="reactor-spring-webmvc" conf="spring-webmvc"/>
+
+        <!-- source -->
+        <artifact name="reactor-core" type="source" ext="zip" conf="core"/>
+        <artifact name="reactor-groovy" type="source" ext="zip" conf="groovy"/>
+        <artifact name="reactor-groovy-extensions" type="source" ext="zip" conf="groovy-extensions"/>
+        <artifact name="reactor-logback" type="source" ext="zip" conf="logback"/>
+        <artifact name="reactor-net" type="source" ext="zip" conf="net"/>
+        <artifact name="reactor-spring-context" type="source" ext="zip" conf="spring-context"/>
+        <artifact name="reactor-spring-core" type="source" ext="zip" conf="spring-core"/>
+        <artifact name="reactor-spring-messaging" type="source" ext="zip" conf="spring-messaging"/>
+        <artifact name="reactor-spring-webmvc" type="source" ext="zip" conf="spring-webmvc"/>
+
+        <!-- javadoc -->
+        <artifact name="reactor-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="reactor-groovy" type="javadoc" ext="zip" conf="groovy"/>
+        <artifact name="reactor-groovy-extensions" type="javadoc" ext="zip" conf="groovy-extensions"/>
+        <artifact name="reactor-logback" type="javadoc" ext="zip" conf="logback"/>
+        <artifact name="reactor-net" type="javadoc" ext="zip" conf="net"/>
+        <artifact name="reactor-spring-context" type="javadoc" ext="zip" conf="spring-context"/>
+        <artifact name="reactor-spring-core" type="javadoc" ext="zip" conf="spring-core"/>
+        <artifact name="reactor-spring-messaging" type="javadoc" ext="zip" conf="spring-messaging"/>
+        <artifact name="reactor-spring-webmvc" type="javadoc" ext="zip" conf="spring-webmvc"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.lmax.disruptor" name="disruptor" rev="[3.2.1,)" conf="core-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.7,)" conf="core-&gt;core"/>
+        <dependency org="com.fasterxml" name="jackson" rev="[2.3.2,)" conf="core-&gt;databind"/>
+        <dependency org="com.jayway.jsonpath" name="json-path" rev="[0.9.1,)" conf="core-&gt;core"/>
+        <dependency org="net.openhft" name="chronicle" rev="[2.0.3,)" conf="core-&gt;default"/>
+        <dependency org="net.openhft" name="lang" rev="[6.1.4,)" conf="core-&gt;default"/>
+        <dependency org="com.esotericsoftware" name="kryo" rev="[2.22,)" conf="core-&gt;default"/>
+        <dependency org="com.goldmansachs" name="gs-collections" rev="[5.0.0,)" conf="core-&gt;default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[2.5.0,)" conf="core-&gt;default"/>
+        <dependency org="org.xerial.snappy" name="snappy-java" rev="[1.1.0.1,)" conf="core-&gt;default"/>
+
+        <!-- Net deps -->
+        <dependency org="io.netty" name="netty" rev="[4.0.19.Final,)" conf="net-&gt;all"/>
+
+        <!-- Groovy deps -->
+        <dependency org="org.codehaus.groovy" name="groovy" rev="2.+" conf="groovy-extensions-&gt;embeddable"/>
+
+        <!-- Spring deps -->
+        <dependency org="org.springframework" name="spring" rev="[4.0.3,)" conf="spring-webmvc-&gt;webmvc;spring-messaging-&gt;messaging;spring-core-&gt;context,expression;spring-context-&gt;context-support">
+            <exclude org="org.projectreactor" name="reactor-net"/>
+        </dependency>
+
+        <!-- Logback deps -->
+        <dependency org="ch.qos" name="logback" rev="[1.0,)" conf="logback-&gt;classic"/>
+
+        <!-- Optional dependencies
+        <dependency org="edu.umd.cs" name="findbugs" rev="[2.0.0,)" conf="core->annotations"/>
+        -->
+    </dependencies>
+
+</ivy-module>
