@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
     Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -19,5 +20,10 @@
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="a47a971686474124562bdd4a7ccbd8ac8c3e8b11"/> 
         <artifact tofile="artifacts/sources/source.zip" classifier="sources" sha1="fc1558bebc50419cdb55fbffd81c290e21f058c1"/>
         <artifact tofile="artifacts/javadocs/javadoc.zip" classifier="javadoc" sha1="a010f174e262c051011f3914faf971ce2413c68b"/>
+    </m2resource>
+    <m2resource groupId="cglib" artifactId="cglib-nodep">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-nodep.jar" sha1="00d456bb230c70c0b95c76fb28e429d42f275941"/>
+        <artifact tofile="artifacts/sources/${ivy.packager.module}-nodep.zip" classifier="sources" sha1="fc1558bebc50419cdb55fbffd81c290e21f058c1"/>
+        <artifact tofile="artifacts/javadocs/${ivy.packager.module}-nodep.zip" classifier="javadoc" sha1="a010f174e262c051011f3914faf971ce2413c68b"/>
     </m2resource>
 </packager-module>
