@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2011 Roger Parkinson
+    Copyright 2014 Zac Jacobson
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,25 +17,24 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
-
-    <info organisation="org.codehaus.woodstox" module="woodstox-core-asl" revision="4.1.1" status="release" publication="20110128184236">
+    <info organisation="org.codehaus.woodstox" module="woodstox-core-asl" revision="4.4.0" status="release" publication="20140519000000">
         <license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id$" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.woodstox/woodstox-core-asl/4.1.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3130 2014-06-13 21:17:49Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.codehaus.woodstox/woodstox-core-asl/4.4.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://woodstox.codehaus.org">
                 Woodstox is a high-performance XML processor that implements Stax (JSR-173) and SAX2 APIs
-                </description>
+            </description>
     </info>
-
-        <configurations>
-                <conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf"/>
-        </configurations>
-        <publications>
-                <artifact name="woodstox-core-asl" type="jar" ext="jar" conf="default"/>
-        </publications>
-        <dependencies>
-                <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" force="true" conf="default-&gt;default"/>
-                <dependency org="org.codehaus.woodstox" name="stax2-api" rev="3.1.1" force="true" conf="default-&gt;default"/>
-        </dependencies>
-
+    <configurations>
+            <conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf"/>
+    </configurations>
+    <publications>
+            <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="woodstox-core-asl" ivyde:javadoc="woodstox-core-asl" type="jar" ext="jar"/>
+            <artifact type="source" ext="zip"/>
+            <artifact type="javadoc" ext="zip"/>
+    </publications>
+    <dependencies>
+            <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" force="true" conf="default-&gt;default"/>
+            <dependency org="org.codehaus.woodstox" name="stax2-api" rev="3.1.4" force="true" conf="default-&gt;default"/>
+    </dependencies>
 </ivy-module>
