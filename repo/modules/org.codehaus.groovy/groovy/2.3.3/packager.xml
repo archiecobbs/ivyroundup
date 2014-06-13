@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://dl.bintray.com/groovy/maven/${name}-binary-${revision}.zip" sha1="2791c1967c4d1f1b23b561501e8c27bcaa385e97"/>
+    <resource url="http://dl.bintray.com/groovy/maven/${name}-src-${revision}.zip" sha1="7afe451f7c802e47058d9395e5c346f0bcce940d"/>
+    <resource url="http://dl.bintray.com/groovy/maven/${name}-docs-${revision}.zip" sha1="756c64e7d57bc0df66433332e6d3efb25f2c9a7c"/>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/embeddable/${name}-all-${revision}.jar" tofile="artifacts/jars/${name}-all.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}.zip">
+            <fileset dir="archive/${archive}/src/main" includes="**/*.java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/${name}.zip">
+            <fileset dir="archive/${archive}/html/api/"/>
+        </zip>
+    </build>
+</packager-module>
