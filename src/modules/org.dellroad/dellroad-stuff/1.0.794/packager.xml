@@ -17,7 +17,7 @@
 -->
 
 <packager-module rev="$Id$">
-    <m2resource repo="http://oss.sonatype.org/content/repositories/public">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="1ac3fb0c6a9649020ad511c1d6376799dc57755f"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="64d2b8b30cc26703ffe69b0eb109ef5d1af649f7"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="9021581cb90c058693aa79f4e8dfaeafaff3e9ac"/>
