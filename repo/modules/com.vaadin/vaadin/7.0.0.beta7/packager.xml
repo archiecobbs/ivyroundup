@@ -19,33 +19,33 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-shared">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-shared">
         <artifact tofile="artifacts/jars/shared.jar" sha1="935fe03a50aeba98c89bae739730b16c21c08b03"/>
         <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="fcc371b7c2605819134305c46b7a7bfe8906ae2f"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/shared.zip" sha1="fd864f38027ee17880e0d1a73ede48f6232686b0"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client">
         <artifact tofile="artifacts/jars/client.jar" sha1="e25f60e3c085c0a6f0c3d5620d3663a700f71522"/>
         <artifact classifier="sources" tofile="artifacts/sources/client.zip" sha1="20f304a13b8ac5459009b20723ebcf3411eb6cc8"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/client.zip" sha1="8b629499c9f3ac74353002c7919b835494068b7f"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-server">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-server">
         <artifact tofile="artifacts/jars/server.jar" sha1="bf6c03786b79401acb80b0bdc6fdc55e18925e04"/>
         <artifact classifier="sources" tofile="artifacts/sources/server.zip" sha1="7ae28ca813171b7074a8a1961dbaec03b36f64eb"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/server.zip" sha1="3ffb8395bdc008a5cf03a1d79d23d3efd6c837fa"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiled">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiled">
         <artifact tofile="artifacts/jars/widgets.jar" sha1="f82c020f23c976b9ca7ad8e8759091db957b13b4"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiler">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiler">
         <artifact tofile="artifacts/jars/widget-compiler.jar" sha1="0e75479a7d83348135ec989683da3bc35237683f"/>
         <artifact classifier="sources" tofile="artifacts/sources/widget-compiler.zip" sha1="177b12df99e0bf3268bc2e197adbe2ee321e04b7"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/widget-compiler.zip" sha1="35e4b51925edd300be8806288a68b9dba7dc4232"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-themes">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-themes">
         <artifact tofile="artifacts/jars/themes.jar" sha1="dfa9dbc7330bf4d601af5760e13df8385f08b2f3"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-theme-compiler">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-theme-compiler">
         <artifact tofile="artifacts/jars/theme-compiler.jar" sha1="727370422ba4060a5d4c1dc5e561c6d7ba6f59d0"/>
         <artifact classifier="sources" tofile="artifacts/sources/theme-compiler.zip" sha1="33edcc8d3dc840c4b147b2a7d27f79943a5dc72b"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/theme-compiler.zip" sha1="654cd605c021fa2941ae3c1264936513b6f99a09"/>

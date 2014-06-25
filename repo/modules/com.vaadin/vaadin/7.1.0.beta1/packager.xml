@@ -19,38 +19,38 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-shared">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-shared">
         <artifact tofile="artifacts/jars/shared.jar" sha1="c17930ac0bd172705391017a7a3282c6cdfa9412"/>
         <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="3e7d5d2fb1668d31ee9e647a87d64f0c0bea591e"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/shared.zip" sha1="6f8b1ab8b904d54c336f6b1a20860a0664f7b411"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client">
         <artifact tofile="artifacts/jars/client.jar" sha1="d36c8bb7a6082cc8dbfe08da944e3320a4a49d18"/>
         <artifact classifier="sources" tofile="artifacts/sources/client.zip" sha1="71b2a41a34e68a16a5de99226532a8f619e71807"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/client.zip" sha1="1c91e2d56a522e0c7e41d297c570cf14ee1820f6"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-server">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-server">
         <artifact tofile="artifacts/jars/server.jar" sha1="b37948c05eb16c1b1ca86e2272f4e851e63833ae"/>
         <artifact classifier="sources" tofile="artifacts/sources/server.zip" sha1="9ed32fe579a050ac392ef025e180bfb1d360784c"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/server.zip" sha1="5e367a5cce577bde9b6b5329ac45f769618b95e4"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-push">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-push">
         <artifact tofile="artifacts/jars/push.jar" sha1="a1e21f68fb1e1170dfc56c66afa849a47e1c3046"/>
         <artifact classifier="sources" tofile="artifacts/sources/push.zip" sha1="4aeacec26ed4b7492ebf22fe9bf6ee498a245c71"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/push.zip" sha1="54f3b0441927f27885aec8379601cea5a6e5fb33"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiled">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiled">
         <artifact tofile="artifacts/jars/widgets.jar" sha1="528c9a9d43e217bd9c5310af47d7104790ea2e46"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiler">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-client-compiler">
         <artifact tofile="artifacts/jars/widget-compiler.jar" sha1="f93fce7f81a637ebe4b7876c1fbb6c9165b3c807"/>
         <artifact classifier="sources" tofile="artifacts/sources/widget-compiler.zip" sha1="f936fef44aee4fb5cbfe269557828dc9c7c5644c"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/widget-compiler.zip" sha1="ad74ec41b5f37482a589883a65b1f4c9d5c23157"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-themes">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-themes">
         <artifact tofile="artifacts/jars/themes.jar" sha1="86cef040824b107509cdad913f74dbbb1b1080d5"/>
     </m2resource>
-    <m2resource repo="http://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-theme-compiler">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/vaadin" artifactId="vaadin-theme-compiler">
         <artifact tofile="artifacts/jars/theme-compiler.jar" sha1="781552f1f49edd317232d48a2f9a28c1fd7ae058"/>
         <artifact classifier="sources" tofile="artifacts/sources/theme-compiler.zip" sha1="5cd4876a1900c78d4c890f0d0709f5a6d6374af0"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/theme-compiler.zip" sha1="cf4eb7f6668e9f516b4622750c147ffd8d8170e6"/>
