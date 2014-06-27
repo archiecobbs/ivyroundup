@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.owasp.esapi" module="esapi" revision="2.1.0" status="release" publication="20130902120000">
+        <license name="BSD, Create Commons 3.0 BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" url="http://opensource.org/licenses/bsd-license.php"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3145 2014-06-27 14:09:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.owasp.esapi/esapi/2.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API">
+            The Enterprise Security API (ESAPI) project is an OWASP project to create simple strong security controls for every web platform. Security controls are not simple to build. You can read about the hundreds of pitfalls for unwary developers on the OWASP website. By providing developers with a set of strong controls, we aim to eliminate some of the complexity of creating secure web applications. This can result in significant cost savings across the SDLC.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default"/>
+        <conf name="compile" extends="default" description="Compile scoped dependencies from Maven POM"/>
+        <conf name="test" extends="compile" description="Test scoped dependencies from Maven POM"/>
+        <conf name="provided" extends="default" description="Provided scoped dependencies from Maven POM"/>
+    </configurations>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-configuration" rev="1.+" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7.+" conf="default-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="4.4" conf="test-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.4" conf="provided-&gt;default"/>
+        <dependency org="javax.servlet.jsp" name="jsp-api" rev="2.0" conf="provided-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-fileupload" rev="1.2" conf="compile-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="1.+" conf="compile-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2" conf="compile-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.16" conf="compile-&gt;default"/>
+        <dependency org="org.beanshell" name="bsh" rev="2.0b4" conf="default-&gt;default"/>       
+    </dependencies>
+
+</ivy-module>
