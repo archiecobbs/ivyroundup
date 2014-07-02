@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-bin/${archive}/${archive}.bin.tgz"
+      sha1="2e9f588f2a694c0358d431cdb2c976c99b26231c">
+        <include name="${archive}/lib/*.jar"/>
+        <include name="${archive}/lib/${name}-oracle-thin-extras-${revision}.jar"/>
+        <include name="${archive}/doc/apidocs/**/*"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-src/${archive}/${archive}.src.tgz"
+      sha1="a2a91573b71ba78886ec6c22592037aeefe17457">
+        <include name="${archive}.src/src/java/**/*"/>
+    </resource>
+
+    <build>
+
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/lib/${name}-oracle-thin-extras-${revision}.jar"
+          tofile="artifacts/jars/${name}-oracle-thin-extras.jar"/>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}.src/src/java">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+
+        <!-- javadocs -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/doc/apidocs">
+                <include name="**/*"/>
+            </fileset>
+        </zip>
+    </build>
+</packager-module>
