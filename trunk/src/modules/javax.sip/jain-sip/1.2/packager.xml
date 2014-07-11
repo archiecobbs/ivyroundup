@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="jain-sip-api" version="1.2.1.4">
+        <artifact tofile="artifacts/jars/jain-sip-api.jar" sha1="66f719ce28a39e8fa796b111f1545398694bb151"/>
+    </m2resource>
+    <m2resource artifactId="jain-sip-sctp" version="1.2.164">
+        <artifact tofile="artifacts/jars/jain-sip-sctp.jar" sha1="6040c73419539c2bea55910235799eaf61ce099a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jain-sip-sctp.zip" sha1="a87d0c1f1b7d1c1cb1a48bd5b573bb8c0f41b1e2"/>
+    </m2resource>
+    <m2resource artifactId="jain-sip-ri" version="1.2.210">
+        <artifact tofile="artifacts/jars/jain-sip-ri.jar" sha1="38522eb0f927ee89bc166fd2c152a515ba94def7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jain-sip-ri.zip" sha1="c587fd615840c6171319f9745d679581aa62948c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jain-sip-ri.zip" sha1="b3535b4d85b833bf7cea0012aa33bad9ee1707be"/>
+    </m2resource>
+</packager-module>
