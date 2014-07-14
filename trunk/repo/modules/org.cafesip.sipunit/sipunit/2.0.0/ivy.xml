@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
     Copyright 2014 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -12,12 +14,14 @@
     WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     License for the specific language governing permissions and limitations
     under the License.
---><!-- GENERATED FILE - DO NOT EDIT --><ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="org.cafesip.sipunit" module="sipunit" revision="2.0.0" status="release" publication="20120624165600">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3159 2014-07-11 23:21:17Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.cafesip.sipunit/sipunit/2.0.0/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="ivyroundup" url="http://ivyroundup.googlecode.com/" ivys="true" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="https://code.google.com/p/commtesting/">
             <p>
                 Contains SipUnit SIP Testing framework and Arquillian Extension for SIP Servlets
