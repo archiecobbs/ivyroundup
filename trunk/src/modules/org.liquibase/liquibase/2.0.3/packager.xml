@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://cloud.github.com/downloads/${name}/${name}/${archive}-bin.zip"
+    <resource url="https://cloud.github.com/downloads/${name}/${name}/${archive}-bin.zip"
       sha1="e4596c7159bb29171124c8e9db40ea7ad75a5860"/>
 
     <build>
