@@ -20,15 +20,15 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://dist.codehaus.org/${name}/${revision}/${name}-src-${revision}.tar.gz" sha1="e4de71e5c01f71f236b3135e07a5841784767fd8">
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-src-${revision}.tar.gz" sha1="e4de71e5c01f71f236b3135e07a5841784767fd8">
         <include name="${archive}/src/**/*"/>
     </resource>
 
-    <resource url="http://dist.codehaus.org/${name}/${revision}/${name}-bin-${revision}.tar.gz" sha1="86362be513708386aa0cccb4bff20510b02c068e">
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-bin-${revision}.tar.gz" sha1="86362be513708386aa0cccb4bff20510b02c068e">
         <include name="${archive}/lib/${name}.jar"/>
     </resource>
 
-    <resource url="http://dist.codehaus.org/${name}/${revision}/${name}-complete-${revision}.jar" tofile="artifacts/jars/${name}-complete.jar" sha1="39be25ed867fbfedbdb9ec6b2b0a3e12dba7afbd"/>
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-complete-${revision}.jar" tofile="artifacts/jars/${name}-complete.jar" sha1="39be25ed867fbfedbdb9ec6b2b0a3e12dba7afbd"/>
 
     <build>
 
