@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <m2resource artifactId="vaadin-shared">
+        <artifact tofile="artifacts/jars/shared.jar" sha1="faae6115edb4f21f9eb5602bc777fcd4f787c837"/>
+        <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="8bda4dd7edbed92adf4b33a3a3e5e525191e1aea"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/shared.zip" sha1="9f604f1040862d5928241d2ff3c2aeae93168fdd"/>
+    </m2resource>
+    <m2resource artifactId="vaadin-client">
+        <artifact tofile="artifacts/jars/client.jar" sha1="a04cfe63a7bcc600960e1d3c8f74cd0c8b58bbd1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/client.zip" sha1="d84aaedaa437a88ff80f1a6bd2101ccf1c8a9e8b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/client.zip" sha1="61a205e4c1e11338b0d86d705676c64fee4132fb"/>
+    </m2resource>
+    <m2resource artifactId="vaadin-server">
+        <artifact tofile="artifacts/jars/server.jar" sha1="02aecef82f0e627aa55c612f401d8f7b8dc208e7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/server.zip" sha1="efb7f366ae33b4190d84283de9b1343266a38a70"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/server.zip" sha1="f0dc451d9ef221b8f64ef6f941ca68619b373fa0"/>
+    </m2resource>
+    <m2resource artifactId="vaadin-push">
+        <artifact tofile="artifacts/jars/push.jar" sha1="77636c91d8d44eedf09268b27d3f43ceb2e65567"/>
+   <!-- <artifact classifier="sources" tofile="artifacts/sources/push.zip" sha1="0000000000000000000000000000000000000000"/> -->
+   <!-- <artifact classifier="javadoc" tofile="artifacts/javadocs/push.zip" sha1="0000000000000000000000000000000000000000"/> -->
+    </m2resource>
+    <m2resource artifactId="vaadin-client-compiled">
+        <artifact tofile="artifacts/jars/widgets.jar" sha1="42ef62e980e5f7ae30df4338184e9ed18971e46b"/>
+    </m2resource>
+    <m2resource artifactId="vaadin-client-compiler">
+        <artifact tofile="artifacts/jars/widget-compiler.jar" sha1="165d584b8cf5c3f852fc232f2de08325de6a002e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/widget-compiler.zip" sha1="6e902550cc5bd12b632730d6c6f3b223dca39d9d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/widget-compiler.zip" sha1="32bb8dbc55cf61cdd04c0c92a5a87890c457f529"/>
+    </m2resource>
+    <m2resource artifactId="vaadin-themes">
+        <artifact tofile="artifacts/jars/themes.jar" sha1="918d7adc38da687eb58b34793332630a9947eec0"/>
+    </m2resource>
+
+    <resource url="http://vaadin.com/download/release/7.2/${revision}/${name}-all-${revision}.zip" sha1="da526f5f9503d0c271f7019ecaa18b867a8e9dc2">
+        <include name="lib/vaadin-sass-compiler-0.9.6.jar"/>
+        <include name="lib/vaadin-client-compiler-deps-1.1.0.jar"/>
+        <include name="lib/atmosphere-runtime-2.1.2.vaadin3.jar"/>
+        <include name="lib/vaadin-slf4j-jdk14-1.6.1.jar"/>
+        <include name="lib/sac-1.3.jar"/>
+        <include name="lib/cssparser-0.9.11.jar"/>
+    </resource>
+
+    <build>
+        <move file="archive/lib/vaadin-sass-compiler-0.9.6.jar" tofile="artifacts/jars/sass-compiler.jar"/>
+        <move file="archive/lib/vaadin-client-compiler-deps-1.1.0.jar" tofile="artifacts/jars/client-compiler-deps.jar"/>
+        <move file="archive/lib/atmosphere-runtime-2.1.2.vaadin3.jar" tofile="artifacts/jars/atmosphere-runtime.jar"/>
+        <move file="archive/lib/vaadin-slf4j-jdk14-1.6.1.jar" tofile="artifacts/jars/vaadin-slf4j.jar"/>
+        <move file="archive/lib/sac-1.3.jar" tofile="artifacts/jars/sac.jar"/>
+        <move file="archive/lib/cssparser-0.9.11.jar" tofile="artifacts/jars/cssparser.jar"/>
+    </build>
+
+</packager-module>
