@@ -18,9 +18,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.apache.httpcomponents" module="httpclient" revision="4.3.5" status="release" publication="20140801051600">
+    <info organisation="org.apache.httpcomponents" module="httpclient" revision="4.3.4" status="release" publication="20140604104500">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3200 2014-09-11 21:46:42Z neil.g.miller.98@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.3.5/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3200 2014-09-11 21:46:42Z neil.g.miller.98@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.apache.httpcomponents/httpclient/4.3.4/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hc.apache.org/httpcomponents-client-ga/index.html">
         <p>
@@ -100,7 +100,7 @@
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-codec" rev="1.8"/>
 
         <!-- cache -->
-        <dependency conf="ehcache-&gt;default" org="net.sourceforge.ehcache" name="ehcache" rev="2.7+"/>
+        <dependency conf="ehcache-&gt;default" org="net.sourceforge.ehcache" name="ehcache" rev="2.2+"/>
         <dependency conf="ehcache-&gt;core" org="org.slf4j" name="slf4j" rev="1.7+"/>
     </dependencies>
 
