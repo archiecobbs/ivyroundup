@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.springframework" module="spring" revision="4.1.0" status="release" publication="20140904000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3207 2014-09-13 23:16:21Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.springframework/spring/4.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://spring.io/">
+            Spring is a layered Java/J2EE application framework, based on code
+            published in Expert One-on-One J2EE Design and Development by Rod Johnson
+            (Wrox, 2002).
+
+            Spring includes:
+            <ul>
+                <li><b>The most complete lightweight container</b>, providing
+                centralized, automated configuration and wiring of your
+                application objects.  The container is non-invasive,
+                capable of assembling a complex system from a set of
+                loosely-coupled components (POJOs) in a consistent
+                and transparent fashion.  The container brings agility
+                and leverage, and improves application testability and
+                scalability by allowing software components to be first
+                developed and tested in isolation, then scaled up for
+                deployment in any environment (J2SE or J2EE).</li>
+
+                <li><b>A common abstraction layer for transaction management</b>,
+                allowing for pluggable transaction managers, and making
+                it easy to demarcate transactions without dealing with
+                low-level issues. Generic strategies for JTA and a single
+                JDBC DataSource are included. In contrast to plain JTA
+                or EJB CMT, Spring's transaction support is not tied to
+                J2EE environments.</li>
+
+                <li><b>A JDBC abstraction layer</b> that offers a meaningful
+                exception hierarchy (no more pulling vendor codes out
+                of SQLException), simplifies error handling, and greatly
+                reduces the amount of code you'll need to write. You'll
+                never need to write another finally block to use JDBC
+                again. The JDBC-oriented exceptions comply to Spring's
+                generic DAO exception hierarchy.</li>
+
+                <li><b>Integration with Toplink, Hibernate, JDO, and iBATIS
+                SQL Maps</b>: in terms of resource holders, DAO implementation
+                support, and transaction strategies. First-class Hibernate
+                support with lots of IoC convenience features, addressing
+                many typical Hibernate integration issues. All of these
+                comply to Spring's generic transaction and DAO exception
+                hierarchies.</li>
+
+                <li><b>AOP functionality</b>, fully integrated into Spring
+                configuration management. You can AOP-enable any object
+                managed by Spring, adding aspects such as declarative
+                transaction management. With Spring, you can have
+                declarative transaction management without EJB... even
+                without JTA, if you're using a single database in Tomcat
+                or another web container without JTA support.</li>
+
+                <li><b>A flexible MVC web application framework</b>, built
+                on core Spring functionality. This framework is highly
+                configurable via strategy interfaces, and accommodates
+                multiple view technologies like JSP, Velocity, Tiles,
+                iText, and POI. Note that a Spring middle tier can easily
+                be combined with a web tier based on any other web MVC
+                framework, like Struts, WebWork, or Tapestry.</li>
+            </ul>
+
+            You can use all of Spring's functionality in any J2EE
+            server, and most of it also in non-managed environments. A
+            central focus of Spring is to allow for reusable business
+            and data access objects that are not tied to specific J2EE
+            services. Such objects can be reused across J2EE environments
+            (web or EJB), standalone applications, test environments,
+            etc without any hassle.
+
+            Spring's layered architecture gives you a lot of
+            flexibility. All its functionality builds on lower levels. So
+            you can e.g. use the JavaBeans configuration management
+            without using the MVC framework or AOP support. But if you
+            use the web MVC framework or AOP support, you'll find they
+            build on the configuration framework, so you can apply your
+            knowledge about it immediately.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="aop" extends="beans" description="Spring AOP"/>
+        <conf name="aspects" extends="context-support,orm" description="Spring AspectJ"/>
+        <conf name="beans" extends="core" description="Spring Beans"/>
+        <conf name="context" extends="aop,expression,instrument" description="Spring Context"/>
+        <conf name="context-support" extends="jdbc" description="Spring Context Support"/>
+        <conf name="core" description="Spring Core"/>
+        <conf name="expression" extends="core" description="Spring Expression Language"/>
+        <conf name="instrument" description="Spring Instrument"/>
+        <conf name="instrument-tomcat" extends="instrument" description="Spring Instrument Tomcat Weaver"/>
+        <conf name="jdbc" extends="tx" description="Spring JDBC"/>
+        <conf name="jms" extends="tx,oxm" description="Spring JMS"/>
+        <conf name="messaging" extends="context" description="Spring Messaging"/>
+        <conf name="orm" extends="jdbc,web" description="Spring ORM"/>
+        <conf name="oxm" extends="beans" description="Spring Object/XML Mapping"/>
+        <conf name="test" extends="orm,jdbc,webmvc-portlet" description="Spring TestContext Framework"/>
+        <conf name="tx" extends="context" description="Spring Transaction"/>
+        <conf name="web" extends="context,oxm" description="Spring Web"/>
+        <conf name="web-servlet" extends="webmvc" description="Alias for Spring Web MVC for backwards compatibility"/>
+        <conf name="webmvc" extends="web,context-support" description="Spring Web MVC"/>
+        <conf name="webmvc-portlet" extends="webmvc" description="Spring Web MVC Portlet"/>
+        <conf name="websocket" extends="webmvc,messaging" description="Spring WebSocket"/>
+        <conf name="default" description="Everything (all of the module JARs)"/>
+    </configurations>
+
+    <publications>
+
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-aop" ivyde:javadoc="spring-aop" name="spring-aop" conf="aop"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-aspects" ivyde:javadoc="spring-aspects" name="spring-aspects" conf="aspects"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-beans" ivyde:javadoc="spring-beans" name="spring-beans" conf="beans"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-context" ivyde:javadoc="spring-context" name="spring-context" conf="context"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-context-support" ivyde:javadoc="spring-context-support" name="spring-context-support" conf="context-support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-core" ivyde:javadoc="spring-core" name="spring-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-expression" ivyde:javadoc="spring-expression" name="spring-expression" conf="expression"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-instrument" ivyde:javadoc="spring-instrument" name="spring-instrument" conf="instrument"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-instrument-tomcat" ivyde:javadoc="spring-instrument-tomcat" name="spring-instrument-tomcat" conf="instrument-tomcat"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jdbc" ivyde:javadoc="spring-jdbc" name="spring-jdbc" conf="jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-jms" ivyde:javadoc="spring-jms" name="spring-jms" conf="jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-messaging" ivyde:javadoc="spring-messaging" name="spring-messaging" conf="messaging"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-orm" ivyde:javadoc="spring-orm" name="spring-orm" conf="orm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-oxm" ivyde:javadoc="spring-oxm" name="spring-oxm" conf="oxm"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-test" ivyde:javadoc="spring-test" name="spring-test" conf="test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-tx" ivyde:javadoc="spring-tx" name="spring-tx" conf="tx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-web" ivyde:javadoc="spring-web" name="spring-web" conf="web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-webmvc" ivyde:javadoc="spring-webmvc" name="spring-webmvc" conf="webmvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-webmvc-portlet" ivyde:javadoc="spring-webmvc-portlet" name="spring-webmvc-portlet" conf="webmvc-portlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spring-websocket" ivyde:javadoc="spring-websocket" name="spring-websocket" conf="websocket"/>
+
+        <!-- source -->
+        <artifact type="source" ext="zip" name="spring-aop" conf="aop"/>
+        <artifact type="source" ext="zip" name="spring-aspects" conf="aspects"/>
+        <artifact type="source" ext="zip" name="spring-beans" conf="beans"/>
+        <artifact type="source" ext="zip" name="spring-context" conf="context"/>
+        <artifact type="source" ext="zip" name="spring-context-support" conf="context-support"/>
+        <artifact type="source" ext="zip" name="spring-core" conf="core"/>
+        <artifact type="source" ext="zip" name="spring-expression" conf="expression"/>
+        <artifact type="source" ext="zip" name="spring-instrument" conf="instrument"/>
+        <artifact type="source" ext="zip" name="spring-instrument-tomcat" conf="instrument-tomcat"/>
+        <artifact type="source" ext="zip" name="spring-jdbc" conf="jdbc"/>
+        <artifact type="source" ext="zip" name="spring-jms" conf="jms"/>
+        <artifact type="source" ext="zip" name="spring-messaging" conf="messaging"/>
+        <artifact type="source" ext="zip" name="spring-orm" conf="orm"/>
+        <artifact type="source" ext="zip" name="spring-oxm" conf="oxm"/>
+        <artifact type="source" ext="zip" name="spring-test" conf="test"/>
+        <artifact type="source" ext="zip" name="spring-tx" conf="tx"/>
+        <artifact type="source" ext="zip" name="spring-web" conf="web"/>
+        <artifact type="source" ext="zip" name="spring-webmvc" conf="webmvc"/>
+        <artifact type="source" ext="zip" name="spring-webmvc-portlet" conf="webmvc-portlet"/>
+        <artifact type="source" ext="zip" name="spring-websocket" conf="websocket"/>
+
+        <!-- javadoc -->
+        <artifact type="javadoc" ext="zip" name="spring-aop" conf="aop"/>
+        <artifact type="javadoc" ext="zip" name="spring-aspects" conf="aspects"/>
+        <artifact type="javadoc" ext="zip" name="spring-beans" conf="beans"/>
+        <artifact type="javadoc" ext="zip" name="spring-context" conf="context"/>
+        <artifact type="javadoc" ext="zip" name="spring-context-support" conf="context-support"/>
+        <artifact type="javadoc" ext="zip" name="spring-core" conf="core"/>
+        <artifact type="javadoc" ext="zip" name="spring-expression" conf="expression"/>
+        <artifact type="javadoc" ext="zip" name="spring-instrument" conf="instrument"/>
+        <artifact type="javadoc" ext="zip" name="spring-instrument-tomcat" conf="instrument-tomcat"/>
+        <artifact type="javadoc" ext="zip" name="spring-jdbc" conf="jdbc"/>
+        <artifact type="javadoc" ext="zip" name="spring-jms" conf="jms"/>
+        <artifact type="javadoc" ext="zip" name="spring-messaging" conf="messaging"/>
+        <artifact type="javadoc" ext="zip" name="spring-orm" conf="orm"/>
+        <artifact type="javadoc" ext="zip" name="spring-oxm" conf="oxm"/>
+        <artifact type="javadoc" ext="zip" name="spring-test" conf="test"/>
+        <artifact type="javadoc" ext="zip" name="spring-tx" conf="tx"/>
+        <artifact type="javadoc" ext="zip" name="spring-web" conf="web"/>
+        <artifact type="javadoc" ext="zip" name="spring-webmvc" conf="webmvc"/>
+        <artifact type="javadoc" ext="zip" name="spring-webmvc-portlet" conf="webmvc-portlet"/>
+        <artifact type="javadoc" ext="zip" name="spring-websocket" conf="websocket"/>
+
+    </publications>
+
+    <dependencies>
+
+        <!-- Required dependencies -->
+        <dependency org="org.aopalliance" name="aopalliance" rev="1.+" conf="aop-&gt;default"/>
+        <dependency org="javax.jms" name="jms" rev="[1.1,2.0[" conf="jms-&gt;default"/>
+        <dependency org="javax.validation" name="validation-api" rev="[1.0.0.GA,)" conf="context-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="[4.3.0.Final,5.0.0.Final[" conf="context-&gt;default"/>
+        <dependency org="javax.inject" name="inject" rev="1" conf="beans-&gt;default"/>
+        <dependency org="javax.el" name="juel" rev="[2.2.4,)" conf="beans-&gt;api"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="[2.0,)" conf="context-&gt;default"/>
+
+        <!--
+            Optional dependencies you might want to add to your ivy.xml for specific Spring functionality.
+            Minimal versions were taken from http://docs.spring.io/spring/docs/4.0.0.RELEASE/spring-framework-reference/htmlsingle/#migration-4.0
+
+            NOTE: lines with a '***' at the end indicate the dependency is missing from ivyroundup.  Patches are welcome!
+
+        <dependency org="org.projectreactor" name="reactor" rev="[1.0.1,)" conf="messaging->tcp"/>
+        <dependency org="org.projectreactor" name="reactor" rev="[1.1.0,)" conf="messaging->core,net"/>
+        <dependency org="org.codehaus.groovy" name="groovy-all" rev="[1.8,)" conf="beans->embeddable"/>
+        <dependency org="org.aspectj" name="aspectj" rev="[1.8.0,)" conf="core->weaver"/>
+        <dependency org="net.sf.jopt-simple" name="jopt-simple" rev="[4.4,)" conf="core->default"/>                                 ***
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,2.0.0[" conf="core->default"/>
+        <dependency org="com.jamonapi" name="jamon" rev="[2.4,)" conf="aop->default"/>
+        <dependency org="javax.ejb" name="ejb" rev="[3.0,4.0[" conf="context->default"/>
+        <dependency org="javax.enterprise.concurrent" name="concurrent-api" rev="1.0" conf="context->default"/>
+        <dependency org="org.joda" name="joda-time" rev="[2.0,)" conf="context->default"/>
+        <dependency org="javax.transaction" name="jta" rev="1.1" conf="context->default"/>
+        <dependency org="org.beanshell" name="bsh" rev="2.0b4" conf="context->default"/>
+        <dependency org="org.jruby" name="jruby" rev="[1.7.2,)" conf="context->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.1,)" conf="context->core"/>
+        <dependency org="javax.resource" name="connector-api" rev="[1.5,)" conf="tx->default"/>
+        <dependency org="com.fasterxml" name="jackson" rev="[2.2.3,)" conf="messaging,jms,websocket,web->databind"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[3.1,)" conf="websocket->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[3.0,)" conf="web,orm->default"/>
+        <dependency org="javax.websocket" name="websocket-api" rev="1.0" conf="websocket->default"/>
+        <dependency org="javax.jdo" name="jdo-api" rev="[3.0,)" conf="orm->default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.6,)" conf="orm->entitymanager"/>
+        <dependency org="com.google.guava" name="guava" rev="[14.0.1,)" conf="context-support->core"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="[2.1.7,)" conf="context-support->core"/>
+        <dependency org="javax.cache" name="cache-api" rev="1.0.0-PFD" conf="context-support->default"/>
+        <dependency org="javax.mail" name="mail" rev="[1.4.7,)" conf="context-support->main"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache-core" rev="[2.1,)" conf="context-support->default"/>
+        <dependency org="org.jaspersoft" name="jasperreports" rev="[5.1.0,)" conf="context-support->core"/>
+        <dependency org="org.apache.velocity" name="velocity" rev="[1.7,)" conf="context-support->default"/>
+        <dependency org="org.codehaus.fabric3.api" name="commonj" rev="1.1.0" conf="context-support->default"/>                     ***
+        <dependency org="org.freemarker" name="freemarker" rev="[2.3.19,)" conf="context-support->default"/>
+        <dependency org="org.quartz" name="quartz" rev="[1.8,)" conf="context-support->core">
+            <exclude org="org.apache.log4j" name="log4j"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-fileupload" rev="[1.2,)" conf="web->default"/>
+        <dependency org="javax.portlet" name="portlet-api" rev="2.0" conf="web->default"/>
+        <dependency org="com.jayway.jsonpath" name="json-path" rev="[0.9.0,)" conf="test->default"/>
+        <dependency org="javax.servlet.jsp" name="jsp-api" rev="[2.1,)" conf="web->default"/>
+        <dependency org="org.junit" name="junit" rev="[4.11,)" conf="test->default"/>
+        <dependency org="org.hamcrest" name="hamcrest" rev="[1.3,)" conf="test->default"/>
+        <dependency org="org.testng" name="testng" rev="[6.8.8,)" conf="test->default"/>
+        <dependency org="net.sourceforge.xmlunit" name="xmlunit" rev="1.3" conf="test->default"/>
+        <dependency org="javax.activation" name="activation" rev="[1.1,2.0[" conf="context-support,test,web->default"/>
+        <dependency org="javax.servlet.jsp.jstl" name="jstl" rev="[1.2,)" conf="web->default"/>
+        <dependency org="net.sourceforge.c3p0" name="c3p0" rev="0.9.1.2" conf="jdbc->default"/>
+        <dependency org="rome" name="rome" rev="[1.0,)" conf="web->default"/>
+        <dependency org="velocity-tools" name="velocity-tools-view" rev="1.4" conf="webmvc->default"/>                              ***
+        <dependency org="net.sourceforge.jexcelapi" name="jexcelapi" rev="[2.6.3,)" conf="webmvc->default"/>
+        <dependency org="org.apache.poi" name="poi" rev="[3.5,)" conf="webmvc->default"/>
+        <dependency org="com.thoughtworks.xstream" name="xstream" rev="[1.4,)" conf="oxm->default"/>
+        <dependency org="org.apache.xmlbeans" name="xmlbeans" rev="[2.6.0,)" conf="oxm->default"/>
+        <dependency org="org.codehaus.castor" name="castor-xml" rev="[1.3.2,)" conf="oxm->xml"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="[1.2.5,)" conf="oxm->runtime-base"/>
+        <dependency org="com.caucho" name="hessian" rev="[4.0,)" conf="web->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpasyncclient" rev="[4.0,)" conf="web->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="[4.3,)" conf="web->client"/>
+        <dependency org="org.apache.jakarta.taglibs" name="standard" rev="[1.1.2,)" conf="web->default"/>
+        <dependency org="javax.faces" name="jsf" rev="[2.0,)" conf="web->api"/>
+
+        -->
+    </dependencies>
+
+</ivy-module>
