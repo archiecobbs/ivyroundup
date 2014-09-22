@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2014-09-19 19:20:48 UTC</timestamp>
-  <svnRevision>3211</svnRevision>
+  <timestamp>2014-09-22 21:30:22 UTC</timestamp>
+  <svnRevision>3213</svnRevision>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -453,6 +453,34 @@
       <rev name="5.1.26"/>
       <rev name="5.1.29"/>
       <rev name="5.1.31"/>
+    </mod>
+  </org>
+  <org name="com.netflix.archaius">
+    <mod name="archaius-core">
+      <rev name="0.4.1"/>
+    </mod>
+  </org>
+  <org name="com.netflix.hystrix">
+    <mod name="hystrix-core">
+      <rev name="1.3.18"/>
+    </mod>
+    <mod name="hystrix-metrics-event-stream">
+      <rev name="1.3.18"/>
+    </mod>
+  </org>
+  <org name="com.netflix.rxjava">
+    <mod name="rxjava-core">
+      <rev name="0.20.3"/>
+    </mod>
+  </org>
+  <org name="com.netflix.servo">
+    <mod name="servo-core">
+      <rev name="0.4.20"/>
+    </mod>
+  </org>
+  <org name="com.netflix.turbine">
+    <mod name="turbine-core">
+      <rev name="0.4"/>
     </mod>
   </org>
   <org name="com.opensymphony">
