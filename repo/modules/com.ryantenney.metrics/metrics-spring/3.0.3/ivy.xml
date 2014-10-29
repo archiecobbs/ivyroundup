@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.ryantenney.metrics" module="metrics-spring" revision="3.0.3" status="release" publication="20141007000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3238 2014-10-29 18:52:00Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.ryantenney.metrics/metrics-spring/3.0.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <description homepage="http://github.com/ryantenney/metrics-spring/">
+            <p>
+                The metrics-spring module integrates Coda Hale's Metrics library with Spring, and provides XML and Java configuration.
+            </p>
+            <p>
+                This module does the following things:
+            </p>
+            <p>
+                <ul>
+                    <li>Creates metrics and proxies beans which contain methods annotated with @Timed, @Metered, @ExceptionMetered, and @Counted</li>
+                    <li>Registers a Gauge for beans which have members annotated with @Gauge and @CachedGauge</li>
+                    <li>Autowires Timers, Meters, Counters and Histograms into fields annotated with @Metric</li>
+                    <li>Registers with the HealthCheckRegistry any beans which extend the class HealthCheck</li>
+                    <li>Creates reporters from XML config and binds them to the Spring lifecycle</li>
+                    <li>Registers metrics and metric sets in XML</li>
+                </ul>
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Metrics-spring with core requirements"/>
+        <conf name="ganglia" extends="default" description="Adds dependency on metrics-ganglia"/>
+        <conf name="graphite" extends="default" description="Adds dependency on metrics-graphite"/>
+        <conf name="servlets" extends="default" description="Adds dependency on metrics-servlets"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="metrics-spring" ivyde:javadoc="metrics-spring"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.7.0,)" conf="default-&gt;core"/>
+        <dependency org="io.dropwizard.metrics" name="metrics" rev="[3.0,)" conf="default-&gt;healthchecks,annotation,jvm;ganglia-&gt;ganglia;graphite-&gt;graphite;servlets-&gt;servlets"/>
+        <dependency org="org.springframework" name="spring" rev="[3.2.8,)" conf="default-&gt;core,beans,context-support,aop;servlets-&gt;web"/>
+        <!-- NOT IN REPO
+        <dependency org="com.librato.metrics" name="metrics-librato" rev="[3.0.1.0,)" conf="default->default"/>
+        -->
+    </dependencies>
+
+</ivy-module>
