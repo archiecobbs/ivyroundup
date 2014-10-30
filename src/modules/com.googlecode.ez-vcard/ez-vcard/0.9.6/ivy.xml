@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20141013000000">
+        <license name="New BSD" url="http://opensource.org/licenses/BSD-3-Clause"/>
+        <description homepage="https://code.google.com/p/ez-vcard/">
+
+            <p>
+            A vCard parser library written in Java.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="hCard" description="Support for parsing/writing hCards"/>
+        <conf name="jCard" description="Support for parsing/writing jCards"/>
+        <conf name="default" extends="core" description="Core classes"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.jsoup" name="jsoup" rev="1.7.3" conf="hCard->default"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3.19" conf="hCard->default"/>
+        <dependency org="com.fasterxml" name="jackson" rev="2.3.3" conf="jCard->default"/>
+    </dependencies>
+
+</ivy-module>
