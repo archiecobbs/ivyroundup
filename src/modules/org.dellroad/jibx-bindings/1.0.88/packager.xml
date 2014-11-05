@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}-core.jar"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-core-${revision}.jar"
+      sha1="52b4dc37d623b9587697566f6b649b05471bce3d"/>
+    <resource tofile="artifacts/jars/${name}-pidf.jar"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-pidf-${revision}.jar"
+      sha1="01a55b42229655efd4f3e72903bc812f3c981d4f"/>
+    <resource tofile="artifacts/jars/${name}-twilio.jar"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-twilio-${revision}.jar"
+      sha1="2191cf0183c9be8ea504a837a2c2348880ed6fa5"/>
+    <resource tofile="artifacts/jars/${name}-vcard.jar"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-vcard-${revision}.jar"
+      sha1="596b23f16b279193dbc108bcef2d8cb902fce6c4"/>
+
+    <resource tofile="artifacts/javadocs/javadoc.zip"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-javadocs-${revision}.zip"
+      sha1="99625933b04a8d3ebe960a3f644ca9397d1a5000"/>
+    <resource tofile="artifacts/sources/source.zip"
+      url="https://s3.amazonaws.com/archie-public/${name}/${name}-sources-${revision}.zip"
+      sha1="cdf8ae80d06fa108f4979f0c57412f60352a7dda"/>
+
+</packager-module>
