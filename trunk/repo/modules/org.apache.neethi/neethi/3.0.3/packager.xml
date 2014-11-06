@@ -15,9 +15,10 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <property name="name" value="${ivy.packager.module}"/>
     <m2resource>
-        <artifact tofile="artifacts/jars/neethi.jar" sha1="ee37a38bbf9f355ee88ba554a85c9220b75ba500"/>
-        <artifact classifier="sources" tofile="artifacts/sources/neethi.zip" sha1="c3763c2e6963cc1e277ae9b9728aeddd49dab6e9"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/neethi.zip" sha1="fc7b342f0599311f0fd20fc3a2bba1d296e438d3"/>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="ee37a38bbf9f355ee88ba554a85c9220b75ba500"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.jar" sha1="c3763c2e6963cc1e277ae9b9728aeddd49dab6e9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.jar" sha1="fc7b342f0599311f0fd20fc3a2bba1d296e438d3"/>
     </m2resource>
 </packager-module>
