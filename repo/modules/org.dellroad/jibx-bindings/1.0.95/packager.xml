@@ -19,12 +19,12 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource tofile="artifacts/jars/${name}-core.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-core-${revision}.jar" sha1="d36b9c3a52fb27760e3018b4ed1d8edda9125986"/>
-    <resource tofile="artifacts/jars/${name}-pidf.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-pidf-${revision}.jar" sha1="23d40906b53b64ba0e11a3f6306c5b58929cfe59"/>
-    <resource tofile="artifacts/jars/${name}-twilio.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-twilio-${revision}.jar" sha1="f32615856bd28bd3c2f60bd36dcddfdff30d1a52"/>
-    <resource tofile="artifacts/jars/${name}-vcard.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-vcard-${revision}.jar" sha1="7a41812134722941c6a3aeeaea0bcf3f3246c67d"/>
+    <resource tofile="artifacts/jars/${name}-core.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-core-${revision}.jar" sha1="ecc41252a3d67927f43f513b67de204ecb3a5011"/>
+    <resource tofile="artifacts/jars/${name}-pidf.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-pidf-${revision}.jar" sha1="046a302a6612876363123247dd9c8bbd7603a92f"/>
+    <resource tofile="artifacts/jars/${name}-twilio.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-twilio-${revision}.jar" sha1="2412daf03707856270d474d3a641860f9afa5715"/>
+    <resource tofile="artifacts/jars/${name}-vcard.jar" url="https://s3.amazonaws.com/archie-public/${name}/${name}-vcard-${revision}.jar" sha1="9036ba1512816595ce1bc36b1fd1dc025ad4253a"/>
 
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="https://s3.amazonaws.com/archie-public/${name}/${name}-javadocs-${revision}.zip" sha1="6f0fecccff08f8687ecddfe59e838d0aa7c3308d"/>
-    <resource tofile="artifacts/sources/source.zip" url="https://s3.amazonaws.com/archie-public/${name}/${name}-sources-${revision}.zip" sha1="8ec100b92f46c663592fda34b6f3669bb96fc298"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="https://s3.amazonaws.com/archie-public/${name}/${name}-javadocs-${revision}.zip" sha1="49348ff41e56313744353f0b7c5e399a9d4b4834"/>
+    <resource tofile="artifacts/sources/source.zip" url="https://s3.amazonaws.com/archie-public/${name}/${name}-sources-${revision}.zip" sha1="739960a7dfd7931142cc369bc4495ea7b3db37b1"/>
 
 </packager-module>
