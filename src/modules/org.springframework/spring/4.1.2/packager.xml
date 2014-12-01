@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-aop">
+        <artifact tofile="artifacts/jars/spring-aop.jar" sha1="700d8435a0cbd0a8efc6a69e6cc886e0730e373f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-aop.zip" sha1="bdcc6245f7ff4d4361e1bbec97840bbc9c180b0b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-aop.zip" sha1="4ba830524ac565337580a5646faf2f81e724c5e0"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-aspects">
+        <artifact tofile="artifacts/jars/spring-aspects.jar" sha1="84b6dbda71d0fbc8340311fbadd1f9cbaf73429b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-aspects.zip" sha1="5e43a202cf135190b3274ba40b2813542defc7c8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-aspects.zip" sha1="75b03f3ce7d15033c5294065837f771ef3d8b87f"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-beans">
+        <artifact tofile="artifacts/jars/spring-beans.jar" sha1="89faefb9324a5a0a3ce43ec385f105e45fc2fbed"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-beans.zip" sha1="a39a897ef455568a0d3ee85643bfd09747bac661"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-beans.zip" sha1="49d3b59b66acee6c177ac3acb0c60f90ea5d66d1"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-context">
+        <artifact tofile="artifacts/jars/spring-context.jar" sha1="546f627d9904d6ea1511d208a7722589867e924e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-context.zip" sha1="9cf2381acd55d99490bc4538f6742b2dc1a54637"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-context.zip" sha1="d71626d5beff3226226ca2ea7e7c06cc0df4ddda"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-context-support">
+        <artifact tofile="artifacts/jars/spring-context-support.jar" sha1="8f79aa44de7946c18e09debea1b5a67d81329c5b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-context-support.zip" sha1="a1fa5cd19bff3a063ac7d5ea18a052bbae098491"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-context-support.zip" sha1="df3a64c95f9a97944b189973144170b112ab7c1d"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-core">
+        <artifact tofile="artifacts/jars/spring-core.jar" sha1="38428c53e7f1eb1cd2c028ffa17cb1e699083372"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-core.zip" sha1="edce2986504e72453300581bd9a679c02165b392"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-core.zip" sha1="214bac94ccd2f63d84df88654d4dfdeb42e1d63d"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-expression">
+        <artifact tofile="artifacts/jars/spring-expression.jar" sha1="da7fc1ba3872802529926a1cbf02cf7176cf2e80"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-expression.zip" sha1="3803a5f22149a03b0407861b96c3f9feb298ac45"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-expression.zip" sha1="577eae21f07bcfcc69cd65312927330a38e9ee48"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-instrument">
+        <artifact tofile="artifacts/jars/spring-instrument.jar" sha1="69e84d8e21cb492072b50812291b6bc573779331"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-instrument.zip" sha1="16ce28491b65def895a65bf5196880807618b8e7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-instrument.zip" sha1="d81651cd770337e63f1394839b96d15eb83a4b59"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-instrument-tomcat">
+        <artifact tofile="artifacts/jars/spring-instrument-tomcat.jar" sha1="88e77e68b470d0cffc4e609a11f986f6e8971f40"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-instrument-tomcat.zip" sha1="1c7d23bf08d7a1a02ebf0a7ba0977e48cddf190b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-instrument-tomcat.zip" sha1="1d04df63359b9f0280e3602261f58527e9017137"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-jdbc">
+        <artifact tofile="artifacts/jars/spring-jdbc.jar" sha1="795ed2be08fe84c230d7d7e52e3d159557754a20"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-jdbc.zip" sha1="e05afec53078b5c14f4f9b7f34d0991f020ac9c8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-jdbc.zip" sha1="84f8aea800c4ffc75a2801cecfb58fe98ba33067"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-jms">
+        <artifact tofile="artifacts/jars/spring-jms.jar" sha1="4fa31af2312c3aadab28488fd0f4fabe148afb85"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-jms.zip" sha1="4267e61ec4d61eaa36b59cfa9de90ef3e52b62af"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-jms.zip" sha1="8bf9b12d492fa5f877a2d7347e8e47285c14ba46"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-messaging">
+        <artifact tofile="artifacts/jars/spring-messaging.jar" sha1="b8404dabc32a1fa027be478d8db866306a5e96b0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-messaging.zip" sha1="7486fcd02970b0dd590004b2960dc6e32eeb1b22"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-messaging.zip" sha1="308d7063d0555728c1fdf934fd930a7f8f1fccac"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-orm">
+        <artifact tofile="artifacts/jars/spring-orm.jar" sha1="77635cc9d3fededa12ff626c507148c5fa329446"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-orm.zip" sha1="2e621c9fe60de0ca8d72ad0ae4900cd7a2fa5792"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-orm.zip" sha1="acb7cce71764421064ad2232fbd393846e336071"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-oxm">
+        <artifact tofile="artifacts/jars/spring-oxm.jar" sha1="e82eab27c0ce793650c5c12fc1dbaff3e402fd67"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-oxm.zip" sha1="1fc25376c6fc723f79e174b37736b074a3e1e8b7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-oxm.zip" sha1="87c37fb4a66e590e29e98f7a89d023f97bc287da"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-test">
+        <artifact tofile="artifacts/jars/spring-test.jar" sha1="cdaa88735b66832be984713be024eba2150d5ec3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-test.zip" sha1="1d14c6a0807312138c85e0ec526df190e6dfb0ec"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-test.zip" sha1="3323682990c77451cee95a0de0a1e4153d9cc585"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-tx">
+        <artifact tofile="artifacts/jars/spring-tx.jar" sha1="c23a24c8c237efaaa4f369f4882a8a7d1cb9eeac"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-tx.zip" sha1="ec6580818af8666d512831539d2df33776882c0c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-tx.zip" sha1="7423fff08bbcbadeae6dc43ae701fd02597a5144"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-web">
+        <artifact tofile="artifacts/jars/spring-web.jar" sha1="aff4040103cac2f87fd4d0a88d31d1b62f07fe69"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-web.zip" sha1="71128bbbd99add114d522efdd7739f8f2b2a8c95"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-web.zip" sha1="dad8dc524de8607253dacc3b5cac421a75f6b0d7"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-webmvc">
+        <artifact tofile="artifacts/jars/spring-webmvc.jar" sha1="96ff2720edf5c61f09248ffd9ea8d86616f6fa80"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-webmvc.zip" sha1="acbfc78fb75c4a76b62faa2d30414c07c33e9f85"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-webmvc.zip" sha1="378e426bdf0ef4b2dc7380de58f974d3d023ee02"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-webmvc-portlet">
+        <artifact tofile="artifacts/jars/spring-webmvc-portlet.jar" sha1="7f420808b510e8e4c74dd9db6e243bf4b9a81722"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-webmvc-portlet.zip" sha1="601c5a2e8b5ec2d174b7a7bbc3021abad0f1089f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-webmvc-portlet.zip" sha1="f123cc834c521325388fa52c8bffa1b53f0de396"/>
+    </m2resource>
+    <m2resource version="4.1.2.RELEASE" artifactId="spring-websocket">
+        <artifact tofile="artifacts/jars/spring-websocket.jar" sha1="15040750bcd4e29843382b04e2a2f449509c18bf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-websocket.zip" sha1="1178a938fae58812f208c457422c874f748be595"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-websocket.zip" sha1="ef6242cc53ea7b78d5961c5873946ae5ccbd0a78"/>
+    </m2resource>
+</packager-module>
