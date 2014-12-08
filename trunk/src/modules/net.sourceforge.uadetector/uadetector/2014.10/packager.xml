@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+     <m2resource groupId="net.sf.uadetector" artifactId="uadetector-core" version="0.9.22">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-core.jar" sha1="e40e4e391e27fdb798a574a3ee0c26debe36c6cd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-core-javadoc.zip" sha1="43fbb6d3b29180bd8272bbd08bd65937f079fd5c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-core-source.zip" sha1="399df91d4d67e92267dacedcb9ca265fcf7c9930"/>
+    </m2resource>
+    <m2resource groupId="net.sf.uadetector" artifactId="uadetector-resources">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-resources.jar" sha1="973d8ec015a740b20cd3cdbc593315c521cb0128"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-resources-javadoc.zip" sha1="b2d0a63dfa8cd7e62236b66bf952d667059129f7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-resources-source.zip" sha1="374d4edcf5e4652ded7a65fcd00e1e0198cefddd"/>
+    </m2resource>
+</packager-module>
