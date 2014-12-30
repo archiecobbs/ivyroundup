@@ -50,8 +50,13 @@
         </description>
     </info>
 
+    <configurations>
+        <conf name="core" extends="default" description="(Deprecated) Same as default configuration"/>
+        <conf name="default" description="Standard default configuration"/>
+    </configurations>
+
     <publications>
-        <artifact name="commons-beanutils" />
+        <artifact name="commons-beanutils"/>
         <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
