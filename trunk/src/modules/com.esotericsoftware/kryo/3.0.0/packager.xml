@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource>
+        <artifact tofile="artifacts/jars/kryo.jar" sha1="86f0de889ece7c30115d27d1c56246fd509201a8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/kryo.zip" sha1="1b5ec24dea3a62ee611ee98f3d10aacbf38c74f9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/kryo.zip" sha1="4174fc4d1a33a83f5fe1cc8ca5f98b989e915516"/>
+    </m2resource>
+    <m2resource artifactId="kryo-shaded">
+        <artifact tofile="artifacts/jars/kryo-shaded.jar" sha1="c6747d5319d219bcee18fc16661bfc9914ccf261"/>
+        <artifact classifier="sources" tofile="artifacts/sources/kryo-shaded.zip" sha1="7be31320933445a7b4e93b59dc9b643f2cc9fd3b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/kryo-shaded.zip" sha1="a9e7fb761954156c833378bf6641e3d17381470a"/>
+    </m2resource>
+</packager-module>
