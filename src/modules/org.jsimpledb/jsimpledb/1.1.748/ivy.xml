@@ -63,8 +63,11 @@
     <configurations>
         <conf name="core" description="JSimpleDB and only required dependencies"/>
         <conf name="cli" extends="core" description="JSimpleDB command line interface (CLI) classes"/>
+        <conf name="cli-deps" extends="cli" description="CLI dependencies"/>
         <conf name="gui" extends="core" description="JSimpleDB graphical user interface (GUI) classes"/>
+        <conf name="gui-deps" extends="gui" description="GUI dependencies"/>
         <conf name="spring" extends="core" description="Spring Framework integration classes"/>
+        <conf name="spring-deps" extends="spring" description="Spring dependencies"/>
         <conf name="fdb" extends="core" description="Add FoundationDB dependency"/>
         <conf name="bdb" extends="core" description="Add Berkeley DB Java Edition dependency"/>
         <conf name="default" extends="core,cli,gui,spring" description="JSimpleDB plus CLI, GUI, and Spring support"/>
@@ -83,17 +86,16 @@
         <dependency org="com.foundationdb" name="fdb-java" rev="3+" conf="fdb->default"/>
         <dependency org="com.google.guava" name="guava" rev="18.0" conf="core->default"/>
         <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="bdb->default"/>
-        <dependency org="com.vaadin" name="vaadin" rev="7.3+" conf="gui->default"/>
-        <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="gui->default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="7.3+" conf="gui-deps->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="gui-deps->default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="core->default"/>
-        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="gui->default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="gui-deps->default"/>
         <dependency org="org.dellroad" name="dellroad-stuff" rev="1.0.964" conf="core->core"/>
-        <dependency org="org.eclipse" name="jetty" rev="9.2.6.v20141205" conf="gui->webapp,annotations"/>
-        <dependency org="org.objectweb.asm" name="asm" rev="4.+" conf="gui->default"/>
+        <dependency org="org.eclipse" name="jetty" rev="9.2.7.v20150116" conf="gui-deps->webapp,annotations"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core->default"/>
-        <dependency org="org.sonatype.jline" name="jline" rev="2.12" conf="cli->default"/>
+        <dependency org="org.sonatype.jline" name="jline" rev="2.12" conf="cli-deps->default"/>
         <dependency org="org.springframework" name="spring" rev="4.1+"
-          conf="gui,spring->aop,aspects,beans,context,tx,web; cli->context"/>
+          conf="gui-deps,spring-deps->aop,aspects,beans,context,tx,web; cli-deps->context"/>
     </dependencies>
 
 </ivy-module>
