@@ -17,7 +17,7 @@
 -->
 
 <!--
-    Generate an ant build.xml that verifies each download URL of every artifact in
+    Generates an ant build.xml that verifies each download URL of every artifact in
     the repository.
 -->
 
@@ -412,7 +412,7 @@
         <xsl:choose>
             <!-- Check for manually downloaded resources -->
             <xsl:when test="starts-with(@href, 'file:')">
-                <echo taskname="${{modpath}}/packager.xml :man" message="Must download manually: {@href}">X${{user.dir}}X</echo>
+                <echo taskname="${{modpath}}/packager.xml :man" message="Must download manually: {@href}"/>
             </xsl:when>
             <xsl:otherwise>
                 <my-get file="${{modpath}}/packager.xml" url="{@href}"
