@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     
-    <property name="download" value="http://jdbc.postgresql.org/download"/>
+    <property name="download" value="https://jdbc.postgresql.org/download"/>
     
     <resource url="${download}/postgresql-${revision}.jdbc2.jar" tofile="artifacts/jars/postgresql-jdbc2.jar" sha1="d36ccb51526a6afb88267f38af5c9ffc69a009b2"/>
         
