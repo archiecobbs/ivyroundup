@@ -20,7 +20,7 @@
 
     <info organisation="org.jsimpledb" module="jsimpledb" revision="1.1.838" status="release" publication="20150307000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3323 2015-03-07 18:25:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jsimpledb/jsimpledb/1.1.838/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3325 2015-03-07 18:55:18Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jsimpledb/jsimpledb/1.1.838/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://jsimpledb.googlecode.com/">
 
@@ -87,6 +87,7 @@
     <dependencies>
         <dependency org="com.foundationdb" name="fdb-java" rev="3+" conf="fdb-&gt;default"/>
         <dependency org="com.google.guava" name="guava" rev="18.0" conf="core-&gt;default"/>
+        <dependency org="com.googlecode.nvt4j" name="nvt4j" rev="1+" conf="cli-deps-&gt;default"/>
         <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="bdb-&gt;default"/>
         <dependency org="com.vaadin" name="vaadin" rev="7.3+" conf="gui-deps-&gt;default"/>
         <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="gui-deps-&gt;default"/>
