@@ -1,7 +1,7 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2015-03-23 15:30:44 UTC</timestamp>
-  <svnRevision>3327</svnRevision>
+  <timestamp>2015-03-27 02:42:32 UTC</timestamp>
+  <svnRevision>3335</svnRevision>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -380,6 +380,26 @@
   <org name="com.icl.saxon">
     <mod name="saxon">
       <rev name="6.5.5"/>
+    </mod>
+  </org>
+  <org name="com.indeed">
+    <mod name="util-compress">
+      <rev name="1.0.13"/>
+    </mod>
+    <mod name="util-core">
+      <rev name="1.0.13"/>
+    </mod>
+    <mod name="util-io">
+      <rev name="1.0.13"/>
+    </mod>
+    <mod name="util-mmap">
+      <rev name="1.0.13"/>
+    </mod>
+    <mod name="util-serialization">
+      <rev name="1.0.13"/>
+    </mod>
+    <mod name="util-urlparsing">
+      <rev name="1.0.13"/>
     </mod>
   </org>
   <org name="com.intellij">
@@ -954,6 +974,9 @@
       <rev name="6.3"/>
       <rev name="6.4.2"/>
       <rev name="6.5.1"/>
+      <rev name="6.5.16"/>
+      <rev name="6.6.5"/>
+      <rev name="7.0.2"/>
     </mod>
   </org>
   <org name="javax.activation">
@@ -2426,6 +2449,7 @@
       <rev name="1.7.7"/>
       <rev name="1.8.0"/>
       <rev name="1.8.1"/>
+      <rev name="1.9.13"/>
       <rev name="1.9.2"/>
       <rev name="1.9.4"/>
       <rev name="1.9.9"/>
@@ -3213,6 +3237,11 @@
       <rev name="2.2.1"/>
     </mod>
   </org>
+  <org name="org.mapdb">
+    <mod name="mapdb">
+      <rev name="1.0.7"/>
+    </mod>
+  </org>
   <org name="org.mc4j">
     <mod name="mc4j-ems">
       <rev name="1.2.6"/>
@@ -3706,6 +3735,7 @@
   <org name="org.yaml">
     <mod name="snakeyaml">
       <rev name="1.13"/>
+      <rev name="1.15"/>
       <rev name="1.9"/>
     </mod>
   </org>
