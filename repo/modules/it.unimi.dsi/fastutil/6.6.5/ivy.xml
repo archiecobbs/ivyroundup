@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2011 Andrei Polushin
+    Copyright 2011 Ales Nosek
+    Copyright 2013 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,21 +19,21 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.googlecode.gwt-log" module="gwt-log" revision="3.1.2" status="release" publication="20110408120000">
+    <info organisation="it.unimi.dsi" module="fastutil" revision="6.6.5" status="release" publication="20150316000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3329 2015-03-23 16:19:22Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.googlecode.gwt-log/gwt-log/3.1.2/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3332 2015-03-27 00:41:42Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/it.unimi.dsi/fastutil/6.6.5/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="https://github.com/fredsa/gwt-log">
-
-            <p>
-            Logging Library for Google Web Toolkit (GWT) with Deferred Binding.
-            </p>
-
+        <description homepage="http://fastutil.di.unimi.it/">
+            fastutil extends the Java Collections Framework by providing type-specific
+            maps, sets, lists and queues with a small memory footprint and fast
+            access and insertion; provides also big (64-bit) arrays and lists and fast,
+            practical I/O classes for binary and text files.
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 

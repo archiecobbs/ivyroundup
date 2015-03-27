@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2011 Andrei Polushin
+    Copyright 2015 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,22 +18,26 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="com.googlecode.gwt-log" module="gwt-log" revision="3.1.2" status="release" publication="20110408120000">
+    <info organisation="com.indeed" module="util-compress" revision="1.0.13" status="release" publication="20150313000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3329 2015-03-23 16:19:22Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.googlecode.gwt-log/gwt-log/3.1.2/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3335 2015-03-27 02:32:00Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.indeed/util-compress/1.0.13/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
-        <description homepage="https://github.com/fredsa/gwt-log">
-
+        <description homepage="https://github.com/indeedeng/util/">
             <p>
-            Logging Library for Google Web Toolkit (GWT) with Deferred Binding.
+            Compression libraries shared by Indeed projects.
             </p>
-
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
         <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
+
+    <dependencies>
+        <dependency org="com.indeed" name="util-core" rev="1.0+" conf="default-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="default-&gt;default"/>
+    </dependencies>
 
 </ivy-module>
