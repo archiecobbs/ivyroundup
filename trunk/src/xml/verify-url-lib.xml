@@ -30,6 +30,7 @@
            usetimestamp="true"
            dest="${basedir}"
            src="@{url}"
+        retries="1"
            taskname="@{file} :@{type}">
         <mergemapper to="timestamp" />
       </get>
@@ -48,6 +49,7 @@
            usetimestamp="true"
            dest="${basedir}"
            src="@{url}"
+        retries="1"
            taskname="@{file} :@{type}">
         <mergemapper to="timestamp" />
       </get>
@@ -117,7 +119,7 @@
                         flags="gm"
                         byline="false" />
           <!-- Assume a 'moved to' HTTP response is caused by load balancing/mirroring mechanisms -->
-          <replaceregex pattern="^\[(.+?) :\w+] ([^ ]+?) (?!permanently )moved to ([^ ]+?)\n"
+          <replaceregex pattern="^\[(.+?) :prim] ([^ ]+?downloads\.sourceforge\.net[^ ]+?) (?!permanently )moved to ([^ ]+?)\n"
                         replace=""
                         flags="gm"
                         byline="false" />
