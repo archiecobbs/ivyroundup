@@ -23,7 +23,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-ri-${revision}"/>
 
-    <resource url="http://${name}.java.net/${revision}/${archive}.zip"
+    <resource url="https://${name}.java.net/${revision}/${archive}.zip"
       sha1="cf9252043bb71ccb632fb0d8077cb04912ca261b"/>
 
     <build>
