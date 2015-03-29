@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://dev.mysql.com/get/Downloads/Connector-J/${archive}.zip"
+    <resource url="http://cdn.mysql.com/archives/mysql-connector-java-5.1/${archive}.zip"
       filename="${archive}.zip" sha1="9b90d00b5a67a01df44298d02cb06a7da92cacb0">
         <include name="${archive}/${archive}-bin.jar"/>
         <include name="${archive}/src/com/**/*"/>
