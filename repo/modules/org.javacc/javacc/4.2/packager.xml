@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://java.net/downloads/javacc/oldversions/${archive}.zip" sha1="bd52d89ea4c0fff1b6489c6c338a40002b4b7b34"/>
-    <resource url="http://java.net/downloads/javacc/oldversions/${archive}src.zip" sha1="60ab2876005e1ad5183f80a32ac9f37ddfdf065b"/>
+    <resource url="https://java.net/downloads/javacc/oldversions/${archive}.zip" sha1="bd52d89ea4c0fff1b6489c6c338a40002b4b7b34"/>
+    <resource url="https://java.net/downloads/javacc/oldversions/${archive}src.zip" sha1="60ab2876005e1ad5183f80a32ac9f37ddfdf065b"/>
 
     <build>
         <!-- jar -->

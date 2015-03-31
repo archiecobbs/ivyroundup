@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://www.eclipse.org/downloads/download.php?file=/tools/aspectj/${name}-${revision}.jar&amp;mirror_id=1&amp;url=http://download.eclipse.org/tools/${name}/${name}-${revision}.jar" sha1="427410a36305d6b89182779c8bd66b6ea925beee">
+    <resource url="http://archive.eclipse.org/tools/${name}/${name}-${revision}.jar" sha1="427410a36305d6b89182779c8bd66b6ea925beee">
         <include name="lib/*.jar"/>
         <include name="doc/*-api/**/*"/>
     </resource>
