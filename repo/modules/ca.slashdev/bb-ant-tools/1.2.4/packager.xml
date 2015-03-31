@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://sourceforge.net/projects/${name}/files/${name}/${revision}/${archive}-src.zip/download" sha1="6678ebe2de5941f576b6e34e9933485bbec09bc3" type="zip"/>
-    <resource url="http://sourceforge.net/projects/${name}/files/${name}/${revision}/${archive}-bin.zip/download" sha1="e99e0d0c14891851588508892c51dcde628be5f6" type="zip"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-src.zip" sha1="6678ebe2de5941f576b6e34e9933485bbec09bc3" type="zip"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${archive}-bin.zip" sha1="e99e0d0c14891851588508892c51dcde628be5f6" type="zip"/>
 
     <build>
         <!-- jar -->
