@@ -114,7 +114,12 @@
                         flags="gm"
                         byline="false" />
           <!-- shorten Can't get ... to lines -->
-          <replaceregex pattern="^(\[.*?] Can't get .+?) to.+?$$"
+          <replaceregex pattern="^(\[.*?] Can't get .+?) to.+?$"
+                        replace="\1"
+                        flags="gm"
+                        byline="false" />
+          <!-- shorten Error getting ... to lines -->
+          <replaceregex pattern="^(\[.*?] Error getting .+?) to.+?$"
                         replace="\1"
                         flags="gm"
                         byline="false" />
