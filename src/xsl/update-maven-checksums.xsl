@@ -110,10 +110,20 @@
             </xsl:if>
         </xsl:variable>
 
+        <!-- Get filename extension, if any -->
+        <xsl:variable name="extension">
+            <xsl:choose>
+                <xsl:when test="../@ext">
+                    <xsl:value-of select="../@ext"/>
+                </xsl:when>
+                <xsl:otherwise>jar</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
         <!-- Get complete URI for checksum file -->
         <xsl:variable name="uri">
             <xsl:value-of select="concat($repoURI, $groupURIPath, '/', $artifactId, '/',
-              $version, '/', $artifactId, '-', $version, $classifierSuffix, '.jar.sha1')"/>
+              $version, '/', $artifactId, '-', $version, $classifierSuffix, '.', $extension, '.sha1')"/>
         </xsl:variable>
 
         <!-- Read SHA1 -->
