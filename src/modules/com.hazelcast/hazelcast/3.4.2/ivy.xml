@@ -44,11 +44,13 @@
         <conf name="wm" extends="core" description="Session clustering"/>
         <conf name="default" extends="core" description="Alias for core"/>
         <conf name="all" description="All classes in single JAR"/>
+        <conf name="tests" extends="core" description="Test classes"/>
     </configurations>
 
     <publications>
         <!-- jar -->
         <artifact name="hazelcast" conf="core"/>
+        <artifact name="hazelcast-tests" conf="tests"/>
         <artifact name="hazelcast-all" conf="all"/>
         <artifact name="hazelcast-build-utils" conf="build-utils"/>
         <artifact name="hazelcast-client" conf="client"/>
