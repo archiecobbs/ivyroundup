@@ -20,7 +20,7 @@
 
     <info organisation="com.hazelcast" module="hazelcast" revision="3.4.2" status="release" publication="20150326000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3343 2015-03-30 18:26:44Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.hazelcast/hazelcast/3.4.2/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3351 2015-04-07 16:06:52Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.hazelcast/hazelcast/3.4.2/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
         <description homepage="http://hazelcast.com/">
             Hazelcast is an open source clustering and highly scalable data distribution platform for Java, which is:
@@ -46,11 +46,13 @@
         <conf name="wm" extends="core" description="Session clustering"/>
         <conf name="default" extends="core" description="Alias for core"/>
         <conf name="all" description="All classes in single JAR"/>
+        <conf name="tests" extends="core" description="Test classes"/>
     </configurations>
 
     <publications>
         <!-- jar -->
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hazelcast" ivyde:javadoc="hazelcast" name="hazelcast" conf="core"/>
+        <artifact name="hazelcast-tests" conf="tests"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hazelcast-all" ivyde:javadoc="hazelcast-all" name="hazelcast-all" conf="all"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hazelcast-build-utils" ivyde:javadoc="hazelcast-build-utils" name="hazelcast-build-utils" conf="build-utils"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hazelcast-client" ivyde:javadoc="hazelcast-client" name="hazelcast-client" conf="client"/>
