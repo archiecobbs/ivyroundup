@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module rev="$Id$">
+
+    <info publication="20141009120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://objectlabkit.sourceforge.net/">
+
+            <p>
+Apart from the very basic "add days" features, most business have to deal with Holidays and what to do when a calculated day falls on a holiday . This library does not attempt to create or guess the holidays, we all know that some bank holidays can be decided at a moment's notice in some markets. All financial institutions or big business will have their own official list of 'holidays' anyway.<br/><br/>
+
+Furthermore, "weekends" also need to be handled and some market have a different week to the conventional Monday -> Friday, our library provides you with full flexibility to design a Working Week.<br/><br/>
+
+As such a Non-working Day can be a holiday or a 'weekend'. Also note that CurrencyPairs have a specialised calculator as the rules can be 'weird'.  See <a href="http://objectlabkit.sourceforge.net/currency.html">this</a> for more information.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="common" description="Common classes"/>
+        <conf name="jdk" extends="common" description="JDK Implementation"/>
+        <conf name="joda" extends="common" description="Joda Time Implementation"/>
+        <conf name="jdk8" extends="common" description="JDK 8 Implementation"/>
+        <conf name="default" extends="jdk" description="Default Implementation (JDK)"/>
+    </configurations>
+
+    <publications>
+        <artifact name="datecalc-common" conf="common"/>
+        <artifact name="datecalc-jdk" conf="jdk"/>
+        <artifact name="datecalc-joda" conf="joda"/>
+        <artifact name="datecalc-jdk8" conf="jdk8"/>
+
+        <!-- source -->
+        <artifact name="datecalc-common" type="source" ext="jar" conf="common"/>
+        <artifact name="datecalc-jdk" type="source" ext="jar" conf="jdk"/>
+        <artifact name="datecalc-joda" type="source" ext="jar" conf="joda"/>
+        <artifact name="datecalc-jdk8" type="source" ext="jar" conf="jdk8"/>
+
+        <!-- jabadoc -->
+        <artifact name="datecalc-common" type="javadoc" ext="jar" conf="common"/>
+        <artifact name="datecalc-jdk" type="javadoc" ext="jar" conf="jdk"/>
+        <artifact name="datecalc-joda" type="javadoc" ext="jar" conf="joda"/>
+        <artifact name="datecalc-jdk8" type="javadoc" ext="jar" conf="jdk8"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.joda" name="joda-time" rev="1.6" conf="joda->default" />
+    </dependencies>
+
+</ivy-module>
