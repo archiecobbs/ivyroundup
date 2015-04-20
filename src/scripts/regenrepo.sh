@@ -58,5 +58,8 @@ regenerate_repo
     rm -rf repo/modules/"${DIR}"
 done
 
+# Generate HTML file
+xsltproc repo/xsl/modules.xsl repo/modules.xml > repo/modules.html
+
 # Done
 echo 'regenrepo: done'
