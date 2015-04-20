@@ -2,7 +2,7 @@
 
 **Ivy RoundUp** is an online [Ivy](http://ant.apache.org/ivy/) repository meant to be shared by all Ivy users.
 
-**[Click here to view the current repository contents](https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules.html)**.
+**[Click here to view the current repository contents](http://htmlpreview.github.io/?https://github.com/archiecobbs/ivyroundup/blob/master/repo/modules.html)**.
 
 Instead of hosting Ivy module definition files (`ivy.xml` files) and artifacts together on the same site, this site hosts only the module definition files plus additional meta-data (`packager.xml` files) that describes how to download and extract the module's artifacts on-demand at the point of use.
 
@@ -26,4 +26,4 @@ Want to try it out? Install [the latest version of Ivy](http://ant.apache.org/iv
 
 Interested in learning more? Join us on the [Ivy RoundUp mailing list](http://groups.google.com/group/ivyroundup)! Or read [how you can help](https://github.com/archiecobbs/ivyroundup/wiki/HowToContribute.md) and become a [contributor](https://github.com/archiecobbs/ivyroundup/wiki/Contributors.md).
 
-You can also view [the modules contained in Ivy RoundUp](https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules.html) so far.
+You can also view [the modules contained in Ivy RoundUp](http://htmlpreview.github.io/?https://github.com/archiecobbs/ivyroundup/blob/master/repo/modules.html) so far.
