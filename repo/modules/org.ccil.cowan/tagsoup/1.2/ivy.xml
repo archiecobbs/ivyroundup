@@ -20,8 +20,8 @@
 
     <info organisation="org.ccil.cowan" module="tagsoup" revision="1.2" status="release" publication="20080105115700">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1633 2011-05-21 01:13:47Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.ccil.cowan/tagsoup/1.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.ccil.cowan/tagsoup/1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://home.ccil.org/~cowan/XML/tagsoup/">TagSoup is a SAX-compliant parser written in Java that, instead of parsing
             well-formed or valid XML, parses HTML as it is found in the wild: poor, nasty and brutish, though quite often far from
             short. TagSoup is designed for people who have to process this stuff using some semblance of a rational application

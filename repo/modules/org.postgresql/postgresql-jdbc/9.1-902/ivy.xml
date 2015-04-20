@@ -20,8 +20,8 @@
 
     <info organisation="org.postgresql" module="postgresql-jdbc" revision="9.1-902" status="release" publication="20120425000000">
         <license name="BSD License" url="https://jdbc.postgresql.org/about/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3317 2015-01-31 14:43:38Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.postgresql/postgresql-jdbc/9.1-902/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.postgresql/postgresql-jdbc/9.1-902/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://jdbc.postgresql.org/">
             <p>The PostgreSQL JDBC driver allows Java programs to connect to a
             PostgreSQL database using standard, database independent Java code.</p>

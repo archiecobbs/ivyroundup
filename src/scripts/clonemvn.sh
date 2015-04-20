@@ -81,15 +81,15 @@ fi
 # Create directories
 DIR="src/modules/${GRP}"
 if [ ! -d "${DIR}" ]; then
-    svn mkdir "${DIR}"
+    mkdir "${DIR}"
 fi
 DIR="${DIR}/${ART}"
 if [ ! -d "${DIR}" ]; then
-    svn mkdir "${DIR}"
+    mkdir "${DIR}"
 fi
 DIR="${DIR}/${REV}"
 if [ ! -d "${DIR}" ]; then
-    svn cp src/boilerplate-maven "${DIR}"
+    cp -a src/boilerplate-maven "${DIR}"
 fi
 
 # Perform edits

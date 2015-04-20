@@ -20,8 +20,8 @@
 
     <info organisation="org.pentaho" module="mondrian" revision="3.1.1.12687" status="release" publication="20090501145000">
         <license name="Common Public License, Version 1.0" url="http://opensource.org/licenses/cpl1.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2961 2013-12-31 18:36:22Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.pentaho/mondrian/3.1.1.12687/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.pentaho/mondrian/3.1.1.12687/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://mondrian.pentaho.com/documentation/olap.php">
         Mondrian is an OLAP server written in Java. It enables you to
         interactively analyze very large datasets stored in SQL databases

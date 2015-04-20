@@ -20,8 +20,8 @@
 
     <info organisation="org.wattdepot" module="wattdepot" revision="0.5.1020" status="release" publication="20091020120000">
         <license name="BSD License" url="http://opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2409 2012-12-03 16:36:44Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.wattdepot/wattdepot/0.5.1020/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.wattdepot/wattdepot/0.5.1020/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/wattdepot/">
 WattDepot is a RESTful web service that collects electricity data (such as current power utilization or cumulative power utilization) from meters and stores it in a database. The data can then be retrieved by other tools for visualization and analysis.
         </description>

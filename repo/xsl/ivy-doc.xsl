@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: ivy-doc.xsl 959 2009-11-19 14:49:56Z archie.cobbs $ -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <!--
   You can copy and modify this xsl for your own use, providing that transformed
@@ -60,7 +59,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css" /> 
   </head>
   <body>
-    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="http://ivyroundup.googlecode.com/">Ivy RoundUp Repository</a></div>
+    <div id="logo"><a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"/></a><br/><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a></div>
     <h1>
     <span id="module">
 	        <xsl:element name="a">
@@ -121,7 +120,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <td></td>
         <td><strong><span class="manual-download">*** Note ***</span></strong> This module requires one or more
           resources to be downloaded manually (see below). See the
-          <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
           wiki for more information.
         </td>
       </tr>
@@ -445,7 +444,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <xsl:if test="$packager/resource[starts-with(@url, 'file:')] or $packager/resource/url[starts-with(@href, 'file:')]">
       <tr>
         <td colspan="3"><span class="manual-download">Resources displayed in red</span> must be downloaded manually.
-          See the <a href="http://code.google.com/p/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          See the <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
           wiki for more information.
         </td>
       </tr>

@@ -20,8 +20,8 @@
 
     <info organisation="org.hsqldb" module="hsqldb" revision="2.2.5" status="release" publication="20110705222500">
         <license name="HSQL License" url="http://hsqldb.org/web/hsqlLicense.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1693 2011-09-14 20:11:22Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/hsqldb/2.2.5/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.hsqldb/hsqldb/2.2.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://hsqldb.org/">
         HSQLDB is the leading SQL relational database engine written in Java. It
         has a JDBC driver and supports a rich subset of ANSI-92 SQL (BNF tree

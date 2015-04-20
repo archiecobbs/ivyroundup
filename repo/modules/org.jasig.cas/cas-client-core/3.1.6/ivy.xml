@@ -20,8 +20,8 @@
 
     <info organisation="org.jasig.cas" module="cas-client-core" revision="3.1.6" status="release" publication="20090526185500">
         <license name="JA-SIG" url="https://www.apereo.org/cas/license"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3205 2014-09-13 17:21:54Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jasig.cas/cas-client-core/3.1.6/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jasig.cas/cas-client-core/3.1.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://www.apereo.org/cas/">
         <p>JA-SIG CAS Client for Java</p>
         <p>CAS (Central Authentication Service) is an authentication system originally created by Yale

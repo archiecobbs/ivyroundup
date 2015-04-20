@@ -20,8 +20,8 @@
 
     <info organisation="javax.persistence" module="persistence-api" revision="2.1" status="release" publication="20130726130146">
         <license name="Common Development and Distribution License (CDDL) v1.0" url="http://opensource.org/licenses/CDDL-1.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3081 2014-06-06 15:22:18Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.persistence/persistence-api/2.1/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.persistence/persistence-api/2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html">
             <p>
                 The Java Persistence API simplifies the programming model for entity

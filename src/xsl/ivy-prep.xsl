@@ -21,7 +21,6 @@
     inclusion in Ivy RoundUp.
 -->
 
-<!-- $Id$ -->
 <xsl:transform
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -37,7 +36,6 @@
 
     <xsl:template match="ivy-module">
         <xsl:copy>
-            <xsl:attribute name="rev">$Id&#36;</xsl:attribute>
             <xsl:apply-templates select="node()"/>
         </xsl:copy>
     </xsl:template>

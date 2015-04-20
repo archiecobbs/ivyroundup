@@ -20,8 +20,8 @@
 
   <info organisation="ch.qos" module="logback" revision="1.1.2" status="release" publication="20140402000000">
         <license name="Eclipse Public License v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/><license name="GNU Lesser General Public License version 2.1" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3230 2014-10-24 02:36:20Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/ch.qos/logback/1.1.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/ch.qos/logback/1.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://logback.qos.ch/">
       <p>
         Logback is intended as a successor to the popular log4j project, picking up

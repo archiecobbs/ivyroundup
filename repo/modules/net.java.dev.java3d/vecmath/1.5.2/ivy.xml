@@ -20,8 +20,8 @@
 
     <info organisation="net.java.dev.java3d" module="vecmath" revision="1.5.2" status="release" publication="20090818001000">
         <license name="Sun" url="http://download.java.net/media/java3d/builds/release/1.4.0_01/LICENSE-Java3D-v1_4_0.txt"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3342 2015-03-29 15:44:11Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.java.dev.java3d/vecmath/1.5.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.java.dev.java3d/vecmath/1.5.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://java.net/projects/java3d/">
             <p>
                 The Java 3D API enables the creation of three-dimensional graphics applications and Internet-based 3D applets.

@@ -20,8 +20,8 @@
 
     <info organisation="com.h2database" module="h2" revision="1.3.168" status="release" publication="20120818120000">
         <license name="The H2 License, Version 1.0" url="http://h2database.com/html/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2220 2012-08-18 08:19:24Z ales.nosek@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.h2database/h2/1.3.168/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.h2database/h2/1.3.168/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.h2database.com">
             <p>
             H2 Database Engine, the Java SQL database. The main features of H2 are:

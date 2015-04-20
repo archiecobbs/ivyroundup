@@ -20,8 +20,8 @@
 
     <info organisation="net.sourceforge.backport-jsr166" module="backport-util-concurrent" revision="3.1" status="release" publication="20070802105600">
         <license name="Creative Commons" url="http://creativecommons.org/licenses/publicdomain/"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 566 2009-03-17 11:27:35Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.backport-jsr166/backport-util-concurrent/3.1/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.backport-jsr166/backport-util-concurrent/3.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://backport-jsr166.sourceforge.net/">
         This package is the backport of java.util.concurrent API, introduced in
         Java 5.0 and further refined in Java 6.0, to older Java platforms. The

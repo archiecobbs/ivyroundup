@@ -20,7 +20,6 @@
     Generate a GraphViz .dot file graphing all modules dependencies.
 -->
 
-<!-- $Id$ -->
 <xsl:transform
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -37,12 +36,10 @@
     <xsl:variable name="revision" select="'$Id$'"/>
     <xsl:variable name="modules" select="/modules"/>
     <xsl:variable name="timestamp" select="$modules/timestamp"/>
-    <xsl:variable name="svnrev" select="$modules/svnRevision"/>
 
     <xsl:template match="/modules">
 // GENERATED FILE - DO NOT EDIT
-//  Input: r<xsl:value-of select="$svnrev"/> generated at <xsl:value-of select="$timestamp"/>
-//  Style: <xsl:value-of select="$revision"/>
+//  generated at <xsl:value-of select="$timestamp"/>
 
         strict digraph modules {
             compound="true";
