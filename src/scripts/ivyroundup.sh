@@ -25,9 +25,6 @@ usage(){
     echo >&2 "  test <organisation> <module> <revision>"
     echo >&2 "    - Performs a test resolve of a module"
     echo >&2 ""
-    echo >&2 "  createpatch <organisation> <module> <revision>" 
-    echo >&2 "    - Creates a SVN diff patch file for submission to googlecode"
-    echo >&2 ""
     echo >&2 "  addmod [-e] <organisation> <module> <revision>"
     echo >&2 "    - Starts a new module based on the boilerplate"
     echo >&2 "    Options:"
@@ -72,15 +69,6 @@ elif [[ ("$COMMAND" == "test") ]]; then
 
     ant -Dresolve.org=$1 -Dresolve.mod=$2 -Dresolve.rev=$3 get-xalan clean repo resolve
 
-elif [[ ("$COMMAND" == "createpatch") ]]; then
-
-    if [[ ! ("$#" -eq 3) ]]; then
-        usage "Wrong number of arguments for createpatch command"
-    fi
-
-    echo "Writing patch to $1-$2-$3.patch"
-    svn diff src/modules/$1/$2/$3 > $1-$2-$3.patch
-
 elif [[ ("$COMMAND" == "addmod") ]]; then
 
     EDIT=n
@@ -93,8 +81,8 @@ elif [[ ("$COMMAND" == "addmod") ]]; then
         usage "Wrong number of arguments for addmod command"
     fi 
 
-    echo "svn cp --parents src/boilerplate src/modules/$1/$2/$3"
-    svn cp --parents src/boilerplate src/modules/$1/$2/$3
+    echo "cp -a src/boilerplate src/modules/$1/$2/$3"
+    cp -a src/boilerplate src/modules/$1/$2/$3
 
     if [[ ("$EDIT" == "y") ]]; then
         $EDITOR src/modules/$1/$2/$3/*
@@ -111,8 +99,8 @@ elif [[ ("$COMMAND" == "addrev") ]]; then
         usage "Wrong number of arguments for addrev command"
     fi
 
-    echo "svn cp src/modules/$1/$2/$3 src/modules/$1/$2/$4"
-    svn cp src/modules/$1/$2/$3 src/modules/$1/$2/$4
+    echo "cp -a src/modules/$1/$2/$3 src/modules/$1/$2/$4"
+    cp -a src/modules/$1/$2/$3 src/modules/$1/$2/$4
     
     if [[ ("$EDIT" == "y") ]]; then
         `$EDITOR src/modules/$1/$2/$4/*`

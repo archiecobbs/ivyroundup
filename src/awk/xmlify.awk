@@ -1,12 +1,10 @@
-# $Id$
-
 BEGIN {
     ORG=""
     MOD=""
     printf "<?xml-stylesheet type=\"text/xsl\" href=\"xsl/modules.xsl\"?>\n"
     printf "<modules>\n"
     printf "  <timestamp>%s</timestamp>\n", TIMESTAMP
-    printf "  <svnRevision>%s</svnRevision>\n", SVNREV
+    printf "  <gitRevision>%s</gitRevision>\n", GITREV
 }
 
 {

@@ -20,8 +20,8 @@
 
     <info organisation="org.javacc" module="javacc" revision="4.2" status="release" publication="20081121120000">
         <license name="BSD License" url="http://opensource.org/licenses/bsd-license.php"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3342 2015-03-29 15:44:11Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.javacc/javacc/4.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.javacc/javacc/4.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://java.net/projects/javacc/">
             Java Compiler Compiler [tm] (JavaCC [tm]) is the most popular parser generator for use with 
             Java [tm] applications. A parser generator is a tool that reads a grammar specification and 

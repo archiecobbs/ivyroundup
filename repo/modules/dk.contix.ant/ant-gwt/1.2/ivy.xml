@@ -20,8 +20,8 @@
 
     <info organisation="dk.contix.ant" module="ant-gwt" revision="1.2" status="release" publication="20090416120000">
         <license name="GNU Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 924 2009-10-14 14:50:08Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/dk.contix.ant/ant-gwt/1.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/dk.contix.ant/ant-gwt/1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://code.google.com/p/ant-gwt/">
         This provides a native GWT task for Ant. It can automatically scan a project for modules
         to compile, and provides some small optimizations. 

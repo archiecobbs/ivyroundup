@@ -20,8 +20,8 @@
 
     <info organisation="javax.servlet.jsp.jstl" module="jstl" revision="1.1.2" status="release" publication="20080406120000">
         <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/us/sun/index.htm"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2455 2012-12-16 17:28:01Z fifteenknots505@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.servlet.jsp.jstl/jstl/1.1.2/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.servlet.jsp.jstl/jstl/1.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.oracle.com/technetwork/java/index-136901.html">
         The JavaServer Pages Standard Tag Library (JSTL) encapsulates as simple tags the core functionality
         common to many Web applications. JSTL has support for common, structural tasks such as iteration

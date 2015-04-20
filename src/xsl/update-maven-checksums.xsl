@@ -16,7 +16,6 @@
     under the License.
 -->
 
-<!-- $Id$ -->
 <xsl:transform
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:fn="http://www.w3.org/2005/xpath-functions"

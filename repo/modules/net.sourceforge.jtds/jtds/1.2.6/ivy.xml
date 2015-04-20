@@ -20,8 +20,8 @@
 
     <info organisation="net.sourceforge.jtds" module="jtds" revision="1.2.6" status="release" publication="20120815120000">
         <license name="LGPL" url="http://jtds.sourceforge.net/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2961 2013-12-31 18:36:22Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.jtds/jtds/1.2.6/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.jtds/jtds/1.2.6/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://jtds.sourceforge.net/">
 
             <p>jTDS is an open source 100% pure Java (type 4) JDBC 3.0 driver for

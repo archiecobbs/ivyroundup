@@ -20,8 +20,8 @@
 
     <info organisation="javax.security" module="jacc" revision="1.0" status="release" publication="20031119143000">
         <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3342 2015-03-29 15:44:11Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/javax.security/jacc/1.0/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.security/jacc/1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://jcp.org/aboutJava/communityprocess/final/jsr115/index.html">
             <p>
                 The Java Authorization Contract for Containers (Java ACC) specification

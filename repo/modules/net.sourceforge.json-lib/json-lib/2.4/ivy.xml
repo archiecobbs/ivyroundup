@@ -20,8 +20,8 @@
 
     <info organisation="net.sourceforge.json-lib" module="json-lib" revision="2.4" status="release" publication="20101214000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3089 2014-06-06 15:56:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.json-lib/json-lib/2.4/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.json-lib/json-lib/2.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://json-lib.sourceforge.net/">
             <p>
                 Java library for transforming beans, maps, collections, java arrays and XML to JSON.

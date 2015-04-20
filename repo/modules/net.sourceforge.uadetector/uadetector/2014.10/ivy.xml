@@ -20,8 +20,8 @@
 
     <info organisation="net.sourceforge.uadetector" module="uadetector" revision="2014.10" status="release" publication="20141109120000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3272 2014-12-08 21:46:27Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.uadetector/uadetector/2014.10/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.uadetector/uadetector/2014.10/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://uadetector.sourceforge.net/">
             <p>
 UADetector is a library to identify over 190 different desktop and mobile browsers and 130 other User-Agents like feed readers, email clients and multimedia players. In addition, even more than 400 robots like BingBot, Googlebot or Yahoo Bot can be identified.

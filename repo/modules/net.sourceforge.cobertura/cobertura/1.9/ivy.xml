@@ -20,8 +20,8 @@
 
     <info organisation="net.sourceforge.cobertura" module="cobertura" revision="1.9" status="release" publication="20070605000000">
         <license name="GNU General Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3342 2015-03-29 15:44:11Z fifteenknots505 $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/net.sourceforge.cobertura/cobertura/1.9/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.cobertura/cobertura/1.9/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://cobertura.github.io/cobertura/">
             Cobertura is a free Java tool that calculates the percentage
             of code accessed by tests. It can be used to identify which

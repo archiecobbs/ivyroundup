@@ -19,8 +19,8 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
     <info organisation="org.jacoco" module="jacoco" revision="0.5.9.201207300726" status="release" publication="20120730072600">
         <license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2149 2012-08-01 13:46:59Z archie.cobbs $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.jacoco/jacoco/0.5.9.201207300726/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jacoco/jacoco/0.5.9.201207300726/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.eclemma.org/jacoco/trunk/index.html">
 JaCoCo is a free, instrumentation-based code coverage tool for Java VM based environments. Jacoco is designed to provide a lightweight, flexible and well-documented library for integration with various build and development tools. 
         </description>

@@ -20,8 +20,8 @@
 
     <info organisation="com.thoughtworks.paranamer" module="paranamer" revision="2.7" status="release" publication="20140816000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 3233 2014-10-24 03:50:52Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.thoughtworks.paranamer/paranamer/2.7/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.thoughtworks.paranamer/paranamer/2.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://github.com/paul-hammant/paranamer">
             <p>
                 Paranamer - access to parameter names in Java5, 6, 7, 8

@@ -19,13 +19,10 @@
 <!--
     Option targets (execute these before the action targets (like 'repo' or 'resolve') to turn on or off build behaviors):
 
-    use-git: makes svn related operations either use "git svn" or skipped.
-
     get-xalan: resolve and download xalan, and use the artifacts generated for the xslt operations. Slow but guarantees
     xalan availability. If not specified the build will assume the xalan jars already on ant classpath.
 -->
 
-<!-- $Id$ -->
 <project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
 
     <!-- Examine environment variables for various defaults -->
@@ -33,7 +30,6 @@
 
     <!--
         Set this property to change where the meta-repo is generated. Must use absolute paths.
-        You also need '-Dskip-svn=true' if this is set to somewhere outside a subversion working tree.
     -->
     <property name="target.repo" value="${basedir}/repo" />
 
@@ -73,16 +69,13 @@
 
     <!-- Regenerate list all module revisions in XML manifest (repo/modules.xml) -->
     <target name="modules" description="Regenerate repo/modules.xml">
-        <property name="svn-cmd" value="svn" />
 
         <mkdir dir="${target.repo}"/>
 
-        <!-- Get current SVN revision -->
-        <exec outputproperty="svn.revision" executable="/bin/bash" logError="true" failonerror="true">
-            <arg value="-c"/>
-            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
-              | grep -E '^Last Changed Rev:' || echo '0' )
-              | sed 's/^Last Changed Rev: //g'"/>
+        <!-- Get current GIT revision -->
+        <exec executable="git" outputproperty="git.revision" logError="true" failonerror="true">
+            <arg value="describe"/>
+            <arg value="--all"/>
         </exec>
 
         <!-- Generate list of modules -->
@@ -92,7 +85,7 @@
               export LC_ALL=C;
               find src/modules -name ivy.xml -print
                 | sort
-                | awk -F/ -v SVNREV=${svn.revision} -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
+                | awk -F/ -v GITREV=${git.revision} -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
                 > ${target.repo}/modules.xml"/>
         </exec>
     </target>
@@ -108,12 +101,11 @@
     </target>
 
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
-    <target name="repo" depends="gen-repo, graph" description="Regenerate the repository and apply svn operations." />
-    <target name="repo-for-module" depends="gen-repo-for-module" description="Regenerate the repository for single module and revision and apply svn operations." />
-    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single" description="Regenerate the repository and apply svn operations." />-->
+    <target name="repo" depends="gen-repo, graph" description="Regenerate the repository." />
+    <target name="repo-for-module" depends="gen-repo-for-module" description="Regenerate the repository for single module and revision." />
+    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single" description="Regenerate the repository." />-->
 
     <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
-        <property name="svn-cmd" value="svn" />
 
         <!-- Wipe repository clean -->
         <delete>
@@ -149,19 +141,9 @@
             </fileset>
         </copy>
 
-        <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
-        <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
-            <arg value="-c"/>
-            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
-              | grep -E '^URL:' || echo '/unknown' )
-              | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
-        </exec>
+        <!-- Stylesheet for ivy.xml -->
         <mkdir dir="build/xsl"/>
-        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true">
-            <filterset>
-                <filter token="SVNROOTPATH" value="${svn.path}"/>
-            </filterset>
-        </copy>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true"/>
 
         <!-- Generate ivy.xml files -->
         <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null" force="true">
@@ -195,7 +177,6 @@
     </target>
 
     <target name="gen-repo-for-module" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
-        <property name="svn-cmd" value="svn" />
         <property name="repo.org" value=""/>
         <property name="repo.mod" value=""/>
         <property name="repo.rev" value=""/>
@@ -228,19 +209,9 @@
         <!-- Create directory structure -->
         <mkdir dir="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}"/>
 
-        <!-- Stylesheet for ivy.xml includes hyperlink to SVN browser -->
-        <exec outputproperty="svn.path" executable="/bin/bash" logError="true" failonerror="true">
-            <arg value="-c"/>
-            <arg value="( ${svn-cmd} info ${basedir} 2>/dev/null 
-              | grep -E '^URL:' || echo '/unknown' )
-              | sed 's/^URL: .*\/svn\(\/.*\)$$/\1/g'"/>
-        </exec>
+        <!-- Stylesheet for ivy.xml -->
         <mkdir dir="build/xsl"/>
-        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true">
-            <filterset>
-                <filter token="SVNROOTPATH" value="${svn.path}"/>
-            </filterset>
-        </copy>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true"/>
 
         <!-- Generate ivy.xml files -->
         <xslt classpathref="xalan.classpath" style="build/xsl/ivy-repo.xsl" in="src/modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml"
@@ -361,11 +332,6 @@
         <delete dir="build"/>
     </target>
 
-    <target name="use-git">
-        <property name="svn-cmd" value="git svn" />
-        <property name="skip-svn" value="true" />
-    </target>
-
     <target name="get-xalan">
         <property name="download-xalan" value="true" />
     </target>
@@ -375,9 +341,10 @@
     <target name="_download-xalan" if="download-xalan">
 
         <!-- Reset xalan files in case they got corrupted -->
-        <exec executable="svn" searchpath="true" failonerror="true">
-            <arg value="revert"/>
-            <arg value="-R"/>
+        <exec executable="git" searchpath="true" failonerror="true">
+            <arg value="checkout"/>
+            <arg value="HEAD"/>
+            <arg value="--"/>
             <arg value="${target.repo}/modules/org.apache.xml/xalan-j"/>
             <arg value="${target.repo}/modules/org.apache.xml/xml-commons-external"/>
             <arg value="${target.repo}/modules/org.apache.xerces/xerces"/>

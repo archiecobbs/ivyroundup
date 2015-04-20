@@ -1,5 +1,4 @@
 #!/bin/sh
-# $Id$
 
 #
 # This script should be used to regenerate the repository
@@ -65,33 +64,10 @@ regenerate_repo()
 }
 
 # Revert any changes to existing repo
-svn revert -R repo/
+git checkout HEAD -- repo
 
-# Update to get lastest stuff
-echo "$SCRIPT: updating from SVN"
-svn up
-
-# There should be no outstanding changes
-echo "$SCRIPT: checking status of source"
-if ! [ "`svn st src | wc -c`" -eq 0 ]; then
-    echo "$SCRIPT: WARNING: src/ is not clean; do not commit generated repository:"
-    svn st src
-fi
-
-# Regenerate repo (first time)
+# Regenerate repo
 regenerate_repo
-
-# If there's anything new, svn copy it from source
-if svn st "repo/modules/$ORG/$MOD/$REV" 2>/dev/null | grep '^\?'; then
-
-    rm -rf "repo/modules/$ORG/$MOD/$REV"
-    svn cp "src/modules/$ORG/$MOD/$REV" "repo/modules/$ORG/$MOD/$REV"
-    svn pd --recursive --quiet svn:mergeinfo "repo/modules/$ORG/$MOD/$REV" || true
-    svn pd --recursive --quiet svn:keywords  "repo/modules/$ORG/$MOD/$REV" || true
-
-    # Regenerate repo (second time)
-    regenerate_repo '(again)'
-fi
 
 # Done
 echo "$SCRIPT: done"

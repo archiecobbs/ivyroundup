@@ -20,8 +20,8 @@
 
     <info organisation="com.jidesoft" module="jide-oss" revision="2.7.5" status="release" publication="20091102113400">
         <license name="Free Commercial License" url="http://www.jidesoft.com/purchase/SLA.htm"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 1041 2010-02-06 02:44:41Z spatialguru.net $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/com.jidesoft/jide-oss/2.7.5/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.jidesoft/jide-oss/2.7.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.jidesoft.com/products/oss.htm">
         Open source JIDE Common Layer - the foundation of all JIDE other products consisting of
         nearly 100k lines of code and over 30 components and utilities for Swing programming.

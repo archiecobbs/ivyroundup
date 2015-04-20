@@ -20,8 +20,8 @@
 
     <info organisation="org.hsqldb" module="sqltool" revision="2.2.8" status="release" publication="20120818120000">
         <license name="HSQLDB License, a BSD open source license" url="http://hsqldb.org/web/hsqlLicense.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="$Id: ivy.xml 2224 2012-08-18 18:06:31Z ales.nosek@gmail.com $" url="http://code.google.com/p/ivyroundup/source/browse/trunk/src/modules/org.hsqldb/sqltool/2.2.8/"/>
-        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="http://ivyroundup.googlecode.com/" name="ivyroundup"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.hsqldb/sqltool/2.2.8/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://hsqldb.org">
             <p>
             SqlTool is a command line tool to execute SQL commands against a JDBC database.
