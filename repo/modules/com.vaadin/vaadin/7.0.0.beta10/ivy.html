@@ -1,0 +1,477 @@
+<html>
+<head>
+<title>vaadin by com.vaadin :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.vaadin/vaadin/">vaadin</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.vaadin/">com.vaadin</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>7.0.0.beta10</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://vaadin.com/home">https://vaadin.com/home</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://vaadin.com/license">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.vaadin/vaadin/7.0.0.beta10/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://vaadin.com/home">
+
+            <p>
+            <b>Vaadin is a web application framework for Rich Internet
+            Applications (RIA).</b> In contrast to Javascript libraries and
+            browser-plugin based solutions, it features a server-side
+            architecture, which means that the largest part of the logic
+            runs on the server. Ajax technology is used on the browser side
+            to ensure a rich and interactive user experience.
+            </p>
+
+            <p>
+            <b>Vaadin is a large collection of UI components.</b>  You compose the
+            application user interface from components such as the Button,
+            Table and Tree. The components use events, listeners and data
+            binding to communicate with each other and with your business
+            logic.
+            </p>
+
+            <p>
+            <b>Vaadin is a robust architecture for rapid application
+            development.</b> The component-based architecture together with the
+            data binding features help you build applications that are easily
+            modularized and refactored as needed.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>shared</td>
+<td>Classes shared by both client and server-side code</td>
+<td></td>
+</tr>
+<tr>
+<td>client</td>
+<td>Client classes (GWT and widget source)</td>
+<td>shared</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Server-side classes</td>
+<td>shared</td>
+</tr>
+<tr>
+<td>widget-compiler</td>
+<td>Classes needed to compile custom widgetsets</td>
+<td></td>
+</tr>
+<tr>
+<td>theme-compiler</td>
+<td>Theme compiler</td>
+<td></td>
+</tr>
+<tr>
+<td>widgets</td>
+<td>Pre-compiled standard widgetset</td>
+<td></td>
+</tr>
+<tr>
+<td>themes</td>
+<td>Vaadin standard built-in themes</td>
+<td></td>
+</tr>
+<tr>
+<td>build-standard</td>
+<td>Stuff needed at build time (standard widgets and themes)</td>
+<td>client, server</td>
+</tr>
+<tr>
+<td>build-custom</td>
+<td>Stuff needed at build time (custom widgets and/or themes)</td>
+<td>build-standard, widget-compiler, theme-compiler</td>
+</tr>
+<tr>
+<td>runtime-standard</td>
+<td>Stuff needed at runtime (standard widgets)</td>
+<td>server, widgets, themes</td>
+</tr>
+<tr>
+<td>runtime-custom</td>
+<td>Stuff needed at runtime (custom widgets)</td>
+<td>server, themes</td>
+</tr>
+<tr>
+<td>default</td>
+<td></td>
+<td>client, server, widgets, themes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>shared.jar</td>
+<td>jar</td>
+<td>shared</td>
+</tr>
+<tr>
+<td>shared.zip</td>
+<td>source</td>
+<td>shared</td>
+</tr>
+<tr>
+<td>shared.zip</td>
+<td>javadoc</td>
+<td>shared</td>
+</tr>
+<tr>
+<td>client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>client.zip</td>
+<td>source</td>
+<td>client</td>
+</tr>
+<tr>
+<td>client.zip</td>
+<td>javadoc</td>
+<td>client</td>
+</tr>
+<tr>
+<td>server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>server.zip</td>
+<td>source</td>
+<td>server</td>
+</tr>
+<tr>
+<td>server.zip</td>
+<td>javadoc</td>
+<td>server</td>
+</tr>
+<tr>
+<td>widget-compiler.jar</td>
+<td>jar</td>
+<td>widget-compiler</td>
+</tr>
+<tr>
+<td>widget-compiler.zip</td>
+<td>source</td>
+<td>widget-compiler</td>
+</tr>
+<tr>
+<td>widget-compiler.zip</td>
+<td>javadoc</td>
+<td>widget-compiler</td>
+</tr>
+<tr>
+<td>shared-deps.jar</td>
+<td>jar</td>
+<td>widget-compiler</td>
+</tr>
+<tr>
+<td>theme-compiler.jar</td>
+<td>jar</td>
+<td>theme-compiler</td>
+</tr>
+<tr>
+<td>theme-compiler.zip</td>
+<td>source</td>
+<td>theme-compiler</td>
+</tr>
+<tr>
+<td>theme-compiler.zip</td>
+<td>javadoc</td>
+<td>theme-compiler</td>
+</tr>
+<tr>
+<td>widgets.jar</td>
+<td>jar</td>
+<td>widgets</td>
+</tr>
+<tr>
+<td>themes.jar</td>
+<td>jar</td>
+<td>themes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.json</td>
+<td><a href="../../../org.json/json/">json</a></td>
+<td>20090211</td>
+<td>shared-&gt;default</td>
+</tr>
+<tr>
+<td>org.jsoup</td>
+<td><a href="../../../org.jsoup/jsoup/">jsoup</a></td>
+<td>1.7+</td>
+<td>server-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.ant</td>
+<td><a href="../../../org.apache.ant/ant/">ant</a></td>
+<td>1.8+</td>
+<td>widget-compiler-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://vaadin.com/download/prerelease/7.0/7.0.0/${revision}/${name}-all-${revision}.zip</td>
+<td>Unpack into archive/</td>
+<td>10b2b8f7974515aecbb0f86bb32e3c84d84a9024</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-shared</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/shared.jar</td>
+<td>a14841bbfe988d39eacfec7951e168cbc89bdb90</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-shared</td>
+<td>7.0.0.beta10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/shared.zip</td>
+<td>018c228e680604ae32a1c822b8fb8214de312336</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-shared</td>
+<td>7.0.0.beta10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/shared.zip</td>
+<td>f34ff375899b00a3d61ff5e1253dee159e4e018f</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/client.jar</td>
+<td>d532c3c6d67a2e117ed65282b6f88d278ca5660e</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client</td>
+<td>7.0.0.beta10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/client.zip</td>
+<td>b2ce44cd082c90668cd9517c3b31ee145e04722f</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client</td>
+<td>7.0.0.beta10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/client.zip</td>
+<td>b5c4750c154f2ea15e40ebe649a34c6c2e4175ef</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-server</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/server.jar</td>
+<td>09cd7addcc57f226bc8c340c3e81646fff18b4f0</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-server</td>
+<td>7.0.0.beta10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/server.zip</td>
+<td>ad9707c0afe1629a638dfe22de94472b999582f9</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-server</td>
+<td>7.0.0.beta10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/server.zip</td>
+<td>89d8e4d58066bb31eed2152925545087e4944a0d</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client-compiled</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/widgets.jar</td>
+<td>a47dbb28ed9dc76ffd9d98bf44f73dad2fd8fddc</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client-compiler</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/widget-compiler.jar</td>
+<td>a17960ea1593804abba2e8a23365136d86f784cc</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client-compiler</td>
+<td>7.0.0.beta10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/widget-compiler.zip</td>
+<td>01c2fb7c07e4f31e0746c6aaf899eb3c36c840a5</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-client-compiler</td>
+<td>7.0.0.beta10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/widget-compiler.zip</td>
+<td>d98c6ab300f6b66cc65409b56ff81ffa71cb4c3b</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-themes</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/themes.jar</td>
+<td>75643529a55883bf8b9379b45fdf131e01c9d847</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-theme-compiler</td>
+<td>7.0.0.beta10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/theme-compiler.jar</td>
+<td>345d1aa0b62d21f01493a04c08bd68dba5332e2c</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-theme-compiler</td>
+<td>7.0.0.beta10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/theme-compiler.zip</td>
+<td>19d3670a4de048e4ceeecaec81b2686bffde40fb</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td>vaadin-theme-compiler</td>
+<td>7.0.0.beta10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/theme-compiler.zip</td>
+<td>b5d12c5ff7787c9e0c47584ede92e815b88bc03c</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;move file="archive/lib/vaadin-shared-deps-1.0.1.jar" tofile="artifacts/jars/shared-deps.jar"/&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

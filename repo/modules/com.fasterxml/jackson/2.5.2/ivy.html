@@ -1,0 +1,1895 @@
+<html>
+<head>
+<title>jackson by com.fasterxml :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.fasterxml/jackson/">jackson</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.fasterxml/">com.fasterxml</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.5.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://wiki.fasterxml.com/JacksonHome">http://wiki.fasterxml.com/JacksonHome</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.fasterxml/jackson/2.5.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://wiki.fasterxml.com/JacksonHome">
+            <p>
+                Inspired by the quality and variety of XML tooling available for the Java platform (StAX, JAXB, etc.),
+                Jackson is a multi-purpose Java library for processing JSON data format. Jackson aims to be the best
+                possible combination of fast, correct, lightweight, and ergonomic for developers.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>annotations</td>
+<td>Core annotations used for value types, used by Jackson data binding package.</td>
+<td></td>
+</tr>
+<tr>
+<td>core</td>
+<td>Core Jackson abstractions, basic JSON streaming API implementation</td>
+<td></td>
+</tr>
+<tr>
+<td>databind</td>
+<td>General data-binding functionality for Jackson: works on core streaming API.</td>
+<td>core,annotations</td>
+</tr>
+<tr>
+<td>dataformat-avro</td>
+<td>Support for reading and writing AVRO-encoded data via Jackson abstractions.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>dataformat-cbor</td>
+<td>Support for reading and writing Concise Binary Object Representation ([CBOR](https://www.rfc-editor.org/info/rfc7049) encoded data using Jackson abstractions (streaming API, data binding, tree model)</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>dataformat-csv</td>
+<td>Support for reading and writing CSV-encoded data via Jackson abstractions.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>dataformat-smile</td>
+<td>Support for reading and writing Smile ('binary JSON') encoded data using Jackson abstractions (streaming API, data binding, tree model)</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>dataformat-xml</td>
+<td>Data format extension for Jackson (http://jackson.codehaus.org) to offer alternative support for serializing POJOs as XML and deserializing XML as pojos. Support implemented on top of Stax API (javax.xml.stream), by implementing core Jackson Streaming API types like JsonGenerator, JsonParser and JsonFactory. Some data-binding types overridden as well (ObjectMapper sub-classed as XmlMapper).</td>
+<td>databind,module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>dataformat-yaml</td>
+<td>Support for reading and writing YAML-encoded data via Jackson abstractions.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-guava</td>
+<td>Add-on datatype-support module for Jackson (http://jackson.codehaus.org) that handles Guava (http://code.google.com/p/guava-libraries/) types (currently mostly just collection ones)</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-hibernate3</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support Hibernate (http://hibernate.org) version 3.x data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-hibernate4</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support Hibernate (http://hibernate.org) version 4.x data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-hppc</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support High-Performance Primitive Collections (HPPC, see http://labs.carrotsearch.com/hppc.html) data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-jdk7</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support JDK 7 data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-jdk8</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support JDK 8 data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-joda</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support Joda (http://joda-time.sourceforge.net/) data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-json-org</td>
+<td>Support for datatypes of 'org.json' JSON library (see http://json.org/java), mainly to make it easier to upgrade code to Jackson, using automated conversions.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-jsr310</td>
+<td>Add-on module to support JSR-310 (Java 8 Date &amp; Time API) data types.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>datatype-jsr353</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support working with JSR-353 (JDK Json-processing API) node typesm via data-binding</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Most common configuration of core, databind, and annotations.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jaxrs-base</td>
+<td>Pile of code that is shared by all Jackson-based JAX-RS providers.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jaxrs-cbor-provider</td>
+<td>Functionality to handle CBOR encoded input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</td>
+<td>jaxrs-base,dataformat-cbor,module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jaxrs-json-provider</td>
+<td>Functionality to handle JSON input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</td>
+<td>jaxrs-base,module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jaxrs-smile-provider</td>
+<td>Functionality to handle Smile (binary JSON) input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</td>
+<td>jaxrs-base,module-jaxb-annotations,dataformat-smile</td>
+</tr>
+<tr>
+<td>jaxrs-xml-provider</td>
+<td>Functionality to handle XML input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</td>
+<td>jaxrs-base,module-jaxb-annotations,dataformat-xml</td>
+</tr>
+<tr>
+<td>jr-all</td>
+<td>"Uber" jar that contains all Jackson jr components as well as underlying Jackson core Streaming, in a single jar.</td>
+<td></td>
+</tr>
+<tr>
+<td>jr-objects</td>
+<td>Simple data-binding that builds directly on 'jackson-core' (streaming), has no other dependencies, and provides additional builder-style content generator</td>
+<td></td>
+</tr>
+<tr>
+<td>module-afterburner</td>
+<td>Jackson (https://github.com/FasterXML/jackson) extension module used to enhance access functionality using bytecode generation.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-guice</td>
+<td>Stuff to make integration with Guice a bit easier</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-jaxb-annotations</td>
+<td>Support for using JAXB annotations as an alternative to 'native' Jackson annotations, for configuring data binding.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-jsonSchema</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-kotlin</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support Kotlin language, specifically introspection of method/constructor parameter names, without having to add explicit property name annotation.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-mrbean</td>
+<td>Functionality for implementing interfaces and abstract types dynamically ('bean materialization'), integrated with Jackson (although usable externally as well)</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-parameter-names</td>
+<td>Add-on module for Jackson (http://jackson.codehaus.org) to support introspection of method/constructor parameter names, without having to add explicit property name annotation.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-paranamer</td>
+<td>AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org) to introspect names of constructor (and factory method) parameters.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-scala_2.10</td>
+<td>jackson-module-scala 2.10.x</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-scala_2.11</td>
+<td>jackson-module-scala 2.11.x</td>
+<td>databind</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jackson-datatype-guava.jar</td>
+<td>jar</td>
+<td>datatype-guava</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate3.jar</td>
+<td>jar</td>
+<td>datatype-hibernate3</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate4.jar</td>
+<td>jar</td>
+<td>datatype-hibernate4</td>
+</tr>
+<tr>
+<td>jackson-datatype-hppc.jar</td>
+<td>jar</td>
+<td>datatype-hppc</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk7.jar</td>
+<td>jar</td>
+<td>datatype-jdk7</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk8.jar</td>
+<td>jar</td>
+<td>datatype-jdk8</td>
+</tr>
+<tr>
+<td>jackson-datatype-joda.jar</td>
+<td>jar</td>
+<td>datatype-joda</td>
+</tr>
+<tr>
+<td>jackson-datatype-json-org.jar</td>
+<td>jar</td>
+<td>datatype-json-org</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr310.jar</td>
+<td>jar</td>
+<td>datatype-jsr310</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr353.jar</td>
+<td>jar</td>
+<td>datatype-jsr353</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-base.jar</td>
+<td>jar</td>
+<td>jaxrs-base</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-cbor-provider.jar</td>
+<td>jar</td>
+<td>jaxrs-cbor-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.jar</td>
+<td>jar</td>
+<td>jaxrs-json-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-smile-provider.jar</td>
+<td>jar</td>
+<td>jaxrs-smile-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-xml-provider.jar</td>
+<td>jar</td>
+<td>jaxrs-xml-provider</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.jar</td>
+<td>jar</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-module-guice.jar</td>
+<td>jar</td>
+<td>module-guice</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.jar</td>
+<td>jar</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-jsonSchema.jar</td>
+<td>jar</td>
+<td>module-jsonSchema</td>
+</tr>
+<tr>
+<td>jackson-module-kotlin.jar</td>
+<td>jar</td>
+<td>module-kotlin</td>
+</tr>
+<tr>
+<td>jackson-module-mrbean.jar</td>
+<td>jar</td>
+<td>module-mrbean</td>
+</tr>
+<tr>
+<td>jackson-module-parameter-names.jar</td>
+<td>jar</td>
+<td>module-parameter-names</td>
+</tr>
+<tr>
+<td>jackson-module-paranamer.jar</td>
+<td>jar</td>
+<td>module-paranamer</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.10.jar</td>
+<td>jar</td>
+<td>module-scala_2.10</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.11.jar</td>
+<td>jar</td>
+<td>module-scala_2.11</td>
+</tr>
+<tr>
+<td>jackson-dataformat-avro.jar</td>
+<td>jar</td>
+<td>dataformat-avro</td>
+</tr>
+<tr>
+<td>jackson-dataformat-cbor.jar</td>
+<td>jar</td>
+<td>dataformat-cbor</td>
+</tr>
+<tr>
+<td>jackson-dataformat-csv.jar</td>
+<td>jar</td>
+<td>dataformat-csv</td>
+</tr>
+<tr>
+<td>jackson-dataformat-smile.jar</td>
+<td>jar</td>
+<td>dataformat-smile</td>
+</tr>
+<tr>
+<td>jackson-dataformat-xml.jar</td>
+<td>jar</td>
+<td>dataformat-xml</td>
+</tr>
+<tr>
+<td>jackson-dataformat-yaml.jar</td>
+<td>jar</td>
+<td>dataformat-yaml</td>
+</tr>
+<tr>
+<td>jackson-annotations.jar</td>
+<td>jar</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-databind.jar</td>
+<td>jar</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-jr-all.jar</td>
+<td>jar</td>
+<td>jr-all</td>
+</tr>
+<tr>
+<td>jackson-jr-objects.jar</td>
+<td>jar</td>
+<td>jr-objects</td>
+</tr>
+<tr>
+<td>jackson-datatype-guava.zip</td>
+<td>source</td>
+<td>datatype-guava</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate3.zip</td>
+<td>source</td>
+<td>datatype-hibernate3</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate4.zip</td>
+<td>source</td>
+<td>datatype-hibernate4</td>
+</tr>
+<tr>
+<td>jackson-datatype-hppc.zip</td>
+<td>source</td>
+<td>datatype-hppc</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk7.zip</td>
+<td>source</td>
+<td>datatype-jdk7</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk8.zip</td>
+<td>source</td>
+<td>datatype-jdk8</td>
+</tr>
+<tr>
+<td>jackson-datatype-joda.zip</td>
+<td>source</td>
+<td>datatype-joda</td>
+</tr>
+<tr>
+<td>jackson-datatype-json-org.zip</td>
+<td>source</td>
+<td>datatype-json-org</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr310.zip</td>
+<td>source</td>
+<td>datatype-jsr310</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr353.zip</td>
+<td>source</td>
+<td>datatype-jsr353</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-base.zip</td>
+<td>source</td>
+<td>jaxrs-base</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-cbor-provider.zip</td>
+<td>source</td>
+<td>jaxrs-cbor-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.zip</td>
+<td>source</td>
+<td>jaxrs-json-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-smile-provider.zip</td>
+<td>source</td>
+<td>jaxrs-smile-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-xml-provider.zip</td>
+<td>source</td>
+<td>jaxrs-xml-provider</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.zip</td>
+<td>source</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-module-guice.zip</td>
+<td>source</td>
+<td>module-guice</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.zip</td>
+<td>source</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-jsonSchema.zip</td>
+<td>source</td>
+<td>module-jsonSchema</td>
+</tr>
+<tr>
+<td>jackson-module-kotlin.zip</td>
+<td>source</td>
+<td>module-kotlin</td>
+</tr>
+<tr>
+<td>jackson-module-mrbean.zip</td>
+<td>source</td>
+<td>module-mrbean</td>
+</tr>
+<tr>
+<td>jackson-module-parameter-names.zip</td>
+<td>source</td>
+<td>module-parameter-names</td>
+</tr>
+<tr>
+<td>jackson-module-paranamer.zip</td>
+<td>source</td>
+<td>module-paranamer</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.10.zip</td>
+<td>source</td>
+<td>module-scala_2.10</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.11.zip</td>
+<td>source</td>
+<td>module-scala_2.11</td>
+</tr>
+<tr>
+<td>jackson-dataformat-avro.zip</td>
+<td>source</td>
+<td>dataformat-avro</td>
+</tr>
+<tr>
+<td>jackson-dataformat-cbor.zip</td>
+<td>source</td>
+<td>dataformat-cbor</td>
+</tr>
+<tr>
+<td>jackson-dataformat-csv.zip</td>
+<td>source</td>
+<td>dataformat-csv</td>
+</tr>
+<tr>
+<td>jackson-dataformat-smile.zip</td>
+<td>source</td>
+<td>dataformat-smile</td>
+</tr>
+<tr>
+<td>jackson-dataformat-xml.zip</td>
+<td>source</td>
+<td>dataformat-xml</td>
+</tr>
+<tr>
+<td>jackson-dataformat-yaml.zip</td>
+<td>source</td>
+<td>dataformat-yaml</td>
+</tr>
+<tr>
+<td>jackson-annotations.zip</td>
+<td>source</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-databind.zip</td>
+<td>source</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-jr-all.zip</td>
+<td>source</td>
+<td>jr-all</td>
+</tr>
+<tr>
+<td>jackson-jr-objects.zip</td>
+<td>source</td>
+<td>jr-objects</td>
+</tr>
+<tr>
+<td>jackson-datatype-guava.zip</td>
+<td>javadoc</td>
+<td>datatype-guava</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate3.zip</td>
+<td>javadoc</td>
+<td>datatype-hibernate3</td>
+</tr>
+<tr>
+<td>jackson-datatype-hibernate4.zip</td>
+<td>javadoc</td>
+<td>datatype-hibernate4</td>
+</tr>
+<tr>
+<td>jackson-datatype-hppc.zip</td>
+<td>javadoc</td>
+<td>datatype-hppc</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk7.zip</td>
+<td>javadoc</td>
+<td>datatype-jdk7</td>
+</tr>
+<tr>
+<td>jackson-datatype-jdk8.zip</td>
+<td>javadoc</td>
+<td>datatype-jdk8</td>
+</tr>
+<tr>
+<td>jackson-datatype-joda.zip</td>
+<td>javadoc</td>
+<td>datatype-joda</td>
+</tr>
+<tr>
+<td>jackson-datatype-json-org.zip</td>
+<td>javadoc</td>
+<td>datatype-json-org</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr310.zip</td>
+<td>javadoc</td>
+<td>datatype-jsr310</td>
+</tr>
+<tr>
+<td>jackson-datatype-jsr353.zip</td>
+<td>javadoc</td>
+<td>datatype-jsr353</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-base.zip</td>
+<td>javadoc</td>
+<td>jaxrs-base</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-cbor-provider.zip</td>
+<td>javadoc</td>
+<td>jaxrs-cbor-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.zip</td>
+<td>javadoc</td>
+<td>jaxrs-json-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-smile-provider.zip</td>
+<td>javadoc</td>
+<td>jaxrs-smile-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-xml-provider.zip</td>
+<td>javadoc</td>
+<td>jaxrs-xml-provider</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.zip</td>
+<td>javadoc</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-module-guice.zip</td>
+<td>javadoc</td>
+<td>module-guice</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.zip</td>
+<td>javadoc</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-jsonSchema.zip</td>
+<td>javadoc</td>
+<td>module-jsonSchema</td>
+</tr>
+<tr>
+<td>jackson-module-kotlin.zip</td>
+<td>javadoc</td>
+<td>module-kotlin</td>
+</tr>
+<tr>
+<td>jackson-module-mrbean.zip</td>
+<td>javadoc</td>
+<td>module-mrbean</td>
+</tr>
+<tr>
+<td>jackson-module-parameter-names.zip</td>
+<td>javadoc</td>
+<td>module-parameter-names</td>
+</tr>
+<tr>
+<td>jackson-module-paranamer.zip</td>
+<td>javadoc</td>
+<td>module-paranamer</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.10.zip</td>
+<td>javadoc</td>
+<td>module-scala_2.10</td>
+</tr>
+<tr>
+<td>jackson-module-scala_2.11.zip</td>
+<td>javadoc</td>
+<td>module-scala_2.11</td>
+</tr>
+<tr>
+<td>jackson-dataformat-avro.zip</td>
+<td>javadoc</td>
+<td>dataformat-avro</td>
+</tr>
+<tr>
+<td>jackson-dataformat-cbor.zip</td>
+<td>javadoc</td>
+<td>dataformat-cbor</td>
+</tr>
+<tr>
+<td>jackson-dataformat-csv.zip</td>
+<td>javadoc</td>
+<td>dataformat-csv</td>
+</tr>
+<tr>
+<td>jackson-dataformat-smile.zip</td>
+<td>javadoc</td>
+<td>dataformat-smile</td>
+</tr>
+<tr>
+<td>jackson-dataformat-xml.zip</td>
+<td>javadoc</td>
+<td>dataformat-xml</td>
+</tr>
+<tr>
+<td>jackson-dataformat-yaml.zip</td>
+<td>javadoc</td>
+<td>dataformat-yaml</td>
+</tr>
+<tr>
+<td>jackson-annotations.zip</td>
+<td>javadoc</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-core.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-databind.zip</td>
+<td>javadoc</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-jr-all.zip</td>
+<td>javadoc</td>
+<td>jr-all</td>
+</tr>
+<tr>
+<td>jackson-jr-objects.zip</td>
+<td>javadoc</td>
+<td>jr-objects</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.google.guava</td>
+<td><a href="../../../com.google.guava/guava/">guava</a></td>
+<td>[15.0,)</td>
+<td>datatype-guava,module-scala_2.11-&gt;default</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[3.6.6.Final,4.0[</td>
+<td>datatype-hibernate3-&gt;entitymanager</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[4.1.0.Final,5.0[</td>
+<td>datatype-hibernate4-&gt;entitymanager</td>
+</tr>
+<tr>
+<td>org.joda</td>
+<td><a href="../../../org.joda/joda-time/">joda-time</a></td>
+<td>[2.2,)</td>
+<td>datatype-joda-&gt;default</td>
+</tr>
+<tr>
+<td>org.json</td>
+<td><a href="../../../org.json/json/">json</a></td>
+<td>[20090211,)</td>
+<td>datatype-json-org-&gt;default</td>
+</tr>
+<tr>
+<td>org.codehaus.woodstox</td>
+<td><a href="../../../org.codehaus.woodstox/stax2-api/">stax2-api</a></td>
+<td>[3.1.4,)</td>
+<td>jaxrs-xml-provider,dataformat-xml-&gt;default</td>
+</tr>
+<tr>
+<td>org.codehaus.woodstox</td>
+<td><a href="../../../org.codehaus.woodstox/woodstox-core-asl/">woodstox-core-asl</a></td>
+<td>[4.4.0,)</td>
+<td>jaxrs-xml-provider-&gt;default</td>
+</tr>
+<tr>
+<td>com.google</td>
+<td><a href="../../../com.google/guice/">guice</a></td>
+<td>[3.0,)</td>
+<td>module-guice-&gt;default</td>
+</tr>
+<tr>
+<td>javax.xml.bind</td>
+<td><a href="../../../javax.xml.bind/jaxb/">jaxb</a></td>
+<td>[2.2,)</td>
+<td>module-jaxb-annotations-&gt;default</td>
+</tr>
+<tr>
+<td>org.objectweb.asm</td>
+<td><a href="../../../org.objectweb.asm/asm/">asm</a></td>
+<td>[5.0,)</td>
+<td>module-mrbean-&gt;default</td>
+</tr>
+<tr>
+<td>org.scala-lang</td>
+<td><a href="../../../org.scala-lang/scala-library/">scala-library</a></td>
+<td>2.10.+</td>
+<td>module-scala_2.10-&gt;default</td>
+</tr>
+<tr>
+<td>org.scala-lang</td>
+<td><a href="../../../org.scala-lang/scala-library/">scala-library</a></td>
+<td>2.11.+</td>
+<td>module-scala_2.11-&gt;default</td>
+</tr>
+<tr>
+<td>org.scala-lang</td>
+<td><a href="../../../org.scala-lang/scala-reflect/">scala-reflect</a></td>
+<td>2.11.+</td>
+<td>module-scala_2.11-&gt;default</td>
+</tr>
+<tr>
+<td>javax.json</td>
+<td><a href="../../../javax.json/json-api/">json-api</a></td>
+<td>[1.0,)</td>
+<td>datatype-jsr353-&gt;default</td>
+</tr>
+<tr>
+<td>com.thoughtworks.paranamer</td>
+<td><a href="../../../com.thoughtworks.paranamer/paranamer/">paranamer</a></td>
+<td>[2.6,)</td>
+<td>module-scala_2.11,module-scala_2.10,module-paranamer-&gt;default</td>
+</tr>
+<tr>
+<td>com.carrotsearch</td>
+<td><a href="../../../com.carrotsearch/hppc/">hppc</a></td>
+<td>[0.6.0,)</td>
+<td>datatype-hppc-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-guava</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-guava.jar</td>
+<td>f1b8c65a6e259c219c3558bd537f1db7ac6a42f0</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-guava</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-guava.zip</td>
+<td>34bc435d2ba92dd4604fb5f4f9ca34283ae208db</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-guava</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-guava.zip</td>
+<td>a63e2085022a559e534e5e824514eb6e7c3ff6e4</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate3</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-hibernate3.jar</td>
+<td>907f26896349d60d9e7b5c0b3990023272341223</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate3</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-hibernate3.zip</td>
+<td>10703f83847583968bf0835c19c4960f495148e7</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate3</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-hibernate3.zip</td>
+<td>5971e6f44c09baa113a118a4dd39eec1d8a2b920</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate4</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-hibernate4.jar</td>
+<td>3b2409b05344dd580ee2a05fe4bdf40a9b8b26b5</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate4</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-hibernate4.zip</td>
+<td>9ce28eb6e4fc0f0d88adc7b45d19e25d40d2f3f7</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hibernate4</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-hibernate4.zip</td>
+<td>04626a16549efe84c102c9cd509882bd12993588</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hppc</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-hppc.jar</td>
+<td>6ea10348b2e74de0527c75406af393954e7a04e7</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hppc</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-hppc.zip</td>
+<td>29875f346f8a93011a37b8a5d39d9b0c326d8d0b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-hppc</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-hppc.zip</td>
+<td>9bcb46ca471d7f8dad27e30c8f242a324f14f4b5</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk7</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-jdk7.jar</td>
+<td>65d73759cf93fb61db96cc3c8135bc992526e600</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk7</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-jdk7.zip</td>
+<td>54e16342a650cf85d10aac99a5316948524eda6b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk7</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-jdk7.zip</td>
+<td>3c3b14bebef10803ba15f8322ffe887be7b5a6cc</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk8</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-jdk8.jar</td>
+<td>f05324afac7ff20ebb46d39cd573766ff3e13de6</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk8</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-jdk8.zip</td>
+<td>cddc5387477943376f4ecd7d9024a95e52006b08</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jdk8</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-jdk8.zip</td>
+<td>9c9404875fc3fd8c1d1cc7abe4ab41479eb75099</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-joda</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-joda.jar</td>
+<td>06d824bb252bae684c8ed5362f49c484d05d7855</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-joda</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-joda.zip</td>
+<td>f97f257e8c4a16f88532b0342c84f70423316138</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-joda</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-joda.zip</td>
+<td>ee23301022cb875892959eba1fadafed2a7830ee</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-json-org</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-json-org.jar</td>
+<td>0a18b804e6bfd4135ff9979961513d450ea0ff4a</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-json-org</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-json-org.zip</td>
+<td>366d7b3c762e2b3a1c154b006612133a1c1ecc59</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-json-org</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-json-org.zip</td>
+<td>c8aa0b1a75557e6f7f4ba3c5bcc88ea788bcf60b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr310</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-jsr310.jar</td>
+<td>9a662d933960665b7341fbc5a7e373364ddb1bc1</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr310</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-jsr310.zip</td>
+<td>2db4a0886ed94a73c38d4053ab3e0f4bdf885a3c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr310</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-jsr310.zip</td>
+<td>14e6717836a60f816483ce2a27dcb51c63ea4062</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr353</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-datatype-jsr353.jar</td>
+<td>3ec17fd0729d89a7a0d3ddcc525055d3e0fde9d2</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr353</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-datatype-jsr353.zip</td>
+<td>280b7b77de0ee1beedafb633d4656326fdb718fd</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/datatype</td>
+<td>jackson-datatype-jsr353</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-datatype-jsr353.zip</td>
+<td>d0faa7cf28da597d4daa4ae281c6636c0ae43eb1</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-base</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-base.jar</td>
+<td>77eaba705ac0efb93f94409962db4af8a8dae1da</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-base</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-base.zip</td>
+<td>cf208e488c7ef9a451ea0e960fb29011fc3a394f</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-base</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-base.zip</td>
+<td>d0a55b840b650ec3a30a54fbdeaf3bc036f08914</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-cbor-provider</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-cbor-provider.jar</td>
+<td>4af074a29e150eb46256cad2e156f2a7a9df082b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-cbor-provider</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-cbor-provider.zip</td>
+<td>cd3aa9c32ff4a911cda94406002517570e32d274</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-cbor-provider</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-cbor-provider.zip</td>
+<td>c917a8e39fa4e60db6ebf6478104478cd6cddc6d</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-json-provider.jar</td>
+<td>081f793402e7034a9bad906d34f7aee7ffd0087c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-json-provider.zip</td>
+<td>862f0e15f36c33efcda34f9c1653653a3090ba1c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-json-provider.zip</td>
+<td>a929a0f502b406377966c599e4745459fdae03f3</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-smile-provider</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-smile-provider.jar</td>
+<td>cab972dc53d68ad1b9e1f773e297c8b95b34e41b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-smile-provider</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-smile-provider.zip</td>
+<td>b7842820b79fa2f08c7dc78e8da5ecf67ce04b00</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-smile-provider</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-smile-provider.zip</td>
+<td>c263b692cd6aa7f32b67557ce2a1f9056c8808a7</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-xml-provider</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-xml-provider.jar</td>
+<td>66261abbe79c1bf322a042221838ce00bfc4806c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-xml-provider</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-xml-provider.zip</td>
+<td>1331ce1fb87a78ac83c1aeaf7b5216e44323c502</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jaxrs</td>
+<td>jackson-jaxrs-xml-provider</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-xml-provider.zip</td>
+<td>2eabd6cc56e6597ed86a15a48b4f995e91c665c5</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-afterburner</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-afterburner.jar</td>
+<td>4975e0fef7837a9d3c4a8f1025ad41440ba9de7a</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-afterburner</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-afterburner.zip</td>
+<td>dc975773d09f6620428d0d029332f7fe818d42a4</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-afterburner</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-afterburner.zip</td>
+<td>8e5eaade143b9074a0499eeb51e1af13744e8f31</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-guice</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-guice.jar</td>
+<td>b88f7d0d43fc43f0c8eb4435c4474f6bf24cc440</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-guice</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-guice.zip</td>
+<td>0249f09d28ddbd62bf5891df1da5a14a4173eb93</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-guice</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-guice.zip</td>
+<td>901c4f3530e9c43d464ee06b4c92be6603b3aaed</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-jaxb-annotations.jar</td>
+<td>f8a1b506318c0940548e0a5b2ac41951f2576b26</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-jaxb-annotations.zip</td>
+<td>b4066d7ea43920b2d16d808d8e6445b080e811a6</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-jaxb-annotations.zip</td>
+<td>9978fb2d31baaab04759f48bc5562a0be21988a3</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jsonSchema</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-jsonSchema.jar</td>
+<td>20e30962bfed43a598049b0f163d94db73c2ff31</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jsonSchema</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-jsonSchema.zip</td>
+<td>e68f381e4702ed34e5f16168a152d6b89e20a606</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-jsonSchema</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-jsonSchema.zip</td>
+<td>c83ff4364afc578d7377f9507a7e7b2290a26846</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-kotlin</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-kotlin.jar</td>
+<td>e6214ef77ae502c72e5013fba1f7326d4423536e</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-kotlin</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-kotlin.zip</td>
+<td>40506b7012542aa9639cdcb7584dfe59f9fc80f6</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-kotlin</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-kotlin.zip</td>
+<td>beba28f23febd33ca9a9e215411ec8dd4fa8a048</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-mrbean</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-mrbean.jar</td>
+<td>9a4cb63556b6973905b26c03e4767c7cff631c9e</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-mrbean</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-mrbean.zip</td>
+<td>0d230fbede165ee1a6bc9bd81f1e0e8c5dc032c2</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-mrbean</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-mrbean.zip</td>
+<td>ad7de1e731dd4c7b6982fec5e634391a0bc8c41e</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-parameter-names</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-parameter-names.jar</td>
+<td>df36d39f6927b93a20c8ba5fc495c33afcabe25d</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-parameter-names</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-parameter-names.zip</td>
+<td>4eb6ecb90c718dc73c4bd9ceef55519f4fe81be8</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-parameter-names</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-parameter-names.zip</td>
+<td>ca6771cd85331f8e9ce911656b2517661437768c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-paranamer</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-paranamer.jar</td>
+<td>404aa15e9795a6ad3ba4578a9654857cc7591058</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-paranamer</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-paranamer.zip</td>
+<td>75a7c029f15058f0bdd25c349d0b8c78c40f2d93</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-paranamer</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-paranamer.zip</td>
+<td>18ea0fd15d3747c9e247080e55a781aacfe837d0</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.10</td>
+<td>2.5.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-scala_2.10.jar</td>
+<td>69de3e71b4551170348baff3c18f8d678c27c633</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.10</td>
+<td>2.5.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-scala_2.10.zip</td>
+<td>1fe4692a59f372f9ee2104f478e925cc1bba8d26</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.10</td>
+<td>2.5.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-scala_2.10.zip</td>
+<td>96a5895b19a5bed1941afc96aa39c78211c233f7</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.11</td>
+<td>2.5.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-scala_2.11.jar</td>
+<td>e88bc0e88a4ff66fd057ca02cbb1dc71162a581a</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.11</td>
+<td>2.5.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-scala_2.11.zip</td>
+<td>959606c35c8f8c8a4f796345f2557d97849b95fd</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/module</td>
+<td>jackson-module-scala_2.11</td>
+<td>2.5.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-scala_2.11.zip</td>
+<td>daf9eb1fc2591a7e15fbb1148833b7b6b0229ee4</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-avro</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-avro.jar</td>
+<td>2cc840453263415a4d8138119dc4f96bdfac1f8f</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-avro</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-avro.zip</td>
+<td>da508819098a4a03c9d37e6a91c22e9994a9611b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-avro</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-avro.zip</td>
+<td>2d7dfa4fc1b33cbea12bb326999f0d30fb0bb753</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-cbor</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-cbor.jar</td>
+<td>a9395bb933bf4b54ded1c94776cf93628014569b</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-cbor</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-cbor.zip</td>
+<td>261f48b4bc986d8f28082ef2fdb21097c5b8a79c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-cbor</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-cbor.zip</td>
+<td>298da7cc46e057e52b8cb3ce71cc5a6d17396841</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-csv</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-csv.jar</td>
+<td>151940465c6d5d8a997a38a664096fbd78d90378</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-csv</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-csv.zip</td>
+<td>2af50c6a3c9aac8825334869b44d493732dc5239</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-csv</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-csv.zip</td>
+<td>04e0ff7b829b61b2a77271038017c5bf8de26063</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-smile</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-smile.jar</td>
+<td>6ad6fef353b8995c9ed95d8fb5de8d52e2805c40</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-smile</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-smile.zip</td>
+<td>0b2adb314aac09793aa41d012447891baec3cf80</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-smile</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-smile.zip</td>
+<td>6e981e5ac88299e1f30677920446effe021ab707</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-xml</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-xml.jar</td>
+<td>1ff62782930fd438b19f5a39123cc3d13b567a60</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-xml</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-xml.zip</td>
+<td>05629fee9e29a7ce1dba2705bd7dd9eee71ae9ef</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-xml</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-xml.zip</td>
+<td>de01a2585b8b4c249ed7959726238c529791b9cd</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-yaml</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-dataformat-yaml.jar</td>
+<td>9c57c616cdf0afbf6022bdb71ec71a415819d859</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-yaml</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-dataformat-yaml.zip</td>
+<td>b0cc661a2976dc03f6276ee05c5a6446fc6977e4</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/dataformat</td>
+<td>jackson-dataformat-yaml</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-dataformat-yaml.zip</td>
+<td>4bfad02481eb6e3cd0a3fd2fc00db6f7af9b0d81</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-annotations</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-annotations.jar</td>
+<td>6faf006742ad88ea63689367dc460b674fcaded0</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-annotations</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-annotations.zip</td>
+<td>ab2aab4c437c8d5157eab72034631f77c57738b8</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-annotations</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-annotations.zip</td>
+<td>b4b0c3e378d8341b9d6ed8d09a9447bbae403d3c</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-core</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-core.jar</td>
+<td>df483f65c7d6fb363427b0f46f1f34b910788be1</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-core</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-core.zip</td>
+<td>8c175151020d9c919d1204c769674876790d6474</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-core</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-core.zip</td>
+<td>9a4eafa939e1bf0b2403dbf5cc6303eae1aa7118</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-databind</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-databind.jar</td>
+<td>2b4dd13fbe6f8c6b146d4c3b7fd70862f136802d</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-databind</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-databind.zip</td>
+<td>0f63d6280787700bbe1dda4880f63c34f36a7fcd</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/core</td>
+<td>jackson-databind</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-databind.zip</td>
+<td>f9e1cbdb197c18d9e04f4d5f254a92aef9634eb6</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-all</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jr-all.jar</td>
+<td>cf0ff831f1e48c80b1630342224b77af25a165c9</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-all</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jr-all.zip</td>
+<td>c4c1350f083954ca09f1897b6f42b6f7a003265f</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-all</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jr-all.zip</td>
+<td>af2ffadbb35b0574c3c678b3ce7a9d1df411e193</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-objects</td>
+<td>2.5.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jr-objects.jar</td>
+<td>a42104d2ef090a1dc53fe99516dcdae3d885edcb</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-objects</td>
+<td>2.5.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jr-objects.zip</td>
+<td>f8dd016dd0f9a0bf0be1cb5b4320442113417282</td>
+</tr>
+<tr>
+<td>com/fasterxml/jackson/jr</td>
+<td>jackson-jr-objects</td>
+<td>2.5.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jr-objects.zip</td>
+<td>3055e26d4b9a4f00d193e0d6fe648b0e1ff84964</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,884 @@
+<html>
+<head>
+<title>wink by org.apache.wink :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.wink/wink/">wink</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.wink/">org.apache.wink</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.3.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://wink.apache.org/">http://wink.apache.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.wink/wink/1.3.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://wink.apache.org/">
+<h1>Apache Wink</h1>
+<p>Apache Wink is a simple yet solid framework for building RESTful Web services. It is comprised of a Server module and a Client module for developing and consuming RESTful Web services.</p>
+<h2>Apache Wink Server</h2>
+<p>The Wink Server module is a complete implementation of the JAX-RS v1.1 specification. On top of this implementation, the Wink Server module provides a set of additional features that were designed to facilitate the development of RESTful Web services.</p>
+<h2>Apache Wink Client</h2>
+<p>The Wink Client module is a Java based framework that provides functionality for communicating with RESTful Web services. The framework is built on top of the JDK HttpURLConnection and adds essential features that facilitate the development of such client applications. </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>common</td>
+<td>Common classes</td>
+<td></td>
+</tr>
+<tr>
+<td>client</td>
+<td>Client classes</td>
+<td>common</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Client classes</td>
+<td>client</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Server classes</td>
+<td>common</td>
+</tr>
+<tr>
+<td>webdav</td>
+<td>WebDAV extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>spring-support</td>
+<td>Spring support extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jackson-provider</td>
+<td>Jackson provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jettison-provider</td>
+<td>Jettison provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>json-provider</td>
+<td>JSON provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>json4j-provider</td>
+<td>JSON4J provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>protobuf-provider</td>
+<td>Protobuf provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>thrift-provider</td>
+<td>Thrift provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>abdera-provider</td>
+<td>Abdera provider extension</td>
+<td>server</td>
+</tr>
+<tr>
+<td>client-apache-httpclient</td>
+<td>Client Apache HttpClient extension</td>
+<td>client</td>
+</tr>
+<tr>
+<td>client-asynchttpclient</td>
+<td>Client AsyncHttpClient extension</td>
+<td>client</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>wink-common.jar</td>
+<td>jar</td>
+<td>common</td>
+</tr>
+<tr>
+<td>wink-client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>wink-server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>wink-webdav.jar</td>
+<td>jar</td>
+<td>webdav</td>
+</tr>
+<tr>
+<td>wink-spring-support.jar</td>
+<td>jar</td>
+<td>spring-support</td>
+</tr>
+<tr>
+<td>wink-jackson-provider.jar</td>
+<td>jar</td>
+<td>jackson-provider</td>
+</tr>
+<tr>
+<td>wink-jettison-provider.jar</td>
+<td>jar</td>
+<td>jettison-provider</td>
+</tr>
+<tr>
+<td>wink-json-provider.jar</td>
+<td>jar</td>
+<td>json-provider</td>
+</tr>
+<tr>
+<td>wink-json4j-provider.jar</td>
+<td>jar</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-json4j.jar</td>
+<td>jar</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-protobuf-provider.jar</td>
+<td>jar</td>
+<td>protobuf-provider</td>
+</tr>
+<tr>
+<td>wink-thrift-provider.jar</td>
+<td>jar</td>
+<td>thrift-provider</td>
+</tr>
+<tr>
+<td>wink-abdera-provider.jar</td>
+<td>jar</td>
+<td>abdera-provider</td>
+</tr>
+<tr>
+<td>wink-client-apache-httpclient.jar</td>
+<td>jar</td>
+<td>client-apache-httpclient</td>
+</tr>
+<tr>
+<td>wink-client-asynchttpclient.jar</td>
+<td>jar</td>
+<td>client-asynchttpclient</td>
+</tr>
+<tr>
+<td>wink-common.zip</td>
+<td>source</td>
+<td>common</td>
+</tr>
+<tr>
+<td>wink-client.zip</td>
+<td>source</td>
+<td>client</td>
+</tr>
+<tr>
+<td>wink-server.zip</td>
+<td>source</td>
+<td>server</td>
+</tr>
+<tr>
+<td>wink-webdav.zip</td>
+<td>source</td>
+<td>webdav</td>
+</tr>
+<tr>
+<td>wink-spring-support.zip</td>
+<td>source</td>
+<td>spring-support</td>
+</tr>
+<tr>
+<td>wink-jackson-provider.zip</td>
+<td>source</td>
+<td>jackson-provider</td>
+</tr>
+<tr>
+<td>wink-jettison-provider.zip</td>
+<td>source</td>
+<td>jettison-provider</td>
+</tr>
+<tr>
+<td>wink-json-provider.zip</td>
+<td>source</td>
+<td>json-provider</td>
+</tr>
+<tr>
+<td>wink-json4j-provider.zip</td>
+<td>source</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-json4j.zip</td>
+<td>source</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-protobuf-provider.zip</td>
+<td>source</td>
+<td>protobuf-provider</td>
+</tr>
+<tr>
+<td>wink-thrift-provider.zip</td>
+<td>source</td>
+<td>thrift-provider</td>
+</tr>
+<tr>
+<td>wink-abdera-provider.zip</td>
+<td>source</td>
+<td>abdera-provider</td>
+</tr>
+<tr>
+<td>wink-client-apache-httpclient.zip</td>
+<td>source</td>
+<td>client-apache-httpclient</td>
+</tr>
+<tr>
+<td>wink-client-asynchttpclient.zip</td>
+<td>source</td>
+<td>client-asynchttpclient</td>
+</tr>
+<tr>
+<td>wink-common.zip</td>
+<td>javadoc</td>
+<td>common</td>
+</tr>
+<tr>
+<td>wink-client.zip</td>
+<td>javadoc</td>
+<td>client</td>
+</tr>
+<tr>
+<td>wink-server.zip</td>
+<td>javadoc</td>
+<td>server</td>
+</tr>
+<tr>
+<td>wink-webdav.zip</td>
+<td>javadoc</td>
+<td>webdav</td>
+</tr>
+<tr>
+<td>wink-spring-support.zip</td>
+<td>javadoc</td>
+<td>spring-support</td>
+</tr>
+<tr>
+<td>wink-jackson-provider.zip</td>
+<td>javadoc</td>
+<td>jackson-provider</td>
+</tr>
+<tr>
+<td>wink-jettison-provider.zip</td>
+<td>javadoc</td>
+<td>jettison-provider</td>
+</tr>
+<tr>
+<td>wink-json-provider.zip</td>
+<td>javadoc</td>
+<td>json-provider</td>
+</tr>
+<tr>
+<td>wink-json4j-provider.zip</td>
+<td>javadoc</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-json4j.zip</td>
+<td>javadoc</td>
+<td>json4j-provider</td>
+</tr>
+<tr>
+<td>wink-protobuf-provider.zip</td>
+<td>javadoc</td>
+<td>protobuf-provider</td>
+</tr>
+<tr>
+<td>wink-thrift-provider.zip</td>
+<td>javadoc</td>
+<td>thrift-provider</td>
+</tr>
+<tr>
+<td>wink-abdera-provider.zip</td>
+<td>javadoc</td>
+<td>abdera-provider</td>
+</tr>
+<tr>
+<td>wink-client-apache-httpclient.zip</td>
+<td>javadoc</td>
+<td>client-apache-httpclient</td>
+</tr>
+<tr>
+<td>wink-client-asynchttpclient.zip</td>
+<td>javadoc</td>
+<td>client-asynchttpclient</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-lang/">commons-lang</a></td>
+<td>2+</td>
+<td>common-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.geronimo.specs</td>
+<td><a href="../../../org.apache.geronimo.specs/jaxb/">jaxb</a></td>
+<td>2.2</td>
+<td>common-&gt;default</td>
+</tr>
+<tr>
+<td>javax.ws.rs</td>
+<td><a href="../../../javax.ws.rs/jsr311-api/">jsr311-api</a></td>
+<td>1.1.1</td>
+<td>common-&gt;default</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.6.1</td>
+<td>common-&gt;simple</td>
+</tr>
+<tr>
+<td>org.codehaus.stax</td>
+<td><a href="../../../org.codehaus.stax/stax-api/">stax-api</a></td>
+<td>1.0.1</td>
+<td>common-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>3.0.5</td>
+<td>spring-support-&gt;web</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.6.1</td>
+<td>spring-support-&gt;jcl-migration</td>
+</tr>
+<tr>
+<td>org.codehaus.jettison</td>
+<td><a href="../../../org.codehaus.jettison/jettison/">jettison</a></td>
+<td>1.2</td>
+<td>jettison-provider-&gt;default</td>
+</tr>
+<tr>
+<td>org.json</td>
+<td><a href="../../../org.json/json/">json</a></td>
+<td>latest.release</td>
+<td>json-provider-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.httpcomponents</td>
+<td><a href="../../../org.apache.httpcomponents/httpclient/">httpclient</a></td>
+<td>4.1.3</td>
+<td>client-apache-httpclient-&gt;client</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>org</td>
+<td>${ivy.packager.organisation}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>${org}</td>
+<td>${name}-client</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-client.jar</td>
+<td>c0a7416b12990b2ee11a5693d59236b680b86664</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-client.zip</td>
+<td>1aebd200fe3abe1abdb3dd0b396bcca51aab73dd</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-client.zip</td>
+<td>96cfd536d45ead109c9599a2e5e2f67ab7fa17f3</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-server</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-server.jar</td>
+<td>3f7d18ca57756bca5df4cf2e10bb64da521c2208</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-server</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-server.zip</td>
+<td>d3046731b696b66d01cde6d4c9b2b5fbf0f610d3</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-server</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-server.zip</td>
+<td>35e7badc9a5975dae554513b9c1ca12eb3ed9f19</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-common</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-common.jar</td>
+<td>25d8dc8d4357c2c1e156ca9010e2f8d121401eea</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-common</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-common.zip</td>
+<td>b91a749d3476ac395c7925c7f8700c0de48d57eb</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-common</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-common.zip</td>
+<td>fd5ea21df2edcd93ac8a2b4f1523d7dcabda8c52</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-webdav</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-webdav.jar</td>
+<td>78da03985750fe032b3b16916010676e478c9cc5</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-webdav</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-webdav.zip</td>
+<td>433b27306c6fb457597ce03402fb69aa8fa9f448</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-webdav</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-webdav.zip</td>
+<td>dca76197d67640a02b940640a128ab6eea031e79</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-spring-support</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-spring-support.jar</td>
+<td>24e43187d772b53064f7667b3e716a8d6cdb451c</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-spring-support</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-spring-support.zip</td>
+<td>24a8d56dc2eca68abacc40882bcf0929996af0a3</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-spring-support</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-spring-support.zip</td>
+<td>00e5adc54dd37ae11737bc8cf3246fe5d164d110</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jackson-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-jackson-provider.jar</td>
+<td>db4a2d02072326ba1eaa4a837f25593f25277fe1</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jackson-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-jackson-provider.zip</td>
+<td>cf4e9fc3f3dd635097a135d2df2f410dac387f54</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jackson-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-jackson-provider.zip</td>
+<td>5c0227a26a764fde582f3af89d3a6d48ffd83ab5</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jettison-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-jettison-provider.jar</td>
+<td>a967766b9a28ebdc95d99ddead9cb0b8619ed3ae</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jettison-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-jettison-provider.zip</td>
+<td>af606b2ec7a09ef1dd8afa3f7126efeba2afa9be</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-jettison-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-jettison-provider.zip</td>
+<td>e6ebc98534c6184b142873dc91c329427d105d05</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-json-provider.jar</td>
+<td>692c367d7322ee85edd6add258f50fcc44ffb3f9</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-json-provider.zip</td>
+<td>68bd03145bcdd0fefb87919f762eda5a251be14e</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-json-provider.zip</td>
+<td>82867338bddfbafac80f1f7e4648493a5295e360</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-json4j-provider.jar</td>
+<td>eca465446499558d10b7f41bd73005c57551e55b</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-json4j-provider.zip</td>
+<td>dfda0bba5bea1a1c8277b85b583fd3227f84f10c</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-json4j-provider.zip</td>
+<td>681f9769820553111a2e0b99701528c941b18160</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-json4j.jar</td>
+<td>8e5e8628c2a6cdffcf7504ac3c39a0dfe5088ec5</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-json4j.zip</td>
+<td>3de688d0e19f15f053551038f813ebc7663fc118</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-json4j</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-json4j.zip</td>
+<td>f10960b6a6c256d8a2da292761d635d6e85748c3</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-protobuf-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-protobuf-provider.jar</td>
+<td>22ae61f2c542a482527142276b1acbc13a416b1a</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-protobuf-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-protobuf-provider.zip</td>
+<td>5856cf71cfd548ada0af6a7987953cd993363f0a</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-protobuf-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-protobuf-provider.zip</td>
+<td>63e06d2902bb0e9a068fb36f81b7735192eb823e</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-thrift-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-thrift-provider.jar</td>
+<td>58d2caea892de76a72fd1ba3bfd951b66ff3a0f1</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-thrift-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-thrift-provider.zip</td>
+<td>a7182420c900aeb63e858aba3ad91b2f3aed89bd</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-thrift-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-thrift-provider.zip</td>
+<td>6ea1f00c4576266702377d8e023ce33a6838cbb3</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-abdera-provider</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-abdera-provider.jar</td>
+<td>2c2e535d0c7909de68e90350a4ec437a76238f0e</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-abdera-provider</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-abdera-provider.zip</td>
+<td>b9f88453f93d1a5ec1aa0ff4bb5e5eb0452e107c</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-abdera-provider</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-abdera-provider.zip</td>
+<td>8e195882e3d7f7240d4bc0843dbcce9cb5ad082d</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-apache-httpclient</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-client-apache-httpclient.jar</td>
+<td>78d985cc4ddafa52b4aa9f979983d6ea5e9c0ace</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-apache-httpclient</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-client-apache-httpclient.zip</td>
+<td>16c2e35648abe8ef827403091e667b4ed36486a9</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-apache-httpclient</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-client-apache-httpclient.zip</td>
+<td>3bf419c1f3c3d214999a6129f786b7c346b23f00</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-asynchttpclient</td>
+<td>1.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-client-asynchttpclient.jar</td>
+<td>573f588a9355200c14c7571962904a18d1d8c3c4</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-asynchttpclient</td>
+<td>1.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-client-asynchttpclient.zip</td>
+<td>dedaa0c41871d13f309a503be1df84c4f73e2e8f</td>
+</tr>
+<tr>
+<td>${org}</td>
+<td>${name}-client-asynchttpclient</td>
+<td>1.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-client-asynchttpclient.zip</td>
+<td>b6acaaf8451ea9e1758d58c80babebd400701333</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

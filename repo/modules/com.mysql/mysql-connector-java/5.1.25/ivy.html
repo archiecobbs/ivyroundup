@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>mysql-connector-java by com.mysql :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.mysql/mysql-connector-java/">mysql-connector-java</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.mysql/">com.mysql</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>5.1.25</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.mysql.com/products/connector/">http://www.mysql.com/products/connector/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU Public License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.mysql/mysql-connector-java/5.1.25/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.mysql.com/products/connector/">
+            MySQL Connector/J is a native Java driver that converts JDBC
+            (Java Database Connectivity) calls into the network protocol
+            used by the MySQL database. It lets developers working with
+            the Java programming language easily build programs and
+            applets that interact with MySQL and connect all corporate
+            data, even in a heterogeneous environment. MySQL Connector/J
+            is a Type IV JDBC driver and has a complete JDBC feature
+            set that supports the capabilities of MySQL.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>mysql-connector-java.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>mysql-connector-java.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://cdn.mysql.com/archives/mysql-connector-java-5.1/${archive}.zip</td>
+<td>Unpack into archive/</td>
+<td>73b770ae8d0e241e687cba6d31b411377da4cb22</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${archive}-bin.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/${name}.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src/com"/&gt;
+            &lt;fileset dir="archive/${archive}/src/org"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

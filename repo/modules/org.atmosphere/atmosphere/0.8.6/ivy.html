@@ -1,0 +1,1074 @@
+<html>
+<head>
+<title>atmosphere by org.atmosphere :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.atmosphere/atmosphere/">atmosphere</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.atmosphere/">org.atmosphere</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>0.8.6</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://java.net/projects/atmosphere/">https://java.net/projects/atmosphere/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://glassfish.java.net/public/CDDL+GPL.html">CDDL+GPL</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.atmosphere/atmosphere/0.8.6/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://java.net/projects/atmosphere/">
+            <p>
+                Atmosphere is a POJO based framework using Inversion of Control (IoC) to bring push/Comet
+                and Websocket to the masses! Finally a framework which can run on any Java based Web Server,
+                including Tomcat, Jetty, GlassFish, Weblogic, Grizzly, JBossWeb and JBoss, Resin, etc.
+                without having to learn how Comet or WebSocket support has been differently implemented
+                by all those Containers. The Atmosphere Framework has both client (JQuery PlugIn) and
+                server components.
+            </p>
+            <p>
+                Servlet 3.0 is supported along with framework like Jersey, GWT, Struts, Spring, Wicket etc.
+                and programming language like JRuby, Groovy and Scala. Finally, any web application can be
+                clustered using our Cluster plugin architecture supporting JMS or JGroups.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>runtime</td>
+<td>Runtime only</td>
+<td>compat-jetty,compat-tomcat,compat-tomcat7,compat-weblogic,compat-jbossweb</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default config</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>jersey</td>
+<td>Jersey support</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>annotations</td>
+<td>Annotations support</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>compat-jetty</td>
+<td>Jetty compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>compat-tomcat</td>
+<td>Tomcat &lt; 7 compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>compat-tomcat7</td>
+<td>Tomcat 7 compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>compat-weblogic</td>
+<td>Weblogic compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>compat-jbossweb</td>
+<td>JBoss web compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>grizzly-adapter</td>
+<td>Grizzly compatibility</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>guice</td>
+<td>Guice support</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>jgroups</td>
+<td>JGroups support</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jms</td>
+<td>JMS support</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>xmpp</td>
+<td>XMPP support</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>gwt</td>
+<td>GWT server-side support</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>gwt-client</td>
+<td>GWT client-side support</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>redis</td>
+<td>REDIS support</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>spring</td>
+<td>Spring support</td>
+<td>jersey</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>atmosphere-annotations.jar</td>
+<td>jar</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jbossweb.jar</td>
+<td>jar</td>
+<td>compat-jbossweb</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jetty.jar</td>
+<td>jar</td>
+<td>compat-jetty</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat.jar</td>
+<td>jar</td>
+<td>compat-tomcat</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat7.jar</td>
+<td>jar</td>
+<td>compat-tomcat7</td>
+</tr>
+<tr>
+<td>atmosphere-compat-weblogic.jar</td>
+<td>jar</td>
+<td>compat-weblogic</td>
+</tr>
+<tr>
+<td>atmosphere-grizzly-adapter.jar</td>
+<td>jar</td>
+<td>grizzly-adapter</td>
+</tr>
+<tr>
+<td>atmosphere-guice.jar</td>
+<td>jar</td>
+<td>guice</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-client.jar</td>
+<td>jar</td>
+<td>gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-common.jar</td>
+<td>jar</td>
+<td>gwt, gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-poll.jar</td>
+<td>jar</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-server.jar</td>
+<td>jar</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-jersey.jar</td>
+<td>jar</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>atmosphere-jgroups.jar</td>
+<td>jar</td>
+<td>jgroups</td>
+</tr>
+<tr>
+<td>atmosphere-jms.jar</td>
+<td>jar</td>
+<td>jms</td>
+</tr>
+<tr>
+<td>atmosphere-redis.jar</td>
+<td>jar</td>
+<td>redis</td>
+</tr>
+<tr>
+<td>atmosphere-runtime.jar</td>
+<td>jar</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>atmosphere-spring.jar</td>
+<td>jar</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>atmosphere-xmpp.jar</td>
+<td>jar</td>
+<td>xmpp</td>
+</tr>
+<tr>
+<td>atmosphere-annotations.zip</td>
+<td>source</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jetty.zip</td>
+<td>source</td>
+<td>compat-jetty</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jbossweb.zip</td>
+<td>source</td>
+<td>compat-jbossweb</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat.zip</td>
+<td>source</td>
+<td>compat-tomcat</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat7.zip</td>
+<td>source</td>
+<td>compat-tomcat7</td>
+</tr>
+<tr>
+<td>atmosphere-compat-weblogic.zip</td>
+<td>source</td>
+<td>compat-weblogic</td>
+</tr>
+<tr>
+<td>atmosphere-grizzly-adapter.zip</td>
+<td>source</td>
+<td>grizzly-adapter</td>
+</tr>
+<tr>
+<td>atmosphere-guice.zip</td>
+<td>source</td>
+<td>guice</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-client.zip</td>
+<td>source</td>
+<td>gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-common.zip</td>
+<td>source</td>
+<td>gwt, gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-js.zip</td>
+<td>source</td>
+<td>gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-poll.zip</td>
+<td>source</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-server.zip</td>
+<td>source</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-jersey.zip</td>
+<td>source</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>atmosphere-jgroups.zip</td>
+<td>source</td>
+<td>jgroups</td>
+</tr>
+<tr>
+<td>atmosphere-jms.zip</td>
+<td>source</td>
+<td>jms</td>
+</tr>
+<tr>
+<td>atmosphere-redis.zip</td>
+<td>source</td>
+<td>redis</td>
+</tr>
+<tr>
+<td>atmosphere-runtime.zip</td>
+<td>source</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>atmosphere-spring.zip</td>
+<td>source</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>atmosphere-xmpp.zip</td>
+<td>source</td>
+<td>xmpp</td>
+</tr>
+<tr>
+<td>atmosphere-annotations.zip</td>
+<td>javadoc</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jbossweb.zip</td>
+<td>javadoc</td>
+<td>compat-jbossweb</td>
+</tr>
+<tr>
+<td>atmosphere-compat-jetty.zip</td>
+<td>javadoc</td>
+<td>compat-jetty</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat.zip</td>
+<td>javadoc</td>
+<td>compat-tomcat</td>
+</tr>
+<tr>
+<td>atmosphere-compat-tomcat7.zip</td>
+<td>javadoc</td>
+<td>compat-tomcat7</td>
+</tr>
+<tr>
+<td>atmosphere-compat-weblogic.zip</td>
+<td>javadoc</td>
+<td>compat-weblogic</td>
+</tr>
+<tr>
+<td>atmosphere-grizzly-adapter.zip</td>
+<td>javadoc</td>
+<td>grizzly-adapter</td>
+</tr>
+<tr>
+<td>atmosphere-guice.zip</td>
+<td>javadoc</td>
+<td>guice</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-client.zip</td>
+<td>javadoc</td>
+<td>gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-common.zip</td>
+<td>javadoc</td>
+<td>gwt, gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-js.zip</td>
+<td>javadoc</td>
+<td>gwt-client</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-poll.zip</td>
+<td>javadoc</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-gwt-server.zip</td>
+<td>javadoc</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>atmosphere-jersey.zip</td>
+<td>javadoc</td>
+<td>jersey</td>
+</tr>
+<tr>
+<td>atmosphere-jgroups.zip</td>
+<td>javadoc</td>
+<td>jgroups</td>
+</tr>
+<tr>
+<td>atmosphere-jms.zip</td>
+<td>javadoc</td>
+<td>jms</td>
+</tr>
+<tr>
+<td>atmosphere-redis.zip</td>
+<td>javadoc</td>
+<td>redis</td>
+</tr>
+<tr>
+<td>atmosphere-runtime.zip</td>
+<td>javadoc</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>atmosphere-spring.zip</td>
+<td>javadoc</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>atmosphere-xmpp.zip</td>
+<td>javadoc</td>
+<td>xmpp</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.sun.jersey</td>
+<td><a href="../../../com.sun.jersey/jersey/">jersey</a></td>
+<td>1.+</td>
+<td>jersey-&gt;server;guice-&gt;guice</td>
+</tr>
+<tr>
+<td>com.google</td>
+<td><a href="../../../com.google/guice/">guice</a></td>
+<td>2.0</td>
+<td>guice-&gt;servlet</td>
+</tr>
+<tr>
+<td>com.google</td>
+<td><a href="../../../com.google/gwt/">gwt</a></td>
+<td>2.+</td>
+<td>gwt-&gt;runtime;gwt-client-&gt;compile</td>
+</tr>
+<tr>
+<td>org.jgroups</td>
+<td><a href="../../../org.jgroups/jgroups/">jgroups</a></td>
+<td>2.7.0</td>
+<td>jgroups-&gt;default</td>
+</tr>
+<tr>
+<td>javax.jms</td>
+<td><a href="../../../javax.jms/jms/">jms</a></td>
+<td>1.1</td>
+<td>jms-&gt;default</td>
+</tr>
+<tr>
+<td>redis.clients</td>
+<td><a href="../../../redis.clients/jedis/">jedis</a></td>
+<td>1.5.+</td>
+<td>redis-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>[3.0.0,)</td>
+<td>spring-&gt;webmvc</td>
+</tr>
+<tr>
+<td>org.jivesoftware.smack</td>
+<td><a href="../../../org.jivesoftware.smack/smack/">smack</a></td>
+<td>3.+</td>
+<td>xmpp-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org/atmosphere/plugins</td>
+<td>atmosphere-grizzly-adapter</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-grizzly-adapter.jar</td>
+<td>fa2b2fb04a6d94ed4f2093beb9639fde5357c2ca</td>
+</tr>
+<tr>
+<td>org/atmosphere/plugins</td>
+<td>atmosphere-grizzly-adapter</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-grizzly-adapter.zip</td>
+<td>924ff1e8ac1fa1958081d1a90bec6aec0ecaec19</td>
+</tr>
+<tr>
+<td>org/atmosphere/plugins</td>
+<td>atmosphere-grizzly-adapter</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-grizzly-adapter.zip</td>
+<td>272c3f72bca57540af5d4a36d14cbcecb8ec8ad1</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-annotations</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-annotations.jar</td>
+<td>f4a003a1a28c779b3836bca454a07ab28a65fb3a</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-annotations</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-annotations.zip</td>
+<td>b689ed699c2a1fd03c1534f87a0ef504e2e73f2f</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-annotations</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-annotations.zip</td>
+<td>011a5182fcefab289fee63fe52205a2cb6a6a30f</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jbossweb</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-compat-jbossweb.jar</td>
+<td>a9850cad81cd58166448bbf4d75baaf4bd834f98</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jbossweb</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-compat-jbossweb.zip</td>
+<td>396fde2f102ab9395c8fc8bc51f7b6cfaab46c82</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jbossweb</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-compat-jbossweb.zip</td>
+<td>eb97d5fb46042ddfe835fbf2158e7e241381c3c5</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jetty</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-compat-jetty.jar</td>
+<td>1a81f657652530d6be45b57d21598b33f28d9e16</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jetty</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-compat-jetty.zip</td>
+<td>81cfb06c616f2273c405c4c6c029ab996afa3917</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-jetty</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-compat-jetty.zip</td>
+<td>18f8c14ab30a514938ba1506e0f2bf010280ef21</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-compat-tomcat.jar</td>
+<td>43cdafd1f9d44bef7e34204f9b2f86540437f346</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-compat-tomcat.zip</td>
+<td>929310e32f003ad6139742a4cdfb71af80a4724d</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-compat-tomcat.zip</td>
+<td>e9b17444cb3b531f0c1a000828fb173392337fe4</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat7</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-compat-tomcat7.jar</td>
+<td>1fd710bb1c65972dc0c41f25c81b48343e9368d7</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat7</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-compat-tomcat7.zip</td>
+<td>283752278b78964335e5ae8b86ff07200514c142</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-tomcat7</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-compat-tomcat7.zip</td>
+<td>4553c20a35e59a8602216742e46b257322bb0b3e</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-weblogic</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-compat-weblogic.jar</td>
+<td>b79df00a9abf240525ae05a7e7d5ffe8ec28149d</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-weblogic</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-compat-weblogic.zip</td>
+<td>4026db4285861165b48bd3f78798d4d0f875d278</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-compat-weblogic</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-compat-weblogic.zip</td>
+<td>68218fb27b37464720a3a32309d08aac0007b605</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-guice</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-guice.jar</td>
+<td>db42e0396bac48783def60c6850abf4a0f170c77</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-guice</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-guice.zip</td>
+<td>679a442b1d6bb7f848092a740958438c01728673</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-guice</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-guice.zip</td>
+<td>3d2e62641df6b2462efd88392b341e8001c7402a</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-client</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-gwt-client.jar</td>
+<td>5357bde7a229c88f6110d9c7a9f55b62778b0737</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-client</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-gwt-client.zip</td>
+<td>1931e8cbda6d6619c05434b0986bd619af4eabf7</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-client</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-gwt-client.zip</td>
+<td>be5b7f46290bb204982993374bb98c7bf236d245</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-common</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-gwt-common.jar</td>
+<td>4f09ddd9fc2ebc75f83bf62f674348755b827a44</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-common</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-gwt-common.zip</td>
+<td>e7562b13ca4af34de2275664d94e74a41be530f7</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-common</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-gwt-common.zip</td>
+<td>7d2c97acad505caccf1685f6186170efd2b2f4f8</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-js</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-gwt-js.zip</td>
+<td>f52d72263e75a1adbd9a7e2a649bc927440bc5fc</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-js</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-gwt-js.zip</td>
+<td>811d95d26d11e164d6cddb7069448acd93087f64</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-poll</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-gwt-poll.jar</td>
+<td>c71f4c493345c42f2cd3aa6821d742cc45bc6495</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-poll</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-gwt-poll.zip</td>
+<td>a9deed3b35703e272a63a7abd85b10559082450b</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-poll</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-gwt-poll.zip</td>
+<td>4304e665cc61637af54d28215aa05d161679219a</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-server</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-gwt-server.jar</td>
+<td>79cf9f6b1c887dcab7f015f95717a562d6854b30</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-server</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-gwt-server.zip</td>
+<td>e97a9685194d316484c889212a2706a0f336b2de</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-gwt-server</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-gwt-server.zip</td>
+<td>63df0c03f120681a726fc25c05f30013525a805f</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jersey</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-jersey.jar</td>
+<td>1098bd07c939939c906afdfe7d4c6264f919b92b</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jersey</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-jersey.zip</td>
+<td>5ddc8eee1c8d9fc561ce49a7d98cf995e65c0e45</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jersey</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-jersey.zip</td>
+<td>c4b1b8ea36acc576fd41d85c6aca060e98700ac2</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jgroups</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-jgroups.jar</td>
+<td>68edfd90252111748c20b86389239b0386790f4e</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jgroups</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-jgroups.zip</td>
+<td>d5734fb1f0be0036d60a84a530d42278427fc726</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jgroups</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-jgroups.zip</td>
+<td>fd4e1735612f4563934ecc0032955d97ab423a77</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jms</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-jms.jar</td>
+<td>39ada7fc550c99b5dfb303b95478c2f58091706e</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jms</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-jms.zip</td>
+<td>3d4f19b0bb17671fb1b125bcc682af6f6c2d9369</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-jms</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-jms.zip</td>
+<td>53b2856b82fb7f2c3f458eb6900defd5cbb9c032</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-redis</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-redis.jar</td>
+<td>70e360a1278ca39e8eec1e7c76577200199dd27c</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-redis</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-redis.zip</td>
+<td>fdb697677355070ab5afde1f769bd883c2fc2882</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-redis</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-redis.zip</td>
+<td>4a28898f3b8895a0d6341d9137a75fdab1669859</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-runtime</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-runtime.jar</td>
+<td>6ead9e217db4d37c9f8889454ecea8c50acdeb9f</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-runtime</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-runtime.zip</td>
+<td>9a19bdde68c31252c96a4e121a8e515147b346e8</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-runtime</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-runtime.zip</td>
+<td>c29d6688d5779d6eb12addda76d76a100d2812b7</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-spring</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-spring.jar</td>
+<td>74c9878c3b577fb5739cb45388e9fec2ac7d22e4</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-spring</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-spring.zip</td>
+<td>a9b034f40f595ccf5a4981e890e4501eaaf62f1c</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-spring</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-spring.zip</td>
+<td>48f573a1af2906f68eec1e3e950371fb3ef092f2</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-xmpp</td>
+<td>0.8.6</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atmosphere-xmpp.jar</td>
+<td>992ca91340e45a35ca5ba13f360b2cbb3d284f74</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-xmpp</td>
+<td>0.8.6</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atmosphere-xmpp.zip</td>
+<td>c8bffb71e9424c8f228e2c5847b6a106c6b8c49e</td>
+</tr>
+<tr>
+<td>org.atmosphere</td>
+<td>atmosphere-xmpp</td>
+<td>0.8.6</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atmosphere-xmpp.zip</td>
+<td>05ef97eaeec100b0852485c91a5b96c289e16238</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

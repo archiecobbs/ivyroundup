@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>miglayout by net.miginfocom :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.miginfocom/miglayout/">miglayout</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.miginfocom/">net.miginfocom</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.6.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.miglayout.com/">http://www.miglayout.com/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://opensource.org/licenses/bsd-license.php">BSD License</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.miginfocom/miglayout/3.6.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.miglayout.com/">
+
+        <p>
+        MigLayout is an extremely flexible layout manager that can be
+        used in many different ways to layout components using a single
+        and consistent API. </p>
+
+        <p>The main features are:</p>
+        <ul>
+          <li>String based constraints makes the layout code portable,
+          short, human readable and easy to implement for XUL and GUI
+          builders.</li>
+
+          <li>From v2.0 there is also an API to create constraints. This
+          means that whatever your preference is, String or API, you
+          can use Mig Layout to create your layouts. </li>
+
+          <li>MiG Layout is the most flexible layout engine to date,
+          capable of doing everything that <strong>all</strong> major
+          Layout Managers can, with one API.</li>
+
+          <li>Extensible Units that  can can be used to layout components
+          with everything from screen percentage to millimeters.</li>
+
+          <li>Docking, absolute positioning with component links and
+          powerful grid layout all in one layout manager.</li>
+
+          <li>GUI toolkit dependence put in three simple wrapper classes
+          makes MiG Layout trivial to port to for instance .NET or any
+          other GUI toolkit.</li>
+
+          <li>MiG Layout is free to use and is Open Source.</li>
+        </ul>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Swing and SWT support, plus demo and examples</td>
+<td></td>
+</tr>
+<tr>
+<td>swing</td>
+<td>Swing-only version</td>
+<td></td>
+</tr>
+<tr>
+<td>swing-jdk14</td>
+<td>Swing-only JDK 1.4 version</td>
+<td></td>
+</tr>
+<tr>
+<td>swt</td>
+<td>SWT-only version</td>
+<td></td>
+</tr>
+<tr>
+<td>swt-jdk14</td>
+<td>SWT-only JDK 1.4 version</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>miglayout.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>miglayout-swing.jar</td>
+<td>jar</td>
+<td>swing</td>
+</tr>
+<tr>
+<td>miglayout-swing-java14.jar</td>
+<td>jar</td>
+<td>swing-jdk14</td>
+</tr>
+<tr>
+<td>miglayout-swt.jar</td>
+<td>jar</td>
+<td>swt</td>
+</tr>
+<tr>
+<td>miglayout-swt-java14.jar</td>
+<td>jar</td>
+<td>swt-jdk14</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-javadoc.jar</td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>e22a2f8362d28fa45b69db07e0e0281e8af98de6</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-sources.jar</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>1b2b37531a334da9d7977a5861190b4e661a675d</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-swing-java14.jar</td>
+<td>Copy to artifacts/jars/${name}-swing-java14.jar</td>
+<td>befb3d3f8d95ba1bbf8d573d844b940f322bc342</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-swing.jar</td>
+<td>Copy to artifacts/jars/${name}-swing.jar</td>
+<td>aad5fb09c1bc9ebf2ed8951dbaae84d8f96c3413</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-swt-java14.jar</td>
+<td>Copy to artifacts/jars/${name}-swt-java14.jar</td>
+<td>5d3fa1328722ee5ad1c38b777c9f581b6029272d</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}-swt.jar</td>
+<td>Copy to artifacts/jars/${name}-swt.jar</td>
+<td>07fedb38a93c517c0402f1aea63f170157ca6e62</td>
+</tr>
+<tr>
+<td>http://migcalendar.com/miglayout/versions/${revision}/${archive}.jar</td>
+<td>Copy to artifacts/jars/${name}.jar</td>
+<td>5a63e057c24d686b27d3cc5c6f80e2e4cc06487d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

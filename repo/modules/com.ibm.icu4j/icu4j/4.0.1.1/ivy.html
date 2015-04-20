@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>icu4j by com.ibm.icu4j :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.ibm.icu4j/icu4j/">icu4j</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.ibm.icu4j/">com.ibm.icu4j</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>4.0.1.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://site.icu-project.org/">http://site.icu-project.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://userguide.icu-project.org/#TOC-ICU-License---ICU-1.8.1-and-later">ICU4J License</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.ibm.icu4j/icu4j/4.0.1.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://site.icu-project.org/">
+ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. ICU is widely portable and gives applications the same results on all platforms and between C/C++ and Java software. 
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>The default configuration, just icu4j.</td>
+<td></td>
+</tr>
+<tr>
+<td>charsets</td>
+<td>The character set conversion extension.</td>
+<td>default</td>
+</tr>
+<tr>
+<td>localespi</td>
+<td>The locale service provider extension.</td>
+<td>default</td>
+</tr>
+<tr>
+<td>all</td>
+<td>The jars, sources, and javadocs.</td>
+<td>default,charsets,localespi</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>icu4j.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>icu4j-charsets.jar</td>
+<td>jar</td>
+<td>charsets</td>
+</tr>
+<tr>
+<td>icu4j-localespi.jar</td>
+<td>jar</td>
+<td>localespi</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td>all</td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td>all</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+<tr>
+<td>revision.underscore</td>
+<td>4_0_1_1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}-docs.jar</td>
+<td>Copy to archive/${archive}/javadoc.zip</td>
+<td>167fcb43d5cd4059cd9e632720698e1ff676807f</td>
+</tr>
+<tr>
+<td>http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}-src.jar</td>
+<td>Copy to archive/${archive}/source.zip</td>
+<td>daa3467983e6ecd735cd67e5920170702375bc7d</td>
+</tr>
+<tr>
+<td>http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}.jar</td>
+<td>Copy to archive/${archive}/${name}.jar</td>
+<td>047528d89025d4cab808d1c4470e43fddc4b2b0c</td>
+</tr>
+<tr>
+<td>http://download.icu-project.org/files/${name}/${revision}/${name}-charsets-${revision.underscore}.jar</td>
+<td>Copy to archive/${archive}/${name}-charsets.jar</td>
+<td>b2ba306ef193b68faa7f2aa6d138e8d3ae4e72bb</td>
+</tr>
+<tr>
+<td>http://download.icu-project.org/files/${name}/${revision}/${name}-localespi-${revision.underscore}.jar</td>
+<td>Copy to archive/${archive}/${name}-localespi.jar</td>
+<td>8ec8821db6bc6b8c5aaf34109313a891e5b623fd</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/${archive}/${name}-charsets.jar" tofile="artifacts/jars/${name}-charsets.jar"/&gt;
+        &lt;move file="archive/${archive}/${name}-localespi.jar" tofile="artifacts/jars/${name}-localespi.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;move file="archive/${archive}/source.zip" tofile="artifacts/sources/source.zip"/&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;move file="archive/${archive}/javadoc.zip" tofile="artifacts/javadocs/javadoc.zip"/&gt;
+
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

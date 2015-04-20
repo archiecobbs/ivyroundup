@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>cometd by org.cometd.java :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.cometd.java/cometd/">cometd</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.cometd.java/">org.cometd.java</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.1.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://cometd.org/">http://cometd.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.cometd.java/cometd/1.1.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://cometd.org/">
+            CometD is a scalable HTTP-based event routing bus that uses a Ajax Push technology pattern known as Comet.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>api</td>
+<td>API only</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default config = API only</td>
+<td>api</td>
+</tr>
+<tr>
+<td>client</td>
+<td>Client module</td>
+<td>server</td>
+</tr>
+<tr>
+<td>oort</td>
+<td>Oort module</td>
+<td>client</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Server module</td>
+<td>api</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>cometd-api.jar</td>
+<td>jar</td>
+<td>api</td>
+</tr>
+<tr>
+<td>cometd-java-client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>cometd-java-oort.jar</td>
+<td>jar</td>
+<td>oort</td>
+</tr>
+<tr>
+<td>cometd-java-server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>cometd-api.zip</td>
+<td>source</td>
+<td>api</td>
+</tr>
+<tr>
+<td>cometd-java-client.zip</td>
+<td>source</td>
+<td>client</td>
+</tr>
+<tr>
+<td>cometd-java-oort.zip</td>
+<td>source</td>
+<td>oort</td>
+</tr>
+<tr>
+<td>cometd-java-server.zip</td>
+<td>source</td>
+<td>server</td>
+</tr>
+<tr>
+<td>cometd-api.zip</td>
+<td>javadoc</td>
+<td>api</td>
+</tr>
+<tr>
+<td>cometd-java-client.zip</td>
+<td>javadoc</td>
+<td>client</td>
+</tr>
+<tr>
+<td>cometd-java-oort.zip</td>
+<td>javadoc</td>
+<td>oort</td>
+</tr>
+<tr>
+<td>cometd-java-server.zip</td>
+<td>javadoc</td>
+<td>server</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>[2.5,)</td>
+<td>client-&gt;default</td>
+</tr>
+<tr>
+<td>org.eclipse</td>
+<td><a href="../../../org.eclipse/jetty/">jetty</a></td>
+<td>[7,)</td>
+<td>client-&gt;client,servlet;server-&gt;util,continuation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-api</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/cometd-api.jar</td>
+<td>941b554c2ca78c0fc94b40c5e4283dfa0f2eb063</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-api</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/cometd-api.zip</td>
+<td>040401133a8f45e51e75164a8fbaa02ae6ad5a1b</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-api</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/cometd-api.zip</td>
+<td>f71b2547f6dd4bc12b9a73449e8b819c7a7e53f9</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-client</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/cometd-java-client.jar</td>
+<td>228da187b584db1563965109cb37d406ccd205c3</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-client</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/cometd-java-client.zip</td>
+<td>338de474627a29d051b7a83ef315cf7b535923dc</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-client</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/cometd-java-client.zip</td>
+<td>99fec7e41f610bdd44ab45cf78009069ab2ca66b</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-oort</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/cometd-java-oort.jar</td>
+<td>e2b31160b139447e696e3d139e9e24529c9950d6</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-oort</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/cometd-java-oort.zip</td>
+<td>1332bc96425c0f215417fbb1ffc09a1b4da1e025</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-oort</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/cometd-java-oort.zip</td>
+<td>f77708cdf83a7d4ab7366e2c3c48ab04a3cf2342</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-server</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/cometd-java-server.jar</td>
+<td>fb49c08543bf4ca23aa01da101e6a98cf68ea65a</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-server</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/cometd-java-server.zip</td>
+<td>606c24b53e050dfbe37c5f24ae836f5bfa3458c7</td>
+</tr>
+<tr>
+<td>org.cometd.java</td>
+<td>cometd-java-server</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/cometd-java-server.zip</td>
+<td>439068118b9ddcc1473755e28c7b53b05915529d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

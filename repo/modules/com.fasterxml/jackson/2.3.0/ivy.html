@@ -1,0 +1,376 @@
+<html>
+<head>
+<title>jackson by com.fasterxml :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.fasterxml/jackson/">jackson</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.fasterxml/">com.fasterxml</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.3.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://wiki.fasterxml.com/JacksonHome">http://wiki.fasterxml.com/JacksonHome</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.fasterxml/jackson/2.3.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://wiki.fasterxml.com/JacksonHome">
+
+            <p>
+            Inspired by the quality and variety of XML tooling available for the Java platform (StAX, JAXB, etc.), the Jackson is a multi-purpose Java library for processing JSON data format. Jackson aims to be the best possible combination of fast, correct, lightweight, and ergonomic for developers.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Contains streaming parser, generator</td>
+<td></td>
+</tr>
+<tr>
+<td>annotations</td>
+<td>for annotation-based configuration</td>
+<td>core</td>
+</tr>
+<tr>
+<td>databind</td>
+<td>for data binding, tree model</td>
+<td>core</td>
+</tr>
+<tr>
+<td>module-jaxb-annotations</td>
+<td>Support for using JAXB annotations as an alternative to native Jackson annotations, for configuring data binding.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>module-afterburner</td>
+<td>Experimental extension to Jackson (http://jackson.codehaus.org) used to enhance access functionality using bytecode generation.</td>
+<td>databind,annotations</td>
+</tr>
+<tr>
+<td>jaxrs-json-provider</td>
+<td>Functionality to handle JSON input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding.</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Most common configuration of core, databind, and annotations.</td>
+<td>databind,annotations</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jackson-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-core.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-annotations.jar</td>
+<td>jar</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-annotations.zip</td>
+<td>source</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-annotations.zip</td>
+<td>javadoc</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jackson-databind.jar</td>
+<td>jar</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-databind.zip</td>
+<td>source</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-databind.zip</td>
+<td>javadoc</td>
+<td>databind</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.jar</td>
+<td>jar</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.zip</td>
+<td>source</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-jaxb-annotations.zip</td>
+<td>javadoc</td>
+<td>module-jaxb-annotations</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.jar</td>
+<td>jar</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.zip</td>
+<td>source</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-module-afterburner.zip</td>
+<td>javadoc</td>
+<td>module-afterburner</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.jar</td>
+<td>jar</td>
+<td>jaxrs-json-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.zip</td>
+<td>source</td>
+<td>jaxrs-json-provider</td>
+</tr>
+<tr>
+<td>jackson-jaxrs-json-provider.zip</td>
+<td>javadoc</td>
+<td>jaxrs-json-provider</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-core</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-core.jar</td>
+<td>5e19d8381e01aa64c9dd47ff453e39abc441775c</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-core</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-core.zip</td>
+<td>f96b1206b2f452bcc5e096d7594bd3e5568debbb</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-core</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-core.zip</td>
+<td>4980f0dabf89ecdc3b190c1cc8af0c4bfd6e510c</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-annotations</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-annotations.jar</td>
+<td>f5e853a20b60758922453d56f9ae1e64af5cb3da</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-annotations</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-annotations.zip</td>
+<td>cc964b08f8d37e3d8465de923b9e6321107a5429</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-annotations</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-annotations.zip</td>
+<td>bd4dbde5cfee2706ba23a273be219226de6622a3</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-databind</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-databind.jar</td>
+<td>76eb119e9f7769c5b124afbfa17ed0c63cab4920</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-databind</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-databind.zip</td>
+<td>6e8684b28e0a998550799163a49b5772132c2071</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.core</td>
+<td>jackson-databind</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-databind.zip</td>
+<td>92924033a2cf56b04883a9c2d54359c3bb2af767</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-jaxb-annotations.jar</td>
+<td>c23c81074cbac7ccd3926d68507d46d98c5cdc81</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-jaxb-annotations.zip</td>
+<td>dae4dd8c5f97be9b08e38fe54c26c63ac6c81d77</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-jaxb-annotations</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-jaxb-annotations.zip</td>
+<td>1f8543d35e88772618a7e65d16f25b446e6a8fb6</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs-json-provider.jar</td>
+<td>61b23fa961da85823ad68b46b0341c603bd44cb6</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs-json-provider.zip</td>
+<td>4340c2097e01be44aaf6cf350f9f21ea81c917f5</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.jaxrs</td>
+<td>jackson-jaxrs-json-provider</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-jaxrs-json-provider.zip</td>
+<td>7bdfe17ebb3f35dc4b27311924666c9ff422ae55</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-afterburner</td>
+<td>2.3.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-module-afterburner.jar</td>
+<td>d6e1927f0e219d1496d1dce88f007ed2bc2e9542</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-afterburner</td>
+<td>2.3.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-module-afterburner.zip</td>
+<td>6456b2bf71aee58430e0725abfd3ec44c21465a9</td>
+</tr>
+<tr>
+<td>com.fasterxml.jackson.module</td>
+<td>jackson-module-afterburner</td>
+<td>2.3.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jackson-module-afterburner.zip</td>
+<td>7b7e05cf93714374ef635111d9b792929f8784ed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

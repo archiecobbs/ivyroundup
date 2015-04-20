@@ -1,0 +1,229 @@
+<html>
+<head>
+<title>asm by org.objectweb.asm :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.objectweb.asm/asm/">asm</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.objectweb.asm/">org.objectweb.asm</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.5.3</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://asm.ow2.org/">http://asm.ow2.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://asm.ow2.org/license.html">BSD License</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.objectweb.asm/asm/1.5.3/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://asm.ow2.org/">
+            <p>
+            ASM is an all purpose Java bytecode manipulation and
+            analysis framework. It can be used to modify existing
+            classes or dynamically generate classes, directly in binary
+            form. Provided common transformations and analysis algorithms
+            allow to easily assemble custom complex transformations and
+            code analysis tools.
+            </p>
+
+            <p>
+            ASM offer similar functionality as other bytecode
+            frameworks, but it is focused on simplicity of use and
+            performance. Because it was designed and implemented to be
+            as small and as fast as possible, it makes it very attractive
+            for using in dynamic systems<super>*</super>.
+            </p>
+
+            <p>
+            (*) ASM can of course be used in a static way too.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core ASM code</td>
+<td></td>
+</tr>
+<tr>
+<td>analysis</td>
+<td>ASM analysis classes</td>
+<td></td>
+</tr>
+<tr>
+<td>attrs</td>
+<td>ASM attrs classes</td>
+<td></td>
+</tr>
+<tr>
+<td>kasm</td>
+<td>ASM kasm classes</td>
+<td></td>
+</tr>
+<tr>
+<td>tree</td>
+<td>ASM tree classes</td>
+<td></td>
+</tr>
+<tr>
+<td>util</td>
+<td>ASM util classes</td>
+<td></td>
+</tr>
+<tr>
+<td>xml</td>
+<td>ASM xml classes</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>All ASM classes</td>
+<td>core,analysis,attrs,kasm,tree,util,xml</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>asm.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>asm-analysis.jar</td>
+<td>jar</td>
+<td>analysis</td>
+</tr>
+<tr>
+<td>asm-attrs.jar</td>
+<td>jar</td>
+<td>attrs</td>
+</tr>
+<tr>
+<td>kasm.jar</td>
+<td>jar</td>
+<td>kasm</td>
+</tr>
+<tr>
+<td>asm-tree.jar</td>
+<td>jar</td>
+<td>tree</td>
+</tr>
+<tr>
+<td>asm-util.jar</td>
+<td>jar</td>
+<td>util</td>
+</tr>
+<tr>
+<td>asm-xml.jar</td>
+<td>jar</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://download.forge.objectweb.org/${name}/${archive}-bin.zip</td>
+<td>Unpack into archive/</td>
+<td>6c5e4286e0ce642290f3a7eeac70482706eb4311</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+
+        &lt;!-- jar --&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/${archive}/lib"&gt;
+                &lt;include name="*.jar"/&gt;
+            &lt;/fileset&gt;
+            &lt;mapper type="glob" from="*-${revision}.jar" to="*.jar"/&gt;
+        &lt;/move&gt;
+
+        &lt;!-- source --&gt;
+        &lt;move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/doc/javadoc/user"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

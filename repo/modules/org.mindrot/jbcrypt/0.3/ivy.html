@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>jbcrypt by org.mindrot :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.mindrot/jbcrypt/">jbcrypt</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.mindrot/">org.mindrot</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>0.3</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.mindrot.org/projects/jBCrypt/">http://www.mindrot.org/projects/jBCrypt/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.mindrot.org/files/jBCrypt/LICENSE">BSD Style</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.mindrot/jbcrypt/0.3/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.mindrot.org/projects/jBCrypt/">
+
+            <p>
+            jBCrypt is a Java implementation of OpenBSD's Blowfish
+            password hashing code, as described in "A Future-Adaptable
+            Password Scheme" by Niels Provos and David Mazières.
+            </p>
+
+            <p>
+            This system hashes passwords using a version of Bruce
+            Schneier's Blowfish block cipher with modifications designed
+            to raise the cost of off-line password cracking and frustrate
+            fast hardware implementation. The computation cost of
+            the algorithm is parametised, so it can be increased as
+            computers get faster. The intent is to make a compromise of
+            a password database less likely to result in an attacker
+            gaining knowledge of the plaintext passwords (e.g. using
+            John the Ripper).
+            </p>
+
+        </description></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<strong><span class="restricted-build">*** Note ***</span></strong> This module uses restricted
+          build instructions; You must configure your packager resolver with <span class="code">restricted="false"</span>. See the
+          <a href="http://ant.apache.org/ivy/history/latest-milestone/resolver/packager.html">Packager Resolver Documentation</a>
+          for more information.
+        </td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jbcrypt.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>jBCrypt-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://www.mindrot.org/files/jBCrypt/${archive}.zip</td>
+<td>Unpack into archive/</td>
+<td>3c575accb6d7e14a7e32e9f77f99f30987b6a986</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+
+        &lt;!-- build --&gt;
+        &lt;mkdir dir="archive/${archive}/src/org/mindrot/jbcrypt"/&gt;
+        &lt;mkdir dir="archive/${archive}/classes"/&gt;
+        &lt;mkdir dir="archive/${archive}/javadoc"/&gt;
+        &lt;concat destfile="archive/${archive}/src/org/mindrot/jbcrypt/BCrypt.java"&gt;
+            &lt;header filtering="no"&gt;
+                package org.mindrot.jbcrypt;
+            &lt;/header&gt;
+            &lt;fileset file="archive/${archive}/BCrypt.java"/&gt;
+        &lt;/concat&gt;
+        &lt;javac includeantruntime="no" compiler="modern" source="1.5" target="1.5" srcdir="archive/${archive}/src" destdir="archive/${archive}/classes"/&gt;
+        &lt;javadoc destdir="archive/${archive}/javadoc" use="true" source="1.5" breakiterator="yes" linksource="true" windowtitle="jBCrypt" doctitle="jBCrypt" failonerror="true"&gt;
+            &lt;packageset dir="archive/${archive}/src" defaultexcludes="yes"/&gt;
+            &lt;link href="http://download.oracle.com/javase/6/docs/api/"/&gt;
+        &lt;/javadoc&gt;
+
+        &lt;!-- jar --&gt;
+        &lt;jar destfile="artifacts/jars/${name}.jar"&gt;
+            &lt;fileset dir="archive/${archive}/classes" includes="**/*"/&gt;
+        &lt;/jar&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src" includes="**/*"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/javadoc" includes="**/*"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

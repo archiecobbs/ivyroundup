@@ -1,0 +1,1427 @@
+<html>
+<head>
+<title>grizzly by org.glassfish.grizzly :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.glassfish.grizzly/grizzly/">grizzly</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.glassfish.grizzly/">org.glassfish.grizzly</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.3.4</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://grizzly.java.net/">https://grizzly.java.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://glassfish.java.net/public/CDDL+GPL.html">CDDL 1.1 + GPL</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.glassfish.grizzly/grizzly/2.3.4/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://grizzly.java.net/">
+            <p>
+            The Grizzly NIO framework has been designed to help developers to take advantage of the Java NIO API. 
+            Grizzly's goal is to help developers to build scalable and robust servers using NIO as well as offering 
+            extended framework components: Web Framework (HTTP/S), WebSocket, Comet, and more!
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>framework</td>
+<td>Core Framework</td>
+<td></td>
+</tr>
+<tr>
+<td>portunif</td>
+<td>Port Unification Framework</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>rcm</td>
+<td>Resource Consumption Management Support</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Core Framework Bundle</td>
+<td>framework,portunif,rcm</td>
+</tr>
+<tr>
+<td>http</td>
+<td>Core HTTP Framework</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>http-server</td>
+<td>HTTP Server Framework</td>
+<td>http,rcm</td>
+</tr>
+<tr>
+<td>http-servlet</td>
+<td>HTTP Servlet Framework</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>http-client</td>
+<td>HTTP Client Handler</td>
+<td></td>
+</tr>
+<tr>
+<td>http-ajp</td>
+<td>Apache JServ Protocol Support</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>websockets</td>
+<td>WebSocket Protocol Support</td>
+<td>framework,http,http-server,http-servlet</td>
+</tr>
+<tr>
+<td>spdy</td>
+<td>SPDY Protocol Support</td>
+<td>http,http-server,npn-api</td>
+</tr>
+<tr>
+<td>comet</td>
+<td>Commet Protocol Support</td>
+<td>framework,http-server</td>
+</tr>
+<tr>
+<td>npn-api</td>
+<td>Next Protocol Negotiation (NPN) Support</td>
+<td></td>
+</tr>
+<tr>
+<td>npn-osgi</td>
+<td>NPN Bootstrapping for OSGi</td>
+<td></td>
+</tr>
+<tr>
+<td>npn-bootstrap</td>
+<td>NPN Bootstrapping</td>
+<td>npn-api</td>
+</tr>
+<tr>
+<td>http-server-multipart</td>
+<td>Multipart (multipart/form-data) HTTP Requests Processing</td>
+<td>framework,http-server</td>
+</tr>
+<tr>
+<td>http-server-jaxws</td>
+<td>JAX-WS Web Service Execution Support</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>http-servlet-extras</td>
+<td>HTTP Servlet Framework - Extras</td>
+<td>http-servlet,http-server-multipart</td>
+</tr>
+<tr>
+<td>http-server-core</td>
+<td>HTTP Server Core</td>
+<td>core,http-server,http-ajp,http-server-multipart</td>
+</tr>
+<tr>
+<td>http-all</td>
+<td>All HTTP Modules</td>
+<td>http-server-core,http-servlet,comet,websockets</td>
+</tr>
+<tr>
+<td>http-servlet-server</td>
+<td>HTTP Servlet Server</td>
+<td>http-server-core,http-servlet,http-servlet-extras</td>
+</tr>
+<tr>
+<td>websockets-server</td>
+<td>WebSocket Server</td>
+<td>http-server-core,websockets</td>
+</tr>
+<tr>
+<td>comet-server</td>
+<td>Comet Server</td>
+<td>http-server-core,comet</td>
+</tr>
+<tr>
+<td>httpservice</td>
+<td>Extension of OSGi HTTPService for Servlet Registration</td>
+<td></td>
+</tr>
+<tr>
+<td>httpservice-bundle</td>
+<td>HTTPService Bundle</td>
+<td></td>
+</tr>
+<tr>
+<td>framework-monitoring</td>
+<td>Runtime Application Monitoring</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>http-monitoring</td>
+<td>Runtime HTTP Monitoring</td>
+<td>http,framework-monitoring</td>
+</tr>
+<tr>
+<td>http-server-monitoring</td>
+<td>Runtime HTTP Service Monitoring</td>
+<td>http-server,framework-monitoring</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Core requirements</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>grizzly-framework.jar</td>
+<td>jar</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>grizzly-http.jar</td>
+<td>jar</td>
+<td>http</td>
+</tr>
+<tr>
+<td>grizzly-http-server.jar</td>
+<td>jar</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet.jar</td>
+<td>jar</td>
+<td>http-servlet</td>
+</tr>
+<tr>
+<td>grizzly-http-client.jar</td>
+<td>jar</td>
+<td>http-client</td>
+</tr>
+<tr>
+<td>grizzly-portunif.jar</td>
+<td>jar</td>
+<td>portunif</td>
+</tr>
+<tr>
+<td>grizzly-http-ajp.jar</td>
+<td>jar</td>
+<td>http-ajp</td>
+</tr>
+<tr>
+<td>grizzly-websockets.jar</td>
+<td>jar</td>
+<td>websockets</td>
+</tr>
+<tr>
+<td>grizzly-rcm.jar</td>
+<td>jar</td>
+<td>rcm</td>
+</tr>
+<tr>
+<td>grizzly-spdy.jar</td>
+<td>jar</td>
+<td>spdy</td>
+</tr>
+<tr>
+<td>grizzly-comet.jar</td>
+<td>jar</td>
+<td>comet</td>
+</tr>
+<tr>
+<td>grizzly-http-server-multipart.jar</td>
+<td>jar</td>
+<td>http-server-multipart</td>
+</tr>
+<tr>
+<td>grizzly-http-server-jaxws.jar</td>
+<td>jar</td>
+<td>http-server-jaxws</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-extras.jar</td>
+<td>jar</td>
+<td>http-servlet-extras</td>
+</tr>
+<tr>
+<td>grizzly-httpservice.jar</td>
+<td>jar</td>
+<td>httpservice</td>
+</tr>
+<tr>
+<td>grizzly-framework-monitoring.jar</td>
+<td>jar</td>
+<td>framework-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-monitoring.jar</td>
+<td>jar</td>
+<td>http-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-server-monitoring.jar</td>
+<td>jar</td>
+<td>http-server-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>grizzly-http-server-core.jar</td>
+<td>jar</td>
+<td>http-server-core</td>
+</tr>
+<tr>
+<td>grizzly-http-all.jar</td>
+<td>jar</td>
+<td>http-all</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-server.jar</td>
+<td>jar</td>
+<td>http-servlet-server</td>
+</tr>
+<tr>
+<td>grizzly-websockets-server.jar</td>
+<td>jar</td>
+<td>websockets-server</td>
+</tr>
+<tr>
+<td>grizzly-comet-server.jar</td>
+<td>jar</td>
+<td>comet-server</td>
+</tr>
+<tr>
+<td>grizzly-httpservice-bundle.jar</td>
+<td>jar</td>
+<td>httpservice-bundle</td>
+</tr>
+<tr>
+<td>grizzly-npn-api.jar</td>
+<td>jar</td>
+<td>npn-api</td>
+</tr>
+<tr>
+<td>grizzly-npn-osgi.jar</td>
+<td>jar</td>
+<td>npn-osgi</td>
+</tr>
+<tr>
+<td>grizzly-npn-bootstrap.jar</td>
+<td>jar</td>
+<td>npn-bootstrap</td>
+</tr>
+<tr>
+<td>grizzly-framework.jar</td>
+<td>source</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>grizzly-http.jar</td>
+<td>source</td>
+<td>http</td>
+</tr>
+<tr>
+<td>grizzly-http-server.jar</td>
+<td>source</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet.jar</td>
+<td>source</td>
+<td>http-servlet</td>
+</tr>
+<tr>
+<td>grizzly-http-client.jar</td>
+<td>source</td>
+<td>http-client</td>
+</tr>
+<tr>
+<td>grizzly-portunif.jar</td>
+<td>source</td>
+<td>portunif</td>
+</tr>
+<tr>
+<td>grizzly-http-ajp.jar</td>
+<td>source</td>
+<td>http-ajp</td>
+</tr>
+<tr>
+<td>grizzly-websockets.jar</td>
+<td>source</td>
+<td>websockets</td>
+</tr>
+<tr>
+<td>grizzly-rcm.jar</td>
+<td>source</td>
+<td>rcm</td>
+</tr>
+<tr>
+<td>grizzly-spdy.jar</td>
+<td>source</td>
+<td>spdy</td>
+</tr>
+<tr>
+<td>grizzly-comet.jar</td>
+<td>source</td>
+<td>comet</td>
+</tr>
+<tr>
+<td>grizzly-http-server-multipart.jar</td>
+<td>source</td>
+<td>http-server-multipart</td>
+</tr>
+<tr>
+<td>grizzly-http-server-jaxws.jar</td>
+<td>source</td>
+<td>http-server-jaxws</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-extras.jar</td>
+<td>source</td>
+<td>http-servlet-extras</td>
+</tr>
+<tr>
+<td>grizzly-httpservice.jar</td>
+<td>source</td>
+<td>httpservice</td>
+</tr>
+<tr>
+<td>grizzly-framework-monitoring.jar</td>
+<td>source</td>
+<td>framework-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-monitoring.jar</td>
+<td>source</td>
+<td>http-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-server-monitoring.jar</td>
+<td>source</td>
+<td>http-server-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-core.jar</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>grizzly-http-server-core.jar</td>
+<td>source</td>
+<td>http-server-core</td>
+</tr>
+<tr>
+<td>grizzly-http-all.jar</td>
+<td>source</td>
+<td>http-all</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-server.jar</td>
+<td>source</td>
+<td>http-servlet-server</td>
+</tr>
+<tr>
+<td>grizzly-websockets-server.jar</td>
+<td>source</td>
+<td>websockets-server</td>
+</tr>
+<tr>
+<td>grizzly-comet-server.jar</td>
+<td>source</td>
+<td>comet-server</td>
+</tr>
+<tr>
+<td>grizzly-httpservice-bundle.jar</td>
+<td>source</td>
+<td>httpservice-bundle</td>
+</tr>
+<tr>
+<td>grizzly-npn-api.jar</td>
+<td>source</td>
+<td>npn-api</td>
+</tr>
+<tr>
+<td>grizzly-npn-bootstrap.jar</td>
+<td>source</td>
+<td>npn-bootstrap</td>
+</tr>
+<tr>
+<td>grizzly-framework.jar</td>
+<td>javadoc</td>
+<td>framework</td>
+</tr>
+<tr>
+<td>grizzly-http.jar</td>
+<td>javadoc</td>
+<td>http</td>
+</tr>
+<tr>
+<td>grizzly-http-server.jar</td>
+<td>javadoc</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet.jar</td>
+<td>javadoc</td>
+<td>http-servlet</td>
+</tr>
+<tr>
+<td>grizzly-http-client.jar</td>
+<td>javadoc</td>
+<td>http-client</td>
+</tr>
+<tr>
+<td>grizzly-portunif.jar</td>
+<td>javadoc</td>
+<td>portunif</td>
+</tr>
+<tr>
+<td>grizzly-http-ajp.jar</td>
+<td>javadoc</td>
+<td>http-ajp</td>
+</tr>
+<tr>
+<td>grizzly-websockets.jar</td>
+<td>javadoc</td>
+<td>websockets</td>
+</tr>
+<tr>
+<td>grizzly-rcm.jar</td>
+<td>javadoc</td>
+<td>rcm</td>
+</tr>
+<tr>
+<td>grizzly-spdy.jar</td>
+<td>javadoc</td>
+<td>spdy</td>
+</tr>
+<tr>
+<td>grizzly-comet.jar</td>
+<td>javadoc</td>
+<td>comet</td>
+</tr>
+<tr>
+<td>grizzly-http-server-multipart.jar</td>
+<td>javadoc</td>
+<td>http-server-multipart</td>
+</tr>
+<tr>
+<td>grizzly-http-server-jaxws.jar</td>
+<td>javadoc</td>
+<td>http-server-jaxws</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-extras.jar</td>
+<td>javadoc</td>
+<td>http-servlet-extras</td>
+</tr>
+<tr>
+<td>grizzly-httpservice.jar</td>
+<td>javadoc</td>
+<td>httpservice</td>
+</tr>
+<tr>
+<td>grizzly-framework-monitoring.jar</td>
+<td>javadoc</td>
+<td>framework-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-monitoring.jar</td>
+<td>javadoc</td>
+<td>http-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-http-server-monitoring.jar</td>
+<td>javadoc</td>
+<td>http-server-monitoring</td>
+</tr>
+<tr>
+<td>grizzly-core.jar</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>grizzly-http-server-core.jar</td>
+<td>javadoc</td>
+<td>http-server-core</td>
+</tr>
+<tr>
+<td>grizzly-http-all.jar</td>
+<td>javadoc</td>
+<td>http-all</td>
+</tr>
+<tr>
+<td>grizzly-http-servlet-server.jar</td>
+<td>javadoc</td>
+<td>http-servlet-server</td>
+</tr>
+<tr>
+<td>grizzly-websockets-server.jar</td>
+<td>javadoc</td>
+<td>websockets-server</td>
+</tr>
+<tr>
+<td>grizzly-comet-server.jar</td>
+<td>javadoc</td>
+<td>comet-server</td>
+</tr>
+<tr>
+<td>grizzly-httpservice-bundle.jar</td>
+<td>javadoc</td>
+<td>httpservice-bundle</td>
+</tr>
+<tr>
+<td>grizzly-npn-api.jar</td>
+<td>javadoc</td>
+<td>npn-api</td>
+</tr>
+<tr>
+<td>grizzly-npn-osgi.jar</td>
+<td>javadoc</td>
+<td>npn-osgi</td>
+</tr>
+<tr>
+<td>grizzly-npn-bootstrap.jar</td>
+<td>javadoc</td>
+<td>npn-bootstrap</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>3.0.1</td>
+<td>http-servlet-extras,http-all-&gt;default</td>
+</tr>
+<tr>
+<td>org.glassfish.gmbal</td>
+<td><a href="../../../org.glassfish.gmbal/gmbal/">gmbal</a></td>
+<td>3.2.0-b003</td>
+<td>framework-monitoring-&gt;default</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.6.4</td>
+<td>http-client-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-framework.jar</td>
+<td>6c56e9888aa3d0e79c6ee4efa049611948856435</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-framework.jar</td>
+<td>d5688d201d0a25c6138267f1e8589b15d82f9076</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-framework.jar</td>
+<td>1b4d130210914743ae2fdce024b56360ae365c00</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http.jar</td>
+<td>fb1bed070622294a38949df1b3ce03be588aa9ae</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http.jar</td>
+<td>d09945bc76ecf73e38c2bb19f4db4850e3c23c5d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http.jar</td>
+<td>7093010f3de83b38d59e4561c1a857458975314e</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-server.jar</td>
+<td>d1f28efa070edb3e5ba6241f349ac7380a33060e</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-server.jar</td>
+<td>0b627f148ad0f049be217b33555a1f27abae3761</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-server.jar</td>
+<td>766caadb004991b439469b8fd8647d6d36070ebd</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-servlet.jar</td>
+<td>05d0acdd8bac54b42f6dce71301eff1082dbfb7b</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-servlet.jar</td>
+<td>bb4fbafa05ef997cbe09858156ffc828323de653</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-servlet.jar</td>
+<td>0bd4fa8ba3312dc9055935376ae1c4eb6e26b1ba</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-client</td>
+<td>1.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-client.jar</td>
+<td>61a17bd75ccfdb54f8b90aae20aaa9322be63a32</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-client</td>
+<td>1.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-client.jar</td>
+<td>6a2a5674fb0a628712a206af9cb7024af2d3be95</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-client</td>
+<td>1.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-client.jar</td>
+<td>6e72f587aa79f0a1d6f49da86bb0638205803f98</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-portunif</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-portunif.jar</td>
+<td>1301cb5dc1b64194ad58d9f19e51669c80cc095d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-portunif</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-portunif.jar</td>
+<td>6dc7748b0d31ac9fbfbe97654cc41ab212ed9d80</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-portunif</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-portunif.jar</td>
+<td>86c7850832839d285b42d9ea3ba03e02e1506ba0</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-ajp</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-ajp.jar</td>
+<td>4ae1c5e9ec7180c6fccd54cc1e323f97ad88675d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-ajp</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-ajp.jar</td>
+<td>acf524a9989ebef548ff474099d0d5ec2d9096ed</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-ajp</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-ajp.jar</td>
+<td>51dfbeac1cccd723e0a2e533cd1a5661439b7b7d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-websockets.jar</td>
+<td>b0aa4962cdac9102be87d87c7f9d88e897040c92</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-websockets.jar</td>
+<td>4d6d71e17716bd52a2009744ee2cd5a717194c90</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-websockets.jar</td>
+<td>36209c70b3f803b3c5dce4374f06756f18f3e06c</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-rcm</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-rcm.jar</td>
+<td>b98cffb6352653185fbf03e7b07a4ab4eeb8c0be</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-rcm</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-rcm.jar</td>
+<td>ebcf7a9b95583373d3afb737d61a55b16bb3bd51</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-rcm</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-rcm.jar</td>
+<td>fbe535ec29594f3429fbcdcf9919949444740498</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-spdy</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-spdy.jar</td>
+<td>3875d302521b2df9969dc437546ef10fd76b3ca0</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-spdy</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-spdy.jar</td>
+<td>4f7c61d99edbafa7479f1781807c2c12ce6402ba</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-spdy</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-spdy.jar</td>
+<td>aebca4799aa8628ec4f80c952523523a52fde2e5</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-comet.jar</td>
+<td>3ddb569d0c22b0f3887d42ad6a828452796dad89</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-comet.jar</td>
+<td>326ae238dcc2822cb13c1b3fd3da3c926547fef3</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-comet.jar</td>
+<td>342523ed1deeb7465f992ce9dab14bf94a7481f5</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-multipart</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-server-multipart.jar</td>
+<td>c7507cc2c1bfaeaee1eeb0a3528273803ea40c95</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-multipart</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-server-multipart.jar</td>
+<td>09e6aa28b72010b3f265ba34cd0e1dd49cbfb885</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-multipart</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-server-multipart.jar</td>
+<td>2c5a975edbec60c6698f662d1261adcc02e219ec</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-jaxws</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-server-jaxws.jar</td>
+<td>9df1e1de8729f9844718eefabd02cf7f502a8bdd</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-jaxws</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-server-jaxws.jar</td>
+<td>a046934913f990bcd399eda2d369862b43551ccc</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-jaxws</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-server-jaxws.jar</td>
+<td>1d1b3f194b22f19c2c217acabddf02b3aa71e78a</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-extras</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-servlet-extras.jar</td>
+<td>d3298ecab191e4559fe2cf37424223e367589a40</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-extras</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-servlet-extras.jar</td>
+<td>f1b6e71d900602460cb0e017df2514066d608bbf</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-extras</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-servlet-extras.jar</td>
+<td>07912c88e410e9320e04af4d03c367b09b40ece3</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-httpservice.jar</td>
+<td>2516221524e80cabca9b3255983d2e784b3cb6f5</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-httpservice.jar</td>
+<td>673a6943484c39836b9ced3f6673b81a1bdf591b</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-httpservice.jar</td>
+<td>c3b1517ee29aaa18e3e82bb4b6db9dc62bc1e4cd</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework-monitoring</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-framework-monitoring.jar</td>
+<td>4771a7b855eaa73b9340110e40858fbb683f6275</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework-monitoring</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-framework-monitoring.jar</td>
+<td>ae720841c4b02b7dbfd0b9545ec9272eeec990bb</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-framework-monitoring</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-framework-monitoring.jar</td>
+<td>655650e35be7d8a5cf64b4faaed3d5a7a43ddc43</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-monitoring</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-monitoring.jar</td>
+<td>c9e9140e15469ff90a7433ca90e6047139d7493f</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-monitoring</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-monitoring.jar</td>
+<td>20630aed855c00cc130744958da09fc6c00daef7</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-monitoring</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-monitoring.jar</td>
+<td>e788c8213e90df6d462fe35f956cd5d450d6aead</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-monitoring</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-server-monitoring.jar</td>
+<td>6636f783d7f726079f5534bbc99885f12471bdbf</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-monitoring</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-server-monitoring.jar</td>
+<td>690e6e2ddfc007fd3eca3a05a6367cdd6159b4e5</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-monitoring</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-server-monitoring.jar</td>
+<td>80a97e635b40a75e667e730964b2b25fdc938c2c</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-core</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-core.jar</td>
+<td>dfce59bf6ed6dacc024d9bf4ecfc8e1c23f86663</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-core</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-core.jar</td>
+<td>3d32214e64b7faff4be0835975bdbd1d72df3a62</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-core</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-core.jar</td>
+<td>5da1e6d7cca7c3f9ac6b1acd1b7e79099a96a5fd</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-core</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-server-core.jar</td>
+<td>56ed8bf46964316fed5e74840f75cf4c7d2f1d98</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-core</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-server-core.jar</td>
+<td>8938f8c4e7997e836dd28113508bdbec89a2d576</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-server-core</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-server-core.jar</td>
+<td>395a90a7e6946148590b784f5a3b9e00bb41d44a</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-all</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-all.jar</td>
+<td>e5a9a203073e9e532ec48e39fe9ddbc2271eb259</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-all</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-all.jar</td>
+<td>b8fff330b01e07fa9b17121acec78c88daccb815</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-all</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-all.jar</td>
+<td>b7f55b9e1b1d5324f93fb563496c073130639948</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-server</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-http-servlet-server.jar</td>
+<td>6fe73c3d6fc9f1587be11a46195a5b181b2dd9b6</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-server</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-http-servlet-server.jar</td>
+<td>48bd0f4b7f8d45494189820e89ddd00a9d5665fa</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-http-servlet-server</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-http-servlet-server.jar</td>
+<td>469d51f51f84baf8f88002afb53d05d41ea0d0bc</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets-server</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-websockets-server.jar</td>
+<td>1f650d18ece0cdb7a64cefb8201a339e71545778</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets-server</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-websockets-server.jar</td>
+<td>41dc10f4086557466a5e0fb44b1e0653b5e2c1e4</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-websockets-server</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-websockets-server.jar</td>
+<td>c0f90d43bebdb0c1ee5a3f3c9c2573582675885d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet-server</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-comet-server.jar</td>
+<td>45889735f3d67dd5485d04cf9b0c61b54c76fc2d</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet-server</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-comet-server.jar</td>
+<td>da7238d059230e116983bf493f5792f994d96172</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-comet-server</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-comet-server.jar</td>
+<td>322b7a9d530a2a207df474db12ee532dd2f1ebce</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-api</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-npn-api.jar</td>
+<td>f0f7843e0b5e5d237c62ecacfcc43bd178cb48e7</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-api</td>
+<td>1.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-npn-api.jar</td>
+<td>726f9d159c86e8df43e20965592548a31810fbfb</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-api</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-npn-api.jar</td>
+<td>9d6e7809d83494c4469aadd5123d4e83b4de38c3</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-osgi</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-npn-osgi.jar</td>
+<td>44f529428e6f0d5fa04427566a46b1f2bc64c481</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-osgi</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-npn-osgi.jar</td>
+<td>7423f37fd6efa073dfa34add365a9fd821a0f19c</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-bootstrap</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-npn-bootstrap.jar</td>
+<td>d770ed264a0ef658db2fdd346cb9a5af5bdedc1c</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-bootstrap</td>
+<td>1.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-npn-bootstrap.jar</td>
+<td>439e38608d59bfcdcae3e040f34a6293249ff0a0</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td>grizzly-npn-bootstrap</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-npn-bootstrap.jar</td>
+<td>a4d50c84abf0c45340e901e1db75a43efeac0955</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice-bundle</td>
+<td>2.3.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/grizzly-httpservice-bundle.jar</td>
+<td>7b42ce8775ebc1748022908e78fe120a297b7df9</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice-bundle</td>
+<td>2.3.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/grizzly-httpservice-bundle.jar</td>
+<td>473a587fd4460fff0a111206d9cd9e648e3b4c53</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly.osgi</td>
+<td>grizzly-httpservice-bundle</td>
+<td>2.3.4</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/grizzly-httpservice-bundle.jar</td>
+<td>72c24e1fbe840131e441b7eaec325f04a84483d4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

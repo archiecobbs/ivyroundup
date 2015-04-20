@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>hazelcast by com.hazelcast :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.hazelcast/hazelcast/">hazelcast</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.hazelcast/">com.hazelcast</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.8</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://hazelcast.com/">http://hazelcast.com/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.hazelcast/hazelcast/1.8/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://hazelcast.com/">
+            Hazelcast is an open source clustering and highly scalable data distribution platform for Java, which is:
+            <ul>
+                <li>
+<strong>Lightning-fast;</strong> thousands of operations/sec.</li>
+                <li>
+<strong>Fail-safe;</strong> no losing data after crashes.</li>
+                <li>
+<strong>Dynamically scales</strong> as new servers added.</li>
+                <li>
+<strong>Super-easy to use</strong>; include a single jar.</li>
+            </ul>
+            With its various distributed data structures, distributed caching capabilities, elastic nature, memcache support, integration with Spring and Hibernate and more importantly so many happy users, Hazelcast is feature-rich, enterprise-ready and developer-friendly in-memory data grid solution.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core classes</td>
+<td></td>
+</tr>
+<tr>
+<td>client</td>
+<td>Java "Native Client"</td>
+<td>core</td>
+</tr>
+<tr>
+<td>hibernate</td>
+<td>Hibernate second level cache</td>
+<td></td>
+</tr>
+<tr>
+<td>jca</td>
+<td>JCA resource adapter</td>
+<td></td>
+</tr>
+<tr>
+<td>wm</td>
+<td>Session clustering</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>All classes</td>
+<td>core,client,hibernate,jca,wm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>hazelcast-core.jar</td>
+<td>jar</td>
+<td>default,core</td>
+</tr>
+<tr>
+<td>hazelcast-client.jar</td>
+<td>jar</td>
+<td>default,client</td>
+</tr>
+<tr>
+<td>hazelcast-hibernate.jar</td>
+<td>jar</td>
+<td>default,hibernate</td>
+</tr>
+<tr>
+<td>hazelcast-ra.rar</td>
+<td>jar</td>
+<td>default,jca</td>
+</tr>
+<tr>
+<td>hazelcast-wm.jar</td>
+<td>jar</td>
+<td>default,wm</td>
+</tr>
+<tr>
+<td>hazelcast-core.zip</td>
+<td>source</td>
+<td>default,core</td>
+</tr>
+<tr>
+<td>hazelcast-client.zip</td>
+<td>source</td>
+<td>default,client</td>
+</tr>
+<tr>
+<td>hazelcast-hibernate.zip</td>
+<td>source</td>
+<td>default,hibernate</td>
+</tr>
+<tr>
+<td>hazelcast-ra.zip</td>
+<td>source</td>
+<td>default,jca</td>
+</tr>
+<tr>
+<td>hazelcast-wm.zip</td>
+<td>source</td>
+<td>default,wm</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[3.3.2.GA,4[</td>
+<td>hibernate-&gt;core</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast</td>
+<td>1.8</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/hazelcast-core.jar</td>
+<td>cf12e9a2a7a817207b6c6a8a3b7b8423bd458c23</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast</td>
+<td>1.8</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/hazelcast-core.zip</td>
+<td>cb8d6bfbba05caab43bdaac4d163a0e4e238d942</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-client</td>
+<td>1.8</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/hazelcast-client.jar</td>
+<td>f02e757ea3560dea0da436dc18e2d65c9334fc39</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-client</td>
+<td>1.8</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/hazelcast-client.zip</td>
+<td>ca5a62d26185fa3f1ed8a0a1f45d0e94f4313fd1</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-hibernate</td>
+<td>1.8</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/hazelcast-hibernate.jar</td>
+<td>e95c42e5e55a331eb951a877a7a49ccbde867ce1</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-hibernate</td>
+<td>1.8</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/hazelcast-hibernate.zip</td>
+<td>02ef3126f5daca052384fd3e3e6d9e2c9eb900eb</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-ra</td>
+<td>1.8</td>
+<td></td>
+<td></td>
+<td>Copy to artifacts/jars/hazelcast-ra.rar</td>
+<td>2cb56abfb991f163a91228ca8761abf46dc6867a</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-ra</td>
+<td>1.8</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/hazelcast-ra.zip</td>
+<td>4eddb36dac3dc40aff2385e0887767281bdcb2bb</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-wm</td>
+<td>1.8</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/hazelcast-wm.jar</td>
+<td>08439c77b28cd06ce3d99079c97a93b1247a58dc</td>
+</tr>
+<tr>
+<td>com.hazelcast</td>
+<td>hazelcast-wm</td>
+<td>1.8</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/hazelcast-wm.zip</td>
+<td>3f4b31edabf245e9449575d0f3b1026c17c5a068</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

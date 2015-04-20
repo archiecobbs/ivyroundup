@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>XmlSchema by org.apache.ws.commons :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.ws.commons/XmlSchema/">XmlSchema</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.ws.commons/">org.apache.ws.commons</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.0.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://ws.apache.org/commons/XmlSchema/">http://ws.apache.org/commons/XmlSchema/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.ws.commons/XmlSchema/2.0.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://ws.apache.org/commons/XmlSchema/">XMLSchema is a
+        lightweight Java object model that can be used to manipulate and generate XML schema
+        representations. You can use it to read XML Schema (xsd) files into memory and analyze
+        or modify them, or to create entirely new schemata from scratch.</description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>XmlSchema.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>xmlschema-core-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://archive.apache.org/dist/ws/xmlschema/${revision}/xmlschema-core-${revision}-bin.zip</td>
+<td>Unpack into archive/</td>
+<td>342ae86f9f1bae97b4f688f831f24736646ad8cb</td>
+</tr>
+<tr>
+<td>http://archive.apache.org/dist/ws/xmlschema/${revision}/xmlschema-${revision}-source-release.zip</td>
+<td>Unpack into archive/</td>
+<td>20102baba31a28ad747067270e3cfcaca034605e</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/xmlschema-${revision}/xmlschema-core/src/main/java/"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+    &lt;!--
+        &lt;move file="archive/${archive}/${archive}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip"/&gt;
+    --&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

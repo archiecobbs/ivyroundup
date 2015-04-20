@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>datecalc by net.objectlab.kit :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.objectlab.kit/datecalc/">datecalc</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.objectlab.kit/">net.objectlab.kit</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.4.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://objectlabkit.sourceforge.net/">http://objectlabkit.sourceforge.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.objectlab.kit/datecalc/1.4.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://objectlabkit.sourceforge.net/">
+
+            <p>
+Apart from the very basic "add days" features, most business have to deal with Holidays and what to do when a calculated day falls on a holiday . This library does not attempt to create or guess the holidays, we all know that some bank holidays can be decided at a moment's notice in some markets. All financial institutions or big business will have their own official list of 'holidays' anyway.<br><br>
+
+Furthermore, "weekends" also need to be handled and some market have a different week to the conventional Monday -&gt; Friday, our library provides you with full flexibility to design a Working Week.<br><br>
+
+As such a Non-working Day can be a holiday or a 'weekend'. Also note that CurrencyPairs have a specialised calculator as the rules can be 'weird'.  See <a href="http://objectlabkit.sourceforge.net/currency.html">this</a> for more information.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>common</td>
+<td>Common classes</td>
+<td></td>
+</tr>
+<tr>
+<td>jdk</td>
+<td>JDK Implementation</td>
+<td>common</td>
+</tr>
+<tr>
+<td>joda</td>
+<td>Joda Time Implementation</td>
+<td>common</td>
+</tr>
+<tr>
+<td>jdk8</td>
+<td>JDK 8 Implementation</td>
+<td>common</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default Implementation (JDK)</td>
+<td>jdk</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>datecalc-common.jar</td>
+<td>jar</td>
+<td>common</td>
+</tr>
+<tr>
+<td>datecalc-jdk.jar</td>
+<td>jar</td>
+<td>jdk</td>
+</tr>
+<tr>
+<td>datecalc-joda.jar</td>
+<td>jar</td>
+<td>joda</td>
+</tr>
+<tr>
+<td>datecalc-jdk8.jar</td>
+<td>jar</td>
+<td>jdk8</td>
+</tr>
+<tr>
+<td>datecalc-common.jar</td>
+<td>source</td>
+<td>common</td>
+</tr>
+<tr>
+<td>datecalc-jdk.jar</td>
+<td>source</td>
+<td>jdk</td>
+</tr>
+<tr>
+<td>datecalc-joda.jar</td>
+<td>source</td>
+<td>joda</td>
+</tr>
+<tr>
+<td>datecalc-jdk8.jar</td>
+<td>source</td>
+<td>jdk8</td>
+</tr>
+<tr>
+<td>datecalc-common.jar</td>
+<td>javadoc</td>
+<td>common</td>
+</tr>
+<tr>
+<td>datecalc-jdk.jar</td>
+<td>javadoc</td>
+<td>jdk</td>
+</tr>
+<tr>
+<td>datecalc-joda.jar</td>
+<td>javadoc</td>
+<td>joda</td>
+</tr>
+<tr>
+<td>datecalc-jdk8.jar</td>
+<td>javadoc</td>
+<td>jdk8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>org.joda</td>
+<td><a href="../../../org.joda/joda-time/">joda-time</a></td>
+<td>1.6</td>
+<td>joda-&gt;default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-common</td>
+<td>1.4.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/datecalc-common.jar</td>
+<td>1928a0730f0d83e505b81b2211a8ff25185bd4ee</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-common</td>
+<td>1.4.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/datecalc-common.jar</td>
+<td>614f45565d451386c4749b39da9ebf9cb6bc85dc</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-common</td>
+<td>1.4.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/datecalc-common.jar</td>
+<td>4b4cf641191af3ebd7b924493af0910585bc9c17</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk</td>
+<td>1.4.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/datecalc-jdk.jar</td>
+<td>39b623d439a3482a97a3394ebae074245152a4d8</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk</td>
+<td>1.4.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/datecalc-jdk.jar</td>
+<td>087fa15b101e2b30b7335233d1f096cca67f0658</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk</td>
+<td>1.4.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/datecalc-jdk.jar</td>
+<td>97e3a10063241be808be0d650ed68952a4bc81e1</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-joda</td>
+<td>1.4.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/datecalc-joda.jar</td>
+<td>104e355fc486a30d73b7f642cc1428bac97bbeab</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-joda</td>
+<td>1.4.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/datecalc-joda.jar</td>
+<td>ab9cfe4616efc269a74a3502212d8afb38fb0c9c</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-joda</td>
+<td>1.4.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/datecalc-joda.jar</td>
+<td>59fc4965ffd7252141e6f3c0a63d13959dd2d605</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk8</td>
+<td>1.4.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/datecalc-jdk8.jar</td>
+<td>bd0a41e40939426443b55829197c4b28e972e3a8</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk8</td>
+<td>1.4.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/datecalc-jdk8.jar</td>
+<td>cf2fdebe2d2113dda924a04c812982045135256a</td>
+</tr>
+<tr>
+<td>net.objectlab.kit</td>
+<td>datecalc-jdk8</td>
+<td>1.4.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/datecalc-jdk8.jar</td>
+<td>359de52d328aab9e4a8a640897c66de95ccaa64a</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

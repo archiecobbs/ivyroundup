@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>ant-doxygen by net.sourceforge.ant-doxygen :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.sourceforge.ant-doxygen/ant-doxygen/">ant-doxygen</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.sourceforge.ant-doxygen/">net.sourceforge.ant-doxygen</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.6.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://ant-doxygen.blogspot.de/">http://ant-doxygen.blogspot.de/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License, Version 2.1</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.ant-doxygen/ant-doxygen/1.6.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://ant-doxygen.blogspot.de/">
+            <p>
+                This package contains the Ant task to use doxygen, a document
+                generation utility software.
+            </p>
+            <p>
+                Ant was initially designed to be a build maintenance utility -
+                but now it has a whole lot of projects that extend its
+                features beyond its original intentions. To know more about
+                the same - visit Ant Apache home page.
+            </p>
+            <p>
+                Doxygen is a document generation utility that is used to
+                generate a variety of documents (html/pdf/hlp/dot - among
+                others) from the given set of source files, by parsing the
+                structures and comments in the same.To know more about the
+                same - visit Doxygen home page.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td>Default configuration</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ant-doxygen.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>ant-doxygen.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}-bin-${revision}.tgz</td>
+<td>Unpack into archive/</td>
+<td>98764e5f888c224c65ea78f670940a97221fe45d</td>
+</tr>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}-src/${revision}/${name}-src-${revision}.tgz</td>
+<td>Unpack into archive/</td>
+<td>b2982dcb915e98c62ed30d86ccf47d08af3e2fa5</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/lib/ant_doxygen.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- sources --&gt;
+        &lt;zip destfile="artifacts/sources/${name}.zip"&gt;
+            &lt;fileset dir="archive/src"&gt;
+                &lt;include name="**/*"/&gt;
+            &lt;/fileset&gt;
+        &lt;/zip&gt;
+
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

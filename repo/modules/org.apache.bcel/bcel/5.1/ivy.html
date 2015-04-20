@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>bcel by org.apache.bcel :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.bcel/bcel/">bcel</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.bcel/">org.apache.bcel</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>5.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://commons.apache.org/proper/commons-bcel/">http://commons.apache.org/proper/commons-bcel/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.bcel/bcel/5.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://commons.apache.org/proper/commons-bcel/">
+        <p>
+        The Byte Code Engineering Library is intended to give users a
+        convenient possibility to analyze, create, and manipulate (binary)
+        Java class files (those ending with .class). Classes are represented
+        by objects which contain all the symbolic information of the given
+        class: methods, fields and byte code instructions, in particular.
+        </p>
+        <p>
+        Such objects can be read from an existing file, be transformed by a
+        program (e.g. a class loader at run-time) and dumped to a file again.
+        An even more interesting application is the creation of classes from
+        scratch at run-time. The Byte Code Engineering Library (BCEL) may be
+        also useful if you want to learn about the Java Virtual Machine (JVM)
+        and the format of Java .class files.
+        </p>
+        <p>
+        BCEL contains a byte code verifier named JustIce, which usually gives
+        you much better information about what's wrong with your code than the
+        standard JVM message.
+        </p>
+        <p>
+        BCEL is already being used successfully in several projects such as
+        compilers, optimizers, obsfuscators, code generators and analysis
+        tools. Unfortunately there hasn't been much development going on over
+        the past few years. Feel free to help out or you might want to have a
+        look into the ASM project at objectweb.
+        </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>bcel.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://archive.apache.org/dist/jakarta/${name}/source/${archive}-src.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>f6d6173adc6555a8b3a5d74405d90ab29f47886f</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;unzip src="archive/${archive}.zip" dest="archive"/&gt;
+        &lt;unzip src="archive/${archive}-src.zip" dest="archive"/&gt;
+
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src/java"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/docs/apidocs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

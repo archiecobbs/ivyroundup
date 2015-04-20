@@ -58,8 +58,13 @@ regenerate_repo
     rm -rf repo/modules/"${DIR}"
 done
 
-# Generate HTML file
+# Generate HTML files
+echo 'regenrepo: regenerating HTML files' "$1"
 xsltproc repo/xsl/modules.xsl repo/modules.xml > repo/modules.html
+git status  --porcelain repo/modules | grep -E '/ivy.xml$' | cut -c 4- | while read IVYFILE; do
+    HTMLFILE=`echo "${IVYFILE}" | sed 's/\.xml$/.html/g'`
+    xsltproc repo/xsl/ivy-doc.xsl "${IVYFILE}" > "${HTMLFILE}"
+done
 
 # Done
 echo 'regenrepo: done'

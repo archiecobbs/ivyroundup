@@ -1,0 +1,301 @@
+<html>
+<head>
+<title>jackson by org.codehaus.jackson :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.codehaus.jackson/jackson/">jackson</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.codehaus.jackson/">org.codehaus.jackson</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.9.4</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://jackson.codehaus.org/">http://jackson.codehaus.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0 OR LGPL</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.codehaus.jackson/jackson/1.9.4/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://jackson.codehaus.org/">
+            <p>
+                Jackson is a:
+                <ul>
+                    <li>Streaming (reading, writing)</li>
+                    <li>FAST (measured to be faster than any other Java json parser and data binder)</li>
+                    <li>Powerful (full data binding for common JDK classes as well as any Java bean class, Collection, Map or Enum)</li>
+                    <li>Zero-dependency (does not rely on other packages beyond JDK)</li>
+                    <li>Open Source (LGPL or AL)</li>
+                    <li>Fully conformant</li>
+                </ul>
+                JSON processor (JSON parser + JSON generator) written in Java. Beyond basic JSON
+                reading/writing (parsing, generating), it also offers full node-based Tree Model,
+                as well as full OJM (Object/Json Mapper) data binding functionality.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core API</td>
+<td></td>
+</tr>
+<tr>
+<td>mapper</td>
+<td>Contains functionality for data binding</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default config (equivalent to core conf)</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jaxrs</td>
+<td>Contains class(es) needed to make a JAX-RS implementation use Jackson for simple, convenient and lightning fast binding of JSON to/from Java objects</td>
+<td>mapper</td>
+</tr>
+<tr>
+<td>mrbean</td>
+<td>Contains functionality for Materialized Beans -- ability to let Jackson create implementation classes (not just instances!) for interfaces and abstract classes. Depends on mappper and core modules</td>
+<td>mapper</td>
+</tr>
+<tr>
+<td>smile</td>
+<td>Contains support for JSON-compatible binary format called 'Smile'. It depends on core module.</td>
+<td>core</td>
+</tr>
+<tr>
+<td>xc</td>
+<td>Contains classes needed to add XML compatibility support</td>
+<td>mapper</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jackson-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-jaxrs.jar</td>
+<td>jar</td>
+<td>jaxrs</td>
+</tr>
+<tr>
+<td>jackson-mapper.jar</td>
+<td>jar</td>
+<td>mapper</td>
+</tr>
+<tr>
+<td>jackson-mrbean.jar</td>
+<td>jar</td>
+<td>mrbean</td>
+</tr>
+<tr>
+<td>jackson-smile.jar</td>
+<td>jar</td>
+<td>smile</td>
+</tr>
+<tr>
+<td>jackson-xc.jar</td>
+<td>jar</td>
+<td>xc</td>
+</tr>
+<tr>
+<td>jackson-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jackson-jaxrs.zip</td>
+<td>source</td>
+<td>jaxrs</td>
+</tr>
+<tr>
+<td>jackson-mapper.zip</td>
+<td>source</td>
+<td>mapper</td>
+</tr>
+<tr>
+<td>jackson-mrbean.zip</td>
+<td>source</td>
+<td>mrbean</td>
+</tr>
+<tr>
+<td>jackson-smile.zip</td>
+<td>source</td>
+<td>smile</td>
+</tr>
+<tr>
+<td>jackson-xc.zip</td>
+<td>source</td>
+<td>xc</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-core-asl</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-core.jar</td>
+<td>8d8b2a3e5bc77ee1be67d060b44ac77d48a27d6e</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-core-asl</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-core.zip</td>
+<td>6900e0981e0cb1dbef3f5478fea10d08697943f0</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-jaxrs</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-jaxrs.jar</td>
+<td>d8bc9143b5c3ed0ba2f6c26586eb1136e25f3197</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-jaxrs</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-jaxrs.zip</td>
+<td>61fe9fb03134ca51320a637e425e24bd88c5397f</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-mapper-asl</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-mapper.jar</td>
+<td>5206191b35112f50b8e25fcbd3f3b84e12e11cee</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-mapper-asl</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-mapper.zip</td>
+<td>b02c74ecea713097e92b037a27cdf9bbd2d96615</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-mrbean</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-mrbean.jar</td>
+<td>9ba4f9943adf0627a015cc4f61e6adb2414922dc</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-mrbean</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-mrbean.zip</td>
+<td>9865e99ac0a174f4c3969b36b2df0627b3210684</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-smile</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-smile.jar</td>
+<td>ffabd4a1aea728f42ec7b8fb1f7f5c0bb9c565f5</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-smile</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-smile.zip</td>
+<td>71944b4866536492631bced9eb03d8d98bc25d51</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-xc</td>
+<td>1.9.4</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jackson-xc.jar</td>
+<td>576dfa6604c247b9e84e374a842b8cf3ff513bcc</td>
+</tr>
+<tr>
+<td>org.codehaus.jackson</td>
+<td>jackson-xc</td>
+<td>1.9.4</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jackson-xc.zip</td>
+<td>e47da62999e2918ce8f5d561cd136d42fdc8b321</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

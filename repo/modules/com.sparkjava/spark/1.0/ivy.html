@@ -1,0 +1,275 @@
+<html>
+<head>
+<title>spark by com.sparkjava :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.sparkjava/spark/">spark</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.sparkjava/">com.sparkjava</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://sparkjava.com/">http://sparkjava.com/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.sparkjava/spark/1.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://sparkjava.com/">
+            <p>
+            A Sinatra inspired micro web framework for quickly creating web applications in Java with minimal effort.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core Framework</td>
+<td></td>
+</tr>
+<tr>
+<td>jetty</td>
+<td>With built-in Jetty</td>
+<td>core</td>
+</tr>
+<tr>
+<td>template-velocity</td>
+<td>Velocity Template Support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>template-freemarker</td>
+<td>Freemarker Template Support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Core Framework with Jetty Support</td>
+<td>jetty</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>spark-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spark-template-velocity.jar</td>
+<td>jar</td>
+<td>template-velocity</td>
+</tr>
+<tr>
+<td>spark-template-freemarker.jar</td>
+<td>jar</td>
+<td>template-freemarker</td>
+</tr>
+<tr>
+<td>spark-core.jar</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spark-template-velocity.jar</td>
+<td>source</td>
+<td>template-velocity</td>
+</tr>
+<tr>
+<td>spark-template-freemarker.jar</td>
+<td>source</td>
+<td>template-freemarker</td>
+</tr>
+<tr>
+<td>spark-core.jar</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spark-template-velocity.jar</td>
+<td>javadoc</td>
+<td>template-velocity</td>
+</tr>
+<tr>
+<td>spark-template-freemarker.jar</td>
+<td>javadoc</td>
+<td>template-freemarker</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.7.2</td>
+<td>core,template-freemarker-&gt;core</td>
+</tr>
+<tr>
+<td>org.apache.velocity</td>
+<td><a href="../../../org.apache.velocity/velocity/">velocity</a></td>
+<td>1.7</td>
+<td>template-velocity-&gt;default</td>
+</tr>
+<tr>
+<td>net.sourceforge.freemarker</td>
+<td><a href="../../../net.sourceforge.freemarker/freemarker/">freemarker</a></td>
+<td>2.3.19</td>
+<td>template-freemarker-&gt;default</td>
+</tr>
+<tr>
+<td>org.eclipse</td>
+<td><a href="../../../org.eclipse/jetty/">jetty</a></td>
+<td>9.0.0.v20130308</td>
+<td>jetty-&gt;server,webapp</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-core</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spark-core.jar</td>
+<td>1c53def30fda2cfbc2c94fef5855471e2efa0730</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-core</td>
+<td>1.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spark-core.jar</td>
+<td>90b69829c96868f23a0e12c8afe0cce58cfecbb3</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-core</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spark-core.jar</td>
+<td>24a9e69921482262fbc7b8aa735300ec81eb7ee2</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-velocity</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spark-template-velocity.jar</td>
+<td>9b10065a9471b3e0bd9a2f1dcbb6f8bb0833324c</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-velocity</td>
+<td>1.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spark-template-velocity.jar</td>
+<td>4a3fcc9a6644ee74407ac867ee9ea006424ff505</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-velocity</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spark-template-velocity.jar</td>
+<td>fbbf6e8b3efc1415b7a2c193faafd3804554c42d</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-freemarker</td>
+<td>1.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spark-template-freemarker.jar</td>
+<td>3b1c6993f46b80c1ce7b1c7505c2ad3c9d4083ba</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-freemarker</td>
+<td>1.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spark-template-freemarker.jar</td>
+<td>232cc21abf66d6347727e147054336813380bf89</td>
+</tr>
+<tr>
+<td>com.sparkjava</td>
+<td>spark-template-freemarker</td>
+<td>1.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spark-template-freemarker.jar</td>
+<td>013ffb4921b8d3859a6c7c83f5cbbd2910d251ca</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

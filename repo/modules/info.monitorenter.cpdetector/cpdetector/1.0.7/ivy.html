@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>cpdetector by info.monitorenter.cpdetector :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../info.monitorenter.cpdetector/cpdetector/">cpdetector</a></span> 
+    by 
+    <span id="organisation"><a href="../../../info.monitorenter.cpdetector/">info.monitorenter.cpdetector</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.0.7</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://cpdetector.sourceforge.net/index.shtml">http://cpdetector.sourceforge.net/index.shtml</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://www.mozilla.org/MPL/1.1/index.txt">Mozilla Public License, Version 1.1</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/info.monitorenter.cpdetector/cpdetector/1.0.7/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://cpdetector.sourceforge.net/index.shtml">
+
+            <p>
+            The name <b>cpdetector</b> is a short form for code
+            page - detector and has nothing to do with java classpaths.
+            <b>cpdetector</b> is a framework for configurable code
+            page-detection of documents. It may be used to detect
+            the code page of documents retrieved from remote hosts.
+            Code page - detection is needed whenever it is not
+            known, which encoding a document belongs to. Therefore
+            it is a core requirement for any application in the
+            field of information mining or just information retrieval.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>cpdetector.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>chardet.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>net.sourceforge.jargs</td>
+<td><a href="../../../net.sourceforge.jargs/jargs/">jargs</a></td>
+<td>1.0</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.antlr</td>
+<td><a href="../../../org.antlr/antlr/">antlr</a></td>
+<td>2.7+</td>
+<td>default-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}/binaries/${name}_${revision}_binary.zip</td>
+<td>Unpack into archive/</td>
+<td>89a873a0f19fd5060febf19198d2ca1e3cf63ea8</td>
+</tr>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}/sources/${name}_eclipse_project_${revision}.zip</td>
+<td>Unpack into archive/</td>
+<td>31a2c5eb0dd1d1ba84e9454a964eec6439507559</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${name}_${revision}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/ext/chardet.jar" tofile="artifacts/jars/chardet.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${name}/src"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+&lt;!--
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/javadoc"/&gt;
+        &lt;/zip&gt;
+--&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

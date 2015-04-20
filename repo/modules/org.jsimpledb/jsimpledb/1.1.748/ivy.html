@@ -1,0 +1,339 @@
+<html>
+<head>
+<title>jsimpledb by org.jsimpledb :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.jsimpledb/jsimpledb/">jsimpledb</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.jsimpledb/">org.jsimpledb</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.1.748</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://code.google.com/p/jsimpledb/">https://code.google.com/p/jsimpledb/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jsimpledb/jsimpledb/1.1.748/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://code.google.com/p/jsimpledb/">
+
+        <p>
+        JSimpleDB makes powerful persistence simple for Java programmers.
+        </p>
+
+        <p>
+        JSimpleDB's goal is to make Java persistence as simple as possible,
+        doing so in a Java-centric manner, while remaining strictly type safe.
+        </p>
+
+        <p>
+        JSimpleDB does this without sacrificing flexibility or scalability by
+        relegating the database to the simplest role possible - storing data as
+        key/value pairs - and providing all other supporting features, such as
+        indexes, command line interface, etc., in a simpler, type-safe,
+        Java-centric way.
+        </p>
+
+        <p>
+        JSimpleDB also adds important new features that traditional databases
+        don't provide.
+        </p>
+
+        <ul>
+            <li>Designed from the ground up to be Java-centric; completely type-safe.</li>
+            <li>Works on top of any database that can function as a key/value store (SQL, NoSQL, etc.)</li>
+            <li>Scales gracefully to large data sets; no "whole database" operation is ever required</li>
+            <li>Configured entirely via Java annotations (only one is required)</li>
+            <li>Queries are regular Java code - there is no "query language" needed</li>
+            <li>Change notifications from arbitrarily distant objects</li>
+            <li>Built-in support for rolling schema changes across multiple nodes with no downtime</li>
+            <li>Supports simple and composite indexes and user-defined custom types</li>
+            <li>Extensible command line interface (CLI) supporting arbitrary Java queries</li>
+            <li>Built-in Java-aware graphical user interface (GUI) based on Vaadin</li>
+        </ul>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>JSimpleDB and only required dependencies</td>
+<td></td>
+</tr>
+<tr>
+<td>cli</td>
+<td>JSimpleDB command line interface (CLI) classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>cli-deps</td>
+<td>CLI dependencies</td>
+<td>cli</td>
+</tr>
+<tr>
+<td>gui</td>
+<td>JSimpleDB graphical user interface (GUI) classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>gui-deps</td>
+<td>GUI dependencies</td>
+<td>gui</td>
+</tr>
+<tr>
+<td>spring</td>
+<td>Spring Framework integration classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spring-deps</td>
+<td>Spring dependencies</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>fdb</td>
+<td>Add FoundationDB dependency</td>
+<td>core</td>
+</tr>
+<tr>
+<td>bdb</td>
+<td>Add Berkeley DB Java Edition dependency</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>JSimpleDB plus CLI, GUI, and Spring support</td>
+<td>core,cli,gui,spring</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jsimpledb.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jsimpledb-cli.jar</td>
+<td>jar</td>
+<td>cli</td>
+</tr>
+<tr>
+<td>jsimpledb-gui.jar</td>
+<td>jar</td>
+<td>gui</td>
+</tr>
+<tr>
+<td>jsimpledb-spring.jar</td>
+<td>jar</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.foundationdb</td>
+<td><a href="../../../com.foundationdb/fdb-java/">fdb-java</a></td>
+<td>3+</td>
+<td>fdb-&gt;default</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td><a href="../../../com.google.guava/guava/">guava</a></td>
+<td>18.0</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>com.sleepycat</td>
+<td><a href="../../../com.sleepycat/berkeley-db-java/">berkeley-db-java</a></td>
+<td>6+</td>
+<td>bdb-&gt;default</td>
+</tr>
+<tr>
+<td>com.vaadin</td>
+<td><a href="../../../com.vaadin/vaadin/">vaadin</a></td>
+<td>7.3+</td>
+<td>gui-deps-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>3.1.0</td>
+<td>gui-deps-&gt;default</td>
+</tr>
+<tr>
+<td>javax.validation</td>
+<td><a href="../../../javax.validation/validation-api/">validation-api</a></td>
+<td>1.0.0.GA</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.aspectj</td>
+<td><a href="../../../org.aspectj/aspectj/">aspectj</a></td>
+<td>1.8+</td>
+<td>gui-deps-&gt;default</td>
+</tr>
+<tr>
+<td>org.dellroad</td>
+<td><a href="../../../org.dellroad/dellroad-stuff/">dellroad-stuff</a></td>
+<td>1.0.964</td>
+<td>core-&gt;core</td>
+</tr>
+<tr>
+<td>org.eclipse</td>
+<td><a href="../../../org.eclipse/jetty/">jetty</a></td>
+<td>9.2.7.v20150116</td>
+<td>gui-deps-&gt;webapp,annotations</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.7+</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.sonatype.jline</td>
+<td><a href="../../../org.sonatype.jline/jline/">jline</a></td>
+<td>2.12</td>
+<td>cli-deps-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>4.1+</td>
+<td>gui-deps,spring-deps-&gt;aop,aspects,beans,context,tx,web; cli-deps-&gt;context</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}.jar</td>
+<td>52c45aff2e189860e3f2653a2fbf88f2df5172f8</td>
+</tr>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td>cli</td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}-cli.jar</td>
+<td>2f7e9f58b15e1e0a396a4939c09de4d023c2d719</td>
+</tr>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td>gui</td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}-gui.jar</td>
+<td>00990633f725b712101f4027775f8900e60752d9</td>
+</tr>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td>spring</td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}-spring.jar</td>
+<td>1399d95a2de9623b276a650b541b157ca26b34ea</td>
+</tr>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>69637694a4e08d2e76d44a9d6fad56d4d3a1ec48</td>
+</tr>
+<tr>
+<td>org.jsimpledb</td>
+<td>jsimpledb</td>
+<td>1.1.748</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>8eea8227850e77dad8d8f8a86798d66778c0c62b</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

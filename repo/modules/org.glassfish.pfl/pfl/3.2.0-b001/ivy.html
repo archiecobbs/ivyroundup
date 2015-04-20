@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>pfl by org.glassfish.pfl :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.glassfish.pfl/pfl/">pfl</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.glassfish.pfl/">org.glassfish.pfl</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.2.0-b001</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://java.net/projects/gmbal/pages/Home">https://java.net/projects/gmbal/pages/Home</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://glassfish.java.net/public/CDDL+GPL.html">CDDL 1.0 + GPL</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.glassfish.pfl/pfl/3.2.0-b001/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://java.net/projects/gmbal/pages/Home">
+
+            <p>
+            The Primitive Function Library is a support library for the Glassfish MBean Annotation Library.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>asm</td>
+<td>Repackaged ObjectWeb ASM 3.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>basic</td>
+<td>Base library for functions, logex, fsm, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td>basic-tools</td>
+<td>Build time tools for pfl-basic</td>
+<td>basic</td>
+</tr>
+<tr>
+<td>tf</td>
+<td>Tracing facility library</td>
+<td>asm,basic</td>
+</tr>
+<tr>
+<td>tf-tools</td>
+<td>Tracing facility library tools</td>
+<td>asm,basic,basic-tools,tf</td>
+</tr>
+<tr>
+<td>dynamic</td>
+<td>Dynamic code generation library</td>
+<td>asm,basic</td>
+</tr>
+<tr>
+<td>default</td>
+<td>The core classes without tools or tracing facilities.</td>
+<td>asm,basic</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>pfl-asm.jar</td>
+<td>jar</td>
+<td>asm</td>
+</tr>
+<tr>
+<td>pfl-basic.jar</td>
+<td>jar</td>
+<td>basic</td>
+</tr>
+<tr>
+<td>pfl-basic-tools.jar</td>
+<td>jar</td>
+<td>basic-tools</td>
+</tr>
+<tr>
+<td>pfl-tf.jar</td>
+<td>jar</td>
+<td>tf</td>
+</tr>
+<tr>
+<td>pfl-tf-tools.jar</td>
+<td>jar</td>
+<td>tf-tools</td>
+</tr>
+<tr>
+<td>pfl-dynamic.jar</td>
+<td>jar</td>
+<td>dynamic</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-asm</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-asm.jar</td>
+<td>00b07d3ae601b15a56376fd160bbd2d90045a11a</td>
+</tr>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-basic-tools</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-basic-tools.jar</td>
+<td>3886b8f372ec971ebeebfe93d5dbd43905c12c47</td>
+</tr>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-basic</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-basic.jar</td>
+<td>4f46543137677d7aed3b735a1c1d13467e8e96a2</td>
+</tr>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-dynamic</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-dynamic.jar</td>
+<td>2d8a3a2ad22db77fbdeedc607ef028878849e876</td>
+</tr>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-tf-tools</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-tf-tools.jar</td>
+<td>98c7e7742124927f2763974fc3dfd25b227e2ea7</td>
+</tr>
+<tr>
+<td>org.glassfish.pfl</td>
+<td>pfl-tf</td>
+<td>3.2.0-b001</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/pfl-tf.jar</td>
+<td>a01247b9df2f2bd375dd311bf76e604756865a3b</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

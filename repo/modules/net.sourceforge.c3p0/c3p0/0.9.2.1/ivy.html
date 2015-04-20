@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>c3p0 by net.sourceforge.c3p0 :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.sourceforge.c3p0/c3p0/">c3p0</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.sourceforge.c3p0/">net.sourceforge.c3p0</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>0.9.2.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://c3p0.sourceforge.net/">http://c3p0.sourceforge.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License, Version 2.1</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.c3p0/c3p0/0.9.2.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://c3p0.sourceforge.net/">
+            <p>
+            c3p0 is an easy-to-use library for making traditional
+            JDBC drivers "enterprise-ready" by augmenting them with
+            functionality defined by the jdbc3 spec and the optional
+            extensions to jdbc2. In particular, c3p0 provides several
+            useful services:
+            <ul>
+            <li>Classes which adapt traditional DriverManager-based JDBC
+            drivers to the new javax.sql.DataSource scheme for acquiring
+            database Connections.</li>
+            <li>Transparent pooling of Connection and PreparedStatements
+            behind DataSources which can "wrap" around traditional
+            drivers or arbitrary unpooled DataSources.</li>
+            </ul>
+            </p>
+
+            <p>
+            The library tries hard to get the details right:
+            <ul>
+            <li>c3p0 DataSources are both Referenceable and Serializable,
+            and are thus suitable for binding to a wide-variety of
+            JNDI-based naming services.</li>
+            <li>Statement and ResultSets are carefully cleaned up
+            when pooled Connections and Statements are checked in,
+            to prevent resource- exhaustion when clients use the lazy
+            but common resource-management strategy of only cleaning up
+            their Connections....</li>
+            <li>The library adopts the approach defined by the JDBC
+            2 and 3 specification (even where these conflict with the
+            library author's preferences). DataSources are written in
+            the JavaBean style, offering all the required and most of
+            the optional properties (as well as some non-standard ones),
+            and no-arg constructors. All JDBC-defined internal interfaces
+            are implemented (ConnectionPoolDataSource, PooledConnection,
+            ConnectionEvent-generating Connections, etc.) You can mix
+            c3p0 classes with compliant third-party implementations
+            (although not all c3p0 features will work with external
+            implementations).</li>
+            </ul>
+            </p>
+
+            <p>
+            c3p0 hopes to provide DataSource implementations more
+            than suitable for use by high-volume "J2EE enterprise
+            applications". Please provide feedback, bug-fixes, etc.!
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Default configuration</td>
+<td></td>
+</tr>
+<tr>
+<td>oracle-thin-extras</td>
+<td>Default plus Oracle thin extras</td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>c3p0.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>c3p0-oracle-thin-extras.jar</td>
+<td>jar</td>
+<td>oracle-thin-extras</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}-bin/${archive}/${archive}.bin.tgz</td>
+<td>Unpack into archive/</td>
+<td>2e9f588f2a694c0358d431cdb2c976c99b26231c</td>
+</tr>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/${name}-src/${archive}/${archive}.src.tgz</td>
+<td>Unpack into archive/</td>
+<td>a2a91573b71ba78886ec6c22592037aeefe17457</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/${archive}/lib/${name}-oracle-thin-extras-${revision}.jar" tofile="artifacts/jars/${name}-oracle-thin-extras.jar"/&gt;
+
+        &lt;!-- sources --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}.src/src/java"&gt;
+                &lt;include name="**/*"/&gt;
+            &lt;/fileset&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadocs --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/doc/apidocs"&gt;
+                &lt;include name="**/*"/&gt;
+            &lt;/fileset&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

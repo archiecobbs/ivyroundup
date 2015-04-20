@@ -70,7 +70,7 @@
           </xsl:if>
           <xsl:element name="a">
               <xsl:attribute name="href">
-                  <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.xml')"/>
+                  <xsl:value-of select="concat('modules/', ../../@name, '/', ../@name, '/', @name, '/ivy.html')"/>
               </xsl:attribute>
               <span class="revision"><xsl:value-of select="@name"/></span>
           </xsl:element>

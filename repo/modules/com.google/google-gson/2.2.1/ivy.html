@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>google-gson by com.google :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.google/google-gson/">google-gson</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.google/">com.google</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.2.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://code.google.com/p/google-gson/">http://code.google.com/p/google-gson/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.google/google-gson/2.2.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://code.google.com/p/google-gson/">
+
+            <p>
+            Gson is a Java library that can be used to convert Java Objects into
+            their JSON representation. It can also be used to convert a JSON string
+            to an equivalent Java object. Gson can work with arbitrary Java objects
+            including pre-existing objects that you do not have source-code of.
+            </p>
+
+            <p>
+            There are a few open-source projects that can convert Java objects to
+            JSON. However, most of them require that you place Java annotations in
+            your classes something that you can not do if you do not have access
+            to the source-code. Most also do not fully support the use of Java
+            Generics. Gson considers both of these as very important design goals.
+            </p>
+
+            <p>
+            Gson Goals:
+            <ul>
+            <li>Provide simple <code>toJson()</code> and <code>fromJson()</code> methods to convert Java objects to
+                JSON and vice-versa</li>
+            <li>Allow pre-existing unmodifiable objects to be converted to and from JSON</li>
+            <li>Extensive support of Java Generics</li>
+            <li>Allow custom representations for objects</li>
+            <li>Support arbitrarily complex objects (with deep inheritance hierarchies and extensive use of generic types)</li>
+            </ul>
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td>Standard and stream classes</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>google-gson.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>google-gson-source.jar</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>google-gson-javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://google-gson.googlecode.com/files/${archive}-release.zip</td>
+<td>Unpack into archive/</td>
+<td>37d96c176e2506252752f577894c800643d5d4f0</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;move file="archive/${archive}/gson-${revision}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/${archive}/gson-${revision}-sources.jar" tofile="artifacts/sources/${name}-source.jar"/&gt;
+        &lt;move file="archive/${archive}/gson-${revision}-javadoc.jar" tofile="artifacts/javadocs/${name}-javadoc.zip"/&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

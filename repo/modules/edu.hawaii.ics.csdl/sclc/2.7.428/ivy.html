@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>sclc by edu.hawaii.ics.csdl :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../edu.hawaii.ics.csdl/sclc/">sclc</a></span> 
+    by 
+    <span id="organisation"><a href="../../../edu.hawaii.ics.csdl/">edu.hawaii.ics.csdl</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.7.428</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://code.google.com/p/sclc/">https://code.google.com/p/sclc/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/edu.hawaii.ics.csdl/sclc/2.7.428/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://code.google.com/p/sclc/">
+SCLC (Source Code Line Counter) counts the size of different types of source code files, providing the number of comment, non-comment, blank, and total lines. In addition, a count of "tokens" is provided for organizations where code layout variability makes line-oriented size counts unreliable for analysis purposes. 
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td>Core SCLC file.</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>sclc.pl</td>
+<td>script</td>
+<td>default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://sclc.googlecode.com/files/sclc-2.7.428.zip</td>
+<td>Unpack into archive/</td>
+<td>d477fecee236e6a1069149a56b20bd58530dbc12</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- Perl script. --&gt;
+        &lt;mkdir dir="artifacts/scripts"/&gt;
+        &lt;move file="archive/${archive}/src/${name}" tofile="artifacts/scripts/${name}.pl"/&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>swfobject by com.googlecode.swfobject :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.googlecode.swfobject/swfobject/">swfobject</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.googlecode.swfobject/">com.googlecode.swfobject</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://code.google.com/p/swfobject/">http://code.google.com/p/swfobject/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://opensource.org/licenses/mit-license.php">MIT license</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.googlecode.swfobject/swfobject/2.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://code.google.com/p/swfobject/">
+
+            <p>
+            SWFObject (originally FlashObject]) is an open-source
+            JavaScript library used to embed Adobe Flash content onto
+            Web pages, which is supplied as one small JavaScript file.
+            The library can also detect the installed Adobe Flash Player
+            plug-in in all major web browsers, on all major operating
+            systems (OS), and can redirect the visitor to another webpage
+            or show alternate HTML content if the installed plug-in is
+            not suitable.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Default compressed (minified) version</td>
+<td></td>
+</tr>
+<tr>
+<td>uncompressed</td>
+<td>Uncompressed version</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>swfobject.min.js</td>
+<td>javascript</td>
+<td>default</td>
+</tr>
+<tr>
+<td>swfobject.js</td>
+<td>javascript</td>
+<td>uncompressed</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://ajax.googleapis.com/ajax/libs/${name}/${revision}/${name}.js</td>
+<td>Copy to artifacts/javascripts/${name}.min.js</td>
+<td>5847ed101f55d51c53538a7078971e7de8fb6762</td>
+</tr>
+<tr>
+<td>http://ajax.googleapis.com/ajax/libs/${name}/${revision}/${name}_src.js</td>
+<td>Copy to artifacts/javascripts/${name}.js</td>
+<td>4dc6c77a03258ee7fbe5e877a1ed97311bc45652</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

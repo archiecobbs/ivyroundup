@@ -1,0 +1,1442 @@
+<html>
+<head>
+<title>jersey by org.glassfish.jersey :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.glassfish.jersey/jersey/">jersey</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.glassfish.jersey/">org.glassfish.jersey</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://jersey.java.net/">https://jersey.java.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="https://glassfish.java.net/public/CDDL+GPL.html">CDDL 1.1 + GPL</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.glassfish.jersey/jersey/2.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://jersey.java.net/">
+            <p>
+                Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation
+                for building RESTful Web services. But, it is also more than the Reference Implementation.
+                Jersey provides an API so that developers may extend Jersey to suite their needs. The
+                governance policy is the same as the one used in the GlassFish project. We also use the
+                same two licenses - CDDL 1.1 and GPL 2 with CPE - so, you can pick which one suites your
+                needs better.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>common</td>
+<td>Common classes</td>
+<td></td>
+</tr>
+<tr>
+<td>client</td>
+<td>Client implementation</td>
+<td>common</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Server implementation</td>
+<td>common,client</td>
+</tr>
+<tr>
+<td>container-servlet-core</td>
+<td>Servlet core</td>
+<td>server</td>
+</tr>
+<tr>
+<td>container-grizzly2-http</td>
+<td>Grizzly 2 HTTP Container</td>
+<td></td>
+</tr>
+<tr>
+<td>container-grizzly2-servlet</td>
+<td>Grizzly 2 Servlet Container</td>
+<td>container-servlet,container-grizzly2-http</td>
+</tr>
+<tr>
+<td>container-jdk-http</td>
+<td>JDK HTTP Container</td>
+<td></td>
+</tr>
+<tr>
+<td>container-servlet</td>
+<td>Servlet 3.x implementation</td>
+<td>container-servlet-core</td>
+</tr>
+<tr>
+<td>container-simple-http</td>
+<td>Simple HTTP Container</td>
+<td></td>
+</tr>
+<tr>
+<td>grizzly-connector</td>
+<td>Jersey Client Transport via Grizzly</td>
+<td>client</td>
+</tr>
+<tr>
+<td>apache-connector</td>
+<td>Jersey Client Transport via Apache</td>
+<td>client</td>
+</tr>
+<tr>
+<td>json-jackson</td>
+<td>Jackson JSON entity providers support module</td>
+<td></td>
+</tr>
+<tr>
+<td>json-jettison</td>
+<td>Jettison JSON entity providers support module</td>
+<td></td>
+</tr>
+<tr>
+<td>json-processing</td>
+<td>JSON-P (JSR 353) entity providers support proxy module</td>
+<td></td>
+</tr>
+<tr>
+<td>json-moxy</td>
+<td>JSON entity providers support module based on EclipseLink MOXy</td>
+<td></td>
+</tr>
+<tr>
+<td>media-multipart</td>
+<td>Multipart entity providers support module</td>
+<td>server</td>
+</tr>
+<tr>
+<td>media-sse</td>
+<td>Server Sent Events entity providers support module</td>
+<td>server</td>
+</tr>
+<tr>
+<td>ext-bean-validation</td>
+<td>Extension module providing support for Bean Validation (JSR 349) API</td>
+<td>server,common</td>
+</tr>
+<tr>
+<td>ext-mvc</td>
+<td>Extension module providing support for MVC</td>
+<td>server</td>
+</tr>
+<tr>
+<td>ext-mvc-freemarker</td>
+<td>Extension module providing support for Freemarker templates</td>
+<td>ext-mvc</td>
+</tr>
+<tr>
+<td>ext-mvc-jsp</td>
+<td>Extension module providing support for JSP templates</td>
+<td>ext-mvc,container-servlet-core</td>
+</tr>
+<tr>
+<td>ext-proxy-client</td>
+<td>Extension module providing support for (proxy-based) high-level client API</td>
+<td>common</td>
+</tr>
+<tr>
+<td>ext-servlet-portability</td>
+<td>Extension module providing support for writing applications which run with both Jersey 1.X and 2.X servlet containers</td>
+<td></td>
+</tr>
+<tr>
+<td>ext-wadl-doclet</td>
+<td>A doclet that generates a resourcedoc XML file containing the javadoc documentation of resource classes</td>
+<td>server</td>
+</tr>
+<tr>
+<td>test-framework-core</td>
+<td>Test Framework - Core</td>
+<td>server</td>
+</tr>
+<tr>
+<td>test-framework-provider-default-client</td>
+<td>Test Framework - Default Client Provider</td>
+<td>client</td>
+</tr>
+<tr>
+<td>test-framework-provider-external</td>
+<td>Test Framework - External Container</td>
+<td>server,client</td>
+</tr>
+<tr>
+<td>test-framework-provider-grizzly2</td>
+<td>Test Framework - Grizzly 2 Container</td>
+<td>container-grizzly2-http</td>
+</tr>
+<tr>
+<td>test-framework-provider-inmemory</td>
+<td>Test Framework - In Memory Container</td>
+<td>server,client</td>
+</tr>
+<tr>
+<td>test-framework-provider-jdk-http</td>
+<td>Test Framework - JDK HTTP Container</td>
+<td>server,client,container-jdk-http</td>
+</tr>
+<tr>
+<td>test-framework-provider-simple</td>
+<td>Test Framework - Simple HTTP Container</td>
+<td>server,client,container-simple-http</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default server implementation without any containers, connectors, media extensions or the test framework</td>
+<td>server</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jersey-common.jar</td>
+<td>jar</td>
+<td>common</td>
+</tr>
+<tr>
+<td>jersey-client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jersey-server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-http.jar</td>
+<td>jar</td>
+<td>container-grizzly2-http</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-servlet.jar</td>
+<td>jar</td>
+<td>container-grizzly2-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-jdk-http.jar</td>
+<td>jar</td>
+<td>container-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-container-servlet.jar</td>
+<td>jar</td>
+<td>container-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-simple-http.jar</td>
+<td>jar</td>
+<td>container-simple-http</td>
+</tr>
+<tr>
+<td>jersey-grizzly-connector.jar</td>
+<td>jar</td>
+<td>grizzly-connector</td>
+</tr>
+<tr>
+<td>jersey-apache-connector.jar</td>
+<td>jar</td>
+<td>apache-connector</td>
+</tr>
+<tr>
+<td>jersey-media-multipart.jar</td>
+<td>jar</td>
+<td>media-multipart</td>
+</tr>
+<tr>
+<td>jersey-media-sse.jar</td>
+<td>jar</td>
+<td>media-sse</td>
+</tr>
+<tr>
+<td>jersey-bean-validation.jar</td>
+<td>jar</td>
+<td>ext-bean-validation</td>
+</tr>
+<tr>
+<td>jersey-mvc.jar</td>
+<td>jar</td>
+<td>ext-mvc</td>
+</tr>
+<tr>
+<td>jersey-mvc-freemarker.jar</td>
+<td>jar</td>
+<td>ext-mvc-freemarker</td>
+</tr>
+<tr>
+<td>jersey-mvc-jsp.jar</td>
+<td>jar</td>
+<td>ext-mvc-jsp</td>
+</tr>
+<tr>
+<td>jersey-proxy-client.jar</td>
+<td>jar</td>
+<td>ext-proxy-client</td>
+</tr>
+<tr>
+<td>jersey-servlet-portability.jar</td>
+<td>jar</td>
+<td>ext-servlet-portability</td>
+</tr>
+<tr>
+<td>jersey-wadl-doclet.jar</td>
+<td>jar</td>
+<td>ext-wadl-doclet</td>
+</tr>
+<tr>
+<td>jersey-test-framework-core.jar</td>
+<td>jar</td>
+<td>test-framework-core</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-default-client.jar</td>
+<td>jar</td>
+<td>test-framework-provider-default-client</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-external.jar</td>
+<td>jar</td>
+<td>test-framework-provider-external</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-grizzly2.jar</td>
+<td>jar</td>
+<td>test-framework-provider-grizzly2</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-inmemory.jar</td>
+<td>jar</td>
+<td>test-framework-provider-inmemory</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-jdk-http.jar</td>
+<td>jar</td>
+<td>test-framework-provider-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-simple.jar</td>
+<td>jar</td>
+<td>test-framework-provider-simple</td>
+</tr>
+<tr>
+<td>jersey-common.jar</td>
+<td>source</td>
+<td>common</td>
+</tr>
+<tr>
+<td>jersey-client.jar</td>
+<td>source</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jersey-server.jar</td>
+<td>source</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-http.jar</td>
+<td>source</td>
+<td>container-grizzly2-http</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-servlet.jar</td>
+<td>source</td>
+<td>container-grizzly2-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-jdk-http.jar</td>
+<td>source</td>
+<td>container-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-container-servlet.jar</td>
+<td>source</td>
+<td>container-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-simple-http.jar</td>
+<td>source</td>
+<td>container-simple-http</td>
+</tr>
+<tr>
+<td>jersey-grizzly-connector.jar</td>
+<td>source</td>
+<td>grizzly-connector</td>
+</tr>
+<tr>
+<td>jersey-apache-connector.jar</td>
+<td>source</td>
+<td>apache-connector</td>
+</tr>
+<tr>
+<td>jersey-media-multipart.jar</td>
+<td>source</td>
+<td>media-multipart</td>
+</tr>
+<tr>
+<td>jersey-media-sse.jar</td>
+<td>source</td>
+<td>media-sse</td>
+</tr>
+<tr>
+<td>jersey-bean-validation.jar</td>
+<td>source</td>
+<td>ext-bean-validation</td>
+</tr>
+<tr>
+<td>jersey-mvc.jar</td>
+<td>source</td>
+<td>ext-mvc</td>
+</tr>
+<tr>
+<td>jersey-mvc-freemarker.jar</td>
+<td>source</td>
+<td>ext-mvc-freemarker</td>
+</tr>
+<tr>
+<td>jersey-mvc-jsp.jar</td>
+<td>source</td>
+<td>ext-mvc-jsp</td>
+</tr>
+<tr>
+<td>jersey-proxy-client.jar</td>
+<td>source</td>
+<td>ext-proxy-client</td>
+</tr>
+<tr>
+<td>jersey-servlet-portability.jar</td>
+<td>source</td>
+<td>ext-servlet-portability</td>
+</tr>
+<tr>
+<td>jersey-wadl-doclet.jar</td>
+<td>source</td>
+<td>ext-wadl-doclet</td>
+</tr>
+<tr>
+<td>jersey-test-framework-core.jar</td>
+<td>source</td>
+<td>test-framework-core</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-default-client.jar</td>
+<td>source</td>
+<td>test-framework-provider-default-client</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-external.jar</td>
+<td>source</td>
+<td>test-framework-provider-external</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-grizzly2.jar</td>
+<td>source</td>
+<td>test-framework-provider-grizzly2</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-inmemory.jar</td>
+<td>source</td>
+<td>test-framework-provider-inmemory</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-jdk-http.jar</td>
+<td>source</td>
+<td>test-framework-provider-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-simple.jar</td>
+<td>source</td>
+<td>test-framework-provider-simple</td>
+</tr>
+<tr>
+<td>jersey-common.jar</td>
+<td>javadoc</td>
+<td>common</td>
+</tr>
+<tr>
+<td>jersey-client.jar</td>
+<td>javadoc</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jersey-server.jar</td>
+<td>javadoc</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-http.jar</td>
+<td>javadoc</td>
+<td>container-grizzly2-http</td>
+</tr>
+<tr>
+<td>jersey-container-grizzly2-servlet.jar</td>
+<td>javadoc</td>
+<td>container-grizzly2-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-jdk-http.jar</td>
+<td>javadoc</td>
+<td>container-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-container-servlet.jar</td>
+<td>javadoc</td>
+<td>container-servlet</td>
+</tr>
+<tr>
+<td>jersey-container-simple-http.jar</td>
+<td>javadoc</td>
+<td>container-simple-http</td>
+</tr>
+<tr>
+<td>jersey-grizzly-connector.jar</td>
+<td>javadoc</td>
+<td>grizzly-connector</td>
+</tr>
+<tr>
+<td>jersey-apache-connector.jar</td>
+<td>javadoc</td>
+<td>apache-connector</td>
+</tr>
+<tr>
+<td>jersey-media-multipart.jar</td>
+<td>javadoc</td>
+<td>media-multipart</td>
+</tr>
+<tr>
+<td>jersey-media-sse.jar</td>
+<td>javadoc</td>
+<td>media-sse</td>
+</tr>
+<tr>
+<td>jersey-bean-validation.jar</td>
+<td>javadoc</td>
+<td>ext-bean-validation</td>
+</tr>
+<tr>
+<td>jersey-mvc.jar</td>
+<td>javadoc</td>
+<td>ext-mvc</td>
+</tr>
+<tr>
+<td>jersey-mvc-freemarker.jar</td>
+<td>javadoc</td>
+<td>ext-mvc-freemarker</td>
+</tr>
+<tr>
+<td>jersey-mvc-jsp.jar</td>
+<td>javadoc</td>
+<td>ext-mvc-jsp</td>
+</tr>
+<tr>
+<td>jersey-proxy-client.jar</td>
+<td>javadoc</td>
+<td>ext-proxy-client</td>
+</tr>
+<tr>
+<td>jersey-servlet-portability.jar</td>
+<td>javadoc</td>
+<td>ext-servlet-portability</td>
+</tr>
+<tr>
+<td>jersey-wadl-doclet.jar</td>
+<td>javadoc</td>
+<td>ext-wadl-doclet</td>
+</tr>
+<tr>
+<td>jersey-test-framework-core.jar</td>
+<td>javadoc</td>
+<td>test-framework-core</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-external.jar</td>
+<td>javadoc</td>
+<td>test-framework-provider-external</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-grizzly2.jar</td>
+<td>javadoc</td>
+<td>test-framework-provider-grizzly2</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-inmemory.jar</td>
+<td>javadoc</td>
+<td>test-framework-provider-inmemory</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-jdk-http.jar</td>
+<td>javadoc</td>
+<td>test-framework-provider-jdk-http</td>
+</tr>
+<tr>
+<td>jersey-test-framework-provider-simple.jar</td>
+<td>javadoc</td>
+<td>test-framework-provider-simple</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.google.guava</td>
+<td><a href="../../../com.google.guava/guava/">guava</a></td>
+<td>13.0</td>
+<td>common,client,server-&gt;default</td>
+</tr>
+<tr>
+<td>javax.inject</td>
+<td><a href="../../../javax.inject/inject/">inject</a></td>
+<td>1</td>
+<td>common,client,server,container-servlet-core,container-grizzly2-http,container-simple-http,media-multipart,media-sse,ext-bean-validation,ext-mvc,ext-mvc-jsp-&gt;default</td>
+</tr>
+<tr>
+<td>org.glassfish.hk2</td>
+<td><a href="../../../org.glassfish.hk2/hk2/">hk2</a></td>
+<td>2.2.0-b10</td>
+<td>common,client,server-&gt;api,locator</td>
+</tr>
+<tr>
+<td>org.glassfish.hk2</td>
+<td><a href="../../../org.glassfish.hk2/osgi-resource-locator/">osgi-resource-locator</a></td>
+<td>1.0.1</td>
+<td>common-&gt;default</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td><a href="../../../org.glassfish.grizzly/grizzly/">grizzly</a></td>
+<td>2.3.4</td>
+<td>container-grizzly2-http-&gt;http-server,http-servlet</td>
+</tr>
+<tr>
+<td>org.glassfish.grizzly</td>
+<td><a href="../../../org.glassfish.grizzly/grizzly/">grizzly</a></td>
+<td>2.3.4</td>
+<td>grizzly-connector-&gt;websockets,http-client</td>
+</tr>
+<tr>
+<td>net.sourceforge.freemarker</td>
+<td><a href="../../../net.sourceforge.freemarker/freemarker/">freemarker</a></td>
+<td>2.3.19</td>
+<td>ext-mvc-freemarker-&gt;default</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate-validator/">hibernate-validator</a></td>
+<td>[3.0.0,4.4)</td>
+<td>ext-bean-validation-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.httpcomponents</td>
+<td><a href="../../../org.apache.httpcomponents/httpclient/">httpclient</a></td>
+<td>[4.0,4.3)</td>
+<td>apache-connector-&gt;default</td>
+</tr>
+<tr>
+<td>org.jvnet.mimepull</td>
+<td><a href="../../../org.jvnet.mimepull/mimepull/">mimepull</a></td>
+<td>1.7</td>
+<td>media-multipart-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.xerces</td>
+<td><a href="../../../org.apache.xerces/xerces/">xerces</a></td>
+<td>2.6.2</td>
+<td>ext-wadl-doclet-&gt;impl</td>
+</tr>
+<tr>
+<td>org.simpleframework</td>
+<td><a href="../../../org.simpleframework/simple/">simple</a></td>
+<td>5.1.5</td>
+<td>container-simple-http-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-common</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-common.jar</td>
+<td>9bf4c679208361a2b67b4f7ca5e9be968805d987</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-common</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-common.jar</td>
+<td>1cce4478352bbc49223723cd9bd484edac9226cc</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-common</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-common.jar</td>
+<td>5ff52c3a930b34a7e9483723fde12f3260b2d68c</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-client</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-client.jar</td>
+<td>060b306834276ffccf254d69c0c891539d5678e5</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-client</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-client.jar</td>
+<td>5eb505b17a556a15a77a1b2f5fad5276a2a7aed8</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-client</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-client.jar</td>
+<td>c476fc9ff5548f823b7fc60e1b4f751158040297</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-server</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-server.jar</td>
+<td>abff7c3fa455bfd09d4e40d5c5236cf897b0587f</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-server</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-server.jar</td>
+<td>46c7ccf75d2c83fa0db23b821118215d76f6e446</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.core</td>
+<td>jersey-server</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-server.jar</td>
+<td>3349570304517416bd6d2fa9134fb1913ab9682c</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet-core</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-servlet-core.jar</td>
+<td>1a9f32b0315cbc1f7656e86fc8110fbd2b9fe353</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet-core</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-servlet-core.jar</td>
+<td>9da8135f49ee530a7de099f4cca33a4ae1f0e65e</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet-core</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-servlet-core.jar</td>
+<td>f1275cb75ee27f095a19a95ec2cedd02822ea20d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-http</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-grizzly2-http.jar</td>
+<td>cd18862618a2a1e1ccc6b8b767ed4896bffe1a10</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-http</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-grizzly2-http.jar</td>
+<td>47eddde071924cf729e7e874fd027ff581e767f1</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-http</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-grizzly2-http.jar</td>
+<td>2c74781234131ef5a066711286b582437d98281f</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-servlet</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-grizzly2-servlet.jar</td>
+<td>fd1b6116998c63cc118664454ca89fc238cc458b</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-servlet</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-grizzly2-servlet.jar</td>
+<td>ceee004a3c6181fc8d2652f76bd908ab7c77d501</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-grizzly2-servlet</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-grizzly2-servlet.jar</td>
+<td>d57d0380221bc9e274db7dcd08a23fab365ba683</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-jdk-http</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-jdk-http.jar</td>
+<td>8048189dee9be45103d009672907b8c834442fb5</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-jdk-http</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-jdk-http.jar</td>
+<td>697f1aa2d7ada430bfae0adede18793e8ae5b449</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-jdk-http</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-jdk-http.jar</td>
+<td>d90f36b0abf62ad3b807e599d2e70650038744c6</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-servlet.jar</td>
+<td>ed2571e16cfaca8a16ae95b3f8b7cdc20ccad5ee</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-servlet.jar</td>
+<td>5f0c44728e6dcb5efa98a589350f8f20f1e645cd</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-servlet</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-servlet.jar</td>
+<td>395e59a5d817a28be2080e613fe224ab242ae3f0</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-simple-http</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-container-simple-http.jar</td>
+<td>22708ee6f2a0a864abeaa05b71fa6046625f9f90</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-simple-http</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-container-simple-http.jar</td>
+<td>fc1af4bda46661e684bdcfceab174bb7a69a9515</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.containers</td>
+<td>jersey-container-simple-http</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-container-simple-http.jar</td>
+<td>39e4ed3d911222ebf48ecda99cd12eaa352d258a</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-grizzly-connector</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-grizzly-connector.jar</td>
+<td>aa9668c543957f515b20072bae84cc9ae4980f33</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-grizzly-connector</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-grizzly-connector.jar</td>
+<td>53154e66542cc121f322f6d309207e751ab19032</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-grizzly-connector</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-grizzly-connector.jar</td>
+<td>5e91edb258169ff9a8c51a9cb795097b512a233f</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-apache-connector</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-apache-connector.jar</td>
+<td>0621175ffd758ade463e731cf9e07526b66070da</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-apache-connector</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-apache-connector.jar</td>
+<td>d0edb535f79e7e4a52276ecbfa24a6c7935d165d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.connectors</td>
+<td>jersey-apache-connector</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-apache-connector.jar</td>
+<td>34918c565adfe79b7ebd21c833dabd0091ef1134</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-multipart</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-media-multipart.jar</td>
+<td>b644da29cd7d03ae716920e6478e5783bfc3f1f9</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-multipart</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-media-multipart.jar</td>
+<td>094ac34ece78494ce88cfa03207ad3f9e614e17e</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-multipart</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-media-multipart.jar</td>
+<td>63cc384f03e4aea8bbcca33d4e62b41ba90b0008</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-sse</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-media-sse.jar</td>
+<td>4f4144bf0a539d2952e84d678b0d559644750504</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-sse</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-media-sse.jar</td>
+<td>4ad01c7fba0b2001df7ec3b168704fae9139e45a</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.media</td>
+<td>jersey-media-sse</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-media-sse.jar</td>
+<td>cd2a402d4509772437db28d24f0d15128eb1f7c7</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-bean-validation</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-bean-validation.jar</td>
+<td>c82ae84a3bb475e01f138fffc512319b003c3b09</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-bean-validation</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-bean-validation.jar</td>
+<td>b943a4446fdeaa6aef021799037b675ce0042786</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-bean-validation</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-bean-validation.jar</td>
+<td>fbbeb3a8432e75c60d4f051148b062a7fd5d2dab</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-mvc.jar</td>
+<td>f04bff5704af9fc8405094d7c28d3a70bccd815a</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-mvc.jar</td>
+<td>bb61014046396daf77678059d35707576584dc82</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-mvc.jar</td>
+<td>fa0b9b51fbf56fedcef41ad5edce44b2ef9037eb</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-freemarker</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-mvc-freemarker.jar</td>
+<td>636001ebad222b00e714a2aef790cf324198e01d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-freemarker</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-mvc-freemarker.jar</td>
+<td>e3be99a423a4c0aa81f660ee47a73bf8b8ca3b2b</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-freemarker</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-mvc-freemarker.jar</td>
+<td>415543c1a93436bf8411069dd883c3a010af1ff0</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-jsp</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-mvc-jsp.jar</td>
+<td>6a121625dd14a475335d2d3ed89c4c5760721987</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-jsp</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-mvc-jsp.jar</td>
+<td>8c8ea430215ae6b705946361813787a8d9f94887</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-mvc-jsp</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-mvc-jsp.jar</td>
+<td>8f6cdce8d41fd6862e226e77438318237045addf</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-proxy-client</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-proxy-client.jar</td>
+<td>a1bafb3e5b1eab90fffde7fadc82b0e04cd9b32d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-proxy-client</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-proxy-client.jar</td>
+<td>2fefc2ce8ebe6a532baf7dff9433e63e0f1381ab</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-proxy-client</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-proxy-client.jar</td>
+<td>44e7f396fdd775d17db4aa0b609941a3f7c7ca83</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-servlet-portability</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-servlet-portability.jar</td>
+<td>1e37fc32d962bbfc80c80a2208192485d01426fa</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-servlet-portability</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-servlet-portability.jar</td>
+<td>2fba24811608f57762319d79a7cfd697b4fe626d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-servlet-portability</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-servlet-portability.jar</td>
+<td>9ab054706a5579809c1cbc89718617f86a475d7c</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-wadl-doclet</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-wadl-doclet.jar</td>
+<td>25b2c646ee608f2ec7e278b673fddaa21d3029f9</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-wadl-doclet</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-wadl-doclet.jar</td>
+<td>f2c6f34dbc54aad40c554810d0040c31afbbf1a3</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.ext</td>
+<td>jersey-wadl-doclet</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-wadl-doclet.jar</td>
+<td>96730cc57add1e7a245233fef47eafbc17e8f4aa</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework</td>
+<td>jersey-test-framework-core</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-core.jar</td>
+<td>aa035781496478b38112806b643255b2309f90a9</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework</td>
+<td>jersey-test-framework-core</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-core.jar</td>
+<td>64f153b4bd91d1c4c6cec02bb3720d4d39429f11</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework</td>
+<td>jersey-test-framework-core</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-core.jar</td>
+<td>62ccf99d948eb67bb6e354c47ee84a43c1b0fab6</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-default-client</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-default-client.jar</td>
+<td>2b8b6e889a3626ca5e27cc1af550a4e79ac1175b</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-default-client</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-default-client.jar</td>
+<td>76b37a3fc8be18e5e361a20ce3b0e67de60bcdce</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-external</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-external.jar</td>
+<td>b1b73d47cdf136dfa7162fb94fe918d1732d639e</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-external</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-external.jar</td>
+<td>ffe1e893f839cfd82d9e16f119079ef38152b61c</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-external</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-provider-external.jar</td>
+<td>5e9768e1ea545ecc9e84b267ea44f19ceacc9642</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-grizzly2</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-grizzly2.jar</td>
+<td>3513cc160baac07bc0a50e7e1e09b6947e1f7f62</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-grizzly2</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-grizzly2.jar</td>
+<td>ce97c1951f56f92e3a7f03257dad644463e0db0d</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-grizzly2</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-provider-grizzly2.jar</td>
+<td>3b7f9cf5a05c1075ea583e9b22b3d55182b01ad4</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-inmemory</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-inmemory.jar</td>
+<td>238b77f01661ac95c44787bb246054a641ab6670</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-inmemory</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-inmemory.jar</td>
+<td>e1b9e8082c58d9b6209ded45dd6ef725d6e856af</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-inmemory</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-provider-inmemory.jar</td>
+<td>ac3a3a16afb9e1f2f29e48c542bb6dc8a768dc98</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-jdk-http</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-jdk-http.jar</td>
+<td>61f6aee3994cfe411059babcc9cdadb1e73d46b3</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-jdk-http</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-jdk-http.jar</td>
+<td>b4ca8df063ea7c583cdfc922086018629056c6eb</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-jdk-http</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-provider-jdk-http.jar</td>
+<td>c03c8633715328914614d3a1f5b384dfb829dc0c</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-simple</td>
+<td>2.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jersey-test-framework-provider-simple.jar</td>
+<td>e46f1ba3542fdf1d83dd1e0539e9cb56f28818f4</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-simple</td>
+<td>2.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jersey-test-framework-provider-simple.jar</td>
+<td>6a7b635f30b02f251085ae69e5c39599fdd14c01</td>
+</tr>
+<tr>
+<td>org.glassfish.jersey.test-framework.providers</td>
+<td>jersey-test-framework-provider-simple</td>
+<td>2.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jersey-test-framework-provider-simple.jar</td>
+<td>ecd426db813f2631ff076d5c044599394a717dfb</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

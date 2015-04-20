@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>junit by org.junit :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.junit/junit/">junit</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.junit/">org.junit</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>4.8.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://junit.sourceforge.net/">http://junit.sourceforge.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://opensource.org/licenses/cpl1.0">Common Public License, Version 1.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.junit/junit/4.8.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://junit.sourceforge.net/">A Java unit testing framework.</description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>nodeps</td>
+<td>Minimal configuration without the hamcrest-core dependency</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default configuration (includes hamcrest-core dependency)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>junit.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>junit-dep.jar</td>
+<td>jar</td>
+<td>nodeps</td>
+</tr>
+<tr>
+<td>junit.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>junit.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>https://cloud.github.com/downloads/KentBeck/junit/${archive}.zip</td>
+<td>Unpack into archive/</td>
+<td>15209b0933816c8e940a8375459be6e61e5f1662</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/${archive}/${name}-dep-${revision}.jar" tofile="artifacts/jars/${name}-dep.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;move file="archive/${archive}/${name}-${revision}-src.jar" tofile="artifacts/sources/${name}.zip"/&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/${name}.zip"&gt;
+            &lt;fileset dir="archive/${archive}/javadoc"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

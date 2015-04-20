@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>svnkit by com.svnkit :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.svnkit/svnkit/">svnkit</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.svnkit/">com.svnkit</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.2.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.svnkit.com/">http://www.svnkit.com/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value">
+<a href="http://svnkit.com/license.html">The TMate Open Source License</a><br><a href="http://www.svnkit.com/licensing.html">TriLead Commercial License</a>
+</td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.svnkit/svnkit/1.2.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.svnkit.com/">
+
+        <p>
+        Subversion is a leading and fast growing Open
+        Source version control system. SVNKit brings
+        <a href="http://subversion.tigris.org/">Subversion</a> closer to
+        the Java world! SVNKit is a pure Java toolkit - it implements
+        all Subversion features and provides APIs to work with Subversion
+        working copies, access and manipulate Subversion repositories -
+        everything within your Java application.
+        </p>
+
+        <p>
+        SVNKit is written in Java and does not require any additional
+        binaries or native applications. It is portable and there is no
+        need for OS specific code. SVNKit is compatible with the latest
+        version of Subversion.
+        </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core classes only</td>
+<td></td>
+</tr>
+<tr>
+<td>cli</td>
+<td>Command Line Interface support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>javahl</td>
+<td>Implementation of the Subversion JavaHL interface</td>
+<td>core</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td>Support for svn+ssh:// scheme</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Default configuration</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>svnkit.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>svnkit-cli.jar</td>
+<td>jar</td>
+<td>cli</td>
+</tr>
+<tr>
+<td>svnkit-javahl.jar</td>
+<td>jar</td>
+<td>javahl</td>
+</tr>
+<tr>
+<td>trilead.jar</td>
+<td>jar</td>
+<td>ssh</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>clisource.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>net.java.dev.jna</td>
+<td><a href="../../../net.java.dev.jna/jna/">jna</a></td>
+<td>3.0.9</td>
+<td>core-&gt;default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}.5405</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://www.svnkit.com/org.tmatesoft.svn_${revision}.standalone.nojna.zip</td>
+<td>Unpack into archive/</td>
+<td>ea07a8a5df0f54b7cf21040dbbd4407dd52f37d1</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/${archive}" includes="*.jar"/&gt;
+        &lt;/move&gt;
+
+        &lt;!-- source --&gt;
+        &lt;move file="archive/${archive}/svnkitsrc.zip" tofile="artifacts/sources/source.zip"/&gt;
+        &lt;move file="archive/${archive}/svnkitclisrc.zip" tofile="artifacts/sources/clisource.zip"/&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/doc/javadoc"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

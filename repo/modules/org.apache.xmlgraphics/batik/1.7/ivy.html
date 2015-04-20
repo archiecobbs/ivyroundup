@@ -1,0 +1,377 @@
+<html>
+<head>
+<title>batik by org.apache.xmlgraphics :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.xmlgraphics/batik/">batik</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.xmlgraphics/">org.apache.xmlgraphics</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.7</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://xmlgraphics.apache.org/batik/">http://xmlgraphics.apache.org/batik/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.xmlgraphics/batik/1.7/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://xmlgraphics.apache.org/batik/">
+             <p>
+             Batik is a Java-based toolkit for applications or applets
+             that want to use images in the <a href="http://www.w3.org/TR/SVG11/">Scalable Vector Graphics (SVG)</a>
+             format for various purposes, such as display, generation
+             or manipulation.
+             </p>
+
+             <p>
+             The project's ambition is to give developers a set of core
+             modules that can be used together or individually to support
+             specific SVG solutions. Examples of modules are the SVG
+             Parser, the SVG Generator and the SVG DOM. Another ambition
+             for the Batik project is to make it highly extensible?for
+             example, Batik allows the developer to handle custom SVG
+             elements. Even though the goal of the project is to provide
+             a set of core modules, one of the deliverables is a full
+             fledged SVG browser implementation which validates the
+             various modules and their inter-operability.
+             </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>minimal</td>
+<td>Minimal Batik stuff without any extras</td>
+<td></td>
+</tr>
+<tr>
+<td>core</td>
+<td>Minimal plus animation and Javascript support</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Full Batik: core plus Swing, extensions, transcoder</td>
+<td>core</td>
+</tr>
+<tr>
+<td>svggen</td>
+<td>Minimal plus SVG generator support</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>ttf2svg</td>
+<td>TrueType font to SVG converter application</td>
+<td>svggen</td>
+</tr>
+<tr>
+<td>slideshow</td>
+<td>Slideshow application</td>
+<td>core</td>
+</tr>
+<tr>
+<td>squiggle</td>
+<td>Squiggle SVG browser application</td>
+<td>default</td>
+</tr>
+<tr>
+<td>rasterizer</td>
+<td>SVG rasterizer application</td>
+<td>default</td>
+</tr>
+<tr>
+<td>svgpp</td>
+<td>SVG pretty-printer application</td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>batik-anim.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>batik-awt-util.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-bridge.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-codec.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-css.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-dom.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-ext.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-extension.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>batik-gui-util.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-gvt.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-parser.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-rasterizer.jar</td>
+<td>jar</td>
+<td>rasterizer</td>
+</tr>
+<tr>
+<td>batik-script.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-slideshow.jar</td>
+<td>jar</td>
+<td>slideshow</td>
+</tr>
+<tr>
+<td>batik-squiggle.jar</td>
+<td>jar</td>
+<td>squiggle</td>
+</tr>
+<tr>
+<td>batik-svg-dom.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-svggen.jar</td>
+<td>jar</td>
+<td>svggen</td>
+</tr>
+<tr>
+<td>batik-svgpp.jar</td>
+<td>jar</td>
+<td>svgpp</td>
+</tr>
+<tr>
+<td>batik-swing.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>batik-transcoder.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>batik-ttf2svg.jar</td>
+<td>jar</td>
+<td>ttf2svg</td>
+</tr>
+<tr>
+<td>batik-util.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>batik-xml.jar</td>
+<td>jar</td>
+<td>minimal</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.mozilla</td>
+<td><a href="../../../org.mozilla/rhino/">rhino</a></td>
+<td>1.+</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.xml</td>
+<td><a href="../../../org.apache.xml/xml-commons-external/">xml-commons-external</a></td>
+<td>1.+</td>
+<td>core-&gt;ext-only</td>
+</tr>
+<tr>
+<td>org.apache.xerces</td>
+<td><a href="../../../org.apache.xerces/xerces/">xerces</a></td>
+<td>[2.5,3.0[</td>
+<td>core-&gt;apis,impl</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>bin</td>
+<td>${name}-${revision}</td>
+</tr>
+<tr>
+<td>src</td>
+<td>${name}-src-${revision}</td>
+</tr>
+<tr>
+<td>doc</td>
+<td>${name}-docs-${revision}</td>
+</tr>
+<tr>
+<td>mirror1</td>
+<td>http://www.apache.org/dist</td>
+</tr>
+<tr>
+<td>backup</td>
+<td>http://archive.apache.org/dist</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>${mirror1}/xmlgraphics/batik/${bin}.zip<br>[${backup}/xmlgraphics/batik/${bin}.zip]</td>
+<td>Unpack into archive/</td>
+<td>69d974ab0a4e13cbdd649fa96785776563b73fcf</td>
+</tr>
+<tr>
+<td>${mirror1}/xmlgraphics/batik/${src}.zip<br>[${backup}/xmlgraphics/batik/${src}.zip]</td>
+<td>Unpack into archive/</td>
+<td>806f57b0200cc755903c2f6f55463f0dd5f6f7d6</td>
+</tr>
+<tr>
+<td>${mirror1}/xmlgraphics/batik/${src}.zip<br>[${backup}/xmlgraphics/batik/${doc}.zip]</td>
+<td>Unpack into archive/</td>
+<td>180715cd140efd33934684442ee6142f10d0c49c</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/${name}-${revision}"&gt;
+                &lt;include name="batik-*.jar"/&gt;
+            &lt;/fileset&gt;
+            &lt;fileset dir="archive/${name}-${revision}/lib"&gt;
+                &lt;include name="batik-*.jar"/&gt;
+            &lt;/fileset&gt;
+        &lt;/move&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${name}-${revision}/sources"/&gt;
+            &lt;fileset dir="archive/${name}-${revision}/sources-1.4"/&gt;
+            &lt;fileset dir="archive/${name}-${revision}/resources"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/docs/javadoc"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

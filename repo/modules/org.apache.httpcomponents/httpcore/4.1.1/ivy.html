@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>httpcore by org.apache.httpcomponents :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.httpcomponents/httpcore/">httpcore</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.httpcomponents/">org.apache.httpcomponents</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>4.1.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://hc.apache.org/httpcomponents-core-ga/index.html">http://hc.apache.org/httpcomponents-core-ga/index.html</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.httpcomponents/httpcore/4.1.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://hc.apache.org/httpcomponents-core-ga/index.html">
+        <p>
+            HttpCore is a set of low level HTTP transport components that can be used to build custom client and server side HTTP services with a minimal footprint.
+        </p>
+        <p>
+            HttpCore is a set of components implementing the most fundamental aspects of the HTTP protocol that are nonetheless sufficient to develop full-featured client-side and server-side HTTP services with a minimal footprint.<br>
+
+            HttpCore has the following scope and goals:<br>
+            1. HttpCore Scope<ul>
+                <li>A consistent API for building client / proxy / server side HTTP services</li>
+                <li>A consistent API for building both synchronous and asynchronous HTTP services</li>
+                <li>A set of low level components based on blocking (classic) and non-blocking (NIO) I/O models</li>
+            </ul>
+            2. HttpCore Goals<ul>
+                <li>Implementation of the most fundamental HTTP transport aspects</li>
+                <li>Balance between good performance and the clarity and expressiveness of API</li> 
+                <li>Small (predictable) memory footprint</li>
+                <li>Self contained library (no external dependencies beyond JRE)</li>
+            </ul>
+            3. What HttpCore is NOT<ul>
+                <li>A replacement for HttpClient</li>
+                <li>A replacement for a Servlet container or a competitor to the Servlet API</li>
+            </ul>
+        </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>HttpCore without async (nio) support</td>
+<td></td>
+</tr>
+<tr>
+<td>nio</td>
+<td>HttpCore with non-blocking IO support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Everything (all of the module JARs)</td>
+<td>nio</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>httpcore.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>httpcore-source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>httpcore-nio.jar</td>
+<td>jar</td>
+<td>nio</td>
+</tr>
+<tr>
+<td>httpcore-nio-source.zip</td>
+<td>source</td>
+<td>nio</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>httpcomponents-core-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://archive.apache.org/dist/httpcomponents/${name}/binary/${archive}-bin.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>969ced5d216f8c4b690b26d6edc3a38071a6a64d</td>
+</tr>
+<tr>
+<td>http://archive.apache.org/dist/httpcomponents/${name}/source/${archive}-src.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>ffb12a0fdc383622f9a336df4a5a04ae697a23ce</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${archive}/lib/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+        &lt;move file="archive/${archive}/lib/${name}-nio-${revision}.jar" tofile="artifacts/jars/${name}-nio.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/httpcore-source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/httpcore-ab/src/main/java"/&gt;
+            &lt;fileset dir="archive/${archive}/httpcore-benchmark/src/main/java"/&gt;
+            &lt;fileset dir="archive/${archive}/httpcore-contrib/src/main/java"/&gt;
+            &lt;fileset dir="archive/${archive}/httpcore/src/main/java"/&gt;
+            &lt;fileset dir="archive/${archive}/httpcore/src/main/resources"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/httpcore-nio-source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/httpcore-nio/src/main/java"/&gt;
+            &lt;fileset dir="archive/${archive}/httpcore-nio/src/main/resources"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/javadoc"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>
