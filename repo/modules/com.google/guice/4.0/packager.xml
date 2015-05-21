@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Mark Thomas
+    Copyright 2011 Andrei Polushin
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <m2resource groupId="com/google/inject">
+        <artifact tofile="artifacts/jars/guice.jar" sha1="0f990a43d3725781b6db7cd0acf0a8b62dfd1649"/>
+        <artifact classifier="no_aop" tofile="artifacts/jars/guice-no_aop.jar" sha1="199b7acaa05b570bbccf31be998f013963e5e752"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice.jar" sha1="961359f8352b791c6443a207c847e25d6d3ca7cd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice.jar" sha1="779faccc0065fe6efea2ed9752ff1ab046262df7"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-throwingproviders">
+        <artifact tofile="artifacts/jars/guice-throwingproviders.jar" sha1="90876169e80b4db9b61d654367c4c55079ae4e91"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-throwingproviders.jar" sha1="37629be7f7c986288a17ff44054df554143b8813"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-throwingproviders.jar" sha1="7d48fbfcb184c1ecf6f11cbb9169aee3b9b2de44"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-struts2">
+        <artifact tofile="artifacts/jars/guice-struts2.jar" sha1="c4435597c42c6b897a0ac0fabc504bd8f0493b3e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-struts2.jar" sha1="7310f5f72c07c20c5abe4999c2f3e0f373e16abb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-struts2.jar" sha1="c251ffbdfbcdfddaab0fc58cb32d39895ee1e4d0"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-spring">
+        <artifact tofile="artifacts/jars/guice-spring.jar" sha1="29879d89dcebd0966f82be189b24505a4508d9f9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-spring.jar" sha1="6e73863bc2ebafe847cee6c6772cd83d35b3c866"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-spring.jar" sha1="fba7e4a8d7008ff41f826c4ca6f5ab960da298f5"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-servlet">
+        <artifact tofile="artifacts/jars/guice-servlet.jar" sha1="4503da866f4c402b5090579b40c1c4aaefabb164"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-servlet.jar" sha1="77a4d597ce10109cf32a006a11f6d76b18b8afb5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-servlet.jar" sha1="89ddaf271f5d4303ba07a4d408eddc952ff91c4c"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-persist">
+        <artifact tofile="artifacts/jars/guice-persist.jar" sha1="ce9766b8f39420bbac4da69fa85370acf36f88e0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-persist.jar" sha1="137e881a84519026cf0f5e314422c554bfa489de"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-persist.jar" sha1="28826c606b6ab2ca833071f3e2c5ae785da8777e"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-jndi">
+        <artifact tofile="artifacts/jars/guice-jndi.jar" sha1="8be12e9ed28f3f263ed282d68a39b8f363498b29"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-jndi.jar" sha1="988f926cc47a0f58b127476a76a0d345047a004f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-jndi.jar" sha1="9af3607369563d4ae7cca2e1a9a1bcbf5d8e577d"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-jmx">
+        <artifact tofile="artifacts/jars/guice-jmx.jar" sha1="754fb12af15e6c86a33cf6d5008405dce2a2f6b0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-jmx.jar" sha1="dfcb3928f1bafecc7e686573555ca4606dddebb1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-jmx.jar" sha1="4b4b9d8e4973919a39bba89c7233381d124d1103"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-grapher">
+        <artifact tofile="artifacts/jars/guice-grapher.jar" sha1="4e611ae9b12bfc4ddd430a58c65ba1c4328eeaf9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-grapher.jar" sha1="c0ca3246baea02e22bd2d2d6ac8f4db9216e1eb0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-grapher.jar" sha1="e1b8a3e3ccd2857775d138a134782bffea2f2fbf"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-dagger-adapter">
+        <artifact tofile="artifacts/jars/guice-dagger-adapter.jar" sha1="d0a76fea36fc4db26fe46a6c481a7b568e0bc899"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-dagger-adapter.jar" sha1="8d39a157b6ffcbdbb4c0a5160976e1b56418b6c1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-dagger-adapter.jar" sha1="707f80486afca5988b136b3bc229193d4fa8f066"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-multibindings">
+        <artifact tofile="artifacts/jars/guice-multibindings.jar" sha1="f4509545b4470bbcc865aa500ad6fef2e97d28bf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-multibindings.jar" sha1="57571f3b14dfa91b1d286b4eebb74d7d8911ff27"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-multibindings.jar" sha1="7e73682b39502126a1c87972c82ee7e82050612f"/>
+    </m2resource>
+    <m2resource groupId="com/google/inject/extensions" artifactId="guice-assistedinject">
+        <artifact tofile="artifacts/jars/guice-assistedinject.jar" sha1="8fa6431da1a2187817e3e52e967535899e2e46ca"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guice-assistedinject.jar" sha1="579c00df760815a369a396e7877cb6c3441b4328"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guice-assistedinject.jar" sha1="6e901e0440bd1e9c15d312a2166466e5252db2cd"/>
+    </m2resource>
+</packager-module>
