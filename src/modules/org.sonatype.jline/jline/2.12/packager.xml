@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="jline">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="ce9062c6a125e0f9ad766032573c041ae8ecc986"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="acb005a73638f26f85504bbeba42e9861e8f9d9f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="ac646b99f74c410e11ba58485befd2298159a272"/>
+    </m2resource>
+</packager-module>

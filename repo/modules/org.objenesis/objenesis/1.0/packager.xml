@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Phil H. Smith
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://objenesis.googlecode.com/files/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="8c6dbf029f9f44ec66c993fa758a74711e582c0f"/>
+
+    <resource url="http://objenesis.googlecode.com/files/${name}-${revision}-sources.jar" tofile="artifacts/sources/source.jar" sha1="a16ea1d410a080fd3072b08266c90127a1736731"/>
+
+    <resource url="http://objenesis.googlecode.com/files/${name}-tck-${revision}.jar" tofile="artifacts/jars/${name}-tck.jar" sha1="bd6b84073fe98f59537ea2559ee7107870d7b36c"/>
+
+</packager-module>

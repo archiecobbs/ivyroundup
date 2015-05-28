@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.activemq" module="activemq" revision="5.2.0" status="release" publication="20081106032600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.activemq/activemq/5.2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://activemq.apache.org/">
+        <p>
+        Apache ActiveMQ is the most popular and powerful open source Message
+        Broker and Enterprise Integration Patterns provider.
+        </p>
+
+        <p>
+        Apache ActiveMQ is fast, supports many Cross Language Clients and
+        Protocols, comes with easy to use Enterprise Integration Patterns and
+        many advanced features while fully supporting JMS 1.1 and J2EE 1.4.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core ActiveMQ and dependencies"/>
+        <conf name="java12" extends="core" description="Core ActiveMQ and dependencies for JDK &lt; 1.4"/>
+        <conf name="java14" extends="core" description="Core ActiveMQ and dependencies for JDK 1.4"/>
+        <conf name="java5" extends="core" description="Core ActiveMQ and dependencies for JDK 5"/>
+        <conf name="java6" extends="core" description="Core ActiveMQ and dependencies for JDK 6"/>
+        <conf name="default" extends="java5" description="Core ActiveMQ and dependencies for JDK 5"/>
+        <conf name="camel" extends="pool" description="ActiveMQ component for Camel"/>
+        <conf name="console" extends="core" description="ActiveMQ Management Console"/>
+        <conf name="jaas" extends="core" description="A collection of generic JAAS Login Modules"/>
+        <conf name="jmdns" extends="core" description="JMDNS"/>
+        <conf name="jpa" extends="core" description="JPA Message Store"/>
+        <conf name="openwire" extends="core" description="Openwire Generator"/>
+        <conf name="optional" extends="core" description="Optional classes"/>
+        <conf name="pool" extends="core" description="ActiveMQ Pooled ConnectionFactory"/>
+        <conf name="ra" extends="core" description="A JCA Resource Adapter used to integrate ActiveMQ with transactional enterprise containers"/>
+        <conf name="web" extends="camel" description="Web Connector for REST API and Streamlets support"/>
+        <conf name="xmpp" extends="core" description="XMPP integration"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-camel" ivyde:javadoc="activemq-camel" name="activemq-camel" conf="camel"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-console" ivyde:javadoc="activemq-console" name="activemq-console" conf="console"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-core" ivyde:javadoc="activemq-core" name="activemq-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jaas" ivyde:javadoc="activemq-jaas" name="activemq-jaas" conf="jaas"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jmdns_1.0" ivyde:javadoc="activemq-jmdns_1.0" name="activemq-jmdns_1.0" conf="jmdns"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-jpa-store" ivyde:javadoc="activemq-jpa-store" name="activemq-jpa-store" conf="jpa"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-openwire-generator" ivyde:javadoc="activemq-openwire-generator" name="activemq-openwire-generator" conf="openwire"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-optional" ivyde:javadoc="activemq-optional" name="activemq-optional" conf="optional"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-pool" ivyde:javadoc="activemq-pool" name="activemq-pool" conf="pool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-ra" ivyde:javadoc="activemq-ra" name="activemq-ra" conf="ra"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-web" ivyde:javadoc="activemq-web" name="activemq-web" conf="web"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="activemq-xmpp" ivyde:javadoc="activemq-xmpp" name="activemq-xmpp" conf="xmpp"/>
+
+        <artifact name="activemq-camel" type="source" ext="zip" conf="camel"/>
+        <artifact name="activemq-console" type="source" ext="zip" conf="console"/>
+        <artifact name="activemq-core" type="source" ext="zip" conf="core"/>
+        <artifact name="activemq-jaas" type="source" ext="zip" conf="jaas"/>
+        <artifact name="activemq-jmdns_1.0" type="source" ext="zip" conf="jmdns"/>
+        <artifact name="activemq-jpa-store" type="source" ext="zip" conf="jpa"/>
+        <artifact name="activemq-openwire-generator" type="source" ext="zip" conf="openwire"/>
+        <artifact name="activemq-optional" type="source" ext="zip" conf="optional"/>
+        <artifact name="activemq-pool" type="source" ext="zip" conf="pool"/>
+        <artifact name="activemq-ra" type="source" ext="zip" conf="ra"/>
+        <artifact name="activemq-web" type="source" ext="zip" conf="web"/>
+        <artifact name="activemq-xmpp" type="source" ext="zip" conf="xmpp"/>
+
+        <artifact name="activemq-camel" type="javadoc" ext="zip" conf="camel"/>
+        <artifact name="activemq-console" type="javadoc" ext="zip" conf="console"/>
+        <artifact name="activemq-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="activemq-jaas" type="javadoc" ext="zip" conf="jaas"/>
+        <artifact name="activemq-jmdns_1.0" type="javadoc" ext="zip" conf="jmdns"/>
+        <artifact name="activemq-jpa-store" type="javadoc" ext="zip" conf="jpa"/>
+        <artifact name="activemq-openwire-generator" type="javadoc" ext="zip" conf="openwire"/>
+        <artifact name="activemq-optional" type="javadoc" ext="zip" conf="optional"/>
+        <artifact name="activemq-pool" type="javadoc" ext="zip" conf="pool"/>
+        <artifact name="activemq-ra" type="javadoc" ext="zip" conf="ra"/>
+        <artifact name="activemq-web" type="javadoc" ext="zip" conf="web"/>
+        <artifact name="activemq-xmpp" type="javadoc" ext="zip" conf="xmpp"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.jms" name="jms" rev="1.+" conf="*-&gt;default"/>
+        <dependency org="javax.management" name="j2ee_management" rev="1.+" conf="*-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="1.+" conf="*-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.+" conf="*-&gt;default"/>
+        <dependency org="org.apache.activemq" name="activeio" rev="3.+" conf="java12-&gt;java12;java14-&gt;java14;core,java5-&gt;java5;java6-&gt;java6"/>
+        <dependency org="net.sourceforge.backport-jsr166" name="backport-util-concurrent" rev="[0,)" conf="java12-&gt;Java12;java14-&gt;Java14;java5-&gt;Java50;java6-&gt;Java60"/>
+        <dependency org="net.sourceforge.mx4j" name="mx4j" rev="3.0.+" conf="java12,java14-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-pool" rev="[1.3,2.0[" conf="console,pool-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="2.5.+" conf="pool-&gt;beans;optional-&gt;core"/>
+        <!-- TODO:
+        <dependency org="org.apache.camel" name="camel" rev="???" conf="camel->jms"/>
+        <dependency org="org.apache.openjpa" name="openjpa" rev="???" conf="jpa->persistence-jdbc"/>
+        <dependency org="groovy" name="groovy" rev="1.1" conf="openwire->gram"/>
+        <dependency org="groovy" name="groovy" rev="1.0-jsr-03" conf="openwire->all"/>
+        <dependency org="annogen" name="annogen" rev="0.1.0" conf="openwire->default"/>
+        <dependency org="org.apache.ant" name="ant" rev="[1.6.2,)" conf="openwire->default"/>
+        see http://repo2.maven.org/maven2/org/apache/activemq/activemq-openwire-generator/5.2.0/activemq-openwire-generator-5.2.0.pom
+        see http://repo2.maven.org/maven2/org/apache/activemq/activemq-optional/5.2.0/activemq-optional-5.2.0.pom
+        see http://repo2.maven.org/maven2/org/apache/activemq/activemq-ra/5.2.0/activemq-ra-5.2.0.pom
+        see http://repo2.maven.org/maven2/org/apache/activemq/activemq-web/5.2.0/activemq-web-5.2.0.pom
+        see http://repo2.maven.org/maven2/org/apache/activemq/activemq-xmpp/5.2.0/activemq-xmpp-5.2.0.pom
+        -->
+    </dependencies>
+</ivy-module>

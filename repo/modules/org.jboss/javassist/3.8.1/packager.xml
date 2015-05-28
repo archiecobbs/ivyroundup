@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/jboss/Javassist/3.8.1.GA/${archive}.GA.zip" sha1="c041691b5d0a8204578aef50772e8f8957ba2f1a">
+        <include name="${archive}/${name}.jar"/>
+        <include name="${archive}/html/**/*"/>
+        <include name="${archive}/src/main/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- javadocs -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/html"/>
+        </zip>
+
+        <!-- sources -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/main"/>
+        </zip>
+    </build>
+</packager-module>

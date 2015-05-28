@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.sourceforge.proxool" module="proxool" revision="0.9.0RC3" status="milestone" publication="20070109120000">
+        <license name="BSD style" url="http://proxool.sourceforge.net/licence.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.proxool/proxool/0.9.0RC3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://proxool.sourceforge.net/">
+            <p>
+            Proxool is a Java connection pool. It's not rocket science but
+            we've been doing it since 2001 and we've ironed out a lot of
+            problems. Development has slowed down considerably over the past
+            few years but we're still here, making releases and answering
+            support questions.
+            </p>
+
+            <h3>Features</h3>
+            <p>
+            <ul>
+            <li><b>Transparency:</b> Transparently adds connection
+            pooling to your existing JDBC driver.</li>
+            <li><b>Open Source:</b> Our licence allows you flexibility to
+            use it in both commerical and other open source products.</li>
+            <li><b>Standards:</b> Complies with the J2SE API, giving
+            you the confidence to develop to standards.</li>
+            <li><b>Control:</b> You can monitor the performance of your
+            database connections and listen to connection events</li>
+            <li><b>Ease of use:</b> It's easy to configure using the
+            JDBC API, XML, or Java property files - you decide.</li>
+            </ul>
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="javax.mail" module="javamail" revision="1.4.5" status="release" publication="20120323143500">
+        <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/us/sun/index.htm"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.mail/javamail/1.4.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.oracle.com/technetwork/java/javamail/index-138643.html">
+            The JavaMail API provides a platform-independent and protocol-independent
+            framework to build mail and messaging applications. The JavaMail API is
+            available as an optional package for use with Java SE platform and is
+            also included in the Java EE platform.
+        </description>
+    </info>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="javamail" ivyde:javadoc="javamail"/>
+
+        <!-- source -->
+        <artifact type="source" ext="zip"/>
+
+        <!-- javadoc -->
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.activation" name="jaf" rev="[1.1.1,2.0[" conf="*-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

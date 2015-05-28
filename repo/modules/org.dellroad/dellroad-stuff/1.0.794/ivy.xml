@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dellroad" module="dellroad-stuff" revision="1.0.794" status="release" publication="20131211000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dellroad/dellroad-stuff/1.0.794/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/p/dellroad-stuff/">
+
+            <p>
+            A dumping ground for various useful Java classes and ant build macros that have
+            evolved over time from repeated use in several different projects.
+            </p>
+
+            <p>Highlights:
+            <ul>
+                <li>Automated schema update tracking with <a href="http://www.springframework/org/">Spring</a> integration
+                (see <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/schema/package-summary.html">org.dellroad.stuff.schema</a>)</li>
+                <li>Several <a href="http://vaadin.com">Vaadin</a> support classes, especially for Spring integration (see
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/vaadin/package-summary.html">org.dellroad.stuff.vaadin</a>) </li>
+                <li>Support classes for <a href="http://jibx.sourceforge.net/">JiBX</a> (see
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/jibx/package-summary.html">org.dellroad.stuff.jibx</a>) </li>
+                <li>Simple XML Persistence Objects (see <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/pobj/package-summary.html">org.dellroad.stuff.pobj</a>) </li>
+                <li>Some handy <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/validation/package-summary.html">validation</a> support classes </li>
+                <li>Miscellaneous stuff for <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/io/package-summary.html">I/O</a>, 
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/net/package-summary.html">networking</a>,
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/xml/package-summary.html">XML</a>,
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/dao/package-summary.html">DAO's</a>,
+                    <a href="https://code.google.com/p/dellroad-stuff/svn/trunk/publish/reports/javadoc/index.html?org/dellroad/stuff/string/package-summary.html">strings and parsing</a>,
+                etc. </li>
+            </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="All dellroad-stuff classes with no external dependencies"/>
+        <conf name="dao" extends="core" description="Add DAO dependencies"/>
+        <conf name="spring" extends="core" description="Add Spring dependencies"/>
+        <conf name="vaadin" extends="core" description="Add Vaadin 6 dependencies"/>
+        <conf name="vaadin7" extends="core" description="Add Vaadin 7 dependencies"/>
+        <conf name="aspects" extends="core" description="Add AspectJ runtime dependencies"/>
+        <conf name="validation" extends="core" description="Add Validation API dependency"/>
+        <conf name="validation-hibernate" extends="validation" description="Add Hibernate Validator"/>
+        <conf name="jibx" extends="core" description="Add JiBX dependencies"/>
+        <conf name="readline" extends="core" description="Add java-readline dependency for Main classes"/>
+        <conf name="servlet" extends="core" description="Add Servlet dependencies"/>
+        <conf name="csv" extends="core" description="Add CSV dependencies"/>
+        <conf name="default" extends="core,spring,vaadin,validation-hibernate,jibx,servlet,aspects" description="Core classes and ALL dependencies except java-readline"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="core"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.vaadin" name="vaadin" rev="[6.7.0,6.9.9]" conf="vaadin-&gt;default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="7.1+" conf="vaadin7-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.3,)" conf="servlet-&gt;default"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="dao-&gt;default"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;default"/>
+        <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8+" conf="readline-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="3+" conf="spring-&gt;beans,context-support,expression,jdbc,tx,web-servlet;jibx-&gt;expression,oxm;servlet-&gt;aop,tx,web-servlet"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="4.1+" conf="validation-hibernate-&gt;default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="1.7+" conf="aspects-&gt;default"/>
+        <dependency org="net.sourceforge.opencsv" name="opencsv" rev="2.2" conf="csv-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.powermock" module="powermock" revision="1.4.10" status="release" publication="20110823000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.powermock/powermock/1.4.10/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/powermock/">
+            <p>
+                Writing unit tests can be hard and sometimes good design has to be sacrificed for
+                the sole purpose of testability. Often testability corresponds to good design, but
+                this is not always the case. For example final classes and methods cannot be used,
+                private methods sometimes need to be protected or unnecessarily moved to a collaborator,
+                static methods should be avoided completely and so on simply because of the
+                limitations of existing frameworks.
+            </p>
+            <p>
+                PowerMock is a framework that extend other mock libraries such as EasyMock with more
+                powerful capabilities. PowerMock uses a custom classloader and bytecode manipulation
+                to enable mocking of static methods, constructors, final classes and methods, private
+                methods, removal of static initializers and more. By using a custom classloader no
+                changes need to be done to the IDE or continuous integration servers which simplifies
+                adoption. Developers familiar with the supported mock frameworks will find PowerMock
+                easy to use, since the entire expectation API is the same, both for static methods and
+                constructors. PowerMock aims to extend the existing API's with a small number of
+                methods and annotations to enable the extra features. Currently PowerMock supports
+                EasyMock and Mockito.
+            </p>
+            <p>
+                When writing unit tests it is often useful to bypass encapsulation and therefore
+                PowerMock includes several features that simplifies reflection specifically useful for
+                testing. This allows easy access to internal state, but also simplifies partial and
+                private mocking.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api-easymock" extends="api-support" description="EasyMock API classes"/>
+        <conf name="api-mockito" extends="api-support" description="Mockito API classes"/>
+        <conf name="api-support" extends="core" description="API support classes"/>
+        <conf name="classloading-base" extends="api-support" description="Base classloading module"/>
+        <conf name="classloading-objenesis" extends="classloading-base" description="Objenesis classloading module"/>
+        <conf name="classloading-xstream" extends="classloading-base" description="Xstream classloading module"/>
+        <conf name="core" extends="reflect" description="Core classes"/>
+        <conf name="javaagent" extends="core" description="Javaagent module"/>
+        <conf name="junit3" extends="core" description="Junit3 module"/>
+        <conf name="junit4" extends="junit4-common" description="Junit4 module"/>
+        <conf name="junit4-common" extends="core" description="Junit4 common module"/>
+        <conf name="junit4-legacy" extends="junit4-common, tests-utils" description="Junit4 legacy module"/>
+        <conf name="junit4-rule" extends="classloading-base, core" description="Junit4 rule module"/>
+        <conf name="junit4-rule-agent" extends="core, javaagent" description="Junit4 rule agent module"/>
+        <conf name="reflect" description="Reflect module"/>
+        <conf name="testng" extends="testng-common" description="TestNG module"/>
+        <conf name="testng-common" extends="core" description="TestNG common module"/>
+        <conf name="testng-agent" extends="testng-common, javaagent" description="TestNG javaagent module"/>
+        <conf name="tests-utils" extends="core" description="Test utility classes"/>
+        <conf name="default" extends="core" description="Core classes"/>
+        <conf name="mockito-full" extends="api-mockito,junit4,testng,classloading-base" description="Full Mockito support"/>
+        <conf name="easymock-full" extends="api-easymock,junit4,testng,classloading-base" description="Full EasyMock support"/>
+        <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
+        <conf name="spring-mockito" extends="api-mockito,junit4-rule,classloading-xstream" description="Spring + Mockito"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-api-easymock" ivyde:javadoc="powermock-api-easymock" name="powermock-api-easymock" conf="api-easymock"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-api-mockito" ivyde:javadoc="powermock-api-mockito" name="powermock-api-mockito" conf="api-mockito"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-api-support" ivyde:javadoc="powermock-api-support" name="powermock-api-support" conf="api-support"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-classloading-base" ivyde:javadoc="powermock-classloading-base" name="powermock-classloading-base" conf="classloading-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-classloading-objenesis" ivyde:javadoc="powermock-classloading-objenesis" name="powermock-classloading-objenesis" conf="classloading-objenesis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-classloading-xstream" ivyde:javadoc="powermock-classloading-xstream" name="powermock-classloading-xstream" conf="classloading-xstream"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-core" ivyde:javadoc="powermock-core" name="powermock-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-javaagent" ivyde:javadoc="powermock-module-javaagent" name="powermock-module-javaagent" conf="javaagent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit3" ivyde:javadoc="powermock-module-junit3" name="powermock-module-junit3" conf="junit3"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit4" ivyde:javadoc="powermock-module-junit4" name="powermock-module-junit4" conf="junit4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit4-common" ivyde:javadoc="powermock-module-junit4-common" name="powermock-module-junit4-common" conf="junit4-common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit4-legacy" ivyde:javadoc="powermock-module-junit4-legacy" name="powermock-module-junit4-legacy" conf="junit4-legacy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit4-rule" ivyde:javadoc="powermock-module-junit4-rule" name="powermock-module-junit4-rule" conf="junit4-rule"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-junit4-rule-agent" ivyde:javadoc="powermock-module-junit4-rule-agent" name="powermock-module-junit4-rule-agent" conf="junit4-rule-agent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-testng" ivyde:javadoc="powermock-module-testng" name="powermock-module-testng" conf="testng"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-testng-agent" ivyde:javadoc="powermock-module-testng-agent" name="powermock-module-testng-agent" conf="testng-agent"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-module-testng-common" ivyde:javadoc="powermock-module-testng-common" name="powermock-module-testng-common" conf="testng-common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-reflect" ivyde:javadoc="powermock-reflect" name="powermock-reflect" conf="reflect"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="powermock-tests-utils" ivyde:javadoc="powermock-tests-utils" name="powermock-tests-utils" conf="tests-utils"/>
+
+        <!-- source -->
+        <artifact name="powermock-api-easymock" type="source" ext="zip" conf="api-support"/>
+        <artifact name="powermock-api-mockito" type="source" ext="zip" conf="api-mockito"/>
+        <artifact name="powermock-api-support" type="source" ext="zip" conf="api-support"/>
+        <artifact name="powermock-classloading-base" type="source" ext="zip" conf="classloading-base"/>
+        <artifact name="powermock-classloading-objenesis" type="source" ext="zip" conf="classloading-objenesis"/>
+        <artifact name="powermock-classloading-xstream" type="source" ext="zip" conf="classloading-xstream"/>
+        <artifact name="powermock-core" type="source" ext="zip" conf="core"/>
+        <artifact name="powermock-module-javaagent" type="source" ext="zip" conf="javaagent"/>
+        <artifact name="powermock-module-junit3" type="source" ext="zip" conf="junit3"/>
+        <artifact name="powermock-module-junit4" type="source" ext="zip" conf="junit4"/>
+        <artifact name="powermock-module-junit4-common" type="source" ext="zip" conf="junit4-common"/>
+        <artifact name="powermock-module-junit4-legacy" type="source" ext="zip" conf="junit4-legacy"/>
+        <artifact name="powermock-module-junit4-rule" type="source" ext="zip" conf="junit4-rule"/>
+        <artifact name="powermock-module-junit4-rule-agent" type="source" ext="zip" conf="junit4-rule-agent"/>
+        <artifact name="powermock-module-testng" type="source" ext="zip" conf="testng"/>
+        <artifact name="powermock-module-testng-agent" type="source" ext="zip" conf="testng-agent"/>
+        <artifact name="powermock-module-testng-common" type="source" ext="zip" conf="testng-common"/>
+        <artifact name="powermock-reflect" type="source" ext="zip" conf="reflect"/>
+        <artifact name="powermock-tests-utils" type="source" ext="zip" conf="tests-utils"/>
+
+        <!-- javadoc -->
+        <artifact name="powermock-api-easymock" type="javadoc" ext="zip" conf="api-easymock"/>
+        <artifact name="powermock-api-mockito" type="javadoc" ext="zip" conf="api-mockito"/>
+        <artifact name="powermock-api-support" type="javadoc" ext="zip" conf="api-support"/>
+        <artifact name="powermock-classloading-base" type="javadoc" ext="zip" conf="classloading-base"/>
+        <artifact name="powermock-classloading-objenesis" type="javadoc" ext="zip" conf="classloading-objenesis"/>
+        <artifact name="powermock-classloading-xstream" type="javadoc" ext="zip" conf="classloading-xstream"/>
+        <artifact name="powermock-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="powermock-module-javaagent" type="javadoc" ext="zip" conf="javaagent"/>
+        <artifact name="powermock-module-junit3" type="javadoc" ext="zip" conf="junit3"/>
+        <artifact name="powermock-module-junit4" type="javadoc" ext="zip" conf="junit4"/>
+        <artifact name="powermock-module-junit4-common" type="javadoc" ext="zip" conf="junit4-common"/>
+        <artifact name="powermock-module-junit4-legacy" type="javadoc" ext="zip" conf="junit4-legacy"/>
+        <artifact name="powermock-module-junit4-rule" type="javadoc" ext="zip" conf="junit4-rule"/>
+        <artifact name="powermock-module-junit4-rule-agent" type="javadoc" ext="zip" conf="junit4-rule-agent"/>
+        <artifact name="powermock-module-testng" type="javadoc" ext="zip" conf="testng"/>
+        <artifact name="powermock-module-testng-agent" type="javadoc" ext="zip" conf="testng-agent"/>
+        <artifact name="powermock-module-testng-common" type="javadoc" ext="zip" conf="testng-common"/>
+        <artifact name="powermock-reflect" type="javadoc" ext="zip" conf="reflect"/>
+        <artifact name="powermock-tests-utils" type="javadoc" ext="zip" conf="tests-utils"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.objenesis" name="objenesis" rev="[1.2,)" conf="reflect,api-mockito-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="4.4+" conf="api-mockito,classloading-objenesis,classloading-xstream,junit4-rule,junit4-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="[4.0,4.4[" conf="junit4-legacy-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="[3.8,4.0[" conf="junit3-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="tests-utils-&gt;default"/>
+        <dependency org="org.codehaus.xstream" name="xstream" rev="[1.3.1,)" conf="classloading-xstream-&gt;default"/>
+        <dependency org="org.mockito" name="mockito" rev="[1.8.5,)" conf="api-mockito-&gt;default"/>
+        <dependency org="org.easymock" name="easymock" rev="[3.0,)" conf="api-easymock-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="3.0+" conf="spring-mockito-&gt;core,context,test"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.6,3.0[" conf="spring-mockito-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

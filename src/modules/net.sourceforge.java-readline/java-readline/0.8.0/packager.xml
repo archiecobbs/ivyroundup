@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="arcname" value="libreadline-java"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${arcname}-${revision}-1.i386.rpm"
+      tofile="archive/${name}.rpm"
+      sha1="baefb5f3704d59e3f261aa34c92a3e1a6656b286"/>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${arcname}-${revision}-src.tar.gz"
+      sha1="1f5574f9345afc039e9c7a09ae4979129891d52a"/>
+
+    <build>
+
+        <!-- Unpack RPM -->
+        <exec executable="sh" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="cd archive &amp;&amp; rpm2cpio ${name}.rpm | cpio -vimud"/>
+        </exec>
+
+        <!-- jar -->
+        <move file="archive/usr/share/java/${arcname}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- shared library (x86) -->
+        <mkdir dir="sos"/>
+        <move file="archive/usr/lib/libJavaReadline.so" todir="artifacts/sos"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${arcname}-${revision}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/usr/share/doc/packages/${arcname}/api"/>
+        </zip>
+    </build>
+</packager-module>

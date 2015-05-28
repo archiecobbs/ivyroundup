@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130301000000">
+        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <description homepage="https://java.net/projects/atmosphere/">
+            <p>
+                Atmosphere is a POJO based framework using Inversion of Control (IoC) to bring push/Comet
+                and Websocket to the masses! Finally a framework which can run on any Java based Web Server,
+                including Tomcat, Jetty, GlassFish, Weblogic, Grizzly, JBossWeb and JBoss, Resin, etc.
+                without having to learn how Comet or WebSocket support has been differently implemented
+                by all those Containers. The Atmosphere Framework has both client (JQuery PlugIn) and
+                server components.
+            </p>
+            <p>
+                Servlet 3.0 is supported along with framework like Jersey, GWT, Struts, Spring, Wicket etc.
+                and programming language like JRuby, Groovy and Scala. Finally, any web application can be
+                clustered using our Cluster plugin architecture supporting JMS or JGroups.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="runtime" extends="compat-tomcat7,compat-jbossweb" description="Runtime only"/>
+        <conf name="default" extends="runtime" description="Default config"/>
+        <conf name="annotations" extends="runtime" description="Annotations support"/>
+        <conf name="cometd" extends="runtime" description="CometD support"/>
+        <conf name="compat-tomcat" description="Tomcat &lt; 7 compatibility"/>
+        <conf name="compat-tomcat7" description="Tomcat 7 compatibility"/>
+        <conf name="compat-weblogic" extends="runtime" description="Weblogic compatibility"/>
+        <conf name="compat-jbossweb" extends="compat-tomcat" description="JBoss web compatibility"/>
+        <conf name="guice" extends="jersey" description="Guice support"/>
+        <conf name="gwt" extends="runtime,gwt-common" description="GWT server-side support"/>
+        <conf name="gwt-client" extends="gwt-common" description="GWT client-side support"/>
+        <conf name="gwt-common" description="Common GWT stuff"/>
+        <conf name="gwt-extra" extends="gwt-client" description="Extra GWT stuff"/>
+        <conf name="gwt-jackson" extends="gwt" description="GWT Jackson support"/>
+        <conf name="gwt-js" extends="gwt-extra" description="GWT Extra JS support"/>
+        <conf name="gwt-poll" extends="runtime" description="GWT poll"/>
+        <conf name="hazelcast" extends="jersey" description="Hazelcast support"/>
+        <conf name="jersey" extends="annotations" description="Jersey support"/>
+        <conf name="jetty-websocketdraft8" extends="runtime" description="Websocket draft 8 support in Jetty"/>
+        <conf name="jgroups" extends="jersey" description="JGroups support"/>
+        <conf name="jms" extends="annotations" description="JMS support"/>
+        <conf name="redis" extends="jersey" description="REDIS support"/>
+        <conf name="socketio" extends="runtime" description="SocketIO support"/>
+        <conf name="spring" extends="runtime" description="Spring support"/>
+        <conf name="xmpp" extends="jersey" description="XMPP support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="atmosphere-annotations" conf="annotations"/>
+        <artifact name="atmosphere-cometd" conf="cometd"/>
+        <artifact name="atmosphere-compat-jbossweb" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-tomcat" conf="compat-tomcat"/>
+        <artifact name="atmosphere-compat-tomcat7" conf="compat-tomcat7"/>
+        <artifact name="atmosphere-guice" conf="guice"/>
+        <artifact name="atmosphere-gwt-client" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" conf="gwt-common"/>
+        <artifact name="atmosphere-gwt-extra" conf="gwt-extra"/>
+        <artifact name="atmosphere-gwt-jackson" conf="gwt-jackson"/>
+        <artifact name="atmosphere-gwt-poll" conf="gwt-poll"/>
+        <artifact name="atmosphere-gwt-server" conf="gwt"/>
+        <artifact name="atmosphere-hazelcast" conf="hazelcast"/>
+        <artifact name="atmosphere-jersey" conf="jersey"/>
+        <artifact name="atmosphere-jetty-websocketdraft8" conf="jetty-websocketdraft8"/>
+        <artifact name="atmosphere-jgroups" conf="jgroups"/>
+        <artifact name="atmosphere-jms" conf="jms"/>
+        <artifact name="atmosphere-redis" conf="redis"/>
+        <artifact name="atmosphere-runtime" conf="runtime"/>
+        <artifact name="atmosphere-socketio" conf="socketio"/>
+        <artifact name="atmosphere-spring" conf="spring"/>
+        <artifact name="atmosphere-weblogic" conf="compat-weblogic"/>
+        <artifact name="atmosphere-xmpp" conf="xmpp"/>
+
+        <!-- source -->
+        <artifact name="atmosphere-annotations" type="source" ext="zip" conf="annotations"/>
+        <artifact name="atmosphere-cometd" type="source" ext="zip" conf="cometd"/>
+        <artifact name="atmosphere-compat-jbossweb" type="source" ext="zip" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-tomcat" type="source" ext="zip" conf="compat-tomcat"/>
+        <artifact name="atmosphere-compat-tomcat7" type="source" ext="zip" conf="compat-tomcat7"/>
+        <artifact name="atmosphere-guice" type="source" ext="zip" conf="guice"/>
+        <artifact name="atmosphere-gwt-client" type="source" ext="zip" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" type="source" ext="zip" conf="gwt-common"/>
+        <artifact name="atmosphere-gwt-extra" type="source" ext="zip" conf="gwt-extra"/>
+        <artifact name="atmosphere-gwt-jackson" type="source" ext="zip" conf="gwt-jackson"/>
+        <artifact name="atmosphere-gwt-js" type="source" ext="zip" conf="gwt-js"/>
+        <artifact name="atmosphere-gwt-poll" type="source" ext="zip" conf="gwt-poll"/>
+        <artifact name="atmosphere-gwt-server" type="source" ext="zip" conf="gwt"/>
+        <artifact name="atmosphere-hazelcast" type="source" ext="zip" conf="hazelcast"/>
+        <artifact name="atmosphere-jersey" type="source" ext="zip" conf="jersey"/>
+        <artifact name="atmosphere-jetty-websocketdraft8" type="source" ext="zip" conf="jetty-websocketdraft8"/>
+        <artifact name="atmosphere-jgroups" type="source" ext="zip" conf="jgroups"/>
+        <artifact name="atmosphere-jms" type="source" ext="zip" conf="jms"/>
+        <artifact name="atmosphere-redis" type="source" ext="zip" conf="redis"/>
+        <artifact name="atmosphere-runtime" type="source" ext="zip" conf="runtime"/>
+        <artifact name="atmosphere-socketio" type="source" ext="zip" conf="socketio"/>
+        <artifact name="atmosphere-spring" type="source" ext="zip" conf="spring"/>
+        <artifact name="atmosphere-weblogic" type="source" ext="zip" conf="compat-weblogic"/>
+        <artifact name="atmosphere-xmpp" type="source" ext="zip" conf="xmpp"/>
+
+        <!-- javadoc -->
+        <artifact name="atmosphere-annotations" type="javadoc" ext="zip" conf="annotations"/>
+        <artifact name="atmosphere-cometd" type="javadoc" ext="zip" conf="cometd"/>
+        <artifact name="atmosphere-compat-jbossweb" type="javadoc" ext="zip" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-tomcat" type="javadoc" ext="zip" conf="compat-tomcat"/>
+        <artifact name="atmosphere-compat-tomcat7" type="javadoc" ext="zip" conf="compat-tomcat7"/>
+        <artifact name="atmosphere-guice" type="javadoc" ext="zip" conf="guice"/>
+        <artifact name="atmosphere-gwt-client" type="javadoc" ext="zip" conf="gwt-client"/>
+        <artifact name="atmosphere-gwt-common" type="javadoc" ext="zip" conf="gwt-common"/>
+        <artifact name="atmosphere-gwt-extra" type="javadoc" ext="zip" conf="gwt-extra"/>
+        <artifact name="atmosphere-gwt-jackson" type="javadoc" ext="zip" conf="gwt-jackson"/>
+        <artifact name="atmosphere-gwt-js" type="javadoc" ext="zip" conf="gwt-js"/>
+        <artifact name="atmosphere-gwt-poll" type="javadoc" ext="zip" conf="gwt-poll"/>
+        <artifact name="atmosphere-gwt-server" type="javadoc" ext="zip" conf="gwt"/>
+        <artifact name="atmosphere-hazelcast" type="javadoc" ext="zip" conf="hazelcast"/>
+        <artifact name="atmosphere-jersey" type="javadoc" ext="zip" conf="jersey"/>
+        <artifact name="atmosphere-jetty-websocketdraft8" type="javadoc" ext="zip" conf="jetty-websocketdraft8"/>
+        <artifact name="atmosphere-jgroups" type="javadoc" ext="zip" conf="jgroups"/>
+        <artifact name="atmosphere-jms" type="javadoc" ext="zip" conf="jms"/>
+        <artifact name="atmosphere-redis" type="javadoc" ext="zip" conf="redis"/>
+        <artifact name="atmosphere-runtime" type="javadoc" ext="zip" conf="runtime"/>
+        <artifact name="atmosphere-socketio" type="javadoc" ext="zip" conf="socketio"/>
+        <artifact name="atmosphere-spring" type="javadoc" ext="zip" conf="spring"/>
+        <artifact name="atmosphere-weblogic" type="javadoc" ext="zip" conf="compat-weblogic"/>
+        <artifact name="atmosphere-xmpp" type="javadoc" ext="zip" conf="xmpp"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="[1.9.8,)" conf="socketio->mapper;gwt-jackson->core,mapper"/>
+        <dependency org="com.sun.jersey" name="jersey" rev="[1.12,)" conf="jersey->server,servlet;guice->guice"/>
+        <dependency org="com.google" name="guice" rev="[2.0,)" conf="guice->servlet"/>
+        <dependency org="com.google" name="gwt" rev="2.4+" conf="gwt,gwt-poll->runtime;gwt-client->compile"/>
+        <dependency org="org.jgroups" name="jgroups" rev="[2.8.0,)" conf="jgroups->default"/>
+        <dependency org="javax.jms" name="jms" rev="1.1" conf="jms->default"/>
+        <dependency org="redis.clients" name="jedis" rev="[2.0,)" conf="redis->default"/>
+        <dependency org="org.springframework" name="spring" rev="[3.0.0,)" conf="spring->webmvc"/>
+        <dependency org="org.jivesoftware.smack" name="smack" rev="[3.1.0,)" conf="xmpp->default"/>
+        <dependency org="org.cometd.java" name="cometd" rev="[2.4.3,)" conf="cometd->websocket,annotations"/>
+        <dependency org="com.hazelcast" name="hazelcast" rev="[1.9.4.6,)" conf="hazelcast->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.1,)" conf="runtime->core"/>
+        <!-- optional
+        <dependency org="eu.infomas" name="annotation-detector" rev="[3.0.0,)" conf="runtime->default"/>
+        -->
+        <!--
+             <dependency org="org.timepedia.exporter" name="gwtexporter" rev="2.3.0" conf="gwt-js->default/>
+        -->
+    </dependencies>
+
+</ivy-module>
+

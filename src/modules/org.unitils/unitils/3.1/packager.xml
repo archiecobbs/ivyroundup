@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="unitils-core">
+        <artifact tofile="artifacts/jars/unitils-core.jar" sha1="fb152c16901922e07a7cee1b89750ac5120e444a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-core.zip" sha1="f26641a5bf0af5d3c3c4e214630ae21daa7b159c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-core.zip" sha1="6b100d17916c930c83813f7698ee416d4764d8db"/>
+    </m2resource>
+    <m2resource artifactId="unitils-database">
+        <artifact tofile="artifacts/jars/unitils-database.jar" sha1="8537f7928b258295a99a7542de1d587158df6907"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-database.zip" sha1="a0e7b763c1ba142f9be855a8d4dfc0e3082f4cf9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-database.zip" sha1="6da64b5c2b5d0fad7400178c834d5155fe3797b8"/>
+    </m2resource>
+    <m2resource artifactId="unitils-dbmaintainer">
+        <artifact tofile="artifacts/jars/unitils-dbmaintainer.jar" sha1="869e6c5df60e3a3c0070df2be53a3bfd49247dc5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-dbmaintainer.zip" sha1="6df2f0e5592c97280817b44d44334a6abbdf2445"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-dbmaintainer.zip" sha1="d3c1f2d78f0fb912c5d847143cece3aec5fb845c"/>
+    </m2resource>
+    <m2resource artifactId="unitils-dbunit">
+        <artifact tofile="artifacts/jars/unitils-dbunit.jar" sha1="71a3b992a585f314d897103fae6b080033a7a4b1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-dbunit.zip" sha1="a27276f5bc485f550ae1d2d24572ce1fd505ded8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-dbunit.zip" sha1="10e7b6e266e3965a6569865961735bd17e3b7354"/>
+    </m2resource>
+    <m2resource artifactId="unitils-easymock">
+        <artifact tofile="artifacts/jars/unitils-easymock.jar" sha1="b99991f5eb59ae9d4970365c4e3ba8179f65cf4d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-easymock.zip" sha1="3474b7fdbdd74a8d6869157772f11a62ef69975e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-easymock.zip" sha1="8e5605f7bef8e18014be2824e122eaf122b296dd"/>
+    </m2resource>
+    <m2resource artifactId="unitils-inject">
+        <artifact tofile="artifacts/jars/unitils-inject.jar" sha1="0d470df5a8fdeb25495af4696c21721996452ac8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-inject.zip" sha1="55bd13bfe7ce0a4a53786f055b07da89ee04698a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-inject.zip" sha1="c73c673d4524821abe9187879300a571a40aba30"/>
+    </m2resource>
+    <m2resource artifactId="unitils-mock">
+        <artifact tofile="artifacts/jars/unitils-mock.jar" sha1="5f46e5ad79a16947279218eceb86b6cdec6e3f47"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-mock.zip" sha1="79c3fb1ee3264bf62afd428aeea52edbdd654da2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-mock.zip" sha1="232c67c683ee716b2f1f957658dbcb8f85680afd"/>
+    </m2resource>
+    <m2resource artifactId="unitils-orm">
+        <artifact tofile="artifacts/jars/unitils-orm.jar" sha1="2ddee46ac7fc214e56c3a9fb30d56a8d852eaa06"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-orm.zip" sha1="70c4553d4f4ad9fb08ecc0e2828a96fc47edbcba"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-orm.zip" sha1="bbd600da7fb2a2a7f370392fcc849ed116bb1ccd"/>
+    </m2resource>
+    <m2resource artifactId="unitils-spring">
+        <artifact tofile="artifacts/jars/unitils-spring.jar" sha1="2c59904f1f59991307e76344e19cc8aca6b5234f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-spring.zip" sha1="0cda63aa444ced1ac6e35b4835626b0c640dbbd3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-spring.zip" sha1="a8995344b54b123c830971bcae9acf1aa25de4c1"/>
+    </m2resource>
+    <m2resource artifactId="unitils-test">
+        <artifact tofile="artifacts/jars/unitils-test.jar" sha1="dd4dca02c3aada84d1b0fcb748ca93f15ea965f5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-test.zip" sha1="fc6ce69faf00bd28fb9f9a693ee842ea9788405f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-test.zip" sha1="3af0597a9910cdca4f70df865849f06e68443e2b"/>
+    </m2resource>
+    <m2resource artifactId="unitils-testng">
+        <artifact tofile="artifacts/jars/unitils-testng.jar" sha1="20a707bb04222907cab0d99f8c4a52228f56c816"/>
+        <artifact classifier="sources" tofile="artifacts/sources/unitils-testng.zip" sha1="9315f8b92a864c08ce322e59e7fdaf2897ee5591"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/unitils-testng.zip" sha1="d8e5695cd3c60a21ba4eefa737cbfcf4a40d4be7"/>
+    </m2resource>
+</packager-module>
+

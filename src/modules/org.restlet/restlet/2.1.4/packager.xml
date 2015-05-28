@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-jse-${revision}"/>
+
+    <resource url="http://restlet.com/download/2.1/${archive}.zip" sha1="488bea3c89bd96f1926795af2622f0aa4883577b"/>
+
+    <build>
+
+        <!-- JARs -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}/lib" includes="*.jar"/>
+        </move>
+
+        <!-- Sources -->
+        <zip destfile="artifacts/sources/org.restlet.zip" basedir="archive/${archive}/src/org.restlet"/>
+        <zip destfile="artifacts/sources/org.restlet.example.zip" basedir="archive/${archive}/src/org.restlet.example"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.atom.zip" basedir="archive/${archive}/src/org.restlet.ext.atom"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.crypto.zip" basedir="archive/${archive}/src/org.restlet.ext.crypto"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.emf.zip" basedir="archive/${archive}/src/org.restlet.ext.emf"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.fileupload.zip" basedir="archive/${archive}/src/org.restlet.ext.fileupload"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.freemarker.zip" basedir="archive/${archive}/src/org.restlet.ext.freemarker"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.gwt.zip" basedir="archive/${archive}/src/org.restlet.ext.gwt"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.html.zip" basedir="archive/${archive}/src/org.restlet.ext.html"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.httpclient.zip" basedir="archive/${archive}/src/org.restlet.ext.httpclient"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jaas.zip" basedir="archive/${archive}/src/org.restlet.ext.jaas"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jackson.zip" basedir="archive/${archive}/src/org.restlet.ext.jackson"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.javamail.zip" basedir="archive/${archive}/src/org.restlet.ext.javamail"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jaxb.zip" basedir="archive/${archive}/src/org.restlet.ext.jaxb"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jaxrs.zip" basedir="archive/${archive}/src/org.restlet.ext.jaxrs"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jdbc.zip" basedir="archive/${archive}/src/org.restlet.ext.jdbc"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jetty.zip" basedir="archive/${archive}/src/org.restlet.ext.jetty"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.jibx.zip" basedir="archive/${archive}/src/org.restlet.ext.jibx"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.json.zip" basedir="archive/${archive}/src/org.restlet.ext.json"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.lucene.zip" basedir="archive/${archive}/src/org.restlet.ext.lucene"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.net.zip" basedir="archive/${archive}/src/org.restlet.ext.net"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.oauth.zip" basedir="archive/${archive}/src/org.restlet.ext.oauth"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.odata.zip" basedir="archive/${archive}/src/org.restlet.ext.odata"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.openid.zip" basedir="archive/${archive}/src/org.restlet.ext.openid"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.rdf.zip" basedir="archive/${archive}/src/org.restlet.ext.rdf"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.rome.zip" basedir="archive/${archive}/src/org.restlet.ext.rome"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.sdc.zip" basedir="archive/${archive}/src/org.restlet.ext.sdc"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.simple.zip" basedir="archive/${archive}/src/org.restlet.ext.simple"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.sip.zip" basedir="archive/${archive}/src/org.restlet.ext.sip"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.slf4j.zip" basedir="archive/${archive}/src/org.restlet.ext.slf4j"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.spring.zip" basedir="archive/${archive}/src/org.restlet.ext.spring"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.ssl.zip" basedir="archive/${archive}/src/org.restlet.ext.ssl"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.velocity.zip" basedir="archive/${archive}/src/org.restlet.ext.velocity"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.wadl.zip" basedir="archive/${archive}/src/org.restlet.ext.wadl"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.xml.zip" basedir="archive/${archive}/src/org.restlet.ext.xml"/>
+        <zip destfile="artifacts/sources/org.restlet.ext.xstream.zip" basedir="archive/${archive}/src/org.restlet.ext.xstream"/>
+        <zip destfile="artifacts/sources/org.restlet.test.zip" basedir="archive/${archive}/src/org.restlet.test"/>
+
+        <!-- Javadocs -->
+        <zip destfile="artifacts/javadocs/api.zip" basedir="archive/${archive}/docs/api"/>
+        <zip destfile="artifacts/javadocs/ext.zip" basedir="archive/${archive}/docs/ext"/>
+        <zip destfile="artifacts/javadocs/engine.zip" basedir="archive/${archive}/docs/engine"/>
+    </build>
+</packager-module>

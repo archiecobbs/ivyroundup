@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="2_7_1"/>
+    <property name="archive" value="${name}_${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-bin-2jars.tar.gz" sha1="cb9c988b1a93c008e924551cbe144b2bc62c3f2e">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/docs/apidocs/**/*"/>
+    </resource>
+    <resource url="http://archive.apache.org/dist/xml/xalan-j/xalan-j_2_7_1-src-2jars.tar.gz" sha1="c6e597e88de0dd2e7e63a5df6203f7270235812b">
+        <include name="${archive}/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/xalan.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/xsltc.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/serializer.jar" todir="artifacts/jars/"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
+    </build>
+</packager-module>

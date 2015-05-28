@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>kryo by com.esotericsoftware :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.esotericsoftware/kryo/">kryo</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.esotericsoftware/">com.esotericsoftware</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>2.21</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://code.google.com/p/kryo/">https://code.google.com/p/kryo/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://opensource.org/licenses/BSD-3-Clause">New BSD License</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.esotericsoftware/kryo/2.21/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://code.google.com/p/kryo/">
+
+            <p>
+            Kryo is an efficient Java serialization framework.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>Normal Kryo JAR file</td>
+<td></td>
+</tr>
+<tr>
+<td>shaded</td>
+<td>Kryo and its depenencies in a single JAR file</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td></td>
+<td>normal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>kryo.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>kryo-shaded.jar</td>
+<td>jar</td>
+<td>shaded</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.esotericsoftware</td>
+<td><a href="../../../com.esotericsoftware/reflectasm/">reflectasm</a></td>
+<td>1.07</td>
+<td>normal-&gt;default</td>
+</tr>
+<tr>
+<td>com.esotericsoftware</td>
+<td><a href="../../../com.esotericsoftware/minlog/">minlog</a></td>
+<td>1.2</td>
+<td>normal-&gt;default</td>
+</tr>
+<tr>
+<td>org.objenesis</td>
+<td><a href="../../../org.objenesis/objenesis/">objenesis</a></td>
+<td>1.2</td>
+<td>normal-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>${ivy.packager.organisation}.${ivy.packager.module}</td>
+<td>kryo</td>
+<td>2.21</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}.jar</td>
+<td>09a4e69cff8d225729656f7e97e40893b23bffef</td>
+</tr>
+<tr>
+<td>${ivy.packager.organisation}.${ivy.packager.module}</td>
+<td>kryo</td>
+<td>2.21</td>
+<td>shaded</td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}-shaded.jar</td>
+<td>20a6e91fac0c8a07f2e34cabae9a4262d9539ca4</td>
+</tr>
+<tr>
+<td>${ivy.packager.organisation}.${ivy.packager.module}</td>
+<td>kryo</td>
+<td>2.21</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>c77d5c8cbe410c2f1bbb499ab1f743b5737675c4</td>
+</tr>
+<tr>
+<td>${ivy.packager.organisation}.${ivy.packager.module}</td>
+<td>kryo</td>
+<td>2.21</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>45fb0141b87f9884fb5cc54b26e5c09317004864</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

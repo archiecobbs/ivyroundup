@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ivysettings>
+    <resolvers>
+
+        <!--
+            Define a packager repository using the repository we build in ${target.repo}
+        -->
+        <packager name="ivyroundup" restricted="false"
+          buildRoot="${user.home}/.ivy2/packager/build"
+          resourceCache="${user.home}/.ivy2/packager/cache">
+            <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
+        </packager>
+    </resolvers>
+    <modules>
+        <module organisation=".*" name=".*" resolver="ivyroundup"/>
+    </modules>
+
+    <!-- Cache artifacts in build/cache to bypass user cache in ~/.ivy2/cache -->
+    <caches defaultCacheDir="${basedir}/build/cache" useOrigin="true"/>
+</ivysettings>
+

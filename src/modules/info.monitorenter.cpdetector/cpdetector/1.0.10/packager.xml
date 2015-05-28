@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/binaries/${name}_${revision}_binary.zip"
+      sha1="8f4f170d16b439542a1a351e4acced6666b86d25">
+        <include name="${name}_${revision}.jar"/>
+        <include name="ext/chardet-1.0.jar"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/sources/${name}_eclipse_project_${revision}.zip"
+      sha1="a4c310e6751c5bc473678f261915e56a0b03157f">
+        <include name="${name}/src/**/*"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/javadoc/${name}-javadoc_${revision}.zip"
+      sha1="d5a80b09756c4781ee7ceba243b95a64383014a2">
+        <include name="javadoc/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${name}_${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/ext/chardet-1.0.jar" tofile="artifacts/jars/chardet.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/javadoc"/>
+        </zip>
+    </build>
+</packager-module>

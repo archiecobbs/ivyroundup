@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20110303233600">
+        <license name="Lesser General Public License (LGPL)" url="http://www.gnu.org/copyleft/lesser.txt"/>
+        <description homepage="http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/">
+            <p>
+                The NetCDF-Java Library is a Java interface to NetCDF files,
+                as well as to many other types of scientific data formats.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="default->core"/>
+        <dependency org="net.jcip" name="jcip-annotations" rev="1.0" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

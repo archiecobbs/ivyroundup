@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.yaml" module="snakeyaml" revision="1.9" status="release" publication="20110815080600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.yaml/snakeyaml/1.9/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/snakeyaml/">
+            <h2><a name="Overview"/>Overview<a href="#Overview" class="section_anchor"/></h2>
+            <p>
+                <a href="http://yaml.org/" rel="nofollow">YAML</a> is a data serialization format designed
+                for human readability and interaction with scripting languages.
+            </p>
+            <p>
+                <a href="http://code.google.com/p/snakeyaml/" rel="nofollow">SnakeYAML</a> is a YAML parser
+                and emitter for the Java programming language.
+            </p>
+            <p>SnakeYAML features </p>
+            <ul>
+                <li>
+                    a <strong>complete</strong> <a href="http://yaml.org/spec/1.1/current.html" rel="nofollow">YAML 1.1</a> parser.
+                    In particular, SnakeYAML can parse all examples from the specification.
+                </li>
+                <li>
+                    Unicode support including UTF-8/UTF-16 input/output.
+                </li>
+                <li>
+                    high-level API for serializing and deserializing native Java objects.
+                </li>
+                <li>
+                    support for all types from the <a href="http://yaml.org/type/index.html" rel="nofollow">YAML types repository</a>.
+                </li>
+                <li>
+                    relatively sensible error messages.
+                </li>
+            </ul>
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="snakeyaml" ivyde:javadoc="snakeyaml"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

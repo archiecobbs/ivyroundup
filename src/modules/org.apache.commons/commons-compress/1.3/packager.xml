@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Ales Nosek
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource> 
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="613a08bc72e2e9a43c9f87b9ff8352b47e18e3ae"/>
+        <artifact classifier="javadoc" tofile="artifacts/sources/source.zip" sha1="dbdaed8947497b8a7d47f91fd5eac0514ac26183"/>
+        <artifact classifier="sources" tofile="artifacts/javadocs/javadoc.zip" sha1="b34c14d5871ba647a1f57e6e22fbbe93a2985010"/>
+    </m2resource>
+
+</packager-module>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20090311120000">
+        <license name="BSD License" url="http://jibx.sourceforge.net/jibx-license.html"/>
+        <description homepage="http://jibx.sourceforge.net/">
+        JiBX is a framework for XML data binding to Java. It works with
+        existing classes, using a flexible mapping definition file to
+        determine how data objects are translated to and from XML.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="bind" description="JiBX compiler"/>
+        <conf name="runtime-base" description="JiBX runtime classes (without a specific parser)"/>
+        <conf name="runtime-stax" extends="runtime-base" description="StAX parser (SJSXP)"/>
+        <conf name="runtime-xpp3" extends="runtime-base" description="XPP3 parser"/>
+        <conf name="tools" description="JiBX tools"/>
+        <conf name="extras" description="JiBX extras"/>
+        <conf name="dom4j" extends="extras" description="JiBX DOM4J support"/>
+        <conf name="default" extends="bind,runtime-xpp3,extras" description="Default configuration containing the usual stuff"/>
+    </configurations>
+
+    <publications>
+        <artifact name="jibx-bind" conf="bind"/>
+        <artifact name="jibx-extras" conf="extras,dom4j"/>
+        <artifact name="jibx-run" conf="bind,runtime-base"/>
+        <artifact name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact name="jibx-tools" conf="tools"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.bcel" name="bcel" rev="5.1" conf="bind->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,2.0[" conf="*->default"/>
+        <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="dom4j->default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.1.3.4.O" conf="runtime-xpp3,tools->default"/>
+        <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.1" conf="runtime-stax->default"/>
+        <dependency org="org.codehaus.qdox" name="qdox" rev="1.+" conf="tools->default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3+" conf="tools->default"/>
+    </dependencies>
+
+</ivy-module>

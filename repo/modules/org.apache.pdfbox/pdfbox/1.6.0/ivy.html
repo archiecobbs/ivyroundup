@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>pdfbox by org.apache.pdfbox :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.pdfbox/pdfbox/">pdfbox</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.pdfbox/">org.apache.pdfbox</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.6.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://pdfbox.apache.org/">http://pdfbox.apache.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.pdfbox/pdfbox/1.6.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://pdfbox.apache.org/">
+      The Apache PDFBox library is an open source Java tool for working with
+      PDF documents. The project allows creation of new PDF documents,
+      manipulation of existing documents and the ability to extract
+      content from documents.
+    </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Pdfbox core including all runtime dependencies</td>
+<td></td>
+</tr>
+<tr>
+<td>ant</td>
+<td>Pdfbox Ant tasks</td>
+<td>default</td>
+</tr>
+<tr>
+<td>lucene</td>
+<td>Enables Lucene to index a PDF document</td>
+<td>default</td>
+</tr>
+<tr>
+<td>encrypt_support</td>
+<td>Optional dependencies to enable support for PDF encryption</td>
+<td></td>
+</tr>
+<tr>
+<td>bidir_support</td>
+<td>Optional dependencies to enable support for bidirectional languages like Arabic</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>pdfbox.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>pdfbox-source.zip</td>
+<td>source</td>
+<td>default</td>
+</tr>
+<tr>
+<td>pdfbox-javadoc.zip</td>
+<td>javadoc</td>
+<td>default</td>
+</tr>
+<tr>
+<td>pdfbox-ant.jar</td>
+<td>jar</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>pdfbox-ant-source.zip</td>
+<td>source</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>pdfbox-ant-javadoc.zip</td>
+<td>javadoc</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>pdfbox-lucene.jar</td>
+<td>jar</td>
+<td>lucene</td>
+</tr>
+<tr>
+<td>pdfbox-lucene-source.zip</td>
+<td>source</td>
+<td>lucene</td>
+</tr>
+<tr>
+<td>pdfbox-lucene-javadoc.zip</td>
+<td>javadoc</td>
+<td>lucene</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.pdfbox</td>
+<td><a href="../../../org.apache.pdfbox/fontbox/">fontbox</a></td>
+<td>1.6.0</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td><a href="../../../org.apache.pdfbox/jempbox/">jempbox</a></td>
+<td>1.6.0</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>1.1.1</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.bouncycastle</td>
+<td><a href="../../../org.bouncycastle/bcmail/">bcmail</a></td>
+<td>1.44</td>
+<td>encrypt_support-&gt;jdk15</td>
+</tr>
+<tr>
+<td>com.ibm.icu</td>
+<td><a href="../../../com.ibm.icu/icu4j/">icu4j</a></td>
+<td>3.8.1</td>
+<td>bidir_support-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox</td>
+<td>1.6.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}.jar</td>
+<td>4fdc454f4925cca53a7140bfc7a61c74f80b2dd8</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox</td>
+<td>1.6.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-source.zip</td>
+<td>b8ef9eec7c2a1e935ece5e5be67d4ac9f0a5ddf9</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox</td>
+<td>1.6.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-javadoc.zip</td>
+<td>26ef2593c005be4d541dc40bf699d20be9a7b907</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-ant</td>
+<td>1.6.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-ant.jar</td>
+<td>fbae6e8817014003314271564b8349f5887fe73a</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-ant</td>
+<td>1.6.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-ant-source.zip</td>
+<td>aa930cc7c9acf40dde3f85a66bc109a8e6503718</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-ant</td>
+<td>1.6.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-ant-javadoc.zip</td>
+<td>2f62960ca30355475841babfc2aa073ba01a25f2</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-lucene</td>
+<td>1.6.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}-lucene.jar</td>
+<td>321de9e4c5aa642a417ab00e4d746534a582b796</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-lucene</td>
+<td>1.6.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${name}-lucene-source.zip</td>
+<td>bf718ce040006e857c17d3f36effe7b510aec00c</td>
+</tr>
+<tr>
+<td>org.apache.pdfbox</td>
+<td>pdfbox-lucene</td>
+<td>1.6.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${name}-lucene-javadoc.zip</td>
+<td>700c39e577c1a0841b11a11e0bda292f48bd32cd</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

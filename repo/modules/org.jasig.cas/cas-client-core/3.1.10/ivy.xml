@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jasig.cas" module="cas-client-core" revision="3.1.10" status="release" publication="20091216160400">
+        <license name="JA-SIG" url="https://www.apereo.org/cas/license"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jasig.cas/cas-client-core/3.1.10/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://www.apereo.org/cas/">
+        <p>JA-SIG CAS Client for Java</p>
+        <p>CAS (Central Authentication Service) is an authentication system originally created by Yale
+           University to provide a trusted way for an application to authenticate a user. CAS became a
+           Jasig project in December 2004.
+        </p>
+        <p>CAS provides enterprise single sign on service:<br/>
+            <ul>
+                <li>An open and well-documented protocol</li>
+                <li>An open-source Java server component</li>
+                <li>A library of clients for Java, .Net, PHP, Perl, Apache, uPortal, and others</li>
+                <li>Integrates with uPortal, BlueSocket, TikiWiki, Mule, Liferay, Moodle and others</li>
+                <li>Community documentation and implementation support</li>
+                <li>An extensive community of adopters</li>
+            </ul>
+        </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

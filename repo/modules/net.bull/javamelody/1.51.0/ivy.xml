@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.bull" module="javamelody" revision="1.51.0" status="release" publication="20140605000000">
+        <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.bull/javamelody/1.51.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/p/javamelody/">
+
+        <p>
+        <b>The goal of JavaMelody is to monitor Java or Java EE applications 
+        servers in QA and production environments.</b> It is not a tool to 
+        simulate requests from users, it is a tool to measure and calculate 
+        statistics on real operation of an application depending on the usage 
+        of the application by users.
+        </p>
+
+        <p>
+        <b>JavaMelody is opensource (LGPL) and production ready: in production 
+        in an application of 25 person years.</b> JavaMelody is easy to 
+        integrate in most applications and is lightweight (no profiling and no 
+        database).
+        </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="javamelody" ivyde:javadoc="javamelody"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.jrobin" name="jrobin" rev="1.5.+" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

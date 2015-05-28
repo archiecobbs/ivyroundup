@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20091011182900">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.unitils.org/">
+        <p>Unitils is an open source library aimed at making unit testing easy
+        and maintainable. Unitils builds further on existing libraries like
+        dbunit and integrates with JUnit and TestNG.</p>
+        
+        <p>Unitils provides general asserion utilities, support for database
+        testing, support for testing with mock objects and offers integration
+        with Spring, Hibernate and the Java Persistence API (JPA). It has been
+        designed to offer these services to unit tests in a very configurable
+        and loosely coupled way. As a result, services can be added and
+        extended very easily.</p>
+
+        <p>Unitils offers following features:
+            <ul>
+                <li>General testing utilities
+                    <ul>
+                        <li>Equality assertion through reflection, with different
+                            options like ignoring Java core/null values and
+                            ignoring order of collections
+                        </li>
+                    </ul>
+                </li>
+                <li>Mock objects support
+                    <ul>
+                        <li>Dynamically define stub behavior of and verify
+                            invocations on mock object using a simple syntax
+                        </li>
+                        <li>Optimal feedback including a simple and extended
+                            execution scenario report and suggested assert
+                            statements
+                        </li>
+                        <li>Use argument matchers for relaxing method parameter
+                            constraints and mix them with concrete objects. Use
+                            null when the actual argument value is not important
+                        </li>
+                        <li>Use dummy objects when stub data objects without any
+                            required behavior are needed
+                        </li>
+                    </ul>
+                </li>
+                <li>Persistence layer testing support
+                    <ul>
+                        <li>Automatic maintenance of databases, with support for
+                            incremental, repeatable and post processing scripts
+                        </li>
+                        <li>Automatically disable constraints and set sequences to
+                            a minimum value
+                            <ul>
+                                <li>Support for Oracle, Hsqldb, MySql, DB2,
+                                    Postgresql, MsSql and Derby
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Simplify test database connection setup</li>
+                        <li>Simple insertion of test data with DBUnit
+                            <ul>
+                                <li>Run tests in a transaction</li>
+                                <li>JPA entity manager creation and injection for
+                                    hibernate, toplink and openjpa.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Hibernate SessionFactory creation and session
+                            management
+                        </li>
+                        <li>Automatically test the mapping of JPA entities /
+                            hibernate mapped objects with the database
+                        </li>
+                    </ul>
+                </li>
+                <li>EasyMock integration support
+                    <ul>
+                        <li>Simplify EasyMock mock object creation</li>
+                        <li>Simplify mock object injection</li>
+                        <li>EasyMock argument matching using reflection
+                            equality
+                        </li>
+                    </ul>
+                </li>
+                <li>Spring integration
+                    <ul>
+                        <li>ApplicationContext configuration and easy injection
+                            of spring managed beans into a unit test
+                        </li>
+                        <li>Support for using a Spring-configured Hibernate
+                            SessionFactory in unit tests
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" extends="test" description="everything"/>
+        <conf name="core" description="Unitils classes and required dependencies"/>
+        <conf name="database" extends="dbmaintainer" description="Database support"/>
+        <conf name="dbmaintainer" extends="core" description="DbMaintainer module"/>
+        <conf name="dataset" extends="dbunit" description="Dataset support via DBUnit - deprecated in place of dbunit conf"/>
+        <conf name="dbunit" extends="database" description="Dataset support via DBUnit"/>
+        <conf name="hibernate" extends="orm" description="Hibernate support - deprecated in place of orm conf"/>
+        <conf name="mock" extends="core" description="Mock object support"/>
+        <conf name="easymock" extends="core" description="EasyMock object support"/>
+        <conf name="inject" extends="core" description="Inject module"/>
+        <conf name="orm" extends="spring" description="ORM module"/>
+        <conf name="spring" extends="database" description="Spring core support"/>
+        <conf name="spring-hibernate" extends="spring,hibernate" description="Spring with Hibernate support"/>
+        <conf name="spring-jdbc" extends="spring" description="Spring with JDBC support"/>
+        <conf name="test" extends="dbunit,easymock,inject,mock,orm" description="Test module"/>
+        <conf name="testng" extends="core" description="TestNG support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="unitils-core" conf="core"/>
+        <artifact name="unitils-database" conf="database"/>
+        <artifact name="unitils-dbmaintainer" conf="dbmaintainer"/>
+        <artifact name="unitils-dbunit" conf="dbunit"/>
+        <artifact name="unitils-easymock" conf="easymock"/>
+        <artifact name="unitils-inject" conf="inject"/>
+        <artifact name="unitils-mock" conf="mock"/>
+        <artifact name="unitils-orm" conf="orm"/>
+        <artifact name="unitils-spring" conf="spring"/>
+        <artifact name="unitils-test" conf="test"/>
+        <artifact name="unitils-testng" conf="testng"/>
+
+        <!-- source -->
+        <artifact name="unitils-core" type="source" conf="core" ext="zip"/>
+        <artifact name="unitils-database" type="source" conf="database" ext="zip"/>
+        <artifact name="unitils-dbmaintainer" type="source" conf="dbmaintainer" ext="zip"/>
+        <artifact name="unitils-dbunit" type="source" conf="dbunit" ext="zip"/>
+        <artifact name="unitils-easymock" type="source" conf="easymock" ext="zip"/>
+        <artifact name="unitils-inject" type="source" conf="inject" ext="zip"/>
+        <artifact name="unitils-mock" type="source" conf="mock" ext="zip"/>
+        <artifact name="unitils-orm" type="source" conf="orm" ext="zip"/>
+        <artifact name="unitils-spring" type="source" conf="spring" ext="zip"/>
+        <artifact name="unitils-test" type="source" conf="test" ext="zip"/>
+        <artifact name="unitils-testng" type="source" conf="testng" ext="zip"/>
+
+        <!-- javadoc -->
+        <artifact name="unitils-core" type="javadoc" conf="core" ext="zip"/>
+        <artifact name="unitils-database" type="javadoc" conf="database" ext="zip"/>
+        <artifact name="unitils-dbmaintainer" type="javadoc" conf="dbmaintainer" ext="zip"/>
+        <artifact name="unitils-dbunit" type="javadoc" conf="dbunit" ext="zip"/>
+        <artifact name="unitils-easymock" type="javadoc" conf="easymock" ext="zip"/>
+        <artifact name="unitils-inject" type="javadoc" conf="inject" ext="zip"/>
+        <artifact name="unitils-mock" type="javadoc" conf="mock" ext="zip"/>
+        <artifact name="unitils-orm" type="javadoc" conf="orm" ext="zip"/>
+        <artifact name="unitils-spring" type="javadoc" conf="spring" ext="zip"/>
+        <artifact name="unitils-test" type="javadoc" conf="test" ext="zip"/>
+        <artifact name="unitils-testng" type="javadoc" conf="testng" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.3,3.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[3.2,4.0[" conf="core-&gt;default"/>
+        <dependency org="com.opensymphony" name="ognl" rev="[2.6.9,3.0[" conf="core-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="[4.4,5.0[" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-dbcp" rev="[1.2.2,2.0[" conf="database-&gt;default"/>
+        <dependency org="org.dbunit" name="dbunit" rev="[2.2.2,3.0[" conf="dbmaintainer-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.2,3.5.0-Final[" conf="dbmaintainer-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="[3.3,3.5.0-final[" conf="test-&gt;default"/>
+        <dependency org="org.hsqldb" name="hsqldb" rev="1.8.0.+" conf="test-&gt;default"/>
+        <dependency org="edu.oswego.cs" name="concurrent" rev="1.3.+" conf="test-&gt;default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="dbmaintainer,mock-&gt;default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.1+" conf="dbmaintainer-&gt;core;mock-&gt;core,analysis,tree"/>
+        <dependency org="org.easymock" name="easymock" rev="[2.3,3.0[" conf="easymock-&gt;ext"/>
+        <dependency org="org.objenesis" name="objenesis" rev="1.1+" conf="mock-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.+" conf="test-&gt;default"/>
+        <dependency org="org.testng" name="testng" rev="5.8" conf="testng-&gt;jdk15"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="1.0" conf="orm-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="[2.0,4.0[" conf="spring-&gt;tx,test;orm-&gt;orm;database-&gt;jdbc"/>
+    </dependencies>
+
+</ivy-module>
+

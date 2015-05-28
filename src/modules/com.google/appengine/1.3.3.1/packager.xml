@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-java-sdk-${revision}"/>
+
+    <resource url="http://googleappengine.googlecode.com/files/${archive}.zip" sha1="679779193bd6760d356ff6790f31b77af7109e69">
+        <url href="http://nexus.cestpasdur.com/nexus/content/groups/everything/com/google/appengine/appengine-java-sdk/${revision}/${archive}.zip" />
+    </resource>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/agent/appengine-agent.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/agent/appengine-agentimpl.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/shared/appengine-local-runtime-shared.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/geronimo-el_1.0_spec-1.0.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/geronimo-jsp_2.1_spec-1.0.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/geronimo-servlet_2.5_spec-1.2.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-ant-1.6.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-ant-launcher-1.6.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-commons-el-1.0.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-commons-logging-1.1.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-jasper-compiler-5.0.28.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/shared/jsp/repackaged-appengine-jasper-runtime-5.0.28.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/testing/appengine-testing.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/tools/jsp/repackaged-appengine-jakarta-jstl-1.1.2.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/jsp/repackaged-appengine-jakarta-standard-1.1.2.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/tools/orm/asm-3.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/datanucleus-core-1.1.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/datanucleus-enhancer-1.1.4.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/datanucleus-jpa-1.1.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/geronimo-jpa_3.0_spec-1.1.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/geronimo-jta_1.1_spec-1.1.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/tools/orm/jdo2-api-2.3-eb.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/appengine-tools-api.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/user/appengine-api-1.0-sdk-${revision}.jar" tofile="artifacts/jars/appengine-api-1.0-sdk.jar"/>
+        <move file="archive/${archive}/lib/user/appengine-api-labs-${revision}.jar" tofile="artifacts/jars/appengine-api-labs.jar"/>
+        <move file="archive/${archive}/lib/user/appengine-jsr107cache-${revision}.jar" tofile="artifacts/jars/appengine-jsr107cache.jar"/>
+        <move file="archive/${archive}/lib/user/jsr107cache-1.1.jar" todir="artifacts/jars/"/>
+
+        <move file="archive/${archive}/lib/user/orm/datanucleus-appengine-1.0.6.final.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/user/orm/datanucleus-core-1.1.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/user/orm/datanucleus-jpa-1.1.5.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/user/orm/geronimo-jpa_3.0_spec-1.1.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/user/orm/geronimo-jta_1.1_spec-1.1.1.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/user/orm/jdo2-api-2.3-eb.jar" todir="artifacts/jars/"/>
+
+        <mkdir dir="artifacts/ants"/>
+        <move file="archive/${archive}/config/user/ant-macros.xml" todir="artifacts/ants/"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/javadoc"/>
+        </zip>
+    </build>
+</packager-module>

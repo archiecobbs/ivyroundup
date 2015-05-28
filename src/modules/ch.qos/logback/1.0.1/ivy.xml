@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+  <info publication="20120310030631">
+    <license name="Eclipse Public License v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+    <license name="GNU Lesser General Public License version 2.1"
+      url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+    <description homepage="http://logback.qos.ch/">
+      <p>
+        Logback is intended as a successor to the popular log4j project, picking up
+        where log4j leaves off.
+      </p>
+      <p>
+        Logback's basic architecture is sufficiently generic so as to apply under
+        different circumstances. At present time, logback is divided
+        into three modules, logback-core, logback-classic and
+        logback-access.
+      </p>
+      <p>
+        The logback-core module lays the groundwork for the other two modules.
+        The logback-classic module can be assimilated to a significantly
+        improved version of log4j. Moreover, logback-classic natively
+        implements the SLF4J API so that you can readily switch back and
+        forth between logback and other logging frameworks such as log4j
+        or java.util.logging (JUL).
+      </p>
+      <p>
+        The logback-access module integrates with Servlet containers, such as
+        Tomcat and Jetty, to provide HTTP-access log functionality. Note
+        that you could easily build your own module on top of
+        logback-core. 
+      </p>
+    </description>
+  </info>
+
+  <configurations>
+    <conf name="core" description="Logback core"/>
+    <conf name="classic" extends="core" description="Native implementation of the SLF4J API"/>
+    <conf name="default" extends="classic" description="SLF4J logging implementation (same as classic)"/>
+    <conf name="groovy" description="additional dependencies for using the Groovy configurator"/>
+    <conf name="smtp" description="additional dependencies for using the SMTPAppender"/>
+    <conf name="access" extends="core" description="HTTP-access log for Servlet containers"/>
+  </configurations>
+
+  <publications>
+    <artifact name="logback-core" conf="core"/>
+    <artifact name="logback-classic" conf="classic"/>
+    <artifact name="logback-access" conf="access"/>
+    <artifact name="logback-core" type="source" ext="zip" conf="core"/>
+    <artifact name="logback-classic" type="source" ext="zip" conf="classic"/>
+    <artifact name="logback-access" type="source" ext="zip" conf="access"/>
+  </publications>
+
+  <dependencies>
+    <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,1.7.0[" conf="classic->core"/>
+    <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="access->default"/>
+    <dependency org="org.codehaus.groovy" name="groovy" rev="[1.7.2,1.8.0[" conf="groovy->embeddable"/>
+    <dependency org="javax.mail" name="javamail" rev="[1.4.0,)" conf="smtp->default"/>
+  </dependencies>
+
+</ivy-module>

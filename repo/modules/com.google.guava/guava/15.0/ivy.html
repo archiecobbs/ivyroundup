@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>guava by com.google.guava :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.google.guava/guava/">guava</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.google.guava/">com.google.guava</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>15.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://code.google.com/p/guava-libraries/">http://code.google.com/p/guava-libraries/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.google.guava/guava/15.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://code.google.com/p/guava-libraries/">
+            <p>
+                The Guava project contains several of Google's core libraries that we rely on in our
+                Java-based projects: collections, caching, primitives support, concurrency libraries,
+                common annotations, string processing, I/O, and so forth.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core classes</td>
+<td></td>
+</tr>
+<tr>
+<td>gwt</td>
+<td>GWT classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>testlib</td>
+<td>Testlib classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Alias for core</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>guava.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>guava-gwt.jar</td>
+<td>jar</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>guava-testlib.jar</td>
+<td>jar</td>
+<td>testlib</td>
+</tr>
+<tr>
+<td>guava.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>guava-gwt.zip</td>
+<td>source</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>guava-testlib.zip</td>
+<td>source</td>
+<td>testlib</td>
+</tr>
+<tr>
+<td>guava.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>guava-gwt.zip</td>
+<td>javadoc</td>
+<td>gwt</td>
+</tr>
+<tr>
+<td>guava-testlib.zip</td>
+<td>javadoc</td>
+<td>testlib</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.google</td>
+<td><a href="../../../com.google/gwt/">gwt</a></td>
+<td>[0,)</td>
+<td>gwt,testlib-&gt;compile</td>
+</tr>
+<tr>
+<td>edu.umd.cs</td>
+<td><a href="../../../edu.umd.cs/findbugs/">findbugs</a></td>
+<td>[2.0.1,)</td>
+<td>core-&gt;annotations</td>
+</tr>
+<tr>
+<td>javax.inject</td>
+<td><a href="../../../javax.inject/inject/">inject</a></td>
+<td>1</td>
+<td>core-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.google.guava</td>
+<td>guava</td>
+<td>15.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/guava.jar</td>
+<td>ed727a8d9f247e2050281cb083f1c77b09dcb5cd</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava</td>
+<td>15.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/guava.zip</td>
+<td>36b6a585c0f0c63bd85fb04db0dcb7b217298956</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava</td>
+<td>15.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/guava.zip</td>
+<td>862ded2ffe9349409f8b666a4dcaa0c2d69f873e</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-gwt</td>
+<td>15.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/guava-gwt.jar</td>
+<td>6b837fa3238f09d2175c6b676e13408c5bfacffb</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-gwt</td>
+<td>15.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/guava-gwt.zip</td>
+<td>4f28f65474b54558091b95ea6efdf73c92d2c66b</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-gwt</td>
+<td>15.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/guava-gwt.zip</td>
+<td>171e6bdc2a82ec3724ed847e20caeb24dea3160e</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-testlib</td>
+<td>15.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/guava-testlib.jar</td>
+<td>80fc4e92b949b6d4b15e48da3ad6d1ab752de425</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-testlib</td>
+<td>15.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/guava-testlib.zip</td>
+<td>bc57ffb9784b4f4622d8aaea1815236b804887c8</td>
+</tr>
+<tr>
+<td>com.google.guava</td>
+<td>guava-testlib</td>
+<td>15.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/guava-testlib.zip</td>
+<td>27910e28edb1060fcabfd62bca36cd87a2f3bf9d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

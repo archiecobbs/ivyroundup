@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Tim Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="com/thoughtworks/xstream">
+        <artifact tofile="artifacts/jars/xstream.jar" sha1="3427c153a5ad0f2cfa923528ad8be875c8cb1cff"/>
+        <artifact classifier="sources" tofile="artifacts/sources/xstream.zip" sha1="c292d3d3091cb0b66c7149b533df1d920b2b679a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/xstream.zip" sha1="cae2f85b4eead35b5e7dc6d30d076eb21684f5f0"/>
+    </m2resource>
+    <m2resource groupId="com/thoughtworks/xstream" artifactId="xstream-benchmark">
+        <artifact tofile="artifacts/jars/xstream-benchmark.jar" sha1="86ba04b8c7ff40bc3bbdc9ada02268f410c223fd"/>
+        <artifact classifier="sources" tofile="artifacts/sources/xstream-benchmark.zip" sha1="c60c69f78819807df92e0b20a17755bf0b129b78"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/xstream-benchmark.zip" sha1="9cebce42837f962ac258794a2181e433f6c931f4"/>
+    </m2resource>
+    <m2resource groupId="com/thoughtworks/xstream" artifactId="xstream-hibernate">
+        <artifact tofile="artifacts/jars/xstream-hibernate.jar" sha1="40d3264c4ca19079b07b7e00f25cf95197a27d07"/>
+        <artifact classifier="sources" tofile="artifacts/sources/xstream-hibernate.zip" sha1="1bb612799befc284b4ed0eaeb7c7bb00db3857e3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/xstream-hibernate.zip" sha1="1819a3f964e2498dee6a4b82c831b5870ca449e4"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dellroad" module="msrp4j" revision="1.0.18" status="release" publication="20150115000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dellroad/msrp4j/1.0.18/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/p/msrp4j/">
+
+            <b>msrp4j</b> is a Java library for the MSRP protocol defined by
+            <a href="https://tools.ietf.org/html/rfc4975">RFC 4975</a>.
+            MSRP is a TCP protocol for transmitting messages containing arbitrary
+            content between peers. MSRP can be thought of as a TCP/IP version
+            of SMS/MMS text messaging.
+
+            <b>msrp4j</b> implements the actual MSRP protocol itself. The setup and/or
+            negotiation of MSRP sessions must be handled by other means, for
+            example, via SIP.
+
+            <b>msrp4j</b> also includes an executable command line test client.
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Main JAR file"/>
+        <conf name="cli" description="Executable all-in-one command line client JAR file"/>
+        <conf name="default" extends="core" description="Same as core configuration"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="cli" name="msrp4j-cli"/>
+        <artifact conf="core" name="source" type="source" ext="zip"/>
+        <artifact conf="core" name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

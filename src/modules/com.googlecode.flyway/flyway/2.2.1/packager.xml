@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+  <property name="name" value="${ivy.packager.module}" />
+  <property name="revision" value="${ivy.packager.revision}" />
+  <property name="archive" value="${name}-${revision}" />
+
+  <!-- core -->
+  <m2resource artifactId="flyway-core">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}.jar" sha1="e1ff84be2d0c0f233abf71fa1251acfc3d5386ed" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-javadoc.zip" sha1="7bd83a9abae3d21e5cd451e3725ef6da8d06157d" />
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-source.zip"
+      sha1="191f4c415bf1fabe6a8239e6fe39c5bb63c550e1" />
+  </m2resource>
+
+  <!-- ant tasks -->
+  <m2resource artifactId="flyway-ant">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-ant.jar" sha1="c8a1b7990fe12e617b67906d51a136ac1d9cd0b2" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-ant-javadoc.zip" sha1="e1916cb0c2f1d5a5bfcb97cb12c55266f9d20d36" />
+    <!-- source -->
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-ant-source.zip" sha1="dd14ffa015f1fafc6290599c3bdd99a8885f13e7" />
+  </m2resource>
+
+</packager-module>

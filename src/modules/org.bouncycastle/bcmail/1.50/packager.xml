@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+  <property name="name" value="${ivy.packager.module}" />
+  <property name="revision" value="${ivy.packager.revision}" />
+  <property name="archive" value="${name}-${revision}" />
+
+  <!-- jdk15 -->
+  <m2resource artifactId="bcmail-jdk15on">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-jdk15.jar" sha1="84dcd26a35af8b561b22a3f50bef2c58046e4351" />
+    <!-- source -->
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-jdk15-source.zip" sha1="e71c2356323c263cec9b9d81316f3d3fac84e869" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-jdk15-javadoc.zip" sha1="fbfce5d06709c4e5b37a7735987bfecce937452e" />
+  </m2resource>
+
+  <!-- jdk14 -->
+  <m2resource artifactId="bcmail-jdk14">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-jdk14.jar" sha1="ac3b8451db55daf4d043c7b6c4bac216ea1d606f" />
+    <!-- source -->
+    <artifact classifier="sources"
+      tofile="artifacts/sources/${name}-jdk14-source.zip" sha1="2973d0217ccb6a1c5650cd0263ce5ede05f8d681" />
+    <!-- javadoc -->
+    <artifact classifier="javadoc"
+      tofile="artifacts/javadocs/${name}-jdk14-javadoc.zip" sha1="6a803b92f6d7d1064edf8b2cdc608c7d8b3d6d62" />
+  </m2resource>
+
+</packager-module>

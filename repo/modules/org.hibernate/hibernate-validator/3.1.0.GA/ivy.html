@@ -1,0 +1,243 @@
+<html>
+<head>
+<title>hibernate-validator by org.hibernate :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.hibernate/hibernate-validator/">hibernate-validator</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.hibernate/">org.hibernate</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.1.0.GA</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://hibernate.org/subprojects/validator.html">http://hibernate.org/subprojects/validator.html</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.gnu.org/licenses/lgpl-2.1.html">GNU Lesser General Public License, Version 2.1</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.hibernate/hibernate-validator/3.1.0.GA/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://hibernate.org/subprojects/validator.html">
+
+            <p>
+            Following the DRY (Don't Repeat Yourself) principle, Hibernate
+            Validator let's you express your domain constraints once
+            (and only once) and ensure their compliance at various level
+            of your system automatically.
+            </p>
+
+            <p>
+            Annotations are a very convenient and elegant way to specify
+            invariant constraints on the domain model implementation, the
+            persistent classes. Hibernate Validator comes bundled with
+            a set of common validations (@NotNull, @Email, @Max, and so
+            on), and you can build you own validation rules very easily.
+            </p>
+
+            <p>
+            This is an example of an annotated persistent class:
+            </p>
+
+            <p>
+            <pre>
+            public class Address {
+
+                @NotNull private String line1;
+                private String line2;
+                private String zip;
+                private String state;
+
+                @Length(max = 20)
+                @NotNull
+                private String country;
+
+                @Range(min = -2, max = 50, message = "Floor out of range")
+                public int floor;
+
+                    ...
+            }
+            </pre>
+            </p>
+
+            <p>
+            Hibernate Validator integrates with Hibernate by applying
+            the constraints on the database schema (DDL generation)
+            and by checking entity validity before Hibernate inserts
+            or updates instances. You can use Hibernate Validator with
+            any Java Persistence provider, not only Hibernate, although
+            you will not be able to use automatic DDL alteration for
+            constraint generation outside of Hibernate EntityManager.
+            </p>
+
+            <p>
+            Hibernate Validator constraint checking can be triggered
+            programmatically, for example by the business layer. JBoss
+            Seam makes use of this capability and integrates it with JSF,
+            providing end to end validation from the presentation level
+            down to the database constraints with a unique definition
+            and declaration of integrity rules. Hibernate Validator is
+            fully internationalized.
+            </p>
+
+            <p>
+            The project lead of Hibernate Validator is an expert group
+            member of <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303:
+            Bean Validation.</a>
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Hibernate Entity Manager core</td>
+<td></td>
+</tr>
+<tr>
+<td>jpa</td>
+<td>Core + EJB 3.0 API (javax.persistence)</td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>hibernate-validator.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[3.3.1.GA,3.5.0-Final[</td>
+<td>default-&gt;core</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate-commons-annotations/">hibernate-commons-annotations</a></td>
+<td>3.1.0.GA</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/ejb3-persistence/">ejb3-persistence</a></td>
+<td>[1.0.2.GA,2.0[</td>
+<td>jpa-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://downloads.sourceforge.net/hibernate/${name}/${revision}/${archive}.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>8eb380cd136f3383bda5d2e40c8b19c8f191fcdf</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${archive}/${name}.jar" todir="artifacts/jars"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/doc/api"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

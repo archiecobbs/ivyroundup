@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20020430000000">
+        <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/technetwork/java/jms/index.html"/>
+        <description homepage="http://www.oracle.com/technetwork/java/jms/index.html">
+            The Java Message Service (JMS) API is a messaging standard
+            that allows application components based on the Java 2
+            Platform, Enterprise Edition (J2EE) to create, send, receive,
+            and read messages. It enables distributed communication that
+            is loosely coupled, reliable, and asynchronous.
+
+            <p>
+            <b>NOTE:</b>You must download the JMS software yourself from
+            <a href="http://java.sun.com/products/jms/docs.html">Sun's web site</a>
+            after agreeing to the license terms. Once you've downloaded the JAR,
+            save it as <code>${java.io.tmpdir}/jms-1_1-fr-apidocs.zip</code>,
+            where it will be picked up by this module's packager.xml file.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

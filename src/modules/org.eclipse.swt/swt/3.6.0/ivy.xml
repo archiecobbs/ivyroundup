@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100608091100">
+        <license name="Eclipse Public License, Version 1.0" url="http://www.eclipse.org/org/documents/epl-v10.php"/>
+        <description homepage="http://www.eclipse.org/swt/">
+
+            <p>
+            SWT is an open source widget toolkit for Java designed to provide efficient, portable access to the user-interface facilities of the operating systems on which it is implemented.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="win32-x86" description="Windows"/>
+        <conf name="win32-x86_64" description="Windows (x86_64)"/>
+        <conf name="wce" description="Windows CE (ARM PocketPC)"/>
+        <conf name="wce-j2me" description="Windows CE (ARM PocketPC, J2ME profile)"/>
+        <conf name="linux-x86" description="Linux (x86/GTK 2)"/>
+        <conf name="linux-x86_64" description="Linux (x86_64/GTK 2)"/>
+        <conf name="linux-ppc" description="Linux (PPC/GTK 2)"/>
+        <conf name="linux-ppc64" description="Linux (PPC64/GTK 2)"/>
+        <conf name="linux-x86-motif" description="Linux (x86/Motif)"/>
+        <conf name="solaris-sparc" description="Solaris 10 (SPARC/GTK 2)"/>
+        <conf name="solaris-x86" description="Solaris 10 (x86/GTK 2)"/>
+        <conf name="solaris-sparc-motif" description="Solaris 10 (SPARC/Motif)"/>
+        <conf name="hpux" description="HPUX (IA64_32/Motif)"/>
+        <conf name="qnx" description="QNX (x86/Photon)"/>
+        <conf name="aix" description="AIX (PPC/Motif)"/>
+        <conf name="macosx-x86" description="Mac OSX (Mac/Cocoa)"/>
+        <conf name="macosx-x86_64" description="Mac OSX (Mac/Cocoa/x86_64)"/>
+        <conf name="macosx-x86-carbon" description="Mac OSX (Mac/Carbon)"/>
+        <conf name="default" description="no-op default configuration" />
+    </configurations>
+
+    <publications>
+        <artifact conf="win32-x86" name="swt-win32-x86"/>
+        <artifact conf="win32-x86_64" name="swt-win32-x86_64"/>
+        <artifact conf="wce" name="swt-wce"/>
+        <artifact conf="wce-j2me" name="swt-wce-j2me"/>
+        <artifact conf="linux-x86" name="swt-linux-x86"/>
+        <artifact conf="linux-x86_64" name="swt-linux-x86_64"/>
+        <artifact conf="linux-ppc" name="swt-linux-ppc"/>
+        <artifact conf="linux-ppc64" name="swt-linux-ppc64"/>
+        <artifact conf="linux-x86-motif" name="swt-linux-x86-motif"/>
+        <artifact conf="solaris-sparc" name="swt-solaris-sparc"/>
+        <artifact conf="solaris-x86" name="swt-solaris-x86"/>
+        <artifact conf="solaris-sparc-motif" name="swt-solaris-sparc-motif"/>
+        <artifact conf="hpux" name="swt-hpux"/>
+        <artifact conf="qnx" name="swt-qnx"/>
+        <artifact conf="aix" name="swt-aix"/>
+        <artifact conf="macosx-x86" name="swt-macosx-x86"/>
+        <artifact conf="macosx-x86_64" name="swt-macosx-x86_64"/>
+        <artifact conf="macosx-x86-carbon" name="swt-macosx-x86-carbon"/>
+        <artifact conf="win32-x86" name="source-win32-x86" type="source" ext="zip"/>
+        <artifact conf="win32-x86_64" name="source-win32-x86_64" type="source" ext="zip"/>
+        <artifact conf="wce" name="source-wce" type="source" ext="zip"/>
+        <artifact conf="wce-j2me" name="source-wce-j2me" type="source" ext="zip"/>
+        <artifact conf="linux-x86" name="source-linux-x86" type="source" ext="zip"/>
+        <artifact conf="linux-x86_64" name="source-linux-x86_64" type="source" ext="zip"/>
+        <artifact conf="linux-ppc" name="source-linux-ppc" type="source" ext="zip"/>
+        <artifact conf="linux-ppc64" name="source-linux-ppc64" type="source" ext="zip"/>
+        <artifact conf="linux-x86-motif" name="source-linux-x86-motif" type="source" ext="zip"/>
+        <artifact conf="solaris-sparc" name="source-solaris-sparc" type="source" ext="zip"/>
+        <artifact conf="solaris-x86" name="source-solaris-x86" type="source" ext="zip"/>
+        <artifact conf="solaris-sparc-motif" name="source-solaris-sparc-motif" type="source" ext="zip"/>
+        <artifact conf="hpux" name="source-hpux" type="source" ext="zip"/>
+        <artifact conf="qnx" name="source-qnx" type="source" ext="zip"/>
+        <artifact conf="aix" name="source-aix" type="source" ext="zip"/>
+        <artifact conf="macosx-x86" name="source-macosx-x86" type="source" ext="zip"/>
+        <artifact conf="macosx-x86_64" name="source-macosx-x86_64" type="source" ext="zip"/>
+        <artifact conf="macosx-x86-carbon" name="source-macosx-x86-carbon" type="source" ext="zip"/>
+    </publications>
+</ivy-module>

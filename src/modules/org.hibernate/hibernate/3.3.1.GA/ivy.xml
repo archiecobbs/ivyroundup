@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20080910122300">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://hibernate.org/">
+
+            <p>
+            Hibernate is a powerful, high performance object/relational
+            persistence and query service. Hibernate lets you develop
+            persistent classes following object-oriented idiom - including
+            association, inheritance, polymorphism, composition, and
+            collections. Hibernate allows you to express queries in its
+            own portable SQL extension (HQL), as well as in native SQL,
+            or with an object-oriented Criteria and Example API.
+            </p>
+
+            <p>
+            Unlike many other persistence solutions, Hibernate does not hide
+            the power of SQL from you and guarantees that your investment in
+            relational technology and knowledge is as valid as always. The
+            LGPL open source license allows the use of Hibernate and
+            NHibernate in open source and commercial projects.
+            </p>
+
+            <p>
+            Hibernate is a Professional Open Source project and a critical
+            component of the JBoss Enterprise Middleware System (JEMS)
+            suite of products. JBoss, a division of Red Hat, offers a range
+            of 24x7 Professional Support, Consulting, and Training services
+            to assist you with Hibernate.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="c3p0" extends="core" description="c3p0 connection pooling support"/>
+        <conf name="cglib" extends="core" description="cglib bytecode provider"/>
+        <conf name="core" description="Hibernate core"/>
+        <conf name="default" extends="core,ehcache" description="Default configuration using EHCache"/>
+        <conf name="ehcache" extends="core" description="EHCache support (required if no other cache provider is set)"/>
+        <conf name="jbosscache" extends="core" description="JBossCache cache support"/>
+        <conf name="jbosscache2" extends="core" description="JBossCache 2 cache support"/>
+        <conf name="jmx" extends="core" description="JMX support"/>
+        <conf name="oscache" extends="core" description="Open Symphony cache support"/>
+        <conf name="proxool" extends="core" description="Proxool connection pooling support"/>
+        <conf name="swarmcache" extends="core" description="Swarmcache cache support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="hibernate-c3p0" conf="c3p0"/>
+        <artifact name="hibernate-core" conf="core"/>
+        <artifact name="hibernate-ehcache" conf="ehcache"/>
+        <artifact name="hibernate-jbosscache" conf="jbosscache"/>
+        <artifact name="hibernate-jbosscache2" conf="jbosscache2"/>
+        <artifact name="hibernate-jmx" conf="jmx"/>
+        <artifact name="hibernate-oscache" conf="oscache"/>
+        <artifact name="hibernate-proxool" conf="proxool"/>
+        <artifact name="hibernate-swarmcache" conf="swarmcache"/>
+        <artifact name="hibernate-cglib-repack" conf="cglib"/>
+
+        <!-- source -->
+        <artifact name="hibernate-c3p0" type="source" ext="zip" conf="c3p0"/>
+        <artifact name="hibernate-core" type="source" ext="zip" conf="core"/>
+        <artifact name="hibernate-ehcache" type="source" ext="zip" conf="ehcache"/>
+        <artifact name="hibernate-jbosscache" type="source" ext="zip" conf="jbosscache"/>
+        <artifact name="hibernate-jbosscache2" type="source" ext="zip" conf="jbosscache2"/>
+        <artifact name="hibernate-jmx" type="source" ext="zip" conf="jmx"/>
+        <artifact name="hibernate-oscache" type="source" ext="zip" conf="oscache"/>
+        <artifact name="hibernate-proxool" type="source" ext="zip" conf="proxool"/>
+        <artifact name="hibernate-swarmcache" type="source" ext="zip" conf="swarmcache"/>
+
+        <!-- javadoc -->
+        <artifact name="hibernate-c3p0" type="javadoc" ext="zip" conf="c3p0"/>
+        <artifact name="hibernate-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="hibernate-ehcache" type="javadoc" ext="zip" conf="ehcache"/>
+        <artifact name="hibernate-jbosscache" type="javadoc" ext="zip" conf="jbosscache"/>
+        <artifact name="hibernate-jbosscache2" type="javadoc" ext="zip" conf="jbosscache2"/>
+        <artifact name="hibernate-jmx" type="javadoc" ext="zip" conf="jmx"/>
+        <artifact name="hibernate-oscache" type="javadoc" ext="zip" conf="oscache"/>
+        <artifact name="hibernate-proxool" type="javadoc" ext="zip" conf="proxool"/>
+        <artifact name="hibernate-swarmcache" type="javadoc" ext="zip" conf="swarmcache"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[1.2.3,3.0[" conf="ehcache->default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[3.1,4.0[" conf="core->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.5.2,2.0[" conf="core->core"/>
+        <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="core->default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="core->default"/>
+        <dependency org="org.antlr" name="antlr" rev="[2.7.6,2.8[" conf="core->default"/>
+        <dependency org="net.sourceforge.c3p0" name="c3p0" rev="[0.9.1,2.0[" conf="c3p0->default"/>
+        <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="core->default"/>
+        <dependency org="net.sourceforge.proxool" name="proxool" rev="[0.8.3,1.1[" conf="proxool->default"/>
+        <dependency org="net.sourceforge.swarmcache" name="swarmcache" rev="[1.0RC2,2.0[" conf="swarmcache->default"/>
+        <dependency org="com.opensymphony" name="oscache" rev="[2.1,3.0[" conf="oscache->default"/>
+
+    <!--
+        TODO: TreeCache dependencies
+
+        <dependency org="org.jboss" name="jboss-cache" rev="[1.2.2,1.3[" conf="jbosscache->???"/>
+        <dependency org="org.jboss" name="jboss-system" rev="[0,[" conf="jbosscache->???"/>
+        <dependency org="org.jboss" name="jboss-common" rev="[0,[" conf="jbosscache->???"/>
+        <dependency org="org.jboss" name="jboss-jmx" rev="[0,[" conf="jbosscache->???"/>
+        <dependency org="???" name="concurrent" rev="[1.3.2,1.4[" conf="jbosscache->???"/>
+        <dependency org="org.jboss.cache" name="jbosscache-core" rev="[2.1.1,3.0[" conf="jbosscache2->default"/>
+    -->
+
+    </dependencies>
+</ivy-module>

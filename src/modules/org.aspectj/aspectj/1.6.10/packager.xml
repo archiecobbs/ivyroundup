@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://mirror.cc.columbia.edu/pub/software/eclipse/tools/${name}/${archive}.jar"
+      sha1="230868820384db4b190a148d4e97b1dac5c40540">
+        <include name="lib/*.jar"/>
+        <include name="doc/*-api/**/*"/>
+    </resource>
+
+    <resource url="http://mirror.cc.columbia.edu/pub/software/eclipse/tools/${name}/${archive}-src.jar"
+      sha1="17db194e6aeeb6bf59c03b0ff3237eb3bb58c768">
+        <include name="*-src.jar"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/lib" includes="aspectj*.jar"/>
+        </move>
+        <move file="archive/lib/org.aspectj.matcher.jar" tofile="artifacts/jars/aspectjmatcher.jar"/>
+
+        <!-- source -->
+        <move todir="artifacts/sources">
+            <fileset dir="archive" includes="aspectj*${revision}-src.jar"/>
+            <mapper type="glob" from="aspectj*${revision}-src.jar" to="*.zip"/>
+        </move>
+        <move file="archive/org.aspectj.matcher-${revision}-src.jar" tofile="artifacts/sources/matcher.zip"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/runtime.zip">
+            <fileset dir="archive/doc/runtime-api"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/rt.zip">
+            <fileset dir="archive/doc/aspectj5rt-api"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/weaver.zip">
+            <fileset dir="archive/doc/weaver-api"/>
+        </zip>
+    </build>
+</packager-module>

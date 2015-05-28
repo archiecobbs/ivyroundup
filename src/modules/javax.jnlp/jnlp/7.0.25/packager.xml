@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="jdkrev" value="jdk-7u25"/>
+
+    <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jardiff.jar"
+      sha1="e05a94f694d10bafd7863ae0d464fa6cb839c658"
+      tofile="artifacts/jars/jardiff.jar"/>
+    <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp.jar"
+      sha1="5a58893b1f3a37fafe442857490d91a6e77b26a7"
+      tofile="artifacts/jars/jnlp.jar"/>
+    <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-servlet.jar"
+      sha1="02b3167eecb0a981e14b2c4f2df0072cf652c5f6"
+      tofile="artifacts/jars/jnlp-servlet.jar"/>
+    <resource url="http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-source.zip"
+      sha1="2b20722ad7f1ddeece9fd692ebb0d5a05352cf52"
+      tofile="artifacts/sources/source.zip"/>
+
+</packager-module>

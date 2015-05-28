@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100302191400">
+        <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <description homepage="http://geowebcache.org/">
+            <p>
+                GeoWebCache is a Java web application used to cache map tiles coming from a variety of sources such as
+                OGC Web Map Service (WMS). It implements various service interfaces (such as WMS-C, WMTS, TMS, Google
+                Maps KML, Virtual Earth) in order to accelerate and optimize map image delivery. It can also recombine
+                tiles to work with regular WMS clients.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact type="war" ext="war"/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+</ivy-module>

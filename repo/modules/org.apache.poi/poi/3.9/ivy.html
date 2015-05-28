@@ -1,0 +1,306 @@
+<html>
+<head>
+<title>poi by org.apache.poi :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.poi/poi/">poi</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.poi/">org.apache.poi</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.9</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://poi.apache.org/">http://poi.apache.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.poi/poi/3.9/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://poi.apache.org/">
+
+        <p>
+        The Apache POI Project's mission is to create and maintain Java APIs
+        for manipulating various file formats based upon the Office Open XML
+        standards (OOXML) and Microsoft's OLE 2 Compound Document format (OLE2).
+        In short, you can read and write MS Excel files using Java.  In addition,
+        you can read and write MS Word and MS PowerPoint files using Java.
+        Apache POI is your Java Excel solution (for Excel 97-2008). We have a
+        complete API for porting other OOXML and OLE2 formats and welcome others
+        to participate.
+        </p>
+
+        <p>
+        OLE2 files include most Microsoft Office files such
+        as XLS, DOC, and PPT as well as MFC serialization API
+        based file formats.  The project provides APIs for the
+        <a href="http://poi.apache.org/poifs/index.html">OLE2 Filesystem
+        (POIFS)</a> and <a href="http://poi.apache.org/hpsf/index.html">OLE2
+        Document Properties (HPSF)</a>.
+        </p>
+
+        <p>
+        Office OpenXML Format is the new standards based XML file format found in
+        Microsoft Office 2007 and 2008.  This includes XLSX, DOCX and PPTX. The
+        project provides a low level API to support the Open Packaging Conventions
+        using <a href="http://poi.apache.org/oxml4j/index.html">openxml4j</a>.
+        </p>
+
+        <p>
+        For each MS Office application there exists a component module
+        that attempts to provide a common high level Java api to both
+        OLE2 and OOXML document formats. This is most developed for
+        <a href="http://poi.apache.org/spreadsheet/index.html">Excel
+        workbooks (SS=HSSF+XSSF)</a>.  Work is progressing for
+        <a href="http://poi.apache.org/hwpf/index.html">Word
+        documents (HWPF+XWPF)</a> and
+        <a href="http://poi.apache.org/slideshow/index.html">PowerPoint
+        presentations (HSLF+XSLF)</a>.
+        </p>
+
+        <p>
+        The project has recently added support for
+        <a href="http://poi.apache.org/hsmf/index.html">Outlook (HSMF)</a>.
+        Microsoft opened the specifications to this format in October 2007.
+        We would welcome contributions.
+        </p>
+
+        <p>
+        There are also projects for
+        <a href="http://poi.apache.org/hdgf/index.html">Visio (HDGF)</a> and
+        <a href="http://poi.apache.org/hpbf/index.html">Publisher (HPBF)</a>.
+        </p>
+
+        <p>
+        As a general policy we collaborate as much as possible with other
+        projects to provide this functionality.  Examples include:
+        <a href="http://xml.apache.org/cocoon">Cocoon</a> for which there are
+        serializers for HSSF; <a href="http://www.openoffice.org">Open
+        Office.org</a> with whom we collaborate in documenting the
+        XLS format; and <a href="http://tika.apache.org/">Tika</a> /
+        <a href="http://lucene.apache.org/">Lucene</a>, for which we provide format
+        interpretors.  When practical, we donate components directly to those
+        projects for POI-enabling them.
+        </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Default POI configuration with base classes</td>
+<td></td>
+</tr>
+<tr>
+<td>scratchpad</td>
+<td>POI with scratchpad</td>
+<td>default</td>
+</tr>
+<tr>
+<td>ooxml</td>
+<td>POI with OOXML classes</td>
+<td>default, ooxml-schemas</td>
+</tr>
+<tr>
+<td>ooxml-schemas</td>
+<td>POI OOXML schema classes</td>
+<td></td>
+</tr>
+<tr>
+<td>examples</td>
+<td>POI with examples</td>
+<td>scratchpad, ooxml</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>poi.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>poi-scratchpad.jar</td>
+<td>jar</td>
+<td>scratchpad</td>
+</tr>
+<tr>
+<td>poi-ooxml.jar</td>
+<td>jar</td>
+<td>ooxml</td>
+</tr>
+<tr>
+<td>poi-ooxml-schemas.jar</td>
+<td>jar</td>
+<td>ooxml-schemas</td>
+</tr>
+<tr>
+<td>poi-examples.jar</td>
+<td>jar</td>
+<td>examples</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>1.1.+</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.xmlbeans</td>
+<td><a href="../../../org.apache.xmlbeans/xmlbeans/">xmlbeans</a></td>
+<td>[2.3,3.0[</td>
+<td>ooxml-schemas-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.log4j</td>
+<td><a href="../../../org.apache.log4j/log4j/">log4j</a></td>
+<td>[1.2.13,1.3[</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.dom4j</td>
+<td><a href="../../../org.dom4j/dom4j/">dom4j</a></td>
+<td>1.6+</td>
+<td>ooxml-&gt;default</td>
+</tr>
+<tr>
+<td>org.codehaus.stax</td>
+<td><a href="../../../org.codehaus.stax/stax-api/">stax-api</a></td>
+<td>1.0.1</td>
+<td>ooxml-schemas-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+<tr>
+<td>date</td>
+<td>20121203</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://archive.apache.org/dist/${name}/release/bin/${name}-bin-${revision}-${date}.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>5e5747efebd65623bed5b8562b30fae24f75b198</td>
+</tr>
+<tr>
+<td>http://archive.apache.org/dist/${name}/release/src/${name}-src-${revision}-${date}.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>3a8660b9c99111b72365269e23fefae5e6bdcf4b</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/${archive}" includes="*-${revision}-${date}.jar"/&gt;
+            &lt;mapper type="glob" from="*-${revision}-${date}.jar" to="*.jar"/&gt;
+        &lt;/move&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src/java" includes="**/*.java"/&gt;
+            &lt;fileset dir="archive/${archive}/src/ooxml/java" includes="**/*.java"/&gt;
+            &lt;fileset dir="archive/${archive}/src/contrib/src" includes="**/*.java"/&gt;
+            &lt;fileset dir="archive/${archive}/src/examples/src" includes="**/*.java"/&gt;
+            &lt;fileset dir="archive/${archive}/src/scratchpad/src" includes="**/*.java"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/docs/apidocs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

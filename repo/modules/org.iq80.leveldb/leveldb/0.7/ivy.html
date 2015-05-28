@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>leveldb by org.iq80.leveldb :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.iq80.leveldb/leveldb/">leveldb</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.iq80.leveldb/">org.iq80.leveldb</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>0.7</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://github.com/dain/leveldb">https://github.com/dain/leveldb</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.iq80.leveldb/leveldb/0.7/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://github.com/dain/leveldb">
+
+            <p>
+            This is a rewrite (port) of LevelDB in Java. This goal
+            is to have a feature complete implementation that is
+            within 10% of the performance of the C++ original and
+            produces byte-for-byte exact copies of the C++ code.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>impl</td>
+<td>Implementation classes</td>
+<td></td>
+</tr>
+<tr>
+<td>api</td>
+<td>API classes only</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>All classes</td>
+<td>impl,api</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>leveldb.jar</td>
+<td>jar</td>
+<td>impl</td>
+</tr>
+<tr>
+<td>leveldb-api.jar</td>
+<td>jar</td>
+<td>api</td>
+</tr>
+<tr>
+<td>leveldb.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>leveldb-api.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>leveldb.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>leveldb-api.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.google.guava</td>
+<td><a href="../../../com.google.guava/guava/">guava</a></td>
+<td>18.0</td>
+<td>impl-&gt;default</td>
+</tr>
+<tr>
+<td>org.iq80.snappy</td>
+<td><a href="../../../org.iq80.snappy/snappy/">snappy</a></td>
+<td>0.3</td>
+<td>impl-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb</td>
+<td>0.7</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}.jar</td>
+<td>77df3093388129dea3b2b8758ddd3c7bf36bc22c</td>
+</tr>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb</td>
+<td>0.7</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${ivy.packager.module}.zip</td>
+<td>eb3efc47b2c0342858fbde3f9c8c6f5f87669a78</td>
+</tr>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb</td>
+<td>0.7</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${ivy.packager.module}.zip</td>
+<td>0e7a0261a943f7dab86ed9f63e698ac18bac0d31</td>
+</tr>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb-api</td>
+<td>0.7</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}-api.jar</td>
+<td>e620acc87a8162f668a5ea62cbe0561560c50044</td>
+</tr>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb-api</td>
+<td>0.7</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/${ivy.packager.module}-api.zip</td>
+<td>a7894e51dc543fd5a8df4c0efe4ab478c0cb4bc2</td>
+</tr>
+<tr>
+<td>org.iq80.leveldb</td>
+<td>leveldb-api</td>
+<td>0.7</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/${ivy.packager.module}-api.zip</td>
+<td>5028b744ef3f5e67a87693920b3d94c88f9117c7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

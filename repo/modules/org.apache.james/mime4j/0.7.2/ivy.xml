@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.james" module="mime4j" revision="0.7.2" status="release" publication="20111014120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.james/mime4j/0.7.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://james.apache.org/mime4j/index.html">
+        <p>
+        mime4j provides a parser, MimeStreamParser, for e-mail message streams in plain rfc822 and MIME format. 
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="dom" extends="core" description="DOM classes"/>
+        <conf name="storage" extends="core" description="Storage classes"/>
+        <conf name="benchmark" extends="core" description="Core classes"/>
+        <conf name="examples" extends="core" description="Example classes"/>
+        <conf name="default" extends="core, benchmark, dom, storage" description="Includes core, dom, and storage"/>
+    </configurations>
+
+    <publications>
+
+        <!-- jars -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="core" ivyde:javadoc="core" conf="core" name="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="dom" ivyde:javadoc="dom" conf="dom" name="dom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="storage" ivyde:javadoc="storage" conf="storage" name="storage"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="benchmark" ivyde:javadoc="benchmark" conf="benchmark" name="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="examples" conf="examples" name="examples"/>
+
+        <!-- sources -->
+        <artifact conf="core" name="core" type="source" ext="zip"/>
+        <artifact conf="dom" name="dom" type="source" ext="zip"/>
+        <artifact conf="storage" name="storage" type="source" ext="zip"/>
+        <artifact conf="benchmark" name="benchmark" type="source" ext="zip"/>
+        <artifact conf="examples" name="examples" type="javadoc" ext="zip"/>
+
+        <!-- javadocs -->
+        <artifact conf="core" name="core" type="javadoc" ext="zip"/>
+        <artifact conf="dom" name="dom" type="javadoc" ext="zip"/>
+        <artifact conf="storage" name="storage" type="javadoc" ext="zip"/>
+        <artifact conf="benchmark" name="benchmark" type="javadoc" ext="zip"/>
+        <artifact conf="examples" name="examples" type="javadoc" ext="zip"/>
+
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0[" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

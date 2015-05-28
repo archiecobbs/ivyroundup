@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20081105120000">
+        <license name="Public domain"/>
+        <description homepage="http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html">
+            <p>
+            Xml Pull Parser (in short XPP) is a streaming pull XML parser and should be used 
+            when there is a need to process quickly and efficiently all input elements (for 
+            example in SOAP processors). Pull parsing is just one level up from tokenizing 
+            XML (and that is actually how XPP2 default implementation is done). This means 
+            that XPP is representing the simplest way of processing XML that you can get 
+            (working with tokenizer would be even lower level but is not simple and most of 
+            applications would be much more complex to extract useful information from XML 
+            tokens ...).
+            </p>
+
+            <p>
+            With XPP pull parser it is easy to build a next layer on top of it such as standard 
+            SAX2 push model (a prototype SAX2 driver for XPP2 is available). Every SAX2 parser 
+            has a tokenizer and a pull interface buried inside and XPP2 exposes this layer 
+            allowing for faster XML processing - and that is what I wanted to achieve in XPP2 
+            and what makes this project interesting.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+
+</ivy-module>

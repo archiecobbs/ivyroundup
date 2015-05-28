@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://sidekar.googlecode.com/svn/tags/${revision}/publish/jars/${name}-core-${revision}.jar" tofile="artifacts/jars/core.jar" sha1="93eed5ac95af3b58324b68ec20268a9dcad4dbdd"/>
+    <resource url="http://sidekar.googlecode.com/svn/tags/${revision}/publish/jars/${name}-spring-${revision}.jar" tofile="artifacts/jars/spring.jar" sha1="44d1651794e9aae9405464722ae4ac81403a643d"/>
+    <resource url="http://sidekar.googlecode.com/svn/tags/${revision}/publish/jars/${name}-util-${revision}.jar" tofile="artifacts/jars/util.jar" sha1="838a44adcdc5d3881d53b9331cec331f777a4713"/>
+    <resource url="http://sidekar.googlecode.com/svn/tags/${revision}/publish/sources/${name}-sources-${revision}.zip" tofile="artifacts/sources/source.zip" sha1="2479add29b75619b6d79fdef6c4b418422a36c2b"/>
+    <resource url="http://sidekar.googlecode.com/svn/tags/${revision}/publish/javadocs/${name}-javadocs-${revision}.zip" tofile="artifacts/javadocs/javadoc.zip" sha1="f7466fe06865f1bf927e73023b9bcdfa8806dc62"/>
+
+</packager-module>

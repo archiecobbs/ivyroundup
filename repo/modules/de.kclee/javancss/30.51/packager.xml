@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://www.kclee.de/clemens/java/javancss/${archive}.zip" sha1="83c371583a74d8dd4aaad13335598ecb170f396c">
+      <include name="${archive}/lib/*.jar"/>
+      <include name="${archive}/xslt/javancss2html.xsl"/>
+      <include name="${archive}/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars/">
+            <fileset dir="archive/${archive}/lib" includes="*.jar"/>
+        </move>
+
+        <!-- default xsl report. -->
+        <mkdir dir="artifacts/reports"/>
+        <move file="archive/${archive}/xslt/javancss2html.xsl" tofile="artifacts/reports/javancss2html.xsl"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+
+    </build>
+</packager-module>

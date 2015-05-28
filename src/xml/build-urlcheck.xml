@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright 2012 Martin Weber.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<project name="check">
+  <description>Checks for resources that no longer are available at the
+    URLs specified in their packager.xml files.
+  </description>
+
+  <property name="report.dir" value="build/check-urls" />
+  <property name="report.work.dir" value="build/check-urls/work" />
+  <!-- Ant snippets for the generated build files live here -->
+  <property name="verify.lib.dir" location="${basedir}/src/xml" />
+
+
+  <!--
+      Verify every artifact and homepage URL and print a report.
+
+      This target remembers the modules successfully verified, subsequent invocations
+      will skip these modules. Use target clean-check to restart from scratch.
+      
+      You may set property crawler.disabled to disable network acces for testing.
+  -->
+  <target name="check-report"
+          depends="-crawl"
+          description="Verifies every artifact and homepage URL and print a report">
+
+    <!-- analyze build output -->
+    <fileset dir="${report.work.dir}"
+             includes="REPORT-OK.*.txt"
+             id="files.reported.OK" />
+    <fileset dir="${report.work.dir}"
+             includes="REPORT-problems.*.txt"
+             id="files.reported.problems" />
+    <fail message="No reports found in ${report.work.dir}">
+      <condition>
+        <resourcecount refid="files.reported.problems" when="eq" count="0" />
+      </condition>
+    </fail>
+    <concat destfile="${report.dir}/REPORT-OK.txt">
+      <header filtering="no" trimleading="yes">Modules/Revisions with no invalid URLs
+          				       ======================================
+
+      </header>
+      <fileset refid="files.reported.OK" />
+    </concat>
+    <echo message="**********************************************" />
+    <echo message="Wrote report ${report.dir}/REPORT-OK.txt" />
+
+    <!-- generate general problems report -->
+    <concat destfile="${report.dir}/REPORT-problems.txt">
+      <header filtering="no" trimleading="yes">Modules/Revisions with problematic URLs
+                                               =======================================
+
+      </header>
+      <fileset refid="files.reported.problems" />
+    </concat>
+    <echo message="Wrote report ${report.dir}/REPORT-problems.txt" />
+
+    <!-- generate permanently moved problems report -->
+    <!--
+Sorry, disabled Don't know how to write a regex that matches a group of lines that
+ do NOT include 'permanently moved'.
+      <concat >
+      <header filtering="no" trimleading="yes">Modules/Revisions with URLs permanently moved
+                                               =============================================
+
+      </header>
+      <fileset refid="files.reported.problems" />
+      <filterchain>
+        <replaceregex pattern="(?!(^#(\w|[.\-])+?-(\w|[.\-])+?-.*:\n(\[.+?\n)*?(\[.+?permanently moved.+?\n)+(\[.+?\n)*))$"
+                      replace=""
+                      flags="gm"
+                      byline="false" />
+      </filterchain>
+    </concat>
+    <echo message="Wrote report ${report.dir}/REPORT-moved-permanently.txt" />
+-->
+  </target>
+
+  <target name="clear-check" description="Restarts URL verification from scratch">
+
+    <!-- Clear resolve work area and repository we're going to build -->
+    <delete dir="${report.dir}" />
+    <delete dir="${report.work.dir}" />
+  </target>
+
+  <!--
+      Verify every artifact and homepage URL and generate a raw report.
+  -->
+  <target name="-crawl"
+          depends="-init-check-crawler"
+          unless="report-raw.uptodate">
+    <echo>Visiting all URLs...
+      ... This may take up to 10 minutes to complete.
+      NOTE: Subsequent invocations will skip URLs found to be valid.
+    </echo>
+    <!-- Run the crawler -->
+    <ant dir="${report.work.dir}" antfile="build.xml" inheritAll="false">
+      <propertyset>
+        <propertyref prefix="crawler" />
+      </propertyset>
+    </ant>
+  </target>
+
+  <!-- Create an ant build that does the verification work -->
+  <target name="-init-check-crawler"
+          depends="-crawler.uptodate"
+          unless="crawler.uptodate">
+    <!-- Initialize  work area   -->
+    <mkdir dir="${report.work.dir}" />
+
+    <property name="batch.cnt" value="10" />
+    <xslt style="src/xsl/verify-url.xsl"
+          in="${target.repo}/modules.xml"
+          out="${report.work.dir}/build.xml"
+      	  force="true">
+      <param name="batchcnt" expression="${batch.cnt}" />
+      <param name="libdir" expression="${verify.lib.dir}" />
+    </xslt>
+  </target>
+
+  <target name="-crawler.uptodate">
+    <uptodate property="crawler.uptodate" targetfile="${report.work.dir}/build.xml">
+      <!-- NOTE: this also depends on repo/modules.xml so users may edit 
+      	   modules.xml to only process specific moduees -->
+      <srcfiles dir="${basedir}">
+        <include name="repo/modules.xml" />
+        <include name="src/modules/**/ivy.xml" />
+        <include name="src/modules/**/packager.xml" />
+      </srcfiles>
+    </uptodate>
+  </target>
+
+</project>

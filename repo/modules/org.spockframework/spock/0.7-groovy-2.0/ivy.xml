@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Steve Newson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.spockframework" module="spock" revision="0.7-groovy-2.0" status="release" publication="20121012120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.spockframework/spock/0.7-groovy-2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/spock/">
+            Spock is a testing and specification framework for Java and Groovy applications. What makes it stand out from the crowd is its beautiful and highly expressive specification language. Thanks to its JUnit runner, Spock is compatible with most IDEs, build tools, and continuous integration servers. Spock is inspired from JUnit, RSpec, jMock, Mockito, Groovy, Scala, Vulcans, and other fascinating life forms.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="grails" extends="core" description="Grails Support"/>
+        <conf name="guice" extends="core" description="Google Guice Support"/>
+        <conf name="maven" extends="core" description="Apache Maven Support"/>
+        <conf name="spring" extends="core" description="Spring Support"/>
+        <conf name="tapestry" extends="core" description="Tapestry Support"/>
+        <conf name="unitils" extends="core" description="Unitils Support"/>
+        <conf name="default" extends="core" description="Default configuration"/>
+        <conf name="all" extends="core,unitils,tapestry,spring,maven,guice,grails" description="Support everything!"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-core" name="spock-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-grails-support" name="spock-grails-support" conf="grails"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-guice" name="spock-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-maven" name="spock-maven" conf="maven"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-spring" name="spock-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-tapestry" name="spock-tapestry" conf="tapestry"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spock-unitils" name="spock-unitils" conf="unitils"/>
+
+        <artifact name="spock-core" type="source" ext="zip" conf="core"/>
+        <artifact name="spock-grails-support" type="source" ext="zip" conf="grails"/>
+        <artifact name="spock-guice" type="source" ext="zip" conf="guice"/>
+        <artifact name="spock-maven" type="source" ext="zip" conf="maven"/>
+        <artifact name="spock-spring" type="source" ext="zip" conf="spring"/>
+        <artifact name="spock-tapestry" type="source" ext="zip" conf="tapestry"/>
+        <artifact name="spock-unitils" type="source" ext="zip" conf="unitils"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.junit" name="junit" rev="[4.7,5.0)" conf="core-&gt;default"/>
+        <dependency org="org.codehaus.groovy" name="groovy" rev="2.+" conf="core-&gt;embeddable"/>
+        <!-- <dependency org="org.grails" name="grails" rev="2.2" conf="grails->default"/> -->
+        <dependency org="org.springframework" name="spring" rev="[2.5.0,4.0)" conf="spring-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

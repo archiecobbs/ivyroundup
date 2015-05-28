@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dellroad" module="jibx-bindings" revision="1.0.42" status="release" publication="20111127120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dellroad/jibx-bindings/1.0.42/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/p/jibx-bindings/">
+
+            <p>
+            The <b>jibx-bindings</b> project seeks to provide a library of Java
+            classes and their corresponding pre-compiled JiBX bindings
+            for various common public XML document formats.
+            </p>
+
+            <p>
+            By including JiBX along with the appropriate pre-compiled
+            binding JARs from <b>jibx-bindings</b>, your application is all
+            set up for fast and efficient conversion between XML and Java.
+            </p>
+
+            <p>
+            While the pre-compiled concrete bindings in <b>jibx-bindings</b>
+            provide immediately usable code, all of the binding modules
+            in <b>jibx-bindings</b> are designed using modular abstract mapping
+            definitions, so you can easily define new bindings that
+            pull from existing XML schemas simply by including these
+            definitions in your own binding.
+            </p>
+
+            <p>
+            Unlike bindings auto-generated from XSD schema files,
+            <b>jibx-bindings</b> Java classes and JiBX binding files are all
+            hand crafted and developer friendly, based on the principle
+            that the Java object is primary, while the XML document is
+            just an expression of it.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes only"/>
+        <conf name="pidf" extends="core" description="Presence Information Data Format (PIDF)"/>
+        <conf name="twilio" extends="core" description="Twilio REST API and TwiML"/>
+        <conf name="default" extends="pidf, twilio" description="All modules"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-pidf" conf="pidf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bindings-twilio" conf="twilio"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2.3" conf="default-&gt;runtime-xpp3,extras"/>
+    </dependencies>
+
+</ivy-module>

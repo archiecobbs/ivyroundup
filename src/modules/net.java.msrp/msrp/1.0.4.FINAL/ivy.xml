@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20121127000000">
+        <license name="LGPL" url="http://www.fsf.org/"/>
+        <description homepage="https://msrp.java.net/">
+            <p>
+                This project's goal is to develop an open source peer library
+                for the Message Session Relay Protocol (MSRP, RFC 4975) that
+                also supports the MSRP relay extensions (RFC 4976), flexible
+                enough so that it can be used by any application.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact />
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,)" conf="default->core"/>
+    </dependencies>
+
+</ivy-module>

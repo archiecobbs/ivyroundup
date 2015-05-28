@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Steve Newson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-src-${revision}.tar.gz" sha1="0cd9c2fffcdda49c19e1d976b1f014789d3ca585">
+        <include name="${archive}/src/**/*"/>
+    </resource>
+
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-bin-${revision}.tar.gz" sha1="7e48129c03268963e1493990973e52da85ab1f7f">
+        <include name="${archive}/lib/${name}.jar"/>
+    </resource>
+
+    <resource url="http://jruby.org.s3.amazonaws.com/downloads/${revision}/${name}-complete-${revision}.jar" tofile="artifacts/jars/${name}-complete.jar" sha1="a117e28e715184074980d6228962b9fb6b5607ac"/>
+
+    <build>
+
+        <move file="archive/${archive}/lib/${name}.jar" todir="artifacts/jars"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/${name}.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+    </build>
+</packager-module>

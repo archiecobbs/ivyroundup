@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20111210120000">
+        <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/us/sun/index.htm"/>
+        <description homepage="http://www.oracle.com/technetwork/java/javamail/javamail144-1562675.html">
+            The JavaMail API provides a platform-independent and protocol-independent
+            framework to build mail and messaging applications. The JavaMail API is
+            available as an optional package for use with Java SE platform and is
+            also included in the Java EE platform.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="JavaMail API with all service providers"/>
+        <conf name="api" description="JavaMail API with no service providers"/>
+        <conf name="imap" description="IMAP service provider only"/>
+        <conf name="smtp" description="SMTP service provider only"/>
+        <conf name="pop3" description="POP3 service provider only"/>
+        <conf name="dsn" description="multipart/report DSN message support only"/>
+    </configurations>
+
+    <publications>
+        <artifact name="mail" conf="default"/>
+        <artifact name="mailapi" conf="api"/>
+        <artifact name="imap" conf="default,imap"/>
+        <artifact name="smtp" conf="default,smtp"/>
+        <artifact name="pop3" conf="default,pop3"/>
+        <artifact name="dsn" conf="default,dsn"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.activation" name="jaf" rev="[1.1.1,2.0[" conf="*->default"/>
+    </dependencies>
+
+</ivy-module>

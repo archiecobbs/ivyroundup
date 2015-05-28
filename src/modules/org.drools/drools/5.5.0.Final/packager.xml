@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="drools-ant">
+        <artifact tofile="artifacts/jars/drools-ant.jar" sha1="3c89d43fea41a3bfe655c9ab12720470ece4cc34"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-ant.zip" sha1="51cb5a60b33f92f6e7f691bf2a143cf2af8addb9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-ant.zip" sha1="43cdeead8aa98d11161792f57646c34fd7acdc10"/>
+    </m2resource>
+    <m2resource artifactId="drools-benchmark">
+        <artifact tofile="artifacts/jars/drools-benchmark.jar" sha1="9e9ccec1682dbd3e486d30552466823d93feadfe"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-benchmark.zip" sha1="c3d996c4fcf91ff78f7211bf0aa4515b1656cd01"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-benchmark.zip" sha1="90b99283f03c995e2500d2c56543c8cf31118221"/>
+    </m2resource>
+    <m2resource artifactId="drools-camel">
+        <artifact tofile="artifacts/jars/drools-camel.jar" sha1="e421ae77a0cdcb898978790b03d29c7637be8b08"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-camel.zip" sha1="873c941233eb90434602950e1912c140b105def7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-camel.zip" sha1="3189f48cb3f444a05623ca9058f05ebbf18a3643"/>
+    </m2resource>
+    <m2resource artifactId="drools-clips">
+        <artifact tofile="artifacts/jars/drools-clips.jar" sha1="f416288fe257c288c971c39073fd62575f276837"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-clips.zip" sha1="2d89328fc6b88280d884e203f39f7282acfb8c0d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-clips.zip" sha1="ebe3cadb624ffd66a22c9e3fa45ee03e33fe6396"/>
+    </m2resource>
+    <m2resource artifactId="drools-compiler">
+        <artifact tofile="artifacts/jars/drools-compiler.jar" sha1="961284b8cdfab51ab2cba5fecb096b13d5f9ef6b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-compiler.zip" sha1="28315a02597f952e441130ec60b67990d801b6b2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-compiler.zip" sha1="12bd51c46a37f8278b4bc979dc6bd5347bd1dba0"/>
+    </m2resource>
+    <m2resource artifactId="drools-core">
+        <artifact tofile="artifacts/jars/drools-core.jar" sha1="abd0caee877394418efabda2feb96573d528e14a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-core.zip" sha1="cc2218dd0efb4abfffabe0fcea6bb864dd3717a1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-core.zip" sha1="5ddf76a49cd88e59bcca6bc7edc2e9637e8bc071"/>
+    </m2resource>
+    <m2resource artifactId="drools-decisiontables">
+        <artifact tofile="artifacts/jars/drools-decisiontables.jar" sha1="eeb253025e019486488c7adc5bdd5043cb7230ed"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-decisiontables.zip" sha1="784a40f291dbec35fedbb827012b1a55e4a444c9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-decisiontables.zip" sha1="0b2a644d63233b1990c3555fcd6a2e1c072b4519"/>
+    </m2resource>
+    <m2resource artifactId="drools-grid-impl">
+        <artifact tofile="artifacts/jars/drools-grid-impl.jar" sha1="329ebbb711da2f29e94b1bdf1d3c6afd1cddfcde"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-grid-impl.zip" sha1="6942bafbe458caa45d34c67b36c6523e6e5548de"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-grid-impl.zip" sha1="1a0f21786c335b241916ddc760606876a5970af2"/>
+    </m2resource>
+    <m2resource artifactId="drools-jsr94">
+        <artifact tofile="artifacts/jars/drools-jsr94.jar" sha1="60fadfc5fe8604eabf7f58e07ff1c08d98e860c2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-jsr94.zip" sha1="17bbde0e6dae47048ec0d2e8d8291b55bcf4c7a3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-jsr94.zip" sha1="10e778bd296ed02b98875480df9e57f5f1dfd075"/>
+    </m2resource>
+    <m2resource artifactId="drools-persistence-jpa">
+        <artifact tofile="artifacts/jars/drools-persistence-jpa.jar" sha1="c0664ce585b2e48b221d311f840ba702df5f4778"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-persistence-jpa.zip" sha1="063df5cabf1098cacef0ae9199131407e0c06a28"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-persistence-jpa.zip" sha1="314b845e319edac0db1a76523b8f372e1749b138"/>
+    </m2resource>
+    <m2resource artifactId="drools-pipeline">
+        <artifact tofile="artifacts/jars/drools-pipeline.jar" sha1="e2bef0c7f6b5a71d3d18317b54f4b15e275211fb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-pipeline.zip" sha1="7173a7681d62c05428e248f85bcb29c778f9bd50"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-pipeline.zip" sha1="2133e0ec2968bab3dabccee33b9995a1cc60179c"/>
+    </m2resource>
+    <m2resource artifactId="drools-rhq-plugin">
+        <artifact tofile="artifacts/jars/drools-rhq-plugin.jar" sha1="b1bcd97832220538fb1e1ce357628a9e2e7b52c5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-rhq-plugin.zip" sha1="b457bd036907b16afabb8d18c436a2f319a1222e"/>
+    </m2resource>
+    <m2resource artifactId="drools-scorecards">
+        <artifact tofile="artifacts/jars/drools-scorecards.jar" sha1="798c062a11d5ddc0aeecb24dd4d1fae45ae07f36"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-scorecards.zip" sha1="e3303741bd904b04452e130e8bd36cb09172139e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-scorecards.zip" sha1="01900842b40a88e5bbf8412c11dce55dd24a3abf"/>
+    </m2resource>
+    <m2resource artifactId="drools-simulator">
+        <artifact tofile="artifacts/jars/drools-simulator.jar" sha1="cad15efcd8576d944143158bbcf481e8f70d7c25"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-simulator.zip" sha1="9f7fb8dd8e2cb1f38608724898be3930d144e0f3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-simulator.zip" sha1="f87600d01a7d1c3345eb6969dad945fa40dc4c31"/>
+    </m2resource>
+    <m2resource artifactId="drools-spring">
+        <artifact tofile="artifacts/jars/drools-spring.jar" sha1="3d17d1e65f86a67c18f237365ac66d5f79e9698e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-spring.zip" sha1="7cd209c3ff1edcc99fd97952ed1ea37b59773a0f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-spring.zip" sha1="cd83ff992dbab5f134da9815b085dfffca6e1579"/>
+    </m2resource>
+    <m2resource artifactId="drools-templates">
+        <artifact tofile="artifacts/jars/drools-templates.jar" sha1="e679027300c176186ddc4d2d34b5cdc04fb51eb4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-templates.zip" sha1="bcff13fbd3b59c3fedd297599395f86d194e5b48"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-templates.zip" sha1="982ddd7c724094465449a22604676ab145ff2f7e"/>
+    </m2resource>
+    <m2resource artifactId="drools-verifier">
+        <artifact tofile="artifacts/jars/drools-verifier.jar" sha1="9be5d3ab1b1d105d3f892f0c3d9cabba2bf92543"/>
+        <artifact classifier="sources" tofile="artifacts/sources/drools-verifier.zip" sha1="6b467c028ad823622c38d1378520646e5fd7b741"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/drools-verifier.zip" sha1="99fb66190890e2ff2042d35d97c212f8dbc2d472"/>
+    </m2resource>
+    <m2resource artifactId="knowledge-api">
+        <artifact tofile="artifacts/jars/knowledge-api.jar" sha1="5aff7a5a27d1604c85c6097172e73268da6a70e4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/knowledge-api.zip" sha1="f4c97d1dd80c0db2e92d6acf8bfd2e2502ea6376"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/knowledge-api.zip" sha1="54b7096ce522c7353999df49a4e244f5d19d6a7d"/>
+    </m2resource>
+    <m2resource artifactId="knowledge-internal-api">
+        <artifact tofile="artifacts/jars/knowledge-internal-api.jar" sha1="9bdf3b452db8db7037684a458eff6ca539a413a1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/knowledge-internal-api.zip" sha1="30761ca0968dd0fb56de5b123703e4921a0177ad"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/knowledge-internal-api.zip" sha1="527e2c6396d05847d5f7aa9af4d93b76f9a516bb"/>
+    </m2resource>
+</packager-module>

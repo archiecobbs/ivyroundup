@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.jolbox" module="bonecp" revision="0.8.0.RELEASE" status="release" publication="20131023000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.jolbox/bonecp/0.8.0.RELEASE/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://jolbox.com/">
+            <p>
+                BoneCP is a fast, free, open-source, Java database connection pool (JDBC Pool) library.
+                If you are familiar with C3P0 and DBCP then you already know what this means. For the
+                rest, this is a library that will manage a database connection for you to get faster
+                database access in your application.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes for &gt; JDK5"/>
+        <conf name="core-jdk5" description="Core classes for JDK5"/>
+        <conf name="spring" extends="core" description="Spring classes for &gt; JDK 5"/>
+        <conf name="spring-jdk5" extends="core-jdk5" description="Spring classes for JDK 5"/>
+        <conf name="hibernate-no-datasource" extends="core" description="Classes for &gt; JDK 5 when using Hibernate without a DataSource"/>
+        <conf name="hibernate-no-datasource-jdk5" extends="core-jdk5" description="Classes for JDK 5 when using Hibernate without a DataSource"/>
+        <conf name="spring-hibernate" extends="spring,hibernate-no-datasource" description="Configuration for using Spring + Hibernate on &gt; JDK 5"/>
+        <conf name="spring-hibernate-jdk5" extends="spring-jdk5,hibernate-no-datasource-jdk5" description="Configuration for using Spring + Hibernate on JDK 5"/>
+        <conf name="default" extends="core" description="Alias for core configuration"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bonecp-spring" ivyde:javadoc="bonecp-spring" name="bonecp-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="bonecp-jdk-compat" ivyde:javadoc="bonecp-jdk-compat" name="bonecp-jdk-compat" conf="core-jdk5"/>
+
+        <artifact type="source" ext="zip" conf="core"/>
+        <artifact name="bonecp-spring" type="source" ext="zip" conf="spring"/>
+        <artifact name="bonecp-jdk-compat" type="source" ext="zip" conf="core-jdk5"/>
+
+        <artifact type="javadoc" ext="zip" conf="core,core-jdk5"/>
+        <artifact name="bonecp-spring" type="javadoc" ext="zip" conf="spring"/>
+        <artifact name="bonecp-jdk-compat" type="javadoc" ext="zip" conf="core-jdk5"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="core,core-jdk5-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="[0,)" conf="core,core-jdk5-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[0,)" conf="hibernate-no-datasource,hibernate-no-datasource-jdk5,spring-hibernate,spring-hibernate-jdk5-&gt;core"/>
+        <dependency org="org.springframework" name="spring" rev="[0,)" conf="spring,spring-jdk5-&gt;jdbc;spring-hibernate,spring-hibernate-jdk5-&gt;orm"/>
+    </dependencies>
+
+</ivy-module>

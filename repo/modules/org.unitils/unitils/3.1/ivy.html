@@ -1,0 +1,825 @@
+<html>
+<head>
+<title>unitils by org.unitils :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.unitils/unitils/">unitils</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.unitils/">org.unitils</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.unitils.org/">http://www.unitils.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.unitils/unitils/3.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.unitils.org/">
+        <p>Unitils is an open source library aimed at making unit testing easy
+        and maintainable. Unitils builds further on existing libraries like
+        dbunit and integrates with JUnit and TestNG.</p>
+        
+        <p>Unitils provides general asserion utilities, support for database
+        testing, support for testing with mock objects and offers integration
+        with Spring, Hibernate and the Java Persistence API (JPA). It has been
+        designed to offer these services to unit tests in a very configurable
+        and loosely coupled way. As a result, services can be added and
+        extended very easily.</p>
+
+        <p>Unitils offers following features:
+            <ul>
+                <li>General testing utilities
+                    <ul>
+                        <li>Equality assertion through reflection, with different
+                            options like ignoring Java core/null values and
+                            ignoring order of collections
+                        </li>
+                    </ul>
+                </li>
+                <li>Mock objects support
+                    <ul>
+                        <li>Dynamically define stub behavior of and verify
+                            invocations on mock object using a simple syntax
+                        </li>
+                        <li>Optimal feedback including a simple and extended
+                            execution scenario report and suggested assert
+                            statements
+                        </li>
+                        <li>Use argument matchers for relaxing method parameter
+                            constraints and mix them with concrete objects. Use
+                            null when the actual argument value is not important
+                        </li>
+                        <li>Use dummy objects when stub data objects without any
+                            required behavior are needed
+                        </li>
+                    </ul>
+                </li>
+                <li>Persistence layer testing support
+                    <ul>
+                        <li>Automatic maintenance of databases, with support for
+                            incremental, repeatable and post processing scripts
+                        </li>
+                        <li>Automatically disable constraints and set sequences to
+                            a minimum value
+                            <ul>
+                                <li>Support for Oracle, Hsqldb, MySql, DB2,
+                                    Postgresql, MsSql and Derby
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Simplify test database connection setup</li>
+                        <li>Simple insertion of test data with DBUnit
+                            <ul>
+                                <li>Run tests in a transaction</li>
+                                <li>JPA entity manager creation and injection for
+                                    hibernate, toplink and openjpa.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Hibernate SessionFactory creation and session
+                            management
+                        </li>
+                        <li>Automatically test the mapping of JPA entities /
+                            hibernate mapped objects with the database
+                        </li>
+                    </ul>
+                </li>
+                <li>EasyMock integration support
+                    <ul>
+                        <li>Simplify EasyMock mock object creation</li>
+                        <li>Simplify mock object injection</li>
+                        <li>EasyMock argument matching using reflection
+                            equality
+                        </li>
+                    </ul>
+                </li>
+                <li>Spring integration
+                    <ul>
+                        <li>ApplicationContext configuration and easy injection
+                            of spring managed beans into a unit test
+                        </li>
+                        <li>Support for using a Spring-configured Hibernate
+                            SessionFactory in unit tests
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>everything</td>
+<td>test</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Unitils classes and required dependencies</td>
+<td></td>
+</tr>
+<tr>
+<td>database</td>
+<td>Database support</td>
+<td>dbmaintainer</td>
+</tr>
+<tr>
+<td>dbmaintainer</td>
+<td>DbMaintainer module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>dataset</td>
+<td>Dataset support via DBUnit - deprecated in place of dbunit conf</td>
+<td>dbunit</td>
+</tr>
+<tr>
+<td>dbunit</td>
+<td>Dataset support via DBUnit</td>
+<td>database</td>
+</tr>
+<tr>
+<td>hibernate</td>
+<td>Hibernate support - deprecated in place of orm conf</td>
+<td>orm</td>
+</tr>
+<tr>
+<td>mock</td>
+<td>Mock object support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>easymock</td>
+<td>EasyMock object support</td>
+<td>core</td>
+</tr>
+<tr>
+<td>inject</td>
+<td>Inject module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>orm</td>
+<td>ORM module</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>spring</td>
+<td>Spring core support</td>
+<td>database</td>
+</tr>
+<tr>
+<td>spring-hibernate</td>
+<td>Spring with Hibernate support</td>
+<td>spring,hibernate</td>
+</tr>
+<tr>
+<td>spring-jdbc</td>
+<td>Spring with JDBC support</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Test module</td>
+<td>dbunit,easymock,inject,mock,orm</td>
+</tr>
+<tr>
+<td>testng</td>
+<td>TestNG support</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>unitils-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>unitils-database.jar</td>
+<td>jar</td>
+<td>database</td>
+</tr>
+<tr>
+<td>unitils-dbmaintainer.jar</td>
+<td>jar</td>
+<td>dbmaintainer</td>
+</tr>
+<tr>
+<td>unitils-dbunit.jar</td>
+<td>jar</td>
+<td>dbunit</td>
+</tr>
+<tr>
+<td>unitils-easymock.jar</td>
+<td>jar</td>
+<td>easymock</td>
+</tr>
+<tr>
+<td>unitils-inject.jar</td>
+<td>jar</td>
+<td>inject</td>
+</tr>
+<tr>
+<td>unitils-mock.jar</td>
+<td>jar</td>
+<td>mock</td>
+</tr>
+<tr>
+<td>unitils-orm.jar</td>
+<td>jar</td>
+<td>orm</td>
+</tr>
+<tr>
+<td>unitils-spring.jar</td>
+<td>jar</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>unitils-test.jar</td>
+<td>jar</td>
+<td>test</td>
+</tr>
+<tr>
+<td>unitils-testng.jar</td>
+<td>jar</td>
+<td>testng</td>
+</tr>
+<tr>
+<td>unitils-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>unitils-database.zip</td>
+<td>source</td>
+<td>database</td>
+</tr>
+<tr>
+<td>unitils-dbmaintainer.zip</td>
+<td>source</td>
+<td>dbmaintainer</td>
+</tr>
+<tr>
+<td>unitils-dbunit.zip</td>
+<td>source</td>
+<td>dbunit</td>
+</tr>
+<tr>
+<td>unitils-easymock.zip</td>
+<td>source</td>
+<td>easymock</td>
+</tr>
+<tr>
+<td>unitils-inject.zip</td>
+<td>source</td>
+<td>inject</td>
+</tr>
+<tr>
+<td>unitils-mock.zip</td>
+<td>source</td>
+<td>mock</td>
+</tr>
+<tr>
+<td>unitils-orm.zip</td>
+<td>source</td>
+<td>orm</td>
+</tr>
+<tr>
+<td>unitils-spring.zip</td>
+<td>source</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>unitils-test.zip</td>
+<td>source</td>
+<td>test</td>
+</tr>
+<tr>
+<td>unitils-testng.zip</td>
+<td>source</td>
+<td>testng</td>
+</tr>
+<tr>
+<td>unitils-core.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>unitils-database.zip</td>
+<td>javadoc</td>
+<td>database</td>
+</tr>
+<tr>
+<td>unitils-dbmaintainer.zip</td>
+<td>javadoc</td>
+<td>dbmaintainer</td>
+</tr>
+<tr>
+<td>unitils-dbunit.zip</td>
+<td>javadoc</td>
+<td>dbunit</td>
+</tr>
+<tr>
+<td>unitils-easymock.zip</td>
+<td>javadoc</td>
+<td>easymock</td>
+</tr>
+<tr>
+<td>unitils-inject.zip</td>
+<td>javadoc</td>
+<td>inject</td>
+</tr>
+<tr>
+<td>unitils-mock.zip</td>
+<td>javadoc</td>
+<td>mock</td>
+</tr>
+<tr>
+<td>unitils-orm.zip</td>
+<td>javadoc</td>
+<td>orm</td>
+</tr>
+<tr>
+<td>unitils-spring.zip</td>
+<td>javadoc</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>unitils-test.zip</td>
+<td>javadoc</td>
+<td>test</td>
+</tr>
+<tr>
+<td>unitils-testng.zip</td>
+<td>javadoc</td>
+<td>testng</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>1.1+</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-lang/">commons-lang</a></td>
+<td>[2.3,3.0[</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-collections/">commons-collections</a></td>
+<td>[3.2,4.0[</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>com.opensymphony</td>
+<td><a href="../../../com.opensymphony/ognl/">ognl</a></td>
+<td>[2.6.9,3.0[</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.junit</td>
+<td><a href="../../../org.junit/junit/">junit</a></td>
+<td>[4.4,5.0[</td>
+<td>core-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-dbcp/">commons-dbcp</a></td>
+<td>[1.2.2,2.0[</td>
+<td>database-&gt;default</td>
+</tr>
+<tr>
+<td>org.dbunit</td>
+<td><a href="../../../org.dbunit/dbunit/">dbunit</a></td>
+<td>[2.2.2,3.0[</td>
+<td>dbmaintainer-&gt;default</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[3.2,)</td>
+<td>dbmaintainer-&gt;core</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate-entitymanager/">hibernate-entitymanager</a></td>
+<td>[3.3,)</td>
+<td>test-&gt;default</td>
+</tr>
+<tr>
+<td>org.hsqldb</td>
+<td><a href="../../../org.hsqldb/hsqldb/">hsqldb</a></td>
+<td>[1.8.0.0,)</td>
+<td>test-&gt;default</td>
+</tr>
+<tr>
+<td>edu.oswego.cs</td>
+<td><a href="../../../edu.oswego.cs/concurrent/">concurrent</a></td>
+<td>1.3.+</td>
+<td>test-&gt;default</td>
+</tr>
+<tr>
+<td>org.easymock</td>
+<td><a href="../../../org.easymock/easymock/">easymock</a></td>
+<td>[2.3,3.0[</td>
+<td>easymock-&gt;ext</td>
+</tr>
+<tr>
+<td>org.apache.log4j</td>
+<td><a href="../../../org.apache.log4j/log4j/">log4j</a></td>
+<td>1.2.+</td>
+<td>test-&gt;default</td>
+</tr>
+<tr>
+<td>org.testng</td>
+<td><a href="../../../org.testng/testng/">testng</a></td>
+<td>[5.8,)</td>
+<td>testng-&gt;default</td>
+</tr>
+<tr>
+<td>javax.persistence</td>
+<td><a href="../../../javax.persistence/persistence-api/">persistence-api</a></td>
+<td>[1.0,)</td>
+<td>orm-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>[2.0,4.0[</td>
+<td>spring-&gt;tx,test;orm-&gt;orm;database-&gt;jdbc</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.unitils</td>
+<td>unitils-core</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-core.jar</td>
+<td>fb152c16901922e07a7cee1b89750ac5120e444a</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-core</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-core.zip</td>
+<td>f26641a5bf0af5d3c3c4e214630ae21daa7b159c</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-core</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-core.zip</td>
+<td>6b100d17916c930c83813f7698ee416d4764d8db</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-database</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-database.jar</td>
+<td>8537f7928b258295a99a7542de1d587158df6907</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-database</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-database.zip</td>
+<td>a0e7b763c1ba142f9be855a8d4dfc0e3082f4cf9</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-database</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-database.zip</td>
+<td>6da64b5c2b5d0fad7400178c834d5155fe3797b8</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbmaintainer</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-dbmaintainer.jar</td>
+<td>869e6c5df60e3a3c0070df2be53a3bfd49247dc5</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbmaintainer</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-dbmaintainer.zip</td>
+<td>6df2f0e5592c97280817b44d44334a6abbdf2445</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbmaintainer</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-dbmaintainer.zip</td>
+<td>d3c1f2d78f0fb912c5d847143cece3aec5fb845c</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbunit</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-dbunit.jar</td>
+<td>71a3b992a585f314d897103fae6b080033a7a4b1</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbunit</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-dbunit.zip</td>
+<td>a27276f5bc485f550ae1d2d24572ce1fd505ded8</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-dbunit</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-dbunit.zip</td>
+<td>10e7b6e266e3965a6569865961735bd17e3b7354</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-easymock</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-easymock.jar</td>
+<td>b99991f5eb59ae9d4970365c4e3ba8179f65cf4d</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-easymock</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-easymock.zip</td>
+<td>3474b7fdbdd74a8d6869157772f11a62ef69975e</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-easymock</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-easymock.zip</td>
+<td>8e5605f7bef8e18014be2824e122eaf122b296dd</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-inject</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-inject.jar</td>
+<td>0d470df5a8fdeb25495af4696c21721996452ac8</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-inject</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-inject.zip</td>
+<td>55bd13bfe7ce0a4a53786f055b07da89ee04698a</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-inject</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-inject.zip</td>
+<td>c73c673d4524821abe9187879300a571a40aba30</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-mock</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-mock.jar</td>
+<td>5f46e5ad79a16947279218eceb86b6cdec6e3f47</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-mock</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-mock.zip</td>
+<td>79c3fb1ee3264bf62afd428aeea52edbdd654da2</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-mock</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-mock.zip</td>
+<td>232c67c683ee716b2f1f957658dbcb8f85680afd</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-orm</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-orm.jar</td>
+<td>2ddee46ac7fc214e56c3a9fb30d56a8d852eaa06</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-orm</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-orm.zip</td>
+<td>70c4553d4f4ad9fb08ecc0e2828a96fc47edbcba</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-orm</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-orm.zip</td>
+<td>bbd600da7fb2a2a7f370392fcc849ed116bb1ccd</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-spring</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-spring.jar</td>
+<td>2c59904f1f59991307e76344e19cc8aca6b5234f</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-spring</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-spring.zip</td>
+<td>0cda63aa444ced1ac6e35b4835626b0c640dbbd3</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-spring</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-spring.zip</td>
+<td>a8995344b54b123c830971bcae9acf1aa25de4c1</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-test</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-test.jar</td>
+<td>dd4dca02c3aada84d1b0fcb748ca93f15ea965f5</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-test</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-test.zip</td>
+<td>fc6ce69faf00bd28fb9f9a693ee842ea9788405f</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-test</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-test.zip</td>
+<td>3af0597a9910cdca4f70df865849f06e68443e2b</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-testng</td>
+<td>3.1</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/unitils-testng.jar</td>
+<td>20a707bb04222907cab0d99f8c4a52228f56c816</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-testng</td>
+<td>3.1</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/unitils-testng.zip</td>
+<td>9315f8b92a864c08ce322e59e7fdaf2897ee5591</td>
+</tr>
+<tr>
+<td>org.unitils</td>
+<td>unitils-testng</td>
+<td>3.1</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/unitils-testng.zip</td>
+<td>d8e5695cd3c60a21ba4eefa737cbfcf4a40d4be7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

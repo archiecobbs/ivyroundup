@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20090315130606">
+        <license name="Lesser GNU Public License" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <description homepage="http://findbugs.sourceforge.net/">
+         FindBugs is a program to find bugs in Java programs. It looks for instances of "bug patterns" --- code instances that are likely to be errors.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Core FindBugs files."/>
+    </configurations>
+
+    <publications>
+        <artifact name="findbugs" conf="default"/>
+        <artifact name="findbugs-ant" conf="default"/>
+        <artifact name="default" conf="default" type="report" ext="xsl"/>
+        <artifact name="annotations" conf="default"/>
+        <artifact name="bcel" conf="default"/>
+        <artifact name="jFormatString" conf="default"/>
+        <artifact name="jsr305" conf="default"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <!-- No prebuilt javadoc currently available. -->
+    </publications>
+
+    <dependencies>
+      <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="default->default"/>
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="default->default"/>
+      <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="default->default"/>
+      <dependency org="org.codehaus.jaxen" name="jaxen" rev="1.1.1" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

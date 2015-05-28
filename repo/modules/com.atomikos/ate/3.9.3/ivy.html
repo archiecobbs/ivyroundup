@@ -1,0 +1,522 @@
+<html>
+<head>
+<title>ate by com.atomikos :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.atomikos/ate/">ate</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.atomikos/">com.atomikos</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.9.3</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.atomikos.com/">http://www.atomikos.com/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.atomikos.com/Main/WhichLicenseApplies">Atomikos Multiple Licensing Scheme</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.atomikos/ate/3.9.3/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.atomikos.com/">
+            <p>Atomikos Transactions Essentials</p>
+            <p>For quick and dirty proof-of-concepts we offer an unsupported and limited open source edition of our transaction management system offering basic support for JDBC/XA pools, JMS/XA pools and JTA/XA to enable functional testing of transaction processes outside of the application server. Simple to install, implement and use and requires no additional services. Note of caution: Atomikos TransactionsEssentials® is not a commercially supported product; subscribe to Atomikos ExtremeTransactions® if you are seriously considering Atomikos.</p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>util</td>
+<td>Atomikos Util</td>
+<td></td>
+</tr>
+<tr>
+<td>transactions-api</td>
+<td></td>
+<td>util</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td></td>
+<td>transactions-api</td>
+</tr>
+<tr>
+<td>transactions-jta</td>
+<td></td>
+<td>transactions</td>
+</tr>
+<tr>
+<td>transactions-jdbc</td>
+<td></td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>transactions-hibernate3</td>
+<td></td>
+<td>transactions-jta,transactions-jdbc</td>
+</tr>
+<tr>
+<td>transactions-eclipselink</td>
+<td></td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>transactions-jms</td>
+<td></td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>default</td>
+<td>All classes</td>
+<td>transactions-hibernate3,transactions-jms,transactions-eclipselink</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>atomikos-util.jar</td>
+<td>jar</td>
+<td>util</td>
+</tr>
+<tr>
+<td>transactions-api.jar</td>
+<td>jar</td>
+<td>transactions-api</td>
+</tr>
+<tr>
+<td>transactions.jar</td>
+<td>jar</td>
+<td>transactions</td>
+</tr>
+<tr>
+<td>transactions-jta.jar</td>
+<td>jar</td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>transactions-jdbc.jar</td>
+<td>jar</td>
+<td>transactions-jdbc</td>
+</tr>
+<tr>
+<td>transactions-hibernate3.jar</td>
+<td>jar</td>
+<td>transactions-hibernate3</td>
+</tr>
+<tr>
+<td>transactions-eclipselink.jar</td>
+<td>jar</td>
+<td>transactions-eclipselink</td>
+</tr>
+<tr>
+<td>transactions-jms.jar</td>
+<td>jar</td>
+<td>transactions-jms</td>
+</tr>
+<tr>
+<td>atomikos-util.jar</td>
+<td>source</td>
+<td>util</td>
+</tr>
+<tr>
+<td>transactions-api.jar</td>
+<td>source</td>
+<td>transactions-api</td>
+</tr>
+<tr>
+<td>transactions.jar</td>
+<td>source</td>
+<td>transactions</td>
+</tr>
+<tr>
+<td>transactions-jta.jar</td>
+<td>source</td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>transactions-jdbc.jar</td>
+<td>source</td>
+<td>transactions-jdbc</td>
+</tr>
+<tr>
+<td>transactions-hibernate3.jar</td>
+<td>source</td>
+<td>transactions-hibernate3</td>
+</tr>
+<tr>
+<td>transactions-eclipselink.jar</td>
+<td>source</td>
+<td>transactions-eclipselink</td>
+</tr>
+<tr>
+<td>transactions-jms.jar</td>
+<td>source</td>
+<td>transactions-jms</td>
+</tr>
+<tr>
+<td>atomikos-util.jar</td>
+<td>javadoc</td>
+<td>util</td>
+</tr>
+<tr>
+<td>transactions-api.jar</td>
+<td>javadoc</td>
+<td>transactions-api</td>
+</tr>
+<tr>
+<td>transactions.jar</td>
+<td>javadoc</td>
+<td>transactions</td>
+</tr>
+<tr>
+<td>transactions-jta.jar</td>
+<td>javadoc</td>
+<td>transactions-jta</td>
+</tr>
+<tr>
+<td>transactions-jdbc.jar</td>
+<td>javadoc</td>
+<td>transactions-jdbc</td>
+</tr>
+<tr>
+<td>transactions-hibernate3.jar</td>
+<td>javadoc</td>
+<td>transactions-hibernate3</td>
+</tr>
+<tr>
+<td>transactions-eclipselink.jar</td>
+<td>javadoc</td>
+<td>transactions-eclipselink</td>
+</tr>
+<tr>
+<td>transactions-jms.jar</td>
+<td>javadoc</td>
+<td>transactions-jms</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.geronimo.specs</td>
+<td><a href="../../../org.apache.geronimo.specs/jta/">jta</a></td>
+<td>1.1</td>
+<td>*-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.geronimo.specs</td>
+<td><a href="../../../org.apache.geronimo.specs/jms/">jms</a></td>
+<td>1.1</td>
+<td>transactions-jms-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>2.2</td>
+<td>util-&gt;default</td>
+</tr>
+<tr>
+<td>javax.resource</td>
+<td><a href="../../../javax.resource/connector-api/">connector-api</a></td>
+<td>1.5</td>
+<td>transactions-jta-&gt;default</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.4.3</td>
+<td>transactions-hibernate3,transactions-jta-&gt;default</td>
+</tr>
+<tr>
+<td>org.eclipse</td>
+<td><a href="../../../org.eclipse/eclipselink/">eclipselink</a></td>
+<td>1.2.0</td>
+<td>transactions-eclipselink-&gt;default</td>
+</tr>
+<tr>
+<td>org.hibernate</td>
+<td><a href="../../../org.hibernate/hibernate/">hibernate</a></td>
+<td>[3.2.6,4.0.0.Final[</td>
+<td>transactions-hibernate3-&gt;core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>com.atomikos</td>
+<td>atomikos-util</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/atomikos-util.jar</td>
+<td>99a28d9e055f373217f8ac112d77dae302b25447</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>atomikos-util</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/atomikos-util.jar</td>
+<td>d8c0b780db8d804464c1d143b062f31143018ef2</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>atomikos-util</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/atomikos-util.jar</td>
+<td>185034c6ba85b4ac3a2964a7a3983da47713d133</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-api</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-api.jar</td>
+<td>517897d82cf6103566fc145aaa414334ea12698a</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-api</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-api.jar</td>
+<td>0674f28efab287730163c02f14d08e3553f173bf</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-api</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-api.jar</td>
+<td>d4cf68f03b1b2b9852325d45d9987e4b6555d878</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions.jar</td>
+<td>325785c899b402629f251abfcdf5068a5c09a67f</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions.jar</td>
+<td>9c92f98ddb8c248b04229feb6165d7286e676c66</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions.jar</td>
+<td>18b6cea9753945c61e59d2d22fd5914ba9fcf6b6</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jta</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-jta.jar</td>
+<td>7a27fb5cb38e6bc9a3f5930b215628f5fd08190b</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jta</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-jta.jar</td>
+<td>0645b49db5012495f24fe6cf426d2eb3a530c494</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jta</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-jta.jar</td>
+<td>903ffdd6b3e8cb111b6540fff00eb08c9225a287</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jdbc</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-jdbc.jar</td>
+<td>4956e6b211d1495cb6d9574e07ba4715768f39bc</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jdbc</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-jdbc.jar</td>
+<td>5425155b4f75e39d724e94252dc5f12d4c8c728e</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jdbc</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-jdbc.jar</td>
+<td>c795385ac8d74cc104dd40ee294d10a7473895da</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-hibernate3</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-hibernate3.jar</td>
+<td>ae33aadf4c2edbc2c4ce06168ee7e2b27e0d5d15</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-hibernate3</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-hibernate3.jar</td>
+<td>98dee8cfe2b8886b24ed89c6347495ab670877f1</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-hibernate3</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-hibernate3.jar</td>
+<td>cd6a7480b8cea866f9f5c40c22a673956c18b19d</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-eclipselink</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-eclipselink.jar</td>
+<td>b41b5387a31940ce9f80465b9c30d2f6b0e125a2</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-eclipselink</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-eclipselink.jar</td>
+<td>39a31f03d1f6e67f2ccf5183941fdd6c6b5bdbb6</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-eclipselink</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-eclipselink.jar</td>
+<td>807dc65be754ff2936ef6d791d0664fd2018bf0c</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jms</td>
+<td>3.9.3</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/transactions-jms.jar</td>
+<td>5f0ece0a94762f85389391f7241f923124811dbc</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jms</td>
+<td>3.9.3</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/transactions-jms.jar</td>
+<td>111ac905ad29c7c327e65c3ceae165f02c6a0b21</td>
+</tr>
+<tr>
+<td>com.atomikos</td>
+<td>transactions-jms</td>
+<td>3.9.3</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/transactions-jms.jar</td>
+<td>113f1b910706d43f019847301dd1884b5a9bac98</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

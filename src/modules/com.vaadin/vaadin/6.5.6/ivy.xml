@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20110418120000">
+        <license name="Apache License, Version 2.0" url="https://vaadin.com/license"/>
+        <description homepage="https://vaadin.com/home">
+
+            <p>
+            <b>Vaadin is a web application framework for Rich Internet
+            Applications (RIA).</b> In contrast to Javascript libraries and
+            browser-plugin based solutions, it features a server-side
+            architecture, which means that the largest part of the logic
+            runs on the server. Ajax technology is used on the browser side
+            to ensure a rich and interactive user experience.
+            </p>
+
+            <p>
+            <b>Vaadin is a large collection of UI components.</b>  You compose the
+            application user interface from components such as the Button,
+            Table and Tree. The components use events, listeners and data
+            binding to communicate with each other and with your business
+            logic.
+            </p>
+
+            <p>
+            <b>Vaadin is a robust architecture for rapid application
+            development.</b> The component-based architecture together with the
+            data binding features help you build applications that are easily
+            modularized and refactored as needed.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

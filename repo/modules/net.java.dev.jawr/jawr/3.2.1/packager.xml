@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <property name="name" value="${ivy.packager.module}"/>
+    <m2resource groupId="net/${name}" repo="http://download.java.net/maven/2/">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="8d9dd8da329691030e6a7d7249283c1538ded25b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="dae842a2d7ce11593b6bdb925a58e82db5a29bb2"/>
+    </m2resource>
+</packager-module>

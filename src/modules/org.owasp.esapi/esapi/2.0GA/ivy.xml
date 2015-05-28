@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20110511120000">
+        <license name="BSD, Create Commons 3.0 BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)" url="http://opensource.org/licenses/bsd-license.php"/>
+        <description homepage="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API">
+            The Enterprise Security API (ESAPI) project is an OWASP project to create simple strong security controls for every web platform. Security controls are not simple to build. You can read about the hundreds of pitfalls for unwary developers on the OWASP website. By providing developers with a set of strong controls, we aim to eliminate some of the complexity of creating secure web applications. This can result in significant cost savings across the SDLC.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" />
+        <conf name="compile" extends="default" description="Compile scoped dependencies from Maven POM" />
+        <conf name="test" extends="compile" description="Test scoped dependencies from Maven POM" />
+        <conf name="provided" extends="default" description="Provided scoped dependencies from Maven POM" />
+    </configurations>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-configuration" rev="1.+" conf="default->default" />
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7.+" conf="default->default" />
+        <dependency org="org.junit" name="junit" rev="4.4" conf="test->default" />
+        <dependency org="javax.servlet" name="servletapi" rev="2.4" conf="provided->default" />
+        <dependency org="javax.servlet.jsp" name="jsp-api" rev="2.0" conf="provided->default" />
+        <dependency org="org.apache.commons" name="commons-fileupload" rev="1.2" conf="compile->default" />
+        <dependency org="org.apache.commons" name="commons-io" rev="1.+" conf="compile->default" />
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2" conf="compile->default" />
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.16" conf="compile->default" />
+        <dependency org="org.beanshell" name="bsh" rev="2.0b4" conf="default->default" />       
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>logback by ch.qos :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../ch.qos/logback/">logback</a></span> 
+    by 
+    <span id="organisation"><a href="../../../ch.qos/">ch.qos</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.1.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://logback.qos.ch/">http://logback.qos.ch/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value">
+<a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License v 1.0</a><br><a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License version 2.1</a>
+</td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/ch.qos/logback/1.1.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://logback.qos.ch/">
+      <p>
+        Logback is intended as a successor to the popular log4j project, picking up
+        where log4j leaves off.
+      </p>
+      <p>
+        Logback's basic architecture is sufficiently generic so as to apply under
+        different circumstances. At present time, logback is divided
+        into three modules, logback-core, logback-classic and
+        logback-access.
+      </p>
+      <p>
+        The logback-core module lays the groundwork for the other two modules.
+        The logback-classic module can be assimilated to a significantly
+        improved version of log4j. Moreover, logback-classic natively
+        implements the SLF4J API so that you can readily switch back and
+        forth between logback and other logging frameworks such as log4j
+        or java.util.logging (JUL).
+      </p>
+      <p>
+        The logback-access module integrates with Servlet containers, such as
+        Tomcat and Jetty, to provide HTTP-access log functionality. Note
+        that you could easily build your own module on top of
+        logback-core. 
+      </p>
+    </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Logback core</td>
+<td></td>
+</tr>
+<tr>
+<td>classic</td>
+<td>Native implementation of the SLF4J API</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>SLF4J logging implementation (same as classic)</td>
+<td>classic</td>
+</tr>
+<tr>
+<td>groovy</td>
+<td>additional dependencies for using the Groovy configurator</td>
+<td></td>
+</tr>
+<tr>
+<td>smtp</td>
+<td>additional dependencies for using the SMTPAppender</td>
+<td></td>
+</tr>
+<tr>
+<td>access</td>
+<td>HTTP-access log for Servlet containers</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>logback-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>logback-classic.jar</td>
+<td>jar</td>
+<td>classic</td>
+</tr>
+<tr>
+<td>logback-access.jar</td>
+<td>jar</td>
+<td>access</td>
+</tr>
+<tr>
+<td>logback-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>logback-classic.zip</td>
+<td>source</td>
+<td>classic</td>
+</tr>
+<tr>
+<td>logback-access.zip</td>
+<td>source</td>
+<td>access</td>
+</tr>
+<tr>
+<td>logback-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>logback-classic.zip</td>
+<td>source</td>
+<td>classic</td>
+</tr>
+<tr>
+<td>logback-access.zip</td>
+<td>source</td>
+<td>access</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>[1.6.4,1.7.0[</td>
+<td>classic-&gt;core</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>2.5</td>
+<td>access-&gt;default</td>
+</tr>
+<tr>
+<td>org.codehaus.groovy</td>
+<td><a href="../../../org.codehaus.groovy/groovy/">groovy</a></td>
+<td>[1.7.2,1.8.0[</td>
+<td>groovy-&gt;embeddable</td>
+</tr>
+<tr>
+<td>javax.mail</td>
+<td><a href="../../../javax.mail/javamail/">javamail</a></td>
+<td>[1.4.0,)</td>
+<td>smtp-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-access</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/logback-access.jar</td>
+<td>08f0c26a2001f8541074942b8bcbd895e5f0f870</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-access</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/logback-access.zip</td>
+<td>ba35c75fc0cc1a30fb7aa40930ed53792aa99c07</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-access</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/logback-access.zip</td>
+<td>69c62f2d92e7ce3795843bcef3033712d44b8179</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-classic</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/logback-classic.jar</td>
+<td>b316e9737eea25e9ddd6d88eaeee76878045c6b2</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-classic</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/logback-classic.zip</td>
+<td>decd76e2c461157804473468bbdc6b8eb6d6121b</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-classic</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/logback-classic.zip</td>
+<td>bc607e83fa5c5862d67aebede1ae734450397f38</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-core</td>
+<td>1.1.2</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/logback-core.jar</td>
+<td>2d23694879c2c12f125dac5076bdfd5d771cc4cb</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-core</td>
+<td>1.1.2</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/logback-core.zip</td>
+<td>502e1c764542fe747896c1dc04f023acfe0e5cbc</td>
+</tr>
+<tr>
+<td>ch/qos/logback</td>
+<td>logback-core</td>
+<td>1.1.2</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/logback-core.zip</td>
+<td>63285766a5d430cc2ea0733b08701ae0bb6d081f</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

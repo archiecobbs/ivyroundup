@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module>
+
+    <info publication="20100911120000">
+        <license name="CDDL 1.1 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <description homepage="https://java.net/projects/jersey/">
+            <p>
+                Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation
+                for building RESTful Web services. But, it is also more than the Reference Implementation.
+                Jersey provides an API so that developers may extend Jersey to suite their needs. The
+                governance policy is the same as the one used in the GlassFish project. We also use the
+                same two licenses - CDDL 1.1 and GPL 2 with CPE - so, you can pick which one suites your
+                needs better.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core code only"/>
+        <conf name="default" extends="core" description="Default conf = core"/>
+        <conf name="atom" extends="core" description="ATOM support"/>
+        <conf name="client" extends="core" description="Jersey client"/>
+        <conf name="fastinfoset" extends="core" description="Fastinfoset support"/>
+        <conf name="jrebel" extends="server" description="JRebel support"/>
+        <conf name="json" extends="core" description="JSON support"/>
+        <conf name="server" extends="core" description="Jersey server"/>
+        <conf name="guice" extends="server" description="Guice support"/>
+        <conf name="spring" extends="server" description="Spring support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="jersey-atom" conf="atom"/>
+        <artifact name="jersey-client" conf="client"/>
+        <artifact name="jersey-core" conf="core"/>
+        <artifact name="jersey-fastinfoset" conf="fastinfoset"/>
+        <artifact name="jersey-jrebel" conf="jrebel"/>
+        <artifact name="jersey-json" conf="json"/>
+        <artifact name="jersey-server" conf="server"/>
+        <artifact name="jersey-guice" conf="guice"/>
+        <artifact name="jersey-spring" conf="spring"/>
+
+        <!-- source -->
+        <artifact name="jersey-atom" type="source" ext="zip" conf="atom"/>
+        <artifact name="jersey-client" type="source" ext="zip" conf="client"/>
+        <artifact name="jersey-core" type="source" ext="zip" conf="core"/>
+        <artifact name="jersey-fastinfoset" type="source" ext="zip" conf="fastinfoset"/>
+        <artifact name="jersey-json" type="source" ext="zip" conf="json"/>
+        <artifact name="jersey-server" type="source" ext="zip" conf="server"/>
+        <artifact name="jersey-guice" type="source" ext="zip" conf="guice"/>
+        <artifact name="jersey-spring" type="source" ext="zip" conf="spring"/>
+
+        <!-- javadoc -->
+        <artifact name="jersey-client" type="javadoc" ext="zip" conf="client"/>
+        <artifact name="jersey-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="jersey-json" type="javadoc" ext="zip" conf="json"/>
+        <artifact name="jersey-server" type="javadoc" ext="zip" conf="server"/>
+        <artifact name="jersey-guice" type="javadoc" ext="zip" conf="guice"/>
+        <artifact name="jersey-spring" type="javadoc" ext="zip" conf="spring"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google" name="guice" rev="3.0" conf="guice-&gt;servlet"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="server-&gt;default"/>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.+" conf="json-&gt;jaxrs,xc"/>
+        <dependency org="org.codehaus.jettison" name="jettison" rev="1.+" conf="json-&gt;default"/>
+        <dependency org="javax.xml.bind" name="jaxb" rev="2.2.4+" conf="fastinfoset,json-&gt;runtime"/>
+        <dependency org="javax.ws.rs" name="jsr311-api" rev="1.+" conf="core-&gt;default"/>
+        <dependency org="rome" name="rome" rev="0.9" conf="atom-&gt;default"/>
+        <!--<dependency org="org.zeroturnaround" name="jr-sdk" rv="3.1.2" conf="jrebel->default"/>-->
+        <!--<dependency org="com.sun.xml.fastinfoset" name="FastInfoset" rv="1.2.2" conf="fastinfoset->default"/>-->
+    </dependencies>
+
+</ivy-module>

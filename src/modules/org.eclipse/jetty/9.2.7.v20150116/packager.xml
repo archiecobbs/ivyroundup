@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-annotations">
+        <artifact tofile="artifacts/jars/jetty-annotations.jar" sha1="13e2b734fdcfadbe328d43b5d149f9c2d65c9169"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-annotations.zip" sha1="ecb92d60ce619ef988739a827a484e51037d0df3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-annotations.zip" sha1="1b92cf2882a4c1dc96fada88721523504b2d7c47"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-ant">
+        <artifact tofile="artifacts/jars/jetty-ant.jar" sha1="6f970e82c50d9fb7166fbdd39ca39d7a4b83f8de"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-ant.zip" sha1="3e38ca7d0b6525dfa2398c9e681ab5b8693e6263"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-ant.zip" sha1="6829d5bf78362efcf1751aad7a59148e72e20135"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-client">
+        <artifact tofile="artifacts/jars/jetty-client.jar" sha1="76eba0624c858255cfe370dabc65c6dacb5d2a17"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-client.zip" sha1="585af2a02733fc856a4e565d17242620ef89de3d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-client.zip" sha1="e3365a592442e531fae9983b095ed64bc5ac739c"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-continuation">
+        <artifact tofile="artifacts/jars/jetty-continuation.jar" sha1="5f9817d6cd58db8ebfb5c0d6e639225f9b9ae856"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-continuation.zip" sha1="a25f5d06f08f9177f70557d8a5a382f120858fa4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-continuation.zip" sha1="431ffc13542e90e4f9501c0116ec1ff021cdf4f4"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-deploy">
+        <artifact tofile="artifacts/jars/jetty-deploy.jar" sha1="6bca6a454324bfc4eb0919ae10ab2e7efcbfc260"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-deploy.zip" sha1="cc98be9f52712297226a7915bd1ccc20ba74388c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-deploy.zip" sha1="2a4d25723ec7bb44411a999816d21156ae33957d"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-http">
+        <artifact tofile="artifacts/jars/jetty-http.jar" sha1="ac6c19ab7daaffe86622f2d78e4cbeff1a674e85"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-http.zip" sha1="c8b12de1be696d7d6b0185badb17feec00376330"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-http.zip" sha1="f88aeca08c3c01890f3a227a18b089d3a1e3b4fa"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-io">
+        <artifact tofile="artifacts/jars/jetty-io.jar" sha1="11bd06fca00dd0c27a25aa0ba46a7c2cf19527d5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-io.zip" sha1="9e177773dafe606284b9c6b90340a8a2565eec7d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-io.zip" sha1="1b218e57872359885f5b199ff2a7135a10ea3163"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-jaas">
+        <artifact tofile="artifacts/jars/jetty-jaas.jar" sha1="b04324e8deba3d2d2bf47474f6cf1bcd04c587f1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-jaas.zip" sha1="dc86adaf2f7fbf6b33b95d127ef25fbf3dc40f44"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-jaas.zip" sha1="3a9a9a266f02265c9a914604aaf93aeaf2d119d9"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-jaspi">
+        <artifact tofile="artifacts/jars/jetty-jaspi.jar" sha1="6a76185ef62b19904205a5b0024115a982d0ac25"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-jaspi.zip" sha1="d4ff8c73bf452912be91501895ca3f1b7959a709"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-jaspi.zip" sha1="eff939a01cc382c67091b7255835810d1acd4055"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-jmx">
+        <artifact tofile="artifacts/jars/jetty-jmx.jar" sha1="cec0cb594d97a39d9badd7df8a4b7d14d59417c1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-jmx.zip" sha1="33b4991843deeb8dc1277dacbfa7fa649a35e7d0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-jmx.zip" sha1="2ae267ec0703f9ff8b02d2f162e3d12875f792df"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-jndi">
+        <artifact tofile="artifacts/jars/jetty-jndi.jar" sha1="35d10281680e397f75f2c99eac2b8c28bd995003"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-jndi.zip" sha1="445e107e9fb105e3fbe6ce77db352e4ff883d34c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-jndi.zip" sha1="cbe144ab87c83d0920574601579ecc924d1978de"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-jsp">
+        <artifact tofile="artifacts/jars/jetty-jsp.jar" sha1="54ce829baa2a4ab871a28c36142916b1fe67fbf7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-jsp.zip" sha1="491842bbd5d37a8501496c0ab9472f2e707a1b7a"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-nosql">
+        <artifact tofile="artifacts/jars/jetty-nosql.jar" sha1="7a30fc6d05c2785be23d44d4baedef8c2eea643e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-nosql.zip" sha1="9abbe9f9e9f06115561d60709e0611a21c8a1f9f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-nosql.zip" sha1="00a242b595e2a6f27e5e7d4db896d1b01c849745"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-plus">
+        <artifact tofile="artifacts/jars/jetty-plus.jar" sha1="d42596e31b2af9e64a2c56c2550943e870530b91"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-plus.zip" sha1="3ecf64a274016810d33c53830889c2545d19933d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-plus.zip" sha1="91814b9177f00baf7359d06a3d3ade7b78de5bbf"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-proxy">
+        <artifact tofile="artifacts/jars/jetty-proxy.jar" sha1="c43cb641127e076cf7b9fa30b6aa14c9c4d5ec39"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-proxy.zip" sha1="8636908954e8d4335744080b5dd41e89128cd66a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-proxy.zip" sha1="5d031e38d3f5fcecd70e1b95594a64c60f558976"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-rewrite">
+        <artifact tofile="artifacts/jars/jetty-rewrite.jar" sha1="779a6b3711778125f8680a93847800effcdf1caf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-rewrite.zip" sha1="0db12d9ca31ed342314786fb942ca0c6788fc0d3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-rewrite.zip" sha1="5a5c67d9875a0eb0da8dfbf2f226b7c4324aa88d"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-runner">
+        <artifact tofile="artifacts/jars/jetty-runner.jar" sha1="3027d0e2e61ca21ede46c25549feff9b6cd124ec"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-runner.zip" sha1="1845d611d8bb8aed7dd8cea644f5989fd47c15b3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-runner.zip" sha1="2ee3d2c22f058fdf11324a247deff74d167deb24"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-security">
+        <artifact tofile="artifacts/jars/jetty-security.jar" sha1="f3f257d952bbe493a6a187d95395464fce9926fe"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-security.zip" sha1="af99e3c8b492be009f95b0bbab420c831c99a2f6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-security.zip" sha1="56ecb3d3c4d106be6f8ab5dffa167f5adb1b4715"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-server">
+        <artifact tofile="artifacts/jars/jetty-server.jar" sha1="dc072b171e8b7ad5762c765c54bdf4e3b2198225"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-server.zip" sha1="20f2600b7d636a3d6194c4a3ebb3b18ea7ca926b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-server.zip" sha1="2d49e612b7ae7b55a58e190c7bdc3cce9ebc78e9"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-servlet">
+        <artifact tofile="artifacts/jars/jetty-servlet.jar" sha1="4c11b757c34627b21e493201a3173ed12ebe04a6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-servlet.zip" sha1="e915e44319f040bbe399789b995b7278bf682b2d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-servlet.zip" sha1="3c7c5dcfe3851d4c32b8ba502d58d941738aaf74"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-servlets">
+        <artifact tofile="artifacts/jars/jetty-servlets.jar" sha1="8fe422e109350a5af8001d6f658c5f2b4fc04d25"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-servlets.zip" sha1="0d6501ec60139e3cee9cd28cb371581274500140"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-servlets.zip" sha1="b779fe36c664929e7b4cb10a0866f89a73182b96"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-spring">
+        <artifact tofile="artifacts/jars/jetty-spring.jar" sha1="271491a760b0c833114b0040332ae4350dc97c48"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-spring.zip" sha1="b1a0a3dcf5144e2fa670558f72e1834f5ffdfb4c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-spring.zip" sha1="04ca8ad1356c7dcb9c2f02b34d9d3f45a2e39788"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-start">
+        <artifact tofile="artifacts/jars/jetty-start.jar" sha1="0b9b51df1d8a4ed88966d8e87d6d1b6ee8bf76f0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-start.zip" sha1="3ff920c6118ca2f95a75022d70903cd757c7aaef"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-start.zip" sha1="6fca2016c2a284f43c19f8368b0a50c76f1a63b4"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-util">
+        <artifact tofile="artifacts/jars/jetty-util.jar" sha1="02fb9c6172e5704b1b6d8609c5e9dc15db3367d7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-util.zip" sha1="363edd33f24f0b02e0d7cdb59bacace792c09a7f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-util.zip" sha1="4ff932ec1bb1ded97ff3779400af1a9ed6d406e4"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-util-ajax">
+        <artifact tofile="artifacts/jars/jetty-util-ajax.jar" sha1="f3bc65af2e9b6e8b8a44cfaacf8a8f61f797ce9b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-util-ajax.zip" sha1="b55258221a108c4f67873df3f3ba74b3f732b379"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-util-ajax.zip" sha1="c99dcc2e3c0113baf4dc2f9a22848505fa874d03"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-webapp">
+        <artifact tofile="artifacts/jars/jetty-webapp.jar" sha1="c425e57423123c89ed72e76df8f5d0332f05ecee"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-webapp.zip" sha1="20e7b5071ebf1783a738a50073e9de61195413e9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-webapp.zip" sha1="4220e6120da13341dff5ef6288443f684c2f8c9d"/>
+    </m2resource>
+    <m2resource groupId="org/eclipse/jetty" artifactId="jetty-xml">
+        <artifact tofile="artifacts/jars/jetty-xml.jar" sha1="81008da0080e82fd3c8e6d094a1241ce33ca7c6d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jetty-xml.zip" sha1="d05e6a898db397b553819e35e7021307c2ef9097"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jetty-xml.zip" sha1="9071af615bf20d7fce777710c6277f7a57b00283"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20140904000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://dropwizard.github.io/metrics/3.1.0/">
+            <p>
+                Metrics is a Java library which gives you unparalleled insight into what your code does in
+                production. Metrics provides a powerful toolkit of ways to measure the behavior of critical
+                components in your production environment.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="annotation" description="A dependency-less package of just the annotations used by other Metrics modules."/>
+        <conf name="core" description="Metrics Core"/>
+        <conf name="ehcache" extends="core" description="An Ehcache wrapper providing Metrics instrumentation of caches."/>
+        <conf name="ganglia" extends="core" description="A reporter for Metrics which announces measurements to a Graphite server."/>
+        <conf name="graphite" extends="core" description="A reporter for Metrics which announces measurements to a Ganglia cluster."/>
+        <conf name="healthchecks" extends="jvm" description="An addition to Metrics which provides the ability to run application-specific health checks, allowing you to check your application's heath in production."/>
+        <conf name="httpasyncclient" extends="httpclient" description="An Apache HttpAsyncClient wrapper providing Metrics instrumentation of connection pools, request durations and rates, and other useful information."/>
+        <conf name="httpclient" extends="core" description="An Apache HttpClient wrapper providing Metrics instrumentation of connection pools, request durations and rates, and other useful information."/>
+        <conf name="jdbi" extends="core" description="A JDBI wrapper providing Metrics instrumentation of query durations and rates."/>
+        <conf name="jersey" extends="core,annotation" description="A set of class providing Metrics integration for Jersey, the reference JAX-RS implementation. This module is for the old Jersey 1.x"/>
+        <conf name="jersey2" extends="core,annotation" description="A set of class providing Metrics integration for Jersey, the reference JAX-RS implementation."/>
+        <conf name="jetty8" extends="core" description="A set of extensions for Jetty 8 which provide instrumentation of thread pools, connector metrics, and application latency and utilization."/>
+        <conf name="jetty9" extends="core" description="A set of extensions for Jetty 9.1 and higher which provide instrumentation of thread pools, connector metrics, and application latency and utilization."/>
+        <conf name="jetty9-legacy" extends="core" description="A set of extensions for Jetty 9.0 which provide instrumentation of thread pools, connector metrics, and application latency and utilization."/>
+        <conf name="json" extends="healthchecks" description="A set of Jackson modules which provide serializers for most Metrics classes."/>
+        <conf name="jvm" extends="core" description="A set of classes which allow you to monitor critical aspects of your Java Virtual Machine using Metrics."/>
+        <conf name="log4j" extends="core" description="An instrumented appender for Log4j 1.x."/>
+        <conf name="log4j2" extends="core" description="An instrumented appender for Log4j 2.x."/>
+        <conf name="logback" extends="core" description="An instrumented appender for Logback."/>
+        <conf name="servlet" extends="core" description="An instrumented filter for servlet environments."/>
+        <conf name="servlets" extends="jvm,json,jetty9" description="A set of utility servlets for Metrics, allowing you to expose valuable information about your production environment."/>
+        <conf name="default" extends="core" description="Alias for core configuration"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="metrics-annotation" conf="annotation"/>
+        <artifact name="metrics-core" conf="core"/>
+        <artifact name="metrics-ehcache" conf="ehcache"/>
+        <artifact name="metrics-ganglia" conf="ganglia"/>
+        <artifact name="metrics-graphite" conf="graphite"/>
+        <artifact name="metrics-healthchecks" conf="healthchecks"/>
+        <artifact name="metrics-httpasyncclient" conf="httpasyncclient"/>
+        <artifact name="metrics-httpclient" conf="httpclient"/>
+        <artifact name="metrics-jdbi" conf="jdbi"/>
+        <artifact name="metrics-jersey" conf="jersey"/>
+        <artifact name="metrics-jersey2" conf="jersey2"/>
+        <artifact name="metrics-jetty8" conf="jetty8"/>
+        <artifact name="metrics-jetty9" conf="jetty9"/>
+        <artifact name="metrics-jetty9-legacy" conf="jetty9-legacy"/>
+        <artifact name="metrics-json" conf="json"/>
+        <artifact name="metrics-jvm" conf="jvm"/>
+        <artifact name="metrics-log4j" conf="log4j"/>
+        <artifact name="metrics-log4j2" conf="log4j2"/>
+        <artifact name="metrics-logback" conf="logback"/>
+        <artifact name="metrics-servlet" conf="servlet"/>
+        <artifact name="metrics-servlets" conf="servlets"/>
+
+        <!-- source -->
+        <artifact name="metrics-annotation" type="source" ext="zip" conf="annotation"/>
+        <artifact name="metrics-core" type="source" ext="zip" conf="core"/>
+        <artifact name="metrics-ehcache" type="source" ext="zip" conf="ehcache"/>
+        <artifact name="metrics-ganglia" type="source" ext="zip" conf="ganglia"/>
+        <artifact name="metrics-graphite" type="source" ext="zip" conf="graphite"/>
+        <artifact name="metrics-healthchecks" type="source" ext="zip" conf="healthchecks"/>
+        <artifact name="metrics-httpasyncclient" type="source" ext="zip" conf="httpasyncclient"/>
+        <artifact name="metrics-httpclient" type="source" ext="zip" conf="httpclient"/>
+        <artifact name="metrics-jdbi" type="source" ext="zip" conf="jdbi"/>
+        <artifact name="metrics-jersey" type="source" ext="zip" conf="jersey"/>
+        <artifact name="metrics-jersey2" type="source" ext="zip" conf="jersey2"/>
+        <artifact name="metrics-jetty8" type="source" ext="zip" conf="jetty8"/>
+        <artifact name="metrics-jetty9" type="source" ext="zip" conf="jetty9"/>
+        <artifact name="metrics-jetty9-legacy" type="source" ext="zip" conf="jetty9-legacy"/>
+        <artifact name="metrics-json" type="source" ext="zip" conf="json"/>
+        <artifact name="metrics-jvm" type="source" ext="zip" conf="jvm"/>
+        <artifact name="metrics-log4j" type="source" ext="zip" conf="log4j"/>
+        <artifact name="metrics-log4j2" type="source" ext="zip" conf="log4j2"/>
+        <artifact name="metrics-logback" type="source" ext="zip" conf="logback"/>
+        <artifact name="metrics-servlet" type="source" ext="zip" conf="servlet"/>
+        <artifact name="metrics-servlets" type="source" ext="zip" conf="servlets"/>
+
+        <!-- javadoc -->
+        <artifact name="metrics-annotation" type="javadoc" ext="zip" conf="annotation"/>
+        <artifact name="metrics-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="metrics-ehcache" type="javadoc" ext="zip" conf="ehcache"/>
+        <artifact name="metrics-ganglia" type="javadoc" ext="zip" conf="ganglia"/>
+        <artifact name="metrics-graphite" type="javadoc" ext="zip" conf="graphite"/>
+        <artifact name="metrics-healthchecks" type="javadoc" ext="zip" conf="healthchecks"/>
+        <artifact name="metrics-httpasyncclient" type="javadoc" ext="zip" conf="httpasyncclient"/>
+        <artifact name="metrics-httpclient" type="javadoc" ext="zip" conf="httpclient"/>
+        <artifact name="metrics-jdbi" type="javadoc" ext="zip" conf="jdbi"/>
+        <artifact name="metrics-jersey" type="javadoc" ext="zip" conf="jersey"/>
+        <artifact name="metrics-jersey2" type="javadoc" ext="zip" conf="jersey2"/>
+        <artifact name="metrics-jetty8" type="javadoc" ext="zip" conf="jetty8"/>
+        <artifact name="metrics-jetty9" type="javadoc" ext="zip" conf="jetty9"/>
+        <artifact name="metrics-jetty9-legacy" type="javadoc" ext="zip" conf="jetty9-legacy"/>
+        <artifact name="metrics-json" type="javadoc" ext="zip" conf="json"/>
+        <artifact name="metrics-jvm" type="javadoc" ext="zip" conf="jvm"/>
+        <artifact name="metrics-log4j" type="javadoc" ext="zip" conf="log4j"/>
+        <artifact name="metrics-log4j2" type="javadoc" ext="zip" conf="log4j2"/>
+        <artifact name="metrics-logback" type="javadoc" ext="zip" conf="logback"/>
+        <artifact name="metrics-servlet" type="javadoc" ext="zip" conf="servlet"/>
+        <artifact name="metrics-servlets" type="javadoc" ext="zip" conf="servlets"/>
+    </publications>
+
+    <dependencies>
+        <dependency force="true" org="javax.servlet" name="servletapi" rev="[3.1.0,)" conf="servlets,servlet->default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,)" conf="log4j->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpasyncclient" rev="[4.0.2,)" conf="httpasyncclient->client">
+            <exclude org="org.apache.httpcomponents" name="httpclient"/>
+        </dependency>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="[4.3.5,)" conf="httpclient->client"/>
+        <dependency org="info.ganglia.gmetric4j" name="gmetric4j" rev="[1.0.7,)" conf="ganglia->default"/>
+        <dependency org="org.jdbi" name="jdbi" rev="[2.55,)" conf="jdbi->default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[2.8.3,)" conf="ehcache->default">
+            <exclude org="org.slf4j" name="slf4j"/>
+        </dependency>
+        <dependency org="ch.qos" name="logback" rev="[1.1.2,)" conf="logback->classic"/>
+        <dependency org="com.fasterxml" name="jackson" rev="[2.4.2,)" conf="servlets,json->databind"/>
+        <dependency org="org.eclipse" name="jetty" rev="[9.2.0.v20140526,)" conf="servlets->servlet;jetty9->server,client"/>
+        <dependency org="org.eclipse" name="jetty" rev="[9.0.0.v20130308,9.2.0[" conf="jetty9-legacy->server,client"/>
+        <dependency org="org.eclipse" name="jetty" rev="[8.0.0,9.0.0[" conf="jetty8->server"/>
+        <dependency org="com.sun.jersey" name="jersey" rev="[1.17.1,2.0[" conf="jersey->server"/>
+        <dependency org="org.glassfish.jersey" name="jersey" rev="[2.1,)" conf="jersey2->server"/>
+        <dependency org="org.apache.logging.log4j" name="log4j" rev="[2.0.1,)" conf="log4j2->api,core"/>
+    </dependencies>
+
+</ivy-module>

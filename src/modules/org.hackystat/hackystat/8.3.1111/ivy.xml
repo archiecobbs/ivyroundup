@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20091111120000">
+        <license name="GNU Public License, Version 2.0" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
+        <description homepage="https://code.google.com/p/hackystat/">
+Hackystat is an open source framework for collection, analysis, visualization, interpretation, annotation, and dissemination of software development process and product data.
+        </description>
+    </info>
+
+    <configurations>
+       <conf name="dailyprojectdata" description="The DailyProjectData service." />
+       <conf name="telemetry" description="The Telemetry service." />
+       <conf name="postgres" description="The Postgres version of the SensorBase." />
+       <conf name="simdata" description="The Simulation Data service." />
+       <conf name="sensorbase" description="The SensorBase service." />
+       <conf name="systemstatus" description="The SystemStatus UI service." />
+       <conf name="tickertape" description="The Tickertape UI service." />
+       <conf name="wicket" description="The ProjectBrowser UI service" />
+       <conf name="utilities" description="The utilities package for services." />
+       <conf name="all-services" extends="dailyprojectdata,telemetry,postgres,simdata,sensorbase,systemstatus,tickertape,wicket,utilities" description="All Hackystat services." />
+       <conf name="ant" description="Ant sensors." />
+       <conf name="eclipse" description="The Eclipse sensor." />
+       <conf name="emacs" description="The Emacs sensor." />
+       <conf name="example" description="The StackyHack example." />
+       <conf name="shell" description="The sensorshell." />
+       <conf name="xmldata" description="The XmlData sensor." />
+       <conf name="all-sensors" extends="ant,eclipse,emacs,example,shell,xmldata" description="All Hackystat sensors." />
+       <conf name="default" extends="ant" description="The default configuration just installs the Ant sensor." />
+    </configurations>
+
+    <publications>
+        <artifact name="dailyprojectdata" conf="dailyprojectdata"/>
+        <artifact name="hackystat-analysis-dailyprojectdata-javadoc" conf="dailyprojectdata" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-analysis-dailyprojectdata-source" conf="dailyprojectdata" type="source" ext="zip"/>
+        <artifact name="dailyprojectdata.lib" conf="dailyprojectdata"/>
+        <artifact name="telemetry" conf="telemetry"/>
+        <artifact name="hackystat-analysis-telemetry-javadoc" conf="telemetry" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-analysis-telemetry-source" conf="telemetry" type="source" ext="zip"/>
+        <artifact name="telemetry" conf="telemetry"/>
+        <artifact name="telemetry.lib" conf="telemetry"/>
+        <artifact name="sensorbase-postgres" conf="postgres"/>
+        <artifact name="simdata" conf="simdata"/>
+        <artifact name="sensorbase" conf="sensorbase"/>
+        <artifact name="hackystat-sensorbase-uh-javadoc" conf="sensorbase" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-sensorbase-uh-source" conf="sensorbase" type="source" ext="zip"/>
+        <artifact name="sensorbase.lib" conf="sensorbase"/>
+        <artifact name="sensorbaseclient" conf="sensorbase"/>
+        <artifact name="pingmail" conf="systemstatus"/>
+        <artifact name="tickertape" conf="tickertape"/>
+        <artifact name="hackystat-ui-tickertape-javadoc" conf="tickertape" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-ui-tickertape-source" conf="tickertape" type="source" ext="zip"/>
+        <artifact name="projectbrowser" conf="wicket"/>
+        <artifact name="hackystat-ui-wicket-javadoc" conf="wicket" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-ui-wicket-source" conf="wicket" type="source" ext="zip"/>
+        <artifact name="hackystatlogger.lib" conf="utilities"/>
+        <artifact name="hackystatuserhome.lib" conf="utilities"/>
+        <artifact name="stacktrace.lib" conf="utilities"/>
+        <artifact name="time.lib" conf="utilities"/>
+        <artifact name="tstamp.lib" conf="utilities"/>
+        <artifact name="uricache.lib" conf="utilities"/>
+        <artifact name="validate.email.lib" conf="utilities"/>
+        <artifact name="hackystat-utilities-javadoc" conf="utilities" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-utilities-source" conf="utilities" type="source" ext="zip"/>
+        <artifact name="antsensors" conf="ant"/>
+        <artifact name="hackystat-sensor-ant-javadoc" conf="ant" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-sensor-ant-source" conf="ant" type="source" ext="zip"/>
+        <artifact name="org.hackystat.sensor.eclipse_8.3.v20091111" conf="eclipse"/>
+        <artifact name="sensor-package" type="lisp" ext="el" conf="emacs"/>
+        <artifact name="hackystat-sensor-example-8.3.1111" ext="zip" conf="example"/>
+        <artifact name="sensorshell" conf="shell"/>
+        <artifact name="hackystat-sensor-shell-javadoc" conf="shell" type="javadoc" ext="zip"/>
+        <artifact name="hackystat-sensor-shell-source" conf="shell" type="source" ext="zip"/>
+        <artifact name="shellperfeval" conf="shell"/>
+        <artifact name="xmldata-cli" conf="xmldata"/>
+    </publications>
+
+</ivy-module>

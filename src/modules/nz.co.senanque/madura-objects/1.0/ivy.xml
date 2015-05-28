@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100424025334">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://code.google.com/p/madura-objects/">
+            <p>
+            This is essentially a JAXB/XJC plugin that adds automatic
+            validation to the generated Java classes.  You define business
+            objects in an XSD file, pass it through XJC and the plugin will
+            add the validation code.  It uses information in the XSD to
+            pick up validation, and you can specify extensions to that in
+            the XSD. The resulting Java classes check for validity when the
+            setter is called and they reject attempts to set invalid values
+            (this is a difference from other validation frameworks). The
+            Java classes also expose a metadata interface to make it easy
+            for UIs to generate, say, lists of options for a select box.
+            </p>
+
+            <p>
+            The validation framework handles single field validation but
+            you can inject a rule engine (or several) to handle cross field
+            validation.
+            </p>
+
+            <p>
+            But to any Java code the objects still look like ordinary Java
+            beans. The surrounding application is unaware that they are
+            anything different until they throw an exception. This makes it
+            easy to use with frameworks that expect Java beans, and most of
+            them do.
+            </p>
+        </description>
+
+    </info>
+
+    <configurations>
+        <conf name="generate"/>
+        <conf name="compile"/>
+        <conf name="default" extends="compile"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="generate"/>
+        <artifact conf="default"/>
+        <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
+        <artifact name="source" type="source" ext="zip" conf="default"/>
+        <artifact name="MaduraObjects" type="doc" ext="pdf" conf="default"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="nz.co.senanque" name="maduraconfiguration" rev="2.7" conf="compile->default"/>
+        <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-plugin" rev="0.5.4" conf="generate->default">
+            <exclude module="hyperjaxb3-ejb-roundtrip"/><!-- not needed outside of hyperjaxb3 testing -->
+            <exclude org="org.springframework" module="spring"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+            <exclude org="org.apache.commons" module="commons-lang"/>
+            <exclude org="org.apache.commons" module="commons-beanutils"/>
+            <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="generate->default"/>
+        <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-runtime" rev="0.5.4" conf="default->default">
+            <exclude module="hyperjaxb3-ejb-roundtrip"/><!-- not needed outside of hyperjaxb3 testing -->
+            <exclude org="org.springframework" module="spring"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+            <exclude org="org.apache.commons" module="commons-lang"/>
+            <exclude org="org.apache.commons" module="commons-beanutils"/>
+            <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
+        </dependency>
+        <dependency org="org.springframework" name="spring" rev="3.0.0" conf="compile->orm,oxm,test,context-support,tx,jdbc">
+            <exclude org="javax.jms" module="jms"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.jdom" name="jdom" rev="1.1" conf="compile->default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="1.0" conf="compile->default"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.4.0.GA" conf="compile->default">
+            <exclude org="org.hibernate" module="hibernate-commons-annotations"/>
+            <exclude org="org.hibernate" module="hibernate"/>
+        </dependency>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="compile->default">
+            <exclude org="org.hibernate" module="hibernate"/>
+        </dependency>
+        <dependency org="org.hibernate" name="hibernate" rev="3.3.2.GA" conf="compile->default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2" conf="compile->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.10" conf="compile->default"/>
+        <exclude org="avalon-framework" ext="jar"/>
+        <exclude org="logkit" ext="jar"/>
+        <exclude org="javax.servlet" ext="jar"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20121027120000">
+        <license name="GNU Lesser General Public License, version 2.1 or later" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+        <description homepage="https://github.com/twall/jna">
+        <p>
+        JNA provides Java programs easy access to native shared libraries
+        (DLLs on Windows) without writing anything but Java code--no JNI
+        or native code is required. This functionality is comparable to
+        Windows' Platform/Invoke and Python's ctypes. Access is dynamic
+        at runtime without code generation.
+        </p>
+
+        <p>
+        JNA allows you to call directly into native functions using
+        natural Java method invocation. The Java call looks just like
+        it does in native code. Most calls require no special handling
+        or configuration; no boilerplate or generated code is required.
+        </p>
+
+        <p>
+        The JNA library uses a small native library stub to dynamically
+        invoke native code. The developer uses a Java interface
+        to describe functions and structures in the target native
+        library. This makes it quite easy to take advantage of native
+        platform features without incurring the high overhead of
+        configuring and building JNI code for multiple platforms.
+        </p>
+
+        <p>
+        While some attention is paid to performance, correctness and
+        ease of use take priority.
+        </p>
+
+        <p>
+        JNA includes a platform library with many native functions already
+        mapped as well as a set of utility interfaces that simplify native
+        access.
+        </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="JNA core library"/>
+        <conf name="platform" description="JNA platform library"/>
+        <conf name="default" extends="core,platform" description="JNA core + platform library"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core" name="jna"/>
+        <artifact conf="core" name="jna-source" type="source" ext="zip"/>
+        <artifact conf="core" name="jna-javadoc" type="javadoc" ext="zip"/>
+        <artifact conf="platform" name="platform"/>
+        <artifact conf="platform" name="platform-source" type="source" ext="zip"/>
+        <artifact conf="platform" name="platform-javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

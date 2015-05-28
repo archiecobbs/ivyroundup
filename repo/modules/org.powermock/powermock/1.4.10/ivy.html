@@ -1,0 +1,1101 @@
+<html>
+<head>
+<title>powermock by org.powermock :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.powermock/powermock/">powermock</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.powermock/">org.powermock</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.4.10</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://code.google.com/p/powermock/">http://code.google.com/p/powermock/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.powermock/powermock/1.4.10/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://code.google.com/p/powermock/">
+            <p>
+                Writing unit tests can be hard and sometimes good design has to be sacrificed for
+                the sole purpose of testability. Often testability corresponds to good design, but
+                this is not always the case. For example final classes and methods cannot be used,
+                private methods sometimes need to be protected or unnecessarily moved to a collaborator,
+                static methods should be avoided completely and so on simply because of the
+                limitations of existing frameworks.
+            </p>
+            <p>
+                PowerMock is a framework that extend other mock libraries such as EasyMock with more
+                powerful capabilities. PowerMock uses a custom classloader and bytecode manipulation
+                to enable mocking of static methods, constructors, final classes and methods, private
+                methods, removal of static initializers and more. By using a custom classloader no
+                changes need to be done to the IDE or continuous integration servers which simplifies
+                adoption. Developers familiar with the supported mock frameworks will find PowerMock
+                easy to use, since the entire expectation API is the same, both for static methods and
+                constructors. PowerMock aims to extend the existing API's with a small number of
+                methods and annotations to enable the extra features. Currently PowerMock supports
+                EasyMock and Mockito.
+            </p>
+            <p>
+                When writing unit tests it is often useful to bypass encapsulation and therefore
+                PowerMock includes several features that simplifies reflection specifically useful for
+                testing. This allows easy access to internal state, but also simplifies partial and
+                private mocking.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>api-easymock</td>
+<td>EasyMock API classes</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>api-mockito</td>
+<td>Mockito API classes</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>api-support</td>
+<td>API support classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>classloading-base</td>
+<td>Base classloading module</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>classloading-objenesis</td>
+<td>Objenesis classloading module</td>
+<td>classloading-base</td>
+</tr>
+<tr>
+<td>classloading-xstream</td>
+<td>Xstream classloading module</td>
+<td>classloading-base</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Core classes</td>
+<td>reflect</td>
+</tr>
+<tr>
+<td>javaagent</td>
+<td>Javaagent module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>junit3</td>
+<td>Junit3 module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>junit4</td>
+<td>Junit4 module</td>
+<td>junit4-common</td>
+</tr>
+<tr>
+<td>junit4-common</td>
+<td>Junit4 common module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>junit4-legacy</td>
+<td>Junit4 legacy module</td>
+<td>junit4-common, tests-utils</td>
+</tr>
+<tr>
+<td>junit4-rule</td>
+<td>Junit4 rule module</td>
+<td>classloading-base, core</td>
+</tr>
+<tr>
+<td>junit4-rule-agent</td>
+<td>Junit4 rule agent module</td>
+<td>core, javaagent</td>
+</tr>
+<tr>
+<td>reflect</td>
+<td>Reflect module</td>
+<td></td>
+</tr>
+<tr>
+<td>testng</td>
+<td>TestNG module</td>
+<td>testng-common</td>
+</tr>
+<tr>
+<td>testng-common</td>
+<td>TestNG common module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>testng-agent</td>
+<td>TestNG javaagent module</td>
+<td>testng-common, javaagent</td>
+</tr>
+<tr>
+<td>tests-utils</td>
+<td>Test utility classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Core classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>mockito-full</td>
+<td>Full Mockito support</td>
+<td>api-mockito,junit4,testng,classloading-base</td>
+</tr>
+<tr>
+<td>easymock-full</td>
+<td>Full EasyMock support</td>
+<td>api-easymock,junit4,testng,classloading-base</td>
+</tr>
+<tr>
+<td>spring-mockito</td>
+<td>Spring + Mockito</td>
+<td>api-mockito,junit4-rule,classloading-xstream</td>
+</tr>
+<tr>
+<td>spring-mockito</td>
+<td>Spring + Mockito</td>
+<td>api-mockito,junit4-rule,classloading-xstream</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>powermock-api-easymock.jar</td>
+<td>jar</td>
+<td>api-easymock</td>
+</tr>
+<tr>
+<td>powermock-api-mockito.jar</td>
+<td>jar</td>
+<td>api-mockito</td>
+</tr>
+<tr>
+<td>powermock-api-support.jar</td>
+<td>jar</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>powermock-classloading-base.jar</td>
+<td>jar</td>
+<td>classloading-base</td>
+</tr>
+<tr>
+<td>powermock-classloading-objenesis.jar</td>
+<td>jar</td>
+<td>classloading-objenesis</td>
+</tr>
+<tr>
+<td>powermock-classloading-xstream.jar</td>
+<td>jar</td>
+<td>classloading-xstream</td>
+</tr>
+<tr>
+<td>powermock-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>powermock-module-javaagent.jar</td>
+<td>jar</td>
+<td>javaagent</td>
+</tr>
+<tr>
+<td>powermock-module-junit3.jar</td>
+<td>jar</td>
+<td>junit3</td>
+</tr>
+<tr>
+<td>powermock-module-junit4.jar</td>
+<td>jar</td>
+<td>junit4</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-common.jar</td>
+<td>jar</td>
+<td>junit4-common</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-legacy.jar</td>
+<td>jar</td>
+<td>junit4-legacy</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule.jar</td>
+<td>jar</td>
+<td>junit4-rule</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule-agent.jar</td>
+<td>jar</td>
+<td>junit4-rule-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng.jar</td>
+<td>jar</td>
+<td>testng</td>
+</tr>
+<tr>
+<td>powermock-module-testng-agent.jar</td>
+<td>jar</td>
+<td>testng-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng-common.jar</td>
+<td>jar</td>
+<td>testng-common</td>
+</tr>
+<tr>
+<td>powermock-reflect.jar</td>
+<td>jar</td>
+<td>reflect</td>
+</tr>
+<tr>
+<td>powermock-tests-utils.jar</td>
+<td>jar</td>
+<td>tests-utils</td>
+</tr>
+<tr>
+<td>powermock-api-easymock.zip</td>
+<td>source</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>powermock-api-mockito.zip</td>
+<td>source</td>
+<td>api-mockito</td>
+</tr>
+<tr>
+<td>powermock-api-support.zip</td>
+<td>source</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>powermock-classloading-base.zip</td>
+<td>source</td>
+<td>classloading-base</td>
+</tr>
+<tr>
+<td>powermock-classloading-objenesis.zip</td>
+<td>source</td>
+<td>classloading-objenesis</td>
+</tr>
+<tr>
+<td>powermock-classloading-xstream.zip</td>
+<td>source</td>
+<td>classloading-xstream</td>
+</tr>
+<tr>
+<td>powermock-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>powermock-module-javaagent.zip</td>
+<td>source</td>
+<td>javaagent</td>
+</tr>
+<tr>
+<td>powermock-module-junit3.zip</td>
+<td>source</td>
+<td>junit3</td>
+</tr>
+<tr>
+<td>powermock-module-junit4.zip</td>
+<td>source</td>
+<td>junit4</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-common.zip</td>
+<td>source</td>
+<td>junit4-common</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-legacy.zip</td>
+<td>source</td>
+<td>junit4-legacy</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule.zip</td>
+<td>source</td>
+<td>junit4-rule</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule-agent.zip</td>
+<td>source</td>
+<td>junit4-rule-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng.zip</td>
+<td>source</td>
+<td>testng</td>
+</tr>
+<tr>
+<td>powermock-module-testng-agent.zip</td>
+<td>source</td>
+<td>testng-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng-common.zip</td>
+<td>source</td>
+<td>testng-common</td>
+</tr>
+<tr>
+<td>powermock-reflect.zip</td>
+<td>source</td>
+<td>reflect</td>
+</tr>
+<tr>
+<td>powermock-tests-utils.zip</td>
+<td>source</td>
+<td>tests-utils</td>
+</tr>
+<tr>
+<td>powermock-api-easymock.zip</td>
+<td>javadoc</td>
+<td>api-easymock</td>
+</tr>
+<tr>
+<td>powermock-api-mockito.zip</td>
+<td>javadoc</td>
+<td>api-mockito</td>
+</tr>
+<tr>
+<td>powermock-api-support.zip</td>
+<td>javadoc</td>
+<td>api-support</td>
+</tr>
+<tr>
+<td>powermock-classloading-base.zip</td>
+<td>javadoc</td>
+<td>classloading-base</td>
+</tr>
+<tr>
+<td>powermock-classloading-objenesis.zip</td>
+<td>javadoc</td>
+<td>classloading-objenesis</td>
+</tr>
+<tr>
+<td>powermock-classloading-xstream.zip</td>
+<td>javadoc</td>
+<td>classloading-xstream</td>
+</tr>
+<tr>
+<td>powermock-core.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>powermock-module-javaagent.zip</td>
+<td>javadoc</td>
+<td>javaagent</td>
+</tr>
+<tr>
+<td>powermock-module-junit3.zip</td>
+<td>javadoc</td>
+<td>junit3</td>
+</tr>
+<tr>
+<td>powermock-module-junit4.zip</td>
+<td>javadoc</td>
+<td>junit4</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-common.zip</td>
+<td>javadoc</td>
+<td>junit4-common</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-legacy.zip</td>
+<td>javadoc</td>
+<td>junit4-legacy</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule.zip</td>
+<td>javadoc</td>
+<td>junit4-rule</td>
+</tr>
+<tr>
+<td>powermock-module-junit4-rule-agent.zip</td>
+<td>javadoc</td>
+<td>junit4-rule-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng.zip</td>
+<td>javadoc</td>
+<td>testng</td>
+</tr>
+<tr>
+<td>powermock-module-testng-agent.zip</td>
+<td>javadoc</td>
+<td>testng-agent</td>
+</tr>
+<tr>
+<td>powermock-module-testng-common.zip</td>
+<td>javadoc</td>
+<td>testng-common</td>
+</tr>
+<tr>
+<td>powermock-reflect.zip</td>
+<td>javadoc</td>
+<td>reflect</td>
+</tr>
+<tr>
+<td>powermock-tests-utils.zip</td>
+<td>javadoc</td>
+<td>tests-utils</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.objenesis</td>
+<td><a href="../../../org.objenesis/objenesis/">objenesis</a></td>
+<td>[1.2,)</td>
+<td>reflect,api-mockito-&gt;default</td>
+</tr>
+<tr>
+<td>org.junit</td>
+<td><a href="../../../org.junit/junit/">junit</a></td>
+<td>4.4+</td>
+<td>api-mockito,classloading-objenesis,classloading-xstream,junit4-rule,junit4-&gt;default</td>
+</tr>
+<tr>
+<td>org.junit</td>
+<td><a href="../../../org.junit/junit/">junit</a></td>
+<td>[4.0,4.4[</td>
+<td>junit4-legacy-&gt;default</td>
+</tr>
+<tr>
+<td>org.junit</td>
+<td><a href="../../../org.junit/junit/">junit</a></td>
+<td>[3.8,4.0[</td>
+<td>junit3-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>[2.5,)</td>
+<td>tests-utils-&gt;default</td>
+</tr>
+<tr>
+<td>org.codehaus.xstream</td>
+<td><a href="../../../org.codehaus.xstream/xstream/">xstream</a></td>
+<td>[1.3.1,)</td>
+<td>classloading-xstream-&gt;default</td>
+</tr>
+<tr>
+<td>org.mockito</td>
+<td><a href="../../../org.mockito/mockito/">mockito</a></td>
+<td>[1.8.5,)</td>
+<td>api-mockito-&gt;default</td>
+</tr>
+<tr>
+<td>org.easymock</td>
+<td><a href="../../../org.easymock/easymock/">easymock</a></td>
+<td>[3.0,)</td>
+<td>api-easymock-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>3.0+</td>
+<td>spring-mockito-&gt;core,context,test</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-lang/">commons-lang</a></td>
+<td>[2.6,3.0[</td>
+<td>spring-mockito-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-easymock</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-api-easymock.jar</td>
+<td>0c44c3b4b19ddacb763eb34bf308a505443c721c</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-easymock</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-api-easymock.zip</td>
+<td>209845ec2eeb79f2058c6838833cb10b254cf1f4</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-easymock</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-api-easymock.zip</td>
+<td>bbe01d682d97413c775bc798a04c697eccdf1b59</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-mockito</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-api-mockito.jar</td>
+<td>04bea547f4fc9bbd7d6bb5cf66628aeb8ad74690</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-mockito</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-api-mockito.zip</td>
+<td>2ef3a9beed48b66d992ef09b74f7898304ddacf6</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-mockito</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-api-mockito.zip</td>
+<td>312c4eb2a751c180186b1587b9fa8557f16e86cd</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-support</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-api-support.jar</td>
+<td>7e34db35ef3ec22ac70716b432382b5b3e6f8d0a</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-support</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-api-support.zip</td>
+<td>6dc8d0e52fd594fe4496442eff45ca67a2add59c</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-api-support</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-api-support.zip</td>
+<td>f813418fd594e1c531631015678bd9a8aff7ad3d</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-base</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-classloading-base.jar</td>
+<td>99b36331d3b9719671af86de050cc4a1196d3812</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-base</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-classloading-base.zip</td>
+<td>effee52aaa2856a2950ca9656ffe1cbfb9d80443</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-base</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-classloading-base.zip</td>
+<td>82b5a6a00f34fbed195d2e14780240716b105ebe</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-objenesis</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-classloading-objenesis.jar</td>
+<td>689fe6e090c6f9faae3769bb1326175de01305ab</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-objenesis</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-classloading-objenesis.zip</td>
+<td>1f205639d0e1d4330f34f1f05a26fc60f63245a7</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-objenesis</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-classloading-objenesis.zip</td>
+<td>1d52eabbb438743550193c26cc0c5b900513b5fd</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-xstream</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-classloading-xstream.jar</td>
+<td>f2ccb9325d7ea71fdd2c724b7fd77c5f285cdbb2</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-xstream</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-classloading-xstream.zip</td>
+<td>937915ca50f0c699a9547e759d688674767f5aa3</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-classloading-xstream</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-classloading-xstream.zip</td>
+<td>17a5e044f13eaf2df26b632e24f66270b5bc829b</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-core</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-core.jar</td>
+<td>6a04b6196c5d8ea922caf5f328079e57ae831896</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-core</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-core.zip</td>
+<td>43f7a300b3f2590e21852c77132c2ed17238c242</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-core</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-core.zip</td>
+<td>c85c11da0cb3ee960b3fceb07040ae54c1dc314e</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-javaagent</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-javaagent.jar</td>
+<td>85f3f9b1748d5f8318a499ab890c9dad96ef443f</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-javaagent</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-javaagent.zip</td>
+<td>2768ac9002cc53ce136ec10dabc7527a75533e9d</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-javaagent</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-javaagent.zip</td>
+<td>820c68437642a0f18f1715414b2228025327b625</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit3</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit3.jar</td>
+<td>473fdbb81f53dda3c49066ba2570eb0c5e103f08</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit3</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit3.zip</td>
+<td>a1a5637c98b8f5bb6a5bafb0f778aa680e366d03</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit3</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit3.zip</td>
+<td>2be793c2f4089052caaee218fc379e6409e1414f</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit4.jar</td>
+<td>7a4856a1bb4dedf25e87604b41214c8635830960</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit4.zip</td>
+<td>b5dec5a7667d7501aad6bf9c67c3199aaa0467d8</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit4.zip</td>
+<td>b484c88cc59769dc35c82424f7a8065fd1032ed3</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-common</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit4-common.jar</td>
+<td>2ad1b0d4c49b8d3b1e37e8222da105e923d1c266</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-common</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit4-common.zip</td>
+<td>aafa423394711bf6a13cd6cd1a3afc7ecb8168d6</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-common</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit4-common.zip</td>
+<td>0d4fa90fb48396ba41ec9ccbf482dcf8c3c516ee</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-legacy</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit4-legacy.jar</td>
+<td>1d5e777b2413c9505b5e4b4a4fbc13a8a8623c7f</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-legacy</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit4-legacy.zip</td>
+<td>21dda95ce8cd6de48043ef4cb3f011a1f7ef8155</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-legacy</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit4-legacy.zip</td>
+<td>5f55ef1977caa552d536238c0771b3ccb77335b3</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit4-rule.jar</td>
+<td>6fd7b5ae20fa67822ed43374ad95e572ba5795a1</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit4-rule.zip</td>
+<td>d087571913e856b9f1b2794898731e8df83b5bff</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit4-rule.zip</td>
+<td>7bf571f186d6cd11366a29f9e9922c8372152150</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule-agent</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-junit4-rule-agent.jar</td>
+<td>e5c47779c453feaf1cde358d9d5eb310ba21673d</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule-agent</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-junit4-rule-agent.zip</td>
+<td>c0541d7cf7a526d2fc10d1a4c059737d2f6adb67</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-junit4-rule-agent</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-junit4-rule-agent.zip</td>
+<td>780acb47a3ab643e34ac4bd199359f60a2f6bbd2</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-testng.jar</td>
+<td>40b09bf9ba4a436c27691c2c9d4a1e13d3eee1ef</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-testng.zip</td>
+<td>e913a91cf1cd96d572fcccbebd826ba9b388bc21</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-testng.zip</td>
+<td>7386de20ac51ee416389e8ffc3ee86d4ea6717d5</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-agent</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-testng-agent.jar</td>
+<td>04a027980e4272a8169431710cd15e51b0d81b31</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-agent</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-testng-agent.zip</td>
+<td>97458e95d3e43ae9e4197765986dac05f7399c01</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-agent</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-testng-agent.zip</td>
+<td>35276a91c76cd836f29f489ee07f0c26a70710b3</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-common</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-module-testng-common.jar</td>
+<td>87812695c8e9d64e4bbe5add63b371403d2d32a5</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-common</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-module-testng-common.zip</td>
+<td>24c9938318328260bdf9674eb1053bdabd74b708</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-module-testng-common</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-module-testng-common.zip</td>
+<td>6a77d831d7f77a68a0e70919a7efbc32dac4f6b5</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-reflect</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-reflect.jar</td>
+<td>870ecc62707bf953cd7dab89acfa6debdbe977a1</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-reflect</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-reflect.zip</td>
+<td>47ab1a4e272e83d3ac2f1c0dd6696ed28f1e0daf</td>
+</tr>
+<tr>
+<td>org.powermock</td>
+<td>powermock-reflect</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-reflect.zip</td>
+<td>713c707f08e39ba1a798b060b7d93ab826b6fc94</td>
+</tr>
+<tr>
+<td>org/powermock/tests</td>
+<td>powermock-tests-utils</td>
+<td>1.4.10</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/powermock-tests-utils.jar</td>
+<td>43eed38089b560043b5427817b3b7f625cfcf3ce</td>
+</tr>
+<tr>
+<td>org/powermock/tests</td>
+<td>powermock-tests-utils</td>
+<td>1.4.10</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/powermock-tests-utils.zip</td>
+<td>cb9e8132e9db1adb460f583718700a14bb2371c1</td>
+</tr>
+<tr>
+<td>org/powermock/tests</td>
+<td>powermock-tests-utils</td>
+<td>1.4.10</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/powermock-tests-utils.zip</td>
+<td>d1f200819bb333706bf0b01362d6db400ec3eabd</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

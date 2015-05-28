@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+  <info organisation="org.slf4j" module="slf4j" revision="1.7.7" status="release" publication="20140407000000">
+        <license name="SLF4J License" url="http://www.slf4j.org/license.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.slf4j/slf4j/1.7.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.slf4j.org/">
+
+      <p>
+        The Simple Logging Facade for Java or (SLF4J) serves as a simple
+        facade or abstraction for various logging frameworks, e.g.
+        java.util.logging, log4j and logback, allowing the end user to
+        plug in the desired logging framework at <em>deployment</em> time.
+      </p>
+
+    </description>
+    </info>
+
+  <configurations>
+    <conf name="core" description="SLF4J core conf"/>
+    <conf name="default" extends="core" description="SLF4J default conf (Log4J enabled)"/>
+    <conf name="log4j" extends="default" description="Log4J 1.2.x support"/>
+    <conf name="log4j-migration" extends="core" description="Gradual migration from Log4J"/>
+    <conf name="jcl" extends="core" description="Jakarta Commons Logging support"/>
+    <conf name="jcl-migration" extends="core" description="Gradual migration from Jakarta Commons Logging"/>
+    <conf name="jul" extends="core" description="java.util.logging support"/>
+    <conf name="jul-migration" extends="core" description="Gradual migration from java.util.logging"/>
+    <conf name="nop" extends="core" description="NOP (no operation) Logger support"/>
+    <conf name="simple" extends="core" description="Simple Logger support"/>
+    <conf name="ext" extends="core" description="Enable profiling support"/>
+    <conf name="migrator" description="Tool to migrate code to SLF4J"/>
+  </configurations>
+
+  <publications>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jcl-over-slf4j" ivyde:javadoc="javadoc" name="jcl-over-slf4j" conf="jcl-migration"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jul-to-slf4j" ivyde:javadoc="javadoc" name="jul-to-slf4j" conf="jul-migration"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-over-slf4j" ivyde:javadoc="javadoc" name="log4j-over-slf4j" conf="log4j-migration"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-api" ivyde:javadoc="javadoc" name="slf4j-api" conf="core"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-ext" ivyde:javadoc="javadoc" name="slf4j-ext" conf="ext"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jcl" ivyde:javadoc="javadoc" name="slf4j-jcl" conf="jcl"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-jdk14" ivyde:javadoc="javadoc" name="slf4j-jdk14" conf="jul"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-log4j12" ivyde:javadoc="javadoc" name="slf4j-log4j12" conf="default, log4j"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="slf4j-migrator" conf="migrator"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-nop" ivyde:javadoc="javadoc" name="slf4j-nop" conf="nop"/>
+    <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="slf4j-simple" ivyde:javadoc="javadoc" name="slf4j-simple" conf="simple"/>
+
+    <artifact name="jcl-over-slf4j" type="source" ext="zip" conf="jcl-migration"/>
+    <artifact name="jul-to-slf4j" type="source" ext="zip" conf="jul-migration"/>
+    <artifact name="log4j-over-slf4j" type="source" ext="zip" conf="log4j-migration"/>
+    <artifact name="slf4j-api" type="source" ext="zip" conf="core"/>
+    <artifact name="slf4j-ext" type="source" ext="zip" conf="ext"/>
+    <artifact name="slf4j-jcl" type="source" ext="zip" conf="jcl"/>
+    <artifact name="slf4j-jdk14" type="source" ext="zip" conf="jul"/>
+    <artifact name="slf4j-log4j12" type="source" ext="zip" conf="default, log4j"/>
+    <artifact name="slf4j-nop" type="source" ext="zip" conf="nop"/>
+    <artifact name="slf4j-simple" type="source" ext="zip" conf="simple"/>
+
+    <artifact name="javadoc" type="javadoc" ext="zip"/>
+  </publications>
+
+  <dependencies>
+    <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,1.3[" conf="log4j,log4j-migration-&gt;default"/>
+    <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,1.2[" conf="jcl-&gt;default"/>
+    <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="ext-&gt;default"/>
+  </dependencies>
+
+</ivy-module>

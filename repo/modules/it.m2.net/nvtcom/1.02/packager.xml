@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="archive" value="nvt_1_02"/>
+
+    <resource url="http://www.viara.eu/download/${archive}.zip" sha1="88b1098d07c70af06675ae07dca4016dfecb5506"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <mkdir dir="source/it/m2/net/telnet"/>
+        <unzip dest="source/it/m2/net/telnet" src="archive/${archive}-src.jar">
+            <patternset>
+                <exclude name="META-INF"/>
+                <exclude name="META-INF/**/*"/>
+            </patternset>
+        </unzip>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="source"/>
+        </zip>
+
+        <!-- javadoc -->
+        <mkdir dir="javadoc"/>
+        <unzip dest="javadoc" src="archive/${archive}-doc.jar">
+            <patternset>
+                <include name="docs/**/*"/>
+            </patternset>
+        </unzip>
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="javadoc/docs"/>
+        </zip>
+    </build>
+</packager-module>

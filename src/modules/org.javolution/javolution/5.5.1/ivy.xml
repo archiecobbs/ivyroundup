@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100520015500">
+        <license name="BSD License" url="http://javolution.org/LICENSE.txt"/>
+        <description homepage="http://javolution.org/">
+            <p>
+                Javolution real-time goals are simple: To make your application faster and more time predictable!
+            </p>
+            <p>
+                That being accomplished through:<br/>
+                <ul>
+                    <li>High performance and time-deterministic (real-time) util / lang / text / io / xml base classes.</li>
+                    <li>Context programming in order to achieve true separation of concerns (logging, performance, etc).</li>
+                    <li>A testing framework addressing not only unit tests but also performance and regression tests as well.</li>
+                    <li>Straightforward and low-level parallel computing capabilities with ConcurrentContext.</li>
+                    <li>Struct and Union base classes for direct interfacing with native applications (e.g. C/C++).</li>
+                    <li>World's fastest and first hard real-time XML marshalling/unmarshalling facility.</li>
+                    <li>Simple yet flexible configuration management of your application.</li>
+                </ul>
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+</ivy-module>

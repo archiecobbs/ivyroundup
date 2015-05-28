@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="javax.sip" module="jain-sip" revision="1.2" status="release" publication="20140614000000">
+        <license name="Public Domain" url="http://en.wikipedia.org/wiki/Public_domain"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.sip/jain-sip/1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/jain-sip/">
+            <p>Also available at <a href="http://jain-sip.dev.java.net">http://jain-sip.dev.java.net</a></p>
+            <p>
+                This project publishes the Reference Implementation, Technology Compatibility Kit, examples
+                and tools for JAIN-SIP-1.2 (JSR-32 maintenance release) and an SDP library that conforms to
+                the public release of JSR 141 (JAIN-SDP) interfaces. JAIN-SIP is a low level Java API
+                specification for SIP Signaling. The intended users of this project are SIP developers.
+            </p>
+            <p>
+                This project publishes a full implementation of the RFC 3261 Specification and as well as
+                suppport for several SIP RFCs.
+            </p>
+            <p>
+                You can embed the JAIN-SIP stack in an applet, HTTP servlet or an application. JAIN-SIP can
+                be used in SIP Proxy Servers (stateful and statelss) and in SIP User Agents. JAIN-SIP has
+                been used to build a Session Border Controller, a few Softphones, a Resource Adapter for the
+                JAVA Service Logic Execution Environment, a SIP Servlet Implementation and in a few Test tools.
+            </p>
+            <p>
+                The JAIN-SIP Reference implementation is a product of the Advanced Networking Technologies
+                Division at the National Institute of Standards and Technology (NIST) - an agency of the
+                United States Department of Commerce. The JAIN SIP RI, TCK and tools published by this
+                project are in the public domain. 
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api" description="API classes"/>
+        <conf name="ri" extends="api" description="Reference implementation classes"/>
+        <conf name="sctp" extends="ri" description="SCTP classes"/>
+        <conf name="default" extends="sctp" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="jain-sip-ri" name="jain-sip-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jain-sip-ri" ivyde:javadoc="jain-sip-ri" name="jain-sip-ri" conf="ri"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jain-sip-sctp" ivyde:javadoc="jain-sip-ri" name="jain-sip-sctp" conf="sctp"/>
+        <artifact name="jain-sip-ri" type="source" ext="zip"/>
+        <artifact name="jain-sip-sctp" type="source" ext="zip"/>
+        <artifact name="jain-sip-ri" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="ri-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

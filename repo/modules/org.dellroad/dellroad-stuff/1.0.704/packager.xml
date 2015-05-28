@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="37a4ea77bb85a7e9155a744d59a09d64b0d8189f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="eb99ed605f92e2488fd0021c2047e8084ee89b43"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="34514b14dedd0ae18a427b9fc7bc3d7a3966387b"/>
+    </m2resource>
+</packager-module>

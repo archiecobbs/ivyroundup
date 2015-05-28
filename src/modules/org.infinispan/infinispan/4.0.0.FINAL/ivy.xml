@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100223121300">
+        <license name="LGPL" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"/>
+        <description homepage="http://infinispan.org/">
+        <p>
+        Infinispan is an extremely scalable, highly available data grid platform
+        - 100% open source, and written in Java.  The purpose of Infinispan is to
+        expose a data structure that is highly concurrent, designed ground-up to
+        make the most of modern multi-processor/multi-core architectures while at
+        the same time providing distributed cache capabilities.  At its core
+        Infinispan exposes a JSR-107 (JCACHE) compatible Cache interface (which in
+        turn extends java.util.Map).  It is also optionally is backed by a
+        peer-to-peer network architecture to distribute state efficiently around a
+        data grid.
+        </p>
+        <p>
+        Offering high availability via making replicas of state across a network as
+        well as optionally persisting state to configurable cache stores, Infinispan
+        offers enterprise features such as efficient eviction algorithms to control
+        memory usage as well as JTA compatibility.
+        </p>
+        <p>
+        In addition to the peer-to-peer architecture of Infinispan, on the roadmap is
+        the ability to run farms of Infinispan instances as servers and connecting to
+        them using a plethora of clients - both written in Java as well as other popular
+        platforms.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="all" description="everything"/>
+        <conf name="default" description="Default conf"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="infinispan-cachestore-bdbje" conf="all"/>
+        <artifact name="infinispan-cachestore-cloud" conf="all"/>
+        <artifact name="infinispan-cachestore-jdbc" conf="all"/>
+        <artifact name="infinispan-cachestore-jdbm" conf="all"/>
+        <artifact name="infinispan-core" conf="all,default"/>
+        <artifact name="infinispan-jopr-plugin" conf="all"/>
+        <artifact name="infinispan-lucene-directory" conf="all"/>
+        <artifact name="infinispan-query" conf="all"/>
+        <artifact name="infinispan-tools" conf="all"/>
+        <artifact name="infinispan-tree" conf="all"/>
+
+        <!-- source -->
+        <artifact name="infinispan-cachestore-bdbje" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-cachestore-cloud" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-cachestore-jdbc" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-cachestore-jdbm" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-core" type="source" conf="all,default" ext="zip"/>
+        <artifact name="infinispan-jopr-plugin" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-lucene-directory" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-query" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-tools" type="source" conf="all" ext="zip"/>
+        <artifact name="infinispan-tree" type="source" conf="all" ext="zip"/>
+
+    </publications>
+
+    <!-- TODO: find and add dependencies here
+    <dependencies>
+    </dependencies>
+    -->
+
+</ivy-module>

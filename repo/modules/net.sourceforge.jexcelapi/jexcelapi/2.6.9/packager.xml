@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="2_6_9_1.4"/>
+    <property name="archive" value="${name}_${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${ivy.packager.revision}%20%28Java%201.4%29/${archive}.tar.gz" sha1="56af9d68ab48982a39037beccdf5081c0215a1ce"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${name}/jxl.jar" tofile="artifacts/jars/jxl.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${name}/docs"/>
+        </zip>
+    </build>
+</packager-module>

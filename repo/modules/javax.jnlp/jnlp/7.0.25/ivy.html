@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>jnlp by javax.jnlp :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../javax.jnlp/jnlp/">jnlp</a></span> 
+    by 
+    <span id="organisation"><a href="../../../javax.jnlp/">javax.jnlp</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>7.0.25</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">http://www.oracle.com/technetwork/java/javase/overview/index.html</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://s3.amazonaws.com/archie-public/jnlp-servlet/SAMPLES_LICENSE">BSD</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.jnlp/jnlp/7.0.25/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.oracle.com/technetwork/java/javase/overview/index.html">
+        <p>
+        Java Web Start is a helper application that gets associated with a Web
+        browser. When a user clicks on a link that points to a special launch
+        file (JNLP file), it causes the browser to launch Java Web Start,
+        which then automatically downloads, caches, and runs the given Java
+        Technology-based application. The entire process is typically
+        completed without requiring any user interaction, except for the
+        initial single click.
+        </p>
+        <p>
+        From a technology standpoint, Java Web Start has a number of key
+        benefits that make it an attractive platform to use for deploying
+        applications:
+        <ul>
+            <li>Java Web Start is built exclusively to launch applications
+                written to the Java(TM) Platform Standard Edition. Thus, a
+                single application can be made available on a Web server and
+                then deployed on a wide variety of platforms, including
+                Windows 98/NT/2000/ME/XP, Linux, and the Solaris<sup>TM</sup>
+                Operating Environment. The Java platform has proven to be a
+                very robust, productive, and expressive development platform,
+                leading to a significant cost savings due to minimized
+                development and testing costs.</li>
+            <li>Java Web Start supports multiple revisions of the Java(TM)
+                Platform Standard Edition. Thus, an application can request a
+                particular version of the platform it requires, such as Java
+                SE<sup>TM</sup> 1.5.0. Several applications can run at the same
+                time on different platform revisions without causing conflicts,
+                and Java Web Start can automatically download and install a
+                revision of the platform if an application requests a version
+                that is not installed on the client system.</li>
+            <li>Java Web Start allows applications to be launched independently
+                of a Web browser. This can be used for off-line operation of an
+                application, where launching through the browser is often
+                inconvenient or impossible. The application can also be
+                launched through desktop shortcuts, making launching the
+                Web-deployed application similar to launching a native
+                application.</li>
+            <li>Java Web Start takes advantage of the inherent security of the
+                Java Platform. Applications are by default run in a protective
+                environment (sandbox) with restricted access to local disk and
+                network resources. It allows the user to safely run
+                applications from sources that are not trusted.</li>
+            <li>Applications launched with Java Web Start are cached locally.
+                Thus, an already-downloaded application is launched on par with
+                a traditionally installed application.</li>
+        </ul>
+        </p>
+        <p>
+        The technology underlying Java Web Start is the Java <sup>TM</sup>
+        Network Launching Protocol and API (JNLP). This technology was
+        developed via the Java Community Process (JCP). Java Web Start is the
+        reference implementation (RI) for the JNLP specification. The JNLP
+        technology defines, among other things, a standard file format that
+        describes how to launch an application called a JNLP file.
+        </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>runtime</td>
+<td>JAR used by WebStart applications at runtime</td>
+<td></td>
+</tr>
+<tr>
+<td>servlet</td>
+<td>JARs that implement the JNLP servlet</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td></td>
+<td>runtime,servlet</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jardiff.jar</td>
+<td>jar</td>
+<td>servlet</td>
+</tr>
+<tr>
+<td>jnlp.jar</td>
+<td>jar</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>jnlp-servlet.jar</td>
+<td>jar</td>
+<td>servlet</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody><tr>
+<td>jdkrev</td>
+<td>jdk-7u25</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jardiff.jar</td>
+<td>Copy to artifacts/jars/jardiff.jar</td>
+<td>e05a94f694d10bafd7863ae0d464fa6cb839c658</td>
+</tr>
+<tr>
+<td>http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp.jar</td>
+<td>Copy to artifacts/jars/jnlp.jar</td>
+<td>5a58893b1f3a37fafe442857490d91a6e77b26a7</td>
+</tr>
+<tr>
+<td>http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-servlet.jar</td>
+<td>Copy to artifacts/jars/jnlp-servlet.jar</td>
+<td>02b3167eecb0a981e14b2c4f2df0072cf652c5f6</td>
+</tr>
+<tr>
+<td>http://s3.amazonaws.com/archie-public/jnlp-servlet/${jdkrev}/jnlp-source.zip</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>2b20722ad7f1ddeece9fd692ebb0d5a05352cf52</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

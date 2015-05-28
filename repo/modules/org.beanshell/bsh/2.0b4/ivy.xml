@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.beanshell" module="bsh" revision="2.0b4" status="release" publication="20050523114800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.beanshell/bsh/2.0b4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.beanshell.org/">
+        <p>
+        BeanShell is a small, free, embeddable Java source interpreter with
+        object scripting language features, written in Java. BeanShell
+        dynamically executes standard Java syntax and extends it with common
+        scripting conveniences such as loose types, commands, and method
+        closures like those in Perl and JavaScript. 
+        </p>
+        <p>
+        You can use BeanShell interactively for Java experimentation and
+        debugging as well as to extend your applications in new ways.
+        Scripting Java lends itself to a wide variety of applications
+        including rapid prototyping, user scripting extension, rules engines,
+        configuration, testing, dynamic deployment, embedded systems, and even
+        Java education.
+        </p>
+        <p>
+        BeanShell is small and embeddable, so you can call BeanShell from your
+        Java applications to execute Java code dynamically at run-time or to
+        provide extensibility in your applications. Alternatively, you can use
+        standalone BeanShell scripts to manipulate Java applications; working
+        with Java objects and APIs dynamically. Since BeanShell is written in
+        Java and runs in the same VM as your application, you can freely pass
+        references to "live" objects into scripts and return them as results.
+        </p>
+        <p>
+        In short, BeanShell is dynamically interpreted Java, plus a scripting
+        language and flexible environment all rolled into one clean package.
+        </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Beanshell scripting language"/>
+        <conf name="bsf" extends="default" description="Beanshell classes for Jakarta BSF"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-bsf" conf="bsf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-classgen" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-classgen" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-classpath" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-commands" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-core" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-reflect" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="bsh-util" conf="default"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.bsf" name="bsf" rev="[2.4.0,)" conf="bsf-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

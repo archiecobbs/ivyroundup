@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20121019120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://vaadin.com/directory#addon/refresher">
+            <p>
+            Because of the way Vaadin works, asynchronous UI changes made
+            on the server side (e.g. by a long-duration data processing
+            Thread) aren't reflected to the client side. This component
+            makes it possible to make UI changes, even if the user
+            doesn't start a transaction.
+            </p>
+
+            <p>
+            This version is for Vaadin 7.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+</ivy-module>

@@ -1,0 +1,1097 @@
+<html>
+<head>
+<title>spring by org.springframework :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.springframework/spring/">spring</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.springframework/">org.springframework</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.2.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://spring.io/">http://spring.io/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.springframework/spring/3.2.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://spring.io/">
+            Spring is a layered Java/J2EE application framework, based on code
+            published in Expert One-on-One J2EE Design and Development by Rod Johnson
+            (Wrox, 2002).
+
+            Spring includes:
+            <ul>
+                <li>
+<b>The most complete lightweight container</b>, providing
+                centralized, automated configuration and wiring of your
+                application objects.  The container is non-invasive,
+                capable of assembling a complex system from a set of
+                loosely-coupled components (POJOs) in a consistent
+                and transparent fashion.  The container brings agility
+                and leverage, and improves application testability and
+                scalability by allowing software components to be first
+                developed and tested in isolation, then scaled up for
+                deployment in any environment (J2SE or J2EE).</li>
+
+                <li>
+<b>A common abstraction layer for transaction management</b>,
+                allowing for pluggable transaction managers, and making
+                it easy to demarcate transactions without dealing with
+                low-level issues. Generic strategies for JTA and a single
+                JDBC DataSource are included. In contrast to plain JTA
+                or EJB CMT, Spring's transaction support is not tied to
+                J2EE environments.</li>
+
+                <li>
+<b>A JDBC abstraction layer</b> that offers a meaningful
+                exception hierarchy (no more pulling vendor codes out
+                of SQLException), simplifies error handling, and greatly
+                reduces the amount of code you'll need to write. You'll
+                never need to write another finally block to use JDBC
+                again. The JDBC-oriented exceptions comply to Spring's
+                generic DAO exception hierarchy.</li>
+
+                <li>
+<b>Integration with Toplink, Hibernate, JDO, and iBATIS
+                SQL Maps</b>: in terms of resource holders, DAO implementation
+                support, and transaction strategies. First-class Hibernate
+                support with lots of IoC convenience features, addressing
+                many typical Hibernate integration issues. All of these
+                comply to Spring's generic transaction and DAO exception
+                hierarchies.</li>
+
+                <li>
+<b>AOP functionality</b>, fully integrated into Spring
+                configuration management. You can AOP-enable any object
+                managed by Spring, adding aspects such as declarative
+                transaction management. With Spring, you can have
+                declarative transaction management without EJB... even
+                without JTA, if you're using a single database in Tomcat
+                or another web container without JTA support.</li>
+
+                <li>
+<b>A flexible MVC web application framework</b>, built
+                on core Spring functionality. This framework is highly
+                configurable via strategy interfaces, and accommodates
+                multiple view technologies like JSP, Velocity, Tiles,
+                iText, and POI. Note that a Spring middle tier can easily
+                be combined with a web tier based on any other web MVC
+                framework, like Struts, WebWork, or Tapestry.</li>
+            </ul>
+
+            You can use all of Spring's functionality in any J2EE
+            server, and most of it also in non-managed environments. A
+            central focus of Spring is to allow for reusable business
+            and data access objects that are not tied to specific J2EE
+            services. Such objects can be reused across J2EE environments
+            (web or EJB), standalone applications, test environments,
+            etc without any hassle.
+
+            Spring's layered architecture gives you a lot of
+            flexibility. All its functionality builds on lower levels. So
+            you can e.g. use the JavaBeans configuration management
+            without using the MVC framework or AOP support. But if you
+            use the web MVC framework or AOP support, you'll find they
+            build on the configuration framework, so you can apply your
+            knowledge about it immediately.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>aop</td>
+<td>Spring AOP</td>
+<td>core, beans</td>
+</tr>
+<tr>
+<td>aspects</td>
+<td>Spring AspectJ</td>
+<td>beans</td>
+</tr>
+<tr>
+<td>beans</td>
+<td>Spring Beans</td>
+<td>core</td>
+</tr>
+<tr>
+<td>context</td>
+<td>Spring Context</td>
+<td>beans, aop, expression</td>
+</tr>
+<tr>
+<td>context-support</td>
+<td>Spring Context Support</td>
+<td>context, aop, jdbc</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Spring Core</td>
+<td></td>
+</tr>
+<tr>
+<td>expression</td>
+<td>Spring Expression Language</td>
+<td>core</td>
+</tr>
+<tr>
+<td>instrument</td>
+<td>Spring Instrument</td>
+<td></td>
+</tr>
+<tr>
+<td>instrument-tomcat</td>
+<td>Spring Instrument Tomcat Weaver</td>
+<td>instrument</td>
+</tr>
+<tr>
+<td>jdbc</td>
+<td>Spring JDBC</td>
+<td>beans, tx</td>
+</tr>
+<tr>
+<td>jms</td>
+<td>Spring JMS</td>
+<td>beans, tx</td>
+</tr>
+<tr>
+<td>orm</td>
+<td>Spring ORM</td>
+<td>jdbc, web</td>
+</tr>
+<tr>
+<td>oxm</td>
+<td>Spring Object/XML Mapping</td>
+<td>core, beans</td>
+</tr>
+<tr>
+<td>struts</td>
+<td>Spring Struts</td>
+<td>core, beans, web</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Spring Test</td>
+<td>core, context, jdbc, web</td>
+</tr>
+<tr>
+<td>tx</td>
+<td>Spring Transaction</td>
+<td>core, aop, context</td>
+</tr>
+<tr>
+<td>web</td>
+<td>Spring Web</td>
+<td>aop, beans, context, core</td>
+</tr>
+<tr>
+<td>webmvc</td>
+<td>Spring Web MVC</td>
+<td>web</td>
+</tr>
+<tr>
+<td>web-servlet</td>
+<td>Alias for Spring Web MVC for backwards compatibility</td>
+<td>webmvc</td>
+</tr>
+<tr>
+<td>webmvc-portlet</td>
+<td>Spring Web MVC Portlet</td>
+<td>webmvc</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Everything (all of the module JARs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>spring-aop.jar</td>
+<td>jar</td>
+<td>default,aop</td>
+</tr>
+<tr>
+<td>spring-aspects.jar</td>
+<td>jar</td>
+<td>default,aspects</td>
+</tr>
+<tr>
+<td>spring-beans.jar</td>
+<td>jar</td>
+<td>default,beans</td>
+</tr>
+<tr>
+<td>spring-context.jar</td>
+<td>jar</td>
+<td>default,context</td>
+</tr>
+<tr>
+<td>spring-context-support.jar</td>
+<td>jar</td>
+<td>default,context-support</td>
+</tr>
+<tr>
+<td>spring-core.jar</td>
+<td>jar</td>
+<td>default,core</td>
+</tr>
+<tr>
+<td>spring-expression.jar</td>
+<td>jar</td>
+<td>default,expression</td>
+</tr>
+<tr>
+<td>spring-instrument.jar</td>
+<td>jar</td>
+<td>default,instrument</td>
+</tr>
+<tr>
+<td>spring-instrument-tomcat.jar</td>
+<td>jar</td>
+<td>default,instrument-tomcat</td>
+</tr>
+<tr>
+<td>spring-jdbc.jar</td>
+<td>jar</td>
+<td>default,jdbc</td>
+</tr>
+<tr>
+<td>spring-jms.jar</td>
+<td>jar</td>
+<td>default,jms</td>
+</tr>
+<tr>
+<td>spring-orm.jar</td>
+<td>jar</td>
+<td>default,orm</td>
+</tr>
+<tr>
+<td>spring-oxm.jar</td>
+<td>jar</td>
+<td>default,oxm</td>
+</tr>
+<tr>
+<td>spring-struts.jar</td>
+<td>jar</td>
+<td>default,struts</td>
+</tr>
+<tr>
+<td>spring-test.jar</td>
+<td>jar</td>
+<td>default,test</td>
+</tr>
+<tr>
+<td>spring-tx.jar</td>
+<td>jar</td>
+<td>default,tx</td>
+</tr>
+<tr>
+<td>spring-web.jar</td>
+<td>jar</td>
+<td>default,web</td>
+</tr>
+<tr>
+<td>spring-webmvc.jar</td>
+<td>jar</td>
+<td>default,webmvc</td>
+</tr>
+<tr>
+<td>spring-webmvc-portlet.jar</td>
+<td>jar</td>
+<td>default,webmvc-portlet</td>
+</tr>
+<tr>
+<td>spring-aop.zip</td>
+<td>source</td>
+<td>default,aop</td>
+</tr>
+<tr>
+<td>spring-aspects.zip</td>
+<td>source</td>
+<td>default,aspects</td>
+</tr>
+<tr>
+<td>spring-beans.zip</td>
+<td>source</td>
+<td>default,beans</td>
+</tr>
+<tr>
+<td>spring-context.zip</td>
+<td>source</td>
+<td>default,context</td>
+</tr>
+<tr>
+<td>spring-context-support.zip</td>
+<td>source</td>
+<td>default,context-support</td>
+</tr>
+<tr>
+<td>spring-core.zip</td>
+<td>source</td>
+<td>default,core</td>
+</tr>
+<tr>
+<td>spring-expression.zip</td>
+<td>source</td>
+<td>default,expression</td>
+</tr>
+<tr>
+<td>spring-instrument.zip</td>
+<td>source</td>
+<td>default,instrument</td>
+</tr>
+<tr>
+<td>spring-instrument-tomcat.zip</td>
+<td>source</td>
+<td>default,instrument-tomcat</td>
+</tr>
+<tr>
+<td>spring-jdbc.zip</td>
+<td>source</td>
+<td>default,jdbc</td>
+</tr>
+<tr>
+<td>spring-jms.zip</td>
+<td>source</td>
+<td>default,jms</td>
+</tr>
+<tr>
+<td>spring-orm.zip</td>
+<td>source</td>
+<td>default,orm</td>
+</tr>
+<tr>
+<td>spring-oxm.zip</td>
+<td>source</td>
+<td>default,oxm</td>
+</tr>
+<tr>
+<td>spring-struts.zip</td>
+<td>source</td>
+<td>default,struts</td>
+</tr>
+<tr>
+<td>spring-test.zip</td>
+<td>source</td>
+<td>default,test</td>
+</tr>
+<tr>
+<td>spring-tx.zip</td>
+<td>source</td>
+<td>default,tx</td>
+</tr>
+<tr>
+<td>spring-web.zip</td>
+<td>source</td>
+<td>default,web</td>
+</tr>
+<tr>
+<td>spring-webmvc.zip</td>
+<td>source</td>
+<td>default,webmvc</td>
+</tr>
+<tr>
+<td>spring-webmvc-portlet.zip</td>
+<td>source</td>
+<td>default,webmvc-portlet</td>
+</tr>
+<tr>
+<td>spring-aop.zip</td>
+<td>javadoc</td>
+<td>default,aop</td>
+</tr>
+<tr>
+<td>spring-aspects.zip</td>
+<td>javadoc</td>
+<td>default,aspects</td>
+</tr>
+<tr>
+<td>spring-beans.zip</td>
+<td>javadoc</td>
+<td>default,beans</td>
+</tr>
+<tr>
+<td>spring-context.zip</td>
+<td>javadoc</td>
+<td>default,context</td>
+</tr>
+<tr>
+<td>spring-context-support.zip</td>
+<td>javadoc</td>
+<td>default,context-support</td>
+</tr>
+<tr>
+<td>spring-core.zip</td>
+<td>javadoc</td>
+<td>default,core</td>
+</tr>
+<tr>
+<td>spring-expression.zip</td>
+<td>javadoc</td>
+<td>default,expression</td>
+</tr>
+<tr>
+<td>spring-instrument.zip</td>
+<td>javadoc</td>
+<td>default,instrument</td>
+</tr>
+<tr>
+<td>spring-instrument-tomcat.zip</td>
+<td>javadoc</td>
+<td>default,instrument-tomcat</td>
+</tr>
+<tr>
+<td>spring-jdbc.zip</td>
+<td>javadoc</td>
+<td>default,jdbc</td>
+</tr>
+<tr>
+<td>spring-jms.zip</td>
+<td>javadoc</td>
+<td>default,jms</td>
+</tr>
+<tr>
+<td>spring-orm.zip</td>
+<td>javadoc</td>
+<td>default,orm</td>
+</tr>
+<tr>
+<td>spring-oxm.zip</td>
+<td>javadoc</td>
+<td>default,oxm</td>
+</tr>
+<tr>
+<td>spring-struts.zip</td>
+<td>javadoc</td>
+<td>default,struts</td>
+</tr>
+<tr>
+<td>spring-test.zip</td>
+<td>javadoc</td>
+<td>default,test</td>
+</tr>
+<tr>
+<td>spring-tx.zip</td>
+<td>javadoc</td>
+<td>default,tx</td>
+</tr>
+<tr>
+<td>spring-web.zip</td>
+<td>javadoc</td>
+<td>default,web</td>
+</tr>
+<tr>
+<td>spring-webmvc.zip</td>
+<td>javadoc</td>
+<td>default,webmvc</td>
+</tr>
+<tr>
+<td>spring-webmvc-portlet.zip</td>
+<td>javadoc</td>
+<td>default,webmvc-portlet</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.aopalliance</td>
+<td><a href="../../../org.aopalliance/aopalliance/">aopalliance</a></td>
+<td>1.+</td>
+<td>default,aop-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>1.+</td>
+<td>default,core-&gt;default</td>
+</tr>
+<tr>
+<td>javax.jms</td>
+<td><a href="../../../javax.jms/jms/">jms</a></td>
+<td>1.+</td>
+<td>default,jms-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.springframework</td>
+<td>spring-aop</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-aop.jar</td>
+<td>543a5442a0344af3885d4b3e457cfcab4183cec9</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-aop</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-aop.zip</td>
+<td>4630693b56e81b74f690679c88ae8c44e43177fa</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-aop</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-aop.zip</td>
+<td>2394fa45c2e65aa0894e0d56917a18b399eb4daf</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-aspects</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-aspects.jar</td>
+<td>a2ff50083ca7113a8a15735b0a3917794dcf4ffc</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-aspects</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-aspects.zip</td>
+<td>9ad0e041b49c1da01491540d625e2177fa01797a</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-aspects</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-aspects.zip</td>
+<td>104aa675aec03dd511ee2dfc9308cad1292c5dbc</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-beans</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-beans.jar</td>
+<td>bbe3f76d14e9471e339bd8afec07b6fc5c916cd4</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-beans</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-beans.zip</td>
+<td>f8d64e26e4d92f23d19f3867800cd4bb4561dd57</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-beans</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-beans.zip</td>
+<td>69710588254a93eefa628ce5321d0f7ae497215a</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-context.jar</td>
+<td>a5bdbcd5fa58680b6fe1f0143f370003747584db</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-context.zip</td>
+<td>5fdb7831fd4bb98a4d72a49fac25151f69361284</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-context.zip</td>
+<td>efa70f44e0427ffd6c4b6f98791193b7b040f6bb</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context-support</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-context-support.jar</td>
+<td>0318be9223910a02c22c4b18898a0ccf79789e15</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context-support</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-context-support.zip</td>
+<td>344a2d5d7d6ab1a83931b81f19e27ae1152c144a</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-context-support</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-context-support.zip</td>
+<td>5e0039945ecc5eaba95010ddddb39810c8bb6763</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-core</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-core.jar</td>
+<td>302bd922c30a4d4bfb15b76a5939117b425eb480</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-core</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-core.zip</td>
+<td>2392459e6d45bf5fecb3b61cf9e54396f4a401c4</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-core</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-core.zip</td>
+<td>739d7ce0c3c3be7b51c8e1e56cdde23741cc7756</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-expression</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-expression.jar</td>
+<td>565213c52cbbcd57a64ce9e4f18823c964cb2481</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-expression</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-expression.zip</td>
+<td>eb4e92d8a1f959175ca8298de75371375dbf0298</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-expression</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-expression.zip</td>
+<td>86ca04f8edfb50b7debbcf68d7a158a478c09ab0</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-instrument.jar</td>
+<td>31134e04f4b7929b3e2592a23bc40f834cc3717b</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-instrument.zip</td>
+<td>1af30b0a8b4aecea69824cfea21cdf408d05ac16</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-instrument.zip</td>
+<td>0877d23ba0ae9614d14f6c6761e385ae168c88d6</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument-tomcat</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-instrument-tomcat.jar</td>
+<td>4f984f53806f6c18d11c71c55f53714c7c88d314</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument-tomcat</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-instrument-tomcat.zip</td>
+<td>d28aa3e4eea404f432e617a04a88c37730768311</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-instrument-tomcat</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-instrument-tomcat.zip</td>
+<td>759a3f8815505c0743c19588051c0d0d7fc58247</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jdbc</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-jdbc.jar</td>
+<td>6e76b68ea33194c9b92f3be926cc43945db2977f</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jdbc</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-jdbc.zip</td>
+<td>c7b32455c3ff12ff38f011a2ffdfe5549c1d2250</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jdbc</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-jdbc.zip</td>
+<td>3166b4820fc94ab7c435c5e06f53b7ea549dd88b</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jms</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-jms.jar</td>
+<td>a7b2be385107038df2770d40b5e24f7a4888111b</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jms</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-jms.zip</td>
+<td>2d34836d89046f161434a85398fe04805a20a8f0</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-jms</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-jms.zip</td>
+<td>69513db4e83b83e437719ffae469b247a0a7c1a5</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-orm</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-orm.jar</td>
+<td>48a19965a0112a613624e8c9c78b4e4184e45740</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-orm</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-orm.zip</td>
+<td>bb8a847733e18689cd7324282883ed5cada04a37</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-orm</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-orm.zip</td>
+<td>a793c263b928001c843e355811ff9cdce27ec64c</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-oxm</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-oxm.jar</td>
+<td>788b1e70c2258ff98f2fb11a1e5762df4f60a721</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-oxm</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-oxm.zip</td>
+<td>eb4f067f40dfb339147c81e0e4acfa61c25b4914</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-oxm</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-oxm.zip</td>
+<td>469e930b7a0cd71d892adc31414294c5e5dc6a70</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-struts</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-struts.jar</td>
+<td>c5dbd912c78f3f1796fb25850e86bd45df7a181d</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-struts</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-struts.zip</td>
+<td>a5077678208525917f4cbb58c982b52e1ef1f478</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-struts</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-struts.zip</td>
+<td>20049b92ba0f4b1f22999b3ed430279fea4c1d36</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-test</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-test.jar</td>
+<td>e0c63d05fa1f48d70db01398f4bdcaaf3ac6bfc0</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-test</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-test.zip</td>
+<td>dc3c7ad686d6ec3ea9dcf69a7ad11f6ef54a28fd</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-test</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-test.zip</td>
+<td>aac8396627dcfd94c918d26a1fd382aebd8c414e</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-tx</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-tx.jar</td>
+<td>b709255ee5ffea25b3882167e49a3dcb99cc582c</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-tx</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-tx.zip</td>
+<td>911ff480eba26c763ce429db324ffaa1c7fa0b86</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-tx</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-tx.zip</td>
+<td>be1b024526082010436dddf7b20e3537dc88979f</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-web</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-web.jar</td>
+<td>ebde82aa745966f34a8ae1273e363f0a2366eb33</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-web</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-web.zip</td>
+<td>06e2d60cc0f4daf8dea77391c55d9a51c8ecce51</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-web</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-web.zip</td>
+<td>a327faff6afcf28a1bcc0d4d6f6368d7950c4585</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-webmvc.jar</td>
+<td>dd962b49d731a69c4ca0c4ec67b71076742657cc</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-webmvc.zip</td>
+<td>e304b61946aaef6929c1f96e0c2a01a93f6352a3</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-webmvc.zip</td>
+<td>77d227325e37aa35bbcb82b15d12b8efbbbbffc9</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc-portlet</td>
+<td>3.2.2.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-webmvc-portlet.jar</td>
+<td>bb93f4697fb30bb921582c9086802f8162fca368</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc-portlet</td>
+<td>3.2.2.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-webmvc-portlet.zip</td>
+<td>a86cc92ead4688d902d6f56de3872520fcc7d06a</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td>spring-webmvc-portlet</td>
+<td>3.2.2.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-webmvc-portlet.zip</td>
+<td>052d3aaacfe93c6ce17c5671b9b53698fdaa5042</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

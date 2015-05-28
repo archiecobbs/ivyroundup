@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/jars/${name}-core-${revision}.jar" tofile="artifacts/jars/core.jar" sha1="d448fdc41353c6e6d53fc74d2d9764455cf2a33d"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/jars/${name}-spring-${revision}.jar" tofile="artifacts/jars/spring.jar" sha1="5264b4b9704f0644ecfa42e10bc4b5112f6d10f5"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/jars/${name}-util-${revision}.jar" tofile="artifacts/jars/util.jar" sha1="12fc879146d6bb60b06b37b1db6b98b355f27a61"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/jars/${name}-xml-${revision}.jar" tofile="artifacts/jars/xml.jar" sha1="bb9eb184f0e59563d8845566235d516314f3a9a1"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/jars/${name}-aop-${revision}.jar" tofile="artifacts/jars/aop.jar" sha1="3a6685f6cbf182483aaab9003d601358478d0d24"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/sources/${name}-sources-${revision}.zip" tofile="artifacts/sources/source.zip" sha1="fb8fa3a8e01290c61784e3f60eea35a44a4590ea"/>
+    <resource url="http://${name}.googlecode.com/svn/tags/${revision}/publish/javadocs/${name}-javadocs-${revision}.zip" tofile="artifacts/javadocs/javadoc.zip" sha1="e664b63310c9d4f3d049a2b5ab39939c3f8a0a6b"/>
+
+</packager-module>

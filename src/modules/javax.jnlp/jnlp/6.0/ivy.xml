@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20090117013500">
+        <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="http://www.oracle.com/technetwork/java/jms/index.html"/>
+        <description homepage="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136112.html">
+        <p>
+        Java Web Start is a helper application that gets associated with a Web
+        browser. When a user clicks on a link that points to a special launch
+        file (JNLP file), it causes the browser to launch Java Web Start,
+        which then automatically downloads, caches, and runs the given Java
+        Technology-based application. The entire process is typically
+        completed without requiring any user interaction, except for the
+        initial single click.
+        </p>
+        <p>
+        From a technology standpoint, Java Web Start has a number of key
+        benefits that make it an attractive platform to use for deploying
+        applications:
+        <ul>
+            <li>Java Web Start is built exclusively to launch applications
+                written to the Java(TM) Platform Standard Edition. Thus, a
+                single application can be made available on a Web server and
+                then deployed on a wide variety of platforms, including
+                Windows 98/NT/2000/ME/XP, Linux, and the Solaris<sup>TM</sup>
+                Operating Environment. The Java platform has proven to be a
+                very robust, productive, and expressive development platform,
+                leading to a significant cost savings due to minimized
+                development and testing costs.</li>
+            <li>Java Web Start supports multiple revisions of the Java(TM)
+                Platform Standard Edition. Thus, an application can request a
+                particular version of the platform it requires, such as Java
+                SE<sup>TM</sup> 1.5.0. Several applications can run at the same
+                time on different platform revisions without causing conflicts,
+                and Java Web Start can automatically download and install a
+                revision of the platform if an application requests a version
+                that is not installed on the client system.</li>
+            <li>Java Web Start allows applications to be launched independently
+                of a Web browser. This can be used for off-line operation of an
+                application, where launching through the browser is often
+                inconvenient or impossible. The application can also be
+                launched through desktop shortcuts, making launching the
+                Web-deployed application similar to launching a native
+                application.</li>
+            <li>Java Web Start takes advantage of the inherent security of the
+                Java Platform. Applications are by default run in a protective
+                environment (sandbox) with restricted access to local disk and
+                network resources. It allows the user to safely run
+                applications from sources that are not trusted.</li>
+            <li>Applications launched with Java Web Start are cached locally.
+                Thus, an already-downloaded application is launched on par with
+                a traditionally installed application.</li>
+        </ul>
+        </p>
+        <p>
+        The technology underlying Java Web Start is the Java <sup>TM</sup>
+        Network Launching Protocol and API (JNLP). This technology was
+        developed via the Java Community Process (JCP). Java Web Start is the
+        reference implementation (RI) for the JNLP specification. The JNLP
+        technology defines, among other things, a standard file format that
+        describes how to launch an application called a JNLP file.
+        </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact name="jardiff"/>
+        <artifact name="jnlp"/>
+        <artifact name="jnlp-servlet"/>
+    </publications>
+
+</ivy-module>

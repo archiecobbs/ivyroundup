@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>commons-beanutils by org.apache.commons :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.commons/commons-beanutils/">commons-beanutils</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.commons/">org.apache.commons</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.7.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://commons.apache.org/proper/commons-beanutils/">http://commons.apache.org/proper/commons-beanutils/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.commons/commons-beanutils/1.7.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://commons.apache.org/proper/commons-beanutils/">
+            Most Java developers are used to creating Java classes
+            that conform to the JavaBeans naming patterns for property
+            getters and setters. It is natural to then access these
+            methods directly, using calls to the corresponding getXxx
+            and setXxx methods. However, there are some occasions where
+            dynamic access to Java object properties (without compiled-in
+            knowledge of the property getter and setter methods to be
+            called) is needed. Example use cases include:
+
+            <ul>
+            <li>Building scripting languages that interact with the Java
+                object model (such as the Bean Scripting Framework).</li>
+            <li>Building template language processors for web presentation
+                and similar uses (such as JSP or Velocity).</li>
+            <li>Building custom tag libraries for JSP and XSP environments
+                (such as Jakarta Taglibs, Struts, Cocoon).</li>
+            <li>Consuming XML-based configuration resources (such as Ant
+                build scripts, web application deployment descriptors,
+                Tomcat's server.xml file).</li>
+            </ul>
+
+            The Java language provides Reflection and Introspection APIs
+            (see the java.lang.reflect and java.beans packages in the
+            JDK Javadocs). However, these APIs can be quite complex to
+            understand and utilize. The BeanUtils component provides
+            easy-to-use wrappers around these capabilities.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>BeanUtils minus Bean Collections classes</td>
+<td></td>
+</tr>
+<tr>
+<td>complete</td>
+<td>All of BeanUtils</td>
+<td></td>
+</tr>
+<tr>
+<td>bean-collections</td>
+<td>BeanUtils with Bean Collections classes</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Same as core configuration</td>
+<td>core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>commons-beanutils.jar</td>
+<td>jar</td>
+<td>complete</td>
+</tr>
+<tr>
+<td>commons-beanutils-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>commons-beanutils-bean-collections.jar</td>
+<td>jar</td>
+<td>bean-collections</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>[1.0,2.0[</td>
+<td>core,complete-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-collections/">commons-collections</a></td>
+<td>3.+</td>
+<td>complete,bean-collections-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>${ivy.packager.module}</td>
+<td>commons-beanutils</td>
+<td>1.7.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${ivy.packager.module}.jar</td>
+<td>5675fd96b29656504b86029551973d60fb41339b</td>
+</tr>
+<tr>
+<td>${ivy.packager.module}</td>
+<td>commons-beanutils</td>
+<td>1.7.0</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>b0265478004257d5ec82db41037f2cd371bf5629</td>
+</tr>
+<tr>
+<td>${ivy.packager.module}</td>
+<td>commons-beanutils</td>
+<td>1.7.0</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>b68c4fc66026e8c08df7fb57c7dc1e94a6ed8cbb</td>
+</tr>
+<tr>
+<td>${ivy.packager.module}</td>
+<td>${ivy.packager.module}-core</td>
+<td>1.7.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/commons-beanutils-core.jar</td>
+<td>52f7701e1e9fd1d2b93379503c0bc839d2caf68d</td>
+</tr>
+<tr>
+<td>${ivy.packager.module}</td>
+<td>${ivy.packager.module}-bean-collections</td>
+<td>1.7.0</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/commons-beanutils-bean-collections.jar</td>
+<td>af285cbc5fa03dfa6d18febc176763d0163b8d24</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

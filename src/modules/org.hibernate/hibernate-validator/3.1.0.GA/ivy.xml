@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20080910060100">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://hibernate.org/subprojects/validator.html">
+
+            <p>
+            Following the DRY (Don't Repeat Yourself) principle, Hibernate
+            Validator let's you express your domain constraints once
+            (and only once) and ensure their compliance at various level
+            of your system automatically.
+            </p>
+
+            <p>
+            Annotations are a very convenient and elegant way to specify
+            invariant constraints on the domain model implementation, the
+            persistent classes. Hibernate Validator comes bundled with
+            a set of common validations (@NotNull, @Email, @Max, and so
+            on), and you can build you own validation rules very easily.
+            </p>
+
+            <p>
+            This is an example of an annotated persistent class:
+            </p>
+
+            <p>
+            <pre>
+            public class Address {
+
+                @NotNull private String line1;
+                private String line2;
+                private String zip;
+                private String state;
+
+                @Length(max = 20)
+                @NotNull
+                private String country;
+
+                @Range(min = -2, max = 50, message = "Floor out of range")
+                public int floor;
+
+                    ...
+            }
+            </pre>
+            </p>
+
+            <p>
+            Hibernate Validator integrates with Hibernate by applying
+            the constraints on the database schema (DDL generation)
+            and by checking entity validity before Hibernate inserts
+            or updates instances. You can use Hibernate Validator with
+            any Java Persistence provider, not only Hibernate, although
+            you will not be able to use automatic DDL alteration for
+            constraint generation outside of Hibernate EntityManager.
+            </p>
+
+            <p>
+            Hibernate Validator constraint checking can be triggered
+            programmatically, for example by the business layer. JBoss
+            Seam makes use of this capability and integrates it with JSF,
+            providing end to end validation from the presentation level
+            down to the database constraints with a unique definition
+            and declaration of integrity rules. Hibernate Validator is
+            fully internationalized.
+            </p>
+
+            <p>
+            The project lead of Hibernate Validator is an expert group
+            member of <a href="https://jcp.org/en/jsr/detail?id=303">JSR 303:
+            Bean Validation.</a>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Hibernate Entity Manager core"/>
+        <conf name="jpa" extends="default" description="Core + EJB 3.0 API (javax.persistence)"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.3.1.GA,3.5.0-Final[" conf="default->core"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="default->default"/>
+        <dependency org="org.hibernate" name="ejb3-persistence" rev="[1.0.2.GA,2.0[" conf="jpa->default"/>
+    </dependencies>
+</ivy-module>

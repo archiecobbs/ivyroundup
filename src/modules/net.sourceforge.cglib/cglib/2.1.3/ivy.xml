@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20051013120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://cglib.sourceforge.net/">
+            <p>
+            cglib is a powerful, high performance and quality Code
+            Generation Library, It is used to extend JAVA classes and
+            implements interfaces at runtime. See  samples  and  API
+            documentation  to learn more about features.
+            </p>
+
+            <p>
+            This library is free software, freely reusable for personal
+            or commercial purposes.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.objectweb.asm" name="asm" rev="1.5.3" conf="default->core,util,attrs"/>
+    </dependencies>
+
+</ivy-module>

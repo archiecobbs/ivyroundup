@@ -1,0 +1,39 @@
+BEGIN {
+    ORG=""
+    MOD=""
+    printf "<?xml-stylesheet type=\"text/xsl\" href=\"xsl/modules.xsl\"?>\n"
+    printf "<modules>\n"
+    printf "  <timestamp>%s</timestamp>\n", TIMESTAMP
+    printf "  <gitRevision>%s</gitRevision>\n", GITREV
+}
+
+{
+    if ($4 != MOD || $3 != ORG) {
+        if (MOD != "")
+            printf "    </mod>\n"
+        MOD = ""
+    }
+    if ($3 != ORG) {
+        if (ORG != "")
+            printf "  </org>\n"
+        ORG = ""
+    }
+    if ($3 != ORG) {
+        printf "  <org name=\"%s\">\n", $3
+        ORG = $3
+    }
+    if ($4 != MOD) {
+        printf "    <mod name=\"%s\">\n", $4
+        MOD = $4
+    }
+    printf "      <rev name=\"%s\"/>\n", $5
+}
+
+END {
+    if (MOD != "")
+        printf "    </mod>\n"
+    if (ORG != "")
+        printf "  </org>\n"
+    printf "</modules>\n"
+}
+

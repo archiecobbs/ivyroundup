@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="apache-mime4j-examples">
+        <artifact tofile="artifacts/jars/examples.jar" sha1="0c271ac2328a92b70318f1bb3544eea2452b0aab"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/examples.zip" sha1="d558bc0afbc36805bea4a82f92da1b1fef633608"/>
+        <artifact classifier="sources" tofile="artifacts/sources/examples.zip" sha1="1de4d3d164e9fa3967ab80750e90a27da36cf732"/>
+    </m2resource>
+    <m2resource artifactId="apache-mime4j-benchmark">
+        <artifact tofile="artifacts/jars/benchmark.jar" sha1="e78b97c5f8130289de714a8315b0813355be2bd3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/benchmark.zip" sha1="f2fb05561c948e8ee147530ee7a039c88db92a81"/>
+        <artifact classifier="sources" tofile="artifacts/sources/benchmark.zip" sha1="852425be54660fbcbcd6eda33a290ed7c7c32005"/>
+    </m2resource>
+    <m2resource artifactId="apache-mime4j-storage">
+        <artifact tofile="artifacts/jars/storage.jar" sha1="459fa77616db49c598bd31a111d642c88435246c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/storage.zip" sha1="b81dc2fa9be2a0c35fa1fba1b73cc4f87bf204e5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/storage.zip" sha1="80dfddf7665e0b6191548741e98698dae71595c7"/>
+    </m2resource>
+    <m2resource artifactId="apache-mime4j-dom">
+        <artifact tofile="artifacts/jars/dom.jar" sha1="1c289aa264548a0a1f1b43685a9cb2ab23f67287"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dom.zip" sha1="8dee57c7d86ffb9cb78e212109fc5935ea223b34"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dom.zip" sha1="3a4e5b4b222268605813d0fd74f45ddbdcb9a21e"/>
+    </m2resource>
+    <m2resource artifactId="apache-mime4j-core">
+        <artifact tofile="artifacts/jars/core.jar" sha1="a81264fe0265ebe8fd1d8128aad06dc320de6eef"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/core.zip" sha1="6eef338b572ad9ae1f2b80fa9f45127624aa499c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/core.zip" sha1="df2e64024dbe47fa357cbf4f0e15daa28dd7c14b"/>
+    </m2resource>
+</packager-module>

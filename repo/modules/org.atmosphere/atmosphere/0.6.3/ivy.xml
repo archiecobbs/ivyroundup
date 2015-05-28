@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.atmosphere" module="atmosphere" revision="0.6.3" status="release" publication="20101008171300">
+        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.atmosphere/atmosphere/0.6.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://java.net/projects/atmosphere/">
+            <p>
+                Atmosphere is a POJO based framework using Inversion of Control (IoC) to bring push/Comet
+                and Websocket to the masses! Finally a framework which can run on any Java based Web Server,
+                including Tomcat, Jetty, GlassFish, Weblogic, Grizzly, JBossWeb and JBoss, Resin, etc.
+                without having to learn how Comet or WebSocket support has been differently implemented
+                by all those Containers. The Atmosphere Framework has both client (JQuery PlugIn) and
+                server components.
+            </p>
+            <p>
+                Servlet 3.0 is supported along with framework like Jersey, GWT, Struts, Spring, Wicket etc.
+                and programming language like JRuby, Groovy and Scala. Finally, any web application can be
+                clustered using our Cluster plugin architecture supporting JMS or JGroups.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="runtime" extends="compat-tomcat,compat-weblogic,compat-jbossweb" description="Runtime only"/>
+        <conf name="default" extends="runtime" description="Default config"/>
+        <conf name="bayeux" extends="runtime" description="Bayeux support"/>
+        <conf name="jersey" extends="annotations" description="Jersey support"/>
+        <conf name="commons" extends="jersey" description="Commons code"/>
+        <conf name="annotations" extends="runtime" description="Annotations support"/>
+        <conf name="compat-tomcat" description="Tomcat compatibility"/>
+        <conf name="compat-weblogic" description="Weblogic compatibility"/>
+        <conf name="compat-jbossweb" description="JBoss web compatibility"/>
+        <conf name="guice" extends="jersey" description="Guice support"/>
+        <conf name="grizzly" extends="jersey" description="Grizzly support"/>
+        <conf name="jgroups" extends="annotations" description="JGroups support"/>
+        <conf name="jms" extends="annotations" description="JMS support"/>
+        <conf name="spade" extends="runtime" description="Spade server"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-annotations" ivyde:javadoc="atmosphere-annotations" name="atmosphere-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-bayeux" ivyde:javadoc="atmosphere-bayeux" name="atmosphere-bayeux" conf="bayeux"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-commons" ivyde:javadoc="atmosphere-commons" name="atmosphere-commons" conf="commons"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-jbossweb" name="atmosphere-compat-jbossweb" conf="compat-jbossweb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-tomcat" name="atmosphere-compat-tomcat" conf="compat-tomcat"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-compat-weblogic" ivyde:javadoc="atmosphere-compat-weblogic" name="atmosphere-compat-weblogic" conf="compat-weblogic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-guice" ivyde:javadoc="atmosphere-guice" name="atmosphere-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-grizzly-adapter" ivyde:javadoc="atmosphere-grizzly-adapter" name="atmosphere-grizzly-adapter" conf="grizzly"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jersey" ivyde:javadoc="atmosphere-jersey" name="atmosphere-jersey" conf="jersey"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jgroups" ivyde:javadoc="atmosphere-jgroups" name="atmosphere-jgroups" conf="jgroups"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-jms" ivyde:javadoc="atmosphere-jms" name="atmosphere-jms" conf="jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-runtime" ivyde:javadoc="atmosphere-runtime" name="atmosphere-runtime" conf="runtime"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="atmosphere-spade-server" ivyde:javadoc="atmosphere-spade-server" name="atmosphere-spade-server" conf="spade"/>
+
+        <!-- source -->
+        <artifact name="atmosphere-annotations" type="source" ext="zip" conf="annotations"/>
+        <artifact name="atmosphere-bayeux" type="source" ext="zip" conf="bayeux"/>
+        <artifact name="atmosphere-commons" type="source" ext="zip" conf="commons"/>
+        <artifact name="atmosphere-compat-jbossweb" type="source" ext="zip" conf="compat-jbossweb"/>
+        <artifact name="atmosphere-compat-tomcat" type="source" ext="zip" conf="compat-tomcat"/>
+        <artifact name="atmosphere-compat-weblogic" type="source" ext="zip" conf="compat-weblogic"/>
+        <artifact name="atmosphere-guice" type="source" ext="zip" conf="guice"/>
+        <artifact name="atmosphere-grizzly-adapter" type="source" ext="zip" conf="grizzly"/>
+        <artifact name="atmosphere-jersey" type="source" ext="zip" conf="jersey"/>
+        <artifact name="atmosphere-jgroups" type="source" ext="zip" conf="jgroups"/>
+        <artifact name="atmosphere-jms" type="source" ext="zip" conf="jms"/>
+        <artifact name="atmosphere-runtime" type="source" ext="zip" conf="runtime"/>
+        <artifact name="atmosphere-spade-server" type="source" ext="zip" conf="spade"/>
+
+        <!-- javadoc -->
+        <artifact name="atmosphere-annotations" type="javadoc" ext="zip" conf="annotations"/>
+        <artifact name="atmosphere-bayeux" type="javadoc" ext="zip" conf="bayeux"/>
+        <artifact name="atmosphere-commons" type="javadoc" ext="zip" conf="commons"/>
+        <artifact name="atmosphere-compat-weblogic" type="javadoc" ext="zip" conf="compat-weblogic"/>
+        <artifact name="atmosphere-guice" type="javadoc" ext="zip" conf="guice"/>
+        <artifact name="atmosphere-grizzly-adapter" type="javadoc" ext="zip" conf="grizzly"/>
+        <artifact name="atmosphere-jersey" type="javadoc" ext="zip" conf="jersey"/>
+        <artifact name="atmosphere-jgroups" type="javadoc" ext="zip" conf="jgroups"/>
+        <artifact name="atmosphere-jms" type="javadoc" ext="zip" conf="jms"/>
+        <artifact name="atmosphere-runtime" type="javadoc" ext="zip" conf="runtime"/>
+        <artifact name="atmosphere-spade-server" type="javadoc" ext="zip" conf="spade"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.cometd.java" name="cometd" rev="1.+" conf="bayeux-&gt;server"/> 
+        <dependency org="com.sun.jersey" name="jersey" rev="1.+" conf="jersey-&gt;server;guice-&gt;guice"/> 
+        <dependency org="com.google" name="guice" rev="2.0" conf="guice-&gt;servlet"/> 
+        <dependency org="org.jgroups" name="jgroups" rev="2.7.0" conf="jgroups-&gt;default"/> 
+        <dependency org="javax.jms" name="jms" rev="1.1" conf="jms-&gt;default"/> 
+    </dependencies>
+
+</ivy-module>

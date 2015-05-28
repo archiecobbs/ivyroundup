@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <resource url="http://downloads.sourceforge.net/sourceforge/depfind/${archive}.bin.zip" sha1="06a8573e228751e888fb56962d04bfab22b82a4d">
+      <include name="${archive}/lib/${name}.jar"/>
+      <include name="${archive}/etc/*.*"/>
+      <include name="${archive}/classes/*.properties"/>
+      <include name="${archive}/docs/api/**/*"/>
+    </resource>
+    <resource url="http://downloads.sourceforge.net/sourceforge/depfind/${archive}.src.zip" sha1="cc5143ead7df3320f7dbedd0dcb0ce0c199a186b">
+      <include name="${archive}/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/lib/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- stylesheets -->
+        <mkdir dir="artifacts/reports"/>
+        <move todir="artifacts/reports">
+          <fileset dir="archive/${archive}/etc">
+            <include name="*.*"/>
+          </fileset>
+	</move>
+
+        <!-- log4j properties -->
+        <move todir="artifacts/reports">
+          <fileset dir="archive/${archive}/classes">
+            <include name="*.properties"/>
+          </fileset>
+	</move>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/api"/>
+        </zip>
+    </build>
+</packager-module>
+
+
+

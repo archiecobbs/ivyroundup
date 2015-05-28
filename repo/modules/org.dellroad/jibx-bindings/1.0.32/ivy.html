@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>jibx-bindings by org.dellroad :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.dellroad/jibx-bindings/">jibx-bindings</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.dellroad/">org.dellroad</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.0.32</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://code.google.com/p/jibx-bindings/">https://code.google.com/p/jibx-bindings/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dellroad/jibx-bindings/1.0.32/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://code.google.com/p/jibx-bindings/">
+
+            <p>
+            The <b>jibx-bindings</b> project seeks to provide a library of Java
+            classes and their corresponding pre-compiled JiBX bindings
+            for various common public XML document formats.
+            </p>
+
+            <p>
+            By including JiBX along with the appropriate pre-compiled
+            binding JARs from <b>jibx-bindings</b>, your application is all
+            set up for fast and efficient conversion between XML and Java.
+            </p>
+
+            <p>
+            While the pre-compiled concrete bindings in <b>jibx-bindings</b>
+            provide immediately usable code, all of the binding modules
+            in <b>jibx-bindings</b> are designed using modular abstract mapping
+            definitions, so you can easily define new bindings that
+            pull from existing XML schemas simply by including these
+            definitions in your own binding.
+            </p>
+
+            <p>
+            Unlike bindings auto-generated from XSD schema files,
+            <b>jibx-bindings</b> Java classes and JiBX binding files are all
+            hand crafted and developer friendly, based on the principle
+            that the Java object is primary, while the XML document is
+            just an expression of it.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>Core classes only</td>
+<td></td>
+</tr>
+<tr>
+<td>pidf</td>
+<td>Presence Information Data Format (PIDF)</td>
+<td>core</td>
+</tr>
+<tr>
+<td>twilio</td>
+<td>Twilio REST API and TwiML</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>All modules</td>
+<td>pidf, twilio</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jibx-bindings-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>jibx-bindings-pidf.jar</td>
+<td>jar</td>
+<td>pidf</td>
+</tr>
+<tr>
+<td>jibx-bindings-twilio.jar</td>
+<td>jar</td>
+<td>twilio</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>net.sourceforge.jibx</td>
+<td><a href="../../../net.sourceforge.jibx/jibx/">jibx</a></td>
+<td>1.2.3</td>
+<td>default-&gt;runtime-xpp3,extras</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://${name}.googlecode.com/files/${name}-core-${revision}.jar</td>
+<td>Copy to artifacts/jars/${name}-core.jar</td>
+<td>e219d3a1f441c42e1545fb40cddcaf924e090cd2</td>
+</tr>
+<tr>
+<td>http://${name}.googlecode.com/files/${name}-pidf-${revision}.jar</td>
+<td>Copy to artifacts/jars/${name}-pidf.jar</td>
+<td>1637ef8d7b61b5cc0a8aad49b28e1a468b2f4901</td>
+</tr>
+<tr>
+<td>http://${name}.googlecode.com/files/${name}-twilio-${revision}.jar</td>
+<td>Copy to artifacts/jars/${name}-twilio.jar</td>
+<td>cfcf1fc829666b3bb58fef56db170f8941acfcda</td>
+</tr>
+<tr>
+<td>http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip</td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>aaf27c5b3d00161741e59eacd363860c7323fb08</td>
+</tr>
+<tr>
+<td>http://${name}.googlecode.com/files/${name}-sources-${revision}.zip</td>
+<td>Copy to artifacts/sources/source.zip</td>
+<td>490ce30bd5aebbf82b9cbe810abd520b68ba4af5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

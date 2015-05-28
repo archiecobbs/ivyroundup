@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <resource tofile="archive/${archive}/${archive}.jar" 
+        url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}.jar"
+        type="jar"
+        sha1="51635f3937ee5ed06e65989909ee5c358804d960">
+    </resource>
+    <resource 
+        url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-sources.jar"
+        type="zip"
+        dest="archive/${archive}/src"
+        sha1="eb94ccf4f67f232dedb53d7b74ebc5930347d794">
+    </resource>
+    <resource 
+        url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-javadoc.jar"
+        type="zip"
+        dest="archive/${archive}/docs"
+        sha1="a14bdca19db0d588585de1479854483425d7ea7f">
+    </resource>
+    <build>
+
+        <!-- jar -->
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+        
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs"/>
+        </zip>
+
+    </build>
+    
+</packager-module>

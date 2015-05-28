@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Steve Newson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource repo="http://download.osgeo.org/webdav/geotools/" artifactId="jai_codec">
+        <artifact tofile="artifacts/jars/jai_codec.jar" sha1="34a67ba62097778e4695c951156bf189c2c8e016"/>
+    </m2resource>
+
+    <m2resource repo="http://download.osgeo.org/webdav/geotools/" artifactId="jai_core">
+        <artifact tofile="artifacts/jars/jai_core.jar" sha1="b179d2efb1174658483e8b41bf4ac9d2eb5de438"/>
+    </m2resource>
+
+    <m2resource repo="http://download.osgeo.org/webdav/geotools/" artifactId="jai_imageio" version="1.1">
+        <artifact tofile="artifacts/jars/jai_imageio.jar" sha1="27d867283f9043b05a8fb210773d0ef72b767a58"/>
+    </m2resource>
+</packager-module>

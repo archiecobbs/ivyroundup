@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2009, 2013 Stephen Woods, Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module>
+
+    <info publication="20130130210600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://hadoop.apache.org/">
+            <p>
+                Apache Hadoop Core is a software platform that lets one
+                easily write and run applications that process vast amounts
+                of data.
+            </p>
+            <p>
+                Here's what makes Hadoop especially useful:
+                <ul>
+                    <li> Scalable: Hadoop can reliably store and process
+                        petabytes.</li>
+                    <li> Economical: It distributes the data and processing
+                        across clusters of commonly available computers.
+                        These clusters can number into the thousands of
+                        nodes.
+                </li>
+                    <li> Efficient: By distributing the data, Hadoop can
+                        process it in parallel on the nodes where the data
+                        is located. This makes it extremely rapid.
+                </li>
+                    <li> Reliable: Hadoop automatically maintains multiple
+                        copies of data and automatically redeploys computing
+                        tasks based on failures.
+                </li>
+                </ul>
+            </p>
+            <p>
+                Hadoop implements MapReduce, using the Hadoop Distributed
+                File System(HDFS). MapReduce divides applications into many
+                small blocks of work. HDFS creates multiple replicas of data
+                blocks for reliability, placing them on compute nodes around
+                the cluster. MapReduce can then process the data where it is
+                located.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="ant" extends="core" description="Ant tasks" />
+        <conf name="client" extends="core" description="Client runtime" />
+        <conf name="core" description="Hadoop core" />
+        <conf name="server" extends="client" description="Server runtime" />
+        <conf name="tools" extends="core" description="Hadoop tools" />
+
+        <conf name="ftp" extends="client" description="FTP support" />
+        <conf name="kfs" extends="client" description="KFS filesystem support" />
+        <conf name="s3" extends="client" description="S3/EC2 support" />
+
+        <conf name="http" extends="client" description="HTTP server" />
+
+        <conf name="default" extends="ant,server,tools,http" />
+    </configurations>
+
+    <publications>
+        <artifact conf="ant" name="hadoop-ant"/>
+        <artifact conf="core" name="hadoop-core"/>
+        <artifact conf="tools" name="hadoop-tools"/>
+
+        <artifact conf="ant" name="hadoop-ant-source" type="source" ext="zip"/>
+        <artifact conf="core" name="hadoop-core-source" type="source" ext="zip"/>
+        <artifact conf="tools" name="hadoop-tools-source" type="source" ext="zip"/>
+
+        <artifact name="hadoop-javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency conf="server->default" org="net.sourceforge.xmlenc" name="xmlenc" rev="[0.52,2.0)"/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-cli" rev="[1.2,2.0["/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-codec" rev="[1.4,2.0["/>
+        <dependency conf="server->default" org="org.apache.commons" name="commons-daemon" rev="[1.0.1,2.0["/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-httpclient" rev="[3.0.1,4.0["/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
+        <dependency conf="s3,ftp->default" org="org.apache.commons" name="commons-net" rev="[3.1,4.0["/>
+        <dependency conf="kfs->default" org="net.sourceforge.kosmosfs" name="kfs" rev="[0.2.2,)"/>
+        <dependency conf="client->default" org="org.apache.log4j" name="log4j" rev="[1.2.15,2.0["/>
+<!-- only used for testing?       <dependency conf="default-&gt;default" org="org.apache.oro" name="oro" rev="[2.0.8,3.0["/>
+        <dependency conf="default-&gt;default" org="org.hsqldb" name="hsqldb" rev="[1.8.0.10,1.9["/> -->
+        <dependency conf="s3->default" org="org.jets3t" name="jets3t" rev="[0.6.1,2.0["/>
+        <dependency conf="http->default" org="org.mortbay" name="jetty" rev="[6.1.26,)"/>
+        <dependency conf="http->default" org="javax.servlet" name="servletapi" rev="[2.4,3.0["/>
+<!--        <dependency conf="default-&gt;default" org="org.slf4j" name="slf4j" rev="[1.4.3,2.0["/> -->
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20120913120000">
+        <license name="CDDL 1.1 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <description homepage="https://grizzly.java.net/">
+            <p>
+            The Grizzly NIO framework has been designed to help developers to take advantage of the Java NIO API. 
+            Grizzly's goal is to help developers to build scalable and robust servers using NIO as well as offering 
+            extended framework components: Web Framework (HTTP/S), WebSocket, Comet, and more!
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="jar"/>
+        <artifact name="javadoc" type="javadoc" ext="jar"/>
+    </publications>
+</ivy-module>

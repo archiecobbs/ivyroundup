@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.objectlab.kit" module="datecalc" revision="1.4.0" status="release" publication="20141009120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.objectlab.kit/datecalc/1.4.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://objectlabkit.sourceforge.net/">
+
+            <p>
+Apart from the very basic "add days" features, most business have to deal with Holidays and what to do when a calculated day falls on a holiday . This library does not attempt to create or guess the holidays, we all know that some bank holidays can be decided at a moment's notice in some markets. All financial institutions or big business will have their own official list of 'holidays' anyway.<br/><br/>
+
+Furthermore, "weekends" also need to be handled and some market have a different week to the conventional Monday -&gt; Friday, our library provides you with full flexibility to design a Working Week.<br/><br/>
+
+As such a Non-working Day can be a holiday or a 'weekend'. Also note that CurrencyPairs have a specialised calculator as the rules can be 'weird'.  See <a href="http://objectlabkit.sourceforge.net/currency.html">this</a> for more information.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="common" description="Common classes"/>
+        <conf name="jdk" extends="common" description="JDK Implementation"/>
+        <conf name="joda" extends="common" description="Joda Time Implementation"/>
+        <conf name="jdk8" extends="common" description="JDK 8 Implementation"/>
+        <conf name="default" extends="jdk" description="Default Implementation (JDK)"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="datecalc-common" ivyde:javadoc="datecalc-common" name="datecalc-common" conf="common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="datecalc-jdk" ivyde:javadoc="datecalc-jdk" name="datecalc-jdk" conf="jdk"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="datecalc-joda" ivyde:javadoc="datecalc-joda" name="datecalc-joda" conf="joda"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="datecalc-jdk8" ivyde:javadoc="datecalc-jdk8" name="datecalc-jdk8" conf="jdk8"/>
+
+        <!-- source -->
+        <artifact name="datecalc-common" type="source" ext="jar" conf="common"/>
+        <artifact name="datecalc-jdk" type="source" ext="jar" conf="jdk"/>
+        <artifact name="datecalc-joda" type="source" ext="jar" conf="joda"/>
+        <artifact name="datecalc-jdk8" type="source" ext="jar" conf="jdk8"/>
+
+        <!-- jabadoc -->
+        <artifact name="datecalc-common" type="javadoc" ext="jar" conf="common"/>
+        <artifact name="datecalc-jdk" type="javadoc" ext="jar" conf="jdk"/>
+        <artifact name="datecalc-joda" type="javadoc" ext="jar" conf="joda"/>
+        <artifact name="datecalc-jdk8" type="javadoc" ext="jar" conf="jdk8"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.joda" name="joda-time" rev="1.6" conf="joda-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

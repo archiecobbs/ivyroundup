@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <m2resource artifactId="metrics-annotation">
+        <artifact tofile="artifacts/jars/metrics-annotation.jar" sha1="64798afe3c86a17800ffe713ec6638dbcd61da8a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-annotation.zip" sha1="abe4ad50bf13d3b53b81c12aa90d58cee5416b0b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-annotation.zip" sha1="229697f90d0b76c4755e5531a4d4d450b58bf31e"/>
+    </m2resource>
+    <m2resource artifactId="metrics-core">
+        <artifact tofile="artifacts/jars/metrics-core.jar" sha1="40e16d596ca49964a88bbce2261e387895b3499e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-core.zip" sha1="3b69c76d79538f850a6d0ba301e75a2e9d313857"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-core.zip" sha1="99c777f4600504d6d99601aa7f6a0405d4feb9c0"/>
+    </m2resource>
+    <m2resource artifactId="metrics-ehcache">
+        <artifact tofile="artifacts/jars/metrics-ehcache.jar" sha1="1ccde17856f6d1e4edb0dfd92ecce1eb29359447"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-ehcache.zip" sha1="e9718ac915125501ea819f3af07699e687ae092a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-ehcache.zip" sha1="ed83ede59772ddbd5bdd55b2df7ec93f876c89b3"/>
+    </m2resource>
+    <m2resource artifactId="metrics-ganglia">
+        <artifact tofile="artifacts/jars/metrics-ganglia.jar" sha1="04589544938355d5352b512532dd1a8f2ceb43cb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-ganglia.zip" sha1="914609bc79fe9f54e5ad9ece7f376306115c20ed"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-ganglia.zip" sha1="a93e69d46ef62a223da8addcbf1b292867901ce4"/>
+    </m2resource>
+    <m2resource artifactId="metrics-graphite">
+        <artifact tofile="artifacts/jars/metrics-graphite.jar" sha1="fd006ed4c82874550c36416888e055a5ffd22b0b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-graphite.zip" sha1="e865510698b390d092f9a9805ddac5697ef9367c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-graphite.zip" sha1="4417472b0cfacdb1302447007f09eb188c94cae6"/>
+    </m2resource>
+    <m2resource artifactId="metrics-healthchecks">
+        <artifact tofile="artifacts/jars/metrics-healthchecks.jar" sha1="475b277322856252b3e3d6b469140058c74dde0c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-healthchecks.zip" sha1="9c71c964e15e7bf13a6e86264f43d567f10eda1f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-healthchecks.zip" sha1="c49f12b678b2595413068ab34f0cbc9d27c79f6c"/>
+    </m2resource>
+    <m2resource artifactId="metrics-httpasyncclient">
+        <artifact tofile="artifacts/jars/metrics-httpasyncclient.jar" sha1="ad821b171c3ac5f4b87c31eed5402cfa6517f97c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-httpasyncclient.zip" sha1="18ce80f0b72e54cc2e6acf064bd4009d9f00a3b6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-httpasyncclient.zip" sha1="bf9dcfc8e180bbc3b880603c5b0ab0b89da6c4e0"/>
+    </m2resource>
+    <m2resource artifactId="metrics-httpclient">
+        <artifact tofile="artifacts/jars/metrics-httpclient.jar" sha1="ccf1fecc370f5e9de59031afdf830c4a04189a67"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-httpclient.zip" sha1="2d985eb3acdf786a93b30ce498a2e4e57e486bca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-httpclient.zip" sha1="913c842044da4c8fd0e550cf59144de6f9c2b235"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jdbi">
+        <artifact tofile="artifacts/jars/metrics-jdbi.jar" sha1="c18fc88e8d3c53225c32e8f12f5c1c7d4b3109a4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jdbi.zip" sha1="65bbc1df3bd3ce112414aa158042def58d81d930"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jdbi.zip" sha1="7e5351f24723e8670b1c334c6a748be6b9443ba7"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jersey">
+        <artifact tofile="artifacts/jars/metrics-jersey.jar" sha1="70b8f3934c8aa36b416b1baadb9d68a79a241f8f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jersey.zip" sha1="69fa3d1edfe3c67feb8eb244b80c6656a92590c8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jersey.zip" sha1="86ff2b6d3a2f14c80dfa2274b0b7d85ab7d1e0f0"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jersey2">
+        <artifact tofile="artifacts/jars/metrics-jersey2.jar" sha1="12e5a3312d5eecef66292746793748c6961e3d29"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jersey2.zip" sha1="05d2177e71f1c6f710b85b66b2db126d0e64c06c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jersey2.zip" sha1="ae615531d3b5ac3b41939bf9ec3f0c6795ba5301"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jetty8">
+        <artifact tofile="artifacts/jars/metrics-jetty8.jar" sha1="5d35c98ed75adf390d6cece599cadb82c22fd68c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jetty8.zip" sha1="b2d025b3c48402661b5580515a263abd779395b0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jetty8.zip" sha1="2d12d4d17f52e63672bb1a6ec5779011e0201adb"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jetty9">
+        <artifact tofile="artifacts/jars/metrics-jetty9.jar" sha1="be0dd5aec2e929955e9ba8535bb69f23dcb3ffb1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jetty9.zip" sha1="84921022bc6d704ed4a46581d1138f03d70393e0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jetty9.zip" sha1="e8430d579cc95479c5047dfcefdce50e6d14f579"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jetty9-legacy">
+        <artifact tofile="artifacts/jars/metrics-jetty9-legacy.jar" sha1="82f1978587b375993a882838f11bf2b1a58a3f82"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jetty9-legacy.zip" sha1="4dfbd740d3a703ecf6d75d7841626dc5dbf05438"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jetty9-legacy.zip" sha1="5fb066dcaecd9ee6dc926548c023a0885270d48a"/>
+    </m2resource>
+    <m2resource artifactId="metrics-json">
+        <artifact tofile="artifacts/jars/metrics-json.jar" sha1="47b1c72af77ca81771422269b807ef6198392741"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-json.zip" sha1="804a06541b09d7bd97851770a062e8d44d1f5e71"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-json.zip" sha1="eaddd0d8d4b41f81800cf80b6ace6fae940e0523"/>
+    </m2resource>
+    <m2resource artifactId="metrics-jvm">
+        <artifact tofile="artifacts/jars/metrics-jvm.jar" sha1="56b1ed0c306cc938515d3e321b59f4f836f6892a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-jvm.zip" sha1="bf01e71c31308574fc54101bbf423fdd8105aba7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-jvm.zip" sha1="aae26c4262e6483c225dc8d2630711cc28846eec"/>
+    </m2resource>
+    <m2resource artifactId="metrics-log4j">
+        <artifact tofile="artifacts/jars/metrics-log4j.jar" sha1="ec6bfa11ab75988a5ab2618102e67d1277e7523d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-log4j.zip" sha1="113f7f98ac731c69a2dfa08d5cfd2ad6c461ee4f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-log4j.zip" sha1="aee8e303b1e12b34178eb9a9c280d4b00d6fd40d"/>
+    </m2resource>
+    <m2resource artifactId="metrics-log4j2">
+        <artifact tofile="artifacts/jars/metrics-log4j2.jar" sha1="4eefe6789c09edb7fd23f16f0550c70df887efe1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-log4j2.zip" sha1="dbf3618a4072d3ec89738254e1f6d3ae0e30b9a3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-log4j2.zip" sha1="52605fae663dcc70296fa7f4889b93bb7206d95d"/>
+    </m2resource>
+    <m2resource artifactId="metrics-logback">
+        <artifact tofile="artifacts/jars/metrics-logback.jar" sha1="575d99434e8549a424e56be9a78db8f16632a7a6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-logback.zip" sha1="209dd375423f05206097de082d1813a1c7a3128d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-logback.zip" sha1="a380508a38d54c815ed674bf3a702539dca843f1"/>
+    </m2resource>
+    <m2resource artifactId="metrics-servlet">
+        <artifact tofile="artifacts/jars/metrics-servlet.jar" sha1="0923094ea64b36589a870ed26da9b479cb9d8745"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-servlet.zip" sha1="108234ac79386604ac99c24d7189c5acb2b6a718"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-servlet.zip" sha1="73da66e527d305701a592e0a24f9892e7b3d0994"/>
+    </m2resource>
+    <m2resource artifactId="metrics-servlets">
+        <artifact tofile="artifacts/jars/metrics-servlets.jar" sha1="f238d1f93509edc749f6ccf9a3446eca0be09253"/>
+        <artifact classifier="sources" tofile="artifacts/sources/metrics-servlets.zip" sha1="e5a67cd73003c0aa74528927dfa3e19f3ca51a14"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/metrics-servlets.zip" sha1="05f18490461eb96c474cb2b27e93b9b96ba19afa"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource artifactId="${ivy.packager.module}-generator">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-generator.jar" sha1="74635ed3c13f24c87792acf5af7cdd795ba3ed83"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-generator.zip" sha1="ed8e6e57727a28ff112bf177ce590aefa0f8273d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-generator.zip" sha1="e66e1dbba394741323deca7c88eb2adaa14add9e"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-runtime">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-runtime.jar" sha1="3142d79489369a058889796a65e615eb9d20ba5b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-runtime.zip" sha1="cdf40535381c8eda5d37dd9150192ffd9d4eadbb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-runtime.zip" sha1="b911978eecd9e46015911817359c7cf4148c9909"/>
+    </m2resource>
+</packager-module>

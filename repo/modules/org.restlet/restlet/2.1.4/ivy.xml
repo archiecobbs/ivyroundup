@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.restlet" module="restlet" revision="2.1.4" status="release" publication="20130907120000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.restlet/restlet/2.1.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://restlet.com/">
+
+            <p>
+            Restlet is a comprehensive yet lightweight RESTful web framework for
+            Java that lets you embrace the architecture style of the Web (REST) and
+            benefit from its simplicity and scalability. By leveraging our innovative
+            framework, you can start blending your web services, web sites and web
+            clients into uniform web applications!
+            </p>
+
+            <p>
+            Restlet has a light core but thanks to its pluggable extension, it is also
+            a comprehensive REST framework for Java. It supports all REST concepts
+            (Resource, Representation, Connector, Component, etc.) and is suitable
+            for both client and server Web applications.
+            </p>
+
+            <p>
+            It supports major Web standards like HTTP, SMTP, XML, HTML, JSON, 
+            OData, RDF, RSS, WADL, and Atom. Many extensions are also available to 
+            integrate with Servlet, Spring, Jetty, Simple, JAXB, JAX-RS, JiBX, Velocity, 
+            FreeMarker, XStream, Jackson, SLF4J, SDC, EMF and many more!
+            </p>
+
+            <p>
+            Special editions for GWT, GAE, Android, OSGi, Java SE and Java EE are 
+            also available and kept synchronized with an automated porting process.
+            </p>
+
+            <p>
+            Note: Ivy RoundUp contains the Java SE edition.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default configuration: just the org.restlet.jar file."/>
+        <conf name="example" extends="default" description="Tutorial examples"/>
+        <conf name="atom" extends="default" description="Atom client API"/>
+        <conf name="crypto" extends="default" description="Cryptography extension"/>
+        <conf name="emf" extends="default" description="EMF extension"/>
+        <conf name="fileupload" extends="default" description="Integration with Apache FileUpload"/>
+        <conf name="freemarker" extends="default" description="Integration with FreeMarker template engine"/>
+        <conf name="gwt" extends="default" description="Integration with Google Web Toolkit"/>
+        <conf name="html" extends="default" description="HTML extension"/>
+        <conf name="httpclient" extends="default" description="HTTP client connector based on Apache Commons HTTP Client"/>
+        <conf name="jaas" extends="default" description="JAAS extension"/>
+        <conf name="jackson" extends="default" description="Jackson extension"/>
+        <conf name="javamail" extends="default" description="SMTP client connector based on JavaMail"/>
+        <conf name="jaxb" extends="default" description="Integration with JAXB"/>
+        <conf name="jaxrs" extends="default" description="Integration with JAX-RS"/>
+        <conf name="jdbc" extends="default" description="JDBC client connector using Apache connections pool"/>
+        <conf name="jetty" extends="default" description="Jetty 6 server HTTP connector"/>
+        <conf name="jibx" extends="default" description="Integration with JiBX"/>
+        <conf name="json" extends="default" description="Integration with JavaScript Object Notation"/>
+        <conf name="lucene" extends="default" description="Integration with Lucene"/>
+        <conf name="net" extends="default" description="HTTP client connector based on JDK's HttpUrlConnection"/>
+        <conf name="oauth" extends="default" description="OAuth extension"/>
+        <conf name="odata" extends="default" description="Authentication plugin for the OData scheme"/>
+        <conf name="openid" extends="default" description="OpenID extension"/>
+        <conf name="rdf" extends="default" description="RDF support"/>
+        <conf name="rome" extends="default" description="Rome support"/>
+        <conf name="sdc" extends="default" description="SDC extension"/>
+        <conf name="simple" extends="default" description="Simple server HTTP connector"/>
+        <conf name="sip" extends="default" description="SIP extension"/>
+        <conf name="slf4j" extends="default" description="SLF4J logger connector"/>
+        <conf name="spring" extends="default" description="Integration with Spring Framework"/>
+        <conf name="ssl" extends="default" description="SSL Support"/>
+        <conf name="velocity" extends="default" description="Integration with Apache Velocity"/>
+        <conf name="wadl" extends="default" description="Support for WADL configuration"/>
+        <conf name="xml" extends="default" description="XML support"/>
+        <conf name="xstream" extends="default" description="Integration with XStream"/>
+        <conf name="test" extends="default" description="Restlet testing."/>
+    </configurations>
+
+    <publications>
+
+        <!-- JARs -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet" name="org.restlet" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.example" name="org.restlet.example" conf="example"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.atom" name="org.restlet.ext.atom" conf="atom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.crypto" name="org.restlet.ext.crypto" conf="crypto"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.emf" name="org.restlet.ext.emf" conf="emf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.fileupload" name="org.restlet.ext.fileupload" conf="fileupload"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.freemarker" name="org.restlet.ext.freemarker" conf="freemarker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.gwt" name="org.restlet.ext.gwt" conf="gwt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.html" name="org.restlet.ext.html" conf="html"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.httpclient" name="org.restlet.ext.httpclient" conf="httpclient"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaas" name="org.restlet.ext.jaas" conf="jaas"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jackson" name="org.restlet.ext.jackson" conf="jackson"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.javamail" name="org.restlet.ext.javamail" conf="javamail"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxb" name="org.restlet.ext.jaxb" conf="jaxb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jaxrs" name="org.restlet.ext.jaxrs" conf="jaxrs"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jdbc" name="org.restlet.ext.jdbc" conf="jdbc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jetty" name="org.restlet.ext.jetty" conf="jetty"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.jibx" name="org.restlet.ext.jibx" conf="jibx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.json" name="org.restlet.ext.json" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.lucene" name="org.restlet.ext.lucene" conf="lucene"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.net" name="org.restlet.ext.net" conf="net"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.oauth" name="org.restlet.ext.oauth" conf="oauth"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.odata" name="org.restlet.ext.odata" conf="odata"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.openid" name="org.restlet.ext.openid" conf="openid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.rdf" name="org.restlet.ext.rdf" conf="rdf"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.rome" name="org.restlet.ext.rome" conf="rome"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.sdc" name="org.restlet.ext.sdc" conf="sdc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.simple" name="org.restlet.ext.simple" conf="simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.sip" name="org.restlet.ext.sip" conf="sip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.slf4j" name="org.restlet.ext.slf4j" conf="slf4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.spring" name="org.restlet.ext.spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.ssl" name="org.restlet.ext.ssl" conf="ssl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.velocity" name="org.restlet.ext.velocity" conf="velocity"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.wadl" name="org.restlet.ext.wadl" conf="wadl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.xml" name="org.restlet.ext.xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.ext.xstream" name="org.restlet.ext.xstream" conf="xstream"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="org.restlet.test" name="org.restlet.test" conf="test"/>
+
+        <!-- Sources -->
+        <artifact name="org.restlet" conf="default" type="source" ext="zip"/>
+        <artifact name="org.restlet.example" conf="example" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.atom" conf="atom" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.crypto" conf="crypto" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.emf" conf="emf" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.fileupload" conf="fileupload" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.freemarker" conf="freemarker" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.gwt" conf="gwt" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.html" conf="html" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.httpclient" conf="httpclient" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jaas" conf="jaas" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jackson" conf="jackson" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.javamail" conf="javamail" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jaxb" conf="jaxb" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jaxrs" conf="jaxrs" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jdbc" conf="jdbc" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jetty" conf="jetty" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.jibx" conf="jibx" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.json" conf="json" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.lucene" conf="lucene" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.net" conf="net" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.oauth" conf="oauth" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.odata" conf="odata" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.openid" conf="openid" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.rdf" conf="rdf" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.rome" conf="rome" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.sdc" conf="sdc" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.simple" conf="simple" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.sip" conf="sip" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.slf4j" conf="slf4j" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.spring" conf="spring" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.ssl" conf="ssl" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.velocity" conf="velocity" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.wadl" conf="wadl" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.xml" conf="xml" type="source" ext="zip"/>
+        <artifact name="org.restlet.ext.xstream" conf="xstream" type="source" ext="zip"/>
+        <artifact name="org.restlet.test" conf="test" type="source" ext="zip"/>
+
+        <!-- Javadocs -->
+        <artifact name="api" type="javadoc" ext="zip"/>
+        <artifact name="ext" type="javadoc" ext="zip"/>
+        <artifact name="engine" type="javadoc" ext="zip"/>
+    </publications>
+
+<!--
+    TODO: this list is incomplete; see lib/readme.txt for more dependencies
+-->
+    <dependencies>
+
+        <!-- test -->
+        <dependency org="org.junit" name="junit" rev="4.8+" conf="test-&gt;default"/>
+
+        <!-- example -->
+        <dependency org="org.junit" name="junit" rev="4.8+" conf="example-&gt;default"/>
+        <dependency org="org.testng" name="testng" rev="6.7" conf="example-&gt;default"/>
+
+        <!-- emf -->
+
+        <!-- fileupload -->
+        <dependency org="org.apache.commons" name="commons-fileupload" rev="1.2+" conf="fileupload-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5+" conf="fileupload-&gt;default"/>
+
+        <!-- freemarker -->
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3+" conf="freemarker-&gt;default"/>
+
+        <!-- gwt -->
+        <dependency org="com.google" name="gwt" rev="2.3+" conf="gwt-&gt;runtime"/>
+
+        <!-- httpclient -->
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.1+" conf="httpclient-&gt;mime"/>
+        <dependency org="org.apache.httpcomponents" name="httpcore" rev="4.1+" conf="httpclient-&gt;default"/>
+        <dependency org="net.jcip" name="jcip-annotations" rev="1.0" conf="httpclient-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="1.5" conf="httpclient-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="httpclient-&gt;default"/>
+        <dependency org="org.apache.james" name="mime4j" rev="0.6" conf="httpclient-&gt;default"/>
+
+        <!-- jackson -->
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.9+" conf="jackson-&gt;mapper"/>
+
+        <!-- javamail -->
+        <dependency org="javax.mail" name="javamail" rev="1.4+" conf="javamail-&gt;default"/>
+
+        <!-- jaxb -->
+
+        <!-- jaxrs -->
+
+        <!-- jdbc -->
+        <dependency org="org.apache.commons" name="commons-dbcp" rev="1.3" conf="jdbc-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-pool" rev="1.5" conf="jdbc-&gt;default"/>
+
+        <!-- jetty -->
+        <dependency org="org.eclipse" name="jetty" rev="7+" conf="jetty-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5+" conf="jetty-&gt;default"/>
+
+        <!-- jibx -->
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;runtime-xpp3,extras"/>
+
+        <!-- json -->
+        <dependency org="org.json" name="json" rev="20090211" conf="json-&gt;default"/>
+        
+        <!-- lucene -->
+        <dependency org="org.apache.commons" name="commons-io" rev="2.0+" conf="lucene-&gt;default"/>
+        <dependency org="org.apache.lucene" name="lucene" rev="]2.0,3.0[" conf="lucene-&gt;default"/>
+        <dependency org="org.apache.tika" name="tika" rev="0.8" conf="lucene-&gt;default"/>
+
+        <!-- oauth -->
+        <dependency org="org.apache.commons" name="commons-codec" rev="1.5" conf="oauth-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-dbcp" rev="1.3" conf="oauth-&gt;default"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3+" conf="oauth-&gt;default"/>
+        <dependency org="org.json" name="json" rev="20090211" conf="oauth-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-pool" rev="1.5" conf="oauth-&gt;default"/>
+
+        <!-- odata -->
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3+" conf="odata-&gt;default"/>
+
+        <!-- openid -->
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.1+" conf="openid-&gt;default"/>
+        <dependency org="org.cyberneko" name="nekohtml" rev="1.9+" conf="openid-&gt;default"/>
+        <dependency org="org.openid4java" name="openid4java" rev="0.9+" conf="openid-&gt;default"/>
+
+        <!-- rome -->
+        <dependency org="org.jdom" name="jdom" rev="1.1+" conf="rome-&gt;default"/>
+
+        <!-- sdc -->
+        <dependency org="com.google.common" name="google-collections" rev="1.0" conf="sdc-&gt;default"/>
+        <dependency org="com.google" name="guice" rev="2.0" conf="sdc-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="sdc-&gt;default"/>
+        <dependency org="org.codehaus.xstream" name="xstream" rev="1.4+" conf="sdc-&gt;default"/>
+
+        <!-- simple -->
+
+        <!-- sip -->
+        <dependency org="org.junit" name="junit" rev="4.8+" conf="sip-&gt;default"/>
+
+        <!-- slf4j -->
+        <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="slf4j-&gt;default"/>
+
+        <!-- spring -->
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="2.2+" conf="spring-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="3.0+" conf="spring-&gt;asm,beans,context,core,expression,web,webmvc"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1+" conf="spring-&gt;default"/>
+
+        <!-- velocity -->
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2+" conf="velocity-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.6+" conf="velocity-&gt;default"/>
+        <dependency org="org.apache.velocity" name="velocity" rev="1.7" conf="velocity-&gt;default"/>
+
+        <!-- xstream -->
+        <dependency org="org.codehaus.jettison" name="jettison" rev="1.3+" conf="xstream-&gt;default"/>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="xstream-&gt;default"/>
+        <dependency org="org.codehaus.xstream" name="xstream" rev="1.4+" conf="xstream-&gt;default"/>
+
+    </dependencies>
+
+</ivy-module>

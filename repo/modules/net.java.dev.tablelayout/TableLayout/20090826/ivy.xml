@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.java.dev.tablelayout" module="TableLayout" revision="20090826" status="release" publication="20070421163700">
+        <license name="The Clearthought Software License, Version 1.0" url="https://www.dev.java.net/files/documents/3495/59349/License.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.java.dev.tablelayout/TableLayout/20090826/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://java.net/projects/tablelayout/">
+         TableLayout is a totally free layout manager designed to make creating
+         user interfaces fast and easy. It can do anything GridBagLayout can do
+         and much, much more. Yet it is remarkably simple and easy to use.
+
+         TableLayout uses concepts that everyone is familiar with such as
+         spreadsheet-like rows, columns, and cells; and word processing
+         justifications like left, center, right, and full. Consequentially,
+         creating interfaces takes minutes instead of hours. Read the tutorial
+         articles below to quickly get familiar with TableLayout. Once you do,
+         you will never want to use another layout manager again!
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="oldjdk" description="Classes for JDK version less than 1.4"/>
+        <conf name="jdk1.4" description="Classes for JDK version 1.4"/>
+        <conf name="jdk1.5" description="Classes for JDK version 1.5+"/>
+        <conf name="default" extends="jdk1.5" description="Classes for JDK version 1.5+"/>
+        <conf name="ext1.4" extends="jdk1.4" description="Extensions classes for JDK version 1.4"/>
+        <conf name="ext1.5" extends="jdk1.5" description="Extensions classes for JDK version 1.5"/>
+    </configurations>
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.1" conf="oldjdk"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.4" conf="jdk1.4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayout-jdk1.5" conf="jdk1.5"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayoutExtensions-jdk1.4" conf="ext1.4"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="TableLayoutExtensions-jdk1.5" conf="ext1.5"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

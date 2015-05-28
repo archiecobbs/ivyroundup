@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>aspectj by org.aspectj :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.aspectj/aspectj/">aspectj</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.aspectj/">org.aspectj</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.6.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.eclipse.org/aspectj/">http://www.eclipse.org/aspectj/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License Version 1.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.aspectj/aspectj/1.6.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.eclipse.org/aspectj/">
+
+            <p>
+            Some aspects of system implementation, such as logging, error
+            handling, standards enforcement and feature variations are
+            notoriously difficult to implement in a modular way. The result
+            is that code is tangled across a system and leads to quality,
+            productivity and maintenance problems. AspectJ is a seamless
+            aspect-oriented extension to the Java programming language that
+            enables clean modularization of these 'crosscutting concerns'. For
+            the best AspectJ development experience, the AspectJ Development
+            Tools (AJDT) project provides Eclipse platform based tool support
+            for AOSD with AspectJ - see <a href="http://eclipse.org/ajdt">Eclipse AJDT project</a>.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>AspectJ runtime support</td>
+<td></td>
+</tr>
+<tr>
+<td>tools</td>
+<td>AspectJ tools</td>
+<td></td>
+</tr>
+<tr>
+<td>weaver</td>
+<td>AspectJ weaving support</td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>aspectjrt.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>aspectjlib.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>aspectjtools.jar</td>
+<td>jar</td>
+<td>tools</td>
+</tr>
+<tr>
+<td>aspectjweaver.jar</td>
+<td>jar</td>
+<td>weaver</td>
+</tr>
+<tr>
+<td>runtime.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>jdk5runtime.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>weaver.zip</td>
+<td>javadoc</td>
+<td>weaver</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://archive.eclipse.org/tools/${name}/${name}-${revision}.jar</td>
+<td>Unpack into archive/</td>
+<td>427410a36305d6b89182779c8bd66b6ea925beee</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/lib"&gt;
+                &lt;include name="*.jar"/&gt;
+            &lt;/fileset&gt;
+        &lt;/move&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/runtime.zip"&gt;
+            &lt;fileset dir="archive/doc/runtime-api"/&gt;
+        &lt;/zip&gt;
+        &lt;zip destfile="artifacts/javadocs/jdk5runtime.zip"&gt;
+            &lt;fileset dir="archive/doc/aspectj5rt-api"/&gt;
+        &lt;/zip&gt;
+        &lt;zip destfile="artifacts/javadocs/weaver.zip"&gt;
+            &lt;fileset dir="archive/doc/weaver-api"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

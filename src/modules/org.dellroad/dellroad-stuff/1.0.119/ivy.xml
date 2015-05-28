@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20110828120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://code.google.com/p/dellroad-stuff/">
+
+            <p>
+            A dumping ground for various useful Java classes and ant build macros that have
+            evolved over time from repeated use in several different projects.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="spring" extends="core" description="Spring related classes"/>
+        <conf name="vaadin" extends="core" description="Vaadin related classes"/>
+        <conf name="validation" extends="core" description="Validation related classes"/>
+        <conf name="validation-hibernate" extends="validation" description="Validation classes plus Hibernate Validator"/>
+        <conf name="jibx" extends="core" description="JiBX related classes"/>
+        <conf name="main" extends="core" description="Main related classes"/>
+        <conf name="servlet" extends="core" description="Servlet related classes"/>
+        <conf name="default" extends="core,spring,vaadin,validation-hibernate,jibx,main,servlet" description="All classes and all dependencies"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.vaadin" name="vaadin" rev="6.5+" conf="vaadin->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5+" conf="servlet->default"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation->default"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx->default"/>
+        <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8.0" conf="main->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core->default"/>
+        <dependency org="org.springframework" name="spring" rev="3.0+"
+          conf="spring->context-support,expression,jdbc,tx,web-servlet;jibx->expression,oxm;main->context-support;servlet->aop,tx,web-servlet"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="4.1+" conf="validation-hibernate->default"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<!--
+    Option targets (execute these before the action targets (like 'repo' or 'resolve') to turn on or off build behaviors):
+
+    get-xalan: resolve and download xalan, and use the artifacts generated for the xslt operations. Slow but guarantees
+    xalan availability. If not specified the build will assume the xalan jars already on ant classpath.
+-->
+
+<project name="ivyroundup" default="all" xmlns:ivy="urn:org.apache.ivy.ant">
+
+    <!-- Examine environment variables for various defaults -->
+    <property environment="env"/>
+
+    <!--
+        Set this property to change where the meta-repo is generated. Must use absolute paths.
+    -->
+    <property name="target.repo" value="${basedir}/repo" />
+
+    <!--
+        Set this property to change which ivy is used.  It must be a version of
+        ivy containing the package resolver.
+        
+        If not explicitly set, the value of the IVY_JAR environment variable
+        will be used.  If no such environment variable exists,
+        /usr/share/java/ivy.jar will be used.
+
+        Avoid use of "else" attribute which ant 1.6.2 does not support.
+    -->
+    <condition property="ivy.jar" value="${env.IVY_JAR}">
+        <isset property="env.IVY_JAR"/>
+    </condition>
+    <condition property="ivy.jar" value="/usr/share/java/ivy.jar">
+        <not>
+            <isset property="env.IVY_JAR"/>
+        </not>
+    </condition>
+
+    <!--
+        Define Ivy ant tasks.
+    -->
+    <taskdef uri="urn:org.apache.ivy.ant"
+      resource="org/apache/ivy/ant/antlib.xml"
+      classpath="${ivy.jar}"/>
+
+    <!--
+        Configure ivy.
+    -->
+    <ivy:settings id="ivy-settings" file="src/ivy/build-settings.xml"/>
+
+    <!-- Default target: build the repo and run all checks -->
+    <target name="all" depends="clean, repo, resolve" description="Complete build and validity checking"/>
+
+    <!-- Regenerate list all module revisions in XML manifest (repo/modules.xml) -->
+    <target name="modules" description="Regenerate repo/modules.xml">
+
+        <mkdir dir="${target.repo}"/>
+
+        <!-- Get current GIT revision -->
+        <exec executable="git" outputproperty="git.revision" logError="true" failonerror="true">
+            <arg value="describe"/>
+            <arg value="--all"/>
+        </exec>
+
+        <!-- Generate list of modules -->
+        <exec executable="/bin/bash" logError="true" failonerror="true">
+            <arg value="-c"/>
+            <arg value="TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'` ;
+              export LC_ALL=C;
+              find src/modules -name ivy.xml -print
+                | sort
+                | awk -F/ -v GITREV=${git.revision} -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
+                > ${target.repo}/modules.xml"/>
+        </exec>
+    </target>
+
+    <!-- Remove modules defined in ignore list -->
+    <target name="modules-ignore" depends="modules, _init-xalan" if="ignore.list" 
+        description="Remove ignored modules from repo/modules.xml, use -Dignore.list=&lt;module_list.xml&gt;">
+        <property name="ignore.list.full" location="${ignore.list}"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/ignore-modules.xsl" in="${target.repo}/modules.xml" out="${target.repo}/modules-tmp.xml">
+            <param name="ignore.list" expression="${ignore.list.full}"/>
+        </xslt>
+        <move file="${target.repo}/modules-tmp.xml" tofile="${target.repo}/modules.xml"/>
+    </target>
+
+    <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
+    <target name="repo" depends="gen-repo, graph" description="Regenerate the repository." />
+    <target name="repo-for-module" depends="gen-repo-for-module" description="Regenerate the repository for single module and revision." />
+    <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single" description="Regenerate the repository." />-->
+
+    <target name="gen-repo" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
+
+        <!-- Wipe repository clean -->
+        <delete>
+            <fileset dir="${target.repo}">
+                <include name="modules/**/ivy.xml"/>
+                <include name="modules/**/packager.xml"/>
+                <include name="images/**/*"/>
+                <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
+            </fileset>
+        </delete>
+
+        <!-- Copy support files into repository -->
+        <copy todir="${target.repo}">
+            <fileset dir="src">
+                <include name="images/**/*"/>
+                <include name="xsl/ivy-doc.xsl"/>
+                <include name="xsl/modules.xsl"/>
+                <include name="css/ivy-style.css"/>
+                <include name="xsd/packager-1.0.xsd"/>
+                <include name="xsd/ivy.xsd"/>
+                <include name="xsd/ivyde.xsd"/>
+            </fileset>
+        </copy>
+
+        <!-- Copy directory structure -->
+        <copy todir="${target.repo}">
+            <fileset dir="src">
+                <include name="modules/**/*"/>
+                <exclude name="**/ivy.xml"/>
+                <exclude name="**/packager.xml"/>
+            </fileset>
+        </copy>
+
+        <!-- Stylesheet for ivy.xml -->
+        <mkdir dir="build/xsl"/>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true"/>
+
+        <!-- Generate ivy.xml files -->
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null" force="true">
+            <param name="filename" expression="ivy.xml"/>
+            <param name="stylesheet" expression="../../build/xsl/ivy-repo.xsl"/>
+            <param name="target.repo" expression="${target.repo}" />
+            <param name="source.base" expression="${basedir}/src" />
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Generate packager.xml files -->
+        <xslt classpathref="xalan.classpath" style="src/xsl/apply-xsl.xsl" in="${target.repo}/modules.xml" out="/dev/null" force="true">
+            <param name="filename" expression="packager.xml"/>
+            <param name="stylesheet" expression="packager-repo.xsl"/>
+            <param name="target.repo" expression="${target.repo}" />
+            <param name="source.base" expression="${basedir}/src" />
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Validate all generated XML files -->
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="${target.repo}/modules">
+                <include name="**/ivy.xml"/>
+                <include name="**/packager.xml"/>
+            </fileset>
+        </xmlvalidate>
+
+    </target>
+
+    <target name="gen-repo-for-module" depends="_init-xalan, modules, modules-ignore" description="Regenerate the repository">
+        <property name="repo.org" value=""/>
+        <property name="repo.mod" value=""/>
+        <property name="repo.rev" value=""/>
+
+        <!-- Wipe repository clean -->
+        <delete>
+            <fileset dir="${target.repo}">
+                <include name="modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml"/>
+                <include name="modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml"/>
+                <include name="images/**/*"/>
+                <include name="xsl/**/*"/>
+                <include name="css/**/*"/>
+                <include name="xsd/**/*"/>
+            </fileset>
+        </delete>
+
+        <!-- Copy support files into repository -->
+        <copy todir="${target.repo}">
+            <fileset dir="src">
+                <include name="images/**/*"/>
+                <include name="xsl/ivy-doc.xsl"/>
+                <include name="xsl/modules.xsl"/>
+                <include name="css/ivy-style.css"/>
+                <include name="xsd/packager-1.0.xsd"/>
+                <include name="xsd/ivy.xsd"/>
+                <include name="xsd/ivyde.xsd"/>
+            </fileset>
+        </copy>
+
+        <!-- Create directory structure -->
+        <mkdir dir="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}"/>
+
+        <!-- Stylesheet for ivy.xml -->
+        <mkdir dir="build/xsl"/>
+        <copy file="src/xsl/ivy-repo.xsl" todir="build/xsl" overwrite="true"/>
+
+        <!-- Generate ivy.xml files -->
+        <xslt classpathref="xalan.classpath" style="build/xsl/ivy-repo.xsl" in="src/modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml"
+          out="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}/ivy.xml" force="true">
+            <param name="organisation" expression="${repo.org}"/>
+            <param name="module" expression="${repo.mod}"/>
+            <param name="revision" expression="${repo.rev}"/>
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Generate packager.xml files -->
+        <xslt classpathref="xalan.classpath" style="src/xsl/packager-repo.xsl" in="src/modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml"
+          out="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}/packager.xml" force="true">
+            <param name="organisation" expression="${repo.org}"/>
+            <param name="module" expression="${repo.mod}"/>
+            <param name="revision" expression="${repo.rev}"/>
+            <factory name="org.apache.xalan.processor.TransformerFactoryImpl"/>
+        </xslt>
+
+        <!-- Validate all generated XML files -->
+        <xmlvalidate failonerror="true" warn="yes" lenient="no">
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema-full-checking" value="true"/>
+            <fileset dir="${target.repo}/modules/${repo.org}/${repo.mod}/${repo.rev}">
+                <include name="**/ivy.xml"/>
+                <include name="**/packager.xml"/>
+            </fileset>
+        </xmlvalidate>
+
+    </target>
+
+    <target name="graph-single" depends="gen-repo-for-module" unless="skip-graph">
+        <!-- Create graphs of module dependencies -->
+        <mkdir dir="build/graph"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
+            <param name="node.shape" expression="ellipse"/>
+            <param name="graph.rankdir" expression="LR"/>
+            <param name="graph.size" expression="11,11"/>
+        </xslt>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot || true"/>
+        </exec>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot || true"/>
+        </exec>
+    </target>
+
+    <target name="graph" depends="gen-repo" unless="skip-graph">
+        <!-- Create graphs of module dependencies -->
+        <mkdir dir="build/graph"/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/modgraph.xsl" in="${target.repo}/modules.xml" out="build/graph/modules.dot">
+            <param name="node.shape" expression="ellipse"/>
+            <param name="graph.rankdir" expression="LR"/>
+            <param name="graph.size" expression="11,11"/>
+        </xslt>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tgif -o build/graph/modules.gif build/graph/modules.dot || true"/>
+        </exec>
+        <exec executable="/bin/bash" logError="false" failonerror="false">
+            <arg value="-c"/>
+            <arg value="circo -Tsvg -o build/graph/modules.svg build/graph/modules.dot || true"/>
+        </exec>
+    </target>
+
+    <!-- Clear the temporary cache -->
+    <target name="clear-cache" description="Clear the cache">
+        <delete dir="build/cache"/>
+        <mkdir dir="build/cache"/>
+    </target>
+
+    <!--
+        Resolve every artifact into the temporary cache and then
+        build a normal repository that includes artifacts.
+
+        You can restrict what gets resolved by defining one or more of:
+
+            ${resolve.org}  - Only resolve when organization matches
+            ${resolve.mod}  - Only resolve when module matches
+            ${resolve.rev}  - Only resolve when revision matches
+    -->
+    <target name="resolve" depends="_init-xalan" description="Resolve everything and build a normal repository">
+
+        <!-- Initialize resolve work area and repository we're going to build -->
+        <delete dir="build/resolve"/>
+        <delete dir="build/repo-with-artifacts"/>
+        <mkdir dir="build/resolve"/>
+        <mkdir dir="build/repo-with-artifacts"/>
+
+        <!-- Copy the packager repo -->
+        <copy todir="build/repo-with-artifacts">
+            <fileset dir="${target.repo}"/>
+        </copy>
+
+        <!-- Create an ant build that does the resolve and retrieve work -->
+        <property name="resolve.org" value=""/>
+        <property name="resolve.mod" value=""/>
+        <property name="resolve.rev" value=""/>
+        <xslt classpathref="xalan.classpath" style="src/xsl/resolve.xsl" in="${target.repo}/modules.xml" out="build/resolve/build.xml">
+            <param name="retrieve.pattern" expression="${basedir}/build/repo-with-artifacts/modules/[organisation]/[module]/[revision]/[type]s/[artifact]-[revision].[ext]"/>
+            <param name="resolve.org" expression="${resolve.org}"/>
+            <param name="resolve.mod" expression="${resolve.mod}"/>
+            <param name="resolve.rev" expression="${resolve.rev}"/>
+        </xslt>
+        <copy file="src/ivy/resolve-settings.xml" todir="build/resolve"/>
+
+        <!-- Run the build -->
+        <ant dir="build/resolve" inheritAll="false">
+            <property name="target.repo" value="${target.repo}"/>
+        </ant>
+    </target>
+
+    <!-- Clean out all generated files (not including the packager repository under repo/) -->
+    <target name="clean" description="Delete build files">
+        <delete dir="build"/>
+    </target>
+
+    <target name="get-xalan">
+        <property name="download-xalan" value="true" />
+    </target>
+
+    <target name="_init-xalan" depends="_download-xalan, _provided-xalan-classpath" />
+
+    <target name="_download-xalan" if="download-xalan">
+
+        <!-- Reset xalan files in case they got corrupted -->
+        <exec executable="git" searchpath="true" failonerror="true">
+            <arg value="checkout"/>
+            <arg value="HEAD"/>
+            <arg value="--"/>
+            <arg value="${target.repo}/modules/org.apache.xml/xalan-j"/>
+            <arg value="${target.repo}/modules/org.apache.xml/xml-commons-external"/>
+            <arg value="${target.repo}/modules/org.apache.xerces/xerces"/>
+        </exec>
+
+        <!-- Find xalan -->
+        <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
+          organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+        <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
+          organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
+    </target>
+
+    <target name="_provided-xalan-classpath" unless="download-xalan">
+      <!-- placeholder declaration -->
+      <path id="xalan.classpath" path="" />
+    </target>
+
+  <!-- URL checker stuff -->
+  <import file="src/xml/build-urlcheck.xml"/>
+</project>

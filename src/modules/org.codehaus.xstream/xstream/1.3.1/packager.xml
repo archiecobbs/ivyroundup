@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-bin.zip"
+        sha1="fe4489365253e475d728645fe4d846ed8bf9aeb4"/>
+
+    <resource url="https://nexus.codehaus.org/content/repositories/releases/com/thoughtworks/${name}/${name}-distribution/${revision}/${name}-distribution-${revision}-src.zip"
+        sha1="7eace8ba0cc4c3cd7d5d8d31bc394b5b28613ed8"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/lib/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/xstream/src/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/javadoc"/>
+        </zip>
+    </build>
+</packager-module>

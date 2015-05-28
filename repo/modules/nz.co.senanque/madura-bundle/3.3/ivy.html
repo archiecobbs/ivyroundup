@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>madura-bundle by nz.co.senanque :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../nz.co.senanque/madura-bundle/">madura-bundle</a></span> 
+    by 
+    <span id="organisation"><a href="../../../nz.co.senanque/">nz.co.senanque</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.3</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://code.google.com/p/madura-bundle/">http://code.google.com/p/madura-bundle/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/nz.co.senanque/madura-bundle/3.3/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://code.google.com/p/madura-bundle/">
+        Provides a simple way to componentize an application using proxied Spring beans and classloader
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>madura-bundle.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td>default</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td>default</td>
+</tr>
+<tr>
+<td>MaduraBundle.pdf</td>
+<td>doc</td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>3.0.6</td>
+<td>default-&gt;context</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.6.1</td>
+<td>default-&gt;jcl-migration</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>1.6.1</td>
+<td>default-&gt;core</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>download.name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${download.name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://madura-bundle.googlecode.com/files/${download.name}-${revision}.zip</td>
+<td>Unpack into archive/</td>
+<td>162bbda9b6e9376293d48c23e456e74ecf7fa9b6</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${download.name}-${revision}.jar" tofile="artifacts/jars/${download.name}.jar"/&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;mkdir dir="javadoc"/&gt;
+        &lt;unzip src="archive/${download.name}-javadocs-${revision}.zip" dest="javadoc"/&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="javadoc"/&gt;
+        &lt;/zip&gt;
+        &lt;!-- source --&gt;
+        &lt;mkdir dir="source"/&gt;
+        &lt;unzip src="archive/${download.name}-source-${revision}.zip" dest="source"/&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="source/src"/&gt;
+            &lt;fileset dir="source/docs"/&gt;
+            &lt;fileset dir="source/test"/&gt;
+        &lt;/zip&gt;
+        &lt;mkdir dir="artifacts/docs"/&gt;
+        &lt;move file="archive/MaduraBundle.pdf" tofile="artifacts/docs/MaduraBundle.pdf"/&gt;
+
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

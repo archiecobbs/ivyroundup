@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20080406120000">
+        <license name="BSD Style" url="https://github.com/purcell/jargs/blob/master/LICENCE"/>
+        <description homepage="http://jargs.sourceforge.net/">
+
+            <p>
+            This tiny project provides a convenient, compact,
+            pre-packaged and comprehensively documented suite of
+            command line option parsers for the use of Java
+            programmers. Initially, parsing compatible with GNU-style
+            'getopt' is provided.
+            </p>
+
+            <p>
+            Why use JArgs rather than other similar libraries?
+            Because it's easy to use, thoroughly tested, well
+            documented and liberally licenced (BSD licence so no
+            GNU messiness).
+            </p>
+
+            <p>
+            The package is small and without frills, but is
+            functional, and contains code that has been in production
+            use for quite some time.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

@@ -1,0 +1,1449 @@
+<html>
+<head>
+<title>jetty by org.eclipse :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.eclipse/jetty/">jetty</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.eclipse/">org.eclipse</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>9.2.7.v20150116</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.eclipse.org/jetty/">http://www.eclipse.org/jetty/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.eclipse/jetty/9.2.7.v20150116/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.eclipse.org/jetty/">
+            <p>
+            Jetty is an open-source project providing a HTTP server, HTTP
+            client and javax.servlet container. These 100% java components are
+            full-featured, standards based, small foot print, embeddable,
+            asynchronous and enterprise scalable. Jetty is dual licensed under
+            the Apache License 2.0 and/or Eclipse Public License 1.0. Jetty is
+            free for commercial use and distribution under the terms of either
+            of those licenses.
+            </p>
+            <p>
+            Jetty is used in a wide variety of projects and products:
+            embedded in phones; in tools like the the eclipse IDE, in
+            frameworks like GWT, in application servers like Apache Geronimo
+            and in huge clusters like Yahoo's Hadoop cluster. See the Jetty
+            Powered page for more uses of Jetty.
+            </p>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>annotations</td>
+<td>Annotation support for deploying servlets in jetty</td>
+<td>plus</td>
+</tr>
+<tr>
+<td>ant</td>
+<td>Jetty :: Ant Plugin</td>
+<td>security,annotations</td>
+</tr>
+<tr>
+<td>client</td>
+<td>Asynchronous HTTP Client</td>
+<td>http</td>
+</tr>
+<tr>
+<td>continuation</td>
+<td>Asynchronous API</td>
+<td></td>
+</tr>
+<tr>
+<td>core</td>
+<td>Core Jetty server</td>
+<td>server</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Jetty web application support with JSP 2.2</td>
+<td>jsp</td>
+</tr>
+<tr>
+<td>deploy</td>
+<td>Deployers</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>http</td>
+<td>Http Utility</td>
+<td>io</td>
+</tr>
+<tr>
+<td>io</td>
+<td>I/O Utility</td>
+<td>util</td>
+</tr>
+<tr>
+<td>jaas</td>
+<td>Jetty JAAS support</td>
+<td>security</td>
+</tr>
+<tr>
+<td>jaspi</td>
+<td>JASPI Security</td>
+<td>security</td>
+</tr>
+<tr>
+<td>jmx</td>
+<td>JMX Management</td>
+<td>util</td>
+</tr>
+<tr>
+<td>jndi</td>
+<td>JNDI Naming</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>jsp</td>
+<td>JSP 2.2</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>nosql</td>
+<td>Jetty :: NoSQL Session Managers</td>
+<td></td>
+</tr>
+<tr>
+<td>plus</td>
+<td>Jetty JavaEE style services</td>
+<td>jndi</td>
+</tr>
+<tr>
+<td>proxy</td>
+<td>Jetty :: Proxy</td>
+<td>servlet,client</td>
+</tr>
+<tr>
+<td>rewrite</td>
+<td>Rewrite Handler</td>
+<td>server,client</td>
+</tr>
+<tr>
+<td>runner</td>
+<td>Jetty :: Runner</td>
+<td>annotations,jaas,jsp</td>
+</tr>
+<tr>
+<td>security</td>
+<td>Jetty security infrastructure</td>
+<td>server</td>
+</tr>
+<tr>
+<td>server</td>
+<td>Jetty :: Server Core</td>
+<td>http,xml</td>
+</tr>
+<tr>
+<td>servlet</td>
+<td>Jetty Servlet Container</td>
+<td>security</td>
+</tr>
+<tr>
+<td>servlets</td>
+<td>Utility Servlets from Jetty</td>
+<td>client,webapp</td>
+</tr>
+<tr>
+<td>spring</td>
+<td>Example :: Jetty Spring</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>start</td>
+<td>The jetty startup artifact</td>
+<td></td>
+</tr>
+<tr>
+<td>util</td>
+<td>Utilities</td>
+<td></td>
+</tr>
+<tr>
+<td>util-ajax</td>
+<td>JSON/Ajax Utility classes for Jetty</td>
+<td>util</td>
+</tr>
+<tr>
+<td>webapp</td>
+<td>Jetty web application support</td>
+<td>servlet,xml</td>
+</tr>
+<tr>
+<td>websocket</td>
+<td>Jetty Websocket support</td>
+<td>server</td>
+</tr>
+<tr>
+<td>xml</td>
+<td>Jetty xml utilities</td>
+<td>util</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>jetty-annotations.jar</td>
+<td>jar</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jetty-ant.jar</td>
+<td>jar</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>jetty-client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jetty-continuation.jar</td>
+<td>jar</td>
+<td>continuation</td>
+</tr>
+<tr>
+<td>jetty-deploy.jar</td>
+<td>jar</td>
+<td>deploy</td>
+</tr>
+<tr>
+<td>jetty-http.jar</td>
+<td>jar</td>
+<td>http</td>
+</tr>
+<tr>
+<td>jetty-io.jar</td>
+<td>jar</td>
+<td>io</td>
+</tr>
+<tr>
+<td>jetty-jaas.jar</td>
+<td>jar</td>
+<td>jaas</td>
+</tr>
+<tr>
+<td>jetty-jaspi.jar</td>
+<td>jar</td>
+<td>jaspi</td>
+</tr>
+<tr>
+<td>jetty-jmx.jar</td>
+<td>jar</td>
+<td>jmx</td>
+</tr>
+<tr>
+<td>jetty-jndi.jar</td>
+<td>jar</td>
+<td>jndi</td>
+</tr>
+<tr>
+<td>jetty-jsp.jar</td>
+<td>jar</td>
+<td>jsp</td>
+</tr>
+<tr>
+<td>jetty-nosql.jar</td>
+<td>jar</td>
+<td>nosql</td>
+</tr>
+<tr>
+<td>jetty-plus.jar</td>
+<td>jar</td>
+<td>plus</td>
+</tr>
+<tr>
+<td>jetty-proxy.jar</td>
+<td>jar</td>
+<td>proxy</td>
+</tr>
+<tr>
+<td>jetty-rewrite.jar</td>
+<td>jar</td>
+<td>rewrite</td>
+</tr>
+<tr>
+<td>jetty-runner.jar</td>
+<td>jar</td>
+<td>runner</td>
+</tr>
+<tr>
+<td>jetty-security.jar</td>
+<td>jar</td>
+<td>security</td>
+</tr>
+<tr>
+<td>jetty-server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jetty-servlet.jar</td>
+<td>jar</td>
+<td>servlet</td>
+</tr>
+<tr>
+<td>jetty-servlets.jar</td>
+<td>jar</td>
+<td>servlets</td>
+</tr>
+<tr>
+<td>jetty-spring.jar</td>
+<td>jar</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>jetty-start.jar</td>
+<td>jar</td>
+<td>start</td>
+</tr>
+<tr>
+<td>jetty-util.jar</td>
+<td>jar</td>
+<td>util</td>
+</tr>
+<tr>
+<td>jetty-util-ajax.jar</td>
+<td>jar</td>
+<td>util-ajax</td>
+</tr>
+<tr>
+<td>jetty-webapp.jar</td>
+<td>jar</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>jetty-xml.jar</td>
+<td>jar</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>jetty-ant.zip</td>
+<td>source</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>jetty-annotations.zip</td>
+<td>source</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jetty-client.zip</td>
+<td>source</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jetty-continuation.zip</td>
+<td>source</td>
+<td>continuation</td>
+</tr>
+<tr>
+<td>jetty-deploy.zip</td>
+<td>source</td>
+<td>deploy</td>
+</tr>
+<tr>
+<td>jetty-http.zip</td>
+<td>source</td>
+<td>http</td>
+</tr>
+<tr>
+<td>jetty-io.zip</td>
+<td>source</td>
+<td>io</td>
+</tr>
+<tr>
+<td>jetty-jaas.zip</td>
+<td>source</td>
+<td>jaas</td>
+</tr>
+<tr>
+<td>jetty-jaspi.zip</td>
+<td>source</td>
+<td>jaspi</td>
+</tr>
+<tr>
+<td>jetty-jmx.zip</td>
+<td>source</td>
+<td>jmx</td>
+</tr>
+<tr>
+<td>jetty-jndi.zip</td>
+<td>source</td>
+<td>jndi</td>
+</tr>
+<tr>
+<td>jetty-jsp.zip</td>
+<td>source</td>
+<td>jsp</td>
+</tr>
+<tr>
+<td>jetty-nosql.zip</td>
+<td>source</td>
+<td>nosql</td>
+</tr>
+<tr>
+<td>jetty-plus.zip</td>
+<td>source</td>
+<td>plus</td>
+</tr>
+<tr>
+<td>jetty-proxy.zip</td>
+<td>source</td>
+<td>proxy</td>
+</tr>
+<tr>
+<td>jetty-rewrite.zip</td>
+<td>source</td>
+<td>rewrite</td>
+</tr>
+<tr>
+<td>jetty-runner.zip</td>
+<td>source</td>
+<td>runner</td>
+</tr>
+<tr>
+<td>jetty-security.zip</td>
+<td>source</td>
+<td>security</td>
+</tr>
+<tr>
+<td>jetty-server.zip</td>
+<td>source</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jetty-servlet.zip</td>
+<td>source</td>
+<td>servlet</td>
+</tr>
+<tr>
+<td>jetty-servlets.zip</td>
+<td>source</td>
+<td>servlets</td>
+</tr>
+<tr>
+<td>jetty-spring.zip</td>
+<td>source</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>jetty-start.zip</td>
+<td>source</td>
+<td>start</td>
+</tr>
+<tr>
+<td>jetty-util.zip</td>
+<td>source</td>
+<td>util</td>
+</tr>
+<tr>
+<td>jetty-util-ajax.zip</td>
+<td>source</td>
+<td>util-ajax</td>
+</tr>
+<tr>
+<td>jetty-webapp.zip</td>
+<td>source</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>jetty-xml.zip</td>
+<td>source</td>
+<td>xml</td>
+</tr>
+<tr>
+<td>jetty-ant.zip</td>
+<td>javadoc</td>
+<td>ant</td>
+</tr>
+<tr>
+<td>jetty-annotations.zip</td>
+<td>javadoc</td>
+<td>annotations</td>
+</tr>
+<tr>
+<td>jetty-client.zip</td>
+<td>javadoc</td>
+<td>client</td>
+</tr>
+<tr>
+<td>jetty-continuation.zip</td>
+<td>javadoc</td>
+<td>continuation</td>
+</tr>
+<tr>
+<td>jetty-deploy.zip</td>
+<td>javadoc</td>
+<td>deploy</td>
+</tr>
+<tr>
+<td>jetty-http.zip</td>
+<td>javadoc</td>
+<td>http</td>
+</tr>
+<tr>
+<td>jetty-io.zip</td>
+<td>javadoc</td>
+<td>io</td>
+</tr>
+<tr>
+<td>jetty-jaas.zip</td>
+<td>javadoc</td>
+<td>jaas</td>
+</tr>
+<tr>
+<td>jetty-jaspi.zip</td>
+<td>javadoc</td>
+<td>jaspi</td>
+</tr>
+<tr>
+<td>jetty-jmx.zip</td>
+<td>javadoc</td>
+<td>jmx</td>
+</tr>
+<tr>
+<td>jetty-jndi.zip</td>
+<td>javadoc</td>
+<td>jndi</td>
+</tr>
+<tr>
+<td>jetty-nosql.zip</td>
+<td>javadoc</td>
+<td>nosql</td>
+</tr>
+<tr>
+<td>jetty-plus.zip</td>
+<td>javadoc</td>
+<td>plus</td>
+</tr>
+<tr>
+<td>jetty-proxy.zip</td>
+<td>javadoc</td>
+<td>proxy</td>
+</tr>
+<tr>
+<td>jetty-rewrite.zip</td>
+<td>javadoc</td>
+<td>rewrite</td>
+</tr>
+<tr>
+<td>jetty-runner.zip</td>
+<td>javadoc</td>
+<td>runner</td>
+</tr>
+<tr>
+<td>jetty-security.zip</td>
+<td>javadoc</td>
+<td>security</td>
+</tr>
+<tr>
+<td>jetty-server.zip</td>
+<td>javadoc</td>
+<td>server</td>
+</tr>
+<tr>
+<td>jetty-servlet.zip</td>
+<td>javadoc</td>
+<td>servlet</td>
+</tr>
+<tr>
+<td>jetty-servlets.zip</td>
+<td>javadoc</td>
+<td>servlets</td>
+</tr>
+<tr>
+<td>jetty-spring.zip</td>
+<td>javadoc</td>
+<td>spring</td>
+</tr>
+<tr>
+<td>jetty-start.zip</td>
+<td>javadoc</td>
+<td>start</td>
+</tr>
+<tr>
+<td>jetty-util.zip</td>
+<td>javadoc</td>
+<td>util</td>
+</tr>
+<tr>
+<td>jetty-util-ajax.zip</td>
+<td>javadoc</td>
+<td>util-ajax</td>
+</tr>
+<tr>
+<td>jetty-webapp.zip</td>
+<td>javadoc</td>
+<td>webapp</td>
+</tr>
+<tr>
+<td>jetty-xml.zip</td>
+<td>javadoc</td>
+<td>xml</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>javax.mail</td>
+<td><a href="../../../javax.mail/javamail/">javamail</a></td>
+<td>[1.4,2.0[</td>
+<td>jndi-&gt;default</td>
+</tr>
+<tr>
+<td>javax.transaction</td>
+<td><a href="../../../javax.transaction/jta/">jta</a></td>
+<td>[1.1,2.0[</td>
+<td>plus-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>3.0</td>
+<td>server,jsp,util-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet.jsp</td>
+<td><a href="../../../javax.servlet.jsp/jsp-api/">jsp-api</a></td>
+<td>2+</td>
+<td>jsp-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet.jsp.jstl</td>
+<td><a href="../../../javax.servlet.jsp.jstl/jstl/">jstl</a></td>
+<td>1.2</td>
+<td>jsp-&gt;default</td>
+</tr>
+<tr>
+<td>org.eclipse</td>
+<td><a href="../../../org.eclipse/jetty-websocket/">jetty-websocket</a></td>
+<td>9.0.0.v20130308</td>
+<td>runner,websocket-&gt;server</td>
+</tr>
+<tr>
+<td>org.slf4j</td>
+<td><a href="../../../org.slf4j/slf4j/">slf4j</a></td>
+<td>[1.6,)</td>
+<td>util-&gt;core</td>
+</tr>
+<tr>
+<td>org.objectweb.asm</td>
+<td><a href="../../../org.objectweb.asm/asm/">asm</a></td>
+<td>[5.0,)</td>
+<td>annotations-&gt;commons</td>
+</tr>
+<tr>
+<td>javax.annotation</td>
+<td><a href="../../../javax.annotation/jsr250-api/">jsr250-api</a></td>
+<td>[1.0,2.0[</td>
+<td>annotations-&gt;default</td>
+</tr>
+<tr>
+<td>org.apache.ant</td>
+<td><a href="../../../org.apache.ant/ant/">ant</a></td>
+<td>[1.6.5,)</td>
+<td>ant-&gt;default</td>
+</tr>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>[0,)</td>
+<td>spring-&gt;beans</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-annotations</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-annotations.jar</td>
+<td>13e2b734fdcfadbe328d43b5d149f9c2d65c9169</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-annotations</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-annotations.zip</td>
+<td>ecb92d60ce619ef988739a827a484e51037d0df3</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-annotations</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-annotations.zip</td>
+<td>1b92cf2882a4c1dc96fada88721523504b2d7c47</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-ant</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-ant.jar</td>
+<td>6f970e82c50d9fb7166fbdd39ca39d7a4b83f8de</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-ant</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-ant.zip</td>
+<td>3e38ca7d0b6525dfa2398c9e681ab5b8693e6263</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-ant</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-ant.zip</td>
+<td>6829d5bf78362efcf1751aad7a59148e72e20135</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-client</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-client.jar</td>
+<td>76eba0624c858255cfe370dabc65c6dacb5d2a17</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-client</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-client.zip</td>
+<td>585af2a02733fc856a4e565d17242620ef89de3d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-client</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-client.zip</td>
+<td>e3365a592442e531fae9983b095ed64bc5ac739c</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-continuation</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-continuation.jar</td>
+<td>5f9817d6cd58db8ebfb5c0d6e639225f9b9ae856</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-continuation</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-continuation.zip</td>
+<td>a25f5d06f08f9177f70557d8a5a382f120858fa4</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-continuation</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-continuation.zip</td>
+<td>431ffc13542e90e4f9501c0116ec1ff021cdf4f4</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-deploy</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-deploy.jar</td>
+<td>6bca6a454324bfc4eb0919ae10ab2e7efcbfc260</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-deploy</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-deploy.zip</td>
+<td>cc98be9f52712297226a7915bd1ccc20ba74388c</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-deploy</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-deploy.zip</td>
+<td>2a4d25723ec7bb44411a999816d21156ae33957d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-http</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-http.jar</td>
+<td>ac6c19ab7daaffe86622f2d78e4cbeff1a674e85</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-http</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-http.zip</td>
+<td>c8b12de1be696d7d6b0185badb17feec00376330</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-http</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-http.zip</td>
+<td>f88aeca08c3c01890f3a227a18b089d3a1e3b4fa</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-io</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-io.jar</td>
+<td>11bd06fca00dd0c27a25aa0ba46a7c2cf19527d5</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-io</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-io.zip</td>
+<td>9e177773dafe606284b9c6b90340a8a2565eec7d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-io</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-io.zip</td>
+<td>1b218e57872359885f5b199ff2a7135a10ea3163</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaas</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-jaas.jar</td>
+<td>b04324e8deba3d2d2bf47474f6cf1bcd04c587f1</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaas</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-jaas.zip</td>
+<td>dc86adaf2f7fbf6b33b95d127ef25fbf3dc40f44</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaas</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-jaas.zip</td>
+<td>3a9a9a266f02265c9a914604aaf93aeaf2d119d9</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaspi</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-jaspi.jar</td>
+<td>6a76185ef62b19904205a5b0024115a982d0ac25</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaspi</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-jaspi.zip</td>
+<td>d4ff8c73bf452912be91501895ca3f1b7959a709</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jaspi</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-jaspi.zip</td>
+<td>eff939a01cc382c67091b7255835810d1acd4055</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jmx</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-jmx.jar</td>
+<td>cec0cb594d97a39d9badd7df8a4b7d14d59417c1</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jmx</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-jmx.zip</td>
+<td>33b4991843deeb8dc1277dacbfa7fa649a35e7d0</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jmx</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-jmx.zip</td>
+<td>2ae267ec0703f9ff8b02d2f162e3d12875f792df</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jndi</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-jndi.jar</td>
+<td>35d10281680e397f75f2c99eac2b8c28bd995003</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jndi</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-jndi.zip</td>
+<td>445e107e9fb105e3fbe6ce77db352e4ff883d34c</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jndi</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-jndi.zip</td>
+<td>cbe144ab87c83d0920574601579ecc924d1978de</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jsp</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-jsp.jar</td>
+<td>54ce829baa2a4ab871a28c36142916b1fe67fbf7</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-jsp</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-jsp.zip</td>
+<td>491842bbd5d37a8501496c0ab9472f2e707a1b7a</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-nosql</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-nosql.jar</td>
+<td>7a30fc6d05c2785be23d44d4baedef8c2eea643e</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-nosql</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-nosql.zip</td>
+<td>9abbe9f9e9f06115561d60709e0611a21c8a1f9f</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-nosql</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-nosql.zip</td>
+<td>00a242b595e2a6f27e5e7d4db896d1b01c849745</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-plus</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-plus.jar</td>
+<td>d42596e31b2af9e64a2c56c2550943e870530b91</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-plus</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-plus.zip</td>
+<td>3ecf64a274016810d33c53830889c2545d19933d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-plus</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-plus.zip</td>
+<td>91814b9177f00baf7359d06a3d3ade7b78de5bbf</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-proxy</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-proxy.jar</td>
+<td>c43cb641127e076cf7b9fa30b6aa14c9c4d5ec39</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-proxy</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-proxy.zip</td>
+<td>8636908954e8d4335744080b5dd41e89128cd66a</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-proxy</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-proxy.zip</td>
+<td>5d031e38d3f5fcecd70e1b95594a64c60f558976</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-rewrite</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-rewrite.jar</td>
+<td>779a6b3711778125f8680a93847800effcdf1caf</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-rewrite</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-rewrite.zip</td>
+<td>0db12d9ca31ed342314786fb942ca0c6788fc0d3</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-rewrite</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-rewrite.zip</td>
+<td>5a5c67d9875a0eb0da8dfbf2f226b7c4324aa88d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-runner</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-runner.jar</td>
+<td>3027d0e2e61ca21ede46c25549feff9b6cd124ec</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-runner</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-runner.zip</td>
+<td>1845d611d8bb8aed7dd8cea644f5989fd47c15b3</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-runner</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-runner.zip</td>
+<td>2ee3d2c22f058fdf11324a247deff74d167deb24</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-security</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-security.jar</td>
+<td>f3f257d952bbe493a6a187d95395464fce9926fe</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-security</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-security.zip</td>
+<td>af99e3c8b492be009f95b0bbab420c831c99a2f6</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-security</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-security.zip</td>
+<td>56ecb3d3c4d106be6f8ab5dffa167f5adb1b4715</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-server</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-server.jar</td>
+<td>dc072b171e8b7ad5762c765c54bdf4e3b2198225</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-server</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-server.zip</td>
+<td>20f2600b7d636a3d6194c4a3ebb3b18ea7ca926b</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-server</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-server.zip</td>
+<td>2d49e612b7ae7b55a58e190c7bdc3cce9ebc78e9</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlet</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-servlet.jar</td>
+<td>4c11b757c34627b21e493201a3173ed12ebe04a6</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlet</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-servlet.zip</td>
+<td>e915e44319f040bbe399789b995b7278bf682b2d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlet</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-servlet.zip</td>
+<td>3c7c5dcfe3851d4c32b8ba502d58d941738aaf74</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlets</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-servlets.jar</td>
+<td>8fe422e109350a5af8001d6f658c5f2b4fc04d25</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlets</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-servlets.zip</td>
+<td>0d6501ec60139e3cee9cd28cb371581274500140</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-servlets</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-servlets.zip</td>
+<td>b779fe36c664929e7b4cb10a0866f89a73182b96</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-spring</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-spring.jar</td>
+<td>271491a760b0c833114b0040332ae4350dc97c48</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-spring</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-spring.zip</td>
+<td>b1a0a3dcf5144e2fa670558f72e1834f5ffdfb4c</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-spring</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-spring.zip</td>
+<td>04ca8ad1356c7dcb9c2f02b34d9d3f45a2e39788</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-start</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-start.jar</td>
+<td>0b9b51df1d8a4ed88966d8e87d6d1b6ee8bf76f0</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-start</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-start.zip</td>
+<td>3ff920c6118ca2f95a75022d70903cd757c7aaef</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-start</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-start.zip</td>
+<td>6fca2016c2a284f43c19f8368b0a50c76f1a63b4</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-util.jar</td>
+<td>02fb9c6172e5704b1b6d8609c5e9dc15db3367d7</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-util.zip</td>
+<td>363edd33f24f0b02e0d7cdb59bacace792c09a7f</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-util.zip</td>
+<td>4ff932ec1bb1ded97ff3779400af1a9ed6d406e4</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util-ajax</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-util-ajax.jar</td>
+<td>f3bc65af2e9b6e8b8a44cfaacf8a8f61f797ce9b</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util-ajax</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-util-ajax.zip</td>
+<td>b55258221a108c4f67873df3f3ba74b3f732b379</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-util-ajax</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-util-ajax.zip</td>
+<td>c99dcc2e3c0113baf4dc2f9a22848505fa874d03</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-webapp</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-webapp.jar</td>
+<td>c425e57423123c89ed72e76df8f5d0332f05ecee</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-webapp</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-webapp.zip</td>
+<td>20e7b5071ebf1783a738a50073e9de61195413e9</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-webapp</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-webapp.zip</td>
+<td>4220e6120da13341dff5ef6288443f684c2f8c9d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-xml</td>
+<td>9.2.7.v20150116</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/jetty-xml.jar</td>
+<td>81008da0080e82fd3c8e6d094a1241ce33ca7c6d</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-xml</td>
+<td>9.2.7.v20150116</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/jetty-xml.zip</td>
+<td>d05e6a898db397b553819e35e7021307c2ef9097</td>
+</tr>
+<tr>
+<td>org/eclipse/jetty</td>
+<td>jetty-xml</td>
+<td>9.2.7.v20150116</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/jetty-xml.zip</td>
+<td>9071af615bf20d7fce777710c6277f7a57b00283</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

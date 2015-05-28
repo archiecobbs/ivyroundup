@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20101224120000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://restlet.com/">
+        Lightweight REST framework for Java
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default configuration: just the org.restlet.jar file."/>
+        <conf name="example" extends="default" description="Tutorial examples"/>
+        <conf name="atom" extends="default" description="Atom client API"/>
+        <conf name="crypto" extends="default" description="Cryptography extension"/>
+        <conf name="fileupload" extends="default" description="Integration with Apache FileUpload"/>
+        <conf name="freemarker" extends="default" description="Integration with FreeMarker template engine"/>
+        <conf name="grizzly" extends="default" description="HTTP server connector base on Grizzly NIO framework"/>
+        <conf name="gwt" extends="default" description="Integration with Google Web Toolkit"/>
+        <conf name="httpclient" extends="default" description="HTTP client connector based on Apache Commons HTTP Client"/>
+        <conf name="jaas" extends="default" description="JAAS extension"/>
+        <conf name="jackson" extends="default" description="Jackson extension"/>
+        <conf name="javamail" extends="default" description="SMTP client connector based on JavaMail"/>
+        <conf name="jaxb" extends="default" description="Integration with JAXB"/>
+        <conf name="jaxrs" extends="default" description="Integration with JAX-RS"/>
+        <conf name="jdbc" extends="default" description="JDBC client connector using Apache connections pool"/>
+        <conf name="jetty" extends="default" description="Jetty 6 server HTTP connector"/>
+        <conf name="jibx" extends="default" description="Integration with JiBX"/>
+        <conf name="json" extends="default" description="Integration with JavaScript Object Notation"/>
+        <conf name="lucene" extends="default" description="Integration with Lucene"/>
+        <conf name="net" extends="default" description="HTTP client connector based on JDK's HttpUrlConnection"/>
+        <conf name="netty" extends="default" description="HTTP client connector based on Netty"/>
+        <conf name="odata" extends="default" description="Authentication plugin for the OData scheme"/>
+        <conf name="rdf" extends="default" description="RDF support"/>
+        <conf name="rome" extends="default" description="Rome support"/>
+        <conf name="simple" extends="default" description="Simple server HTTP connector"/>
+        <conf name="slf4j" extends="default" description="SLF4J logger connector"/>
+        <conf name="spring" extends="default" description="Integration with Spring Framework"/>
+        <conf name="ssl" extends="default" description="SSL Support"/>
+        <conf name="velocity" extends="default" description="Integration with Apache Velocity"/>
+        <conf name="wadl" extends="default" description="Support for WADL configuration"/>
+        <conf name="xml" extends="default" description="XML support"/>
+        <conf name="xstream" extends="default" description="Integration with XStream"/>
+        <conf name="test" extends="default" description="Restlet testing."/>
+    </configurations>
+
+    <publications>
+
+        <!-- JARs -->
+        <artifact name="org.restlet" conf="default"/>
+        <artifact name="org.restlet.example" conf="example"/>
+        <artifact name="org.restlet.ext.atom" conf="atom"/>
+        <artifact name="org.restlet.ext.crypto" conf="crypto"/>
+        <artifact name="org.restlet.ext.fileupload" conf="fileupload"/>
+        <artifact name="org.restlet.ext.freemarker" conf="freemarker"/>
+        <artifact name="org.restlet.ext.grizzly" conf="grizzly"/>
+        <artifact name="org.restlet.ext.gwt" conf="gwt"/>
+        <artifact name="org.restlet.ext.httpclient" conf="httpclient"/>
+        <artifact name="org.restlet.ext.jaas" conf="jaas"/>
+        <artifact name="org.restlet.ext.jackson" conf="jackson"/>
+        <artifact name="org.restlet.ext.javamail" conf="javamail"/>
+        <artifact name="org.restlet.ext.jaxb" conf="jaxb"/>
+        <artifact name="org.restlet.ext.jaxrs" conf="jaxrs"/>
+        <artifact name="org.restlet.ext.jdbc" conf="jdbc"/>
+        <artifact name="org.restlet.ext.jetty" conf="jetty"/>
+        <artifact name="org.restlet.ext.jibx" conf="jibx"/>
+        <artifact name="org.restlet.ext.json" conf="json"/>
+        <artifact name="org.restlet.ext.lucene" conf="lucene"/>
+        <artifact name="org.restlet.ext.net" conf="net"/>
+        <artifact name="org.restlet.ext.netty" conf="netty"/>
+        <artifact name="org.restlet.ext.odata" conf="odata"/>
+        <artifact name="org.restlet.ext.rdf" conf="rdf"/>
+        <artifact name="org.restlet.ext.rome" conf="rome"/>
+        <artifact name="org.restlet.ext.simple" conf="simple"/>
+        <artifact name="org.restlet.ext.slf4j" conf="slf4j"/>
+        <artifact name="org.restlet.ext.spring" conf="spring"/>
+        <artifact name="org.restlet.ext.ssl" conf="ssl"/>
+        <artifact name="org.restlet.ext.velocity" conf="velocity"/>
+        <artifact name="org.restlet.ext.wadl" conf="wadl"/>
+        <artifact name="org.restlet.ext.xml" conf="xml"/>
+        <artifact name="org.restlet.ext.xstream" conf="xstream"/>
+        <artifact name="org.restlet.test" conf="test"/>
+
+
+        <!-- Javadocs -->
+        <artifact name="api" type="javadoc" ext="zip"/>
+        <artifact name="ext" type="javadoc" ext="zip"/>
+        <artifact name="engine" type="javadoc" ext="zip"/>
+    </publications>
+
+<!--
+    TODO: see the lib/readme.txt file in the restlet download zip file. 
+    <dependencies>
+    </dependencies>
+-->
+
+</ivy-module>

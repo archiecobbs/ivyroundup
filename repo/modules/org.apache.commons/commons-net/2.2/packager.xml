@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Stephen Woods
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="07993c12f63c78378f8c90de4bc2ee62daa7ca3a"/>
+        <artifact classifier="ftp" tofile="artifacts/jars/${ivy.packager.module}-ftp.jar" sha1="70fb719196e4cfe61302198a58b1d2db66246b73"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="69f5ef7fda4187e1ad170c167095c7bf85a6dccf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="ff553d8d0ab747b733fb36e846d42fe8321ba64d"/>
+    </m2resource>
+
+</packager-module>

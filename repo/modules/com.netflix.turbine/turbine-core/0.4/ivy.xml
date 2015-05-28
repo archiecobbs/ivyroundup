@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Patrick Double
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.netflix.turbine" module="turbine-core" revision="0.4" status="release" publication="20130314120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.netflix.turbine/turbine-core/0.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/Netflix/turbine">
+
+            <p>
+            turbine-core developed by Netflix
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="turbine-core" ivyde:javadoc="turbine-core" conf="default"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+    
+    <dependencies>
+        <dependency org="com.netflix.archaius" name="archaius-core" rev="0.4.+" conf="default-&gt;default"/>
+        <dependency org="com.netflix.servo" name="servo-core" rev="0.4.+" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[2.4,3.0[" conf="default-&gt;default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.+" conf="default-&gt;default"/>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.9.+" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

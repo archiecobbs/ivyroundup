@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130719120000">
+        <license name="CDDL 1.1 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <description homepage="https://grizzly.java.net/">
+            <p>
+            The Grizzly NIO framework has been designed to help developers to take advantage of the Java NIO API. 
+            Grizzly's goal is to help developers to build scalable and robust servers using NIO as well as offering 
+            extended framework components: Web Framework (HTTP/S), WebSocket, Comet, and more!
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="framework" description="Core Framework"/>
+        <conf name="portunif" extends="framework" description="Port Unification Framework"/>
+        <conf name="rcm" extends="framework" description="Resource Consumption Management Support"/>
+        <conf name="core" extends="framework,portunif,rcm" description="Core Framework Bundle"/>
+
+        <conf name="http" extends="framework" description="Core HTTP Framework"/>
+        <conf name="http-server" extends="http,rcm" description="HTTP Server Framework"/>        
+        <conf name="http-servlet" extends="http-server" description="HTTP Servlet Framework"/>
+        <conf name="http-client" description="HTTP Client Handler"/>
+
+        <conf name="http-ajp" extends="http-server" description="Apache JServ Protocol Support"/>
+        <conf name="websockets" extends="framework,http,http-server,http-servlet" description="WebSocket Protocol Support"/>
+        <conf name="spdy" extends="http,http-server,npn-api" description="SPDY Protocol Support"/>
+        <conf name="comet" extends="framework,http-server" description="Commet Protocol Support"/>
+
+        <conf name="npn-api" description="Next Protocol Negotiation (NPN) Support"/>
+        <conf name="npn-osgi" description="NPN Bootstrapping for OSGi"/>
+        <conf name="npn-bootstrap" extends="npn-api" description="NPN Bootstrapping"/>
+
+        <conf name="http-server-multipart" extends="framework,http-server" description="Multipart (multipart/form-data) HTTP Requests Processing"/>
+        <conf name="http-server-jaxws" extends="http-server" description="JAX-WS Web Service Execution Support"/>
+        <conf name="http-servlet-extras" extends="http-servlet,http-server-multipart" description="HTTP Servlet Framework - Extras"/>
+        
+        <conf name="http-server-core" extends="core,http-server,http-ajp,http-server-multipart" description="HTTP Server Core"/>
+        <conf name="http-all" extends="http-server-core,http-servlet,comet,websockets" description="All HTTP Modules"/>
+        <conf name="http-servlet-server" extends="http-server-core,http-servlet,http-servlet-extras" description="HTTP Servlet Server"/>
+        <conf name="websockets-server" extends="http-server-core,websockets" description="WebSocket Server"/>
+        <conf name="comet-server" extends="http-server-core,comet" description="Comet Server"/>
+        
+        <conf name="httpservice" description="Extension of OSGi HTTPService for Servlet Registration"/>
+        <conf name="httpservice-bundle" description="HTTPService Bundle"/>
+
+        <conf name="framework-monitoring" extends="framework" description="Runtime Application Monitoring"/>
+        <conf name="http-monitoring" extends="http,framework-monitoring" description="Runtime HTTP Monitoring"/>
+        <conf name="http-server-monitoring" extends="http-server,framework-monitoring" description="Runtime HTTP Service Monitoring"/>
+
+        <conf name="default" extends="core" description="Core requirements"/>
+    </configurations>
+
+    <publications>
+        <!-- jars -->
+        <artifact name="grizzly-framework" conf="framework"/>
+        <artifact name="grizzly-http" conf="http"/>
+        <artifact name="grizzly-http-server" conf="http-server"/>
+        <artifact name="grizzly-http-servlet" conf="http-servlet"/>
+        <artifact name="grizzly-http-client" conf="http-client"/>
+        <artifact name="grizzly-portunif" conf="portunif"/>
+        <artifact name="grizzly-http-ajp" conf="http-ajp"/>
+        <artifact name="grizzly-websockets" conf="websockets"/>
+        <artifact name="grizzly-rcm" conf="rcm"/>
+        <artifact name="grizzly-spdy" conf="spdy"/>
+        <artifact name="grizzly-comet" conf="comet"/>
+        <artifact name="grizzly-http-server-multipart" conf="http-server-multipart"/>
+        <artifact name="grizzly-http-server-jaxws" conf="http-server-jaxws"/>
+        <artifact name="grizzly-http-servlet-extras" conf="http-servlet-extras"/>
+        <artifact name="grizzly-httpservice" conf="httpservice"/>
+        <artifact name="grizzly-framework-monitoring" conf="framework-monitoring"/>
+        <artifact name="grizzly-http-monitoring" conf="http-monitoring"/>
+        <artifact name="grizzly-http-server-monitoring" conf="http-server-monitoring"/>
+        <artifact name="grizzly-core" conf="core"/>
+        <artifact name="grizzly-http-server-core" conf="http-server-core"/>
+        <artifact name="grizzly-http-all" conf="http-all"/>
+        <artifact name="grizzly-http-servlet-server" conf="http-servlet-server"/>
+        <artifact name="grizzly-websockets-server" conf="websockets-server"/>
+        <artifact name="grizzly-comet-server" conf="comet-server"/>
+        <artifact name="grizzly-httpservice-bundle" conf="httpservice-bundle"/>
+        <artifact name="grizzly-npn-api" conf="npn-api"/>
+        <artifact name="grizzly-npn-osgi" conf="npn-osgi"/>
+        <artifact name="grizzly-npn-bootstrap" conf="npn-bootstrap"/>
+
+        <!-- source -->
+        <artifact name="grizzly-framework" type="source" ext="jar" conf="framework"/>
+        <artifact name="grizzly-http" type="source" ext="jar" conf="http"/>
+        <artifact name="grizzly-http-server" type="source" ext="jar" conf="http-server"/>
+        <artifact name="grizzly-http-servlet" type="source" ext="jar" conf="http-servlet"/>
+        <artifact name="grizzly-http-client" type="source" ext="jar" conf="http-client"/>
+        <artifact name="grizzly-portunif" type="source" ext="jar" conf="portunif"/>
+        <artifact name="grizzly-http-ajp" type="source" ext="jar" conf="http-ajp"/>
+        <artifact name="grizzly-websockets" type="source" ext="jar" conf="websockets"/>
+        <artifact name="grizzly-rcm" type="source" ext="jar" conf="rcm"/>
+        <artifact name="grizzly-spdy" type="source" ext="jar" conf="spdy"/>
+        <artifact name="grizzly-comet" type="source" ext="jar" conf="comet"/>
+        <artifact name="grizzly-http-server-multipart" type="source" ext="jar" conf="http-server-multipart"/>
+        <artifact name="grizzly-http-server-jaxws" type="source" ext="jar" conf="http-server-jaxws"/>
+        <artifact name="grizzly-http-servlet-extras" type="source" ext="jar" conf="http-servlet-extras"/>
+        <artifact name="grizzly-httpservice" type="source" ext="jar" conf="httpservice"/>
+        <artifact name="grizzly-framework-monitoring" type="source" ext="jar" conf="framework-monitoring"/>
+        <artifact name="grizzly-http-monitoring" type="source" ext="jar" conf="http-monitoring"/>
+        <artifact name="grizzly-http-server-monitoring" type="source" ext="jar" conf="http-server-monitoring"/>
+        <artifact name="grizzly-core" type="source" ext="jar" conf="core"/>
+        <artifact name="grizzly-http-server-core" type="source" ext="jar" conf="http-server-core"/>
+        <artifact name="grizzly-http-all" type="source" ext="jar" conf="http-all"/>
+        <artifact name="grizzly-http-servlet-server" type="source" ext="jar" conf="http-servlet-server"/>
+        <artifact name="grizzly-websockets-server" type="source" ext="jar" conf="websockets-server"/>
+        <artifact name="grizzly-comet-server" type="source" ext="jar" conf="comet-server"/>
+        <artifact name="grizzly-httpservice-bundle" type="source" ext="jar" conf="httpservice-bundle"/>
+        <artifact name="grizzly-npn-api" type="source" ext="jar" conf="npn-api"/>
+        <artifact name="grizzly-npn-bootstrap" type="source" ext="jar" conf="npn-bootstrap"/>
+
+        <!-- javadoc -->
+        <artifact name="grizzly-framework" type="javadoc" ext="jar" conf="framework"/>
+        <artifact name="grizzly-http" type="javadoc" ext="jar" conf="http"/>
+        <artifact name="grizzly-http-server" type="javadoc" ext="jar" conf="http-server"/>
+        <artifact name="grizzly-http-servlet" type="javadoc" ext="jar" conf="http-servlet"/>
+        <artifact name="grizzly-http-client" type="javadoc" ext="jar" conf="http-client"/>
+        <artifact name="grizzly-portunif" type="javadoc" ext="jar" conf="portunif"/>
+        <artifact name="grizzly-http-ajp" type="javadoc" ext="jar" conf="http-ajp"/>
+        <artifact name="grizzly-websockets" type="javadoc" ext="jar" conf="websockets"/>
+        <artifact name="grizzly-rcm" type="javadoc" ext="jar" conf="rcm"/>
+        <artifact name="grizzly-spdy" type="javadoc" ext="jar" conf="spdy"/>
+        <artifact name="grizzly-comet" type="javadoc" ext="jar" conf="comet"/>
+        <artifact name="grizzly-http-server-multipart" type="javadoc" ext="jar" conf="http-server-multipart"/>
+        <artifact name="grizzly-http-server-jaxws" type="javadoc" ext="jar" conf="http-server-jaxws"/>
+        <artifact name="grizzly-http-servlet-extras" type="javadoc" ext="jar" conf="http-servlet-extras"/>
+        <artifact name="grizzly-httpservice" type="javadoc" ext="jar" conf="httpservice"/>
+        <artifact name="grizzly-framework-monitoring" type="javadoc" ext="jar" conf="framework-monitoring"/>
+        <artifact name="grizzly-http-monitoring" type="javadoc" ext="jar" conf="http-monitoring"/>
+        <artifact name="grizzly-http-server-monitoring" type="javadoc" ext="jar" conf="http-server-monitoring"/>
+        <artifact name="grizzly-core" type="javadoc" ext="jar" conf="core"/>
+        <artifact name="grizzly-http-server-core" type="javadoc" ext="jar" conf="http-server-core"/>
+        <artifact name="grizzly-http-all" type="javadoc" ext="jar" conf="http-all"/>
+        <artifact name="grizzly-http-servlet-server" type="javadoc" ext="jar" conf="http-servlet-server"/>
+        <artifact name="grizzly-websockets-server" type="javadoc" ext="jar" conf="websockets-server"/>
+        <artifact name="grizzly-comet-server" type="javadoc" ext="jar" conf="comet-server"/>
+        <artifact name="grizzly-httpservice-bundle" type="javadoc" ext="jar" conf="httpservice-bundle"/>
+        <artifact name="grizzly-npn-api" type="javadoc" ext="jar" conf="npn-api"/>
+        <artifact name="grizzly-npn-osgi" type="javadoc" ext="jar" conf="npn-osgi"/>
+        <artifact name="grizzly-npn-bootstrap" type="javadoc" ext="jar" conf="npn-bootstrap"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.servlet" name="servletapi" rev="3.0.1" conf="http-servlet-extras,http-all->default"/>
+        <dependency org="org.glassfish.gmbal" name="gmbal" rev="3.2.0-b003" conf="framework-monitoring->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.4" conf="http-client->default"/>
+    </dependencies>
+</ivy-module>

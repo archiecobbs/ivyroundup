@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.sun.jersey" module="jersey" revision="1.13" status="release" publication="20120629000000">
+        <license name="CDDL 1.1 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.sun.jersey/jersey/1.13/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://java.net/projects/jersey/">
+            <p>
+                Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation
+                for building RESTful Web services. But, it is also more than the Reference Implementation.
+                Jersey provides an API so that developers may extend Jersey to suite their needs. The
+                governance policy is the same as the one used in the GlassFish project. We also use the
+                same two licenses - CDDL 1.1 and GPL 2 with CPE - so, you can pick which one suites your
+                needs better.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core code only"/>
+        <conf name="default" extends="core" description="Default conf = core"/>
+        <conf name="atom" extends="core" description="ATOM support"/>
+        <conf name="client" extends="core" description="Jersey client"/>
+        <conf name="fastinfoset" extends="core" description="Fastinfoset support"/>
+        <conf name="grizzly" description="Grizzly classes"/>
+        <conf name="grizzly2" description="Grizzly 2.0 Container for Jersey"/>
+        <conf name="grizzly2-servlet" description="Grizzly 2.0 Servlet Container for Jersey"/>
+        <conf name="guice" extends="server" description="Guice support"/>
+        <conf name="json" extends="core" description="JSON support"/>
+        <conf name="server" extends="core" description="Jersey server"/>
+        <conf name="server-linking" extends="server" description="Jersey server linking"/>
+        <conf name="servlet" extends="server" description="Jersey servlet"/>
+        <conf name="spring" extends="server" description="Spring support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-atom" ivyde:javadoc="jersey-atom" name="jersey-atom" conf="atom"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-client" ivyde:javadoc="jersey-client" name="jersey-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-core" ivyde:javadoc="jersey-core" name="jersey-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-fastinfoset" ivyde:javadoc="jersey-fastinfoset" name="jersey-fastinfoset" conf="fastinfoset"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-grizzly" ivyde:javadoc="jersey-grizzly" name="jersey-grizzly" conf="grizzly"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-grizzly2" ivyde:javadoc="jersey-grizzly2" name="jersey-grizzly2" conf="grizzly2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-grizzly2-servlet" ivyde:javadoc="jersey-grizzly2-servlet" name="jersey-grizzly2-servlet" conf="grizzly2-servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-guice" ivyde:javadoc="jersey-guice" name="jersey-guice" conf="guice"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-json" ivyde:javadoc="jersey-json" name="jersey-json" conf="json"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server" ivyde:javadoc="jersey-server" name="jersey-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server-linking" ivyde:javadoc="jersey-server-linking" name="jersey-server-linking" conf="server-linking"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-servlet" ivyde:javadoc="jersey-servlet" name="jersey-servlet" conf="servlet"/>
+
+        <!-- source -->
+        <artifact name="jersey-atom" type="source" ext="zip" conf="atom"/>
+        <artifact name="jersey-client" type="source" ext="zip" conf="client"/>
+        <artifact name="jersey-core" type="source" ext="zip" conf="core"/>
+        <artifact name="jersey-fastinfoset" type="source" ext="zip" conf="fastinfoset"/>
+        <artifact name="jersey-grizzly" type="source" ext="zip" conf="grizzly"/>
+        <artifact name="jersey-grizzly2" type="source" ext="zip" conf="grizzly2"/>
+        <artifact name="jersey-grizzly2-servlet" type="source" ext="zip" conf="grizzly2-servlet"/>
+        <artifact name="jersey-guice" type="source" ext="zip" conf="guice"/>
+        <artifact name="jersey-json" type="source" ext="zip" conf="json"/>
+        <artifact name="jersey-server" type="source" ext="zip" conf="server"/>
+        <artifact name="jersey-server-linking" type="source" ext="zip" conf="server-linking"/>
+        <artifact name="jersey-servlet" type="source" ext="zip" conf="servlet"/>
+
+        <!-- javadoc -->
+        <artifact name="jersey-atom" type="javadoc" ext="zip" conf="atom"/>
+        <artifact name="jersey-client" type="javadoc" ext="zip" conf="client"/>
+        <artifact name="jersey-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="jersey-fastinfoset" type="javadoc" ext="zip" conf="fastinfoset"/>
+        <artifact name="jersey-grizzly" type="javadoc" ext="zip" conf="grizzly"/>
+        <artifact name="jersey-grizzly2" type="javadoc" ext="zip" conf="grizzly2"/>
+        <artifact name="jersey-grizzly2-servlet" type="javadoc" ext="zip" conf="grizzly2-servlet"/>
+        <artifact name="jersey-guice" type="javadoc" ext="zip" conf="guice"/>
+        <artifact name="jersey-json" type="javadoc" ext="zip" conf="json"/>
+        <artifact name="jersey-server" type="javadoc" ext="zip" conf="server"/>
+        <artifact name="jersey-server-linking" type="javadoc" ext="zip" conf="server-linking"/>
+        <artifact name="jersey-servlet" type="javadoc" ext="zip" conf="servlet"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google" name="guice" rev="3.0" conf="guice-&gt;servlet"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="server-&gt;default"/>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.+" conf="json-&gt;jaxrs,xc"/>
+        <dependency org="org.codehaus.jettison" name="jettison" rev="1.+" conf="json-&gt;default"/>
+        <dependency org="javax.xml.bind" name="jaxb" rev="2.2.4+" conf="fastinfoset,json-&gt;runtime"/>
+        <dependency org="javax.ws.rs" name="jsr311-api" rev="1.+" conf="core-&gt;default"/>
+        <dependency org="rome" name="rome" rev="0.9" conf="atom-&gt;default"/>
+        <dependency org="org.jdom" name="jdom" rev="1+" conf="atom-&gt;default"/>
+        <dependency org="com.sun.xml.fastinfoset" name="FastInfoset" rev="1.2.9" conf="fastinfoset-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

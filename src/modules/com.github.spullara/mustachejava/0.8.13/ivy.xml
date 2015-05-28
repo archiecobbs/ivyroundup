@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130701120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/spullara/mustache.java">
+
+            <p>
+            Mustache.java is a derivative of mustache.js which is
+            a logic-less templating system that can be used for
+            HTML, config files, source code - anything. It works
+            by expanding tags in a template using values provided
+            in a hash or object.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="compiler" description="Compiler"/>
+        <conf name="handlebar" extends="compiler" description="Handlebar Implementation"/>
+        <conf name="codegen" extends="compiler" description="Code Generator"/>
+        <conf name="indy" extends="codegen" description="Indy"/>
+        <conf name="default" extends="compiler" description="Synonym for Compiler"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="mustachejava-compiler" conf="compiler"/>
+        <artifact name="mustachejava-handlebar" conf="handlebar"/>
+        <artifact name="mustachejava-codegen" conf="codegen"/>
+        <artifact name="mustachejava-indy" conf="indy"/>
+
+        <!-- source -->
+        <artifact name="mustachejava-compiler" type="source" ext="jar" conf="compiler"/>
+        <artifact name="mustachejava-handlebar" type="source" ext="jar" conf="handlebar"/>
+        <artifact name="mustachejava-codegen" type="source" ext="jar" conf="codegen"/>
+        <artifact name="mustachejava-indy" type="source" ext="jar" conf="indy"/>
+
+        <!-- javadoc -->
+        <artifact name="mustachejava-compiler" type="javadoc" ext="jar" conf="compiler"/>
+        <artifact name="mustachejava-handlebar" type="javadoc" ext="jar" conf="handlebar"/>
+        <artifact name="mustachejava-codegen" type="javadoc" ext="jar" conf="codegen"/>
+        <artifact name="mustachejava-indy" type="javadoc" ext="jar" conf="indy"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="13.0" conf="compiler->default"/>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.9.4" conf="handlebar->mapper"/>
+        <dependency org="com.github.spullara" name="cli-parser" rev="1.0" conf="handlebar->default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="4.0" conf="codegen->commons,util"/>
+    </dependencies>
+
+</ivy-module>

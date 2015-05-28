@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20090110180000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://spring.io/">
+            Spring is a layered Java/J2EE application framework, based on code
+            published in Expert One-on-One J2EE Design and Development by Rod Johnson
+            (Wrox, 2002).
+
+            Spring includes:
+            <ul>
+                <li><b>The most complete lightweight container</b>, providing
+                centralized, automated configuration and wiring of your
+                application objects.  The container is non-invasive,
+                capable of assembling a complex system from a set of
+                loosely-coupled components (POJOs) in a consistent
+                and transparent fashion.  The container brings agility
+                and leverage, and improves application testability and
+                scalability by allowing software components to be first
+                developed and tested in isolation, then scaled up for
+                deployment in any environment (J2SE or J2EE).</li>
+
+                <li><b>A common abstraction layer for transaction management</b>,
+                allowing for pluggable transaction managers, and making
+                it easy to demarcate transactions without dealing with
+                low-level issues. Generic strategies for JTA and a single
+                JDBC DataSource are included. In contrast to plain JTA
+                or EJB CMT, Spring's transaction support is not tied to
+                J2EE environments.</li>
+
+                <li><b>A JDBC abstraction layer</b> that offers a meaningful
+                exception hierarchy (no more pulling vendor codes out
+                of SQLException), simplifies error handling, and greatly
+                reduces the amount of code you'll need to write. You'll
+                never need to write another finally block to use JDBC
+                again. The JDBC-oriented exceptions comply to Spring's
+                generic DAO exception hierarchy.</li>
+
+                <li><b>Integration with Toplink, Hibernate, JDO, and iBATIS
+                SQL Maps</b>: in terms of resource holders, DAO implementation
+                support, and transaction strategies. First-class Hibernate
+                support with lots of IoC convenience features, addressing
+                many typical Hibernate integration issues. All of these
+                comply to Spring's generic transaction and DAO exception
+                hierarchies.</li>
+
+                <li><b>AOP functionality</b>, fully integrated into Spring
+                configuration management. You can AOP-enable any object
+                managed by Spring, adding aspects such as declarative
+                transaction management. With Spring, you can have
+                declarative transaction management without EJB... even
+                without JTA, if you're using a single database in Tomcat
+                or another web container without JTA support.</li>
+
+                <li><b>A flexible MVC web application framework</b>, built
+                on core Spring functionality. This framework is highly
+                configurable via strategy interfaces, and accommodates
+                multiple view technologies like JSP, Velocity, Tiles,
+                iText, and POI. Note that a Spring middle tier can easily
+                be combined with a web tier based on any other web MVC
+                framework, like Struts, WebWork, or Tapestry.</li>
+            </ul>
+
+            You can use all of Spring's functionality in any J2EE
+            server, and most of it also in non-managed environments. A
+            central focus of Spring is to allow for reusable business
+            and data access objects that are not tied to specific J2EE
+            services. Such objects can be reused across J2EE environments
+            (web or EJB), standalone applications, test environments,
+            etc without any hassle.
+
+            Spring's layered architecture gives you a lot of
+            flexibility. All its functionality builds on lower levels. So
+            you can e.g. use the JavaBeans configuration management
+            without using the MVC framework or AOP support. But if you
+            use the web MVC framework or AOP support, you'll find they
+            build on the configuration framework, so you can apply your
+            knowledge about it immediately.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="aop" extends="core, beans" description="Spring AOP"/>
+        <conf name="beans" extends="core" description="Spring Beans"/>
+        <conf name="cglib" extends="aop" description="Include CGLIB support for proxied classes"/>
+        <conf name="context" extends="beans, aop" description="Spring Context"/>
+        <conf name="context-support" extends="context, aop, jdbc" description="Spring Context Support"/>
+        <conf name="core" description="Spring Core"/>
+        <conf name="jdbc" extends="beans, tx" description="Spring JDBC"/>
+        <conf name="jms" extends="beans, tx" description="Spring JMS"/>
+        <conf name="orm" extends="jdbc, web" description="Spring ORM"/>
+        <conf name="test" extends="core, context, jdbc, web" description="Spring Test"/>
+        <conf name="tx" extends="core, aop, context" description="Spring Transaction"/>
+        <conf name="web" extends="context" description="Spring Web"/>
+        <conf name="webmvc" extends="web" description="Spring Web MVC"/>
+        <conf name="webmvc-portlet" extends="webmvc" description="Spring Web MVC+Portlet"/>
+        <conf name="webmvc-struts" extends="webmvc" description="Spring Web MVC+Struts"/>
+        <conf name="full" description="Single combined JAR will all standard modules"/>
+        <conf name="default" description="Everything (all of the module JARs)"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="spring" conf="full"/>
+        <artifact name="aop" conf="default,aop"/>
+        <artifact name="beans" conf="default,beans"/>
+        <artifact name="context" conf="default,context"/>
+        <artifact name="context-support" conf="default,context-support"/>
+        <artifact name="core" conf="default,core"/>
+        <artifact name="jdbc" conf="default,jdbc"/>
+        <artifact name="jms" conf="default,jms"/>
+        <artifact name="orm" conf="default,orm"/>
+        <artifact name="test" conf="default,test"/>
+        <artifact name="tx" conf="default,tx"/>
+        <artifact name="web" conf="default,web"/>
+        <artifact name="webmvc" conf="default,webmvc"/>
+        <artifact name="webmvc-portlet" conf="default,webmvc-portlet"/>
+        <artifact name="webmvc-struts" conf="default,webmvc-struts"/>
+
+        <!-- source -->
+        <artifact name="spring" type="source" ext="zip" conf="full"/>
+        <artifact name="aop" type="source" ext="zip" conf="default,aop"/>
+        <artifact name="beans" type="source" ext="zip" conf="default,beans"/>
+        <artifact name="context" type="source" ext="zip" conf="default,context"/>
+        <artifact name="context-support" type="source" ext="zip" conf="default,context-support"/>
+        <artifact name="core" type="source" ext="zip" conf="default,core"/>
+        <artifact name="jdbc" type="source" ext="zip" conf="default,jdbc"/>
+        <artifact name="jms" type="source" ext="zip" conf="default,jms"/>
+        <artifact name="orm" type="source" ext="zip" conf="default,orm"/>
+        <artifact name="test" type="source" ext="zip" conf="default,test"/>
+        <artifact name="tx" type="source" ext="zip" conf="default,tx"/>
+        <artifact name="web" type="source" ext="zip" conf="default,web"/>
+        <artifact name="webmvc" type="source" ext="zip" conf="default,webmvc"/>
+        <artifact name="webmvc-portlet" type="source" ext="zip" conf="default,webmvc-portlet"/>
+        <artifact name="webmvc-struts" type="source" ext="zip" conf="default,webmvc-struts"/>
+
+        <!-- javadoc -->
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency conf="full,default,aop->default" org="org.aopalliance" name="aopalliance" rev="1.+"/>
+        <dependency conf="full,default,core->default" org="org.apache.commons" name="commons-logging" rev="1.+"/>
+        <dependency conf="full,default,jms->default" org="javax.jms" name="jms" rev="1.+"/>
+        <dependency conf="cglib->default" org="net.sourceforge.cglib" name="cglib" rev="2.2"/>
+    </dependencies>
+
+</ivy-module>

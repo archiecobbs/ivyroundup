@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/${name}-core.jar"
+      url="http://${name}.googlecode.com/files/${name}-core-${revision}.jar"
+      sha1="dd07cc3d6a109ec635a5f0eff179bb70bc46ba77"/>
+    <resource tofile="artifacts/jars/${name}-pidf.jar"
+      url="http://${name}.googlecode.com/files/${name}-pidf-${revision}.jar"
+      sha1="f4b2dc458295eee6363451da4a653e1a852fbefc"/>
+    <resource tofile="artifacts/jars/${name}-twilio.jar"
+      url="http://${name}.googlecode.com/files/${name}-twilio-${revision}.jar"
+      sha1="1b4d8b78ed92c14e5028b3a72d12449d5bf67eb5"/>
+
+    <resource tofile="artifacts/javadocs/javadoc.zip"
+      url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip"
+      sha1="9e65615fcd8935940e9f76ff071504773055ba47"/>
+    <resource tofile="artifacts/sources/source.zip"
+      url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip"
+      sha1="69eb79f0f0d82895fcaa7418dcc340acb59db5bb"/>
+
+</packager-module>

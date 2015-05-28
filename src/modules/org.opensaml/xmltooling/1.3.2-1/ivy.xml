@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2011 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module>
+    <info publication="20110913062040">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://wiki.shibboleth.net/confluence/display/OpenSAML/Home/">
+            XMLTooling-J is a low-level library that may be used to construct libraries that allow developers to work with
+            XML in a Java beans manner.
+        </description>
+    </info>
+    <configurations>
+        <conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf"/>
+    </configurations>
+    <publications>
+        <artifact/>
+    </publications>
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.1,)" conf="default-&gt;core"/>
+        <dependency org="org.joda" name="joda-time" rev="[1.6.2,)" conf="default-&gt;default"/>
+        <dependency org="org.bouncycastle" name="bcprov" rev="[1.45,)" conf="default-&gt;default"/>
+        <dependency org="org.apache.xml" name="xml-security" rev="[1.4.4,)" conf="default-&gt;default">
+            <exclude org="org.apache.commons" module="commons-logging" name="*" type="*" ext="*" conf="" matcher="exact"/>
+        </dependency>
+        <dependency org="ca.juliusdavies" name="not-yet-commons-ssl" rev="[0.3.9,)" conf="default-&gt;default">
+            <exclude org="org.apache.log4j" module="log4j" name="*" type="*" ext="*" conf="" matcher="exact"/>
+            <exclude org="commons-logging" module="commons-logging" name="*" type="*" ext="*" conf="" matcher="exact"/>
+        </dependency>
+        <dependency org="net.jcip" name="jcip-annotations" rev="[1.0,)" conf="default-&gt;default"/>
+        <dependency org="org.apache.xml" name="xml-resolver" rev="[1.2,)" conf="default-&gt;default"/>
+        <dependency org="org.apache.xml" name="xalan-j" rev="[2.7.1,)" conf="default-&gt;default"/>
+        <dependency org="org.apache.xml" name="xml-commons-external" rev="[1.4.01,)" conf="default->default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[2.10.0,)" conf="default-&gt;default"/>
+    </dependencies>
+</ivy-module>

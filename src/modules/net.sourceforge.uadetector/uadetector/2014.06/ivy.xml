@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20140707120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://uadetector.sourceforge.net/">
+            <p>
+UADetector is a library to identify over 190 different desktop and mobile browsers and 130 other User-Agents like feed readers, email clients and multimedia players. In addition, even more than 400 robots like BingBot, Googlebot or Yahoo Bot can be identified.
+            </p>
+
+            <p>
+This library is a free, portable Java library to analyze User-Agent strings. The goal of this library is to detect the type and the associated operating system of a client like Mobile Firefox 9.0 on Android or Mobile Safari 5.1 on iOS.
+            </p>
+
+            <p>
+UADetector is divided into two modules. The <a href="http://uadetector.sourceforge.net/modules/uadetector-core/index.html">Core</a> module includes the API and implementation to read detection information and functions to identify User-Agents. The <a href="http://uadetector.sourceforge.net/modules/uadetector-resources/index.html">Resources</a> module contains the database with all necessary identification informations and a service factory class to get simply preconfigured UserAgentStringParser singletons. The Resources library is published monthly and is integration-tested against a specific Core module. Therefore we can guarantee that the parsing works like expected.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="resources" description="Resource classes"/>
+        <conf name="default" extends="core,resources" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <artifact name="uadetector-core" conf="core"/>
+        <artifact name="uadetector-resources" conf="resources"/>
+
+        <artifact name="uadetector-core-source" type="source" ext="zip" conf="core"/>
+        <artifact name="uadetector-resources-source" type="source" ext="zip" conf="resources"/>
+
+        <artifact name="uadetector-core-javadoc" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="uadetector-resources-javadoc" type="javadoc" ext="zip" conf="resources"/>
+    </publications>
+
+    <dependencies>
+        <!-- Currently missing dependencies for jsr305 and quality-check -->
+        <dependency org="javax.annotation" name="jsr250-api" rev="1.0" conf="default->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

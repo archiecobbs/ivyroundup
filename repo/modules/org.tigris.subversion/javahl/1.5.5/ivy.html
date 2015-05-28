@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>javahl by org.tigris.subversion :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.tigris.subversion/javahl/">javahl</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.tigris.subversion/">org.tigris.subversion</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.5.5</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://subversion.tigris.org/">http://subversion.tigris.org/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://subversion.tigris.org/license-1.html">Subversion License</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.tigris.subversion/javahl/1.5.5/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://subversion.tigris.org/">Official java bindings for the subversion client libraries.</description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>windows-native</td>
+<td></td>
+<td>default</td>
+</tr>
+<tr>
+<td>windows-native_apache-2.0</td>
+<td></td>
+<td>default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>svnjavahl.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>libsvnjavahl-1.dll</td>
+<td>dll</td>
+<td>windows-native,default</td>
+</tr>
+<tr>
+<td>libsvnjavahl-1_apache-2.0.dll</td>
+<td>dll</td>
+<td>windows-native_apache-2.0,default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>svn-win32-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://subversion.tigris.org/files/documents/15/44587/${archive}_${name}.zip</td>
+<td>Unpack into archive/</td>
+<td>ce3e6fa8ae08354637bfc11537fb7c99b64835cf</td>
+</tr>
+<tr>
+<td>http://subversion.tigris.org/files/documents/15/44594/${archive}_${name}.zip</td>
+<td>Unpack into archive2/</td>
+<td>499b18b0b0d651f74a134885adff46937fe7a5ee</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${name}/svnjavahl.jar" todir="artifacts/jars"/&gt;
+
+        &lt;!-- dll --&gt;
+        &lt;mkdir dir="artifacts/dlls"/&gt;
+        &lt;move file="archive/${archive}/${name}/libsvnjavahl-1.dll" todir="artifacts/dlls"/&gt;
+        &lt;move file="archive2/${archive}/${name}/libsvnjavahl-1.dll" tofile="artifacts/dlls/libsvnjavahl-1_apache-2.0.dll"/&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

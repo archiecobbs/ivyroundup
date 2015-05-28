@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.xhtmlrenderer" module="flying-saucer" revision="9.0.1" status="release" publication="20080406120000">
+        <license name="GNU Lesser General Public License, version 2.1 or later" url="http://www.gnu.org/copyleft/lesser.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.xhtmlrenderer/flying-saucer/9.0.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/flying-saucer/">
+
+            <p>
+            Flying Saucer is a pure-Java library for rendering well-formed XML using CSS 2.1 for layout and formatting.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core"/>
+        <conf name="log4j" extends="core" description="Logging through log4j"/>
+        <conf name="pdf" extends="core" description="Original PDF renderer"/>
+        <conf name="itext5" extends="core" description="iText 5 based PDF renderer"/>
+        <conf name="swt" extends="core" description="SWT support"/>
+        <conf name="default" extends="core"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="core"/>
+        <artifact conf="core" name="source" type="source" ext="zip"/>
+        <artifact conf="core" name="javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="log4j" name="flying-saucer-log4j"/>
+        <artifact conf="log4j" name="log4j-source" type="source" ext="zip"/>
+        <artifact conf="log4j" name="log4j-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="pdf" name="flying-saucer-pdf"/>
+        <artifact conf="pdf" name="pdf-source" type="source" ext="zip"/>
+        <artifact conf="pdf" name="pdf-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="itext5" name="flying-saucer-itext5"/>
+        <artifact conf="itext5" name="itext5-source" type="source" ext="zip"/>
+        <artifact conf="itext5" name="itext5-javadoc" type="javadoc" ext="zip"/>
+
+        <artifact conf="swt" name="flying-saucer-swt"/>
+        <artifact conf="swt" name="swt-source" type="source" ext="zip"/>
+        <artifact conf="swt" name="swt-javadoc" type="javadoc" ext="zip"/>
+
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2.17" conf="log4j-&gt;default"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="2.1.7" conf="pdf-&gt;core"/>
+        <dependency org="com.itextpdf" name="itext" rev="5.3.0" conf="itext5-&gt;default"/>
+        <dependency org="org.eclipse.swt" name="swt" rev="3.6.0" conf="swt-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

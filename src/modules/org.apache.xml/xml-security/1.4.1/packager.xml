@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-bin-1_4_1"/>
+    <property name="topdir" value="${name}-1_4_1"/>
+
+    <resource url="http://archive.apache.org/dist/santuario/java-library/${archive}.zip"
+      sha1="5cd18194498ed4406d973e43cda3ee3f3194f238"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${topdir}/libs/xmlsec-${revision}.jar" tofile="artifacts/jars/xmlsec.jar"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${topdir}/doc/Java/api"/>
+        </zip>
+    </build>
+</packager-module>

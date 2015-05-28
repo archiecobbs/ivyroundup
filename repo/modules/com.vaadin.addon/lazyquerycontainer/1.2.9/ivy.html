@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>lazyquerycontainer by com.vaadin.addon :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.vaadin.addon/lazyquerycontainer/">lazyquerycontainer</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.vaadin.addon/">com.vaadin.addon</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.2.9</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://vaadin.com/directory#addon/lazy-query-container">http://vaadin.com/directory#addon/lazy-query-container</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License, Version 3.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.vaadin.addon/lazyquerycontainer/1.2.9/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://vaadin.com/directory#addon/lazy-query-container">
+
+            <p>
+            Lazy Query Container is a <a href="http://www.vaadin.com/">Vaadin framework</a>
+            addon which provides lazy loading container for Vaadin tables. Lazy Query
+            Container supports buffered reads and writes of items. Data
+            reads and writes are delegated through Query interface to
+            an application specific business delegate.
+            </p>
+
+            <p>
+            The QueryFactory and Query interface implementations are
+            designed to be application specific and should invoke a data
+            source like WebService client, JDBC connection, JPA context
+            or Java service class to read and write data items. The data
+            source has to support querying data in batches.
+            </p>
+
+            <p>
+            Lazy Query Container supports the following features: lazy
+            loading of items, loading items in batches, item caching with
+            limited cache size, sorting, query statistics, changing item
+            set and changing property set. Since version 1.1.0 Lazy Query
+            Container also supports adding items, modifying items and
+            removing items. The changes are buffered and can be either
+            commited or discarded. Row status icons and status column
+            generator are also included to allow for visualization of row
+            states. See the demo for hands on experience on the features.
+            </p>
+
+            <p>
+            Specialized classes (see
+            <a href="http://vaadin.com/wiki/-/wiki/Main/Lazy%20Query%20Container/">Wiki</a>
+            page for examples):
+            <ul>
+            <li>CompositeItem for combining beans and dynamic properties</li>
+            <li>EntityContainer specialized container for easy use of JPA with LQC</li>
+                <ul>
+                <li>Both container and application managed transactions are supported</li>
+                <li>Both attached and detached entities are supported</li>
+                </ul>
+            </ul>
+            <li>BeanQueryFactory for queries loading JavaBeans</li>
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>lazyquerycontainer.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr></tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>com.vaadin</td>
+<td><a href="../../../com.vaadin/vaadin/">vaadin</a></td>
+<td>[6.6,7.0[</td>
+<td>default-&gt;default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody><tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>org/vaadin/addons/${name}</td>
+<td>vaadin-${name}</td>
+<td>1.2.9</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/${name}.jar</td>
+<td>3928cd81c053fe14bf1b416b4d594b7f671d9a22</td>
+</tr></tbody>
+</table>
+</div>
+</body>
+</html>

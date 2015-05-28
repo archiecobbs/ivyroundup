@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20101129120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://velocity.apache.org/">
+
+            <p>
+            The Apache Velocity Engine is a free open-source templating engine.
+            </p>
+
+            <p>
+            Velocity permits you to use a simple yet powerful template
+            language to reference objects defined in Java code. It is
+            written in 100% pure Java and can be easily embedded into
+            your own applications. The engine is the core of the
+            <a href="http://velocity.apache.org/">Apache Velocity Project</a>.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2.1" force="true" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.4" force="true" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

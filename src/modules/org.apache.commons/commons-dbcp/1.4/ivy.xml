@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Adrian Woodhead.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100214120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://commons.apache.org/proper/commons-dbcp/">
+
+            <p>
+            Many Jakarta projects support interaction with a relational
+            database. Creating a new connection for each user can be time
+            consuming (often requiring multiple seconds of clock time),
+            in order to perform a database transaction that might take
+            milliseconds. Opening a connection per user can be unfeasible
+            in a publicly-hosted Internet application where the number
+            of simultaneous users can be very large. Accordingly,
+            developers often wish to share a "pool" of open connections
+            between all of the application's current users. The number
+            of users actually performing a request at any given time is
+            usually a very small percentage of the total number of active
+            users, and during request processing is the only time that a
+            database connection is required. The application itself logs
+            into the DBMS, and handles any user account issues internally.
+            </p>
+
+            <p>
+            There are several Database Connection Pools already available,
+            both within Jakarta products and elsewhere. This Commons
+            package provides an opportunity to coordinate the efforts
+            required to create and maintain an efficient, feature-rich
+            package under the ASF license.
+            </p>
+
+            <p>
+            The commons-dbcp package relies on code in the commons-pool
+            package to provide the underlying object pool mechanisms
+            that it utilizes.
+            </p>
+
+            <p>
+            Applications can use the commons-dbcp component
+            directly or through the existing interface of
+            their container / supporting framework. For example
+            the <a href="http://tomcat.apache.org/">Tomcat</a>
+            servlet container presents a DBCP DataSource as a JNDI
+            Datasource. <a href="http://james.apache.org/">James</a>
+            (Java Apache Mail Enterprise Server) has integrated DBCP
+            into the <a href="http://avalon.apache.org/">Avalon</a>
+            framework. A Avalon-style datasource is created by wrapping
+            the DBCP implementation. The pooling logic of DBCP and the
+            configuration found in Avalon's excalibur code is what was
+            needed to create an integrated reliable DataSource.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-pool" rev="1.6+" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

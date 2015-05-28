@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20060604154100">
+        <license name="LGPL" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <description homepage="http://toedter.com/jcalendar/"><![CDATA[
+        JCalendar is a Java date chooser bean for graphically picking a date.
+        JCalendar is composed of several other Java beans, a JDayChooser, a
+        JMonthChooser and a JYearChooser. All these beans have a locale
+        property, provide several icons (Color 16x16, Color 32x32, Mono
+        16x16 and Mono 32x32) and their own locale property editor. So they
+        can easily be used in GUI builders. Also part of the package is a
+        JDateChooser, a bean composed of an IDateEditor (for direct date
+        editing) and a button for opening a JCalendar for selecting the date.
+        ]]></description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.jgoodies" name="looks" rev="[2.0.1,)" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>

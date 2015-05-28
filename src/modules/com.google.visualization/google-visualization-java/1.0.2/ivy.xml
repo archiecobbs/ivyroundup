@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20090817120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/google/google-visualization-java">
+This library makes it easy to implement a Visualization data source so that you can easily chart or visualize your data from any of your data stores. The library implements the Google Visualization API wire protocol and query language. You therefore need write only the code required to make your data available to the library in the form of a data table. This task is made easier by the provision of abstract classes and helper functions.
+        </description>
+    </info>
+
+    <configurations>
+       <conf name="default" description="The default configuration, just the jar."/>
+       <conf name="all" description="The jar and sources." extends="default"/>
+    </configurations>
+
+    <publications>
+        <artifact name="visualization-datasource" type="jar"/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="*->default">
+        <artifact name="commons-lang" type="jar" />
+      </dependency>
+      <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1" conf="*->default">
+        <artifact name="commons-logging" type="jar" />
+      </dependency>
+      <dependency org="com.google.common" name="google-collections" rev="1.0-rc2" conf="*->default"/>
+      <dependency org="com.ibm.icu4j" name="icu4j" rev="4.0.1.1" conf="*->default"/>
+      <dependency org="net.sourceforge.opencsv" name="opencsv" rev="1.8" conf="*->default">
+        <artifact name="opencsv" type="jar" />
+      </dependency>
+    </dependencies>
+
+</ivy-module>

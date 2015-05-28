@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>commons-jexl by org.apache.commons :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.commons/commons-jexl/">commons-jexl</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.commons/">org.apache.commons</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://commons.apache.org/proper/commons-jexl/">http://commons.apache.org/proper/commons-jexl/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.commons/commons-jexl/1.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://commons.apache.org/proper/commons-jexl/">
+        JEXL is a library intended to facilitate the implementation of dynamic and scripting features in applications and frameworks written in Java.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>junit3</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>commons-jexl.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>[1.0.3,2.0[</td>
+<td>default-&gt;default</td>
+</tr>
+<tr>
+<td>org.junit</td>
+<td><a href="../../../org.junit/junit/">junit</a></td>
+<td>[3.8,4.0[</td>
+<td>junit3-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+<tr>
+<td>mirror1</td>
+<td>http://apache.osuosl.org/commons/jexl</td>
+</tr>
+<tr>
+<td>mirror2</td>
+<td>http://mirrors.gigenet.com/apache/commons/jexl</td>
+</tr>
+<tr>
+<td>mirror3</td>
+<td>http://mirror.olnevhost.net/pub/apache/commons/jexl</td>
+</tr>
+<tr>
+<td>mirror4</td>
+<td>http://www.eng.lsu.edu/mirrors/apache/commons/jexl</td>
+</tr>
+<tr>
+<td>backup</td>
+<td>http://archive.apache.org/dist/commons/jexl</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>${mirror1}/binaries/${archive}.zip<br>[${mirror2}/binaries/${archive}.zip]<br>[${mirror3}/binaries/${archive}.zip]<br>[${mirror4}/binaries/${archive}.zip]<br>[${backup}/binaries/${archive}.zip]</td>
+<td>Unpack into archive/</td>
+<td>f2f8b0d80c2d08c82e112e2f5c34870a496c8b63</td>
+</tr>
+<tr>
+<td>${mirror1}/source/${archive}-src.zip<br>[${mirror2}/source/${archive}-src.zip]<br>[${mirror3}/source/${archive}-src.zip]<br>[${mirror4}/source/${archive}-src.zip]<br>[${backup}/source/${archive}-src.zip]</td>
+<td>Unpack into archive/</td>
+<td>6d53691503277078ce6e7c5b19397627016feab9</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}-src/src/java"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/docs/apidocs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

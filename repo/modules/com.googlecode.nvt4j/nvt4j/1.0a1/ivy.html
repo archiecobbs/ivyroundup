@@ -1,0 +1,173 @@
+<html>
+<head>
+<title>nvt4j by com.googlecode.nvt4j :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.googlecode.nvt4j/nvt4j/">nvt4j</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.googlecode.nvt4j/">com.googlecode.nvt4j</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.0a1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://code.google.com/p/nvt4j/">https://code.google.com/p/nvt4j/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.googlecode.nvt4j/nvt4j/1.0a1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://code.google.com/p/nvt4j/">
+
+            <p>
+            The Network Virtual Terminal for Java (NVT4J) is a library which can drive
+            a terminal emulator connected to the application through a telnet session.
+            </p>
+
+            <p>
+            The API consists of the interface nvt4j.Terminal . The implementation of this
+            class is called nvt4j.impl.Terminal. To allow the user to connect to the
+            application you need to listen for a tcp connection and then wrap a Terminal
+            object around it:
+            <blockquote><pre>
+                    ServerSocket serverSocket = new ServerSocket(8000);
+                    Socket socket = serverSocket.accept();
+                    Terminal terminal = new nvt4j.impl.Terminal(socket);
+            </pre></blockquote>
+            </p>
+
+            <p>
+            For example, to run the sample class Example.java from an xterm session, you can
+            do this:
+            <blockquote><pre>
+                user@localhost$ java -classpath nvt4j.jar Example &amp;
+                user@localhost$ telnet localhost 8000
+            </pre></blockquote>
+            </p>
+
+            <p>
+            NVT4J uses the Telnet LINEMODE option to put the terminal driver (xterm in this case)
+            in what the posix standard calls 'raw' or 'non-canonical' mode, so that it can receive
+            all user inputs asap, instead of waiting for a new-line character.
+            </p>
+
+            <p>
+            Unfortunately in pure Java there is no way to put the operating system console in
+            raw mode. On Linux and similar systems this is done using the stty command, which is
+            a native program which manipulates the terminal driver in the operating system.
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>nvt4j.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}_1_0a1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>https://${name}.googlecode.com/files/${archive}.zip</td>
+<td>Unpack into archive/</td>
+<td>c8975b26702f06497c679912d6d9fde222cade56</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/api"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

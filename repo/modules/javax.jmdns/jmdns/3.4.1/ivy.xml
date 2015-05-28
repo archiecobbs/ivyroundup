@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="javax.jmdns" module="jmdns" revision="3.4.1" status="release" publication="20110825000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.jmdns/jmdns/3.4.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://jmdns.sourceforge.net/">
+            <p>JmDNS is a Java implementation of multi-cast DNS and can be
+            used for service registration and discovery in local area networks.
+            JmDNS is fully compatible with
+            <a href="http://developer.apple.com/macosx/rendezvous/">Apple's Bonjour</a>.
+            </p>
+                  
+            <p>The <a class="externalLink" href="http://www.zeroconf.org/">Zeroconf</a>
+            working group is working towards zero configuration IP networking.
+            <a chref="http://www.multicastdns.org">Multi-cast DNS</a> and
+            <a href="http://www.dns-sd.org">DNS service discovery</a> provide a convient ways for 
+            devices and services to register themselves, and to discover other network-based
+            services without relying on centrally administered services.</p>
+            
+            <p>Java as a language is not appropriate for low-level network configuration,
+            but it is very useful for service registration and discovery. JmDNS provides
+            easy-to-use pure-Java mDNS implementation that runs on most JDK1.6 compatible VMs.</p>
+            
+            <p>The code is released under the Apache 2.0 license so that it can be freely
+            incorporated into other products and services.</p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jmdns" ivyde:javadoc="jmdns"/>
+        <artifact name="jmdns" type="source" ext="zip"/>
+        <artifact name="jmdns" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

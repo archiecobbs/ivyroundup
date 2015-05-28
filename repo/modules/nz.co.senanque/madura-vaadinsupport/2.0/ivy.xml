@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!-- 
+    Copyright 2011 Roger Parkinson Licensed under the Apache License, Version 2.0 (the "License"); you 
+    may not use this file except in compliance with the License. You may obtain a copy of the License at 
+    http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, 
+    software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+    OF ANY KIND, either express or implied. See the License for the specific language governing permissions 
+    and limitations under the License. 
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+    <info organisation="nz.co.senanque" module="madura-vaadinsupport" revision="2.0" status="release" publication="20130211072150">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/nz.co.senanque/madura-vaadinsupport/2.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://code.google.com/p/madura-vaadinsupport/">
+            Integrates Madura Objects with Vaadin applications including support for dynamic metadata changes 
+            (available choices, read/write status of fields etc)
+        </description>
+    </info>
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="madura-vaadinsupport-source" ivyde:javadoc="madura-vaadinsupport-javadoc" conf="default"/>
+        <artifact name="madura-vaadinsupport-javadoc" type="javadoc" ext="zip" conf="default"/>
+        <artifact name="madura-vaadinsupport-source" type="source" ext="zip" conf="default"/>
+        <artifact name="madura-vaadinsupport" type="doc" ext="pdf" conf="default"/>
+    </publications>
+    <dependencies>
+        <dependency org="com.vaadin" name="vaadin" rev="6.8.4" conf="default-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="3.0.1" conf="default-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="default-&gt;default"/>
+        <dependency org="nz.co.senanque" name="madura-objects" rev="2.0" conf="default-&gt;default">
+            <exclude org="org.springframework" module="spring"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.8.0" conf="default-&gt;default">
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-lang" rev="2.6" conf="default-&gt;default">
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.hibernate" name="hibernate" rev="3.5.6-Final" conf="default-&gt;default">
+            <exclude org="net.sourceforge.ehcache" module="ehcache"/>
+        </dependency>
+        <dependency org="org.springframework" name="spring-security" rev="3.0.5" conf="default-&gt;core,config">
+            <exclude org="javax.jms" ext="jms"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="2.3.0" conf="default-&gt;default">
+            <exclude org="org.slf4j" module="slf4j"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.jvnet.hyperjaxb3" name="hyperjaxb3-ejb-runtime" rev="0.5.4" conf="default-&gt;default">
+            <exclude module="hyperjaxb3-ejb-roundtrip"/>
+            <exclude org="org.springframework" module="spring"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+            <exclude org="org.apache.commons" module="commons-lang"/>
+            <exclude org="org.apache.commons" module="commons-beanutils"/>
+            <exclude org="com.sun.xml.bind" module="jaxb-impl"/>
+            <exclude org="javax.persistence" module="persistence-api"/>
+        </dependency>
+        <dependency org="org.springframework" name="spring" rev="3.0.6" conf="default-&gt;aspects,orm,oxm,context,context-support,tx,jdbc">
+            <exclude org="javax.jms" module="jms"/>
+            <exclude org="org.apache.commons" module="commons-logging"/>
+        </dependency>
+        <dependency org="org.jdom" name="jdom" rev="1.1" conf="default-&gt;default"/>
+
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default-&gt;jcl-migration"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.6.1" conf="default-&gt;core"/>
+        <exclude org="commons-logging" ext="*"/>
+        <exclude org="avalon-framework" ext="jar"/>
+        <exclude org="logkit" ext="jar"/>
+        <exclude org="javax.servlet" ext="jar"/>
+    </dependencies>
+</ivy-module>

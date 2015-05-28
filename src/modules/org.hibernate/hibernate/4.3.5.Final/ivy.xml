@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<ivy-module>
+
+    <info publication="20140402000000">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://hibernate.org/">
+
+            <p>
+            Hibernate is a powerful, high performance object/relational
+            persistence and query service. Hibernate lets you develop
+            persistent classes following object-oriented idiom - including
+            association, inheritance, polymorphism, composition, and
+            collections. Hibernate allows you to express queries in its
+            own portable SQL extension (HQL), as well as in native SQL,
+            or with an object-oriented Criteria and Example API.
+            </p>
+
+            <p>
+            Unlike many other persistence solutions, Hibernate does not hide
+            the power of SQL from you and guarantees that your investment in
+            relational technology and knowledge is as valid as always. The
+            LGPL open source license allows the use of Hibernate and
+            NHibernate in open source and commercial projects.
+            </p>
+
+            <p>
+            Hibernate is a Professional Open Source project and a critical
+            component of the JBoss Enterprise Middleware System (JEMS)
+            suite of products. JBoss, a division of Red Hat, offers a range
+            of 24x7 Professional Support, Consulting, and Training services
+            to assist you with Hibernate.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="c3p0" extends="core" description="c3p0 connection pooling"/>
+        <conf name="core" description="The core functionality of Hibernate"/>
+        <conf name="default" extends="ehcache,entitymanager" description="Default configuration"/>
+        <conf name="ehcache" extends="core" description="Integration of Hibernate with Ehcache"/>
+        <conf name="entitymanager" extends="core" description="Hibernate Entity Manager"/>
+        <conf name="envers" extends="entitymanager" description="Support for entity auditing"/>
+        <conf name="infinispan" extends="core" description="Integration of Hibernate with Infinispan"/>
+        <conf name="jpamodelgen" description="Annotation Processor to generate JPA 2 static metamodel classes"/>
+        <conf name="osgi" extends="entitymanager" description="OSGi module"/>
+        <conf name="proxool" extends="core" description="Proxool-based implementation of the Hibernate ConnectionProvder contract"/>
+        <conf name="testing" extends="core" description="Testing module"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="hibernate-c3p0" conf="c3p0"/>
+        <artifact name="hibernate-core" conf="core"/>
+        <artifact name="hibernate-ehcache" conf="ehcache"/>
+        <artifact name="hibernate-entitymanager" conf="entitymanager"/>
+        <artifact name="hibernate-envers" conf="envers"/>
+        <artifact name="hibernate-infinispan" conf="infinispan"/>
+        <artifact name="hibernate-jpamodelgen" conf="jpamodelgen"/>
+        <artifact name="hibernate-osgi" conf="osgi"/>
+        <artifact name="hibernate-proxool" conf="proxool"/>
+        <artifact name="hibernate-testing" conf="testing"/>
+
+        <!-- source -->
+        <artifact name="hibernate-c3p0" type="source" ext="zip" conf="c3p0"/>
+        <artifact name="hibernate-core" type="source" ext="zip" conf="core"/>
+        <artifact name="hibernate-ehcache" type="source" ext="zip" conf="ehcache"/>
+        <artifact name="hibernate-entitymanager" type="source" ext="zip" conf="entitymanager"/>
+        <artifact name="hibernate-envers" type="source" ext="zip" conf="envers"/>
+        <artifact name="hibernate-infinispan" type="source" ext="zip" conf="infinispan"/>
+        <artifact name="hibernate-jpamodelgen" type="source" ext="zip" conf="jpamodelgen"/>
+        <artifact name="hibernate-osgi" type="source" ext="zip" conf="osgi"/>
+        <artifact name="hibernate-proxool" type="source" ext="zip" conf="proxool"/>
+        <artifact name="hibernate-testing" type="source" ext="zip" conf="testing"/>
+
+    </publications>
+
+    <dependencies>
+        <dependency org="org.antlr" name="antlr" rev="[2.7.7,2.8[" conf="core-&gt;default"/>
+        <dependency org="org.jboss.logging" name="jboss-logging" rev="[3.1.3,4.0[" conf="core,jpamodelgen-&gt;default"/>
+        <dependency org="org.jboss.logging" name="jboss-logging-annotations" rev="[1.2.0.Final,2.0[" conf="core,jpamodelgen-&gt;default"/>
+        <dependency org="org.jboss" name="javassist" rev="[3.18.1,4.0[" conf="core-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.2,2.0[" conf="core-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.1" conf="core-&gt;default"/>
+        <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="core-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="[4.0.4.Final,5.0[" conf="core-&gt;default"/>
+        <dependency org="net.sourceforge.c3p0" name="c3p0" rev="[0.9.1.2,)" conf="c3p0-&gt;default"/>
+        <dependency org="net.sourceforge.proxool" name="proxool" rev="[0.8.3,1.1[" conf="proxool-&gt;default"/>
+        <dependency org="net.sourceforge.ehcache" name="ehcache" rev="[2.4.3,3.0[" conf="ehcache-&gt;default"/>
+        <dependency org="org.jboss" name="jandex" rev="[1.1.0.Final,2.0[" conf="core-&gt;default"/>
+
+        <!-- DOES NOT EXIST IN REPO
+        <dependency org="org.osgi" name="org.osgi.core" rev="4.3.1" conf="osgi-&gt;default"/>
+        <dependency org="org.osgi" name="org.osgi.compendium" rev="4.3.1" conf="osgi-&gt;default"/>
+        <dependency org="org.rhq.helpers" name="rhq-pluginAnnotations" rev="3.0.4,)" conf="infinispan-&gt;default"/>
+        <dependency org="org.infinispan" name="infinispan" rev="[6.0.0.Final,)" conf="infinispan-&gt;default"/>
+        -->
+    </dependencies>
+</ivy-module>

@@ -1,0 +1,210 @@
+<html>
+<head>
+<title>ojdbc by com.oracle :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../com.oracle/ojdbc/">ojdbc</a></span> 
+    by 
+    <span id="organisation"><a href="../../../com.oracle/">com.oracle</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>10.2.0.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html">http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.oracle.com/technetwork/licenses/distribution-license-152002.html">OTN License Agreement</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.oracle/ojdbc/10.2.0.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html">
+            JDBC driver for Oracle 10g database.
+        </description></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<strong><span class="manual-download">*** Note ***</span></strong> This module requires one or more
+          resources to be downloaded manually (see below). See the
+          <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>Default JDBC driver</td>
+<td>ojdbc14</td>
+</tr>
+<tr>
+<td>ojdbc14</td>
+<td>Default JDBC driver</td>
+<td></td>
+</tr>
+<tr>
+<td>ojdbc14_g</td>
+<td>Default JDBC driver with debug</td>
+<td></td>
+</tr>
+<tr>
+<td>ojdbc14dms</td>
+<td>Default JDBC driver with additional code`to support Oracle Dynamic Monitoring Service</td>
+<td></td>
+</tr>
+<tr>
+<td>ojdbc14dms_g</td>
+<td>Default JDBC driver with additional code`to support Oracle Dynamic Monitoring Service and debug</td>
+<td></td>
+</tr>
+<tr>
+<td>orai18n</td>
+<td>NLS classes for use with JDK 1.2, 1.3, 1.4, and 1.5</td>
+<td></td>
+</tr>
+<tr>
+<td>ons</td>
+<td>For use by the pure Java client-side Oracle Notification Services (ONS) deamon</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>ojdbc14.jar</td>
+<td>jar</td>
+<td>ojdbc14</td>
+</tr>
+<tr>
+<td>ojdbc14_g.jar</td>
+<td>jar</td>
+<td>ojdbc14_g</td>
+</tr>
+<tr>
+<td>ojdbc14dms.jar</td>
+<td>jar</td>
+<td>ojdbc14dms</td>
+</tr>
+<tr>
+<td>ojdbc14dms_g.jar</td>
+<td>jar</td>
+<td>ojdbc14dms_g</td>
+</tr>
+<tr>
+<td>orai18n.jar</td>
+<td>jar</td>
+<td>orai18n</td>
+</tr>
+<tr>
+<td>ons.jar</td>
+<td>jar</td>
+<td>ons</td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody><tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms_g.jar</span></td>
+<td>Copy to artifacts/jars/ojdbc14dms_g.jar</td>
+<td>48dd8579d538af0589c297b170804c931ac43fda</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14dms.jar</span></td>
+<td>Copy to artifacts/jars/ojdbc14dms.jar</td>
+<td>2b3842ed923903896cff18112eb6ab6ae75bfcbd</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14_g.jar</span></td>
+<td>Copy to artifacts/jars/ojdbc14_g.jar</td>
+<td>55cb634b0fa562dfbaf1cd247dc9e8653db235cf</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc14.jar</span></td>
+<td>Copy to artifacts/jars/ojdbc14.jar</td>
+<td>1ca52bcf75c0b23239900dcc90a653b7a30cd9cd</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/ons.jar</span></td>
+<td>Copy to artifacts/jars/ons.jar</td>
+<td>dc4104ada8416f62b18175316263dba9d93a2383</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/orai18n.jar</span></td>
+<td>Copy to artifacts/jars/orai18n.jar</td>
+<td>a1c5e4fca68542abaabe4ad5e37f66137c5655ab</td>
+</tr>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/ojdbc/${revision}/javadoc.zip</span></td>
+<td>Copy to artifacts/javadocs/javadoc.zip</td>
+<td>4879d35e38fdca9c123b87ddc24c5aa11273be85</td>
+</tr>
+<tr><td colspan="3">
+<span class="manual-download">Resources displayed in red</span> must be downloaded manually.
+          See the <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td></tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

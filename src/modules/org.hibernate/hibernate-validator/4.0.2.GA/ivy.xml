@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20091106065300">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <description homepage="http://hibernate.org/subprojects/validator.html">
+
+        <p><h4>Hibernate Validator</h4></p>
+        <p>
+        Hibernate Validator 4.x is the reference implementation for JSR 303 - Bean Validation.
+        </p>
+        <p>
+        JSR 303 defines a metadata model and API for JavaBean validation. The default metadata source is annotations,
+        with the ability to override and extend the meta-data through the use of XML validation descriptors. The API
+        is not tied to a specific application tier or programming model. It is specifically not tied to either the web
+        tier or the persistence tier, and is available for both server-side application programming, as well as rich
+        client Swing application developer.
+        </p>
+        <p><h4>Bean Validation TCK</h4></p>
+        <p>
+        Together with the reference implementation of JSR 303 Hibernate provides also the Bean Validation TCK. You can
+        find more information about the TCK on the Hibernate wiki.
+        </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Reference implementation for JSR 303 - Bean Validation"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.5,2.0[" conf="default-&gt;core"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

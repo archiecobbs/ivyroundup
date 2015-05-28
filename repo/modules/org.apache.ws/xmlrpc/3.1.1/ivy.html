@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>xmlrpc by org.apache.ws :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.apache.ws/xmlrpc/">xmlrpc</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.apache.ws/">org.apache.ws</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.1.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://ws.apache.org/xmlrpc/">http://ws.apache.org/xmlrpc/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.ws/xmlrpc/3.1.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://ws.apache.org/xmlrpc/">
+        Apache XML-RPC is a Java implementation of <a href="http://www.xmlrpc.com/">XML-RPC</a>,
+        a popular protocol that uses XML over HTTP to implement remote procedure calls.
+
+        Version 3 of Apache XML-RPC is still compliant to the <a href="http://www.xmlrpc.com/spec">XML-RPC
+        specification</a>. However, the user may enable several vendor extensions are available,
+        that greatly extend the power of XML-RPC:
+
+        <ul>
+        <li>All primitive Java types are supported, including long, byte, short, and double.</li>
+        <li>Calendar objects are supported. In particular, timezone settings, and
+            milliseconds may be sent.</li>
+        <li>DOM nodes, or JAXB objects, can be transmitted. So are objects implementing
+            the <code>java.io.Serializable</code> interface.</li>
+        <li>Both server and client can operate in a streaming mode,
+            which preserves resources much better than the default mode,
+            which is based on large internal byte arrays.</li>
+        </ul>
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>common</td>
+<td>Code common to client and server</td>
+<td></td>
+</tr>
+<tr>
+<td>server</td>
+<td>Server-side support</td>
+<td>common</td>
+</tr>
+<tr>
+<td>client</td>
+<td>Client-side support</td>
+<td>common</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Server and client-side support</td>
+<td>server,client</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>xmlrpc-client.jar</td>
+<td>jar</td>
+<td>client</td>
+</tr>
+<tr>
+<td>xmlrpc-common.jar</td>
+<td>jar</td>
+<td>common</td>
+</tr>
+<tr>
+<td>xmlrpc-server.jar</td>
+<td>jar</td>
+<td>server</td>
+</tr>
+<tr>
+<td>ws-commons-util-1.0.2.jar</td>
+<td>jar</td>
+<td>common</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>org.apache.commons</td>
+<td><a href="../../../org.apache.commons/commons-logging/">commons-logging</a></td>
+<td>1.+</td>
+<td>common-&gt;default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://archive.apache.org/dist/ws/${name}/binaries/${archive}-bin.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>8a581ca53a6cc34847c7c42ab7bbf416cbdb0bc9</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${archive}/lib/${name}-client-${revision}.jar" tofile="artifacts/jars/${name}-client.jar"/&gt;
+        &lt;move file="archive/${archive}/lib/${name}-common-${revision}.jar" tofile="artifacts/jars/${name}-common.jar"/&gt;
+        &lt;move file="archive/${archive}/lib/${name}-server-${revision}.jar" tofile="artifacts/jars/${name}-server.jar"/&gt;
+
+        &lt;!-- TODO: should be in its own "ws-common-util" module --&gt;
+        &lt;move file="archive/${archive}/lib/ws-commons-util-1.0.2.jar" todir="artifacts/jars"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;mkdir dir="sources"/&gt;
+        &lt;unzip overwrite="true" dest="sources" src="archive/${archive}/lib/${name}-client-${revision}-sources.jar"/&gt;
+        &lt;unzip overwrite="true" dest="sources" src="archive/${archive}/lib/${name}-common-${revision}-sources.jar"/&gt;
+        &lt;unzip overwrite="true" dest="sources" src="archive/${archive}/lib/${name}-server-${revision}-sources.jar"/&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="sources" includes="org/apache/**/*"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/site/apidocs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

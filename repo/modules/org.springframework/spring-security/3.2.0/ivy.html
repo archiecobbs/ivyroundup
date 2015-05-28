@@ -1,0 +1,701 @@
+<html>
+<head>
+<title>spring-security by org.springframework :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.springframework/spring-security/">spring-security</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.springframework/">org.springframework</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.2.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://projects.spring.io/spring-security/">http://projects.spring.io/spring-security/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.springframework/spring-security/3.2.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://projects.spring.io/spring-security/">
+
+            <p>
+            Formerly the Acegi Security System for Spring, Spring
+            Security provides powerful and flexible security solutions
+            for enterprise applications developed using the Spring
+            Framework. It is a stable and mature product - Acegi Security
+            1.0.0 was released in May 2006 after more than two and a
+            half years of use in large production software projects and
+            adopted as an official Spring sub-project on its release.
+            </p>
+
+            <p>
+            Spring Security builds on Acegi Security's solid foundations,
+            adding many new features:
+            <ul>
+            <li>Simplified namespace-based configuration syntax. Old
+            configurations could require hundreds of lines of XML but
+            our new convention over configuration approach ensures that
+            many deployments will now require less than 10 lines.</li>
+            <li>OpenID integration, which is the web's emerging single sign
+            on standard (supported by Google, IBM, Sun, Yahoo and others)</li>
+            <li>Windows NTLM support, providing easy enterprise-wide single
+            sign on against Windows corporate networks</li>
+            <li>Support for JSR 250 ("EJB 3") security annotations,
+            delivering a standards-based model for authorization metadata</li>
+            <li>AspectJ pointcut expression language support, allowing
+            developers to apply cross-cutting security logic across
+            their Spring managed objects</li>
+            <li>Substantial improvements to the high-performance domain
+            object instance security ("ACL") capabilities</li>
+            <li>Comprehensive support for RESTful web request authorization,
+            which works well with Spring 2.5's @MVC model for building
+            RESTful systems</li>
+            <li>Long-requested support for groups, hierarchical roles and a
+            user management API, which all combine to reduce development
+            time and significantly improve system administration</li>
+            <li>An improved, database-backed "remember me" implementation</li>
+            <li>Support for portlet authentication out-of-the-box</li>
+            <li>Support for additional languages</li>
+            <li>Numerous other general improvements, documentation and
+            new samples</li>
+            <li>New support for web state and flow transition authorization
+            through the Spring Web Flow 2.0 release</li>
+            <li>New support for visualizing secured methods, plus
+            configuration auto-completion support in Spring IDE</li>
+            <li>Enhanced WSS (formerly WS-Security) support through the
+            Spring Web Services 1.5 release</li>
+            <li>Updated support for CAS single sign-on (CAS 3 is now
+            supported).</li>
+            </ul>
+            </p>
+
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>acl</td>
+<td>ACL module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>aspects</td>
+<td>AspectJ files</td>
+<td>core</td>
+</tr>
+<tr>
+<td>cas-client</td>
+<td>CAS module</td>
+<td>web</td>
+</tr>
+<tr>
+<td>config</td>
+<td>Config module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>core</td>
+<td>Core module</td>
+<td></td>
+</tr>
+<tr>
+<td>crypto</td>
+<td>Crypto module</td>
+<td></td>
+</tr>
+<tr>
+<td>ldap</td>
+<td>LDAP module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>openid</td>
+<td>OpenID module</td>
+<td>web</td>
+</tr>
+<tr>
+<td>remoting</td>
+<td>Remoting module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>taglibs</td>
+<td>Taglibs module</td>
+<td>web,acl</td>
+</tr>
+<tr>
+<td>web</td>
+<td>Web module</td>
+<td>core</td>
+</tr>
+<tr>
+<td>default</td>
+<td>Everything</td>
+<td>acl,aspects,cas-client,config,core,crypto,ldap,openid,remoting,taglibs,web</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>spring-security-acl.jar</td>
+<td>jar</td>
+<td>acl</td>
+</tr>
+<tr>
+<td>spring-security-aspects.jar</td>
+<td>jar</td>
+<td>aspects</td>
+</tr>
+<tr>
+<td>spring-security-cas.jar</td>
+<td>jar</td>
+<td>cas-client</td>
+</tr>
+<tr>
+<td>spring-security-config.jar</td>
+<td>jar</td>
+<td>config</td>
+</tr>
+<tr>
+<td>spring-security-core.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spring-security-crypto.jar</td>
+<td>jar</td>
+<td>crypto</td>
+</tr>
+<tr>
+<td>spring-security-ldap.jar</td>
+<td>jar</td>
+<td>ldap</td>
+</tr>
+<tr>
+<td>spring-security-openid.jar</td>
+<td>jar</td>
+<td>openid</td>
+</tr>
+<tr>
+<td>spring-security-remoting.jar</td>
+<td>jar</td>
+<td>remoting</td>
+</tr>
+<tr>
+<td>spring-security-taglibs.jar</td>
+<td>jar</td>
+<td>taglibs</td>
+</tr>
+<tr>
+<td>spring-security-web.jar</td>
+<td>jar</td>
+<td>web</td>
+</tr>
+<tr>
+<td>spring-security-acl.zip</td>
+<td>source</td>
+<td>acl</td>
+</tr>
+<tr>
+<td>spring-security-aspects.zip</td>
+<td>source</td>
+<td>aspects</td>
+</tr>
+<tr>
+<td>spring-security-cas.zip</td>
+<td>source</td>
+<td>cas-client</td>
+</tr>
+<tr>
+<td>spring-security-config.zip</td>
+<td>source</td>
+<td>config</td>
+</tr>
+<tr>
+<td>spring-security-core.zip</td>
+<td>source</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spring-security-crypto.zip</td>
+<td>source</td>
+<td>crypto</td>
+</tr>
+<tr>
+<td>spring-security-ldap.zip</td>
+<td>source</td>
+<td>ldap</td>
+</tr>
+<tr>
+<td>spring-security-openid.zip</td>
+<td>source</td>
+<td>openid</td>
+</tr>
+<tr>
+<td>spring-security-remoting.zip</td>
+<td>source</td>
+<td>remoting</td>
+</tr>
+<tr>
+<td>spring-security-taglibs.zip</td>
+<td>source</td>
+<td>taglibs</td>
+</tr>
+<tr>
+<td>spring-security-web.zip</td>
+<td>source</td>
+<td>web</td>
+</tr>
+<tr>
+<td>spring-security-acl.zip</td>
+<td>javadoc</td>
+<td>acl</td>
+</tr>
+<tr>
+<td>spring-security-aspects.zip</td>
+<td>javadoc</td>
+<td>aspects</td>
+</tr>
+<tr>
+<td>spring-security-cas.zip</td>
+<td>javadoc</td>
+<td>cas-client</td>
+</tr>
+<tr>
+<td>spring-security-config.zip</td>
+<td>javadoc</td>
+<td>config</td>
+</tr>
+<tr>
+<td>spring-security-core.zip</td>
+<td>javadoc</td>
+<td>core</td>
+</tr>
+<tr>
+<td>spring-security-crypto.zip</td>
+<td>javadoc</td>
+<td>crypto</td>
+</tr>
+<tr>
+<td>spring-security-ldap.zip</td>
+<td>javadoc</td>
+<td>ldap</td>
+</tr>
+<tr>
+<td>spring-security-openid.zip</td>
+<td>javadoc</td>
+<td>openid</td>
+</tr>
+<tr>
+<td>spring-security-remoting.zip</td>
+<td>javadoc</td>
+<td>remoting</td>
+</tr>
+<tr>
+<td>spring-security-taglibs.zip</td>
+<td>javadoc</td>
+<td>taglibs</td>
+</tr>
+<tr>
+<td>spring-security-web.zip</td>
+<td>javadoc</td>
+<td>web</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org.springframework</td>
+<td><a href="../../../org.springframework/spring/">spring</a></td>
+<td>[3.2.6,)</td>
+<td>core-&gt;aop,core,beans,context,jdbc,expression,tx;crypto-&gt;core;remoting,web-&gt;web</td>
+</tr>
+<tr>
+<td>org.openid4java</td>
+<td><a href="../../../org.openid4java/openid4java/">openid4java</a></td>
+<td>[0.9.3,2.0[</td>
+<td>openid-&gt;default</td>
+</tr>
+<tr>
+<td>com.google</td>
+<td><a href="../../../com.google/guice/">guice</a></td>
+<td>[2.0,)</td>
+<td>openid-&gt;default</td>
+</tr>
+<tr>
+<td>javax.servlet</td>
+<td><a href="../../../javax.servlet/servletapi/">servletapi</a></td>
+<td>[2.3,4.0[</td>
+<td>web-&gt;default</td>
+</tr>
+<tr>
+<td>org.jasig.cas</td>
+<td><a href="../../../org.jasig.cas/cas-client-core/">cas-client-core</a></td>
+<td>3.2.+</td>
+<td>cas-client-&gt;default</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Group ID</th>
+<th class="conf-name">Artifact ID</th>
+<th class="conf-name">Version</th>
+<th class="conf-name">Classifier</th>
+<th class="conf-name">Extension</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-acl</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-acl.jar</td>
+<td>7825a7a60c2d470bb737b4c4f62ede51ea14d0aa</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-acl</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-acl.zip</td>
+<td>14811b10fb2d00a30c20687e3776fc6d1eccc8d2</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-acl</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-acl.zip</td>
+<td>53009d7f0eddf6b4506143a2231b1b0ac8d73348</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-aspects</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-aspects.jar</td>
+<td>fe1fe92b3772f791945aaf3d9449f48e7279904e</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-aspects</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-aspects.zip</td>
+<td>da4236d83a9d1b78353aca614c1e5bb93c2d1b38</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-aspects</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-aspects.zip</td>
+<td>6faf109b4977198b248286de0f2b79fb41dfa21a</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-cas</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-cas.jar</td>
+<td>ec166b631790ce0fe8ad23a7c882cf0dda609e80</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-cas</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-cas.zip</td>
+<td>ad213da5999355b3939b0cfaee69928ad6338988</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-cas</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-cas.zip</td>
+<td>b7f1d238b3f0d35f973f142cf553ef5e8338e8cf</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-config</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-config.jar</td>
+<td>9f10bd410bdda6140d7aa38cc9c115cb9f797626</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-config</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-config.zip</td>
+<td>072aa563f554d83cf191d7e6a778fbfb5358465e</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-config</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-config.zip</td>
+<td>f70edec7f9ca81acecdc6819bff7b57095930a82</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-core</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-core.jar</td>
+<td>0e8e32b6a64b82c054b74d8ef4715cd0ca00cd1c</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-core</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-core.zip</td>
+<td>d3893892ec1bc93e379a52854acd5e92385b6bbb</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-core</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-core.zip</td>
+<td>eda1469c978d6ba2f222cd7b1ea9553081df0c03</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-crypto</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-crypto.jar</td>
+<td>6855d62c892323a1f1000c2a06d193292a41b285</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-crypto</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-crypto.zip</td>
+<td>d8db660acd2d91b397db5ec2507729b2f8131a48</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-crypto</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-crypto.zip</td>
+<td>3fbf041d3ad018ce560ee080c0fe2977f0d10578</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-ldap</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-ldap.jar</td>
+<td>315db494d73db5c562bdd046690bb48aa08c5cb6</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-ldap</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-ldap.zip</td>
+<td>03a43090b551f3fc98b0948961afc3be26304656</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-ldap</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-ldap.zip</td>
+<td>44f65ae350283d9ffbf7fe52a3892f89c2636d9b</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-openid</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-openid.jar</td>
+<td>9e5c9ae18af83b82b82211228af8900265ff030c</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-openid</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-openid.zip</td>
+<td>1f689f9135edc43673a1e920438d0fd8e365564c</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-openid</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-openid.zip</td>
+<td>5b705aa312ec2c90735f17a6581e42835b554479</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-remoting</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-remoting.jar</td>
+<td>56f92044dde8034b07434257bbe9ffe75316e270</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-remoting</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-remoting.zip</td>
+<td>ab2e246ae4cc4198cedb59dadbb83323c4e39915</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-remoting</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-remoting.zip</td>
+<td>176e45c3b203d277a0a27ce5722b6f7f79103fdd</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-taglibs</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-taglibs.jar</td>
+<td>f2547a52afc3229cebde67c0cee588aa5dbfbc84</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-taglibs</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-taglibs.zip</td>
+<td>28bd42ac303763dd09a24b804430420e1fe10b5b</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-taglibs</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-taglibs.zip</td>
+<td>f9654649c1666110507acd3088cada1b833bae62</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-web</td>
+<td>3.2.0.RELEASE</td>
+<td></td>
+<td>jar</td>
+<td>Copy to artifacts/jars/spring-security-web.jar</td>
+<td>f5f2fbfb3a59b1371ca9dda348d8eee22f99a19f</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-web</td>
+<td>3.2.0.RELEASE</td>
+<td>sources</td>
+<td>jar</td>
+<td>Copy to artifacts/sources/spring-security-web.zip</td>
+<td>5727bdab507738ea1c247dcbae6210e450c8bd1c</td>
+</tr>
+<tr>
+<td>org/springframework/security</td>
+<td>spring-security-web</td>
+<td>3.2.0.RELEASE</td>
+<td>javadoc</td>
+<td>jar</td>
+<td>Copy to artifacts/javadocs/spring-security-web.zip</td>
+<td>31dcb5582c46d3bee1c7d11880f914457a41f547</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

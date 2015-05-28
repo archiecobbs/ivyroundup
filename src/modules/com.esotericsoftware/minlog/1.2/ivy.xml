@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20100325153900">
+        <license name="New BSD License" url="http://opensource.org/licenses/BSD-3-Clause"/>
+        <description homepage="https://code.google.com/p/minlog/">
+
+            <p>
+            An extremely lightweight Java logging library.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="configurable" description="Runtime-configurable logging"/>
+        <conf name="debug" description="Logging fixed at the DEBUG level"/>
+        <conf name="error" description="Logging fixed at the ERROR level"/>
+        <conf name="info" description="Logging fixed at the INFO level"/>
+        <conf name="none" description="Logging fixed at the NONE level"/>
+        <conf name="trace" description="Logging fixed at the TRACE level"/>
+        <conf name="warn" description="Logging fixed at the WARN level"/>
+        <conf name="default" extends="configurable" />
+    </configurations>
+
+    <publications>
+        <artifact conf="configurable"/>
+        <artifact name="minlog-debug" conf="debug"/>
+        <artifact name="minlog-error" conf="error"/>
+        <artifact name="minlog-info" conf="info"/>
+        <artifact name="minlog-none" conf="none"/>
+        <artifact name="minlog-trace" conf="trace"/>
+        <artifact name="minlog-warn" conf="warn"/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+</ivy-module>

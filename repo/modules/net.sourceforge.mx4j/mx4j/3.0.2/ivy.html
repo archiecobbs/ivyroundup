@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>mx4j by net.sourceforge.mx4j :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.sourceforge.mx4j/mx4j/">mx4j</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.sourceforge.mx4j/">net.sourceforge.mx4j</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>3.0.2</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://mx4j.sourceforge.net/">http://mx4j.sourceforge.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://sourceforge.net/p/mx4j/code/HEAD/tree/tags/MX4J_3_0_2/mx4j/src/docs/english/license.xml">MX4J License, Version 1.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.mx4j/mx4j/3.0.2/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://mx4j.sourceforge.net/">
+        MX4J is a project to build an Open Source implementation of the Java(TM)
+        Management Extensions (JMX) and of the JMX Remote API (JSR 160)
+        specifications, and to build tools relating to JMX.
+        </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>core</td>
+<td>JSR 3 javax.management.* classes and mx4j.* classes that implements JSR 3 functionalities</td>
+<td></td>
+</tr>
+<tr>
+<td>core-impl</td>
+<td>mx4j.* classes that implements JSR 3 functionalities</td>
+<td>core</td>
+</tr>
+<tr>
+<td>remote</td>
+<td>JSR 160 javax.management.remote.* classes and mx4j.* classes that implements JSR 160 functionalities</td>
+<td>core-impl</td>
+</tr>
+<tr>
+<td>remote-impl</td>
+<td>mx4j.* classes that implements JSR 160 functionalities</td>
+<td>remote</td>
+</tr>
+<tr>
+<td>tools</td>
+<td>MX4J tools</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>All JSR 3 and JSR 160 classes and mx4j.* classes that implement the JSR 3 and JSR 160 functionalities</td>
+<td>core-impl,remote-impl</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>mx4j-jmx.jar</td>
+<td>jar</td>
+<td>core</td>
+</tr>
+<tr>
+<td>mx4j-impl.jar</td>
+<td>jar</td>
+<td>core-impl</td>
+</tr>
+<tr>
+<td>mx4j-rjmx.jar</td>
+<td>jar</td>
+<td>remote</td>
+</tr>
+<tr>
+<td>mx4j-rimpl.jar</td>
+<td>jar</td>
+<td>remote-impl</td>
+</tr>
+<tr>
+<td>source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/MX4J%20Binary/${revision}/${archive}.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>97b566fc3b50c3122f35ab15a61c21b5af22c6f3</td>
+</tr>
+<tr>
+<td>http://downloads.sourceforge.net/project/${name}/MX4J%20Source/${revision}/${archive}-src.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>984994ce426d86589e34715ccfafc0263376e2b6</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move todir="artifacts/jars/"&gt;
+            &lt;fileset dir="archive/${archive}/lib" includes="*.jar"/&gt;
+        &lt;/move&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src/core"/&gt;
+            &lt;fileset dir="archive/${archive}/src/tools"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/docs/api"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

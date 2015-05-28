@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20050923023200">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.oracle.com/technetwork/java/index-jsp-141752.html">
+            <p>
+            The Java Communications 3.0 API is a Java extension that
+            facilitates developing platform-independent communications
+            applications for technologies such as Smart Cards, embedded
+            systems, and point-of-sale devices, financial services devices,
+            fax, modems, display terminals, and robotic equipment.
+            </p>
+            <p>
+            The Java Communications API (also known as javax.comm) provides
+            applications access to RS-232 hardware (serial ports) and limited
+            access to IEEE-1284 (parallel ports), SPP mode.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api" description="javax.comm API only"/>
+        <conf name="default" extends="api" description="API and shared object"/>
+        <conf name="debug" extends="api" description="API and debug shared object"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="api"/>
+        <artifact name="libLinuxSerialParallel" type="so" conf="default"/>
+        <artifact name="libLinuxSerialParallel_g" type="so" conf="debug"/>
+        <artifact type="javadoc" ext="zip" conf="api"/>
+    </publications>
+
+</ivy-module>
+

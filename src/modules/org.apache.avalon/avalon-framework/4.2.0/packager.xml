@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/avalon/${name}/v${revision}/${archive}.zip"
+        sha1="8c70d9625dcac8d0147538ce29dd79356a544056"/>
+
+    <resource url="http://archive.apache.org/dist/avalon/${name}/v${revision}/${archive}-src.zip"
+        sha1="0484588f658e2acb470ec2f51b70097df4150837"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${name}/jars/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/api/src/java"/>
+            <fileset dir="archive/${name}/impl/src/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${name}/docs"/>
+        </zip>
+    </build>
+</packager-module>

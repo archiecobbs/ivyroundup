@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://restlet.com/download/1.1/${archive}.zip" sha1="d8e5eeefbfbb86354d66a710821a037c11dcc138"/>
+
+    <build>
+        <!-- JARs -->
+        <move file="archive/${archive}/lib/com.noelios.restlet.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.grizzly_1.9.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.gwt_1.5.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.httpclient_3.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.javamail_1.4.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.jdbc_3.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.jetty_6.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.net.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.oauth_1.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.servlet_2.5.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.simple_3.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.spring_2.5.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.ssl.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/com.noelios.restlet.ext.xdb_11.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.example.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.atom_1.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.fileupload_1.2.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.freemarker_2.3.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.jaxb_2.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.jaxrs_1.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.jibx_1.1.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.json_2.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.spring_2.5.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.velocity_1.5.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.ext.wadl_1.0.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/lib/org.restlet.gwt.jar" todir="artifacts/jars"/>
+
+         <!-- Should eventually be a dependency. See ivy.xml for details. -->
+        <move file="archive/${archive}/lib/org.simpleframework_3.1/org.simpleframework.jar" todir="artifacts/jars"/>
+
+        <!-- Sources -->
+        <zip destfile="artifacts/sources/com.noelios.restlet.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.grizzly_1.9.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.grizzly_1.9"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.gwt_1.5.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.gwt_1.5"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.httpclient_3.1.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.httpclient_3.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.javamail_1.4.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.javamail_1.4"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.jdbc_3.0.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.jdbc_3.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.jetty_6.1.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.jetty_6.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.net.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.net"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.oauth_1.0.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.oauth_1.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.servlet_2.5.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.servlet_2.5"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.simple_3.1.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.simple_3.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.spring_2.5.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.spring_2.5"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.ssl.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.ssl"/>
+        </zip>
+        <zip destfile="artifacts/sources/com.noelios.restlet.ext.xdb_11.1.zip">
+            <fileset dir="archive/${archive}/src/com.noelios.restlet.ext.xdb_11.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.zip">
+            <fileset dir="archive/${archive}/src/org.restlet"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.example.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.example"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.atom_1.0.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.atom_1.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.fileupload_1.2.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.fileupload_1.2"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.freemarker_2.3.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.freemarker_2.3"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.jaxb_2.1.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.jaxb_2.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.jaxrs_1.0.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.jaxrs_1.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.jibx_1.1.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.jibx_1.1"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.json_2.0.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.json_2.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.spring_2.5.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.spring_2.5"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.velocity_1.5.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.velocity_1.5"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.wadl_1.0.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.wadl_1.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.ext.wadl_1.0.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.ext.wadl_1.0"/>
+        </zip>
+        <zip destfile="artifacts/sources/org.restlet.gwt.zip">
+            <fileset dir="archive/${archive}/src/org.restlet.gwt"/>
+        </zip>
+
+        <!-- Javadocs -->
+        <zip destfile="artifacts/javadocs/api.zip">
+            <fileset dir="archive/${archive}/docs/api"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/ext.zip">
+            <fileset dir="archive/${archive}/docs/ext"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/gwt.zip">
+            <fileset dir="archive/${archive}/docs/gwt"/>
+        </zip>
+        <zip destfile="artifacts/javadocs/nre.zip">
+            <fileset dir="archive/${archive}/docs/nre"/>
+        </zip>
+    </build>
+</packager-module>

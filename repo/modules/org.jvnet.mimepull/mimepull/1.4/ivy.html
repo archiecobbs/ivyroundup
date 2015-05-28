@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>mimepull by org.jvnet.mimepull :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../org.jvnet.mimepull/mimepull/">mimepull</a></span> 
+    by 
+    <span id="organisation"><a href="../../../org.jvnet.mimepull/">org.jvnet.mimepull</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.4</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="https://mimepull.java.net/">https://mimepull.java.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value">
+<a href="http://opensource.org/licenses/cddl1.php">COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0</a><br><a href="http://www.gnu.org/software/classpath/license.html">GPLv2 with classpath exception</a>
+</td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jvnet.mimepull/mimepull/1.4/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="https://mimepull.java.net/">
+                Provides a streaming API to access attachments parts in a MIME message.
+                </description></td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td>runtime dependencies and master artifact can be used with this conf</td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>mimepull.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://download.java.net/maven/2/org/jvnet/${name}/${revision}/${name}-${revision}.jar</td>
+<td>Copy to archive/${archive}/${name}-${revision}.jar</td>
+<td>b6b598d554b27a7006d682a8179fd85efc671fce</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

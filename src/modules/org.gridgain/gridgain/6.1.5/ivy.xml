@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20140531000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+        <description homepage="http://www.gridgain.com/">
+            <p>
+                Java-based middleware for in-memory processing of big data in a distributed environment.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="common-deps" description="Conf for common dependencies"/>
+        <conf name="datagrid" extends="common-deps" description="In-Memory Data Grid"/>
+        <conf name="default" extends="datagrid,hpc,hadoop2,streaming" description="Everything except Hadoop 2"/>
+        <conf name="hadoop1" extends="common-deps" description="In-Memory Accelerator For Hadoop (Hadoop 1.x)"/>
+        <conf name="hadoop2" extends="common-deps" description="In-Memory Accelerator For Hadoop (Hadoop 2.x)"/>
+        <conf name="hpc" extends="common-deps" description="In-Memory HPC"/>
+        <conf name="streaming" extends="common-deps" description="In-Memory Streaming"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact name="gridgain-streaming" conf="streaming"/>
+        <artifact name="gridgain-hadoop2" conf="hadoop2"/>
+        <artifact name="gridgain-hadoop1" conf="hadoop1"/>
+        <artifact name="gridgain-datagrid" conf="datagrid"/>
+        <artifact name="gridgain-hpc" conf="hpc"/>
+
+        <!-- source -->
+        <artifact name="gridgain-streaming" type="source" ext="zip" conf="streaming"/>
+        <artifact name="gridgain-hadoop2" type="source" ext="zip" conf="hadoop2"/>
+        <artifact name="gridgain-hadoop1" type="source" ext="zip" conf="hadoop1"/>
+        <artifact name="gridgain-datagrid" type="source" ext="zip" conf="datagrid"/>
+        <artifact name="gridgain-hpc" type="source" ext="zip" conf="hpc"/>
+
+        <!-- javadoc -->
+        <artifact name="gridgain-streaming" type="javadoc" ext="zip" conf="streaming"/>
+        <artifact name="gridgain-hadoop2" type="javadoc" ext="zip" conf="hadoop2"/>
+        <artifact name="gridgain-hadoop1" type="javadoc" ext="zip" conf="hadoop1"/>
+        <artifact name="gridgain-datagrid" type="javadoc" ext="zip" conf="datagrid"/>
+        <artifact name="gridgain-hpc" type="javadoc" ext="zip" conf="hpc"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.aspectj" name="aspectj" rev="[1.7.2,)" conf="common-deps->weaver"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="[1.8.3,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-cli" rev="[1.2,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.6,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[3.2.1,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-configuration" rev="[1.8,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[2.4,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.6,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,)" conf="common-deps->default"/>
+        <dependency org="org.apache.commons" name="commons-net" rev="[3.1,)" conf="common-deps->default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="[4.2.3,)" conf="common-deps->mime,nio"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[4.2.6.Final,)" conf="common-deps->core"/>
+        <dependency org="org.eclipse" name="jetty" rev="[9.0.5.v20130815,)" conf="common-deps->continuation,server"/>
+        <dependency org="org.scala-lang" name="scala-compiler" rev="[2.10.3,)" conf="common-deps->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.6.4,)" conf="common-deps->log4j"/>
+        <dependency org="org.springframework" name="spring" rev="[3.2.2,)" conf="common-deps->tx"/>
+        <dependency org="javax.activation" name="jaf" rev="[1.1.1,)" conf="common-deps->default"/>
+        <dependency org="com.intellij" name="annotations" rev="[9.0.4,)" conf="common-deps->default"/>
+        <dependency transitive="false" org="com.amazonaws" name="aws-java-sdk" rev="[1.3.21.1,)" conf="common-deps->default"/>
+        <dependency org="org.apache.bcel" name="bcel" rev="[5.1,)" conf="common-deps->default"/>
+        <dependency org="net.sourceforge.cglib" name="cglib" rev="[2.2.2,)" conf="common-deps->nodep"/>
+        <dependency org="edu.oswego.cs" name="concurrent" rev="[1.3.4,)" conf="common-deps->default"/>
+        <dependency org="it.sauronsoftware.cron4j" name="cron4j" rev="[2.2.5,)" conf="common-deps->default"/>
+        <dependency org="com.enterprisedt" name="edtFTPj" rev="[1.5.3,)" conf="common-deps->default"/>
+        <dependency org="net.sourceforge.ezmorph" name="ezmorph" rev="[1.0.6,)" conf="common-deps->default"/>
+        <dependency org="com.sun.grizzly" name="grizzly-utils" rev="[1.9.43,)" conf="common-deps->default"/>
+        <dependency org="com.google.guava" name="guava" rev="[14.0.1,)" conf="common-deps->default"/>
+        <dependency org="com.h2database" name="h2" rev="1.3.175" conf="common-deps->default"/>
+        <dependency org="com.vividsolutions" name="jts" rev="[1.13,)" conf="common-deps->default"/>
+        <dependency org="com.beust" name="jcommander" rev="[1.30,)" conf="common-deps->default"/>
+        <dependency org="com.jcraft" name="jsch" rev="[0.1.50,)" conf="common-deps->default"/>
+        <dependency org="net.sourceforge.json-lib" name="json-lib" rev="[2.4,)" conf="common-deps->default"/>
+        <dependency org="net.sourceforge.jtidy" name="jtidy" rev="[r938,)" conf="common-deps->default"/>
+        <dependency org="org.apache.lucene" name="lucene" rev="[3.5.0,)" conf="common-deps->default"/>
+        <dependency org="javax.mail" name="javamail" rev="[1.4.7,)" conf="common-deps->default"/>
+        <dependency org="io.netty" name="netty" rev="[4.0.9.Final,)" conf="common-deps->all"/>
+        <dependency org="org.apache.oro" name="oro" rev="[2.0.8,)" conf="common-deps->default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[2.4.1,)" conf="common-deps->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[3.0.1,)" conf="common-deps->default"/>
+        <dependency org="com.github.romix" name="java-concurrent-hash-trie-map" rev="[0.2.0,)" conf="common-deps->default"/>
+        <dependency org="org.pcollections" name="pcollections" rev="[2.1.2,)" conf="common-deps->default"/>
+        <dependency transitive="false" org="org.apache.tika" name="tika" rev="[1.3,)" conf="hadoop1,hadoop2,streaming->parsers"/>
+        <dependency org="org.apache.hadoop" name="hadoop" rev="[1.0.4,2.0[" conf="hadoop1->core"/>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.1,)" conf="hadoop1,hadoop2->default"/>
+
+        <!-- These dependencies are either not in Ivy Roundup or need newer versions added
+        <dependency org="org.apache.hadoop" name="hadoop" rev="[2.0.3-alpha,3.0[" conf="hadoop2->annotations,auth"/>
+        <dependency transitive="false" org="org.apache.hadoop" name="hadoop" rev="[2.0.3-alpha,3.0[" conf="hadoop2->common,hdfs,mapreduce-client-common,mapreduce-client-core"/>
+        <dependency org="com.googlecode.juniversalchardet" name="juniversalchardet" rev="[1.0.3,)" conf="hadoop1,hadoop2,streaming->default"/>
+        <dependency org="net.miginfocom" name="miglayout" rev="[4.2,)" conf="hadoop1,hadoop2,streaming->core,swing"/>
+        <dependency org="org.mongodb" name="mongo-java-driver" rev="[2.11.1,)" conf="hadoop1,hadoop2,streaming->default"/>
+        <dependency org="org.apache.avro" name="avro" rev="[1.6.3,)" conf="hadoop2->default"/>
+        -->
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>kfs by net.sourceforge.kosmosfs :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../net.sourceforge.kosmosfs/kfs/">kfs</a></span> 
+    by 
+    <span id="organisation"><a href="../../../net.sourceforge.kosmosfs/">net.sourceforge.kosmosfs</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>0.2.0</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://kosmosfs.sourceforge.net/">http://kosmosfs.sourceforge.net/</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.kosmosfs/kfs/0.2.0/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://kosmosfs.sourceforge.net/">
+            <p>
+                Web-scale applications require a scalable storage infrastructure to process vast amounts
+                of data. CloudStore (formerly, Kosmos filesystem) is an open-source high performance 
+                distributed filesystem designed to meet such an infrastructure need:
+            </p>
+            <p>
+                CloudStore is implemented in C++ using standard system components such as STL,
+                boost libraries, aio, log4cpp.
+            </p>
+            <p>
+                CloudStore is integrated with Hadoop and Hypertable. This enables applications bult on
+                those systems to seamlessly use CloudStore as the underlying data store.
+            </p>
+        </description></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<strong><span class="restricted-build">*** Note ***</span></strong> This module uses restricted
+          build instructions; You must configure your packager resolver with <span class="code">restricted="false"</span>. See the
+          <a href="http://ant.apache.org/ivy/history/latest-milestone/resolver/packager.html">Packager Resolver Documentation</a>
+          for more information.
+        </td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody><tr>
+<td>default</td>
+<td><i>Implicit default configuration</i></td>
+<td></td>
+</tr></tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>kfs.jar</td>
+<td>jar</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>kfs-source.zip</td>
+<td>source</td>
+<td><i>all</i></td>
+</tr>
+<tr>
+<td>kfs-javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>${ivy.packager.revision}</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody><tr>
+<td>http://downloads.sourceforge.net/project/kosmosfs/kosmosfs/kfs-${revision}/${archive}.tar.gz</td>
+<td>Unpack into archive/</td>
+<td>e91ce9e8a099636fcaf8d96b12ebb5b9ab276b91</td>
+</tr></tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- Note that the original build script is broken. You must create a build/lib directory first --&gt;
+        &lt;mkdir dir="archive/${archive}/build/lib"/&gt;
+        &lt;ant antfile="build.xml" dir="archive/${archive}" target="jar"/&gt;
+
+        &lt;!-- jar --&gt;
+        &lt;move file="archive/${archive}/build/${archive}.jar" tofile="artifacts/jars/${name}.jar"/&gt;
+
+        &lt;!-- source --&gt;
+        &lt;zip destfile="artifacts/sources/${name}-source.zip"&gt;
+            &lt;fileset dir="archive/${archive}/src/java"/&gt;
+        &lt;/zip&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;mkdir dir="archive/${archive}/build/docs"/&gt;
+        &lt;javadoc sourcepath="archive/${archive}/src/java" destdir="archive/${archive}/build/docs"/&gt;
+        &lt;zip destfile="artifacts/javadocs/${name}-javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/build/docs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>

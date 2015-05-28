@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+    <property name="name" value="${ivy.packager.module}"/>
+
+    <m2resource groupId="org/apache/ws/xmlschema" artifactId="xmlschema-core">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="93415557e2867469c33be98ab330655dd714297d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="f0a12ecc07f75352b7f086d7930347901ca258d6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="eb354967da2a0166c757ab68191a2a8faf7061d8"/>
+    </m2resource>
+</packager-module>

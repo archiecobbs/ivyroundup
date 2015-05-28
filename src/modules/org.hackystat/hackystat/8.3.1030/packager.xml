@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="example.package" value="hackystat-sensor-example-${revision}.zip"/>
+
+    <resource url="http://hackystat.googlecode.com/files/${archive}-sensors-bin.zip" sha1="35030e706a8bdb846b33e0692bec33cdcf11e09a">
+      <include name="${archive}-sensors-bin/**/*.jar"/>
+      <include name="${archive}-sensors-bin/**/*.el"/>
+      <include name="${archive}-sensors-bin/**/*.zip"/>
+      <include name="${archive}-sensors-bin/**/${example.package}"/>
+    </resource>
+
+    <resource url="http://hackystat.googlecode.com/files/${archive}-services-bin.zip" sha1="2a1da1d2241cb5c4fa902ff8a9463fec01e10942">
+      <include name="${archive}-services-bin/**/*.jar"/>
+      <include name="${archive}-services-bin/**/*.zip"/>
+    </resource>
+
+
+    <build>
+        <!-- move all jar files. -->
+        <move todir="artifacts/jars" flatten="true">
+           <fileset dir="archive/${archive}-sensors-bin" includes="**/*.jar"/>
+           <fileset dir="archive/${archive}-sensors-bin" includes="**/${example.package}"/>
+           <fileset dir="archive/${archive}-services-bin" includes="**/*.jar"/>
+	</move>
+
+        <!-- Move the javadoc files --> 
+        <move todir="artifacts/javadocs" flatten="true">
+          <fileset dir="archive/${archive}-sensors-bin" includes="**/**-javadoc.zip"/>
+          <fileset dir="archive/${archive}-services-bin" includes="**/**-javadoc.zip"/>
+	</move>
+
+
+        <!-- Move the source files --> 
+        <move todir="artifacts/sources" flatten="true">
+          <fileset dir="archive/${archive}-sensors-bin" includes="**/**-source.zip"/>
+          <fileset dir="archive/${archive}-services-bin" includes="**/**-source.zip"/>
+	</move>
+
+        <!-- Lisp -->
+        <mkdir dir="artifacts/lisps"/>
+        <move todir="artifacts/lisps" flatten="true">
+          <fileset dir="archive/${archive}-sensors-bin" includes="**/sensor-package.el"/>
+	</move>
+
+    </build>
+</packager-module>

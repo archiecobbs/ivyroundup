@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20110219202600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://vaadin.com/directory#addon/console">
+            <p>
+                Because sometimes a text based interface is more easier to use than a GUI.
+            </p>
+            <p>
+                With Console you can add a command line interfaces to your web application. Use it for SQL query interface, admin shell, test interface, build integration, etc.
+            </p>
+            <p>
+                <ul>
+                    <li>Supports raw line-based input, predefined commands, and basic control characters.</li>
+                    <li>Built-in argument parsing. Supports grouping with double quotes.</li>
+                    <li>Simple command/callback mechanism to quickly add new console commands</li>
+                    <li>Command history</li>
+                    <li>Terminal-like scrollable buffer</li>
+                    <li>Following control characters are supported: BELL (^G), TAB (^I), LINE_FEED (^J) , FORM_FEED (^L), CARRIAGE_RETURN (^M).</li>
+                    <li>Bash-like command completion using TAB</li>
+                    <li>Bash-like "visual bell"</li>
+                    <li>PrintStream implementation for redirecting output to console (even System.out or System.err).</li>
+                    <li>Custom command prompt and greeting message</li>
+                    <li>Set size either using width/height or rows/columns</li>
+                    <li>'ObjectInspector' helper to expose properties and methods in any Java object to the Console as commands.</li>
+                </ul>
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency conf="default->default" org="com.vaadin.addon" name="widget-rpc" rev="1.+"/>
+    </dependencies>
+
+</ivy-module>

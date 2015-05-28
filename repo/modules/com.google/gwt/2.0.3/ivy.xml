@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Kirby Files
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.google" module="gwt" revision="2.0.3" status="release" publication="20100217120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.google/gwt/2.0.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.gwtproject.org/">
+
+            <p>
+            Google Web Toolkit (GWT) is a development toolkit for building
+            and optimizing complex browser-based applications. Its goal
+            is to enable productive development of high-performance web
+            applications without the developer having to be an expert in
+            browser quirks, XMLHttpRequest, and JavaScript. GWT is used
+            by many products at Google, including Google Wave and the
+            new version of AdWords. It's open source, completely free,
+            and used by thousands of developers around the world.
+            </p>
+
+            <h2>Developing with Google Web Toolkit</h2>
+
+            <h3>Write</h3>
+
+            <p>
+            The GWT SDK provides a set of core Java APIs and Widgets. These allow
+            you to write AJAX applications in Java and then compile the source to
+            highly optimized JavaScript that runs across all browsers, including
+            mobile browsers for Android and the iPhone.
+            </p>
+
+            <p>
+            Constructing AJAX applications in this manner is more productive thanks
+            to a higher level of abstraction on top of common concepts like DOM
+            manipulation and XHR communication.
+            </p>
+
+            <p>
+            You aren't limited to pre-canned widgets either. Anything you can do
+            with the browser's DOM and JavaScript can be done in GWT, including
+            interacting with hand-written JavaScript.
+            </p>
+
+            <h3>Debug</h3>
+
+            <p>
+            You can debug AJAX applications in your favorite IDE just like you would
+            a desktop application, and in your favorite browser just like you would
+            if you were coding JavaScript. The GWT developer plugin spans the gap
+            between Java bytecode in the debugger and the browser's JavaScript.
+            </p>
+
+            <p>
+            Thanks to the GWT developer plugin, there's no compiling of code
+            to JavaScript to view it in the browser. You can use the same
+            edit-refresh-view cycle you're used to with JavaScript, while at the
+            same time inspect variables, set breakpoints, and utilize all the other
+            debugger tools available to you with Java. And because GWT's development
+            mode is now in the browser itself, you can use tools like Firebug and
+            Inspector as you code in Java.
+            </p>
+
+            <h3>Optimize</h3>
+
+            <p>
+            Google Web Toolkit contains two powerful tools for creating optimized
+            web applications. The GWT compiler performs comprehensive optimizations
+            across your codebase ? in-lining methods, removing dead code, optimizing
+            strings, and more. By setting split-points in the code, it can also
+            segment your download into multiple JavaScript fragments, splitting up
+            large applications for faster startup time.
+            </p>
+
+            <p>
+            Performance bottlenecks aren't limited to JavaScript. Browser layout
+            and CSS often behave in strange ways that are hard to diagnose. Speed
+            Tracer is a new Chrome Extension in Google Web Toolkit that enables you
+            to diagnose performance problems in the browser.
+            </p>
+
+            <h3>Run</h3>
+
+            <p>
+            When you're ready to deploy, GWT compiles your Java source code into
+            optimized, stand-alone JavaScript files that automatically run on all
+            major browsers, as well as mobile browsers for Android and the iPhone.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="compile" description="GWT compiler"/>
+        <conf name="runtime" description="Server-side runtime support for GWT RPC"/>
+        <conf name="api-checker" description="API Checker support"/>
+        <conf name="module-dtd" description="GWT module XML file DTD"/>
+        <conf name="windows-swt" description="Windows DLL support for development mode"/>
+        <conf name="default" extends="compile,runtime" description="Development and runtime JARs"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-user" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-dev" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-soyc-vis" conf="compile"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-api-checker" conf="api-checker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="gwt-servlet" conf="runtime"/>
+        <artifact name="gwt-module" type="dtd" conf="module-dtd"/>
+        <artifact name="gwt-ll" type="dll" conf="windows-swt"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://aitools.org/${name}/${revision}-bin/${name}-${revision}-bin.tar.bz2"
+      sha1="01ab4e03a787ad6219e1e439f5fe9daefbf42b93">
+        <include name="ProgramD/distrib/${name}-main.jar"/>
+    </resource>
+    <resource url="http://aitools.org/${name}/${revision}-src/${name}-${revision}-src.tar.bz2"
+      sha1="66dbfe304a5228dedd8ec6cf1b4c71d491c7d69c">
+        <include name="ProgramD/JavaSource/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/ProgramD/distrib/${name}-main.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/ProgramD/JavaSource"/>
+        </zip>
+    </build>
+</packager-module>

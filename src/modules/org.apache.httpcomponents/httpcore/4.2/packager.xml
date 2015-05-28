@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="httpcomponents-core-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/binary/${archive}-bin.tar.gz"
+      sha1="86bf59b5310e27130cfa7c1666539736934a98e6">
+        <include name="${archive}/lib/*.jar"/>
+        <include name="${archive}/javadoc/**/*"/>
+    </resource>
+
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/source/${archive}-src.tar.gz"
+      sha1="8c155c6705b466bbba0e50571663736308944a9b">
+        <include name="${archive}/httpcore-ab/src/main/java/**/*"/>
+        <include name="${archive}/httpcore-benchmark/src/main/java/**/*"/>
+        <include name="${archive}/httpcore-contrib/src/main/java/**/*"/>
+        <include name="${archive}/httpcore-nio/src/main/java/**/*"/>
+        <include name="${archive}/httpcore-nio/src/main/resources/**/*"/>
+        <include name="${archive}/httpcore/src/main/java/**/*"/>
+        <include name="${archive}/httpcore/src/main/resources/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/lib/${name}-nio-${revision}.jar" tofile="artifacts/jars/${name}-nio.jar"/>
+        <move file="archive/${archive}/lib/${name}-ab-${revision}.jar" tofile="artifacts/jars/${name}-ab.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/httpcore-sources.jar">
+            <fileset dir="archive/${archive}/httpcore-benchmark/src/main/java"/>
+            <fileset dir="archive/${archive}/httpcore-contrib/src/main/java"/>
+            <fileset dir="archive/${archive}/httpcore/src/main/java"/>
+            <fileset dir="archive/${archive}/httpcore/src/main/resources"/>
+        </zip>
+
+        <!-- NIO source -->
+        <zip destfile="artifacts/sources/httpcore-nio-sources.jar">
+            <fileset dir="archive/${archive}/httpcore-nio/src/main/java"/>
+            <fileset dir="archive/${archive}/httpcore-nio/src/main/resources"/>
+        </zip>
+
+        <!-- AB source -->
+        <zip destfile="artifacts/sources/httpcore-ab-sources.jar">
+            <fileset dir="archive/${archive}/httpcore-ab/src/main/java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+     </build>
+</packager-module>

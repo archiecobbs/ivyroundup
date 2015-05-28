@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>javamail by javax.mail :: Ivy RoundUp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="en">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="../../../../css/ivy-style.css">
+</head>
+<body>
+<div id="logo">
+<a href="http://ant.apache.org/ivy/"><img src="../../../../images/logo.png"></a><br><a id="rep" href="https://github.com/archiecobbs/ivyroundup">Ivy RoundUp Repository</a>
+</div>
+<h1>
+<span id="module"><a href="../../../javax.mail/javamail/">javamail</a></span> 
+    by 
+    <span id="organisation"><a href="../../../javax.mail/">javax.mail</a></span>
+</h1>
+<div id="revision">
+<span id="revision">Revision: </span>1.4.1</div>
+<table class="header">
+<tr>
+<td class="title">Status</td>
+<td class="value">release</td>
+</tr>
+<tr>
+<td class="title">Home Page</td>
+<td class="value"><a href="http://www.oracle.com/technetwork/java/javamail-1-4-1-141959.html">http://www.oracle.com/technetwork/java/javamail-1-4-1-141959.html</a></td>
+</tr>
+<tr>
+<td class="title">Licenses</td>
+<td class="value"><a href="http://www.oracle.com/us/sun/index.htm">Sun Microsystems, Inc. Binary Code License Agreement</a></td>
+</tr>
+<tr>
+<td class="title">Ivy Authors</td>
+<td class="value"><a href="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/javax.mail/javamail/1.4.1/">Ivy RoundUp Repository</a></td>
+</tr>
+<tr>
+<td class="title">Description</td>
+<td class="value"><description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" homepage="http://www.oracle.com/technetwork/java/javamail-1-4-1-141959.html">
+            The JavaMail API provides a platform-independent and protocol-independent
+            framework to build mail and messaging applications. The JavaMail API is
+            available as an optional package for use with Java SE platform and is
+            also included in the Java EE platform.
+        </description></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<strong><span class="manual-download">*** Note ***</span></strong> This module requires one or more
+          resources to be downloaded manually (see below). See the
+          <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td>
+</tr>
+</table>
+<div id="public-confs" class="conf">
+<h2>Public Configurations</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Name</th>
+<th class="conf-desc">Description</th>
+<th class="conf-extends">Extends</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>JavaMail API with all service providers</td>
+<td></td>
+</tr>
+<tr>
+<td>api</td>
+<td>JavaMail API with no service providers</td>
+<td></td>
+</tr>
+<tr>
+<td>imap</td>
+<td>IMAP service provider only</td>
+<td></td>
+</tr>
+<tr>
+<td>smtp</td>
+<td>SMTP service provider only</td>
+<td></td>
+</tr>
+<tr>
+<td>pop3</td>
+<td>POP3 service provider only</td>
+<td></td>
+</tr>
+<tr>
+<td>dsn</td>
+<td>multipart/report DSN message support only</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="artifacts">
+<h2>Published Artifacts</h2>
+<table>
+<thead><tr>
+<th class="art-name">Name</th>
+<th class="art-type">Type</th>
+<th class="art-conf">Configurations</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>mail.jar</td>
+<td>jar</td>
+<td>default</td>
+</tr>
+<tr>
+<td>mailapi.jar</td>
+<td>jar</td>
+<td>api</td>
+</tr>
+<tr>
+<td>imap.jar</td>
+<td>jar</td>
+<td>default,imap</td>
+</tr>
+<tr>
+<td>smtp.jar</td>
+<td>jar</td>
+<td>default,smtp</td>
+</tr>
+<tr>
+<td>pop3.jar</td>
+<td>jar</td>
+<td>default,pop3</td>
+</tr>
+<tr>
+<td>dsn.jar</td>
+<td>jar</td>
+<td>default,dsn</td>
+</tr>
+<tr>
+<td>javadoc.zip</td>
+<td>javadoc</td>
+<td><i>all</i></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="dependencies">
+<h2>Dependencies</h2>
+<table>
+<thead><tr>
+<th class="dep-org">Organisation</th>
+<th class="dep-name">Name</th>
+<th class="dep-rev">Revision</th>
+<th class="dep-conf">Configurations</th>
+</tr></thead>
+<tbody><tr>
+<td>javax.activation</td>
+<td><a href="../../../javax.activation/jaf/">jaf</a></td>
+<td>[1.1.1,2.0[</td>
+<td>*-&gt;default</td>
+</tr></tbody>
+</table>
+</div>
+<div id="packaging-instructions" class="conf">
+<h2>Packaging Instructions</h2>
+<table>
+<thead><tr>
+<th class="conf-name">Property</th>
+<th class="conf-desc">Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>${ivy.packager.module}</td>
+</tr>
+<tr>
+<td>revision</td>
+<td>1.4.1</td>
+</tr>
+<tr>
+<td>_version</td>
+<td>1_4_1</td>
+</tr>
+<tr>
+<td>archive</td>
+<td>${name}-${revision}</td>
+</tr>
+<tr>
+<td>_archive</td>
+<td>${name}-${_version}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead><tr>
+<th class="conf-name">Resource</th>
+<th class="conf-name">Action</th>
+<th class="conf-desc">SHA1 Checksum</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><span class="manual-download">file:///${java.io.tmpdir}/${_archive}.zip</span></td>
+<td>Unpack into archive/</td>
+<td>a570f0340765013fec6cc14d11315f65fe528e2b</td>
+</tr>
+<tr><td colspan="3">
+<span class="manual-download">Resources displayed in red</span> must be downloaded manually.
+          See the <a href="https://github.com/archiecobbs/ivyroundup/wiki/ManuallyDownloadedSoftware">Ivy RoundUp</a>
+          wiki for more information.
+        </td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr><th class="conf-name">Build Steps</th></tr></thead>
+<tbody><tr><td><div class="build-inst">
+        &lt;!-- jars --&gt;
+        &lt;move file="archive/${archive}/mail.jar" todir="artifacts/jars"/&gt;
+        &lt;move todir="artifacts/jars"&gt;
+            &lt;fileset dir="archive/${archive}/lib"&gt;
+                &lt;include name="*.jar"/&gt;
+            &lt;/fileset&gt;
+        &lt;/move&gt;
+
+        &lt;!-- javadoc --&gt;
+        &lt;zip destfile="artifacts/javadocs/javadoc.zip"&gt;
+            &lt;fileset dir="archive/${archive}/docs/javadocs"/&gt;
+        &lt;/zip&gt;
+    </div></td></tr></tbody>
+</table>
+</div>
+</body>
+</html>
