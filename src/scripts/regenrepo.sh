@@ -25,7 +25,7 @@ esac
 regenerate_repo()
 {
     # Regenerate repo
-    echo 'regenrepo: regenerating repository' "$1"
+    echo 'regenrepo: regenerating repository'
     ant -Djavax.xml.transform.TransformerFactory=org.apache.xalan.processor.TransformerFactoryImpl \
       -Ddownload-xalan=true repo > regen.out
 
@@ -59,12 +59,34 @@ regenerate_repo
 done
 
 # Generate HTML files
-echo 'regenrepo: regenerating HTML files' "$1"
+echo 'regenrepo: regenerating HTML files'
 xsltproc repo/xsl/modules.xsl repo/modules.xml > repo/modules.html
 git status  --porcelain repo/modules | grep -E '/ivy.xml$' | cut -c 4- | while read IVYFILE; do
     HTMLFILE=`echo "${IVYFILE}" | sed 's/\.xml$/.html/g'`
     xsltproc repo/xsl/ivy-doc.xsl "${IVYFILE}" > "${HTMLFILE}"
 done
+
+# Generate directory index files
+echo 'regenrepo: regenerating directory indexes'
+find repo -type d -print | while read DIR; do
+    printf '<html><head><title>ivyroundup - %s</title></head>\n<body>\n<h2>ivyroundup - %s</h2>\n<ul>\n' \
+      "${DIR}" "${DIR}" > "${DIR}"/index.html
+    printf '<li><a href="../">..</a></li>\n' >> "${DIR}"/index.html
+    find "${DIR}" -mindepth 1 -maxdepth 1 -print | while read FILEPATH; do
+        FILE=`basename "${FILEPATH}"`
+        if [ -d "${FILEPATH}" ]; then
+            FILE="${FILE}/"
+        fi
+        if [ "${FILE}" = 'index.html' ]; then
+            continue;
+        fi
+        printf '<li><a href="%s">%s</a></li>\n' "${FILE}" "${FILE}" >> "${DIR}"/index.html
+    done
+    printf '</ul><hr noshade><em>Powered by <a href="https://github.com/archiecobbs/ivyroundup/">Ivy RoundUp</a></em></body></html>\n' >> "${DIR}"/index.html
+done
+
+# Schedule repo updates for commit
+git add --all repo
 
 # Done
 echo 'regenrepo: done'
