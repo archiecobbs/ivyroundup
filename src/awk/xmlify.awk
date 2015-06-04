@@ -4,7 +4,6 @@ BEGIN {
     printf "<?xml-stylesheet type=\"text/xsl\" href=\"xsl/modules.xsl\"?>\n"
     printf "<modules>\n"
     printf "  <timestamp>%s</timestamp>\n", TIMESTAMP
-    printf "  <gitRevision>%s</gitRevision>\n", GITREV
 }
 
 {
