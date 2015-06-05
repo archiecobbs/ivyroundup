@@ -21,8 +21,6 @@
         <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="b25bb19416e18f7b4db848539260fa018a1a3069"/>
     </m2resource>
     <m2resource artifactId="leveldb-api">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}-api.jar" sha1="4f9aa23e53611d03bcc90e2df4af95b6cfee2092"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-api.zip" sha1="6dcbc9f8262a24f6ceeefff63e4edc0b0250e2af"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-api.zip" sha1="fed716469fbf0505eb049cc6cb50c5875cc1735f"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-api.jar" sha1="6d4b69c53495b4c7aeb783076b1bf65e799237be"/>
     </m2resource>
 </packager-module>
