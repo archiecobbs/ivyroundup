@@ -3,6 +3,10 @@
 set -e
 
 MSG="$*"
+if echo "${MSG}" | grep -qE '^[[:space:]]*$'; then
+    echo "error: empty commit message" 1>&2
+    exit 1
+fi
 echo "Commit message will be: ${MSG}"
 
 ./src/scripts/regenrepo.sh
