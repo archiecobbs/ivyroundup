@@ -18,9 +18,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.jsimpledb" module="jsimpledb" revision="1.1.838" status="release" publication="20150307000000">
+    <info organisation="org.jsimpledb" module="jsimpledb" revision="1.2.0" status="release" publication="20150609000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jsimpledb/jsimpledb/1.1.838/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jsimpledb/jsimpledb/1.2.0/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://github.com/archiecobbs/jsimpledb/">
 
@@ -93,7 +93,7 @@
         <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="gui-deps-&gt;default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="core-&gt;default"/>
         <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="gui-deps-&gt;default"/>
-        <dependency org="org.dellroad" name="dellroad-stuff" rev="1.0.964" conf="core-&gt;core"/>
+        <dependency org="org.dellroad" name="dellroad-stuff" rev="1.0.972" conf="core-&gt;core"/>
         <dependency org="org.eclipse" name="jetty" rev="9.2.7.v20150116" conf="gui-deps-&gt;webapp,annotations"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core-&gt;default"/>
         <dependency org="org.sonatype.jline" name="jline" rev="2.12" conf="cli-deps-&gt;default"/>
