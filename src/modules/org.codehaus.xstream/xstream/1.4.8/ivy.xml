@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Tim Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20150218191300">
+        <license name="BSD License" url="http://xstream.codehaus.org/license.html"/>
+        <description homepage="http://xstream.codehaus.org/">
+            XStream is a simple library to serialize objects to XML and back again.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="xstream" description="XStream Core"/>
+        <conf name="xstream-benchmark" extends="xstream" description="XStream Benchmark Module"/>
+        <conf name="xstream-hibernate" extends="xstream" description="XStream Hibernate Extensions"/>
+	<conf name="time" extends="xstream" description="XStream with advanced time support"/>
+        <conf name="default" extends="xstream" description="XStream Core"/>
+    </configurations>
+
+    <publications>
+        <!-- Jars -->
+        <artifact name="xstream" conf="xstream"/>
+        <artifact name="xstream-benchmark" conf="xstream-benchmark"/>
+        <artifact name="xstream-hibernate" conf="xstream-hibernate"/>
+
+        <!-- Sources -->
+        <artifact name="xstream" type="source" ext="zip" conf="xstream"/>
+        <artifact name="xstream-benchmark" type="source" ext="zip" conf="xstream-benchmark"/>
+        <artifact name="xstream-hibernate" type="source" ext="zip" conf="xstream-hibernate"/>
+
+        <!-- Javadocs -->
+        <artifact name="xstream" type="javadoc" ext="zip" conf="xstream"/>
+        <artifact name="xstream-benchmark" type="javadoc" ext="zip" conf="xstream-benchmark"/>
+        <artifact name="xstream-hibernate" type="javadoc" ext="zip" conf="xstream-hibernate"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="xstream->default"/>
+        <dependency org="org.hibernate" name="hibernate" rev="4.1.4.Final" conf="xstream-hibernate->core"/>
+	<dependency org="org.joda" name="joda-time" rev="1.6+" conf="time->default"/>
+    </dependencies>
+
+</ivy-module>
