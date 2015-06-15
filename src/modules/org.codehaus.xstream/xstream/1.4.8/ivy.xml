@@ -29,7 +29,7 @@
         <conf name="xstream" description="XStream Core"/>
         <conf name="xstream-benchmark" extends="xstream" description="XStream Benchmark Module"/>
         <conf name="xstream-hibernate" extends="xstream" description="XStream Hibernate Extensions"/>
-	<conf name="time" extends="xstream" description="XStream with advanced time support"/>
+        <conf name="time" extends="xstream" description="XStream with advanced time support"/>
         <conf name="default" extends="xstream" description="XStream Core"/>
     </configurations>
 
@@ -53,7 +53,7 @@
     <dependencies>
         <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.+" conf="xstream->default"/>
         <dependency org="org.hibernate" name="hibernate" rev="4.1.4.Final" conf="xstream-hibernate->core"/>
-	<dependency org="org.joda" name="joda-time" rev="1.6+" conf="time->default"/>
+        <dependency org="org.joda" name="joda-time" rev="1.6+" conf="time->default"/>
     </dependencies>
 
 </ivy-module>
