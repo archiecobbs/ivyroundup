@@ -22,40 +22,40 @@
     <property name="revision" value="${ivy.packager.revision}"/>
 
     <m2resource artifactId="vaadin-shared">
-        <artifact tofile="artifacts/jars/shared.jar" sha1="73bc5679c533df043ea5217c4afa5778acc8a03c"/>
-        <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="d1e4b7128fd5695b7df6ae8792d69818f7ecbf46"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/shared.zip" sha1="5cff1e778559653fc5aafe92eda25e11aa351b4e"/>
+        <artifact tofile="artifacts/jars/shared.jar" sha1="dd9eb4d1758aba6de95bf8b54be3fa4dc6b99cc9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/shared.zip" sha1="6ea82264b15d306ae4bad6c246190571a3f136cf"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/shared.zip" sha1="c19801613a6711af02993dbb91eb2886874ea865"/>
     </m2resource>
     <m2resource artifactId="vaadin-client">
-        <artifact tofile="artifacts/jars/client.jar" sha1="a7f5590ac3f89a2c1e9c860be99470c1c5cafc77"/>
-        <artifact classifier="sources" tofile="artifacts/sources/client.zip" sha1="3b31ae5584fa4266e02336ded05046a356da2b82"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/client.zip" sha1="4c3162e5a805e8977b31b35b3481dbb49bf1cbcf"/>
+        <artifact tofile="artifacts/jars/client.jar" sha1="393ed2c1912500e699eff4606f5a5a0f5438607f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/client.zip" sha1="915566555c1275488187510e426902d66b347ef5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/client.zip" sha1="678fec19485c850abba40ecbd6cd490c6792fdb6"/>
     </m2resource>
     <m2resource artifactId="vaadin-server">
-        <artifact tofile="artifacts/jars/server.jar" sha1="b7e85b3da7d9587ef14abd75845935a8610e6452"/>
-        <artifact classifier="sources" tofile="artifacts/sources/server.zip" sha1="a2265be03b14f3a8eeaaf9c99ba573835ada9506"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/server.zip" sha1="ca6713cbf057c6b7082c99bb607519eb54ed3522"/>
+        <artifact tofile="artifacts/jars/server.jar" sha1="f67c34a6dbd2c41cd600b4169e0ad7060d1d0770"/>
+        <artifact classifier="sources" tofile="artifacts/sources/server.zip" sha1="e08e457743492519adbe3ce85705c9930a64649f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/server.zip" sha1="349377882b8cf70464bf4c77c9829f7127fd386b"/>
     </m2resource>
     <m2resource artifactId="vaadin-push">
-        <artifact tofile="artifacts/jars/push.jar" sha1="3c5f41b3575ad2d0ee5e934a29b8f200648d9ba9"/>
+        <artifact tofile="artifacts/jars/push.jar" sha1="3d45a31b67da350e38d482ea2e72ad8f0b536cec"/>
    <!-- <artifact classifier="sources" tofile="artifacts/sources/push.zip" sha1="0000000000000000000000000000000000000000"/> -->
    <!-- <artifact classifier="javadoc" tofile="artifacts/javadocs/push.zip" sha1="0000000000000000000000000000000000000000"/> -->
     </m2resource>
     <m2resource artifactId="vaadin-client-compiled">
-        <artifact tofile="artifacts/jars/widgets.jar" sha1="573f4bfd998fbc84820899d44a70a9d87cc93320"/>
+        <artifact tofile="artifacts/jars/widgets.jar" sha1="f2ab0be297b8f6e2f1fc5251b55b2efc1562d8bd"/>
     </m2resource>
     <m2resource artifactId="vaadin-client-compiler">
-        <artifact tofile="artifacts/jars/widget-compiler.jar" sha1="eaaf063878f9326a1bd659f0886a2b3eaf369e1c"/>
-        <artifact classifier="sources" tofile="artifacts/sources/widget-compiler.zip" sha1="112e10653f69ccd184479c31590eab82eed23ca7"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/widget-compiler.zip" sha1="5c4bc6a36c65783e5f433fc663d5ad01963d1988"/>
+        <artifact tofile="artifacts/jars/widget-compiler.jar" sha1="952d3cfd59e2c43a9f2cf8bb6cf85d52bbed2e1e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/widget-compiler.zip" sha1="f3b16080fe9665d5adba2ef715b0ed22dee876cd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/widget-compiler.zip" sha1="f9c18cb5e8e54ee93b746ff3c48ce05f8eca045d"/>
     </m2resource>
     <m2resource artifactId="vaadin-themes">
-        <artifact tofile="artifacts/jars/themes.jar" sha1="f0341292db795bc7d3f58d21fa6a6f675e1408a5"/>
+        <artifact tofile="artifacts/jars/themes.jar" sha1="8f2f11230252375bc9606018204d3c0fbe4b0b03"/>
     </m2resource>
     <m2resource artifactId="vaadin-widgets">
-        <artifact tofile="artifacts/jars/standalone-widgets.jar" sha1="bf6892cc4a990f7deb6c81cd941bbc8a4b0d6922"/>
-        <artifact classifier="sources" tofile="artifacts/sources/standalone-widgets.zip" sha1="e2650cafd8cb707ca52e311f98c40328f2e5d010"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/standalone-widgets.zip" sha1="fcc28052f842c129f5b1ed307432ce1cc4924f7d"/>
+        <artifact tofile="artifacts/jars/standalone-widgets.jar" sha1="d7c0baf430e4bbde2619244606fb866032b0f261"/>
+        <artifact classifier="sources" tofile="artifacts/sources/standalone-widgets.zip" sha1="324ec748ab86a048c598be2a57d42d095dd195e7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/standalone-widgets.zip" sha1="c02a6f58fa4b5945625ba445bf522decaf859fd7"/>
     </m2resource>
 
     <resource url="http://vaadin.com/download/release/7.5/${revision}/${name}-all-${revision}.zip" sha1="4f36f02c69babccb885d28565a74402ad73cde55">
