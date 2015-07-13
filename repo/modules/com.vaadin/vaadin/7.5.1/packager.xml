@@ -63,6 +63,7 @@
         <include name="lib/vaadin-slf4j-jdk14-1.6.1.jar"/>
         <include name="lib/sac-1.3.jar"/>
         <include name="lib/cssparser-0.9.11.jar"/>
+        <include name="lib/guava-16.0.1.vaadin1.jar"/>
     </resource>
 
     <build>
@@ -72,6 +73,7 @@
         <move file="archive/lib/vaadin-slf4j-jdk14-1.6.1.jar" tofile="artifacts/jars/vaadin-slf4j.jar"/>
         <move file="archive/lib/sac-1.3.jar" tofile="artifacts/jars/sac.jar"/>
         <move file="archive/lib/cssparser-0.9.11.jar" tofile="artifacts/jars/cssparser.jar"/>
+        <move file="archive/lib/guava-16.0.1.vaadin1.jar" tofile="artifacts/jars/vaadin-guava.jar"/>
     </build>
 
 </packager-module>
