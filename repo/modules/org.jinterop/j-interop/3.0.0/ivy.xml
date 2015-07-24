@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jinterop" module="j-interop" revision="3.0.0" status="release" publication="20130628000000">
+        <license name="Eclipse Public License v1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jinterop/j-interop/3.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.j-interop.org/">
+
+            <p>
+            j-Interop is a Java Open Source library (under EPLv1.0) that
+            implements the DCOM wire protocol (MSRPC) to enable development of
+            Pure, Bi-Directional, Non-Native Java applications which can
+            interoperate with any COM component.
+            </p>
+
+            <p>
+            The implementation is itself purely in Java and does not use Java
+            Native Interface (JNI) to provide COM access. This allows the library
+            to be used from any Non-Windows platform.
+            </p>
+
+            <p>
+            It comes with pre-implemented packages for automation. This includes
+            support for IDispatch, ITypeInfo, and ITypeLib. For more flexibility
+            (in the cases where automation is not supported), it provides an
+            API set to directly invoke operations on a COM server.
+            </p>
+
+            <p>
+            Another important feature is allowing full access and manipulation
+            (C-R-U-D) of the Windows Registry in a platform independent manner.
+            </p>
+
+            <p>
+            The implementation has been tested on all advanced Windows and
+            Fedora platform(s) and displays upward compatibility from JRE 6.0.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes (no JCIFS)"/>
+        <conf name="jcifs" extends="core" description="Core classes + JCIFS"/>
+        <conf name="default" extends="jcifs" description="Same as jcifs"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="j-interop" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="j-interopdeps" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="jcifs-1.2.19" conf="jcifs"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
