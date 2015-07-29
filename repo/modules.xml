@@ -1,7 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2015-06-02 17:00:48 UTC</timestamp>
-  <gitRevision>heads/master</gitRevision>
+  <timestamp>2015-07-29 14:20:08 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -590,6 +589,7 @@
       <rev name="4.1.7"/>
       <rev name="5.0.73"/>
       <rev name="6.2.31"/>
+      <rev name="6.3.8"/>
     </mod>
   </org>
   <org name="com.smartclient">
@@ -856,6 +856,8 @@
       <rev name="7.3.0"/>
       <rev name="7.3.7"/>
       <rev name="7.3.9"/>
+      <rev name="7.4.8"/>
+      <rev name="7.5.1"/>
     </mod>
   </org>
   <org name="com.vividsolutions">
@@ -1938,6 +1940,7 @@
       <rev name="1.0.4"/>
       <rev name="1.0"/>
       <rev name="1.1.1"/>
+      <rev name="1.1.3"/>
       <rev name="1.1"/>
     </mod>
     <mod name="commons-math">
@@ -2364,6 +2367,7 @@
       <rev name="1.8.0"/>
       <rev name="1.8.1"/>
       <rev name="1.8.4"/>
+      <rev name="1.8.6"/>
     </mod>
   </org>
   <org name="org.asteriskjava">
@@ -2475,6 +2479,9 @@
   <org name="org.codehaus.jaxen">
     <mod name="jaxen">
       <rev name="1.1.1"/>
+      <rev name="1.1.3"/>
+      <rev name="1.1.4"/>
+      <rev name="1.1.6"/>
     </mod>
   </org>
   <org name="org.codehaus.jettison">
@@ -2522,6 +2529,7 @@
     <mod name="xstream">
       <rev name="1.3.1"/>
       <rev name="1.4.3"/>
+      <rev name="1.4.8"/>
     </mod>
   </org>
   <org name="org.cometd.java">
@@ -2628,9 +2636,13 @@
       <rev name="1.0.41"/>
       <rev name="1.0.48"/>
     </mod>
+    <mod name="leveldb">
+      <rev name="0.8.1"/>
+    </mod>
     <mod name="msrp4j">
       <rev name="1.0.18"/>
       <rev name="1.0.3"/>
+      <rev name="1.1.0"/>
     </mod>
     <mod name="sidekar">
       <rev name="0.65"/>
@@ -3122,6 +3134,11 @@
       <rev name="3.1.0.Final"/>
     </mod>
   </org>
+  <org name="org.jinterop">
+    <mod name="j-interop">
+      <rev name="3.0.0"/>
+    </mod>
+  </org>
   <org name="org.jivesoftware.smack">
     <mod name="smack">
       <rev name="3.1.0"/>
@@ -3173,6 +3190,9 @@
       <rev name="1.0.86"/>
       <rev name="1.1.748"/>
       <rev name="1.1.838"/>
+      <rev name="1.2.0"/>
+      <rev name="1.2.1"/>
+      <rev name="1.2.2"/>
     </mod>
   </org>
   <org name="org.json.simple">
@@ -3245,9 +3265,19 @@
       <rev name="1.7"/>
     </mod>
   </org>
+  <org name="org.jvnet">
+    <mod name="tiger-types">
+      <rev name="1.4"/>
+    </mod>
+  </org>
   <org name="org.jwebsocket">
     <mod name="jwebsocket">
       <rev name="0.10"/>
+    </mod>
+  </org>
+  <org name="org.kohsuke.jinterop">
+    <mod name="jinterop-proxy">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="org.liquibase">
@@ -3464,6 +3494,11 @@
       <rev name="2.1.4"/>
     </mod>
   </org>
+  <org name="org.rocksdb">
+    <mod name="rocksdbjni">
+      <rev name="3.10.1"/>
+    </mod>
+  </org>
   <org name="org.rxtx">
     <mod name="rxtx">
       <rev name="2.1.7"/>
@@ -3472,6 +3507,7 @@
   <org name="org.samba.jcifs">
     <mod name="jcifs">
       <rev name="1.2.19"/>
+      <rev name="1.3.17"/>
     </mod>
   </org>
   <org name="org.scala-lang">

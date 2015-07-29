@@ -72,12 +72,6 @@
 
         <mkdir dir="${target.repo}"/>
 
-        <!-- Get current GIT revision -->
-        <exec executable="git" outputproperty="git.revision" logError="true" failonerror="true">
-            <arg value="describe"/>
-            <arg value="--all"/>
-        </exec>
-
         <!-- Generate list of modules -->
         <exec executable="/bin/bash" logError="true" failonerror="true">
             <arg value="-c"/>
@@ -85,7 +79,7 @@
               export LC_ALL=C;
               find src/modules -name ivy.xml -print
                 | sort
-                | awk -F/ -v GITREV=${git.revision} -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
+                | awk -F/ -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
                 > ${target.repo}/modules.xml"/>
         </exec>
     </target>
