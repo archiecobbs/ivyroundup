@@ -140,7 +140,7 @@
         <dependency org="org.apache.xerces" name="xerces" rev="[0,)" conf="benchmark-&gt;default"/>
         <dependency org="org.apache.regexp" name="jakarta-regexp" rev="[0,)" conf="queries-&gt;default"/>
         <dependency org="org.junit" name="junit" rev="[0,)" conf="test-framework-&gt;default"/>
-        <dependency org="org.apache.ant" name="ant" rev="[0,)" conf="test-framework-&gt;junit"/>
+        <dependency org="org.apache.ant" name="ant" rev="[0,1.8.1]" conf="test-framework-&gt;junit"/>
         <dependency org="javax.servlet" name="servletapi" rev="[0,)" conf="xml-query-parser-&gt;default"/>
     </dependencies>
 
