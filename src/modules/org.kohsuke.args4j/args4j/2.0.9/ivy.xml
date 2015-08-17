@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20080616000000">
+        <license name="MIT License" url="http://opensource.org/licenses/mit-license.php"/>
+        <description homepage="http://args4j.kohsuke.org/">
+        <p>args4j is a small Java class library that makes it easy to parse command line options/arguments in your CUI application.</p>
+
+        <ul>
+                <li>It makes the command line parsing very easy by using annotations.</li>
+                <li>You can generate the usage screen very easily.</li>
+                <li>You can generate HTML/XML that lists all options for your documentation.</li>
+                <li>Fully supports localization.</li>
+                <li>It is designed to parse <tt>javac</tt> like options (as opposed to GNU-style where <code>ls -lR</code> is considered to have two options <tt>l</tt> and <tt>R</tt>.)</li>
+                <li>It is licensed under the MIT license</li>.
+        </ul>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

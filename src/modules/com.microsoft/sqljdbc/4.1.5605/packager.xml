@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}_4.1"/>
+
+    <resource url="http://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/${name}_${revision}.100_enu.tar.gz"
+      sha1="dd27d5f1609b928da3279094d12967e351bd5589">
+        <include name="${archive}/enu/sqljdbc.jar"/>
+        <include name="${archive}/enu/sqljdbc4.jar"/>
+        <include name="${archive}/enu/sqljdbc41.jar"/>
+    </resource>
+
+    <build>
+        <move file="archive/${archive}/enu/sqljdbc.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/enu/sqljdbc4.jar" todir="artifacts/jars"/>
+        <move file="archive/${archive}/enu/sqljdbc41.jar" todir="artifacts/jars"/>
+    </build>
+</packager-module>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20140327000000">
+        <license name="MIT" url="http://opensource.org/licenses/mit-license.php"/>
+        <description homepage="http://com4j.kohsuke.org/">
+
+            <p>
+            Type-safe Java/COM bridge.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Just COM4J"/>
+        <conf name="tlbimp" extends="core" description="tlbimp Java class generator tool"/>
+        <conf name="default" extends="core,tlbimp" description="COM4J plus tlbimp tool"/>
+    </configurations>
+
+    <publications>
+        <artifact name="com4j" conf="core"/>
+        <artifact name="tlbimp" conf="tlbimp"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.kohsuke.args4j" name="args4j" rev="2.0+" conf="tlbimp->default"/>
+    </dependencies>
+
+</ivy-module>
