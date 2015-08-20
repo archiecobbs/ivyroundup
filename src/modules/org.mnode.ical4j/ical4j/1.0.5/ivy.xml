@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130912000000">
+        <license name="iCal4j License" url="https://github.com/ical4j/ical4j/blob/ical4j-1.0.5/LICENSE"/>
+        <description homepage="https://github.com/ical4j/ical4j">
+            <p>
+            iCal4j is a Java library used to read and
+            write iCalendar data streams as defined in
+            <a href="http://www.faqs.org/rfcs/rfc2445.html">RFC2445</a>.
+            The iCalendar standard provides a common data format used to store information about
+            calendar-specific data such as events, appointments, to-do lists, etc.
+            All of the popular calendaring tools, such as Lotus Notes, Outlook and Apple's iCal
+            also support the iCalendar standard.
+            </p>
+            <p>
+            Providing both a parser and an object model, iCal4j allows
+            you to either modify existing iCalendar data or create new
+            data models. Validation is also provided to ensure the
+            data maintains a state consistent with the specification.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.3,2.0[" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1,2.0[" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.1,3.0[" conf="default->default"/>
+    </dependencies>
+
+</ivy-module>
