@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Andreas Heiduk
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    
+    <property name="download" value="https://jdbc.postgresql.org/download" />
+    
+    <resource url="${download}/postgresql-${revision}.jdbc3.jar"
+        tofile="artifacts/jars/postgresql-jdbc3.jar"
+        sha1="91dc6c3c1549a1fdbeedc4fb8a2cebce154c7610"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc4.jar"
+        tofile="artifacts/jars/postgresql-jdbc4.jar"
+        sha1="c0b40281d2d6cc310e188730c488ac48138638cc"/>
+        
+    <resource url="${download}/postgresql-${revision}.jdbc41.jar"
+        tofile="artifacts/jars/postgresql-jdbc41.jar"
+        sha1="bbea8b379df5d1aebf267e03196f12ce1fecd00a"/>
+        
+    <resource url="${download}/postgresql-jdbc-${revision}.src.tar.gz"
+        sha1="598171f202e5cf9cdbb487cc88ce6cc7e5870bdf"/>
+    
+    <build>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive" />
+        </zip>
+    </build>
+</packager-module>
