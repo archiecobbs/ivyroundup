@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="pl.pragmatists" module="JUnitParams" revision="1.0.4" status="release" publication="20080406120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/pl.pragmatists/JUnitParams/1.0.4/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/Pragmatists/JUnitParams">
+
+            <p>
+            JUnitParams project adds a new runner to JUnit and provides much easier and readable parametrised tests for JUnit &gt;=4.6.<br/><br/>
+
+Main differences to standard JUnit Parametrised runner:<br/><br/>
+<ul>
+<li>more explicit - params are in test method params, not class fields</li>
+<li>less code - you don't need a constructor to set up parameters</li>
+<li>you can mix parametrised with non-parametrised methods in one class</li>
+<li>params can be passed as a CSV string or from a parameters provider class</li>
+<li>parameters provider class can have as many parameters providing methods as you want, so that you can group different cases</li>
+<li>you can have a test method that provides parameters (no external classes or statics anymore)</li>
+<li>you can see actual parameter values in your IDE (in JUnit's Parametrised it's only consecutive numbers of parameters)</li>
+</ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Core classes"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="default"/>
+        <artifact name="source" type="source" ext="jar"/>
+        <artifact name="javadoc" type="javadoc" ext="jar"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.junit" name="junit" rev="[4.6,)" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
