@@ -81,8 +81,9 @@ elif [[ ("$COMMAND" == "addmod") ]]; then
         usage "Wrong number of arguments for addmod command"
     fi 
 
-    echo "cp -a src/boilerplate src/modules/$1/$2/$3"
-    cp -a src/boilerplate src/modules/$1/$2/$3
+    echo "cp -a src/boilerplate/* src/modules/$1/$2/$3"
+    mkdir -p src/modules/$1/$2/$3
+    cp -a src/boilerplate/* src/modules/$1/$2/$3
 
     if [[ ("$EDIT" == "y") ]]; then
         $EDITOR src/modules/$1/$2/$3/*
