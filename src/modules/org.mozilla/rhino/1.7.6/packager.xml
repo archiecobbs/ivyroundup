@@ -19,12 +19,12 @@
 <packager-module rev="$Id$">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="_version" value="1_7R4"/>
-    <property name="archive" value="${name}${_version}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}${revision}"/>
 
-    <resource url="https://github.com/downloads/mozilla/rhino/${archive}.zip"
-      sha1="483e097cb575c724c745edd80c9512f073bd510a">
-        <include name="${archive}/*.jar"/>
+    <resource url="https://github.com/mozilla/rhino/releases/download/Rhino1_7_6_RELEASE/rhino1.7.6.zip"
+      sha1="7d86ccb422bc82569b334bad68cee385c3a4540c">
+        <include name="${archive}/js.jar"/>
         <include name="${archive}/src/**/*"/>
         <include name="${archive}/javadoc/**/*"/>
     </resource>
@@ -32,7 +32,6 @@
     <build>
         <!-- jar -->
         <move file="archive/${archive}/js.jar" todir="artifacts/jars/"/>
-        <move file="archive/${archive}/js-14.jar" todir="artifacts/jars/"/>
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">

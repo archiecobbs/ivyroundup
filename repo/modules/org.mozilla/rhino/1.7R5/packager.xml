@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2008 Archie L. Cobbs
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,15 +13,14 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
-<packager-module rev="$Id$">
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
 
     <property name="name" value="${ivy.packager.module}"/>
-    <property name="_version" value="1_7R4"/>
+    <property name="_version" value="1_7R5"/>
     <property name="archive" value="${name}${_version}"/>
 
-    <resource url="https://github.com/downloads/mozilla/rhino/${archive}.zip"
-      sha1="483e097cb575c724c745edd80c9512f073bd510a">
+    <resource url="https://github.com/mozilla/rhino/releases/download/Rhino${_version}_RELEASE/${archive}.zip" sha1="39ada4cca8c7f651a68eda3f307ff9b68808f0ce">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/src/**/*"/>
         <include name="${archive}/javadoc/**/*"/>

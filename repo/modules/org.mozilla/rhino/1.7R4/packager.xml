@@ -20,7 +20,7 @@
     <property name="_version" value="1_7R4"/>
     <property name="archive" value="${name}${_version}"/>
 
-    <resource url="http://ftp.mozilla.org/pub/mozilla.org/js/${archive}.zip" sha1="483e097cb575c724c745edd80c9512f073bd510a">
+    <resource url="https://github.com/downloads/mozilla/rhino/${archive}.zip" sha1="483e097cb575c724c745edd80c9512f073bd510a">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/src/**/*"/>
         <include name="${archive}/javadoc/**/*"/>
