@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module rev="$Id$">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="_version" value="1_7R4"/>
+    <property name="archive" value="${name}${_version}"/>
+
+    <resource url="https://github.com/downloads/mozilla/rhino/${archive}.zip"
+      sha1="483e097cb575c724c745edd80c9512f073bd510a">
+        <include name="${archive}/*.jar"/>
+        <include name="${archive}/src/**/*"/>
+        <include name="${archive}/javadoc/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/js.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/js-14.jar" todir="artifacts/jars/"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+    </build>
+</packager-module>
