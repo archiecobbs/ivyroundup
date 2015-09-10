@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/spring-data-commons.jar" sha1="d970ea4d8aa2fcf03aeb34cbe0a834390ca1597a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.jar" sha1="03e0054cce848aa562d424df7aed9e7bfd11f81d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.jar" sha1="273f12d55913a5d8395af6e5f3e026b66c2ac196"/>
+    </m2resource>
+</packager-module>
