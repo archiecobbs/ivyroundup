@@ -57,7 +57,7 @@
         <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="servlet->default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation->default"/>
         <dependency org="javax.persistence" name="persistence-api" rev="2.0" conf="dao->default"/>
-        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx->default"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx->runtime-base"/>
         <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8+" conf="readline->default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.6+" conf="core->default"/>
         <dependency org="org.springframework" name="spring" rev="3.0+"
