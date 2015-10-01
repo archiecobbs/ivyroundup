@@ -84,7 +84,7 @@
         <dependency org="javax.servlet" name="servletapi" rev="[2.3,)" conf="servlet-&gt;default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.0+" conf="validation-&gt;default"/>
         <dependency org="javax.persistence" name="persistence-api" rev="2.1" conf="dao-&gt;default"/>
-        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;default"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2+" conf="jibx-&gt;runtime-base"/>
         <dependency org="net.sourceforge.java-readline" name="java-readline" rev="0.8+" conf="readline-&gt;default"/>
         <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="4+" conf="spring-&gt;beans,context-support,expression,jdbc,tx,web-servlet;jibx-&gt;expression,oxm;servlet-&gt;aop,tx,web-servlet"/>
