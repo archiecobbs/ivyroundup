@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <property name="name" value="${ivy.packager.module}"/>
     <m2resource repo="http://maven.vaadin.com/vaadin-addons" groupId="org/vaadin/addons/${name}" artifactId="vaadin-${name}">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="3928cd81c053fe14bf1b416b4d594b7f671d9a22"/>

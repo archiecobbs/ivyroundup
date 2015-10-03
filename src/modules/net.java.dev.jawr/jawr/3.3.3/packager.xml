@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <property name="name" value="${ivy.packager.module}"/>
     <m2resource groupId="net/${name}" repo="http://download.java.net/maven/2/">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="76ac4745224ec2e97f4dd0934377c9d48e5ab491"/>

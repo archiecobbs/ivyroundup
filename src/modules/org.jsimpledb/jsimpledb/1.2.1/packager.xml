@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource repo="https://oss.sonatype.org/content/repositories/public">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="68ce0fd46cc4eadcba9f3e1c4196ee1b3c28e02a"/>
         <artifact classifier="cli" tofile="artifacts/jars/${ivy.packager.module}-cli.jar" sha1="72da7ebd7a91901b67b2b6038528cb423c8acc30"/>

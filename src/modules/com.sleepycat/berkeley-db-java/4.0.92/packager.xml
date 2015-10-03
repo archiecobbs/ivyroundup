@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource repo="http://download.oracle.com/maven" artifactId="je">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="23430cd4ae2ab7caa00093c345bcaed3fa684ba3"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="886cdb82a252e2d7a2adaa95f29f14b6e8adef8d"/>

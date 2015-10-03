@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <property name="name" value="${ivy.packager.module}"/>
     <m2resource groupId="org/${name}" repo="http://repo.opennms.org/content/repositories/opennms-repo-local">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="e317b979887e88b28f96db153c982bca72e7c841"/>

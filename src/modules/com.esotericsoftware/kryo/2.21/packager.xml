@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource groupId="${ivy.packager.organisation}.${ivy.packager.module}">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="09a4e69cff8d225729656f7e97e40893b23bffef"/>
         <artifact classifier="shaded" tofile="artifacts/jars/${ivy.packager.module}-shaded.jar" sha1="20a6e91fac0c8a07f2e34cabae9a4262d9539ca4"/>

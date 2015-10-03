@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource groupId="org.javassist" version="${ivy.packager.revision}-GA">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="d9a09f7732226af26bf99f19e2cffe0ae219db5b"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="d8d089f3a8845cce22d3006e02ab1403dd73b5b6"/>

@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="7fb1a7eb7ff1d15cac1802510fee65c7ca31a869"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="e8fb8edacbcab714c4b8add89f5dd4ee9b4b7862"/>

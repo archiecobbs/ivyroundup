@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource groupId="glassfish/org/glassfish" artifactId="javax.servlet" repo="http://download.java.net/maven">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="12222fbf2168045bad25e08c7f91de7da25180a5"/>
         <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="5a37fd0efae0179e4c533d6450f4af9017037ded"/>

@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource repo="https://repository.jboss.org/nexus/content/groups/public-jboss" groupId="org/hibernate/javax/persistence" artifactId="hibernate-jpa-2.1-api" version="1.0.0.Final">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="5e731d961297e5a07290bfaf3db1fbc8bbbf405a"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="33fbaa7276b774ef0925f541640f6ff23fbc62dc"/>

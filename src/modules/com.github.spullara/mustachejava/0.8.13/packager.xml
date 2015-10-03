@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <m2resource groupId="com.github.spullara.mustache.java" artifactId="compiler">
         <artifact tofile="artifacts/jars/${ivy.packager.module}-compiler.jar" sha1="f92c71c9bf324fcb66fa07a0fc9c2729d67b8919"/>
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-compiler.jar" sha1="55ed64b30924dd6ace195bd46137f909684d21f7"/>

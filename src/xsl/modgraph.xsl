@@ -33,7 +33,6 @@
     <xsl:param name="graph.splines"/>
     <xsl:param name="node.shape"/>
 
-    <xsl:variable name="revision" select="'$Id$'"/>
     <xsl:variable name="modules" select="/modules"/>
     <xsl:variable name="timestamp" select="$modules/timestamp"/>
 

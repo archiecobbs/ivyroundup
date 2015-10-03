@@ -16,7 +16,7 @@
     under the License.
 -->
 
-<packager-module rev="$Id$">
+<packager-module>
     <property name="name" value="${ivy.packager.module}"/>
     <m2resource groupId="net/bull/${name}" artifactId="${name}-core">
         <artifact tofile="artifacts/jars/${name}.jar" sha1="12bf185b83273d2c922af4e4d65b886ed8fc66b6"/>
