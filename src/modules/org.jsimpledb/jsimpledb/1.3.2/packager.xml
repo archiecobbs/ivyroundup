@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="7e119115fa7d217c619704403f77ef37433c2755"/>
+        <artifact classifier="cli" tofile="artifacts/jars/${ivy.packager.module}-cli.jar" sha1="cd60c3e7a2b06a0a3f6fa385e27bef63664e7108"/>
+        <artifact classifier="gui" tofile="artifacts/jars/${ivy.packager.module}-gui.jar" sha1="02fb147377d9a80c22cda2beb3ba2f05839f8a2b"/>
+        <artifact classifier="spring" tofile="artifacts/jars/${ivy.packager.module}-spring.jar" sha1="63148f8b58105a71df1b8680611bb0d864100c92"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="4aa4d6012426c481fdba26010c01ee54e7b3e607"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="946d9f525579acdfe5548655eeea4ed3bcd74f32"/>
+    </m2resource>
+</packager-module>
