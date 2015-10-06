@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, groupId="org/springframework/security" Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-acl">
+        <artifact tofile="artifacts/jars/spring-security-acl.jar" sha1="cdceb498ef5806cab617c69e410131eb342f15a8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-acl.zip" sha1="40e3f734ceb486d3f9c48532411ef2ef38bb49ec"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-acl.zip" sha1="5cc07bd70ae4d6c10c80f9d93d835316bc282658"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-aspects">
+        <artifact tofile="artifacts/jars/spring-security-aspects.jar" sha1="23bbd1233ef16343db1dd7a2f3920293014f5da9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-aspects.zip" sha1="2151aa107689ca04542ae65072351d1932687701"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-aspects.zip" sha1="d9791a03cf065bb69a3fc1ddbe3ce0a064f4f540"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-cas">
+        <artifact tofile="artifacts/jars/spring-security-cas.jar" sha1="3a79a370c49d980f2721e415cf8772c67796821f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-cas.zip" sha1="6e39f731e7edcceb2f53bc85d312b87728d9ab32"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-cas.zip" sha1="2eb40385524bcd1fcb09b721a66892e5775c6291"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-config">
+        <artifact tofile="artifacts/jars/spring-security-config.jar" sha1="882132ed6a3282493145eb8c05b92c086af1b0f4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-config.zip" sha1="a3a0b3255f2c5bbc2e9dddff6de90d48677a5003"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-config.zip" sha1="d43c12e07d970efb5640c4e191cd9e8ff33607bb"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-core">
+        <artifact tofile="artifacts/jars/spring-security-core.jar" sha1="10684511bee0456c5c111bb16b2dee138d33d2d6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-core.zip" sha1="253ad3607b5645731d76f603e8053065c5b2c33e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-core.zip" sha1="cb308dae4ec7f382c73ff53764b83f9592ce43b9"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-crypto">
+        <artifact tofile="artifacts/jars/spring-security-crypto.jar" sha1="1f0915197efaf525ca5562d1d9b15849fba153f3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-crypto.zip" sha1="b4293108b25f21fbf7fcef108919b9ac12a5473f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-crypto.zip" sha1="a5e36c1cdfd32a31f1c5ca76c1a6d05d3f2e3acc"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-data">
+        <artifact tofile="artifacts/jars/spring-security-data.jar" sha1="87876657a34bb270206e27282bb1f5e86f87b497"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-data.zip" sha1="8fc3901dd87d569c4ee7b31f9484ce691f163fd5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-data.zip" sha1="744128056c4699f46652b4e356162fa801991a42"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-ldap">
+        <artifact tofile="artifacts/jars/spring-security-ldap.jar" sha1="2324dc3e53d5cd4da3189120dfc410154f893135"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-ldap.zip" sha1="38c406f0d78c5945fed8ce60748005f0bab2644d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-ldap.zip" sha1="4b2f1a1ada2324289ba6e41a280df949d55a041e"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-messaging">
+        <artifact tofile="artifacts/jars/spring-security-messaging.jar" sha1="a8864819bf2615ee26168cb4e64de6dd147971be"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-messaging.zip" sha1="3e56cbde8a4774c82c71f74305b815e091180b9d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-messaging.zip" sha1="ff94421dd7a8a6554a27aa6c571b066a6879928a"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-openid">
+        <artifact tofile="artifacts/jars/spring-security-openid.jar" sha1="19c6f41da6bb2c7b6606d7cdd05518b868221bf3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-openid.zip" sha1="3e6f1d77387d0405a0a5deefc1e43197f2960025"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-openid.zip" sha1="ce5d014139b18f8e16bd13a65bb6cd700f835939"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-remoting">
+        <artifact tofile="artifacts/jars/spring-security-remoting.jar" sha1="4294b5e83813e06700e9d9e2c0a74965691145ae"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-remoting.zip" sha1="2d19be15910157d5d8d68878ed0b93f3e8b93674"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-remoting.zip" sha1="64b04e1325b868a0e7363970b06743d058bff064"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-taglibs">
+        <artifact tofile="artifacts/jars/spring-security-taglibs.jar" sha1="3fb4a095fbf38fa07cf938c926f9dba716d70cdb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-taglibs.zip" sha1="33a8d5352cb524920b62e7998ec5a097918753b9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-taglibs.zip" sha1="7c7078bfb57773838477edc36ce0d8529496d599"/>
+    </m2resource>
+    <m2resource groupId="org/springframework/security" version="4.0.2.RELEASE" artifactId="spring-security-web">
+        <artifact tofile="artifacts/jars/spring-security-web.jar" sha1="86f6306aa201a69d37e84fa556bd15cf79752591"/>
+        <artifact classifier="sources" tofile="artifacts/sources/spring-security-web.zip" sha1="b6a4f6cba083848d7f6db4d27b24d6dfbdc70d23"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/spring-security-web.zip" sha1="3e82ee8192e34aa5b6a678c3da3145d4bc293b2a"/>
+    </m2resource>
+</packager-module>
