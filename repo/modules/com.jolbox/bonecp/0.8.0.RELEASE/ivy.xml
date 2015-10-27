@@ -59,7 +59,7 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="core,core-jdk5-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="core,core-jdk5-&gt;core"/>
         <dependency org="com.google.guava" name="guava" rev="[0,)" conf="core,core-jdk5-&gt;default"/>
         <dependency org="org.hibernate" name="hibernate" rev="[0,)" conf="hibernate-no-datasource,hibernate-no-datasource-jdk5,spring-hibernate,spring-hibernate-jdk5-&gt;core"/>
         <dependency org="org.springframework" name="spring" rev="[0,)" conf="spring,spring-jdk5-&gt;jdbc;spring-hibernate,spring-hibernate-jdk5-&gt;orm"/>
