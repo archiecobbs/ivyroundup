@@ -97,7 +97,7 @@
         <dependency org="org.dellroad" name="leveldb" rev="0.8.1" conf="leveldb->default"/>
         <dependency org="org.eclipse" name="jetty" rev="9.2.7.v20150116" conf="gui-deps->webapp,annotations"/>
         <dependency org="org.rocksdb" name="rocksdbjni" rev="3.10+" conf="rocksdb->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core->default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="core->core"/>
         <dependency org="org.sonatype.jline" name="jline" rev="2.12" conf="cli-deps->default"/>
         <dependency org="org.springframework" name="spring" rev="4.1+"
           conf="gui-deps,spring-deps->aop,aspects,beans,context,tx,web; cli-deps->context"/>
