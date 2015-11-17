@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20151117000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://code.google.com/p/nvt4j/">
+
+            <p>
+            The Network Virtual Terminal for Java (NVT4J) is a library which can drive
+            a terminal emulator connected to the application through a telnet session.
+            </p>
+
+            <p>
+            The API consists of the interface nvt4j.Terminal . The implementation of this
+            class is called nvt4j.impl.Terminal. To allow the user to connect to the
+            application you need to listen for a tcp connection and then wrap a Terminal
+            object around it:
+            <blockquote><pre>
+                    ServerSocket serverSocket = new ServerSocket(8000);
+                    Socket socket = serverSocket.accept();
+                    Terminal terminal = new nvt4j.impl.Terminal(socket);
+            </pre></blockquote>
+            </p>
+
+            <p>
+            For example, to run the sample class Example.java from an xterm session, you can
+            do this:
+            <blockquote><pre>
+                user@localhost$ java -classpath nvt4j.jar Example &amp;
+                user@localhost$ telnet localhost 8000
+            </pre></blockquote>
+            </p>
+
+            <p>
+            NVT4J uses the Telnet LINEMODE option to put the terminal driver (xterm in this case)
+            in what the posix standard calls 'raw' or 'non-canonical' mode, so that it can receive
+            all user inputs asap, instead of waiting for a new-line character.
+            </p>
+
+            <p>
+            Unfortunately in pure Java there is no way to put the operating system console in
+            raw mode. On Linux and similar systems this is done using the stty command, which is
+            a native program which manipulates the terminal driver in the operating system.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>
