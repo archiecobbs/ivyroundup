@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource dest="archive/${archive}" url="http://mirrors.ibiblio.org/maven2/org/jacoco/${name}/${revision}/${name}-${revision}.zip" sha1="05d927fb38867e948095e397498c591fbc8becbd"/>
+    <resource dest="archive/${archive}" url="http://maven.ibiblio.org/maven2/org/jacoco/${name}/${revision}/${name}-${revision}.zip" sha1="05d927fb38867e948095e397498c591fbc8becbd"/>
 
 
     <build>
