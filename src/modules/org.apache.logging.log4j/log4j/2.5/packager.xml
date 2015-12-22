@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="log4j-1.2-api">
+        <artifact tofile="artifacts/jars/log4j-1.2-api.jar" sha1="4a8db52b25200d03d8ca8d795692fdbb0ef51859"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-1.2-api.zip" sha1="004c0b1c3791137a21bf0e548e0f547b7589033c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-1.2-api.zip" sha1="dd6fbb57cb6227e40a87dea491d51fae0f79815c"/>
+    </m2resource>
+    <m2resource artifactId="log4j-api">
+        <artifact tofile="artifacts/jars/log4j-api.jar" sha1="e7fd981408caba8a0c0fb276413562468d260160"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-api.zip" sha1="6e3a76121debf4f6b02b51722a41d58cd2e445d1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-api.zip" sha1="78dc5b56f05303632e920568762347f157e69de7"/>
+    </m2resource>
+    <m2resource artifactId="log4j-core">
+        <artifact tofile="artifacts/jars/log4j-core.jar" sha1="7ed845de1dfe070d43511fab321784e6c4118398"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-core.zip" sha1="5e0ed05f99d942dc0e449c5d741e26b5cf9bd673"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-core.zip" sha1="bdefdb82a8c624df42f7db517a300e3174257986"/>
+    </m2resource>
+    <m2resource artifactId="log4j-flume-ng">
+        <artifact tofile="artifacts/jars/log4j-flume-ng.jar" sha1="572f8b52f9205d7a6d18bfa7a1a0908791da84e6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-flume-ng.zip" sha1="58b351f1fc082eabd4515e1984ec5b6f6aa61aff"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-flume-ng.zip" sha1="e07d0e2c7e45f6e9b7f57d0f279b4561ed1e9d40"/>
+    </m2resource>
+    <m2resource artifactId="log4j-jcl">
+        <artifact tofile="artifacts/jars/log4j-jcl.jar" sha1="4d14933326d067ac1f16790325ac2eb997003bd2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-jcl.zip" sha1="5a42e8c94b6037ca56fd1a7c8b8ff168ef1f2f09"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-jcl.zip" sha1="a38a2b92f1553cff24d2c0adc1f84a916244f813"/>
+    </m2resource>
+    <m2resource artifactId="log4j-jmx-gui">
+        <artifact tofile="artifacts/jars/log4j-jmx-gui.jar" sha1="7b726127cc00cc43e71a198887f0929bbe7b1f05"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-jmx-gui.zip" sha1="f9865f20a511d7e68445cccf3706151aa48545d8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-jmx-gui.zip" sha1="76da51c51387efe6bd02c3eda59adafd2b0f1412"/>
+    </m2resource>
+    <m2resource artifactId="log4j-nosql">
+        <artifact tofile="artifacts/jars/log4j-nosql.jar" sha1="d47632f085597b9aaa925736babe5275672ab534"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-nosql.zip" sha1="1966c9cc7f9fa1bb70b5a3f05f7041f28980dd9a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-nosql.zip" sha1="0e2c628ccec930c44675e446403d614c6b7c3cfe"/>
+    </m2resource>
+    <m2resource artifactId="log4j-slf4j-impl">
+        <artifact tofile="artifacts/jars/log4j-slf4j-impl.jar" sha1="d1e34a4525e08873703fdaad6c6284f944f8ca8f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-slf4j-impl.zip" sha1="c705a5f079b1d83a052941061aebbaa7fc5e5026"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-slf4j-impl.zip" sha1="f614bf0ed060f3961ad159bc0e9a909044ef81b2"/>
+    </m2resource>
+    <m2resource artifactId="log4j-taglib">
+        <artifact tofile="artifacts/jars/log4j-taglib.jar" sha1="633b4ecef0d71b3848bf80d785a6d1c46b2cfe8f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-taglib.zip" sha1="01a577715beff9922dbd686c1a7555d61d728b38"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-taglib.zip" sha1="6e45559a78ead337912295ccac1ffa4ed9e40eb6"/>
+    </m2resource>
+    <m2resource artifactId="log4j-to-slf4j">
+        <artifact tofile="artifacts/jars/log4j-to-slf4j.jar" sha1="78c8eb6975522ec676d1e776384bd5e6deff7031"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-to-slf4j.zip" sha1="0b7fa56baab83e87c53c736b8a7c6d16d70171e3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-to-slf4j.zip" sha1="c76504c395432c6a5cf069646120ec072f8459dc"/>
+    </m2resource>
+    <m2resource artifactId="log4j-web">
+        <artifact tofile="artifacts/jars/log4j-web.jar" sha1="73871421ea7ee80fd633cf9ea588ecce2cc3f6cb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-web.zip" sha1="5def0c6cb5cc0d33ebc04af3a40016dcab66be19"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-web.zip" sha1="b0dfe32795f2be5498604ccdf52db6228ea59463"/>
+    </m2resource>
+</packager-module>
