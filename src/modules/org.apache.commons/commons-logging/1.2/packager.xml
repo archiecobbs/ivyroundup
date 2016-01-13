@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2008 Archie L. Cobbs.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="4bfc12adfe4842bf07b657f0369c4cb522955686"/>
+        <artifact classifier="api" tofile="artifacts/jars/${ivy.packager.module}-api.jar" sha1="bb0e26afcdce195f68e1373a72709d7a01b55498"/>
+        <artifact classifier="adapters" tofile="artifacts/jars/${ivy.packager.module}-adapters.jar" sha1="2fded47ba5f1059e8d0e2b1b834229ca743a41d4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="83033ee697035dfb9ce3503e1ac0c5a33021e503"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="ecf26c7507d67782a3bbd148d170b31dfad001aa"/>
+    </m2resource>
+</packager-module>
