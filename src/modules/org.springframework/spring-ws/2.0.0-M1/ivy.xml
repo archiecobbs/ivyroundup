@@ -61,7 +61,7 @@
         <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="xml-&gt;default"/>
         <dependency org="javax.xml.soap" name="saaj" rev="1.3" conf="security-&gt;default"/>
         <dependency org="org.apache.commons" name="commons-codec" rev="1.3" conf="security-&gt;default"/>
-        <dependency org="org.apache.commons" name="commons-collections" rev="3.2" conf="security-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2+" conf="security-&gt;default"/>
         <dependency org="org.apache.ws.commons" name="XmlSchema" rev="[1.3.2,)" conf="xml-&gt;default"/>
         <dependency org="org.springframework" name="spring" rev="[3.0.0,4.0.0[" conf="xml-&gt;context;core-&gt;web-servlet,oxm,tx,jms;security-&gt;tx"/>
         <dependency org="org.springframework" name="spring-security" rev="3.+" conf="security-&gt;core"/>
