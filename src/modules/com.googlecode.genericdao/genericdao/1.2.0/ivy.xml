@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2016 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130401000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://code.google.com/archive/p/genericdao/">
+
+            <p>Generic DAO is a Java lightweight ORM package which allows a developer to avoid writing repetetive DAOs for their persistent objects when they are using Spring and JDBC or Hibernate</p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="dao" description="Hibernate Generic DAO - DAO"/>
+        <conf name="dao-hibernate" description="Hibernate Generic DAO - DAO Hibernate"/>
+        <conf name="search" description="Hibernate Generic DAO - Search"/>
+        <conf name="search-hibernate" description="Hibernate Generic DAO - Search Hibernate"/>
+        <conf name="default" extends="dao,search,dao-hibernate,search-hibernate" description="All classes"/>
+        <conf name="search-jpa-hibernate" extends="default" description="Hibernate Generic DAO - Search JPA Hibernate"/>
+    </configurations>
+
+    <publications>
+        <artifact name="dao" conf="dao"/>
+        <artifact name="dao-hibernate" conf="dao-hibernate"/>
+        <artifact name="search" conf="search"/>
+        <artifact name="search-hibernate" conf="search-hibernate"/>
+        <artifact name="search-jpa-hibernate" conf="search-jpa-hibernate"/>
+
+        <!-- Sources -->
+        <artifact name="dao" type="source" ext="zip" conf="dao"/>
+        <artifact name="dao-hibernate" type="source" ext="zip" conf="dao-hibernate"/>
+        <artifact name="search" type="source" ext="zip" conf="search"/>
+        <artifact name="search-hibernate" type="source" ext="zip" conf="search-hibernate"/>
+        <artifact name="search-jpa-hibernate" type="source" ext="zip" conf="search-jpa-hibernate"/>
+
+        <!-- Javadocs -->
+        <artifact name="dao" type="javadoc" ext="zip" conf="dao"/>
+        <artifact name="dao-hibernate" type="javadoc" ext="zip" conf="dao-hibernate"/>
+        <artifact name="search" type="javadoc" ext="zip" conf="search"/>
+        <artifact name="search-hibernate" type="javadoc" ext="zip" conf="search-hibernate"/>
+        <artifact name="search-jpa-hibernate" type="javadoc" ext="zip" conf="search-jpa-hibernate"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7.2" conf="search->core"/>
+        <!--dependency org="org.hibernate" name="hibernate-core" rev="4.2.0.CR1" conf="search-hibernate->default"/ -->
+        <!--dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.2.0.CR1" conf="search-jpa-hibernate->default"/ -->
+    </dependencies>
+
+</ivy-module>
