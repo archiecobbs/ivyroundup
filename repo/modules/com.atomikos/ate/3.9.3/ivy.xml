@@ -19,10 +19,10 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="com.atomikos" module="ate" revision="3.9.3" status="release" publication="20140219120000">
-        <license name="Atomikos Multiple Licensing Scheme" url="http://www.atomikos.com/Main/WhichLicenseApplies"/>
+        <license name="Atomikos Multiple Licensing Scheme" url="https://www.atomikos.com/Main/WhichLicenseApplies"/>
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.atomikos/ate/3.9.3/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
-        <description homepage="http://www.atomikos.com/Main/WebHome">
+        <description homepage="https://www.atomikos.com/Main/WebHome">
             <p>Atomikos Transactions Essentials</p>
             <p>For quick and dirty proof-of-concepts we offer an unsupported and limited open source edition of our transaction management system offering basic support for JDBC/XA pools, JMS/XA pools and JTA/XA to enable functional testing of transaction processes outside of the application server. Simple to install, implement and use and requires no additional services. Note of caution: Atomikos TransactionsEssentials® is not a commercially supported product; subscribe to Atomikos ExtremeTransactions® if you are seriously considering Atomikos.</p>
         </description>
