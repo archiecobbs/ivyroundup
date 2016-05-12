@@ -53,7 +53,8 @@
     </info>
 
     <configurations>
-        <conf name="main" description="Core dellroad-stuff classes"/>
+        <conf name="main" description="Main dellroad-stuff classes"/>
+        <conf name="core" extends="main" description="Backward compatible alias for `main'"/>
         <conf name="dao" extends="main" description="Add DAO dependencies"/>
         <conf name="spring" extends="main" description="Add Spring dependencies"/>
         <conf name="vaadin7" extends="main" description="Add Vaadin 7 dependencies"/>
