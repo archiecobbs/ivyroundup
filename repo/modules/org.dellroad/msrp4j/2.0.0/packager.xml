@@ -15,21 +15,10 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-<!--
-
-    Comment this out until https://issues.sonatype.org/browse/OSSRH-22411 is fixed...
-
     <m2resource repo="https://oss.sonatype.org/content/repositories/public">
-        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="0000000000000000000000000000000000000000"/>
-        <artifact classifier="cli" tofile="artifacts/jars/${ivy.packager.module}-cli.jar" sha1="0000000000000000000000000000000000000000"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="0000000000000000000000000000000000000000"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="0000000000000000000000000000000000000000"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="cbc8432110fd1c1fcdaacc9557b7421278d5ea8f"/>
+        <artifact classifier="cli" tofile="artifacts/jars/${ivy.packager.module}-cli.jar" sha1="09f04e7f3f6e8fc7a6a5970e864a2922392bcee2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="b1933a274ebea261bb110e10503e566f70b5a1d1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="9194f9da91815eab9886e8ebc0cd445e901db3b1"/>
     </m2resource>
--->
-
-<resource tofile="artifacts/jars/msrp4j.jar" url="https://oss.sonatype.org/content/repositories/public/org/dellroad/msrp4j/2.0.0-SNAPSHOT/msrp4j-2.0.0-20160512.205223-1.jar" sha1="3026e020eb11b9ad3757ace4f5c86e920ce41848"/>
-<resource tofile="artifacts/sources/msrp4j.zip" url="https://oss.sonatype.org/content/repositories/public/org/dellroad/msrp4j/2.0.0-SNAPSHOT/msrp4j-2.0.0-20160512.205223-1-sources.jar" sha1="e838ec0eb04dcb41dc10485cf2a87151afe27a84"/>
-<resource tofile="artifacts/javadocs/msrp4j.zip" url="https://oss.sonatype.org/content/repositories/public/org/dellroad/msrp4j/2.0.0-SNAPSHOT/msrp4j-2.0.0-20160512.205223-1-javadoc.jar" sha1="a308917e789c2308250ef74aa6ca4dfc133e4b45"/>
-<resource tofile="artifacts/jars/msrp4j-cli.jar" url="https://oss.sonatype.org/content/repositories/public/org/dellroad/msrp4j/2.0.0-SNAPSHOT/msrp4j-2.0.0-20160512.205223-1-cli.jar" sha1="21ffc1226f903e49331a2047ab81bf800640c453"/>
-
 </packager-module>
