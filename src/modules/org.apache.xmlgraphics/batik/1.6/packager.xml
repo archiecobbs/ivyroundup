@@ -24,26 +24,20 @@
     <property name="src" value="${name}-src-${revision}"/>
     <property name="doc" value="${name}-docs-${revision}"/>
 
-    <property name="mirror1" value="http://www.apache.org/dist"/>
     <property name="backup" value="http://archive.apache.org/dist"/>
 
-    <resource url="${mirror1}/xmlgraphics/batik/binaries/${bin}.zip"
-      sha1="69d974ab0a4e13cbdd649fa96785776563b73fcf">
-        <url href="${backup}/xmlgraphics/batik/${bin}.zip"/>
+    <resource url="${backup}/xmlgraphics/batik/${bin}.zip"
+      sha1="8004d12420e98f6074481f19f81a35b73a880e70">
         <include name="${name}-${revision}/*.jar"/>
         <include name="${name}-${revision}/lib/*.jar"/>
     </resource>
-    <resource url="${mirror1}/xmlgraphics/batik/source/${src}.zip"
-      sha1="806f57b0200cc755903c2f6f55463f0dd5f6f7d6">
-        <url href="${backup}/xmlgraphics/batik/${src}.zip"/>
-        <include name="${name}-${revision}/sources/**/*"/>
-        <include name="${name}-${revision}/sources-1.4/**/*"/>
-        <include name="${name}-${revision}/resources/**/*"/>
+    <resource url="${backup}/xmlgraphics/batik/${src}.zip"
+      sha1="d04ece76f29aad2a4ae1773b161f41a15011f61b">
+        <include name="xml-batik/sources/**/*"/>
+        <include name="xml-batik/resources/**/*"/>
     </resource>
-    <resource url="${mirror1}/xmlgraphics/batik/source/${doc}.zip"
-      sha1="180715cd140efd33934684442ee6142f10d0c49c">
-        <url href="${backup}/xmlgraphics/batik/${doc}.zip"/>
-    </resource>
+    <resource url="${backup}/xmlgraphics/batik/${doc}.zip"
+      sha1="e8970fa2c99f9ec61d9a8e23f1f844ac3ae239a5" />
 
     <build>
         <!-- jars -->
@@ -58,9 +52,8 @@
 
         <!-- source -->
         <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}-${revision}/sources"/>
-            <fileset dir="archive/${name}-${revision}/sources-1.4"/>
-            <fileset dir="archive/${name}-${revision}/resources"/>
+            <fileset dir="archive/xml-batik/sources"/>
+            <fileset dir="archive/xml-batik/resources"/>
         </zip>
 
         <!-- javadoc -->
