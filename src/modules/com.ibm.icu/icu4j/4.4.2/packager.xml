@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Philip Johnson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="revision.underscore" value="4_4_2"/>
+
+    <resource url="http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}-docs.jar"
+              tofile="archive/${archive}/javadoc.zip" 
+              sha1="6eefb1edfb16e519a59dec59994f7a1650a6b782"/>
+    <resource url="http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}-src.jar" 
+              tofile="archive/${archive}/source.zip"
+              sha1="95bcf8b0ed2a122652103bb097b9b9d31db78bb5"/>
+    <resource url="http://download.icu-project.org/files/${name}/${revision}/${name}-${revision.underscore}.jar" 
+              tofile="archive/${archive}/${name}.jar" 
+              sha1="f6c205d05be87df2a64fb501e08ac9ed38519353"/>
+    <resource url="http://download.icu-project.org/files/${name}/${revision}/${name}-charsets-${revision.underscore}.jar" 
+              tofile="archive/${archive}/${name}-charsets.jar" 
+              sha1="c389f4d44d3514175c3868f7d4912818372744d2"/>
+    <resource url="http://download.icu-project.org/files/${name}/${revision}/${name}-localespi-${revision.underscore}.jar" 
+              tofile="archive/${archive}/${name}-localespi.jar" 
+              sha1="68db05f689473fa8e89206f3d0a33e23e23eb978"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/${name}-charsets.jar" tofile="artifacts/jars/${name}-charsets.jar"/>
+        <move file="archive/${archive}/${name}-localespi.jar" tofile="artifacts/jars/${name}-localespi.jar"/>
+
+        <!-- source -->
+        <move file="archive/${archive}/source.zip" tofile="artifacts/sources/source.zip" />
+
+        <!-- javadoc -->
+        <move file="archive/${archive}/javadoc.zip" tofile="artifacts/javadocs/javadoc.zip" />
+
+    </build>
+</packager-module>
