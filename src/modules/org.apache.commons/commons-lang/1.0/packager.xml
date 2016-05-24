@@ -16,19 +16,10 @@
     under the License.
 -->
 
-<ivy-module>
+<packager-module>
+    <m2resource groupId="${ivy.packager.module}">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="ac4ab3b02823ea2997c163433d9d44132bd2446a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="01af3a2ac1a4c2d874bf69937d2b9da78ccad03f"/>
+    </m2resource>
+</packager-module>
 
-    <info publication="20070708000000">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://commons.apache.org/proper/commons-cli/">
-            The Apache Commons CLI library provides an API for processing command line interfaces.
-        </description>
-    </info>
-
-    <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-
-</ivy-module>
