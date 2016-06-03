@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2008 Archie L. Cobbs.
+    Copyright 2009 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,17 +18,23 @@
 
 <ivy-module>
 
-    <info publication="20070708000000">
+    <info publication="20030913003800">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://commons.apache.org/proper/commons-cli/">
-            The Apache Commons CLI library provides an API for processing command line interfaces.
-        </description>
+        <description homepage="http://xerces.apache.org/xml-commons/"><![CDATA[
+        The External Components portion of xml-commons contains interfaces that
+        are defined by external standards organizations. For DOM, that's the
+        W3C; for SAX it's David Megginson and sax.sourceforge.net; for JAXP
+        it's Sun.
+        ]]></description>
     </info>
 
+    <configurations>
+        <conf name="default" description="Main plus extension interfaces, e.g. SVG"/>
+    </configurations>
+
     <publications>
-        <artifact/>
+        <artifact name="xml-apis" conf="default"/>
         <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
