@@ -19,11 +19,23 @@
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
     <info organisation="org.twitter4j" module="twitter4j" revision="3.0.2" status="release" publication="20110220120000">
-        <license name="BSD License" url="http://twitter4j.org/en/index.html#license"/>
+        <license name="Apache License 2.0" url="http://twitter4j.org/en/index.html#license"/>
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.twitter4j/twitter4j/3.0.2/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://twitter4j.org/en/index.html">
-Twitter4J is a Java library for TwitterAPI.
+        Twitter4J is an unofficial Java library for the Twitter API.<br/>
+
+        With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br/>
+
+        Twitter4J is featuring:<br/>
+        <ul>
+        <li>100% Pure Java - works on any Java Platform version 5 or later</li>
+        <li>Android platform and Google App Engine ready</li>
+        <li>Zero dependency : No additional jars required</li>
+        <li>Built-in OAuth support</li>
+        <li>Out-of-the-box gzip support</li>
+        <li>100% Twitter API 1.1 compatible</li>
+        </ul>
         </description>
     </info>
 
@@ -39,12 +51,12 @@ Twitter4J is a Java library for TwitterAPI.
 
     <publications>
 
-      <artifact name="core" conf="core"/>
-      <artifact name="appengine" conf="appengine"/>
-      <artifact name="media-support" conf="media-support"/>
-      <artifact name="stream" conf="stream"/>
-      <artifact name="async" conf="async"/>
-      <artifact name="examples" conf="examples"/>
+      <artifact name="twitter4j-core" conf="core"/>
+      <artifact name="twitter4j-appengine" conf="appengine"/>
+      <artifact name="twitter4j-media-support" conf="media-support"/>
+      <artifact name="twitter4j-stream" conf="stream"/>
+      <artifact name="twitter4j-async" conf="async"/>
+      <artifact name="twitter4j-examples" conf="examples"/>
 
       <artifact type="source" ext="zip" name="core-source" conf="core"/>
       <artifact type="source" ext="zip" name="appengine-source" conf="appengine"/>

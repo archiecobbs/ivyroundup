@@ -23,7 +23,19 @@
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.twitter4j/twitter4j/2.1.12/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://twitter4j.org/en/index.html">
-Twitter4J is a Java library for TwitterAPI.
+        Twitter4J is an unofficial Java library for the Twitter API.<br/>
+
+        With Twitter4J, you can easily integrate your Java application with the Twitter service. Twitter4J is an unofficial library.<br/>
+
+        Twitter4J is featuring:<br/>
+        <ul>
+        <li>100% Pure Java - works on any Java Platform version 5 or later</li>
+        <li>Android platform and Google App Engine ready</li>
+        <li>Zero dependency : No additional jars required</li>
+        <li>Built-in OAuth support</li>
+        <li>Out-of-the-box gzip support</li>
+        <li>100% Twitter API 1.1 compatible</li>
+        </ul>
         </description>
     </info>
 
@@ -37,10 +49,10 @@ Twitter4J is a Java library for TwitterAPI.
 
     <publications>
 
-      <artifact name="core" conf="core"/>
-      <artifact name="media-support" conf="media-support"/>
-      <artifact name="httpclient-support" conf="httpclient-support"/>
-      <artifact name="examples" conf="examples"/>
+      <artifact name="twitter4j-core" conf="core"/>
+      <artifact name="twitter4j-media-support" conf="media-support"/>
+      <artifact name="twitter4j-httpclient-support" conf="httpclient-support"/>
+      <artifact name="twitter4j-examples" conf="examples"/>
 
       <artifact type="source" ext="zip" name="core-source" conf="core"/>
       <artifact type="source" ext="zip" name="media-support-source" conf="media-support"/>

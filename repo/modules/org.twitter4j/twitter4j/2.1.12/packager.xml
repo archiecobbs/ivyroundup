@@ -16,22 +16,22 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
     <m2resource artifactId="${ivy.packager.module}-examples">
-        <artifact tofile="artifacts/jars/examples.jar" sha1="496312a203039ca12e86846b9cae2a21dd0fec08"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-examples.jar" sha1="496312a203039ca12e86846b9cae2a21dd0fec08"/>
         <artifact tofile="artifacts/sources/examples-source.zip" classifier="sources" sha1="b98bc1fc408ee8fdcfb33a731cfc895a0337030d"/>
         <artifact tofile="artifacts/javadocs/examples-javadoc.zip" classifier="javadoc" sha1="87f013044bb3d8b67173c7bedda63c5a5fece6e9"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-media-support">
-        <artifact tofile="artifacts/jars/media-support.jar" sha1="787db09b012fc561adf935e76230b112c82a138c"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-media-support.jar" sha1="787db09b012fc561adf935e76230b112c82a138c"/>
         <artifact tofile="artifacts/sources/media-support-source.zip" classifier="sources" sha1="2fa9eb6bed7e8429936db17230d0a7baf84e4565"/>
         <artifact tofile="artifacts/javadocs/media-support-javadoc.zip" classifier="javadoc" sha1="036db2ab2a3d2e32cf7a1238e9670d834f3e01de"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-core">
-        <artifact tofile="artifacts/jars/core.jar" sha1="4a86754b64be59c1ddbe1ea84eae4cb24c7dd61f"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-core.jar" sha1="4a86754b64be59c1ddbe1ea84eae4cb24c7dd61f"/>
         <artifact tofile="artifacts/sources/core-source.zip" classifier="sources" sha1="53e1df7da110725470e4fe3ce7f6afa4bc7d6d99"/>
         <artifact tofile="artifacts/javadocs/core-javadoc.zip" classifier="javadoc" sha1="ff4532d7a06c1c591d56565821b1c58fb8678d1b"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-httpclient-support">
-        <artifact tofile="artifacts/jars/httpclient-support.jar" sha1="aed6ca48d61ef250428a7ced9e483e799a644872"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-httpclient-support.jar" sha1="aed6ca48d61ef250428a7ced9e483e799a644872"/>
         <artifact tofile="artifacts/sources/httpclient-support-source.zip" classifier="sources" sha1="742f76c7acb7212a96dbd0ab5e0ebada8aeec4f6"/>
         <artifact tofile="artifacts/javadocs/httpclient-support-javadoc.zip" classifier="javadoc" sha1="777c1f41cf2e41b4309412da2e683c693854d89c"/>
     </m2resource>
