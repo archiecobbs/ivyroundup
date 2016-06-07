@@ -16,18 +16,10 @@
     under the License.
 -->
 
-<ivy-module>
-
-    <info publication="20090730015900">
-        <license name="BSD License" url="http://twitter4j.org/en/index.html#license"/>
-        <description homepage="http://twitter4j.org/en/index.html">
-Twitter4J is a Java library for TwitterAPI.
-        </description>
-    </info>
-
-    <publications>
-      <artifact/>
-      <artifact name="source" type="source" ext="zip"/>
-      <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-</ivy-module>
+<packager-module>
+    <m2resource groupId="net.homeip.yusuke">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="0d615d6f89eca0a09fe49d2e746f413267906c59"/>
+        <artifact tofile="artifacts/sources/source.zip" classifier="sources" sha1="8588c17f4fefdc7e1197c3abbeb2a6fb94a7817f"/>
+        <artifact tofile="artifacts/javadocs/javadoc.zip" classifier="javadoc" sha1="67648fa52a6868e2bbd946b7eee5317de04b7ee7"/>
+    </m2resource>
+</packager-module>

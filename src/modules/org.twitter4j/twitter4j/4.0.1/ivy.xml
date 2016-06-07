@@ -41,6 +41,7 @@
         <conf name="core" description="Core classes"/>
         <conf name="appengine" extends="core" description="Google AppEngine classes"/>
         <conf name="media-support" extends="core" description="Media Support classes"/>
+        <!--<conf name="spdy-support" extends="core" description="SPDY Support classes"/>-->
         <conf name="stream" extends="core" description="Stream classes"/>
         <conf name="async" extends="core" description="Async classes"/>
         <conf name="examples" description="Examples"/>
@@ -53,6 +54,7 @@
       <artifact name="twitter4j-core" conf="core"/>
       <artifact name="twitter4j-appengine" conf="appengine"/>
       <artifact name="twitter4j-media-support" conf="media-support"/>
+      <!--<artifact name="twitter4j-spdy-support" conf="spdy-support"/>-->
       <artifact name="twitter4j-stream" conf="stream"/>
       <artifact name="twitter4j-async" conf="async"/>
       <artifact name="twitter4j-examples" conf="examples"/>
@@ -60,6 +62,7 @@
       <artifact type="source" ext="zip" name="core-source" conf="core"/>
       <artifact type="source" ext="zip" name="appengine-source" conf="appengine"/>
       <artifact type="source" ext="zip" name="media-support-source" conf="media-support"/>
+      <!--<artifact type="source" ext="zip" name="spdy-support-source" conf="spdy-support"/>-->
       <artifact type="source" ext="zip" name="stream-source" conf="stream"/>
       <artifact type="source" ext="zip" name="async-source" conf="async"/>
       <artifact type="source" ext="zip" name="examples-source" conf="examples"/>
@@ -67,8 +70,13 @@
       <artifact type="javadoc" ext="zip" name="core-javadoc" conf="core"/>
       <artifact type="javadoc" ext="zip" name="appengine-javadoc" conf="appengine"/>
       <artifact type="javadoc" ext="zip" name="media-support-javadoc" conf="media-support"/>
+      <!--<artifact type="javadoc" ext="zip" name="spdy-support-javadoc" conf="spdy-support"/>-->
       <artifact type="javadoc" ext="zip" name="stream-javadoc" conf="stream"/>
       <artifact type="javadoc" ext="zip" name="async-javadoc" conf="async"/>
       <artifact type="javadoc" ext="zip" name="examples-javadoc" conf="examples"/>
     </publications>
+
+    <!--<dependencies>
+        <dependency conf="spdy-support->default" org="com.squareup.okhttp" name="okhttp" rev="1.5.1"/>
+    </dependencies>-->
 </ivy-module>
