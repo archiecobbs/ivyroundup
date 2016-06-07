@@ -18,37 +18,37 @@
 
 <packager-module>
     <m2resource artifactId="${ivy.packager.module}-appengine">
-        <artifact tofile="artifacts/jars/appengine.jar" sha1="6e44e2f4c7b31ff87fb9c923eaf78f2a1d56d39c"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-appengine.jar" sha1="6e44e2f4c7b31ff87fb9c923eaf78f2a1d56d39c"/>
         <artifact tofile="artifacts/sources/appengine-source.zip" classifier="sources" sha1="fdfc07c98f29cab5cbb13bd6a9e1826622be1743"/>
         <artifact tofile="artifacts/javadocs/appengine-javadoc.zip" classifier="javadoc" sha1="93a7333d6055143cf2212a18a902f946d1861e08"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-examples">
-        <artifact tofile="artifacts/jars/examples.jar" sha1="5cc721eee032c07bddab0171c42261f02cdf750f"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-examples.jar" sha1="5cc721eee032c07bddab0171c42261f02cdf750f"/>
         <artifact tofile="artifacts/sources/examples-source.zip" classifier="sources" sha1="c5043c7c490992012338747800126c14eb2d5ed8"/>
         <artifact tofile="artifacts/javadocs/examples-javadoc.zip" classifier="javadoc" sha1="36bd0389a86467b88e8ce36e051efcccde0b68df"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-media-support">
-        <artifact tofile="artifacts/jars/media-support.jar" sha1="27c4cc61aa20f3d19b5c980ed9c441eb2a4b2646"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-media-support.jar" sha1="27c4cc61aa20f3d19b5c980ed9c441eb2a4b2646"/>
         <artifact tofile="artifacts/sources/media-support-source.zip" classifier="sources" sha1="1ba94321cdcf52d15e5947c2deba8f655a926a4e"/>
         <artifact tofile="artifacts/javadocs/media-support-javadoc.zip" classifier="javadoc" sha1="ca27bc6765bf73bb567e03164a3751cb1deb1976"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-stream">
-        <artifact tofile="artifacts/jars/stream.jar" sha1="6043bdfd3408eb3c5f541fc9c014d95f21ced953"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-stream.jar" sha1="6043bdfd3408eb3c5f541fc9c014d95f21ced953"/>
         <artifact tofile="artifacts/sources/stream-source.zip" classifier="sources" sha1="5bd16b462d2eae0ed23036a30ea6c8f99f0cd395"/>
         <artifact tofile="artifacts/javadocs/stream-javadoc.zip" classifier="javadoc" sha1="2952637d943948c285eaa88ee318e7d0b838caba"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-async">
-        <artifact tofile="artifacts/jars/async.jar" sha1="f4818aea48f34df69e5a5dbc054edbe4b072b82c"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-async.jar" sha1="f4818aea48f34df69e5a5dbc054edbe4b072b82c"/>
         <artifact tofile="artifacts/sources/async-source.zip" classifier="sources" sha1="603e308fe2bda4b3ed6e9fe603c0b315d2c4f547"/>
         <artifact tofile="artifacts/javadocs/async-javadoc.zip" classifier="javadoc" sha1="bbee9dd1b662f6b943cc0b73da2fb3d73fc404f1"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-core">
-        <artifact tofile="artifacts/jars/core.jar" sha1="8329977855209195ab4d82b68eeadc7ba614a053"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-core.jar" sha1="8329977855209195ab4d82b68eeadc7ba614a053"/>
         <artifact tofile="artifacts/sources/core-source.zip" classifier="sources" sha1="c288853adfc82119494d5649ab3eaa1a23c26591"/>
         <artifact tofile="artifacts/javadocs/core-javadoc.zip" classifier="javadoc" sha1="fb986e8b5c429b78834a7501b153d59956fc5152"/>
     </m2resource>
     <m2resource artifactId="${ivy.packager.module}-httpclient-support">
-        <artifact tofile="artifacts/jars/httpclient-support.jar" sha1="59d249a2ae6ccb34d2575292fb1432711ce03a90"/>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-httpclient-support.jar" sha1="59d249a2ae6ccb34d2575292fb1432711ce03a90"/>
         <artifact tofile="artifacts/sources/httpclient-support-source.zip" classifier="sources" sha1="cbe9eab97fb025a6ffe18d196da7c0c1df4132d7"/>
         <artifact tofile="artifacts/javadocs/httpclient-support-javadoc.zip" classifier="javadoc" sha1="22a233e0b5d8823cf192913f108a64cd99caed06"/>
     </m2resource>

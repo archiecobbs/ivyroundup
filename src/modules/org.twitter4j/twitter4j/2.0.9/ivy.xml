@@ -18,7 +18,7 @@
 
 <ivy-module>
 
-    <info publication="20110220120000">
+    <info publication="20090730015900">
         <license name="BSD License" url="http://twitter4j.org/en/index.html#license"/>
         <description homepage="http://twitter4j.org/en/index.html">
         Twitter4J is an unofficial Java library for the Twitter API.<br/>
@@ -37,30 +37,9 @@
         </description>
     </info>
 
-    <configurations>
-        <conf name="core" description="Core classes"/>
-        <conf name="media-support" extends="core" description="Media Support classes"/>
-        <conf name="httpclient-support" extends="core" description="HTTP client support classes"/>
-        <conf name="examples" extends="core" description="Examples"/>
-        <conf name="default" extends="core,media-support,httpclient-support"
-          description="Everything except examples"/>
-    </configurations>
-
     <publications>
-
-      <artifact name="twitter4j-core" conf="core"/>
-      <artifact name="twitter4j-media-support" conf="media-support"/>
-      <artifact name="twitter4j-httpclient-support" conf="httpclient-support"/>
-      <artifact name="twitter4j-examples" conf="examples"/>
-
-      <artifact type="source" ext="zip" name="core-source" conf="core"/>
-      <artifact type="source" ext="zip" name="media-support-source" conf="media-support"/>
-      <artifact type="source" ext="zip" name="httpclient-support-source" conf="httpclient-support"/>
-      <artifact type="source" ext="zip" name="examples-source" conf="examples"/>
-
-      <artifact type="javadoc" ext="zip" name="core-javadoc" conf="core"/>
-      <artifact type="javadoc" ext="zip" name="media-support-javadoc" conf="media-support"/>
-      <artifact type="javadoc" ext="zip" name="httpclient-support-javadoc" conf="httpclient-support"/>
-      <artifact type="javadoc" ext="zip" name="examples-javadoc" conf="examples"/>
+      <artifact/>
+      <artifact name="source" type="source" ext="zip"/>
+      <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 </ivy-module>
