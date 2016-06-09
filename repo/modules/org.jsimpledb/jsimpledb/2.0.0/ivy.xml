@@ -208,7 +208,7 @@
     <dependencies>
         <dependency org="com.foundationdb" name="fdb-java" rev="3+" conf="kv-fdb-&gt;default"/>
         <dependency org="com.google.guava" name="guava" rev="18.0" conf="util-&gt;default"/>
-        <dependency org="com.googlecode.nvt4j" name="nvt4j" rev="1.1+" conf="cli-telnet-&gt;default"/>
+        <dependency org="org.dellroad" name="nvt4j" rev="1.2+" conf="cli-telnet-&gt;default"/>
         <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="kv-bdb-&gt;default"/>
         <dependency org="com.vaadin" name="vaadin" rev="7.5+" conf="demo-&gt;shared,server,themes,widgets; guiapp,vaadin-&gt;server,shared"/>
         <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="demo,spring,vaadin-&gt;default"/>
