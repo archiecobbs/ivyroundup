@@ -82,7 +82,30 @@
         <artifact name="batik-ttf2svg" conf="ttf2svg"/>
         <artifact name="batik-util" conf="minimal"/>
         <artifact name="batik-xml" conf="minimal"/>
-        <artifact name="source" type="source" ext="zip"/>
+
+        <artifact name="batik-anim-source" type="source" ext="jar" conf="core"/>
+        <artifact name="batik-awt-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-bridge-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-codec-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-css-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-dom-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-ext-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-extension-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-gui-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-gvt-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-parser-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-rasterizer-source" type="source" ext="jar" conf="rasterizer"/>
+        <artifact name="batik-script-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-slideshow-source" type="source" ext="jar" conf="slideshow"/>
+        <artifact name="batik-squiggle-source" type="source" ext="jar" conf="squiggle"/>
+        <artifact name="batik-svg-dom-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-svggen-source" type="source" ext="jar" conf="svggen"/>
+        <artifact name="batik-svgpp-source" type="source" ext="jar" conf="svgpp"/>
+        <artifact name="batik-swing-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-transcoder-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-ttf2svg-source" type="source" ext="jar" conf="ttf2svg"/>
+        <artifact name="batik-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-xml-source" type="source" ext="jar" conf="minimal"/>
     </publications>
 
     <dependencies>
