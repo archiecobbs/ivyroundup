@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2016-06-25 16:46:16 UTC</timestamp>
+  <timestamp>2016-06-30 13:37:01 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -1921,6 +1921,7 @@
       <rev name="1.4.1"/>
     </mod>
     <mod name="commons-configuration">
+      <rev name="1.10"/>
       <rev name="1.6"/>
       <rev name="1.8"/>
     </mod>
@@ -2407,6 +2408,7 @@
     <mod name="batik">
       <rev name="1.6"/>
       <rev name="1.7"/>
+      <rev name="1.8"/>
     </mod>
     <mod name="fop">
       <rev name="0.95"/>
@@ -3324,6 +3326,7 @@
       <rev name="3.7"/>
       <rev name="3.8.2"/>
       <rev name="4.11"/>
+      <rev name="4.12"/>
       <rev name="4.3.1"/>
       <rev name="4.4"/>
       <rev name="4.5"/>
@@ -3529,9 +3532,15 @@
       <rev name="1.0.1"/>
     </mod>
   </org>
+  <org name="org.owasp.antisamy">
+    <mod name="antisamy">
+      <rev name="1.5.3"/>
+    </mod>
+  </org>
   <org name="org.owasp.esapi">
     <mod name="esapi">
       <rev name="2.0GA"/>
+      <rev name="2.1.0.1"/>
       <rev name="2.1.0"/>
     </mod>
   </org>
@@ -4006,6 +4015,11 @@
   <org name="uk.org.lidalia">
     <mod name="sysout-over-slf4j">
       <rev name="1.0.1"/>
+    </mod>
+  </org>
+  <org name="xom">
+    <mod name="xom">
+      <rev name="1.2.5"/>
     </mod>
   </org>
 </modules>
