@@ -61,30 +61,53 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-anim" conf="core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-awt-util" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-bridge" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-codec" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-css" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-dom" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-ext" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-extension" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-gui-util" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-gvt" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-parser" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-rasterizer" conf="rasterizer"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-script" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-slideshow" conf="slideshow"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-squiggle" conf="squiggle"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-svg-dom" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-svggen" conf="svggen"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-svgpp" conf="svgpp"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-swing" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-transcoder" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-ttf2svg" conf="ttf2svg"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-util" conf="minimal"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="batik-xml" conf="minimal"/>
-        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="batik-anim" conf="core"/>
+        <artifact name="batik-awt-util" conf="minimal"/>
+        <artifact name="batik-bridge" conf="minimal"/>
+        <artifact name="batik-codec" conf="minimal"/>
+        <artifact name="batik-css" conf="minimal"/>
+        <artifact name="batik-dom" conf="minimal"/>
+        <artifact name="batik-ext" conf="minimal"/>
+        <artifact name="batik-extension" conf="default"/>
+        <artifact name="batik-gui-util" conf="minimal"/>
+        <artifact name="batik-gvt" conf="minimal"/>
+        <artifact name="batik-parser" conf="minimal"/>
+        <artifact name="batik-rasterizer" conf="rasterizer"/>
+        <artifact name="batik-script" conf="minimal"/>
+        <artifact name="batik-slideshow" conf="slideshow"/>
+        <artifact name="batik-squiggle" conf="squiggle"/>
+        <artifact name="batik-svg-dom" conf="minimal"/>
+        <artifact name="batik-svggen" conf="svggen"/>
+        <artifact name="batik-svgpp" conf="svgpp"/>
+        <artifact name="batik-swing" conf="default"/>
+        <artifact name="batik-transcoder" conf="default"/>
+        <artifact name="batik-ttf2svg" conf="ttf2svg"/>
+        <artifact name="batik-util" conf="minimal"/>
+        <artifact name="batik-xml" conf="minimal"/>
+
+        <artifact name="batik-anim-source" type="source" ext="jar" conf="core"/>
+        <artifact name="batik-awt-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-bridge-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-codec-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-css-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-dom-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-ext-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-extension-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-gui-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-gvt-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-parser-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-rasterizer-source" type="source" ext="jar" conf="rasterizer"/>
+        <artifact name="batik-script-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-slideshow-source" type="source" ext="jar" conf="slideshow"/>
+        <artifact name="batik-squiggle-source" type="source" ext="jar" conf="squiggle"/>
+        <artifact name="batik-svg-dom-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-svggen-source" type="source" ext="jar" conf="svggen"/>
+        <artifact name="batik-svgpp-source" type="source" ext="jar" conf="svgpp"/>
+        <artifact name="batik-swing-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-transcoder-source" type="source" ext="jar" conf="default"/>
+        <artifact name="batik-ttf2svg-source" type="source" ext="jar" conf="ttf2svg"/>
+        <artifact name="batik-util-source" type="source" ext="jar" conf="minimal"/>
+        <artifact name="batik-xml-source" type="source" ext="jar" conf="minimal"/>
     </publications>
 
     <dependencies>
