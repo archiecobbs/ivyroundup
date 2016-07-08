@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2008 Archie L. Cobbs
+    Copyright 2016 Bill Soul
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -17,25 +17,16 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
-
-    <info organisation="org.codehaus.jaxen" module="jaxen" revision="1.1.3" status="release" publication="20111108000000">
-        <license name="BSD style" url="http://www.jaxen.org/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.codehaus.jaxen/jaxen/1.1.3/"/>
+    <info organisation="org.eclipse.update" module="configurator" revision="3.3.200.v20130326-1319" status="release" publication="20130710060600">
+        <license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/org/documents/epl-v10.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.eclipse.update/configurator/3.3.200.v20130326-1319/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
-        <description homepage="http://www.jaxen.org/">
-             Jaxen is an open source XPath library written in Java. It
-             is adaptable to many different object models, including DOM,
-             XOM, dom4j, and JDOM. Is it also possible to write adapters
-             that treat non-XML trees such as compiled Java byte code or
-             Java beans as XML, thus enabling you to query these trees
-             with XPath too.
+        <description homepage="http://www.eclipse.org/projects/project.php?id=birt">
+        A component of the BIRT runtime
         </description>
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact name="org.eclipse.update.configurator"/>
     </publications>
-
 </ivy-module>
