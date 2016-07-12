@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2016 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource groupId="ch/qos/logback" artifactId="logback-access">
+        <artifact tofile="artifacts/jars/logback-access.jar" sha1="6276adcd1a218fa6d15af113a99b2dcecb569508"/>
+        <artifact classifier="sources" tofile="artifacts/sources/logback-access.zip" sha1="8438f21aaadcfcda7b3bd62aa0f386ca6963aca6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/logback-access.zip" sha1="233097ea88da20a3b4b46e0142255440ce2aee91"/>
+    </m2resource>
+    <m2resource groupId="ch/qos/logback" artifactId="logback-classic">
+        <artifact tofile="artifacts/jars/logback-classic.jar" sha1="d90276fff414f06cb375f2057f6778cd63c6082f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/logback-classic.zip" sha1="f4915df0360e7529c61f9e78ef3a06c19238e62e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/logback-classic.zip" sha1="3d173cf07c623ae33349dd5d6329da844cd8c365"/>
+    </m2resource>
+    <m2resource groupId="ch/qos/logback" artifactId="logback-core">
+        <artifact tofile="artifacts/jars/logback-core.jar" sha1="e3c02049f2dbbc764681b40094ecf0dcbc99b157"/>
+        <artifact classifier="sources" tofile="artifacts/sources/logback-core.zip" sha1="a69d9a62a693f391ad19d8ac19fa85a7a60cbc7c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/logback-core.zip" sha1="ba0053fc779b026f998e81cf037d517fcb4ff661"/>
+    </m2resource>
+</packager-module>
