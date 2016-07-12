@@ -72,9 +72,9 @@
     <artifact name="logback-access" type="source" ext="zip" conf="access"/>
 
     <!-- javadoc -->
-    <artifact name="logback-core" type="source" ext="zip" conf="core"/>
-    <artifact name="logback-classic" type="source" ext="zip" conf="classic"/>
-    <artifact name="logback-access" type="source" ext="zip" conf="access"/>
+    <artifact name="logback-core" type="javadoc" ext="zip" conf="core"/>
+    <artifact name="logback-classic" type="javadoc" ext="zip" conf="classic"/>
+    <artifact name="logback-access" type="javadoc" ext="zip" conf="access"/>
   </publications>
 
   <dependencies>
