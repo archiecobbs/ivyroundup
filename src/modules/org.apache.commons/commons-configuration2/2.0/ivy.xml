@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2016 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20160724000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://commons.apache.org/proper/commons-configuration/">
+            <p>
+            Commons Configuration provides a generic configuration interface which enables
+            a Java application to read configuration data from a variety of sources.
+            </p>
+
+            <p>
+            The commons-configuration version 2 is a major redesign of the library
+            addressing some of the weaknesses of the 1.x versions. Note that this is not
+            a drop-in replacement for Commons Configuration 1.x!
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Include required dependencies only."/>
+        <conf name="jxpath" extends="core" description="Add jxpath dependency."/>
+        <conf name="default" extends="jxpath" description="Most common configuration including core and jxpath."/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-lang3" rev="3.3.2" conf="core->default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.2" conf="core->default"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.9.2" conf="core->default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="1.9" conf="core->default"/>
+        <dependency org="org.apache.commons" name="commons-jxpath" rev="1.3" conf="jxpath->default"/>
+        <!-- optional dependencies whose versions are not in repo
+        <dependency org="org.apache.commons" name="commons-jexl" rev="2.1.1" conf="default->default"/>
+        <dependency org="org.apache.commons" name="commons-vfs2" rev="2.0" conf="default->default"/>
+        <dependency org="xml-resolver" name="xml-resolver" rev="1.2" conf="default->default"/>
+        -->
+    </dependencies>
+
+</ivy-module>
