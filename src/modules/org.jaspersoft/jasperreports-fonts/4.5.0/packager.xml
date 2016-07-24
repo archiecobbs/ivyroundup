@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/jasperreports/jasperreports/JasperReports%20${revision}/${archive}.jar"
+    <resource url="http://downloads.sourceforge.net/project/jasperreports/archive/jasperreports/JasperReports%20${revision}/${archive}.jar"
       tofile="artifacts/jars/${name}.jar"
       sha1="26bbc3f41e30775a6436dba93ecd1d0e91338c04"/>
 
