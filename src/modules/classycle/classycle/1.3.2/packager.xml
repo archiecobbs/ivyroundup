@@ -19,26 +19,27 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}${revision}"/>
+    <property name="archive2" value="Classycle${revision}"/>
 
     <resource url="http://downloads.sourceforge.net/project/${ivy.packager.organisation}/${name}/Classycle%20V${revision}/${archive}.zip" sha1="734366d91072648f17406a329163a00ecfa35eb8"/>
 
     <build>
         <!-- jar -->
-        <move file="archive/${archive}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive2}/${name}.jar" tofile="artifacts/jars/${name}.jar"/>
 
         <!-- xsl -->
         <mkdir dir="artifacts/reports"/>
-        <move file="archive/${archive}/reportXMLtoHTML.xsl" todir="artifacts/reports"/>
+        <move file="archive/${archive2}/reportXMLtoHTML.xsl" todir="artifacts/reports"/>
         <zip destfile="artifacts/reports/images.zip">
-            <fileset dir="archive/${archive}" includes="images/*"/>
+            <fileset dir="archive/${archive2}" includes="images/*"/>
         </zip>
 
         <!-- source -->
-        <move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/>
+        <move file="archive/${archive2}/src.zip" tofile="artifacts/sources/source.zip"/>
 
         <!-- javadoc -->
         <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/docs/WebSite/apidoc"/>
+            <fileset dir="archive/${archive2}/docs/WebSite/apidoc"/>
         </zip>
     </build>
 </packager-module>
