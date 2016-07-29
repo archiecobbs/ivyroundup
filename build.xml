@@ -30,8 +30,11 @@
 
     <!--
         Set this property to change where the meta-repo is generated. Must use absolute paths.
+        Convert to Unix format if necessary for greater portability
     -->
-    <property name="target.repo" value="${basedir}/repo" />
+    <pathconvert targetos="unix" property="target.repo">
+        <path location="${basedir}/repo"/>
+    </pathconvert>
 
     <!--
         Set this property to change which ivy is used.  It must be a version of
@@ -73,13 +76,13 @@
         <mkdir dir="${target.repo}"/>
 
         <!-- Generate list of modules -->
-        <exec executable="/bin/bash" logError="true" failonerror="true">
+        <exec executable="bash" logError="true" failonerror="true">
             <arg value="-c"/>
             <arg value="TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'` ;
               export LC_ALL=C;
               find src/modules -name ivy.xml -print
                 | sort
-                | awk -F/ -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
+                | awk -F/ -v TIMESTAMP=\&quot;$TIMESTAMP\&quot; -f src/awk/xmlify.awk
                 > ${target.repo}/modules.xml"/>
         </exec>
     </target>
