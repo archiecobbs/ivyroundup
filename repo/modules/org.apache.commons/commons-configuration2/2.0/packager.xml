@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2013 Mark Thomas
+    Copyright 2016 Ales Nosek
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -15,11 +15,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://downloads.sourceforge.net/project/jasperreports/archive/jasperreports/JasperReports%20${revision}/${archive}.jar" tofile="artifacts/jars/${name}.jar" sha1="26bbc3f41e30775a6436dba93ecd1d0e91338c04"/>
-
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="62a3f350a9ff864a9b4dbaa2a94f7158c744b3b7"/>
+        <artifact tofile="artifacts/sources/${ivy.packager.module}.zip" classifier="sources" sha1="1836f0599beac264c720f16faf315a234db65190"/>
+        <artifact tofile="artifacts/javadocs/${ivy.packager.module}.zip" classifier="javadoc" sha1="8bc8e4e4fc6eb2e07ba1e3f600737aa05cdb7dd9"/>
+    </m2resource>
 </packager-module>
