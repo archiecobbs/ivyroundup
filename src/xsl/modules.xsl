@@ -63,7 +63,6 @@
       <td><xsl:value-of select="../@name"/></td>
       <td>
       <xsl:for-each select="rev">
-          <xsl:sort select="@name"/>
           <xsl:if test="position() != 1 and (position() - 1) mod 6 = 0 and position() &lt; last()">
               <br/>
           </xsl:if>
