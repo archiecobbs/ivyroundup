@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2016-07-30 15:08:08 UTC</timestamp>
+  <timestamp>2016-08-01 14:42:34 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -19,8 +19,8 @@
   </org>
   <org name="cascading">
     <mod name="cascading">
-      <rev name="2.2.0-wip-66"/>
       <rev name="2.2.0"/>
+      <rev name="2.2.0-wip-66"/>
       <rev name="2.2.1"/>
     </mod>
   </org>
@@ -38,10 +38,10 @@
     <mod name="classycle">
       <rev name="1.1.1"/>
       <rev name="1.2"/>
+      <rev name="1.3"/>
       <rev name="1.3.1"/>
       <rev name="1.3.2"/>
       <rev name="1.3.3"/>
-      <rev name="1.3"/>
     </mod>
   </org>
   <org name="com.amazonaws">
@@ -126,11 +126,6 @@
       <rev name="1.10.0"/>
     </mod>
   </org>
-  <org name="com.fasterxml.uuid">
-    <mod name="jug">
-      <rev name="3.1.0"/>
-    </mod>
-  </org>
   <org name="com.fasterxml">
     <mod name="classmate">
       <rev name="0.8.0"/>
@@ -142,6 +137,11 @@
       <rev name="2.4.3"/>
       <rev name="2.5.2"/>
       <rev name="2.7.3"/>
+    </mod>
+  </org>
+  <org name="com.fasterxml.uuid">
+    <mod name="jug">
+      <rev name="3.1.0"/>
     </mod>
   </org>
   <org name="com.foundationdb">
@@ -189,10 +189,52 @@
       <rev name="5.1.0"/>
     </mod>
   </org>
+  <org name="com.google">
+    <mod name="appengine">
+      <rev name="1.3.3.1"/>
+    </mod>
+    <mod name="gin">
+      <rev name="1.5-gwt-2.1"/>
+      <rev name="1.5-gwt-2.2"/>
+    </mod>
+    <mod name="google-gson">
+      <rev name="1.6"/>
+      <rev name="2.1"/>
+      <rev name="2.2"/>
+      <rev name="2.2.1"/>
+      <rev name="2.2.2"/>
+      <rev name="2.2.3"/>
+      <rev name="2.2.4"/>
+      <rev name="2.3.1"/>
+    </mod>
+    <mod name="guice">
+      <rev name="1.0"/>
+      <rev name="2.0"/>
+      <rev name="3.0"/>
+      <rev name="4.0"/>
+    </mod>
+    <mod name="gwt">
+      <rev name="1.4.60"/>
+      <rev name="1.4.62"/>
+      <rev name="1.5m2"/>
+      <rev name="1.5.2"/>
+      <rev name="1.5.3"/>
+      <rev name="1.6.4"/>
+      <rev name="1.7.0"/>
+      <rev name="2.0.0"/>
+      <rev name="2.0.3"/>
+      <rev name="2.1.0"/>
+      <rev name="2.2.0"/>
+      <rev name="2.3.0"/>
+      <rev name="2.4.0"/>
+      <rev name="2.5.0"/>
+      <rev name="2.5.1"/>
+    </mod>
+  </org>
   <org name="com.google.common">
     <mod name="google-collections">
-      <rev name="1.0-rc2"/>
       <rev name="1.0"/>
+      <rev name="1.0-rc2"/>
     </mod>
     <mod name="guava-libraries">
       <rev name="11.0.1"/>
@@ -237,48 +279,6 @@
       <rev name="1.1.1"/>
     </mod>
   </org>
-  <org name="com.google">
-    <mod name="appengine">
-      <rev name="1.3.3.1"/>
-    </mod>
-    <mod name="gin">
-      <rev name="1.5-gwt-2.1"/>
-      <rev name="1.5-gwt-2.2"/>
-    </mod>
-    <mod name="google-gson">
-      <rev name="1.6"/>
-      <rev name="2.1"/>
-      <rev name="2.2.1"/>
-      <rev name="2.2.2"/>
-      <rev name="2.2.3"/>
-      <rev name="2.2.4"/>
-      <rev name="2.2"/>
-      <rev name="2.3.1"/>
-    </mod>
-    <mod name="guice">
-      <rev name="1.0"/>
-      <rev name="2.0"/>
-      <rev name="3.0"/>
-      <rev name="4.0"/>
-    </mod>
-    <mod name="gwt">
-      <rev name="1.4.60"/>
-      <rev name="1.4.62"/>
-      <rev name="1.5.2"/>
-      <rev name="1.5.3"/>
-      <rev name="1.5m2"/>
-      <rev name="1.6.4"/>
-      <rev name="1.7.0"/>
-      <rev name="2.0.0"/>
-      <rev name="2.0.3"/>
-      <rev name="2.1.0"/>
-      <rev name="2.2.0"/>
-      <rev name="2.3.0"/>
-      <rev name="2.4.0"/>
-      <rev name="2.5.0"/>
-      <rev name="2.5.1"/>
-    </mod>
-  </org>
   <org name="com.googlecode.charts4j">
     <mod name="charts4j">
       <rev name="1.2"/>
@@ -293,8 +293,8 @@
   <org name="com.googlecode.flyway">
     <mod name="flyway">
       <rev name="1.5"/>
-      <rev name="1.6.1"/>
       <rev name="1.6"/>
+      <rev name="1.6.1"/>
       <rev name="1.7"/>
       <rev name="2.0.3"/>
       <rev name="2.2.1"/>
@@ -367,12 +367,12 @@
       <rev name="2.2"/>
       <rev name="3.0.1"/>
       <rev name="3.1.1"/>
+      <rev name="3.3"/>
       <rev name="3.3.1"/>
       <rev name="3.3.3"/>
-      <rev name="3.3"/>
+      <rev name="3.4"/>
       <rev name="3.4.1"/>
       <rev name="3.4.2"/>
-      <rev name="3.4"/>
     </mod>
   </org>
   <org name="com.ibm.icu">
@@ -496,10 +496,10 @@
   </org>
   <org name="com.lmax.disruptor">
     <mod name="disruptor">
+      <rev name="2.8"/>
       <rev name="2.10.1"/>
       <rev name="2.10.3"/>
       <rev name="2.10.4"/>
-      <rev name="2.8"/>
       <rev name="3.2.0"/>
       <rev name="3.2.1"/>
     </mod>
@@ -632,9 +632,9 @@
   </org>
   <org name="com.stripe">
     <mod name="stripe-java">
+      <rev name="1.5.1"/>
       <rev name="1.38.0"/>
       <rev name="1.40.0"/>
-      <rev name="1.5.1"/>
     </mod>
   </org>
   <org name="com.sun.grizzly">
@@ -646,28 +646,28 @@
     </mod>
   </org>
   <org name="com.sun.jersey">
+    <mod name="jersey">
+      <rev name="1.4"/>
+      <rev name="1.8"/>
+      <rev name="1.13"/>
+      <rev name="1.17.1"/>
+    </mod>
     <mod name="jersey-bundle">
       <rev name="1.18.1"/>
     </mod>
-    <mod name="jersey">
-      <rev name="1.13"/>
-      <rev name="1.17.1"/>
-      <rev name="1.4"/>
-      <rev name="1.8"/>
-    </mod>
   </org>
   <org name="com.sun.media">
-    <mod name="jai-imageio">
-      <rev name="1.1"/>
-    </mod>
     <mod name="jai">
       <rev name="1.1.3"/>
+    </mod>
+    <mod name="jai-imageio">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="com.sun.xml.fastinfoset">
     <mod name="FastInfoset">
-      <rev name="1.2.13"/>
       <rev name="1.2.9"/>
+      <rev name="1.2.13"/>
     </mod>
   </org>
   <org name="com.svnkit">
@@ -678,10 +678,10 @@
       <rev name="1.3.0"/>
       <rev name="1.3.2"/>
       <rev name="1.3.7"/>
-      <rev name="1.7.10"/>
       <rev name="1.7.5"/>
       <rev name="1.7.6"/>
       <rev name="1.7.8"/>
+      <rev name="1.7.10"/>
     </mod>
   </org>
   <org name="com.thetransactioncompany">
@@ -712,6 +712,101 @@
       <rev name="2.0.9"/>
     </mod>
   </org>
+  <org name="com.vaadin">
+    <mod name="vaadin">
+      <rev name="6.2.3"/>
+      <rev name="6.2.4"/>
+      <rev name="6.2.5"/>
+      <rev name="6.2.6"/>
+      <rev name="6.3.0"/>
+      <rev name="6.3.1"/>
+      <rev name="6.3.2"/>
+      <rev name="6.3.3"/>
+      <rev name="6.3.4"/>
+      <rev name="6.4.0"/>
+      <rev name="6.4.1"/>
+      <rev name="6.4.2"/>
+      <rev name="6.4.3"/>
+      <rev name="6.4.4"/>
+      <rev name="6.4.5"/>
+      <rev name="6.4.6"/>
+      <rev name="6.4.7"/>
+      <rev name="6.4.8"/>
+      <rev name="6.5.0"/>
+      <rev name="6.5.1"/>
+      <rev name="6.5.2"/>
+      <rev name="6.5.6"/>
+      <rev name="6.6.0"/>
+      <rev name="6.6.1"/>
+      <rev name="6.6.2"/>
+      <rev name="6.6.3"/>
+      <rev name="6.6.4"/>
+      <rev name="6.6.5"/>
+      <rev name="6.6.6"/>
+      <rev name="6.7.0"/>
+      <rev name="6.7.1"/>
+      <rev name="6.7.2"/>
+      <rev name="6.7.3"/>
+      <rev name="6.7.4"/>
+      <rev name="6.7.5"/>
+      <rev name="6.7.6"/>
+      <rev name="6.8.0"/>
+      <rev name="6.8.2"/>
+      <rev name="6.8.3"/>
+      <rev name="6.8.4"/>
+      <rev name="6.8.6"/>
+      <rev name="6.8.7"/>
+      <rev name="6.8.8"/>
+      <rev name="6.8.9"/>
+      <rev name="6.8.11"/>
+      <rev name="7.0.0"/>
+      <rev name="7.0.0.alpha1"/>
+      <rev name="7.0.0.alpha2"/>
+      <rev name="7.0.0.alpha3"/>
+      <rev name="7.0.0.beta1"/>
+      <rev name="7.0.0.beta3"/>
+      <rev name="7.0.0.beta4"/>
+      <rev name="7.0.0.beta5"/>
+      <rev name="7.0.0.beta6"/>
+      <rev name="7.0.0.beta7"/>
+      <rev name="7.0.0.beta8"/>
+      <rev name="7.0.0.beta9"/>
+      <rev name="7.0.0.beta10"/>
+      <rev name="7.0.0.beta11"/>
+      <rev name="7.0.0.rc1"/>
+      <rev name="7.0.1"/>
+      <rev name="7.0.2"/>
+      <rev name="7.0.3"/>
+      <rev name="7.0.5"/>
+      <rev name="7.1.0"/>
+      <rev name="7.1.0.beta1"/>
+      <rev name="7.1.1"/>
+      <rev name="7.1.2"/>
+      <rev name="7.1.3"/>
+      <rev name="7.1.4"/>
+      <rev name="7.1.5"/>
+      <rev name="7.1.6"/>
+      <rev name="7.1.7"/>
+      <rev name="7.1.8"/>
+      <rev name="7.1.10"/>
+      <rev name="7.1.11"/>
+      <rev name="7.1.12"/>
+      <rev name="7.1.13"/>
+      <rev name="7.1.14"/>
+      <rev name="7.1.15"/>
+      <rev name="7.2.0"/>
+      <rev name="7.2.5"/>
+      <rev name="7.2.7"/>
+      <rev name="7.3.0"/>
+      <rev name="7.3.7"/>
+      <rev name="7.3.9"/>
+      <rev name="7.4.8"/>
+      <rev name="7.5.1"/>
+      <rev name="7.5.5"/>
+      <rev name="7.5.10"/>
+      <rev name="7.6.1"/>
+    </mod>
+  </org>
   <org name="com.vaadin.addon">
     <mod name="console">
       <rev name="1.1.6"/>
@@ -720,9 +815,6 @@
       <rev name="0.1.6"/>
     </mod>
     <mod name="dontpush-addon-ozonelayer">
-      <rev name="0.3.10"/>
-      <rev name="0.3.11"/>
-      <rev name="0.3.12"/>
       <rev name="0.3.2"/>
       <rev name="0.3.3"/>
       <rev name="0.3.4"/>
@@ -731,6 +823,9 @@
       <rev name="0.3.7"/>
       <rev name="0.3.8"/>
       <rev name="0.3.9"/>
+      <rev name="0.3.10"/>
+      <rev name="0.3.11"/>
+      <rev name="0.3.12"/>
       <rev name="0.4.1"/>
       <rev name="0.4.3"/>
       <rev name="0.4.4"/>
@@ -804,101 +899,6 @@
     </mod>
     <mod name="widget-rpc">
       <rev name="1.1.5"/>
-    </mod>
-  </org>
-  <org name="com.vaadin">
-    <mod name="vaadin">
-      <rev name="6.2.3"/>
-      <rev name="6.2.4"/>
-      <rev name="6.2.5"/>
-      <rev name="6.2.6"/>
-      <rev name="6.3.0"/>
-      <rev name="6.3.1"/>
-      <rev name="6.3.2"/>
-      <rev name="6.3.3"/>
-      <rev name="6.3.4"/>
-      <rev name="6.4.0"/>
-      <rev name="6.4.1"/>
-      <rev name="6.4.2"/>
-      <rev name="6.4.3"/>
-      <rev name="6.4.4"/>
-      <rev name="6.4.5"/>
-      <rev name="6.4.6"/>
-      <rev name="6.4.7"/>
-      <rev name="6.4.8"/>
-      <rev name="6.5.0"/>
-      <rev name="6.5.1"/>
-      <rev name="6.5.2"/>
-      <rev name="6.5.6"/>
-      <rev name="6.6.0"/>
-      <rev name="6.6.1"/>
-      <rev name="6.6.2"/>
-      <rev name="6.6.3"/>
-      <rev name="6.6.4"/>
-      <rev name="6.6.5"/>
-      <rev name="6.6.6"/>
-      <rev name="6.7.0"/>
-      <rev name="6.7.1"/>
-      <rev name="6.7.2"/>
-      <rev name="6.7.3"/>
-      <rev name="6.7.4"/>
-      <rev name="6.7.5"/>
-      <rev name="6.7.6"/>
-      <rev name="6.8.0"/>
-      <rev name="6.8.11"/>
-      <rev name="6.8.2"/>
-      <rev name="6.8.3"/>
-      <rev name="6.8.4"/>
-      <rev name="6.8.6"/>
-      <rev name="6.8.7"/>
-      <rev name="6.8.8"/>
-      <rev name="6.8.9"/>
-      <rev name="7.0.0.alpha1"/>
-      <rev name="7.0.0.alpha2"/>
-      <rev name="7.0.0.alpha3"/>
-      <rev name="7.0.0.beta1"/>
-      <rev name="7.0.0.beta10"/>
-      <rev name="7.0.0.beta11"/>
-      <rev name="7.0.0.beta3"/>
-      <rev name="7.0.0.beta4"/>
-      <rev name="7.0.0.beta5"/>
-      <rev name="7.0.0.beta6"/>
-      <rev name="7.0.0.beta7"/>
-      <rev name="7.0.0.beta8"/>
-      <rev name="7.0.0.beta9"/>
-      <rev name="7.0.0.rc1"/>
-      <rev name="7.0.0"/>
-      <rev name="7.0.1"/>
-      <rev name="7.0.2"/>
-      <rev name="7.0.3"/>
-      <rev name="7.0.5"/>
-      <rev name="7.1.0.beta1"/>
-      <rev name="7.1.0"/>
-      <rev name="7.1.1"/>
-      <rev name="7.1.10"/>
-      <rev name="7.1.11"/>
-      <rev name="7.1.12"/>
-      <rev name="7.1.13"/>
-      <rev name="7.1.14"/>
-      <rev name="7.1.15"/>
-      <rev name="7.1.2"/>
-      <rev name="7.1.3"/>
-      <rev name="7.1.4"/>
-      <rev name="7.1.5"/>
-      <rev name="7.1.6"/>
-      <rev name="7.1.7"/>
-      <rev name="7.1.8"/>
-      <rev name="7.2.0"/>
-      <rev name="7.2.5"/>
-      <rev name="7.2.7"/>
-      <rev name="7.3.0"/>
-      <rev name="7.3.7"/>
-      <rev name="7.3.9"/>
-      <rev name="7.4.8"/>
-      <rev name="7.5.1"/>
-      <rev name="7.5.10"/>
-      <rev name="7.5.5"/>
-      <rev name="7.6.1"/>
     </mod>
   </org>
   <org name="com.vividsolutions">
@@ -991,8 +991,8 @@
   </org>
   <org name="info.monitorenter.cpdetector">
     <mod name="cpdetector">
-      <rev name="1.0.10"/>
       <rev name="1.0.7"/>
+      <rev name="1.0.10"/>
     </mod>
   </org>
   <org name="io.dropwizard.metrics">
@@ -1182,10 +1182,15 @@
       <rev name="1.0"/>
     </mod>
   </org>
-  <org name="javax.servlet.jsp.jstl">
-    <mod name="jstl">
-      <rev name="1.1.2"/>
-      <rev name="1.2"/>
+  <org name="javax.servlet">
+    <mod name="servletapi">
+      <rev name="2.2"/>
+      <rev name="2.3"/>
+      <rev name="2.4"/>
+      <rev name="2.5"/>
+      <rev name="3.0"/>
+      <rev name="3.0.1"/>
+      <rev name="3.1.0"/>
     </mod>
   </org>
   <org name="javax.servlet.jsp">
@@ -1195,15 +1200,10 @@
       <rev name="2.2"/>
     </mod>
   </org>
-  <org name="javax.servlet">
-    <mod name="servletapi">
-      <rev name="2.2"/>
-      <rev name="2.3"/>
-      <rev name="2.4"/>
-      <rev name="2.5"/>
-      <rev name="3.0.1"/>
-      <rev name="3.0"/>
-      <rev name="3.1.0"/>
+  <org name="javax.servlet.jsp.jstl">
+    <mod name="jstl">
+      <rev name="1.1.2"/>
+      <rev name="1.2"/>
     </mod>
   </org>
   <org name="javax.sip">
@@ -1233,21 +1233,21 @@
     </mod>
     <mod name="jsr311-api">
       <rev name="1.0"/>
-      <rev name="1.1.1"/>
       <rev name="1.1"/>
+      <rev name="1.1.1"/>
     </mod>
   </org>
   <org name="javax.xml.bind">
     <mod name="jaxb">
-      <rev name="2.1.10"/>
-      <rev name="2.1.11"/>
-      <rev name="2.1.12"/>
       <rev name="2.1.7"/>
       <rev name="2.1.8"/>
       <rev name="2.1.9"/>
+      <rev name="2.1.10"/>
+      <rev name="2.1.11"/>
+      <rev name="2.1.12"/>
+      <rev name="2.2"/>
       <rev name="2.2.4u1"/>
       <rev name="2.2.6"/>
-      <rev name="2.2"/>
     </mod>
   </org>
   <org name="javax.xml.soap">
@@ -1424,18 +1424,18 @@
   <org name="net.sourceforge.cglib">
     <mod name="cglib">
       <rev name="2.1.3"/>
-      <rev name="2.2.2"/>
       <rev name="2.2"/>
+      <rev name="2.2.2"/>
     </mod>
   </org>
   <org name="net.sourceforge.cobertura">
     <mod name="cobertura">
+      <rev name="1.9"/>
       <rev name="1.9.1"/>
       <rev name="1.9.2"/>
       <rev name="1.9.3"/>
-      <rev name="1.9.4.1"/>
       <rev name="1.9.4"/>
-      <rev name="1.9"/>
+      <rev name="1.9.4.1"/>
       <rev name="2.0.3"/>
       <rev name="2.1.1"/>
     </mod>
@@ -1543,8 +1543,8 @@
   </org>
   <org name="net.sourceforge.jexcelapi">
     <mod name="jexcelapi">
-      <rev name="2.6.12"/>
       <rev name="2.6.9"/>
+      <rev name="2.6.12"/>
     </mod>
   </org>
   <org name="net.sourceforge.jgridshift">
@@ -1703,11 +1703,11 @@
       <rev name="1.0.0"/>
       <rev name="1.0.1"/>
       <rev name="1.0.2"/>
+      <rev name="2.0"/>
       <rev name="2.0.1"/>
       <rev name="2.0.2"/>
       <rev name="2.0.3"/>
       <rev name="2.0.4"/>
-      <rev name="2.0"/>
     </mod>
   </org>
   <org name="net.sourceforge.uadetector">
@@ -1789,8 +1789,8 @@
       <rev name="2.1"/>
       <rev name="2.2"/>
       <rev name="2.3"/>
-      <rev name="2.4.1"/>
       <rev name="2.4"/>
+      <rev name="2.4.1"/>
     </mod>
     <mod name="maduraconfiguration">
       <rev name="2.6"/>
@@ -1858,13 +1858,13 @@
     </mod>
   </org>
   <org name="org.apache.ant">
-    <mod name="ant-launcher">
-      <rev name="1.8.4"/>
-    </mod>
     <mod name="ant">
       <rev name="1.7.1"/>
       <rev name="1.8.0"/>
       <rev name="1.8.1"/>
+      <rev name="1.8.4"/>
+    </mod>
+    <mod name="ant-launcher">
       <rev name="1.8.4"/>
     </mod>
     <mod name="ivy">
@@ -1906,7 +1906,6 @@
       <rev name="1.3.1"/>
     </mod>
     <mod name="commons-codec">
-      <rev name="1.10"/>
       <rev name="1.3"/>
       <rev name="1.4"/>
       <rev name="1.5"/>
@@ -1914,12 +1913,13 @@
       <rev name="1.7"/>
       <rev name="1.8"/>
       <rev name="1.9"/>
+      <rev name="1.10"/>
     </mod>
     <mod name="commons-collections">
       <rev name="2.1.1"/>
+      <rev name="3.2"/>
       <rev name="3.2.1"/>
       <rev name="3.2.2"/>
-      <rev name="3.2"/>
     </mod>
     <mod name="commons-collections4">
       <rev name="4.1"/>
@@ -1930,9 +1930,9 @@
       <rev name="1.4.1"/>
     </mod>
     <mod name="commons-configuration">
-      <rev name="1.10"/>
       <rev name="1.6"/>
       <rev name="1.8"/>
+      <rev name="1.10"/>
     </mod>
     <mod name="commons-configuration2">
       <rev name="2.0"/>
@@ -1944,9 +1944,9 @@
     </mod>
     <mod name="commons-dbcp">
       <rev name="1.1"/>
+      <rev name="1.2"/>
       <rev name="1.2.1"/>
       <rev name="1.2.2"/>
-      <rev name="1.2"/>
       <rev name="1.3"/>
       <rev name="1.4"/>
     </mod>
@@ -1955,8 +1955,8 @@
       <rev name="1.5"/>
       <rev name="1.6"/>
       <rev name="1.7"/>
-      <rev name="1.8.1"/>
       <rev name="1.8"/>
+      <rev name="1.8.1"/>
       <rev name="2.0"/>
       <rev name="2.1"/>
     </mod>
@@ -1970,9 +1970,9 @@
       <rev name="1.1"/>
     </mod>
     <mod name="commons-fileupload">
+      <rev name="1.2"/>
       <rev name="1.2.1"/>
       <rev name="1.2.2"/>
-      <rev name="1.2"/>
       <rev name="1.3.1"/>
     </mod>
     <mod name="commons-httpclient">
@@ -2006,14 +2006,14 @@
       <rev name="3.4"/>
     </mod>
     <mod name="commons-logging">
+      <rev name="1.0"/>
       <rev name="1.0.1"/>
       <rev name="1.0.2"/>
       <rev name="1.0.3"/>
       <rev name="1.0.4"/>
-      <rev name="1.0"/>
+      <rev name="1.1"/>
       <rev name="1.1.1"/>
       <rev name="1.1.3"/>
-      <rev name="1.1"/>
       <rev name="1.2"/>
     </mod>
     <mod name="commons-math">
@@ -2021,8 +2021,8 @@
     </mod>
     <mod name="commons-math3">
       <rev name="3.0"/>
-      <rev name="3.1.1"/>
       <rev name="3.1"/>
+      <rev name="3.1.1"/>
       <rev name="3.2"/>
     </mod>
     <mod name="commons-net">
@@ -2036,8 +2036,8 @@
     <mod name="commons-pool">
       <rev name="1.3"/>
       <rev name="1.4"/>
-      <rev name="1.5.4"/>
       <rev name="1.5"/>
+      <rev name="1.5.4"/>
       <rev name="1.6"/>
     </mod>
     <mod name="commons-pool2">
@@ -2168,8 +2168,8 @@
       <rev name="0.16.4"/>
       <rev name="0.17.0"/>
       <rev name="0.17.1"/>
-      <rev name="0.17.2.1"/>
       <rev name="0.17.2"/>
+      <rev name="0.17.2.1"/>
       <rev name="0.18.0"/>
       <rev name="0.18.1"/>
       <rev name="0.18.2"/>
@@ -2183,37 +2183,37 @@
   </org>
   <org name="org.apache.httpcomponents">
     <mod name="httpasyncclient">
-      <rev name="4.0.2"/>
       <rev name="4.0"/>
+      <rev name="4.0.2"/>
     </mod>
     <mod name="httpclient">
       <rev name="4.0.1"/>
+      <rev name="4.1"/>
       <rev name="4.1.1"/>
       <rev name="4.1.3"/>
-      <rev name="4.1"/>
+      <rev name="4.2"/>
       <rev name="4.2.1"/>
       <rev name="4.2.5"/>
       <rev name="4.2.6"/>
-      <rev name="4.2"/>
+      <rev name="4.3"/>
       <rev name="4.3.4"/>
       <rev name="4.3.5"/>
       <rev name="4.3.6"/>
-      <rev name="4.3"/>
       <rev name="4.4.1"/>
       <rev name="4.5.2"/>
     </mod>
     <mod name="httpcore">
       <rev name="4.0.1"/>
+      <rev name="4.1"/>
       <rev name="4.1.1"/>
       <rev name="4.1.3"/>
-      <rev name="4.1"/>
+      <rev name="4.2"/>
       <rev name="4.2.1"/>
       <rev name="4.2.4"/>
       <rev name="4.2.5"/>
-      <rev name="4.2"/>
+      <rev name="4.3"/>
       <rev name="4.3.2"/>
       <rev name="4.3.3"/>
-      <rev name="4.3"/>
       <rev name="4.4.1"/>
       <rev name="4.4.4"/>
     </mod>
@@ -2241,15 +2241,15 @@
     </mod>
   </org>
   <org name="org.apache.log4j">
-    <mod name="log4j-extras">
-      <rev name="1.1"/>
-    </mod>
     <mod name="log4j">
       <rev name="1.2.13"/>
       <rev name="1.2.14"/>
       <rev name="1.2.15"/>
       <rev name="1.2.16"/>
       <rev name="1.2.17"/>
+    </mod>
+    <mod name="log4j-extras">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="org.apache.logging.log4j">
@@ -2309,15 +2309,15 @@
   </org>
   <org name="org.apache.poi">
     <mod name="poi">
-      <rev name="3.10-FINAL"/>
-      <rev name="3.10.1"/>
-      <rev name="3.10"/>
-      <rev name="3.13"/>
       <rev name="3.2-FINAL"/>
       <rev name="3.5-FINAL"/>
       <rev name="3.7"/>
       <rev name="3.8"/>
       <rev name="3.9"/>
+      <rev name="3.10"/>
+      <rev name="3.10-FINAL"/>
+      <rev name="3.10.1"/>
+      <rev name="3.13"/>
     </mod>
   </org>
   <org name="org.apache.regexp">
@@ -2350,13 +2350,20 @@
   <org name="org.apache.wicket">
     <mod name="wicket">
       <rev name="1.3.6"/>
-      <rev name="1.4.13"/>
       <rev name="1.4.3"/>
+      <rev name="1.4.13"/>
     </mod>
   </org>
   <org name="org.apache.wink">
     <mod name="wink">
       <rev name="1.3.0"/>
+    </mod>
+  </org>
+  <org name="org.apache.ws">
+    <mod name="xmlrpc">
+      <rev name="3.1.1"/>
+      <rev name="3.1.2"/>
+      <rev name="3.1.3"/>
     </mod>
   </org>
   <org name="org.apache.ws.commons">
@@ -2373,22 +2380,15 @@
       <rev name="1.6.3"/>
     </mod>
   </org>
-  <org name="org.apache.ws">
-    <mod name="xmlrpc">
-      <rev name="3.1.1"/>
-      <rev name="3.1.2"/>
-      <rev name="3.1.3"/>
-    </mod>
-  </org>
   <org name="org.apache.xerces">
     <mod name="xerces">
-      <rev name="2.10.0"/>
       <rev name="2.5.0"/>
       <rev name="2.6.2"/>
       <rev name="2.7.1"/>
       <rev name="2.8.1"/>
       <rev name="2.9.0"/>
       <rev name="2.9.1"/>
+      <rev name="2.10.0"/>
     </mod>
   </org>
   <org name="org.apache.xml">
@@ -2449,8 +2449,8 @@
       <rev name="1.7.2"/>
       <rev name="1.7.3"/>
       <rev name="1.7.4"/>
-      <rev name="1.8.0.M1"/>
       <rev name="1.8.0"/>
+      <rev name="1.8.0.M1"/>
       <rev name="1.8.1"/>
       <rev name="1.8.4"/>
       <rev name="1.8.6"/>
@@ -2468,22 +2468,22 @@
   <org name="org.atmosphere">
     <mod name="atmosphere">
       <rev name="0.6.3"/>
+      <rev name="0.7"/>
       <rev name="0.7.1"/>
       <rev name="0.7.2"/>
-      <rev name="0.7"/>
       <rev name="0.8.1"/>
       <rev name="0.8.2"/>
       <rev name="0.8.3"/>
       <rev name="0.8.4"/>
       <rev name="0.8.5"/>
       <rev name="0.8.6"/>
-      <rev name="1.0.0.beta5"/>
       <rev name="1.0.0"/>
+      <rev name="1.0.0.beta5"/>
       <rev name="1.0.1"/>
-      <rev name="1.0.12"/>
-      <rev name="1.0.13"/>
       <rev name="1.0.2"/>
       <rev name="1.0.9"/>
+      <rev name="1.0.12"/>
+      <rev name="1.0.13"/>
       <rev name="1.1.0.beta2"/>
     </mod>
   </org>
@@ -2554,10 +2554,10 @@
       <rev name="1.7.7"/>
       <rev name="1.8.0"/>
       <rev name="1.8.1"/>
-      <rev name="1.9.13"/>
       <rev name="1.9.2"/>
       <rev name="1.9.4"/>
       <rev name="1.9.9"/>
+      <rev name="1.9.13"/>
     </mod>
   </org>
   <org name="org.codehaus.janino">
@@ -2576,8 +2576,8 @@
   <org name="org.codehaus.jettison">
     <mod name="jettison">
       <rev name="1.2"/>
-      <rev name="1.3.1"/>
       <rev name="1.3"/>
+      <rev name="1.3.1"/>
     </mod>
   </org>
   <org name="org.codehaus.perf4j">
@@ -2588,8 +2588,8 @@
   <org name="org.codehaus.qdox">
     <mod name="qdox">
       <rev name="1.11"/>
-      <rev name="1.12.1"/>
       <rev name="1.12"/>
+      <rev name="1.12.1"/>
     </mod>
   </org>
   <org name="org.codehaus.sonar-plugins">
@@ -2634,18 +2634,18 @@
   </org>
   <org name="org.dbmaintain">
     <mod name="dbmaintain">
+      <rev name="1.0"/>
       <rev name="1.0.1"/>
       <rev name="1.0.2"/>
-      <rev name="1.0"/>
       <rev name="1.1"/>
     </mod>
   </org>
   <org name="org.dbunit">
     <mod name="dbunit">
+      <rev name="2.2"/>
       <rev name="2.2.1"/>
       <rev name="2.2.2"/>
       <rev name="2.2.3"/>
-      <rev name="2.2"/>
       <rev name="2.3.0"/>
       <rev name="2.4.0"/>
       <rev name="2.4.1"/>
@@ -2661,6 +2661,14 @@
   </org>
   <org name="org.dellroad">
     <mod name="dellroad-stuff">
+      <rev name="1.0.3"/>
+      <rev name="1.0.33"/>
+      <rev name="1.0.43"/>
+      <rev name="1.0.60"/>
+      <rev name="1.0.68"/>
+      <rev name="1.0.74"/>
+      <rev name="1.0.88"/>
+      <rev name="1.0.92"/>
       <rev name="1.0.100"/>
       <rev name="1.0.119"/>
       <rev name="1.0.134"/>
@@ -2671,31 +2679,23 @@
       <rev name="1.0.227"/>
       <rev name="1.0.263"/>
       <rev name="1.0.284"/>
-      <rev name="1.0.3"/>
       <rev name="1.0.315"/>
-      <rev name="1.0.33"/>
       <rev name="1.0.349"/>
       <rev name="1.0.420"/>
-      <rev name="1.0.43"/>
       <rev name="1.0.432"/>
       <rev name="1.0.497"/>
       <rev name="1.0.507"/>
       <rev name="1.0.548"/>
       <rev name="1.0.571"/>
       <rev name="1.0.592"/>
-      <rev name="1.0.60"/>
       <rev name="1.0.659"/>
-      <rev name="1.0.68"/>
       <rev name="1.0.688"/>
       <rev name="1.0.704"/>
-      <rev name="1.0.74"/>
       <rev name="1.0.744"/>
       <rev name="1.0.794"/>
       <rev name="1.0.850"/>
-      <rev name="1.0.88"/>
       <rev name="1.0.882"/>
       <rev name="1.0.905"/>
-      <rev name="1.0.92"/>
       <rev name="1.0.925"/>
       <rev name="1.0.946"/>
       <rev name="1.0.964"/>
@@ -2709,24 +2709,24 @@
       <rev name="2.0.1"/>
     </mod>
     <mod name="hl7lib">
+      <rev name="1.0.4"/>
       <rev name="1.0.10"/>
       <rev name="1.0.18"/>
       <rev name="1.0.24"/>
-      <rev name="1.0.4"/>
       <rev name="1.1.0"/>
     </mod>
     <mod name="jibx-bindings">
-      <rev name="1.0.105"/>
+      <rev name="1.0.7"/>
       <rev name="1.0.32"/>
       <rev name="1.0.42"/>
       <rev name="1.0.46"/>
       <rev name="1.0.48"/>
       <rev name="1.0.54"/>
       <rev name="1.0.62"/>
-      <rev name="1.0.7"/>
       <rev name="1.0.70"/>
       <rev name="1.0.88"/>
       <rev name="1.0.95"/>
+      <rev name="1.0.105"/>
     </mod>
     <mod name="jvser">
       <rev name="1.0.31"/>
@@ -2737,8 +2737,8 @@
       <rev name="0.8.1"/>
     </mod>
     <mod name="msrp4j">
-      <rev name="1.0.18"/>
       <rev name="1.0.3"/>
+      <rev name="1.0.18"/>
       <rev name="1.1.0"/>
       <rev name="1.1.1"/>
       <rev name="2.0.0"/>
@@ -2784,21 +2784,6 @@
       <rev name="3.1"/>
     </mod>
   </org>
-  <org name="org.eclipse.orbit">
-    <mod name="mongodb">
-      <rev name="2.10.1.v20130422-1135"/>
-    </mod>
-  </org>
-  <org name="org.eclipse.swt">
-    <mod name="swt">
-      <rev name="3.6.0"/>
-    </mod>
-  </org>
-  <org name="org.eclipse.update">
-    <mod name="configurator">
-      <rev name="3.3.200.v20130326-1319"/>
-    </mod>
-  </org>
   <org name="org.eclipse">
     <mod name="eclipselink">
       <rev name="1.2.0"/>
@@ -2808,9 +2793,6 @@
       <rev name="3.1.1"/>
       <rev name="3.3.0-v_771"/>
       <rev name="3.4.4"/>
-    </mod>
-    <mod name="jetty-websocket">
-      <rev name="9.0.0.v20130308"/>
     </mod>
     <mod name="jetty">
       <rev name="7.0.0.M0"/>
@@ -2839,6 +2821,24 @@
       <rev name="9.2.6.v20141205"/>
       <rev name="9.2.7.v20150116"/>
     </mod>
+    <mod name="jetty-websocket">
+      <rev name="9.0.0.v20130308"/>
+    </mod>
+  </org>
+  <org name="org.eclipse.orbit">
+    <mod name="mongodb">
+      <rev name="2.10.1.v20130422-1135"/>
+    </mod>
+  </org>
+  <org name="org.eclipse.swt">
+    <mod name="swt">
+      <rev name="3.6.0"/>
+    </mod>
+  </org>
+  <org name="org.eclipse.update">
+    <mod name="configurator">
+      <rev name="3.3.200.v20130326-1319"/>
+    </mod>
   </org>
   <org name="org.eventbus">
     <mod name="eventbus">
@@ -2852,10 +2852,10 @@
     <mod name="freehep-graphics2d">
       <rev name="2.1.3"/>
     </mod>
-    <mod name="freehep-graphicsio-emf">
+    <mod name="freehep-graphicsio">
       <rev name="2.1.3"/>
     </mod>
-    <mod name="freehep-graphicsio">
+    <mod name="freehep-graphicsio-emf">
       <rev name="2.1.3"/>
     </mod>
     <mod name="freehep-io">
@@ -2934,13 +2934,13 @@
   </org>
   <org name="org.hackystat">
     <mod name="hackystat">
-      <rev name="8.3.1030"/>
-      <rev name="8.3.1108"/>
-      <rev name="8.3.1111"/>
       <rev name="8.3.413"/>
       <rev name="8.3.713"/>
       <rev name="8.3.721"/>
       <rev name="8.3.804"/>
+      <rev name="8.3.1030"/>
+      <rev name="8.3.1108"/>
+      <rev name="8.3.1111"/>
     </mod>
   </org>
   <org name="org.hamcrest">
@@ -2949,14 +2949,38 @@
       <rev name="1.3"/>
     </mod>
   </org>
-  <org name="org.hibernate.javax.persistence">
-    <mod name="hibernate-jpa-2.1-api">
-      <rev name="1.0.0.Final"/>
-    </mod>
-  </org>
   <org name="org.hibernate">
     <mod name="ejb3-persistence">
       <rev name="1.0.2.GA"/>
+    </mod>
+    <mod name="hibernate">
+      <rev name="3.2.6"/>
+      <rev name="3.2.7"/>
+      <rev name="3.3.1.GA"/>
+      <rev name="3.3.2.GA"/>
+      <rev name="3.5.0-Final"/>
+      <rev name="3.5.1-Final"/>
+      <rev name="3.5.2-Final"/>
+      <rev name="3.5.3-Final"/>
+      <rev name="3.5.4-Final"/>
+      <rev name="3.5.5-Final"/>
+      <rev name="3.5.6-Final"/>
+      <rev name="3.6.0.Final"/>
+      <rev name="3.6.1.Final"/>
+      <rev name="3.6.2.Final"/>
+      <rev name="3.6.3.Final"/>
+      <rev name="3.6.4.Final"/>
+      <rev name="3.6.5.Final"/>
+      <rev name="3.6.6.Final"/>
+      <rev name="3.6.7.Final"/>
+      <rev name="3.6.10.Final"/>
+      <rev name="4.1.4.Final"/>
+      <rev name="4.1.6.Final"/>
+      <rev name="4.1.9.Final"/>
+      <rev name="4.2.3.Final"/>
+      <rev name="4.2.8.Final"/>
+      <rev name="4.3.5.Final"/>
+      <rev name="5.0.0.Final"/>
     </mod>
     <mod name="hibernate-annotations">
       <rev name="3.3.1"/>
@@ -2995,34 +3019,10 @@
       <rev name="4.3.0.Final"/>
       <rev name="4.3.1.Final"/>
     </mod>
-    <mod name="hibernate">
-      <rev name="3.2.6"/>
-      <rev name="3.2.7"/>
-      <rev name="3.3.1.GA"/>
-      <rev name="3.3.2.GA"/>
-      <rev name="3.5.0-Final"/>
-      <rev name="3.5.1-Final"/>
-      <rev name="3.5.2-Final"/>
-      <rev name="3.5.3-Final"/>
-      <rev name="3.5.4-Final"/>
-      <rev name="3.5.5-Final"/>
-      <rev name="3.5.6-Final"/>
-      <rev name="3.6.0.Final"/>
-      <rev name="3.6.1.Final"/>
-      <rev name="3.6.10.Final"/>
-      <rev name="3.6.2.Final"/>
-      <rev name="3.6.3.Final"/>
-      <rev name="3.6.4.Final"/>
-      <rev name="3.6.5.Final"/>
-      <rev name="3.6.6.Final"/>
-      <rev name="3.6.7.Final"/>
-      <rev name="4.1.4.Final"/>
-      <rev name="4.1.6.Final"/>
-      <rev name="4.1.9.Final"/>
-      <rev name="4.2.3.Final"/>
-      <rev name="4.2.8.Final"/>
-      <rev name="4.3.5.Final"/>
-      <rev name="5.0.0.Final"/>
+  </org>
+  <org name="org.hibernate.javax.persistence">
+    <mod name="hibernate-jpa-2.1-api">
+      <rev name="1.0.0.Final"/>
     </mod>
   </org>
   <org name="org.hornetq">
@@ -3075,22 +3075,15 @@
   </org>
   <org name="org.jasig.cas">
     <mod name="cas-client-core">
-      <rev name="3.1.10"/>
       <rev name="3.1.6"/>
       <rev name="3.1.7"/>
       <rev name="3.1.8"/>
       <rev name="3.1.9"/>
+      <rev name="3.1.10"/>
       <rev name="3.2.1"/>
     </mod>
   </org>
   <org name="org.jaspersoft">
-    <mod name="jasperreports-chart-themes">
-      <rev name="4.0.1"/>
-      <rev name="5.6.0"/>
-    </mod>
-    <mod name="jasperreports-fonts">
-      <rev name="4.5.0"/>
-    </mod>
     <mod name="jasperreports">
       <rev name="3.5.0"/>
       <rev name="3.5.1"/>
@@ -3101,6 +3094,13 @@
       <rev name="4.5.0"/>
       <rev name="5.5.0"/>
       <rev name="5.6.0"/>
+    </mod>
+    <mod name="jasperreports-chart-themes">
+      <rev name="4.0.1"/>
+      <rev name="5.6.0"/>
+    </mod>
+    <mod name="jasperreports-fonts">
+      <rev name="4.5.0"/>
     </mod>
   </org>
   <org name="org.jasypt">
@@ -3124,6 +3124,32 @@
       <rev name="5.5.1"/>
     </mod>
   </org>
+  <org name="org.jboss">
+    <mod name="jandex">
+      <rev name="1.2.0.Final"/>
+      <rev name="1.2.2.Final"/>
+    </mod>
+    <mod name="javassist">
+      <rev name="3.4.0"/>
+      <rev name="3.6.0"/>
+      <rev name="3.7.0"/>
+      <rev name="3.8.0"/>
+      <rev name="3.8.1"/>
+      <rev name="3.9.0"/>
+      <rev name="3.11.0"/>
+      <rev name="3.14.0"/>
+      <rev name="3.15.0"/>
+      <rev name="3.16.1"/>
+      <rev name="3.17.0"/>
+      <rev name="3.18.1"/>
+    </mod>
+    <mod name="jboss-transaction-spi">
+      <rev name="7.1.0.Final"/>
+    </mod>
+    <mod name="netty">
+      <rev name="3.2.4.Final"/>
+    </mod>
+  </org>
   <org name="org.jboss.cache">
     <mod name="jbosscache-core">
       <rev name="3.2.2.GA"/>
@@ -3135,6 +3161,11 @@
     </mod>
   </org>
   <org name="org.jboss.logging">
+    <mod name="jboss-logging">
+      <rev name="3.1.1.GA"/>
+      <rev name="3.1.4.GA"/>
+      <rev name="3.3.0.Final"/>
+    </mod>
     <mod name="jboss-logging-annotations">
       <rev name="1.2.0.Final"/>
     </mod>
@@ -3144,42 +3175,11 @@
     <mod name="jboss-logging-spi">
       <rev name="2.2.0.CR1"/>
     </mod>
-    <mod name="jboss-logging">
-      <rev name="3.1.1.GA"/>
-      <rev name="3.1.4.GA"/>
-      <rev name="3.3.0.Final"/>
-    </mod>
   </org>
   <org name="org.jboss.narayana">
     <mod name="narayana-jta">
       <rev name="5.0.2.Final"/>
       <rev name="5.0.4.Final"/>
-    </mod>
-  </org>
-  <org name="org.jboss">
-    <mod name="jandex">
-      <rev name="1.2.0.Final"/>
-      <rev name="1.2.2.Final"/>
-    </mod>
-    <mod name="javassist">
-      <rev name="3.11.0"/>
-      <rev name="3.14.0"/>
-      <rev name="3.15.0"/>
-      <rev name="3.16.1"/>
-      <rev name="3.17.0"/>
-      <rev name="3.18.1"/>
-      <rev name="3.4.0"/>
-      <rev name="3.6.0"/>
-      <rev name="3.7.0"/>
-      <rev name="3.8.0"/>
-      <rev name="3.8.1"/>
-      <rev name="3.9.0"/>
-    </mod>
-    <mod name="jboss-transaction-spi">
-      <rev name="7.1.0.Final"/>
-    </mod>
-    <mod name="netty">
-      <rev name="3.2.4.Final"/>
     </mod>
   </org>
   <org name="org.jdbi">
@@ -3194,9 +3194,9 @@
   </org>
   <org name="org.jdom">
     <mod name="jdom">
+      <rev name="1.1"/>
       <rev name="1.1.1"/>
       <rev name="1.1.2"/>
-      <rev name="1.1"/>
     </mod>
     <mod name="jdom2">
       <rev name="2.0.5"/>
@@ -3214,6 +3214,14 @@
     <mod name="jcommon">
       <rev name="1.0.0"/>
       <rev name="1.0.1"/>
+      <rev name="1.0.2"/>
+      <rev name="1.0.3"/>
+      <rev name="1.0.4"/>
+      <rev name="1.0.5"/>
+      <rev name="1.0.6"/>
+      <rev name="1.0.7"/>
+      <rev name="1.0.8"/>
+      <rev name="1.0.9"/>
       <rev name="1.0.10"/>
       <rev name="1.0.11"/>
       <rev name="1.0.12"/>
@@ -3221,6 +3229,9 @@
       <rev name="1.0.14"/>
       <rev name="1.0.15"/>
       <rev name="1.0.16"/>
+    </mod>
+    <mod name="jfreechart">
+      <rev name="1.0.0"/>
       <rev name="1.0.2"/>
       <rev name="1.0.3"/>
       <rev name="1.0.4"/>
@@ -3229,21 +3240,10 @@
       <rev name="1.0.7"/>
       <rev name="1.0.8"/>
       <rev name="1.0.9"/>
-    </mod>
-    <mod name="jfreechart">
-      <rev name="1.0.0"/>
       <rev name="1.0.10"/>
       <rev name="1.0.11"/>
       <rev name="1.0.12"/>
       <rev name="1.0.13"/>
-      <rev name="1.0.2"/>
-      <rev name="1.0.3"/>
-      <rev name="1.0.4"/>
-      <rev name="1.0.5"/>
-      <rev name="1.0.6"/>
-      <rev name="1.0.7"/>
-      <rev name="1.0.8"/>
-      <rev name="1.0.9"/>
     </mod>
   </org>
   <org name="org.jgrapht">
@@ -3276,8 +3276,8 @@
   </org>
   <org name="org.joda">
     <mod name="joda-time">
-      <rev name="1.6.2"/>
       <rev name="1.6"/>
+      <rev name="1.6.2"/>
       <rev name="2.1"/>
       <rev name="2.3"/>
       <rev name="2.8"/>
@@ -3290,8 +3290,8 @@
   </org>
   <org name="org.jrobin">
     <mod name="jrobin">
-      <rev name="1.5.12"/>
       <rev name="1.5.9"/>
+      <rev name="1.5.12"/>
     </mod>
   </org>
   <org name="org.jruby">
@@ -3311,8 +3311,8 @@
   </org>
   <org name="org.jsimpledb">
     <mod name="jsimpledb">
-      <rev name="1.0.161"/>
       <rev name="1.0.86"/>
+      <rev name="1.0.161"/>
       <rev name="1.1.748"/>
       <rev name="1.1.838"/>
       <rev name="1.2.0"/>
@@ -3333,14 +3333,14 @@
       <rev name="2.1.4"/>
     </mod>
   </org>
-  <org name="org.json.simple">
-    <mod name="json-simple">
-      <rev name="1.1"/>
-    </mod>
-  </org>
   <org name="org.json">
     <mod name="json">
       <rev name="20090211"/>
+    </mod>
+  </org>
+  <org name="org.json.simple">
+    <mod name="json-simple">
+      <rev name="1.1"/>
     </mod>
   </org>
   <org name="org.jsoup">
@@ -3354,13 +3354,18 @@
     <mod name="junit">
       <rev name="3.7"/>
       <rev name="3.8.2"/>
-      <rev name="4.11"/>
-      <rev name="4.12"/>
       <rev name="4.3.1"/>
       <rev name="4.4"/>
       <rev name="4.5"/>
       <rev name="4.8.2"/>
       <rev name="4.9"/>
+      <rev name="4.11"/>
+      <rev name="4.12"/>
+    </mod>
+  </org>
+  <org name="org.jvnet">
+    <mod name="tiger-types">
+      <rev name="1.4"/>
     </mod>
   </org>
   <org name="org.jvnet.annox">
@@ -3388,6 +3393,9 @@
     </mod>
   </org>
   <org name="org.jvnet.jaxb2_commons">
+    <mod name="jaxb2-basics">
+      <rev name="0.5.2"/>
+    </mod>
     <mod name="jaxb2-basics-annotate">
       <rev name="0.5.2"/>
     </mod>
@@ -3400,19 +3408,11 @@
     <mod name="jaxb2-basics-tools">
       <rev name="0.5.2"/>
     </mod>
-    <mod name="jaxb2-basics">
-      <rev name="0.5.2"/>
-    </mod>
   </org>
   <org name="org.jvnet.mimepull">
     <mod name="mimepull">
       <rev name="1.4"/>
       <rev name="1.7"/>
-    </mod>
-  </org>
-  <org name="org.jvnet">
-    <mod name="tiger-types">
-      <rev name="1.4"/>
     </mod>
   </org>
   <org name="org.jwebsocket">
@@ -3422,8 +3422,8 @@
   </org>
   <org name="org.kohsuke.args4j">
     <mod name="args4j">
-      <rev name="2.0.31"/>
       <rev name="2.0.9"/>
+      <rev name="2.0.31"/>
     </mod>
   </org>
   <org name="org.kohsuke.jinterop">
@@ -3478,8 +3478,8 @@
     <mod name="mockito">
       <rev name="1.6"/>
       <rev name="1.8.5"/>
-      <rev name="1.9.0-rc1"/>
       <rev name="1.9.0"/>
+      <rev name="1.9.0-rc1"/>
       <rev name="1.9.5"/>
     </mod>
   </org>
@@ -3495,12 +3495,12 @@
   </org>
   <org name="org.mozilla">
     <mod name="rhino">
-      <rev name="1.7.6"/>
       <rev name="1.7R1"/>
       <rev name="1.7R2"/>
       <rev name="1.7R3"/>
       <rev name="1.7R4"/>
       <rev name="1.7R5"/>
+      <rev name="1.7.6"/>
     </mod>
   </org>
   <org name="org.mvel">
@@ -3521,8 +3521,8 @@
       <rev name="3.3.1"/>
       <rev name="4.0"/>
       <rev name="4.2"/>
-      <rev name="5.0.3"/>
       <rev name="5.0"/>
+      <rev name="5.0.3"/>
     </mod>
   </org>
   <org name="org.objectweb.howl">
@@ -3569,8 +3569,8 @@
   <org name="org.owasp.esapi">
     <mod name="esapi">
       <rev name="2.0GA"/>
-      <rev name="2.1.0.1"/>
       <rev name="2.1.0"/>
+      <rev name="2.1.0.1"/>
     </mod>
   </org>
   <org name="org.pcollections">
@@ -3655,11 +3655,11 @@
       <rev name="1.1.1"/>
       <rev name="1.1.5"/>
       <rev name="1.1.8"/>
+      <rev name="2.0.4"/>
+      <rev name="2.0.7"/>
       <rev name="2.0.11"/>
       <rev name="2.0.14"/>
       <rev name="2.0.15"/>
-      <rev name="2.0.4"/>
-      <rev name="2.0.7"/>
       <rev name="2.1.0"/>
       <rev name="2.1.4"/>
     </mod>
@@ -3692,16 +3692,16 @@
       <rev name="2.11.1"/>
     </mod>
     <mod name="scala-library">
-      <rev name="2.10.0"/>
-      <rev name="2.10.1"/>
-      <rev name="2.10.2"/>
-      <rev name="2.11.1"/>
       <rev name="2.8.0"/>
       <rev name="2.8.1"/>
       <rev name="2.9.0"/>
       <rev name="2.9.1"/>
       <rev name="2.9.2"/>
       <rev name="2.9.3"/>
+      <rev name="2.10.0"/>
+      <rev name="2.10.1"/>
+      <rev name="2.10.2"/>
+      <rev name="2.11.1"/>
     </mod>
     <mod name="scala-reflect">
       <rev name="2.11.1"/>
@@ -3722,25 +3722,25 @@
   <org name="org.slf4j">
     <mod name="slf4j">
       <rev name="1.4.3"/>
+      <rev name="1.5.8"/>
       <rev name="1.5.10"/>
       <rev name="1.5.11"/>
-      <rev name="1.5.8"/>
       <rev name="1.6.0"/>
       <rev name="1.6.1"/>
       <rev name="1.6.4"/>
       <rev name="1.6.6"/>
-      <rev name="1.7.12"/>
-      <rev name="1.7.13"/>
       <rev name="1.7.2"/>
       <rev name="1.7.7"/>
+      <rev name="1.7.12"/>
+      <rev name="1.7.13"/>
     </mod>
   </org>
   <org name="org.sonatype.jline">
     <mod name="jline">
+      <rev name="2.5"/>
       <rev name="2.11"/>
       <rev name="2.12"/>
       <rev name="2.14.1"/>
-      <rev name="2.5"/>
     </mod>
   </org>
   <org name="org.spockframework">
@@ -3748,15 +3748,43 @@
       <rev name="0.7-groovy-2.0"/>
     </mod>
   </org>
-  <org name="org.springframework.data">
-    <mod name="spring-data-commons-core">
-      <rev name="1.3.2.RELEASE"/>
-    </mod>
-    <mod name="spring-data-commons">
-      <rev name="1.9.1.RELEASE"/>
-    </mod>
-  </org>
   <org name="org.springframework">
+    <mod name="spring">
+      <rev name="2.0.2"/>
+      <rev name="2.5.3"/>
+      <rev name="2.5.4"/>
+      <rev name="2.5.6"/>
+      <rev name="3.0.0"/>
+      <rev name="3.0.1"/>
+      <rev name="3.0.2"/>
+      <rev name="3.0.3"/>
+      <rev name="3.0.4"/>
+      <rev name="3.0.5"/>
+      <rev name="3.0.6"/>
+      <rev name="3.1.1"/>
+      <rev name="3.1.2"/>
+      <rev name="3.2.0"/>
+      <rev name="3.2.1"/>
+      <rev name="3.2.2"/>
+      <rev name="3.2.4"/>
+      <rev name="3.2.5"/>
+      <rev name="3.2.6"/>
+      <rev name="3.2.12"/>
+      <rev name="4.0.0"/>
+      <rev name="4.0.1"/>
+      <rev name="4.0.3"/>
+      <rev name="4.0.5"/>
+      <rev name="4.0.8"/>
+      <rev name="4.1.0"/>
+      <rev name="4.1.2"/>
+      <rev name="4.1.4"/>
+      <rev name="4.1.8"/>
+      <rev name="4.1.9"/>
+      <rev name="4.2.0"/>
+      <rev name="4.2.2"/>
+      <rev name="4.2.4"/>
+      <rev name="4.2.5"/>
+    </mod>
     <mod name="spring-integration">
       <rev name="1.0.1"/>
       <rev name="1.0.2"/>
@@ -3789,41 +3817,13 @@
       <rev name="1.5.9"/>
       <rev name="2.0.0-M1"/>
     </mod>
-    <mod name="spring">
-      <rev name="2.0.2"/>
-      <rev name="2.5.3"/>
-      <rev name="2.5.4"/>
-      <rev name="2.5.6"/>
-      <rev name="3.0.0"/>
-      <rev name="3.0.1"/>
-      <rev name="3.0.2"/>
-      <rev name="3.0.3"/>
-      <rev name="3.0.4"/>
-      <rev name="3.0.5"/>
-      <rev name="3.0.6"/>
-      <rev name="3.1.1"/>
-      <rev name="3.1.2"/>
-      <rev name="3.2.0"/>
-      <rev name="3.2.1"/>
-      <rev name="3.2.12"/>
-      <rev name="3.2.2"/>
-      <rev name="3.2.4"/>
-      <rev name="3.2.5"/>
-      <rev name="3.2.6"/>
-      <rev name="4.0.0"/>
-      <rev name="4.0.1"/>
-      <rev name="4.0.3"/>
-      <rev name="4.0.5"/>
-      <rev name="4.0.8"/>
-      <rev name="4.1.0"/>
-      <rev name="4.1.2"/>
-      <rev name="4.1.4"/>
-      <rev name="4.1.8"/>
-      <rev name="4.1.9"/>
-      <rev name="4.2.0"/>
-      <rev name="4.2.2"/>
-      <rev name="4.2.4"/>
-      <rev name="4.2.5"/>
+  </org>
+  <org name="org.springframework.data">
+    <mod name="spring-data-commons">
+      <rev name="1.9.1.RELEASE"/>
+    </mod>
+    <mod name="spring-data-commons-core">
+      <rev name="1.3.2.RELEASE"/>
     </mod>
   </org>
   <org name="org.subethamail">
@@ -3837,8 +3837,8 @@
       <rev name="5.8"/>
       <rev name="6.2.1"/>
       <rev name="6.7"/>
-      <rev name="6.8.7"/>
       <rev name="6.8"/>
+      <rev name="6.8.7"/>
     </mod>
   </org>
   <org name="org.tigris.subclipse">
@@ -3916,8 +3916,8 @@
       <rev name="1.2.1"/>
     </mod>
     <mod name="refresher">
-      <rev name="1.1.1.7"/>
       <rev name="1.1.1"/>
+      <rev name="1.1.1.7"/>
       <rev name="1.2.0.7"/>
       <rev name="1.2.1.7"/>
     </mod>
@@ -3938,10 +3938,10 @@
   </org>
   <org name="org.wattdepot">
     <mod name="wattdepot">
-      <rev name="0.10.1108"/>
       <rev name="0.5.1020"/>
       <rev name="0.5.1021"/>
       <rev name="0.9.1026"/>
+      <rev name="0.10.1108"/>
       <rev name="1.0.120"/>
       <rev name="1.1.208"/>
       <rev name="1.2.216"/>
@@ -3952,16 +3952,16 @@
       <rev name="2.1.0803"/>
     </mod>
   </org>
+  <org name="org.xerial">
+    <mod name="sqlite-jdbc">
+      <rev name="3.8.11.2"/>
+    </mod>
+  </org>
   <org name="org.xerial.snappy">
     <mod name="snappy-java">
       <rev name="1.1.0.1"/>
       <rev name="1.1.1.6"/>
       <rev name="1.1.2"/>
-    </mod>
-  </org>
-  <org name="org.xerial">
-    <mod name="sqlite-jdbc">
-      <rev name="3.8.11.2"/>
     </mod>
   </org>
   <org name="org.xhtmlrenderer">
@@ -3978,9 +3978,9 @@
   </org>
   <org name="org.yaml">
     <mod name="snakeyaml">
+      <rev name="1.9"/>
       <rev name="1.13"/>
       <rev name="1.15"/>
-      <rev name="1.9"/>
     </mod>
   </org>
   <org name="pl.bristleback">
