@@ -81,8 +81,8 @@
             <arg value="TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'` ;
               export LC_ALL=C;
               find src/modules -name ivy.xml -print
-                | sort -t $'/' -k3,3 -k4,4 -k5,5V
-                | awk -F/ -v TIMESTAMP=\&quot;$TIMESTAMP\&quot; -f src/awk/xmlify.awk
+                | sort -t / -k3,3 -k4,4 -k5,5V
+                | awk -F/ -v TIMESTAMP=&quot;$TIMESTAMP&quot; -f src/awk/xmlify.awk
                 > ${target.repo}/modules.xml"/>
         </exec>
     </target>
