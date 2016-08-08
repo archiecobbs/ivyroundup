@@ -10,8 +10,8 @@
           buildRoot="${basedir}/build/workspace"
           preserveBuildDirectories="true"
           resourceCache="${user.home}/.ivy2/packager/cache">
-            <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
+            <ivy pattern="file:///${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+            <artifact pattern="file:///${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
         </packager>
     </resolvers>
     <modules>
