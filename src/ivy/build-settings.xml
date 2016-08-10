@@ -9,8 +9,8 @@
         <packager name="ivyroundup" restricted="false"
           buildRoot="${user.home}/.ivy2/packager/build"
           resourceCache="${user.home}/.ivy2/packager/cache">
-            <ivy pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
-            <artifact pattern="file://${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
+            <ivy pattern="file:///${target.repo}/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+            <artifact pattern="file:///${target.repo}/modules/[organisation]/[module]/[revision]/packager.xml"/>
         </packager>
     </resolvers>
     <modules>
