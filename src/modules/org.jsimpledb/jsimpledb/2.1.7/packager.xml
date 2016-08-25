@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-ant">
+        <artifact tofile="artifacts/jars/jsimpledb-ant.jar" sha1="dcc2f4fcc904ed35dd7b57afe7f296878e09ca24"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-ant.zip" sha1="51e27ac5875a5182e103f1ffc2c13ae121a1d8dd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-ant.zip" sha1="b05fa71b111238a19d49f6580f68da4a86034408"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-app">
+        <artifact tofile="artifacts/jars/jsimpledb-app.jar" sha1="74d410b3f3ede4c4a2ec7be3469ac6ae273928bf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-app.zip" sha1="743cea13680a392924821f1f91f84f2b0bff291d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-app.zip" sha1="056eaaf4388dcf7b06e0aeedfdf5039b5d5ffac0"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-cli-telnet">
+        <artifact tofile="artifacts/jars/jsimpledb-cli-telnet.jar" sha1="2af17123362c1b35ba2b8ba6c158eba55396cfaa"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-cli-telnet.zip" sha1="d6de352f636110d526a4e45756b1c6e3f0ce21bf"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-cli-telnet.zip" sha1="dd28e5b6a2f2349b0848e561ce29cd82fd08dfd3"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-cli">
+        <artifact tofile="artifacts/jars/jsimpledb-cli.jar" sha1="22e51edc5d3e7b4a8ba07ab7609ad56673109f89"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-cli.zip" sha1="32e5345e843e48bc44490b334c02f269431d3021"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-cli.zip" sha1="df38913395e6729e87f399b412063ec3197dd8c1"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-cliapp">
+        <artifact tofile="artifacts/jars/jsimpledb-cliapp.jar" sha1="979fefe2e6222bf7d5ad3d7a98a86834241541de"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-cliapp.zip" sha1="ec02b6ace7b4f95ac95e1cc39951f7e521a2b833"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-cliapp.zip" sha1="13f98a9f493a2e5f8986c2fe4a99298941cedc3b"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-coreapi">
+        <artifact tofile="artifacts/jars/jsimpledb-coreapi.jar" sha1="0610940c780c7b038e220c555d83a0305293f467"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-coreapi.zip" sha1="025254c3bdb6a938b7e14ecd9da6f94a603e9f53"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-coreapi.zip" sha1="47a1c48a86259ecc92becf83d74b1ffae69cbdc1"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-demo">
+        <artifact tofile="artifacts/jars/jsimpledb-demo.jar" sha1="0b76e17e51b913752c5d4537855fab9f4d7099a0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-demo.zip" sha1="0b93c6f0f614abc43361ba85ef44e7c9bc0995a8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-demo.zip" sha1="2e6e92ee854a197db894844ee3fddfc4c918675d"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-guiapp">
+        <artifact tofile="artifacts/jars/jsimpledb-guiapp.jar" sha1="d3aba6d20d14479698da38803e8c1a457c8b3e7a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-guiapp.zip" sha1="bdfa452d4c0a3c2c8eff66025ba01b856a3831bd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-guiapp.zip" sha1="c910d89e497e7970a0cbff0c6f4b2f0360804f0f"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-array">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-array.jar" sha1="5ed1bda7eaec9a7989f50014df736221716b9872"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-array.zip" sha1="1cd6f0d6bfbe5db4d9ee85bed17e2dcea97defe2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-array.zip" sha1="015f7e0f75d7775cadd337c0c89943de61750e78"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-bdb">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-bdb.jar" sha1="beae981ca2d76e4788aaf2446ce857897a1a2234"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-bdb.zip" sha1="1b9f68619b66e04a74ade5e28089b5b1eab23305"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-bdb.zip" sha1="9286864b6c8af86521ca69e8220b5becdaff8f29"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-cockroach">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-cockroach.jar" sha1="2b6981bfcc307508f5bc27205b268463637157a1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-cockroach.zip" sha1="04fa20f5054e10ec7b93147b38fa024ad3bbb591"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-cockroach.zip" sha1="70eb460ee9ade4417dcd1e1c1921676fb676ead4"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-fdb">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-fdb.jar" sha1="d1e977f93198cfbcde75b16c2b7e1c89406170f2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-fdb.zip" sha1="b323773d20e9d342bc9615aebff2aea0235c62b1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-fdb.zip" sha1="2da80bf447082706e1fb4a8fd60af071468d9b3c"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-leveldb">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-leveldb.jar" sha1="7d92a7ab8ea5f4567fcfad80633e1eb1108d35d4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-leveldb.zip" sha1="2c9f65492ab796ac60384dee4f91f61eed19498f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-leveldb.zip" sha1="dfab257343cf9cc91eed2cb4aaa78bcf6d334288"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-mysql">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-mysql.jar" sha1="95ee674f91763e55c9b3d6b7ff75115c075326af"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-mysql.zip" sha1="80cdc32a4fa6c23f0eaf9d5995b6bfe6a61bdc50"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-mysql.zip" sha1="45d8a134d6138b2e042409587d138f64971a1b14"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-raft">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-raft.jar" sha1="afa4532fe81cac962fb312b21f125827bebf54ef"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-raft.zip" sha1="ac80ea9766a5900859562b40afd3af953a73e52a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-raft.zip" sha1="6a0e2340c749efd428b06b3607a1ca5639e7bf49"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-rocksdb">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-rocksdb.jar" sha1="763ae2c8603f81a0b1c0f6d71129add3b7545a3c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-rocksdb.zip" sha1="dc0d8108694bb7a8bfdcce2742e95530ca2b92f2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-rocksdb.zip" sha1="1875684f3ad24325dd676017c3aa9a0761d086fb"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-simple">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-simple.jar" sha1="23eb001867643d5812a20213665d3d0ff07a2585"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-simple.zip" sha1="323252f2994e8fea87747b9694f4fb3c14701c65"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-simple.zip" sha1="9db184eb432399a9f6a1e1f56535f3b9537a1389"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-sql">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-sql.jar" sha1="2a6d6179965014abe5de67fa962a01bf891ed756"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-sql.zip" sha1="f285f7981fd276ab58c84e44204205f31a50ff34"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-sql.zip" sha1="77ecc9e1b6c1a20325119d51fcf96609774a7794"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-sqlite">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-sqlite.jar" sha1="e2f9e67691afe518006742361b9aef20dee85a47"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-sqlite.zip" sha1="aa07d810db2e68bef67fe029169e5f2a59f2111d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-sqlite.zip" sha1="548e599419efd821f2b43cf500ae3739547564f1"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-test">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-test.jar" sha1="eaa6ee7c218cdba834599967a8cb9bb0d7d8be8d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-test.zip" sha1="f92f2fc243983018226916313f8eedff15d194dc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-test.zip" sha1="4215914f410a18a53f2c5538072c4bf8306fb304"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv">
+        <artifact tofile="artifacts/jars/jsimpledb-kv.jar" sha1="da81586772bfd16452df67f7e3eb7be69d5bf191"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv.zip" sha1="c21bfcc59f31cc8a785001370c934c096ae22763"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv.zip" sha1="0e913a2553b7fcf2cad0bb4e7527d13f423dbc63"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-main">
+        <artifact tofile="artifacts/jars/jsimpledb-main.jar" sha1="a8241c3811bccda5d0a022cb0175a1ddeaf6eee1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-main.zip" sha1="3e31e2528f7c3222746dcdcc9f1d9c3963373933"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-main.zip" sha1="7cfaa90306ffebf70a515bf30d3be20838532bd4"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-parse">
+        <artifact tofile="artifacts/jars/jsimpledb-parse.jar" sha1="34c2b7fe3ee896d261a9de930e1c3ffeb1b4bbc1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-parse.zip" sha1="191edcff43fb8070e3d1d3224eac8b94476df37d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-parse.zip" sha1="1c98f7f213365519f48e7f781fb90a8686394cc1"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-spring">
+        <artifact tofile="artifacts/jars/jsimpledb-spring.jar" sha1="a03045f7200e250edecb58640ceb327c30eb7343"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-spring.zip" sha1="82dc31fa57fb4b30801344d166bca9d49c47cd0b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-spring.zip" sha1="733b0e1c5133d5c60a352cc3ddad029a9565813b"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-test">
+        <artifact tofile="artifacts/jars/jsimpledb-test.jar" sha1="b2ebc68e0b7acd59997938c84412113e549a4c38"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-test.zip" sha1="0f3edfd57fba6386985ab8023201fff4267a8a5f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-test.zip" sha1="4237987127a527fa74b5ba6d217c205d13e05db5"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-util">
+        <artifact tofile="artifacts/jars/jsimpledb-util.jar" sha1="cde17745f35095e8e900fabbd28e1cc1aaded77b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-util.zip" sha1="6750360f264a33ac942a8cc343be1d60364d88a3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-util.zip" sha1="9beada508c435c06f8a2ed55b57b116cabc300b5"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-vaadin">
+        <artifact tofile="artifacts/jars/jsimpledb-vaadin.jar" sha1="6bdb06ad842f977909459b212e88d1f1b8b01c5a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-vaadin.zip" sha1="a00b11406f79ce9e5f51d8e3978ce819f3a53e81"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-vaadin.zip" sha1="3e4a42cb818378809ba89884ff311f455f7076e7"/>
+    </m2resource>
+</packager-module>
