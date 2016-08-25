@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2016 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="powermock-api-easymock">
+        <artifact tofile="artifacts/jars/powermock-api-easymock.jar" sha1="ac5269a9082e53e64e51a2e4a689d9921b214ad6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-api-easymock.zip" sha1="7af065f16509cc8d23abac2813afa6bd36b79d44"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-api-easymock.zip" sha1="0d4024439db5efb1f64dd1b4e7a8212cac176c51"/>
+    </m2resource>
+    <m2resource artifactId="powermock-api-mockito">
+        <artifact tofile="artifacts/jars/powermock-api-mockito.jar" sha1="5d22fe05ef8d5c526133e31262314f7ef320aff0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-api-mockito.zip" sha1="6e4272bb47983bdebc3ca9182c2320d86c8acd88"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-api-mockito.zip" sha1="c152ac64c7f134634be0f877a9b382b0109aea07"/>
+    </m2resource>
+    <m2resource artifactId="powermock-api-support">
+        <artifact tofile="artifacts/jars/powermock-api-support.jar" sha1="ce4df8cfaca2ff94dec0aa4048fcd2b7303c37d6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-api-support.zip" sha1="81dbc5ee82ea96cb522fa02276c626811123f11f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-api-support.zip" sha1="9d2e11f67170d241cd6b4151d7b070d79f0ae015"/>
+    </m2resource>
+    <m2resource artifactId="powermock-classloading-base">
+        <artifact tofile="artifacts/jars/powermock-classloading-base.jar" sha1="7111872488e2eaad455d75c8ee20120f4613ff6f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-classloading-base.zip" sha1="23043f06c344d83c99e92ddf8740ca7d70fe3659"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-classloading-base.zip" sha1="899ded79a20609f8db65970db854c69ac3ccf266"/>
+    </m2resource>
+    <m2resource artifactId="powermock-classloading-objenesis">
+        <artifact tofile="artifacts/jars/powermock-classloading-objenesis.jar" sha1="f1ee2c482f611c9a0c94eb4e5ce644df59919643"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-classloading-objenesis.zip" sha1="b982a78b493d639de596a2690c25f2bb15284e77"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-classloading-objenesis.zip" sha1="c094ab6673078a0d5458abbffc5f6dff9e4f5a92"/>
+    </m2resource>
+    <m2resource artifactId="powermock-classloading-xstream">
+        <artifact tofile="artifacts/jars/powermock-classloading-xstream.jar" sha1="18f4564195e1679cee149ec70c87622dda1043ba"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-classloading-xstream.zip" sha1="1a97a1c91f9838f4aedde510eaf878ba4d0e422d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-classloading-xstream.zip" sha1="bdbfc74da07522f30dc6d7573a39056709559d46"/>
+    </m2resource>
+    <m2resource artifactId="powermock-core">
+        <artifact tofile="artifacts/jars/powermock-core.jar" sha1="2de781e35f7c314ac7eb39e3ba95aaa1b5486e64"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-core.zip" sha1="1418c8ee49303d2140efb647129125e7daaf75e7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-core.zip" sha1="4ecf62da8e964cd82ce96f07b5185359f4bae936"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-javaagent">
+        <artifact tofile="artifacts/jars/powermock-module-javaagent.jar" sha1="84dc7860efaa20fd4732d8b8440098f4b6b9fcff"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-javaagent.zip" sha1="252068b89bee429e35c99895ebf56a2f2ff3d1c8"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-javaagent.zip" sha1="5b186d1194c09a7e4b03431e614c064bfdeef94d"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit3">
+        <artifact tofile="artifacts/jars/powermock-module-junit3.jar" sha1="ff7c58b81bd73ef67c45ff4c0b7f248100073139"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit3.zip" sha1="e20720e79b43b9242643407dfa8dfab2ec5a6ea5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit3.zip" sha1="451e26d15af16e94d8c3efaa80b3d9875284febf"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit4">
+        <artifact tofile="artifacts/jars/powermock-module-junit4.jar" sha1="a52e370cefd1629d4042c3d340e57a8cc1278dcb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit4.zip" sha1="844a3d401dafb366abf01e19cc4b8191bcb0d945"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit4.zip" sha1="e7f7e7324217040d3fb813f554810e45b99e62f8"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit4-common">
+        <artifact tofile="artifacts/jars/powermock-module-junit4-common.jar" sha1="8042c8b022d24fe74fb0b7ed073e8325f296d8e7"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit4-common.zip" sha1="ffb5c823b89302cde9f7a33802d751212302a053"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit4-common.zip" sha1="cc26046abf4b8240429489007efa544bde33ea35"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit4-legacy">
+        <artifact tofile="artifacts/jars/powermock-module-junit4-legacy.jar" sha1="258f9539a13aa93a1a803921206cc61ab56b54ef"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit4-legacy.zip" sha1="d77df10faedf25474da9c3253ad97bb5343ee01a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit4-legacy.zip" sha1="d5186f67f5cceb338c18ceed67ae6fc1a694e112"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit4-rule">
+        <artifact tofile="artifacts/jars/powermock-module-junit4-rule.jar" sha1="69566037eba844970409a7ccb33a5b7981f03169"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit4-rule.zip" sha1="cb5e12848500cd7b86f28a226dd0d1544d891e68"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit4-rule.zip" sha1="643e8830fee5b83494d05762c0323f2f0f801cf1"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-junit4-rule-agent">
+        <artifact tofile="artifacts/jars/powermock-module-junit4-rule-agent.jar" sha1="d89dd6cc99d2d4cc8ede7af59156a578ed5c9e5f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-junit4-rule-agent.zip" sha1="45525559c8835164bdcad2444815d2f3d4207035"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-junit4-rule-agent.zip" sha1="fc5c9df7d3746427ce0191adb50dec0ac0928be4"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-testng">
+        <artifact tofile="artifacts/jars/powermock-module-testng.jar" sha1="c876d5f60796a3d63f329934fe4446986e522f5e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-testng.zip" sha1="22dfd1c05f61c24fa33509d836607311edc93ef7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-testng.zip" sha1="992426b5d4447de645c8a616c13c7b053c35357d"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-testng-agent">
+        <artifact tofile="artifacts/jars/powermock-module-testng-agent.jar" sha1="2d3e0dad2066ee585b46bb74599515fff0672275"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-testng-agent.zip" sha1="75a1ce12175bcd992cbb94c74c2c3b78db7016cb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-testng-agent.zip" sha1="d1a0b5dcb6e61836d9ce60e59dd6452cdd85cdde"/>
+    </m2resource>
+    <m2resource artifactId="powermock-module-testng-common">
+        <artifact tofile="artifacts/jars/powermock-module-testng-common.jar" sha1="43e9d65dbb386d64de677b1a89d57a7a99394c2d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-module-testng-common.zip" sha1="3652ca48f7cab92701ff1bf04f1033ed56aadfca"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-module-testng-common.zip" sha1="afcafec428e81567afff4c73fe3fc2c77b04107b"/>
+    </m2resource>
+    <m2resource artifactId="powermock-reflect">
+        <artifact tofile="artifacts/jars/powermock-reflect.jar" sha1="b328364b884ec9c4af3c6d9f689cbba88152e4e6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-reflect.zip" sha1="877d39b360d3720c6ea20aa8c9ebc8c5cb6e39c1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-reflect.zip" sha1="7ea2533b4d12246fec78686aebcdca323299d73c"/>
+    </m2resource>
+    <m2resource groupId="org/powermock/tests" artifactId="powermock-tests-utils">
+        <artifact tofile="artifacts/jars/powermock-tests-utils.jar" sha1="d1ba820d290104f94255c69a206c215ec301b501"/>
+        <artifact classifier="sources" tofile="artifacts/sources/powermock-tests-utils.zip" sha1="7849ee939cff0b34d0248c50f0ab483fd8f3b78e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/powermock-tests-utils.zip" sha1="a33237ccb4fff0c3e2e97e15334549d338ffbd78"/>
+    </m2resource>
+</packager-module>
