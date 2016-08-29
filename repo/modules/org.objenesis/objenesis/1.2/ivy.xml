@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
-    Copyright 2011 Mark Thomas
+    Copyright 2008 Phil H. Smith
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,7 +18,7 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="org.objenesis" module="objenesis" revision="1.2" status="release" publication="20090827001300">
+    <info organisation="org.objenesis" module="objenesis" revision="1.2" status="release" publication="20090826000000">
         <license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.objenesis/objenesis/1.2/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
@@ -31,10 +31,10 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="objenesis" ivyde:javadoc="objenesis" conf="default"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="objenesis" ivyde:javadoc="objenesis" name="objenesis-tck" conf="tck"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="objenesis-tck" conf="tck"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

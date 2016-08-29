@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-    Copyright 2011 Mark Thomas
+    Copyright 2008 Phil H. Smith
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -15,25 +15,12 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://objenesis.googlecode.com/files/${archive}-bin.zip" sha1="2359e04aca6f4f171f92ff77489d1669043dd536"/>
-    <resource url="http://objenesis.googlecode.com/files/${name}-tck-${revision}.jar" tofile="artifacts/jars/${name}-tck.jar" sha1="4edee9deddc5f7b95b8354cc0004f8a326bc3834"/>
-
-    <build>
-
-        <!-- jar -->
-        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
-
-        <!-- source -->
-        <move file="archive/${archive}/${archive}-sources.jar" tofile="artifacts/sources/${name}.zip"/>
-
-        <!-- javadoc -->
-        <move file="archive/${archive}/${archive}-javadoc.jar" tofile="artifacts/javadocs/${name}.zip"/>
-
-    </build>
-
+    <m2resource>
+        <artifact tofile="artifacts/jars/objenesis.jar" sha1="bfcb0539a071a4c5a30690388903ac48c0667f2a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="71909ee0264af468fe26f0a2467d01bcb85f6fa9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="bc451abf874805a956319dd0d5a79edaf4a092d6"/>
+    </m2resource>
+    <m2resource artifactId="objenesis-tck">
+        <artifact tofile="artifacts/jars/objenesis-tck.jar" sha1="257730a7de82badc0e98a5b714eb4023a2e5b76d"/>
+    </m2resource>
 </packager-module>

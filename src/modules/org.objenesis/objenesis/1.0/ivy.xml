@@ -18,20 +18,19 @@
 
 <ivy-module>
 
-    <info publication="20090105120000">
+    <info publication="20070516000000">
         <license name="MIT License" url="https://opensource.org/licenses/mit-license.php"/>
         <description homepage="http://objenesis.org/">A library for instantiating Java objects.</description>
     </info>
 
     <configurations>
         <conf name="default" description="The core classes."/>
-        <conf name="tck" description="A test compatibility kit, useful for diagnosing and reporting problems."/>
     </configurations>
 
     <publications>
         <artifact conf="default"/>
-        <artifact name="objenesis-tck" conf="tck"/>
-        <artifact name="source" type="source" ext="jar"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

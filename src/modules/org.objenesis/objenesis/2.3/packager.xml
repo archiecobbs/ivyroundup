@@ -18,8 +18,11 @@
 
 <packager-module>
     <m2resource>
-        <artifact tofile="artifacts/jars/objenesis.jar" sha1="9b473564e792c2bdf1449da1f0b1b5bff9805704"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b10c90e57b7bb985a7b6a704769428fe5c2a732c"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="6f18fb1aa4834bb241439b71f4a88b2437c5793f"/>
+        <artifact tofile="artifacts/jars/objenesis.jar" sha1="980992bd422b477b140240304416a755dd56a844"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="bb6323980dfc23e834f11d524dea6b047f1cba29"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="4f18c1d4433f5205c6c50289702656d9d229befb"/>
+    </m2resource>
+    <m2resource artifactId="objenesis-tck">
+        <artifact tofile="artifacts/jars/objenesis-tck.jar" sha1="a40c0e8a22bfd78ea44035f2b29e06102ae8bb7e"/>
     </m2resource>
 </packager-module>

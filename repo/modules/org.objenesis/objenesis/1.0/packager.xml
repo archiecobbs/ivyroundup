@@ -15,14 +15,9 @@
 -->
 <!-- GENERATED FILE - DO NOT EDIT -->
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-
-    <resource url="http://objenesis.googlecode.com/files/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="8c6dbf029f9f44ec66c993fa758a74711e582c0f"/>
-
-    <resource url="http://objenesis.googlecode.com/files/${name}-${revision}-sources.jar" tofile="artifacts/sources/source.jar" sha1="a16ea1d410a080fd3072b08266c90127a1736731"/>
-
-    <resource url="http://objenesis.googlecode.com/files/${name}-tck-${revision}.jar" tofile="artifacts/jars/${name}-tck.jar" sha1="bd6b84073fe98f59537ea2559ee7107870d7b36c"/>
-
+    <m2resource>
+        <artifact tofile="artifacts/jars/objenesis.jar" sha1="9b473564e792c2bdf1449da1f0b1b5bff9805704"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b10c90e57b7bb985a7b6a704769428fe5c2a732c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="6f18fb1aa4834bb241439b71f4a88b2437c5793f"/>
+    </m2resource>
 </packager-module>

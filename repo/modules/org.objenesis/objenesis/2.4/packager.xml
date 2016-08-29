@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
     Copyright 2008 Phil H. Smith
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,14 +13,14 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
-
-<packager-module>
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
     <m2resource>
-        <artifact tofile="artifacts/jars/objenesis.jar" sha1="87c0ea803b69252868d09308b4618f766f135a96"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="0611a57d836e2c320d59f9851d4ad587f3c8472e"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="cad27a134a9b0d295341abcaf3de9d25e1534ae6"/>
+        <artifact tofile="artifacts/jars/objenesis.jar" sha1="2916b6c96b50c5b3ec4452ed99401db745aabb27"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="19b316d8da7da3ae2539ee4ee2cf73a1e127fa73"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="10e66490e645f4be8016ffb2164e72cc87f0cb03"/>
     </m2resource>
     <m2resource artifactId="objenesis-tck">
-        <artifact tofile="artifacts/jars/objenesis-tck.jar" sha1="c1c6c4e52e76a3da596bca5c4d4b966f68adbdbd"/>
+        <artifact tofile="artifacts/jars/objenesis-tck.jar" sha1="d7eda7e12cff7f6d0f670507db80a5f0f473d61c"/>
     </m2resource>
 </packager-module>
