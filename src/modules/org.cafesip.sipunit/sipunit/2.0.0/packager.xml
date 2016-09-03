@@ -22,8 +22,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="https://commtesting.googlecode.com/files/${archive}.zip" sha1="f8fa11163d5f507da71dfa73a8c69d86a3c1ad53"/>
-    <resource url="https://commtesting.googlecode.com/files/${name}-src-${revision}.zip" sha1="6feb2472f7844dc172c74ad5bbfb6ef6da725d98"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/commtesting/${archive}.zip" sha1="f8fa11163d5f507da71dfa73a8c69d86a3c1ad53"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/commtesting/${name}-src-${revision}.zip" sha1="6feb2472f7844dc172c74ad5bbfb6ef6da725d98"/>
 
     <build>
         <!-- jar -->

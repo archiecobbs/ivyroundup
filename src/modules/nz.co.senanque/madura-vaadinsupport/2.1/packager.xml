@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${download.name}-${revision}"/>
 
-    <resource url="http://madura-vaadinsupport.googlecode.com/files/${download.name}-${revision}.zip" sha1="6e42cc16c6e530bf5a00fc4cc2037f0cc7d0c0f4"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${download.name}/${download.name}-${revision}.zip" sha1="6e42cc16c6e530bf5a00fc4cc2037f0cc7d0c0f4"/>
 
     <build>
 

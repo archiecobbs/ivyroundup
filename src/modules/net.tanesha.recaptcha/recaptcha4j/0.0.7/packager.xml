@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://recaptcha.googlecode.com/files/${name}-${revision}.zip" sha1="77f395807b70f874ecdb0a6dabb869eec8aafd41"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" sha1="77f395807b70f874ecdb0a6dabb869eec8aafd41"/>
 
     <build>
         <!-- jar -->

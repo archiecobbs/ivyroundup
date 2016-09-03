@@ -22,10 +22,10 @@
     <property name="revision" value="1.5"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://google-${name}.googlecode.com/files/${archive}.zip"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-gin/${archive}.zip"
          sha1="211a257b78f4ea462d1d5e64641b6776d905b3c7"/>
 
-    <resource url="http://google-${name}.googlecode.com/files/${archive}-src.zip"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-gin/${archive}-src.zip"
          sha1="ccc24828bb6c3f2d8b8a1febba7defe8638837cb" dest="archive-src">
          <include name="${archive}-post-gwt.2.2/src/**/*"/>
          <include name="${archive}-post-gwt.2.2/javadoc/**/*"/>

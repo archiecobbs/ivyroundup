@@ -22,13 +22,13 @@
     <property name="revision" value="${ivy.packager.revision}"/>
 
     <resource tofile="artifacts/jars/${name}.jar"
-      url="http://${name}.googlecode.com/files/${name}-${revision}.jar"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar"
       sha1="453404b8f85e186d416a63252e1ecd24ccae666a"/>
     <resource tofile="artifacts/javadocs/javadoc.zip"
-      url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-javadocs-${revision}.zip"
       sha1="feebe915e33393c3bf3a8da1d91a820ba9e3f5c7"/>
     <resource tofile="artifacts/sources/source.zip"
-      url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-sources-${revision}.zip"
       sha1="3eb1dfd519b4bd2654c4691f2ba965b2eb58f11f"/>
 
 </packager-module>

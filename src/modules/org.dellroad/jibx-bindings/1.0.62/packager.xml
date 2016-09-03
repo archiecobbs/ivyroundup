@@ -22,20 +22,20 @@
     <property name="revision" value="${ivy.packager.revision}"/>
 
     <resource tofile="artifacts/jars/${name}-core.jar"
-      url="http://${name}.googlecode.com/files/${name}-core-${revision}.jar"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-core-${revision}.jar"
       sha1="9ecb5e4cc9020b858ebe2dff2a8e1fb388ebc6d3"/>
     <resource tofile="artifacts/jars/${name}-pidf.jar"
-      url="http://${name}.googlecode.com/files/${name}-pidf-${revision}.jar"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-pidf-${revision}.jar"
       sha1="e07aae63fae88a9dfc4f1316421fe2ca51a2df46"/>
     <resource tofile="artifacts/jars/${name}-twilio.jar"
-      url="http://${name}.googlecode.com/files/${name}-twilio-${revision}.jar"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-twilio-${revision}.jar"
       sha1="389614d96c447fda8f37b3cad6c1c7c9f113e82d"/>
 
     <resource tofile="artifacts/javadocs/javadoc.zip"
-      url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-javadocs-${revision}.zip"
       sha1="45a09bdd089b42d13d4f69c15de38ab270402652"/>
     <resource tofile="artifacts/sources/source.zip"
-      url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip"
+      url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-sources-${revision}.zip"
       sha1="9651424b5661d7c0f4182d69d2235be99e4b488f"/>
 
 </packager-module>

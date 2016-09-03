@@ -21,7 +21,7 @@
     <property name="download.name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://schema-builder.googlecode.com/files/${download.name}-${revision}.zip"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${download.name}/${download.name}-${revision}.zip"
       sha1="05a6c20538c428bfe424b283fef1a56ec4e82c02"/>
 
     <build>

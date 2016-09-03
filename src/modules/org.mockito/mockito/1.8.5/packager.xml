@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://mockito.googlecode.com/files/${archive}.zip" sha1="6baad6b504c64d3d1ee68e92e705cb038255438f">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="6baad6b504c64d3d1ee68e92e705cb038255438f">
         <include name="**/*.jar"/>
         <include name="javadoc/**/*"/>
     </resource>

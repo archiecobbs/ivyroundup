@@ -24,18 +24,18 @@
     <property name="archive2" value="${name}-windows-${revision}"/>
     <property name="archive3" value="${name}-mac-${revision}"/>
 
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive1}.tar.bz2"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-web-toolkit/${archive1}.tar.bz2"
       sha1="5d7d3295cef4d0eb06a991138e9f538409146027">
         <include name="${archive1}/*.jar"/>
         <include name="${archive1}/*.so"/>
         <include name="${archive1}/doc/javadoc/**/*"/>
     </resource>
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive2}.zip"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-web-toolkit/${archive2}.zip"
       sha1="8db182ea463cd842cf2ffa667c4e588addd4e00b">
         <include name="${archive2}/*.jar"/>
         <include name="${archive2}/*.dll"/>
     </resource>
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive3}.tar.gz"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-web-toolkit/${archive3}.tar.gz"
       sha1="542be28e0bacbe3b9d2e70c3fc61a4cc90d89914">
         <include name="${archive3}/*.jar"/>
         <include name="${archive3}/*.jnilib"/>

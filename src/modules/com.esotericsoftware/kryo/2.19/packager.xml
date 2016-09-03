@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="https://kryo.googlecode.com/files/${archive}.zip" sha1="88da59667982db26e529d5b3200bcc2657ff6185"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/kryo/${archive}.zip" sha1="88da59667982db26e529d5b3200bcc2657ff6185"/>
 
     <build>
         <!-- jar -->

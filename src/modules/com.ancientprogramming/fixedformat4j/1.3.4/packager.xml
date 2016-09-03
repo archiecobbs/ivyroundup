@@ -21,9 +21,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://fixedformat4j.googlecode.com/files/${archive}.jar"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fixedformat4j/${archive}.jar"
       sha1="7fcb01c12ab19a9c041c685b11f5a902e155e789" tofile="artifacts/jars/${name}.jar"/>
-    <resource url="http://fixedformat4j.googlecode.com/files/${archive}-sources.jar"
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/fixedformat4j/${archive}-sources.jar"
       sha1="21f51eb27d8e4d570253b47408368e63eb46c4cd" />
 
     <build>

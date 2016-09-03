@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://gwt-google-apis.googlecode.com/files/${archive}.zip" sha1="09e9e08f7a50e456f0e177159f83d4265f088bda"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gwt-google-apis/${archive}.zip" sha1="09e9e08f7a50e456f0e177159f83d4265f088bda"/>
 
     <build>
         <!-- jar -->
