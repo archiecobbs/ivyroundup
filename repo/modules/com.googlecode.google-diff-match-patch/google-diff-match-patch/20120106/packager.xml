@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="diff_match_patch_${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${archive}.zip" sha1="e3369ca24f2dde37590f23371b4e869136d8a799"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="e3369ca24f2dde37590f23371b4e869136d8a799"/>
 
     <build>
 

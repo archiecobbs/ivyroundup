@@ -20,6 +20,6 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="25fb9fbd2f72a1cfca47f81461217f613ae45520" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" sha1="25fb9fbd2f72a1cfca47f81461217f613ae45520" tofile="artifacts/jars/${name}.jar"/>
 
 </packager-module>

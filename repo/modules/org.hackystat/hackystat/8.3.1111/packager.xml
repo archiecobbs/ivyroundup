@@ -21,14 +21,14 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="example.package" value="hackystat-sensor-example-${revision}.zip"/>
 
-    <resource url="http://hackystat.googlecode.com/files/${archive}-sensors-bin.zip" sha1="82a1aff49c66e65533621988f361d17c35b72bfc">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hackystat/${archive}-sensors-bin.zip" sha1="82a1aff49c66e65533621988f361d17c35b72bfc">
       <include name="${archive}-sensors-bin/**/*.jar"/>
       <include name="${archive}-sensors-bin/**/*.el"/>
       <include name="${archive}-sensors-bin/**/*.zip"/>
       <include name="${archive}-sensors-bin/**/${example.package}"/>
     </resource>
 
-    <resource url="http://hackystat.googlecode.com/files/${archive}-services-bin.zip" sha1="d464f182db72581a70499d53f8f9bdc0e950e03e">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/hackystat/${archive}-services-bin.zip" sha1="d464f182db72581a70499d53f8f9bdc0e950e03e">
       <include name="${archive}-services-bin/**/*.jar"/>
       <include name="${archive}-services-bin/**/*.zip"/>
     </resource>

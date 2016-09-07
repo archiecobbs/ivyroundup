@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-linux-0.0.2415"/>
 
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive}.tar.bz2" sha1="aa7dbd652a78fd16256306e1a4c18a2b909fd427">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-web-toolkit/${archive}.tar.bz2" sha1="aa7dbd652a78fd16256306e1a4c18a2b909fd427">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/doc/javadoc/**/*"/>
     </resource>

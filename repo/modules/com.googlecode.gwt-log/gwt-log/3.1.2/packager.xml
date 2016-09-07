@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.jar" sha1="b1e2033715334189a5c8edea6227eb79f8dde5b4" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" sha1="b1e2033715334189a5c8edea6227eb79f8dde5b4" tofile="artifacts/jars/${name}.jar"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}-javadoc.jar" sha1="0a48e92937fc2770aa26280c18a7f095eb87e08a" tofile="artifacts/javadocs/javadoc.zip"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}-javadoc.jar" sha1="0a48e92937fc2770aa26280c18a7f095eb87e08a" tofile="artifacts/javadocs/javadoc.zip"/>
 
 </packager-module>

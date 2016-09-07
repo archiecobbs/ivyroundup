@@ -21,8 +21,8 @@
     <property name="archive" value="${name}-${revision}"/>
     <property name="gwtarchive" value="${name}-gwt-${revision}"/>
 
-    <resource url="http://charts4j.googlecode.com/files/${archive}.zip" sha1="fbe142210bbed7b1253410fc2c54f8b94e2caf75"/>
-    <resource url="http://charts4j.googlecode.com/files/${gwtarchive}.zip" sha1="96ae111d0f344bf9e439a031fd36ba1d1f99b8fc"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="fbe142210bbed7b1253410fc2c54f8b94e2caf75"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${gwtarchive}.zip" sha1="96ae111d0f344bf9e439a031fd36ba1d1f99b8fc"/>
 
     <build>
         <!-- jars -->

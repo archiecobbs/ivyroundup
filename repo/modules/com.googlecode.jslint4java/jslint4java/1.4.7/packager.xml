@@ -20,10 +20,10 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${archive}-src.zip" sha1="f609a2a91518541a95aea2032fe0cbc06b50c5e7">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}-src.zip" sha1="f609a2a91518541a95aea2032fe0cbc06b50c5e7">
         <include name="${archive}/*/src/main/java/**/*"/>
     </resource>
-    <resource url="http://${name}.googlecode.com/files/${archive}-dist.zip" sha1="6a60d32c6f5dd2377a25d7bd009182503659d2f0">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}-dist.zip" sha1="6a60d32c6f5dd2377a25d7bd009182503659d2f0">
         <include name="${archive}/${archive}.jar"/>
         <include name="${archive}/docs/apidocs/**/*"/>
     </resource>

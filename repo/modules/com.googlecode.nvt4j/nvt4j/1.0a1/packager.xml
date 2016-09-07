@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="archive" value="${name}_1_0a1"/>
 
-    <resource url="https://${name}.googlecode.com/files/${archive}.zip" sha1="c8975b26702f06497c679912d6d9fde222cade56"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="c8975b26702f06497c679912d6d9fde222cade56"/>
 
     <build>
         <!-- jar -->

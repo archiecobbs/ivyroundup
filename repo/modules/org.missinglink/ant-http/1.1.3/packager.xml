@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="ml-${name}-${revision}"/>
 
-    <resource url="http://missing-link.googlecode.com/files/${archive}.zip" sha1="bd18326e55b919622ec47370b626850e687b21dd">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/missing-link/${archive}.zip" sha1="bd18326e55b919622ec47370b626850e687b21dd">
         <include name="${archive}*.zip"/>
         <include name="${archive}*.jar"/>
     </resource>

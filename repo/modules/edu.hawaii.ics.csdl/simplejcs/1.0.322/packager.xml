@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://simplejcs.googlecode.com/files/${archive}.zip" sha1="649179ab1e0a9165168cfad419ea63ee57d5dd21"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="649179ab1e0a9165168cfad419ea63ee57d5dd21"/>
 
     <build>
         <!-- jar -->

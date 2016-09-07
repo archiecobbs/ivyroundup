@@ -19,11 +19,11 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource tofile="artifacts/jars/${name}-core.jar" url="http://${name}.googlecode.com/files/${name}-core-${revision}.jar" sha1="dd07cc3d6a109ec635a5f0eff179bb70bc46ba77"/>
-    <resource tofile="artifacts/jars/${name}-pidf.jar" url="http://${name}.googlecode.com/files/${name}-pidf-${revision}.jar" sha1="f4b2dc458295eee6363451da4a653e1a852fbefc"/>
-    <resource tofile="artifacts/jars/${name}-twilio.jar" url="http://${name}.googlecode.com/files/${name}-twilio-${revision}.jar" sha1="1b4d8b78ed92c14e5028b3a72d12449d5bf67eb5"/>
+    <resource tofile="artifacts/jars/${name}-core.jar" url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-core-${revision}.jar" sha1="dd07cc3d6a109ec635a5f0eff179bb70bc46ba77"/>
+    <resource tofile="artifacts/jars/${name}-pidf.jar" url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-pidf-${revision}.jar" sha1="f4b2dc458295eee6363451da4a653e1a852fbefc"/>
+    <resource tofile="artifacts/jars/${name}-twilio.jar" url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-twilio-${revision}.jar" sha1="1b4d8b78ed92c14e5028b3a72d12449d5bf67eb5"/>
 
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://${name}.googlecode.com/files/${name}-javadocs-${revision}.zip" sha1="9e65615fcd8935940e9f76ff071504773055ba47"/>
-    <resource tofile="artifacts/sources/source.zip" url="http://${name}.googlecode.com/files/${name}-sources-${revision}.zip" sha1="69eb79f0f0d82895fcaa7418dcc340acb59db5bb"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-javadocs-${revision}.zip" sha1="9e65615fcd8935940e9f76ff071504773055ba47"/>
+    <resource tofile="artifacts/sources/source.zip" url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-sources-${revision}.zip" sha1="69eb79f0f0d82895fcaa7418dcc340acb59db5bb"/>
 
 </packager-module>

@@ -21,7 +21,7 @@
     <property name="shortname" value="google-collect"/>
     <property name="archive" value="${shortname}-${revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${archive}.zip" sha1="880bce3810c92e7dcdbdfdb03dfc5aa7460da76b"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}.zip" sha1="880bce3810c92e7dcdbdfdb03dfc5aa7460da76b"/>
 
     <build>
         <!-- jar -->

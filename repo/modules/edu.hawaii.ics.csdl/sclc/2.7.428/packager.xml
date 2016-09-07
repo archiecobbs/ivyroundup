@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://sclc.googlecode.com/files/sclc-2.7.428.zip" sha1="d477fecee236e6a1069149a56b20bd58530dbc12">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/sclc-2.7.428.zip" sha1="d477fecee236e6a1069149a56b20bd58530dbc12">
       <include name="${archive}/src/*"/>
     </resource>
 

@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="d87f53c99e4cd88f5416edd5abb77f2a1ccfb050"/>
-    <resource url="http://${name}.googlecode.com/files/${name}-src-${revision}.zip" tofile="artifacts/sources/source.zip" sha1="803ad79cf429faeb4d767b2fb45d84bbc904ea04"/>
-    <resource url="http://${name}.googlecode.com/files/${name}-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip" sha1="d6c9b1c8183c9ef5e1925a38a18cd98fe8ebee70"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="d87f53c99e4cd88f5416edd5abb77f2a1ccfb050"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-src-${revision}.zip" tofile="artifacts/sources/source.zip" sha1="803ad79cf429faeb4d767b2fb45d84bbc904ea04"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip" sha1="d6c9b1c8183c9ef5e1925a38a18cd98fe8ebee70"/>
 </packager-module>

@@ -24,9 +24,9 @@
     <property name="name" value="ivysvnresolver"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://ivysvn.googlecode.com/files/${name}-${revision}-bin.tgz" sha1="2a0fd341a2413fc4805fcb9314dbf1af5dff7090" dest="archive-bin"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ivysvn/${name}-${revision}-bin.tgz" sha1="2a0fd341a2413fc4805fcb9314dbf1af5dff7090" dest="archive-bin"/>
 
-    <resource url="http://ivysvn.googlecode.com/files/${name}-${revision}-src.tgz" sha1="b019f4b1687b7ab68e18ad7c13336a3ef837ea4f" dest="archive-src"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ivysvn/${name}-${revision}-src.tgz" sha1="b019f4b1687b7ab68e18ad7c13336a3ef837ea4f" dest="archive-src"/>
 
     <build>
         <!-- jar -->

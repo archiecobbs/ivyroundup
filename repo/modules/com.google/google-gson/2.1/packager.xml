@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://google-gson.googlecode.com/files/${archive}-release.zip" sha1="ed4d4178830718ee060700d21e087ea71e9b60c7"/>
-    <resource url="http://google-gson.googlecode.com/files/${name}-stream-${revision}.jar" tofile="artifacts/jars/${name}-stream.jar" sha1="594c21acc371c21e6d8b1e4fe907cc2f5e6bd778"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${archive}-release.zip" sha1="ed4d4178830718ee060700d21e087ea71e9b60c7"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-stream-${revision}.jar" tofile="artifacts/jars/${name}-stream.jar" sha1="594c21acc371c21e6d8b1e4fe907cc2f5e6bd778"/>
 
     <build>
         <move file="archive/${archive}/gson-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>

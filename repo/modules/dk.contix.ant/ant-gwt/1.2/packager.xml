@@ -19,7 +19,7 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://ant-gwt.googlecode.com/files/${name}-${revision}.jar" sha1="e665253aa561eb6ccd902f990b82be69722413b2"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" sha1="e665253aa561eb6ccd902f990b82be69722413b2"/>
 
     <build>
         <!-- jar -->

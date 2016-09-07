@@ -20,7 +20,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://google-web-toolkit.googlecode.com/files/${archive}.zip" sha1="e89a9c61cf9463850f914529366b805c7042728c">
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-web-toolkit/${archive}.zip" sha1="e89a9c61cf9463850f914529366b805c7042728c">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/*.dll"/>
         <include name="${archive}/*.dtd"/>
