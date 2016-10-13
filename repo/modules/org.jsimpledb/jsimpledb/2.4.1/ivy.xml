@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
 <!--
     Copyright 2015 Archie L. Cobbs
 
@@ -15,11 +15,13 @@
     License for the specific language governing permissions and limitations
     under the License.
 -->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-<ivy-module>
-
-    <info publication="20161004000000">
+    <info organisation="org.jsimpledb" module="jsimpledb" revision="2.4.1" status="release" publication="20161013000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jsimpledb/jsimpledb/2.4.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="https://github.com/archiecobbs/jsimpledb/">
 
         <p>
@@ -123,33 +125,33 @@
     <publications>
 
         <!-- JARs -->
-        <artifact name="jsimpledb-ant" conf="ant"/>
-        <artifact name="jsimpledb-app" conf="app"/>
-        <artifact name="jsimpledb-cli" conf="cli"/>
-        <artifact name="jsimpledb-cli-telnet" conf="cli-telnet"/>
-        <artifact name="jsimpledb-cliapp" conf="cliapp"/>
-        <artifact name="jsimpledb-coreapi" conf="coreapi"/>
-        <artifact name="jsimpledb-demo" conf="demo"/>
-        <artifact name="jsimpledb-guiapp" conf="guiapp"/>
-        <artifact name="jsimpledb-kv" conf="kv"/>
-        <artifact name="jsimpledb-kv-array" conf="kv-array"/>
-        <artifact name="jsimpledb-kv-bdb" conf="kv-bdb"/>
-        <artifact name="jsimpledb-kv-cockroach" conf="kv-cockroach"/>
-        <artifact name="jsimpledb-kv-fdb" conf="kv-fdb"/>
-        <artifact name="jsimpledb-kv-leveldb" conf="kv-leveldb"/>
-        <artifact name="jsimpledb-kv-mysql" conf="kv-mysql"/>
-        <artifact name="jsimpledb-kv-raft" conf="kv-raft"/>
-        <artifact name="jsimpledb-kv-rocksdb" conf="kv-rocksdb"/>
-        <artifact name="jsimpledb-kv-simple" conf="kv-simple"/>
-        <artifact name="jsimpledb-kv-sql" conf="kv-sql"/>
-        <artifact name="jsimpledb-kv-sqlite" conf="kv-sqlite"/>
-        <artifact name="jsimpledb-kv-test" conf="kv-test"/>
-        <artifact name="jsimpledb-main" conf="main"/>
-        <artifact name="jsimpledb-parse" conf="parse"/>
-        <artifact name="jsimpledb-spring" conf="spring"/>
-        <artifact name="jsimpledb-test" conf="test"/>
-        <artifact name="jsimpledb-util" conf="util"/>
-        <artifact name="jsimpledb-vaadin" conf="vaadin"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-ant" ivyde:javadoc="jsimpledb-ant" name="jsimpledb-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-app" ivyde:javadoc="jsimpledb-app" name="jsimpledb-app" conf="app"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-cli" ivyde:javadoc="jsimpledb-cli" name="jsimpledb-cli" conf="cli"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-cli-telnet" ivyde:javadoc="jsimpledb-cli-telnet" name="jsimpledb-cli-telnet" conf="cli-telnet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-cliapp" ivyde:javadoc="jsimpledb-cliapp" name="jsimpledb-cliapp" conf="cliapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-coreapi" ivyde:javadoc="jsimpledb-coreapi" name="jsimpledb-coreapi" conf="coreapi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-demo" ivyde:javadoc="jsimpledb-demo" name="jsimpledb-demo" conf="demo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-guiapp" ivyde:javadoc="jsimpledb-guiapp" name="jsimpledb-guiapp" conf="guiapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv" ivyde:javadoc="jsimpledb-kv" name="jsimpledb-kv" conf="kv"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-array" ivyde:javadoc="jsimpledb-kv-array" name="jsimpledb-kv-array" conf="kv-array"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-bdb" ivyde:javadoc="jsimpledb-kv-bdb" name="jsimpledb-kv-bdb" conf="kv-bdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-cockroach" ivyde:javadoc="jsimpledb-kv-cockroach" name="jsimpledb-kv-cockroach" conf="kv-cockroach"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-fdb" ivyde:javadoc="jsimpledb-kv-fdb" name="jsimpledb-kv-fdb" conf="kv-fdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-leveldb" ivyde:javadoc="jsimpledb-kv-leveldb" name="jsimpledb-kv-leveldb" conf="kv-leveldb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-mysql" ivyde:javadoc="jsimpledb-kv-mysql" name="jsimpledb-kv-mysql" conf="kv-mysql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-raft" ivyde:javadoc="jsimpledb-kv-raft" name="jsimpledb-kv-raft" conf="kv-raft"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-rocksdb" ivyde:javadoc="jsimpledb-kv-rocksdb" name="jsimpledb-kv-rocksdb" conf="kv-rocksdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-simple" ivyde:javadoc="jsimpledb-kv-simple" name="jsimpledb-kv-simple" conf="kv-simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-sql" ivyde:javadoc="jsimpledb-kv-sql" name="jsimpledb-kv-sql" conf="kv-sql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-sqlite" ivyde:javadoc="jsimpledb-kv-sqlite" name="jsimpledb-kv-sqlite" conf="kv-sqlite"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-kv-test" ivyde:javadoc="jsimpledb-kv-test" name="jsimpledb-kv-test" conf="kv-test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-main" ivyde:javadoc="jsimpledb-main" name="jsimpledb-main" conf="main"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-parse" ivyde:javadoc="jsimpledb-parse" name="jsimpledb-parse" conf="parse"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-spring" ivyde:javadoc="jsimpledb-spring" name="jsimpledb-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-test" ivyde:javadoc="jsimpledb-test" name="jsimpledb-test" conf="test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-util" ivyde:javadoc="jsimpledb-util" name="jsimpledb-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jsimpledb-vaadin" ivyde:javadoc="jsimpledb-vaadin" name="jsimpledb-vaadin" conf="vaadin"/>
 
         <!-- Sources -->
         <artifact type="source" ext="zip" name="jsimpledb-ant" conf="ant"/>
@@ -212,24 +214,24 @@
     </publications>
 
     <dependencies>
-        <dependency org="com.foundationdb" name="fdb-java" rev="3+" conf="kv-fdb->default"/>
-        <dependency org="com.google.guava" name="guava" rev="19.0" conf="util->default"/>
-        <dependency org="com.mysql" name="mysql-connector-java" rev="5.1+" conf="kv-mysql->default"/>
-        <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="kv-bdb->default"/>
-        <dependency org="com.vaadin" name="vaadin" rev="7.7+" conf="demo->shared,server,themes,widgets; guiapp,vaadin->server,shared"/>
-        <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="demo,spring,vaadin->default"/>
-        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="demo,guiapp,main,test->default"/>
-        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="guiapp->default"/>
-        <dependency org="org.dellroad" name="dellroad-stuff" rev="2.0+" conf="util->main; demo,vaadin,guiapp->vaadin7; guiapp->spring"/>
-        <dependency org="org.dellroad" name="leveldb" rev="0.9" conf="kv-leveldb->default"/>
-        <dependency org="org.dellroad" name="nvt4j" rev="1.2+" conf="cli-telnet->default"/>
-        <dependency org="org.eclipse" name="jetty" rev="9.2.19.v20160908" conf="guiapp->webapp,annotations"/>
-        <dependency org="org.postgresql" name="postgresql-jdbc" rev="9.4+" conf="kv-cockroach->jdbc41"/>
-        <dependency org="org.rocksdb" name="rocksdbjni" rev="4.11+" conf="kv-rocksdb->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="util->core"/>
-        <dependency org="org.sonatype.jline" name="jline" rev="2.14+" conf="app,cli->default"/>
-        <dependency org="org.springframework" name="spring" rev="4.3+" conf="spring->context,core,tx,web; parse->core; guiapp->aspects; coreapi->tx; app->jdbc"/>
-        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.14+" conf="kv-sqlite->default"/>
+        <dependency org="com.foundationdb" name="fdb-java" rev="3+" conf="kv-fdb-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="19.0" conf="util-&gt;default"/>
+        <dependency org="com.mysql" name="mysql-connector-java" rev="5.1+" conf="kv-mysql-&gt;default"/>
+        <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="kv-bdb-&gt;default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="7.7+" conf="demo-&gt;shared,server,themes,widgets; guiapp,vaadin-&gt;server,shared"/>
+        <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="demo,spring,vaadin-&gt;default"/>
+        <dependency org="javax.validation" name="validation-api" rev="1.0.0.GA" conf="demo,guiapp,main,test-&gt;default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="guiapp-&gt;default"/>
+        <dependency org="org.dellroad" name="dellroad-stuff" rev="2.0+" conf="util-&gt;main; demo,vaadin,guiapp-&gt;vaadin7; guiapp-&gt;spring"/>
+        <dependency org="org.dellroad" name="leveldb" rev="0.9" conf="kv-leveldb-&gt;default"/>
+        <dependency org="org.dellroad" name="nvt4j" rev="1.2+" conf="cli-telnet-&gt;default"/>
+        <dependency org="org.eclipse" name="jetty" rev="9.2.19.v20160908" conf="guiapp-&gt;webapp,annotations"/>
+        <dependency org="org.postgresql" name="postgresql-jdbc" rev="9.4+" conf="kv-cockroach-&gt;jdbc41"/>
+        <dependency org="org.rocksdb" name="rocksdbjni" rev="4.11+" conf="kv-rocksdb-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="util-&gt;core"/>
+        <dependency org="org.sonatype.jline" name="jline" rev="2.14+" conf="app,cli-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="4.3+" conf="spring-&gt;context,core,tx,web; parse-&gt;core; guiapp-&gt;aspects; coreapi-&gt;tx; app-&gt;jdbc"/>
+        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.14+" conf="kv-sqlite-&gt;default"/>
     </dependencies>
 
 </ivy-module>
