@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}_1_3_1"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}-${revision}/${archive}.zip" sha1="dcfccb081e7dc63ff35eeb9b84ef021532271d5a"/>
+
+    <build>
+        <!-- Copy JARs but also zero out Class-Path attributes in manifests -->
+        <jar destfile="artifacts/jars/${name}-bind.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-bind.jar" includes="**/*"/>
+            <manifest>
+<attribute name="Class-Path" value=""/>
+</manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-extras.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-extras.jar" includes="**/*"/>
+            <manifest>
+<attribute name="Class-Path" value=""/>
+</manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-run.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-run.jar" includes="**/*"/>
+            <manifest>
+<attribute name="Class-Path" value=""/>
+</manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-schema.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-schema.jar" includes="**/*"/>
+            <manifest>
+<attribute name="Class-Path" value=""/>
+</manifest>
+        </jar>
+        <jar destfile="artifacts/jars/${name}-tools.jar" filesetmanifest="merge">
+            <zipfileset src="archive/${name}/lib/${name}-tools.jar" includes="**/*"/>
+            <manifest>
+<attribute name="Class-Path" value=""/>
+</manifest>
+        </jar>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}/build/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${name}/docs/api"/>
+        </zip>
+    </build>
+</packager-module>
