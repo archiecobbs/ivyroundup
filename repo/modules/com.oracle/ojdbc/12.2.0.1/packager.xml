@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource tofile="artifacts/jars/ojdbc8dms_g.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc8dms_g.jar" sha1="ae5098264cbc070d171bb3de0ba469aa7d350dd3"/>
+    <resource tofile="artifacts/jars/ojdbc8dms.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc8dms.jar" sha1="6e4696ac89f3a2a8c45591bab8020d11ac13e203"/>
+    <resource tofile="artifacts/jars/ojdbc8_g.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc8_g.jar" sha1="4b62b756a01a7686b7c0962a92794f0860fad236"/>
+    <resource tofile="artifacts/jars/ojdbc8.jar" url="file:///${java.io.tmpdir}/ojdbc/${revision}/ojdbc8.jar" sha1="60f439fd01536508df32658d0a416c49ac6f07fb"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="file:///${java.io.tmpdir}/ojdbc/${revision}/javadoc_jdbc_12201_.zip" sha1="4d09ec41c9fc7889d1757fe2538e6084f92f31d9"/>
+
+</packager-module>
