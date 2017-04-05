@@ -18,7 +18,7 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-    <info organisation="net.sourceforge.jibx" module="jibx" revision="1.3.1" status="release" publication="20161125000000">
+    <info organisation="net.sourceforge.jibx" module="jibx" revision="1.3.1" status="release" publication="20161125000001">
         <license name="BSD License" url="http://jibx.sourceforge.net/jibx-license.html"/>
         <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.jibx/jibx/1.3.1/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
@@ -41,13 +41,27 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-bind" conf="bind"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-extras" conf="extras,dom4j"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-run" conf="bind,runtime-base"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-schema" conf="bind,runtime-base"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="jibx-tools" conf="tools"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+
+        <!-- JARs -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bind" ivyde:javadoc="jibx-bind" name="jibx-bind" conf="bind"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-extras" ivyde:javadoc="jibx-extras" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-run" ivyde:javadoc="jibx-run" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-schema" ivyde:javadoc="jibx-schema" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-tools" ivyde:javadoc="jibx-tools" name="jibx-tools" conf="tools"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="source" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="source" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-tools" conf="tools"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="javadoc" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="javadoc" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-tools" conf="tools"/>
     </publications>
 
     <dependencies>

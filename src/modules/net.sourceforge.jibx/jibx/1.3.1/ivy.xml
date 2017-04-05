@@ -18,7 +18,7 @@
 
 <ivy-module>
 
-    <info publication="20161125000000">
+    <info publication="20161125000001">
         <license name="BSD License" url="http://jibx.sourceforge.net/jibx-license.html"/>
         <description homepage="http://jibx.sourceforge.net/">
         JiBX is a framework for XML data binding to Java. It works with
@@ -39,13 +39,27 @@
     </configurations>
 
     <publications>
+
+        <!-- JARs -->
         <artifact name="jibx-bind" conf="bind"/>
         <artifact name="jibx-extras" conf="extras,dom4j"/>
         <artifact name="jibx-run" conf="bind,runtime-base"/>
         <artifact name="jibx-schema" conf="bind,runtime-base"/>
         <artifact name="jibx-tools" conf="tools"/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="source" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="source" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-tools" conf="tools"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="javadoc" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="javadoc" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-tools" conf="tools"/>
     </publications>
 
     <dependencies>

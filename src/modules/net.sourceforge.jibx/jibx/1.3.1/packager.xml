@@ -17,44 +17,29 @@
 -->
 
 <packager-module>
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}_1_3_1"/>
-
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}-${revision}/${archive}.zip" sha1="dcfccb081e7dc63ff35eeb9b84ef021532271d5a"/>
-
-    <build>
-        <!-- Copy JARs but also zero out Class-Path attributes in manifests -->
-        <jar destfile="artifacts/jars/${name}-bind.jar" filesetmanifest="merge">
-            <zipfileset src="archive/${name}/lib/${name}-bind.jar" includes="**/*"/>
-            <manifest><attribute name="Class-Path" value=""/></manifest>
-        </jar>
-        <jar destfile="artifacts/jars/${name}-extras.jar" filesetmanifest="merge">
-            <zipfileset src="archive/${name}/lib/${name}-extras.jar" includes="**/*"/>
-            <manifest><attribute name="Class-Path" value=""/></manifest>
-        </jar>
-        <jar destfile="artifacts/jars/${name}-run.jar" filesetmanifest="merge">
-            <zipfileset src="archive/${name}/lib/${name}-run.jar" includes="**/*"/>
-            <manifest><attribute name="Class-Path" value=""/></manifest>
-        </jar>
-        <jar destfile="artifacts/jars/${name}-schema.jar" filesetmanifest="merge">
-            <zipfileset src="archive/${name}/lib/${name}-schema.jar" includes="**/*"/>
-            <manifest><attribute name="Class-Path" value=""/></manifest>
-        </jar>
-        <jar destfile="artifacts/jars/${name}-tools.jar" filesetmanifest="merge">
-            <zipfileset src="archive/${name}/lib/${name}-tools.jar" includes="**/*"/>
-            <manifest><attribute name="Class-Path" value=""/></manifest>
-        </jar>
-
-        <!-- source -->
-        <zip destfile="artifacts/sources/source.zip">
-            <fileset dir="archive/${name}/build/src"/>
-        </zip>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${name}/docs/api"/>
-        </zip>
-    </build>
+    <m2resource groupId="org.jibx" artifactId="jibx-bind">
+        <artifact tofile="artifacts/jars/jibx-bind.jar" sha1="f5304207c74777236a7cb6c4be09a4e2c7ec1a59"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jibx-bind.zip" sha1="6e80d68910bcdefd1365ca8dcc534a22bc091ca4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jibx-bind.zip" sha1="c2ba6b322fcb01a446fe38b428a89d186175d9f6"/>
+    </m2resource>
+    <m2resource groupId="org.jibx" artifactId="jibx-extras">
+        <artifact tofile="artifacts/jars/jibx-extras.jar" sha1="7138afa4967e06239e96d8f800106946ec61b585"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jibx-extras.zip" sha1="80dab8d8aea6a807b4dfe865f56dc5b286f22f40"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jibx-extras.zip" sha1="1057f5ef24df1405376b019a5df76829ef768e28"/>
+    </m2resource>
+    <m2resource groupId="org.jibx" artifactId="jibx-run">
+        <artifact tofile="artifacts/jars/jibx-run.jar" sha1="823bdac9c1781c112b36dd853d77da510c29d1a3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jibx-run.zip" sha1="b915d9277f9a10e84d3e0092d0d8ae7ede0a98c0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jibx-run.zip" sha1="6d1ea94ae180269e1556e6ffe1e6addc428c1361"/>
+    </m2resource>
+    <m2resource groupId="org.jibx" artifactId="jibx-schema">
+        <artifact tofile="artifacts/jars/jibx-schema.jar" sha1="a575a7873b9aeef803207a38b09a1f4ca027e871"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jibx-schema.zip" sha1="e6140cd231005f80c4f3f9a226e988413cce4efc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jibx-schema.zip" sha1="d54ce655761cd74b96ec3e9657b04245b62ba0e8"/>
+    </m2resource>
+    <m2resource groupId="org.jibx" artifactId="jibx-tools">
+        <artifact tofile="artifacts/jars/jibx-tools.jar" sha1="53b0ceedd0cb626ff82d3988b14ba811da13f63a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jibx-tools.zip" sha1="0af382f7e945a2cdd8a528a8ed88b8c056e6e968"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jibx-tools.zip" sha1="bcec8b19aef19f842965f233d4f9937449dc4fb4"/>
+    </m2resource>
 </packager-module>
