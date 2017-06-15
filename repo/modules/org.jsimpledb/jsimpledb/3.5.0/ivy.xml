@@ -62,6 +62,7 @@
         <conf name="kv-cockroach" extends="kv,kv-sql" description="JSimpleDB key/value store implementation based on CockroachDB."/>
         <conf name="kv-fdb" extends="kv,util" description="JSimpleDB key/value store implementation based on FoundationDB."/>
         <conf name="kv-leveldb" extends="kv,util" description="JSimpleDB key/value store implementation based on LevelDB."/>
+        <conf name="kv-mssql" extends="kv,kv-sql" description="JSimpleDB key/value store implementation based on Microsoft SQL Server."/>
         <conf name="kv-mysql" extends="kv,kv-sql" description="JSimpleDB key/value store implementation based on MySQL."/>
         <conf name="kv-raft" extends="kv,util" description="JSimpleDB distributed, linearizable ACID compliant key/value store implementation based on the Raft consensus algorithm."/>
         <conf name="kv-rocksdb" extends="kv,util" description="JSimpleDB key/value store implementation based on RocksDB."/>
