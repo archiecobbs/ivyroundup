@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource artifactId="aspectjrt">
+        <artifact tofile="artifacts/jars/aspectjrt.jar" sha1="01a14fe9e912f6e8bdbb5429b78b4090d8b47bc1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/rt.zip" sha1="230c528119f8479c4f130fbaeebc67fc986afb88"/>
+    </m2resource>
+    <m2resource artifactId="aspectjweaver">
+        <artifact tofile="artifacts/jars/aspectjweaver.jar" sha1="e198c5fee28988c355f74e06461614eae36b2032"/>
+        <artifact classifier="sources" tofile="artifacts/sources/weaver.zip" sha1="b06ea75fbe35522c5f43027dda054c99774e6479"/>
+    </m2resource>
+    <m2resource artifactId="aspectjtools">
+        <artifact tofile="artifacts/jars/aspectjtools.jar" sha1="5c5957ee4615bde33b54ce965f5b85b8827b97d5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/tools.zip" sha1="b2903566c45dbdb8c7fc2566539b25a5e75147b9"/>
+    </m2resource>
+</packager-module>
