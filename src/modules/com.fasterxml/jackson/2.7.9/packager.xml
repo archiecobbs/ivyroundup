@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-guava">
+        <artifact tofile="artifacts/jars/jackson-datatype-guava.jar" sha1="cd2dd56fdb2290c07106ae7c3cd3571e328a8499"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-guava.zip" sha1="a22e5f4676d8d8994eced2cad694abb07d037878"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-guava.zip" sha1="3a916cfa7a31e4a86a10f34ada99ccc23e49cd50"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-hibernate3">
+        <artifact tofile="artifacts/jars/jackson-datatype-hibernate3.jar" sha1="eb86278b085ff9d269d1187ecfc33915e2c7886e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-hibernate3.zip" sha1="e27209247161c0580e43080b948cadc85766f75a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-hibernate3.zip" sha1="84a715482b2ce7070f902beebb515aee1427992a"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-hibernate4">
+        <artifact tofile="artifacts/jars/jackson-datatype-hibernate4.jar" sha1="3af97d04a74274b1917832ae99bfa05bfbded07e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-hibernate4.zip" sha1="b3ee862ced2cb51e50b5344f059b0d63ef139400"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-hibernate4.zip" sha1="d3d0daf9bcf937c325f7f4bf84628295a90e4329"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-hppc">
+        <artifact tofile="artifacts/jars/jackson-datatype-hppc.jar" sha1="932a16b1ec1c43dbe8abc159683e4ecba991ddab"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-hppc.zip" sha1="300e1af90a017f1a2b8aede89e7226d874f520bc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-hppc.zip" sha1="64423a7abe0843fadcae9e98df4cf72c81de1795"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-jdk8">
+        <artifact tofile="artifacts/jars/jackson-datatype-jdk8.jar" sha1="18b8f409e2a1c89a0498bbd9b3044bcd32fece83"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-jdk8.zip" sha1="5336940fca12e8de0dad6b3506a7a6dd0b7f9e14"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-jdk8.zip" sha1="253db7902dd1a008a6ba71722dc068a8d79c9a98"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-joda">
+        <artifact tofile="artifacts/jars/jackson-datatype-joda.jar" sha1="70dfb14af41377c83566c0a5512b1c021426a559"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-joda.zip" sha1="40ddc3125f24edd34be5798be68b9359c55bf2e6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-joda.zip" sha1="7d54d8ab10d3b8aa4cbf7cf41721eb703b5052c9"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-json-org">
+        <artifact tofile="artifacts/jars/jackson-datatype-json-org.jar" sha1="e88c3bf55ff21a71edee53f6860666e98e6dc129"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-json-org.zip" sha1="778748c299d19c769b219cae20058a1e94f79b42"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-json-org.zip" sha1="ee1f8cb0fc5170202416190f0c7bd40be4c71cd9"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-jsr310">
+        <artifact tofile="artifacts/jars/jackson-datatype-jsr310.jar" sha1="7ff35069e48d134cd53fadf2fcb5ce2e5f09007e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-jsr310.zip" sha1="3a107e0f66f7cfc9352659d0affabed84beaa997"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-jsr310.zip" sha1="9192b9dab87411fbd6f00d296a522a6e0e7f4940"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/datatype" artifactId="jackson-datatype-jsr353">
+        <artifact tofile="artifacts/jars/jackson-datatype-jsr353.jar" sha1="aa230fd6cd5cea669d2ecd3e7a24db20f023a699"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-datatype-jsr353.zip" sha1="d1612eec20386ff883b46454dc2b0cdd6a988fae"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-datatype-jsr353.zip" sha1="0d77d1d53ec292fa475b28bd4ac04d043fcd0396"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jaxrs" artifactId="jackson-jaxrs-base">
+        <artifact tofile="artifacts/jars/jackson-jaxrs-base.jar" sha1="36a528abef27cb905e719901130e8e73ec440c08"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs-base.zip" sha1="ce0d4f57d84e793620c831ea429a3dd43f9edd69"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-base.zip" sha1="c05d36021bdbbe544bc963e25221ed40e9c121c7"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jaxrs" artifactId="jackson-jaxrs-cbor-provider">
+        <artifact tofile="artifacts/jars/jackson-jaxrs-cbor-provider.jar" sha1="f15b7cb6144090cea9f11d9eebf1b4b5256d28d1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs-cbor-provider.zip" sha1="d7d12e190a6441ea84f22b29f7036099dd797cb7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-cbor-provider.zip" sha1="8e5dc18946c98f3368bdf4eb3c4b2392ac783250"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jaxrs" artifactId="jackson-jaxrs-json-provider">
+        <artifact tofile="artifacts/jars/jackson-jaxrs-json-provider.jar" sha1="c19f114d316031203e277f3cc2f6b9671c3e1dd6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs-json-provider.zip" sha1="d0da2f0ed54c5b1b8cfe03f478190f6a67cbfecd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-json-provider.zip" sha1="80eeb4a3ec6f0d5ed82728892bff97d4b24cf482"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jaxrs" artifactId="jackson-jaxrs-smile-provider">
+        <artifact tofile="artifacts/jars/jackson-jaxrs-smile-provider.jar" sha1="796eee365e6a197c33e689af11c80c6fd4343294"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs-smile-provider.zip" sha1="1ea8b2186584e9d5d575ec244f455e881e32f704"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-smile-provider.zip" sha1="122e3c5d6dca8ee6f8e8acff1662874479a8a12a"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jaxrs" artifactId="jackson-jaxrs-xml-provider">
+        <artifact tofile="artifacts/jars/jackson-jaxrs-xml-provider.jar" sha1="387745b41f5043341e17ece0cad443ab8660baff"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jaxrs-xml-provider.zip" sha1="465c7742e01db72d660bcfd69b4f6ff46caaa04d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jaxrs-xml-provider.zip" sha1="a7f4557ed9afbf7613556291317303a0bd940dfc"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-afterburner">
+        <artifact tofile="artifacts/jars/jackson-module-afterburner.jar" sha1="0a16165ab0fedb7b66e19a4babc5b4892eed09b9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-afterburner.zip" sha1="591b057840c2e806e54c9cd3ecbc855f9afc7710"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-afterburner.zip" sha1="baa20334076171b5cbb4f53a7463625418ee4ac0"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-guice">
+        <artifact tofile="artifacts/jars/jackson-module-guice.jar" sha1="97d48d68055f8ea2a4ee766b658b753861461b07"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-guice.zip" sha1="acdec0aa972d5d5a642be78996dab07210221fda"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-guice.zip" sha1="a99da280dc1766e09489f7b343818d2204aee8fb"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-jaxb-annotations">
+        <artifact tofile="artifacts/jars/jackson-module-jaxb-annotations.jar" sha1="f6f681a609a0dbc38f1984b47a92f8815a7f73e6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-jaxb-annotations.zip" sha1="8af6d5e2e366f7adcb6e976ca17f0185fa60e4ff"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-jaxb-annotations.zip" sha1="27fbbdbce774af62921f9e32cf34412beeb4481f"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-jsonSchema">
+        <artifact tofile="artifacts/jars/jackson-module-jsonSchema.jar" sha1="33c1d7f54b8c17dc750244e6ce566302a9126c1e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-jsonSchema.zip" sha1="9b426b6ac425eece9d4be543968a32a604615987"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-jsonSchema.zip" sha1="11f8d7d75d5c108ac4c0bd37e225d31f94c1b210"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-kotlin">
+        <artifact tofile="artifacts/jars/jackson-module-kotlin.jar" sha1="fb75246213e7eb9ade2005b239cd4979b2162990"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-kotlin.zip" sha1="6db6b93b4de0528153980b0ee55eff2e487d326c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-kotlin.zip" sha1="6484b78c399f9da4213bf7755da364875938fca9"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-mrbean">
+        <artifact tofile="artifacts/jars/jackson-module-mrbean.jar" sha1="a7fe1957a569c4efdaa807b913f10d9e60e5cd59"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-mrbean.zip" sha1="e4fb8fe0090aa84154b7be43cc44e1a666207bde"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-mrbean.zip" sha1="d656f061db868f19bf63aee5ec11887ee39ef87a"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-parameter-names">
+        <artifact tofile="artifacts/jars/jackson-module-parameter-names.jar" sha1="69ece20bf6a680414c8e91319de27118beb5ca4b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-parameter-names.zip" sha1="a351a7de80d075c8873be65e878061f7c5948a03"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-parameter-names.zip" sha1="f168c90f17a5ff55bc15430c681a40cd035f66f0"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-paranamer">
+        <artifact tofile="artifacts/jars/jackson-module-paranamer.jar" sha1="47ee876c1145e3e39a9f028d9b23c2e3b6c9be6a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-paranamer.zip" sha1="2589c9e4f1abac36fe294e85d43c511428345304"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-paranamer.zip" sha1="9d7a93527d1b224aa39274ae199e02e7a278510e"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-scala_2.10" version="2.5.1">
+        <artifact tofile="artifacts/jars/jackson-module-scala_2.10.jar" sha1="69de3e71b4551170348baff3c18f8d678c27c633"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-scala_2.10.zip" sha1="1fe4692a59f372f9ee2104f478e925cc1bba8d26"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-scala_2.10.zip" sha1="96a5895b19a5bed1941afc96aa39c78211c233f7"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/module" artifactId="jackson-module-scala_2.11" version="2.5.1">
+        <artifact tofile="artifacts/jars/jackson-module-scala_2.11.jar" sha1="e88bc0e88a4ff66fd057ca02cbb1dc71162a581a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-module-scala_2.11.zip" sha1="959606c35c8f8c8a4f796345f2557d97849b95fd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-module-scala_2.11.zip" sha1="daf9eb1fc2591a7e15fbb1148833b7b6b0229ee4"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-avro">
+        <artifact tofile="artifacts/jars/jackson-dataformat-avro.jar" sha1="c4a96b617e33b8a3afdcda9875a50f55231d17f2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-avro.zip" sha1="f1ec4d76faebd10356e692102481cd3b92365155"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-avro.zip" sha1="c0e690ea77e4fe72fe3674cc567e80fde824082c"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-cbor">
+        <artifact tofile="artifacts/jars/jackson-dataformat-cbor.jar" sha1="0011b3a0779272ed5b2c0815995d1bb2355495f5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-cbor.zip" sha1="71ac29b8a24c799ac4b9e42c68072b4edbc22756"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-cbor.zip" sha1="4cb51d4953267049af38ac9bc787acace297dc6c"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-csv">
+        <artifact tofile="artifacts/jars/jackson-dataformat-csv.jar" sha1="03aa4d2c35dbc1e82748e639c8117e97fb140334"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-csv.zip" sha1="b3496bc6e5b2f446bcbeb3d48d42fb4b296aaa4f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-csv.zip" sha1="2ddc5148d890e4b7763858e16b77958ffef2ca08"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-smile">
+        <artifact tofile="artifacts/jars/jackson-dataformat-smile.jar" sha1="3aef8d360e5bb6f8044964ba831f5cd53a663fe3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-smile.zip" sha1="aaea14bec485660833116e27fef9ff9a1a3b55f4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-smile.zip" sha1="f21d9b4f4cbe6dd39c6f2a8570ae8e8495442c09"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-xml">
+        <artifact tofile="artifacts/jars/jackson-dataformat-xml.jar" sha1="08ab8a423f11e9f24c176349138b5b29f429ec5f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-xml.zip" sha1="ed6adfe728fd7374d242f9b12044f63491817cab"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-xml.zip" sha1="eabaceea1985dc5fbdb382b0edd59cc97a01a71f"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/dataformat" artifactId="jackson-dataformat-yaml">
+        <artifact tofile="artifacts/jars/jackson-dataformat-yaml.jar" sha1="163a1bd63ace592d2a449023a1c07056b885ff12"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-dataformat-yaml.zip" sha1="7a9e810018d0fc966aae0a089f4cb3fa3afc2ddc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-dataformat-yaml.zip" sha1="e08830d4391e06a34a5952b7878cd72f75d50739"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/core" artifactId="jackson-annotations">
+        <artifact tofile="artifacts/jars/jackson-annotations.jar" sha1="eb356e825cb73da42f7c902a3fe0276fe32b26c8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-annotations.zip" sha1="ac4c985277a9f91166fddda73bd9e4ba9eba7799"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-annotations.zip" sha1="553bb41c86de54666e733268ba9993010108200d"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/core" artifactId="jackson-core">
+        <artifact tofile="artifacts/jars/jackson-core.jar" sha1="09b530cec4fd2eb841ab8e79f19fc7cf0ec487b2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-core.zip" sha1="3a9c4854b92eb8751d775c3b8488da02d10049b2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-core.zip" sha1="06f85e81db9f132f476811b0ace14094e4e0fdd2"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/core" artifactId="jackson-databind">
+        <artifact tofile="artifacts/jars/jackson-databind.jar" sha1="a4c0b14c7dd85bdf4d25da074e90a10fa4b9b88b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-databind.zip" sha1="c31ae9c7261b6d9a987e11396ea0edcca05e540f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-databind.zip" sha1="7db3884fa9a51cf83ac7c67c68f9a225c9eafba8"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jr" artifactId="jackson-jr-all">
+        <artifact tofile="artifacts/jars/jackson-jr-all.jar" sha1="8a4c0afd070227b08a22c301ae993c3146c6322e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jr-all.zip" sha1="65e851e6de12dfcca0d6600289481d7b1f10e458"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jr-all.zip" sha1="864bd0c27c5594fa45b0463035048d4dfaa99745"/>
+    </m2resource>
+    <m2resource groupId="com/fasterxml/jackson/jr" artifactId="jackson-jr-objects">
+        <artifact tofile="artifacts/jars/jackson-jr-objects.jar" sha1="8e26524f21ce65c9f38254400781d2d82f36affe"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jackson-jr-objects.zip" sha1="5b0b773bed14a5fa1efcfa10496edb82546b420d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jackson-jr-objects.zip" sha1="56b408601f8ba924a9efbb93a526f4665539d69c"/>
+    </m2resource>
+</packager-module>
