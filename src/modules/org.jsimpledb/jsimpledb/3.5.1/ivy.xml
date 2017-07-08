@@ -198,7 +198,7 @@
         <dependency org="org.eclipse" name="jetty" rev="9.2.19.v20160908" conf="guiapp->webapp,annotations"/>
         <dependency org="org.postgresql" name="postgresql-jdbc" rev="9.4+" conf="kv-cockroach->jdbc41"/>
         <dependency org="org.rocksdb" name="rocksdbjni" rev="4.11+" conf="kv-rocksdb->default"/>
-        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="util->core"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="cli,cliapp,coreapi,guiapp,jsck,kv-array,kv-bdb,kv-fdb,kv-leveldb,kv-raft,kv-rocksdb,kv-simple,kv-spanner,kv-sql,kv,main,parse,test,util,vaadin->core"/>
         <dependency org="org.sonatype.jline" name="jline" rev="2.14+" conf="app,cli->default"/>
         <dependency org="org.springframework" name="spring" rev="4.3+" conf="spring->context,core,tx,web; parse->core; guiapp->aspects; coreapi->tx; app->jdbc"/>
         <dependency org="org.xerial" name="sqlite-jdbc" rev="3.16+" conf="kv-sqlite->default"/>
