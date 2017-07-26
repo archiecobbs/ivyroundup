@@ -37,11 +37,13 @@
     </publications>
 
     <dependencies>
-        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.4.1" conf="default->client"/>
-        <dependency org="org.apache.httpcomponents" name="httpcore" rev="4.4.1" conf="default->core"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="[4.4.1,5.0[" conf="default->client"/>
+        <dependency org="org.apache.httpcomponents" name="httpcore" rev="[4.4.1,5.0[" conf="default->core"/>
         <dependency org="org.apache.commons" name="commons-logging" rev="1.2" conf="default->default"/>
-        <dependency org="org.apache.commons" name="commons-lang3" rev="3.4" conf="default->default"/>
-        <dependency org="org.joda" name="joda-time" rev="2.8" conf="default->default"/>
+
+        <!-- 3.4 is specified by Microsoft. 3.5 is documented as backwards compatible. It is not clear if 3.6 is also backwards compatible. -->
+        <dependency org="org.apache.commons" name="commons-lang3" rev="[3.4,3.6[" conf="default->default"/>
+        <dependency org="org.joda" name="joda-time" rev="[2.8,)" conf="default->default"/>
     </dependencies>
 
 </ivy-module>
