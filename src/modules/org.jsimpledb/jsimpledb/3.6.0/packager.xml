@@ -92,10 +92,20 @@
         <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-leveldb.zip" sha1="a8d35d3e4ace66f0877fe1b079964ffb5a4af2d1"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-leveldb.zip" sha1="0463b68c39ceed79ca73a9a500f86a44692075d6"/>
     </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-mssql">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-mssql.jar" sha1="9ea0eb394c1cfd50fed63fe36105fd52f7bad89c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-mssql.zip" sha1="b77b76f2a74beb07db1e793c28260f8c3e7db4a1"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-mssql.zip" sha1="45e9543f70b9bf72742caa9a46be58d18188c911"/>
+    </m2resource>
     <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-mysql">
         <artifact tofile="artifacts/jars/jsimpledb-kv-mysql.jar" sha1="01113e66b5037e81223815909a3c2e5a17505849"/>
         <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-mysql.zip" sha1="eca5623c7e5ca82cfe329ba40308132a8a7f562c"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-mysql.zip" sha1="fe3dabcaecf6c179452467f628687c689de3e120"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-spanner">
+        <artifact tofile="artifacts/jars/jsimpledb-kv-spanner.jar" sha1="958695a19ad8754a25681d6183c59a20a7eb8ab3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jsimpledb-kv-spanner.zip" sha1="60e4ad51af007dcb7441a647b529d658e5f739da"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jsimpledb-kv-spanner.zip" sha1="e7053ab74a8a663a47659e8ec214ad23dbcd0a2e"/>
     </m2resource>
     <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="jsimpledb-kv-raft">
         <artifact tofile="artifacts/jars/jsimpledb-kv-raft.jar" sha1="bb83a0f2a5e56bb05e63563cbfb2d08cc5a76c3d"/>
