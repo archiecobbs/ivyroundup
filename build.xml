@@ -78,7 +78,9 @@
         <!-- Generate list of modules -->
         <exec executable="bash" logError="true" failonerror="true">
             <arg value="-c"/>
-            <arg value="TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'` ;
+            <arg value="
+              set -e -o pipefail;
+              TIMESTAMP=`date -u +'%Y-%m-%d %H:%M:%S %Z'`;
               export LC_ALL=C;
               find src/modules -name ivy.xml -print
                 | sort -t / -k3,3 -k4,4 -k5,5V
