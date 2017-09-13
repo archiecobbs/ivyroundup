@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.sourceforge.jibx" module="jibx" revision="1.3.1" status="release" publication="20161125000001">
+        <license name="BSD License" url="http://jibx.sourceforge.net/jibx-license.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.jibx/jibx/1.3.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://jibx.sourceforge.net/">
+        JiBX is a framework for XML data binding to Java. It works with
+        existing classes, using a flexible mapping definition file to
+        determine how data objects are translated to and from XML.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="bind" description="JiBX compiler"/>
+        <conf name="runtime-base" description="JiBX runtime classes (without a specific parser)"/>
+        <conf name="runtime-stax" extends="runtime-base" description="StAX parser (SJSXP)"/>
+        <conf name="runtime-xpp3" extends="runtime-base" description="XPP3 parser"/>
+        <conf name="tools" description="JiBX tools"/>
+        <conf name="extras" description="JiBX extras"/>
+        <conf name="dom4j" extends="extras" description="JiBX DOM4J support"/>
+        <conf name="default" extends="bind,runtime-xpp3,extras" description="Default configuration containing the usual stuff"/>
+    </configurations>
+
+    <publications>
+
+        <!-- JARs -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-bind" ivyde:javadoc="jibx-bind" name="jibx-bind" conf="bind"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-extras" ivyde:javadoc="jibx-extras" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-run" ivyde:javadoc="jibx-run" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-schema" ivyde:javadoc="jibx-schema" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jibx-tools" ivyde:javadoc="jibx-tools" name="jibx-tools" conf="tools"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="source" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="source" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="source" ext="zip" name="jibx-tools" conf="tools"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="jibx-bind" conf="bind"/>
+        <artifact type="javadoc" ext="zip" name="jibx-extras" conf="extras,dom4j"/>
+        <artifact type="javadoc" ext="zip" name="jibx-run" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-schema" conf="bind,runtime-base"/>
+        <artifact type="javadoc" ext="zip" name="jibx-tools" conf="tools"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.bcel" name="bcel" rev="6.0" conf="bind-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="1.2+" conf="*-&gt;default"/>
+        <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="dom4j-&gt;default"/>
+        <dependency org="org.xmlpull.xpp3" name="xpp3" rev="1.1.4c" conf="runtime-xpp3,tools-&gt;default"/>
+        <dependency org="javax.xml.stream" name="sjsxp" rev="1.0.2" conf="runtime-stax-&gt;default"/>
+        <dependency org="org.codehaus.qdox" name="qdox" rev="1.+" conf="tools-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3+" conf="tools-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

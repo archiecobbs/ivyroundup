@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jboss" module="javassist" revision="3.11.0" status="release" publication="20090702000000">
+        <license name="Mozilla Public License, Version 1.1" url="https://www.mozilla.org/en-US/MPL/1.1/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jboss/javassist/3.11.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://jboss-javassist.github.io/javassist/">
+
+        <p>
+        Javassist (<i>Java</i> programming <i>assistant</i>) is a
+        load-time reflective system for Java. It is a class library for
+        editing bytecodes in Java; it enables Java programs to define
+        a new class at runtime and to modify a class file before the
+        JVM loads it. Unlike other similar systems, Javassist provides
+        source-level abstraction; programmers can modify a class file
+        without detailed knowledge of the Java bytecode. They do not have
+        to even write an inserted bytecode sequence; Javassist instead
+        can compile a fragment of source text on line (for example,
+        just a single statement). This ease of use is a unique feature
+        of Javassit against other tools.
+        </p>
+
+        <p>
+        <b>Aspect Oriented Programming:</b> Javassist can be a good tool
+        for introducing new methods into a class and for inserting
+        before/after/around advice at the both caller and callee sides.
+        </p>
+
+        <p>
+        <b>Reflection:</b> One of applications of Javassist is runtime
+        reflection; Javassist enables Java programs to use a metaobject
+        that controls method calls on base-level objects. No specialized
+        compiler or virtual machine are needed.
+        </p>
+
+        <p>
+        <b>Remote method invocation:</b> Another application is remote method
+        invocation. Javassist enables applets to call a method on a
+        remote object running on the web server. Unlike the Java RMI,
+        the programmer does not need a stub compiler such as <code>rmic</code>;
+        the stub code is dynamically produced by Javassist.
+        </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

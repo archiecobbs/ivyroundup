@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas <spatialguru.net@gmail.com>
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.springframework" module="spring-integration" revision="1.0.2" status="release" publication="20090331181700">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.springframework/spring-integration/1.0.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://projects.spring.io/spring-integration/">Spring Integration
+        is a new addition to the Spring portfolio. It provides an extension of the Spring programming model
+        to support the well-known Enterprise Integration Patterns while building on the Spring Framework's
+        existing support for enterprise integration. It enables simple messaging within Spring-based
+        applications and integrates with external systems via simple adapters. Those adapters provide a
+        higher-level of abstraction over Spring's support for remoting, messaging, and scheduling. Spring
+        Integration's primary goal is to provide a simple model for building enterprise integration
+        solutions while maintaining the separation of concerns that is essential for producing maintainable,
+        testable code.</description>
+    </info>
+
+    <configurations>
+        <conf name="adapter" extends="core" description="Spring Integration Adapters"/>
+        <conf name="core" description="Spring Integration Core"/>
+        <conf name="event" extends="core" description="Spring Integration ApplicationEvent Support"/>
+        <conf name="file" extends="core" description="Spring Integration File Adapters"/>
+        <conf name="http" extends="adapter" description="Spring Integration HTTP Support"/>
+        <conf name="httpinvoker" extends="adapter" description="Spring Integration HttpInvoker Support"/>
+        <conf name="jms" extends="adapter" description="Spring Integration JMS Support"/>
+        <conf name="mail" extends="adapter" description="Spring Integration Mail Support"/>
+        <conf name="rmi" extends="adapter" description="Spring Integration RMI Support"/>
+        <conf name="security" extends="core" description="Spring Integration Security Support"/>
+        <conf name="stream" extends="core" description="Spring Integration Stream Support"/>
+        <conf name="ws" extends="httpinvoker,xml" description="Spring Integration Web Services Support"/>
+        <conf name="xml" extends="core" description="Spring Integration XML Support"/>
+        <conf name="default" description="Everything"/>
+    </configurations>
+    
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-adapter" conf="default,adapter"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-core" conf="default,core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-event" conf="default,event"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-file" conf="default,file"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-http" conf="default,http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-httpinvoker" conf="default,httpinvoker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-jms" conf="default,jms"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-mail" conf="default,mail"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-rmi" conf="default,rmi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-security" conf="default,security"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-stream" conf="default,stream"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-ws" conf="default,ws"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="spring-integration-xml" conf="default,xml"/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+    
+    <dependencies>
+        <dependency org="org.aopalliance" name="aopalliance" rev="1.+" conf="default,core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="1.1.+" conf="default,core-&gt;default"/>
+        <dependency org="javax.activation" name="jaf" rev="1.1.1" conf="default,ws-&gt;default"/>
+        <dependency org="javax.jms" name="jms" rev="1.1" conf="default,jms-&gt;default"/>
+        <dependency org="javax.mail" name="javamail" rev="1.4.1" conf="default,mail-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="default,httpinvoker-&gt;default"/>
+        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0" conf="default,xml-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="1.3" conf="default,security-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="3.2+" conf="default,security-&gt;default"/>
+        <dependency org="org.apache.ws.commons" name="XmlSchema" rev="[1.3.2,)" conf="default,xml-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="[2.5.6,3.0[" conf="default,core-&gt;tx;default,httpinvoker-&gt;web;default,jms-&gt;jms;default,mail-&gt;context-support;default,ws-&gt;webmvc"/>
+        <dependency org="org.springframework" name="spring-security" rev="2.0.+" conf="default,security-&gt;core"/>
+        <dependency org="org.springframework" name="spring-ws" rev="1.5.+" conf="default,ws-&gt;core">
+            <artifact name="spring-ws-core"/>
+            <artifact name="spring-oxm"/>
+            <artifact name="spring-xml"/>
+        </dependency>
+        <dependency org="org.apache.commons" name="commons-httpclient" rev="[3.1,4.0[" conf="default,http-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

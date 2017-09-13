@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dom4j" module="dom4j" revision="1.6.1" status="release" publication="20050516120000">
+        <license name="BSD License" url="http://www.dom4j.org/license.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dom4j/dom4j/1.6.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://dom4j.github.io">
+            dom4j is an easy to use, open source library for working
+            with XML, XPath and XSLT on the Java platform using the
+            Java Collections Framework and with full support for DOM,
+            SAX and JAXP.
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source"/>
+        <artifact name="source" type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.xerces" name="xerces" conf="default-&gt;apis" rev="[2.5,3.0["/>
+        <dependency org="org.codehaus.jaxen" name="jaxen" conf="default-&gt;default" rev="1.1.1"/>
+    </dependencies>
+
+</ivy-module>

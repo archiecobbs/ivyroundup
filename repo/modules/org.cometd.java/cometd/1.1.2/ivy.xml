@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.cometd.java" module="cometd" revision="1.1.2" status="release" publication="20100706203000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.cometd.java/cometd/1.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://cometd.org/">
+            CometD is a scalable HTTP-based event routing bus that uses a Ajax Push technology pattern known as Comet.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="api" description="API only"/>
+        <conf name="default" extends="api" description="Default config = API only"/>
+        <conf name="client" extends="server" description="Client module"/>
+        <conf name="oort" extends="client" description="Oort module"/>
+        <conf name="server" extends="api" description="Server module"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-api" ivyde:javadoc="cometd-api" name="cometd-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-client" ivyde:javadoc="cometd-java-client" name="cometd-java-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-oort" ivyde:javadoc="cometd-java-oort" name="cometd-java-oort" conf="oort"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cometd-java-server" ivyde:javadoc="cometd-java-server" name="cometd-java-server" conf="server"/>
+
+        <!-- source -->
+        <artifact name="cometd-api" type="source" ext="zip" conf="api"/>
+        <artifact name="cometd-java-client" type="source" ext="zip" conf="client"/>
+        <artifact name="cometd-java-oort" type="source" ext="zip" conf="oort"/>
+        <artifact name="cometd-java-server" type="source" ext="zip" conf="server"/>
+
+        <!-- javadoc -->
+        <artifact name="cometd-api" type="javadoc" ext="zip" conf="api"/>
+        <artifact name="cometd-java-client" type="javadoc" ext="zip" conf="client"/>
+        <artifact name="cometd-java-oort" type="javadoc" ext="zip" conf="oort"/>
+        <artifact name="cometd-java-server" type="javadoc" ext="zip" conf="server"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="client-&gt;default"/>
+        <dependency org="org.eclipse" name="jetty" rev="[7,)" conf="client-&gt;client,servlet;server-&gt;util,continuation"/>
+    </dependencies>
+
+</ivy-module>

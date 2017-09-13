@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="bixo" module="bixo" revision="0.9.1" status="release" publication="20131025134300">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/bixo/bixo/0.9.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://openbixo.org/">
+
+            <p>
+            Bixo is a flexable open source web mining toolkit that runs as a series of customizable Cascading pipes, which can be run on a single machine or on top of Hadoop. 
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core requirements"/>
+        <conf name="hadoop" extends="core" description="Hadoop support"/>
+        <conf name="local" extends="core" description="Standalone support"/>
+        <conf name="default" extends="hadoop,local" description="Hadoop and standalone support"/>
+        <conf name="app" extends="core" description="Support for the commandline application"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" conf="core"/>
+        <artifact conf="core" name="source" type="source" ext="zip"/>
+        <artifact conf="core" name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="cascading" name="cascading" rev="2.2.0" conf="core-&gt;core;local-&gt;local;hadoop-&gt;hadoop"/>
+        <dependency org="com.scaleunlimited" name="cascading-utils" rev="2.1.5" conf="core-&gt;default"/>
+        <dependency org="org.apache.httpcomponents" name="httpcore" rev="4.2.4" conf="core-&gt;core"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="4.2.5" conf="core-&gt;client,mime"/>
+        <dependency org="org.apache.tika" name="tika" rev="1.4" conf="core-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.14,1.3)" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0)" conf="core-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[2.1,3.0)" conf="core-&gt;default"/>
+        <dependency org="net.java.dev.args4j" name="args4j" rev="2.0.+" conf="app-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7.2" conf="core-&gt;log4j"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Oliver Mannion
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.ascape" module="ascape" revision="5.6.1" status="release" publication="20110428120000">
+        <license name="BSD" url="http://ascape.sourceforge.net/licenses/ascape-license.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.ascape/ascape/5.6.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://ascape.sourceforge.net/">
+
+            <p>
+            Ascape is an innovative tool for developing and exploring
+            general-purpose agent-based models. It is designed to be
+            flexible and powerful, but also approachable, easy to use and
+            expressive. Models can be developed in Ascape using far less
+            code than in other tools. Ascape models are easier to explore,
+            and profound changes to the models can be made with minimal code
+            changes. Ascape offers a broad array of modeling and visualization
+            tools.
+            </p>
+
+            <p>
+            A high-level framework supports complex model design, while
+            end-user tools make it possible for non-programmers to explore
+            many aspects of model dynamics. Ascape is written entirely in
+            Java, and should run on any Java-enabled platform. Whether you
+            are involved in academia, industry, or government, we hope that
+            you will find that Ascape enables your efforts to exploit the
+            profound insights agent-based models make possible.
+            </p>
+
+                </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

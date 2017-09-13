@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.glassfish.gmbal" module="gmbal" revision="3.2.0-b003" status="release" publication="20110727120000">
+        <license name="CDDL 1.0 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.glassfish.gmbal/gmbal/3.2.0-b003/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://java.net/projects/gmbal/pages/Home">
+
+            <p>
+            The GlassFish MBean Annotation Library (gmbal, pronounced "Gumball") is a library for using annotations to create Open MBeans. 
+            There is similar functionality in JSR 255 for JDK 7, but gmbal only requires JDK 5. Gmbal also supports JSR 77 ObjectNames and 
+            the GlassFish Version 3 AMX requirements for MBeans. As a consequence, gmbal-enabled classes will be fully manageable in GlassFish v3 
+            using the standard GlassFish v3 admin tools, while still being manageable with generic MBean tools when not run under GlassFish v3.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="api" description="API Only"/>
+        <conf name="default" extends="core,api" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <!-- jars -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gmbal" name="gmbal" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="gmbal-api" name="gmbal-api" conf="api"/>
+
+        <!-- source -->
+        <artifact name="gmbal" type="source" ext="jar" conf="core"/>
+        <artifact name="gmbal-api" type="source" ext="jar" conf="api"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.glassfish.external" name="management-api" rev="3.2.0-b001" conf="core,api-&gt;default"/>
+        <dependency org="org.glassfish.pfl" name="pfl" rev="3.2.0-b001" conf="core-&gt;basic,tf,tf-tools,basic-tools"/>
+    </dependencies>
+
+</ivy-module>

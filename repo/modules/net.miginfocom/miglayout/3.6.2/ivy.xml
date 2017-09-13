@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Vladimir Ritz Bossicard
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.miginfocom" module="miglayout" revision="3.6.2" status="release" publication="20081216120000">
+        <license name="BSD License" url="https://opensource.org/licenses/bsd-license.php"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.miginfocom/miglayout/3.6.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.miglayout.com/">
+
+        <p>
+        MigLayout is an extremely flexible layout manager that can be
+        used in many different ways to layout components using a single
+        and consistent API. </p>
+
+        <p>The main features are:</p>
+        <ul>
+          <li>String based constraints makes the layout code portable,
+          short, human readable and easy to implement for XUL and GUI
+          builders.</li>
+
+          <li>From v2.0 there is also an API to create constraints. This
+          means that whatever your preference is, String or API, you
+          can use Mig Layout to create your layouts. </li>
+
+          <li>MiG Layout is the most flexible layout engine to date,
+          capable of doing everything that <strong>all</strong> major
+          Layout Managers can, with one API.</li>
+
+          <li>Extensible Units that  can can be used to layout components
+          with everything from screen percentage to millimeters.</li>
+
+          <li>Docking, absolute positioning with component links and
+          powerful grid layout all in one layout manager.</li>
+
+          <li>GUI toolkit dependence put in three simple wrapper classes
+          makes MiG Layout trivial to port to for instance .NET or any
+          other GUI toolkit.</li>
+
+          <li>MiG Layout is free to use and is Open Source.</li>
+        </ul>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Swing and SWT support, plus demo and examples"/>
+        <conf name="swing" description="Swing-only version"/>
+        <conf name="swing-jdk14" description="Swing-only JDK 1.4 version"/>
+        <conf name="swt" description="SWT-only version"/>
+        <conf name="swt-jdk14" description="SWT-only JDK 1.4 version"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swing" conf="swing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swing-java14" conf="swing-jdk14"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swt" conf="swt"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="miglayout-swt-java14" conf="swt-jdk14"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

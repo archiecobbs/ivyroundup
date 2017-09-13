@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.xmlgraphics" module="batik" revision="1.7" status="release" publication="20080106120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.xmlgraphics/batik/1.7/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://xmlgraphics.apache.org/batik/">
+             <p>
+             Batik is a Java-based toolkit for applications or applets
+             that want to use images in the <a href="http://www.w3.org/TR/SVG11/">Scalable Vector Graphics (SVG)</a>
+             format for various purposes, such as display, generation
+             or manipulation.
+             </p>
+
+             <p>
+             The project's ambition is to give developers a set of core
+             modules that can be used together or individually to support
+             specific SVG solutions. Examples of modules are the SVG
+             Parser, the SVG Generator and the SVG DOM. Another ambition
+             for the Batik project is to make it highly extensible?for
+             example, Batik allows the developer to handle custom SVG
+             elements. Even though the goal of the project is to provide
+             a set of core modules, one of the deliverables is a full
+             fledged SVG browser implementation which validates the
+             various modules and their inter-operability.
+             </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="minimal" description="Minimal Batik stuff without any extras"/>
+        <conf name="core" extends="minimal" description="Minimal plus animation and Javascript support"/>
+        <conf name="default" extends="core" description="Full Batik: core plus Swing, extensions, transcoder"/>
+    <!--
+        <conf name="pdf" extends="default" description="Add support for PDF transcoding"/>
+    -->
+        <conf name="svggen" extends="minimal" description="Minimal plus SVG generator support"/>
+        <conf name="ttf2svg" extends="svggen" description="TrueType font to SVG converter application"/>
+        <conf name="slideshow" extends="core" description="Slideshow application"/>
+        <conf name="squiggle" extends="default" description="Squiggle SVG browser application"/>
+        <conf name="rasterizer" extends="default" description="SVG rasterizer application"/>
+        <conf name="svgpp" extends="default" description="SVG pretty-printer application"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-anim" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-awt-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-bridge" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-codec" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-css" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-dom" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-ext" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-extension" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-gui-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-gvt" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-parser" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-rasterizer" conf="rasterizer"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-script" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-slideshow" conf="slideshow"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-squiggle" conf="squiggle"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-svg-dom" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-svggen" conf="svggen"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-svgpp" conf="svgpp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-swing" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-transcoder" conf="default"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-ttf2svg" conf="ttf2svg"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-util" conf="minimal"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="batik-xml" conf="minimal"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency conf="core-&gt;default" org="org.mozilla" name="rhino" rev="1.+"/>
+        <dependency conf="core-&gt;ext-only" org="org.apache.xml" name="xml-commons-external" rev="1.+"/>
+        <dependency conf="core-&gt;apis,impl" org="org.apache.xerces" name="xerces" rev="[2.5,3.0["/>
+    <!--
+       <dependency conf="pdf->default" org="org.apache.fop" name="fop" rev="0.94+"/>
+    -->
+    </dependencies>
+
+</ivy-module>

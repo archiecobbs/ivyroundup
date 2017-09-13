@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/guava.jar" sha1="5bc66dd95b79db1e437eb08adba124a3e4088dc0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="f8b98e61865bed3c39b978ee3bf5c7fb990c4032"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="868171c189352f0f30d6048fd6644bcd53a09031"/>
+    </m2resource>
+    <m2resource artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="17db9cba72410110a02558741de7766939b864a0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="0176df589722b3212f4eda815020613b0ab971dc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="d58c58e8478cc8e053d3a26bed8da95b53a377d6"/>
+    </m2resource>
+    <m2resource artifactId="guava-testlib">
+        <artifact tofile="artifacts/jars/guava-testlib.jar" sha1="d2574744698a30c2a82bb157e454aed33a7e4d80"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-testlib.zip" sha1="e03a2bf08ed81b1aef383f7252e74e3b9c94de2f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-testlib.zip" sha1="6dcba349018743b0070503b2de15734cd255460a"/>
+    </m2resource>
+    <m2resource groupId="com/google/code/findbugs" artifactId="jsr305" version="2.0.0">
+        <artifact tofile="artifacts/jars/jsr305.jar" sha1="516c03b21d50a644d538de0f0369c620989cd8f0"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Gregory Fernandez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="httpcomponents-client-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/binary/${archive}-bin.tar.gz" sha1="e8b4b209715134f61fffe231bc51a1d2556a5884">
+	<!-- No Javadoc for 4.0.1 (See https://issues.apache.org/jira/browse/HTTPCLIENT-921) -->
+	<!-- Anyway, this should be the right setting for future release : 
+        <include name="${archive}/javadoc/**/*"/> -->
+    </resource>
+
+    <resource url="http://archive.apache.org/dist/httpcomponents/${name}/source/${archive}-src.tar.gz" sha1="be8750a8ab1a2c244b329fdcab5f2c27a1ebe2a9">
+        <include name="${archive}/httpmime/src/main/resources/**/*"/>
+        <include name="${archive}/httpmime/src/main/java/**/*"/>
+        <include name="${archive}/httpclient/src/main/resources/**/*"/>
+        <include name="${archive}/httpclient/src/main/java/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar"/>
+        <move file="archive/${archive}/lib/httpmime-${revision}.jar" tofile="artifacts/jars/httpmime.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/httpmime/src/main/resources"/>
+            <fileset dir="archive/${archive}/httpmime/src/main/java"/>
+            <fileset dir="archive/${archive}/httpclient/src/main/resources"/>
+            <fileset dir="archive/${archive}/httpclient/src/main/java"/>
+        </zip>
+
+        <!-- javadoc -->
+	<!-- 
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/javadoc"/>
+        </zip>
+	-->
+    </build>
+</packager-module>

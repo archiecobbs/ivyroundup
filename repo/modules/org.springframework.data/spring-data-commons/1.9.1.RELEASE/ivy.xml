@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.springframework.data" module="spring-data-commons" revision="1.9.1.RELEASE" status="release" publication="20141030120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.springframework.data/spring-data-commons/1.9.1.RELEASE/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/spring-projects/spring-data-commons">
+
+            <p>
+            Spring Data Commons is part of the umbrella Spring Data project that provides shared infrastructure across the Spring Data projects. It contains technology neutral repository interfaces as well as a metadata model for persisting Java classes.
+
+Features
+<ul>
+<li>Powerful Repository and custom object-mapping abstractions</li>
+<li>Support for cross-store persistence</li>
+<li>Dynamic query generation from query method names</li>
+<li>Implementation domain base classes providing basic properties</li>
+<li>Support for transparent auditing (created, last changed)</li>
+<li>Possibility to integrate custom repository code</li>
+<li>Easy Spring integration with custom namespace</li>
+</ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="All classes"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="jar"/>
+        <artifact name="javadoc" type="javadoc" ext="jar"/>
+    </publications>
+</ivy-module>

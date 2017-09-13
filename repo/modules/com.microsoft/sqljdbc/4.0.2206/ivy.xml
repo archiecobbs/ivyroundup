@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.microsoft" module="sqljdbc" revision="4.0.2206" status="release" publication="20120306120000">
+        <license name="Microsoft License" url="https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/license40.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.microsoft/sqljdbc/4.0.2206/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://msdn.microsoft.com/library/mt484311.aspx">
+
+            <p>
+            In our continued commitment to interoperability, Microsoft
+            has released the 4.0 version of the Microsoft JDBC Driver
+            for SQL Server. The Microsoft JDBC Driver 4.0 for SQL
+            Server download is available to all SQL Server users at
+            no additional charge, and provides access to Microsoft®
+            SQL Server® 2012, SQL Server 2008 R2, SQL Server 2008,
+            SQL Server 2005, and SQL Azure from any Java application,
+            application server, or Java-enabled applet. This is a Type
+            4 JDBC driver that provides database connectivity through
+            the standard JDBC application program interfaces (APIs)
+            available in Java Platform, Enterprise Edition 5 and 6.
+            </p>
+
+            <p>
+            This release of the JDBC Driver is JDBC 4.0 compliant
+            and runs on the Java Development Kit (JDK) version 5.0 or 6.0.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="jdk5" description="JDBC 3.0 version for Java 5.0"/>
+        <conf name="jdk6" description="JDBC 4.0 version for Java 6.0 and later"/>
+        <conf name="default" extends="jdk6"/>
+    </configurations>
+
+    <publications>
+        <artifact name="sqljdbc" conf="jdk5"/>
+        <artifact name="sqljdbc4" conf="jdk6"/>
+    </publications>
+
+</ivy-module>

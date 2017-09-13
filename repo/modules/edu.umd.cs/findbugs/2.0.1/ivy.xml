@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Mark Thomas
+    Copyright 2012 Danny Yates, Dalibor Novak
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="edu.umd.cs" module="findbugs" revision="2.0.1" status="release" publication="20120713120000">
+        <license name="Lesser GNU Public License" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/edu.umd.cs/findbugs/2.0.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://findbugs.sourceforge.net/">
+
+            <p>
+            FindBugs looks for bugs in Java programs.  It is based on the concept
+            of bug patterns.  A bug pattern is a code idiom that is often an error.
+            Bug patterns arise for a variety of reasons:
+            <ul>
+                <li>Difficult language features</li>
+                <li>Misunderstood API methods</li>
+                <li>Misunderstood invariants when code is modified during maintenance</li>
+                <li>Garden variety mistakes: typos, use of the wrong boolean operator</li>
+            </ul>
+            </p>
+
+            <p>
+            FindBugs uses static analysis to inspect Java bytecode for occurrences of
+            bug patterns.  Static analysis means that FindBugs can find bugs by simply
+            inspecting a program's code: executing the program is not necessary.
+            This makes FindBugs very easy to use: in general, you should be able to
+            use it to look for bugs in your code within a few minutes of downloading
+            it.  FindBugs works by analyzing Java bytecode (compiled class files),
+            so you don't even need the program's source code to use it.  Because its
+            analysis is sometimes imprecise, FindBugs can report false warnings,
+            which are warnings that do not indicate real errors.  In practice,
+            the rate of false warnings reported by FindBugs is less than 50%.
+            </p>
+
+            <p>
+            FindBugs supports a plugin architecture allowing anyone to add new bug detectors.
+            The <a href="http://findbugs.sourceforge.net/publications.html">publications page</a>
+            contains links to articles describing
+            how to write a new detector for FindBugs.  If you are familiar with
+            Java bytecode you can write a new FindBugs detector in as little as a
+            few minutes.
+            </p>
+
+            <p>
+            FindBugs is free software, available under the terms of the
+            <a href="http://www.gnu.org/copyleft/lesser.html">Lesser GNU Public License</a>.
+            It is written in Java, and can be run with any virtual
+            machine compatible with Sun's JDK 1.5.  It can analyze programs written
+            for any version of Java.  FindBugs was originally developed by Bill
+            Pugh and David Hovemeyer.  It is maintained by Bill Pugh, and a
+            <a href="http://findbugs.sourceforge.net/team.html">team of volunteers</a>.
+            </p>
+
+            <p>
+            FindBugs uses BCEL to analyze Java bytecode.  As of version 1.1,
+            FindBugs also supports bug detectors written using the
+            <a href="http://asm.objectweb.org/">ASM</a> bytecode framework.
+            FindBugs uses <a href="http://dom4j.org/">dom4j</a> for XML manipulation.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="tool" description="The FindBugs command-line/gui tool."/>
+        <conf name="ant" description="The FindBugs ant task." extends="tool"/>
+        <conf name="annotations" description="The FindBugs annotations."/>
+        <conf name="default" description="Everything." extends="ant, annotations"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="findbugs" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="findbugs-ant" conf="ant"/>
+        <artifact name="default" conf="tool" type="report" ext="xsl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="bcel" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jFormatString" conf="tool"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" name="jsr305" conf="annotations"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <!-- No prebuilt javadoc currently available. -->
+    </publications>
+
+    <dependencies>
+      <dependency org="org.objectweb.asm" name="asm" rev="3.1" conf="tool-&gt;default"/>
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.4" conf="tool-&gt;default"/>
+      <dependency org="org.dom4j" name="dom4j" rev="1.6.1" conf="tool-&gt;default"/>
+      <dependency org="org.codehaus.jaxen" name="jaxen" rev="1.1.1" conf="tool-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.googlecode.java-diff-utils" module="diffutils" revision="1.2.1" status="release" publication="20110707120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.googlecode.java-diff-utils/diffutils/1.2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/archive/p/java-diff-utils/">
+
+            <p>
+            Diff Utils library is an OpenSource library for performing the comparison
+            operations between texts: computing diffs, applying patches, generating
+            unified diffs or parsing them, generating diff output for easy future
+            displaying (like side-by-side view) and so on.
+            </p>
+
+            <p>
+            Main reason to build this library was the lack of easy-to-use
+            libraries with all the usual stuff you need while working with diff
+            files. Originally it was inspired by JRCS library and it's nice design
+            of diff module.  Main Features:
+
+            <ul>
+            <li>Computing the difference between two texts.</li>
+            <li>Capable to hand more than plain ASCII. Arrays or List of any type
+            that implements hashCode() and equals() correctly can be subject to
+            differencing using this library</li>
+            <li>Patch and unpatch the text with the given patch</li>
+            <li>Parsing the unified diff format</li>
+            <li>Producing human-readable differences </li>
+            </ul>
+            </p>
+
+            <p>
+            <b>Algorithms</b>
+            </p>
+
+            <p>
+            This library implements Myer's diff algorithm. But it can easily replaced
+            by any other which is better for handing your texts. I have plan to add
+            implementation of some in future.
+            </p>
+
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

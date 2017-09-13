@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.sourceforge.supercsv" module="supercsv" revision="2.0.1" status="release" publication="20121208120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.supercsv/supercsv/2.0.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://supercsv.sourceforge.net/">
+            <p>The main motivation for Super CSV is to be the <i>foremost, fastest, and most programmer-friendly, free CSV package for Java</i>.</p>
+
+            <h3>Features</h3>
+            <p>Super CSV offers the following features not found together in other CSV packages:</p>
+
+            <h4>POJO support</h4>
+            <p>Read or write using any old Javabean. Perform <i>deep mapping</i> and <i>index-based mapping</i> using the new Dozer extension! For the old-fashioned, you can read or write with Lists and Maps as well.</p>
+
+             <h4>Automatic CSV encoding</h4>
+             <p>Forget about handling special characters such as commas and double-quotes - Super CSV will take care of that for you! All content is properly escaped/un-escaped according to the <a href="http://supercsv.sourceforge.net/csv_specification.html">CSV specification</a>.</p>
+
+             <h4>Highly configurable</h4>
+             <p>Choose your own delimiter, quote character and line separator - or just use one of the predefined configurations. Comma-separated, tab-separated, semicolon-separated (Germany/Denmark) - it's all possible.</p>
+
+             <h4>Data conversion</h4>
+             <p>Powerful cell processors make it simple to parse input (to Booleans, Integers, Dates, etc), transform values (trimming Strings, doing regular expression replacement, etc) and format output like Dates and Numbers.</p>
+
+             <h4>Constraint validation</h4>
+             <p>Verify that your data conforms to one or more constraints, such as number ranges, string lengths or uniqueness.</p>
+
+             <h4>Stream-based I/O</h4>
+             <p>Operates on streams rather than filenames, and gives you the control to flush or close the streams when you want. Write to a file, over the network, to a zip file, whatever!</p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Super CSV core classes"/>
+        <conf name="dozer" description="Super CSV Dozer extension" extends="default"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact name="supercsv-dozer" type="jar" ext="jar" conf="dozer"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="source-dozer" type="source" ext="zip" conf="dozer"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact name="javadoc-dozer" type="javadoc" ext="zip" conf="dozer"/>
+    </publications>
+
+    <dependencies>
+       <dependency org="org.apache.commons" name="commons-beanutils" rev="1.8.3" conf="dozer-&gt;default"/>
+       <dependency org="org.apache.commons" name="commons-lang" rev="2.6" conf="dozer-&gt;default"/>
+       <dependency org="org.apache.commons" name="commons-logging" rev="1.1.1" conf="dozer-&gt;default"/>
+       <dependency org="net.sourceforge.dozer" name="dozer" rev="5.3.2" conf="dozer-&gt;default"/>
+       <dependency org="org.slf4j" name="slf4j" rev="1.7.2" conf="dozer-&gt;core"/>
+    </dependencies>
+
+</ivy-module>

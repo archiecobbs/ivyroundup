@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2016 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource groupId="junit">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="2973d150c0dc1fefe998f834810d68f278ea58ec"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="941a8be4506c65f0a9001c08812fb7da1e505e21"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa"/>
+    </m2resource>
+
+</packager-module>

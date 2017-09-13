@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/guava.jar" sha1="aca09d2e5e8416bf91550e72281958e35460be52"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="74949eedaf5f77499950d50549f2675407e03075"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="89852715f2647b4135fe1317e14100b31178b4c9"/>
+    </m2resource>
+    <m2resource artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="5cab1f71572becac653a2458b435edf6dd889e63"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="e7bb3cf27f5c8b876fe9f9ca830dd8088cadce0f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="f469edfc2803e76e8946d00bc3a285b16816dab4"/>
+    </m2resource>
+    <m2resource artifactId="guava-testlib">
+        <artifact tofile="artifacts/jars/guava-testlib.jar" sha1="cd6337010e26fc8bbacd0b795da08727eea3f791"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-testlib.zip" sha1="23e4f6da6d65af2a045d6a2fa48251c712286f6b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-testlib.zip" sha1="86448dc57ddd43e9c4ea4ed6df605f82960a4af0"/>
+    </m2resource>
+</packager-module>

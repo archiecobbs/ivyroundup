@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.logging.log4j" module="log4j" revision="2.0.2" status="release" publication="20140817000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.logging.log4j/log4j/2.0.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://logging.apache.org/log4j/2.x/">
+            <p>
+                Apache Log4j 2 is an upgrade to Log4j that provides significant improvements over its
+                predecessor, Log4j 1.x, and provides many of the improvements available in Logback
+                while fixing some inherent problems in Logback's architecture.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="1.2-api" extends="core" description="The Log4j 1.x Compatibility API"/>
+        <conf name="api" description="The Log4j API"/>
+        <conf name="core" extends="api" description="The Log4j Implementation"/>
+        <conf name="flume-ng" extends="core" description="Log4j 2.0 Flume Appender"/>
+        <conf name="jcl" extends="core" description="Log4j 2.0 Commons Logging Adapter"/>
+        <conf name="jmx-gui" extends="core" description="Swing-based client for remotely editing the log4j configuration and remotely monitoring StatusLogger output. Includes a JConsole plug-in."/>
+        <conf name="nosql" extends="core" description="Use NoSQL databases such as MongoDB and CouchDB to append log messages."/>
+        <conf name="slf4j-impl" extends="core" description="SLF4J API binding to Log4j 2 Core"/>
+        <conf name="taglib" extends="core" description="Apache Log4j Tag Library for Web Applications"/>
+        <conf name="to-slf4j" extends="api" description="Binding between LOG4J 2 API and SLF4J"/>
+        <conf name="web" extends="core" description="Support for Log4j in a web servlet container"/>
+        <conf name="default" extends="core" description="Alias for core configuration"/>
+        <conf name="json" extends="core" description="JSON support"/>
+        <conf name="yaml" extends="core" description="YAML support"/>
+        <conf name="xml" extends="core" description="XML layout and receiver support"/>
+        <conf name="async" extends="core" description="AsyncLoggers support"/>
+        <conf name="console-color" extends="core" description="Console color support in Windows"/>
+        <conf name="jms" extends="core" description="JMS appender support"/>
+        <conf name="smtp" extends="core" description="SMTP appender support"/>
+        <conf name="jpa" extends="core" description="JPA appender support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-1.2-api" ivyde:javadoc="log4j-1.2-api" name="log4j-1.2-api" conf="1.2-api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-api" ivyde:javadoc="log4j-api" name="log4j-api" conf="api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-core" ivyde:javadoc="log4j-core" name="log4j-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-flume-ng" ivyde:javadoc="log4j-flume-ng" name="log4j-flume-ng" conf="flume-ng"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-jcl" ivyde:javadoc="log4j-jcl" name="log4j-jcl" conf="jcl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-jmx-gui" ivyde:javadoc="log4j-jmx-gui" name="log4j-jmx-gui" conf="jmx-gui"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-nosql" ivyde:javadoc="log4j-nosql" name="log4j-nosql" conf="nosql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-slf4j-impl" ivyde:javadoc="log4j-slf4j-impl" name="log4j-slf4j-impl" conf="slf4j-impl"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-taglib" ivyde:javadoc="log4j-taglib" name="log4j-taglib" conf="taglib"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-to-slf4j" ivyde:javadoc="log4j-to-slf4j" name="log4j-to-slf4j" conf="to-slf4j"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="log4j-web" ivyde:javadoc="log4j-web" name="log4j-web" conf="web"/>
+
+        <!-- source -->
+        <artifact name="log4j-1.2-api" type="source" ext="zip" conf="1.2-api"/>
+        <artifact name="log4j-api" type="source" ext="zip" conf="api"/>
+        <artifact name="log4j-core" type="source" ext="zip" conf="core"/>
+        <artifact name="log4j-flume-ng" type="source" ext="zip" conf="flume-ng"/>
+        <artifact name="log4j-jcl" type="source" ext="zip" conf="jcl"/>
+        <artifact name="log4j-jmx-gui" type="source" ext="zip" conf="jmx-gui"/>
+        <artifact name="log4j-nosql" type="source" ext="zip" conf="nosql"/>
+        <artifact name="log4j-slf4j-impl" type="source" ext="zip" conf="slf4j-impl"/>
+        <artifact name="log4j-taglib" type="source" ext="zip" conf="taglib"/>
+        <artifact name="log4j-to-slf4j" type="source" ext="zip" conf="to-slf4j"/>
+        <artifact name="log4j-web" type="source" ext="zip" conf="web"/>
+
+        <!-- javadoc -->
+        <artifact name="log4j-1.2-api" type="javadoc" ext="zip" conf="1.2-api"/>
+        <artifact name="log4j-api" type="javadoc" ext="zip" conf="api"/>
+        <artifact name="log4j-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="log4j-flume-ng" type="javadoc" ext="zip" conf="flume-ng"/>
+        <artifact name="log4j-jcl" type="javadoc" ext="zip" conf="jcl"/>
+        <artifact name="log4j-jmx-gui" type="javadoc" ext="zip" conf="jmx-gui"/>
+        <artifact name="log4j-nosql" type="javadoc" ext="zip" conf="nosql"/>
+        <artifact name="log4j-slf4j-impl" type="javadoc" ext="zip" conf="slf4j-impl"/>
+        <artifact name="log4j-taglib" type="javadoc" ext="zip" conf="taglib"/>
+        <artifact name="log4j-to-slf4j" type="javadoc" ext="zip" conf="to-slf4j"/>
+        <artifact name="log4j-web" type="javadoc" ext="zip" conf="web"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.fasterxml" name="jackson" rev="[2.4.1,)" conf="xml-&gt;dataformat-xml;yaml-&gt;dataformat-yaml;json-&gt;databind"/>
+        <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="[4.3.0,)" conf="xml-&gt;default"/>
+        <dependency org="com.lmax.disruptor" name="disruptor" rev="[3.2.1,)" conf="async-&gt;default"/>
+        <dependency org="org.fusesource.jansi" name="jansi" rev="[0,)" conf="console-color-&gt;default"/>
+        <dependency org="javax.jms" name="jms" rev="[1.1,)" conf="jms-&gt;default"/>
+        <dependency org="javax.mail" name="javamail" rev="[1.4.0,)" conf="smtp-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="[1.0,)" conf="jpa-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.7,)" conf="slf4j-impl,to-slf4j-&gt;core"/>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.1,)" conf="jcl-&gt;default"/>
+    </dependencies>
+</ivy-module>

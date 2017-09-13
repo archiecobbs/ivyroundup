@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="extracted" value="archive/${archive}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}-2.2/${archive}.zip" sha1="3cce4de18739d680912b86d2a475a5aa4bad280a"/>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="${extracted}" includes="*-${revision}.jar"/>
+            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
+        </move>
+        <move todir="artifacts/sources">
+            <fileset dir="${extracted}" includes="*-${revision}-sources.jar"/>
+            <mapper type="glob" from="*-${revision}-sources.jar" to="*.zip"/>
+        </move>
+        <move todir="artifacts/javadocs">
+            <fileset dir="${extracted}" includes="*-${revision}-javadoc.jar"/>
+            <mapper type="glob" from="*-${revision}-javadoc.jar" to="*.zip"/>
+        </move>
+    </build>
+</packager-module>

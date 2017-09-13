@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2011 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource tofile="archive/${archive}/${archive}.jar" url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="9736dcbe852dda3ce263a9c6e33579cd5af203e5">
+    </resource>
+    <resource url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar" type="zip" dest="archive/${archive}/src" sha1="a77c716cf87da96016f4135a066d56da0575a864">
+    </resource>
+    <resource url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar" type="zip" dest="archive/${archive}/docs" sha1="6b37dcf375da308049ec0de1ca285e69a561876f">
+    </resource>
+    <build>
+
+        <!-- jar -->
+        <move file="archive/${archive}/${archive}.jar" tofile="artifacts/jars/${name}.jar"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src"/>
+        </zip>
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs"/>
+        </zip>
+
+    </build>
+</packager-module>

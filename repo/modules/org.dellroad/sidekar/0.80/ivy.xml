@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.dellroad" module="sidekar" revision="0.80" status="release" publication="20100212120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.dellroad/sidekar/0.80/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/archive/p/sidekar/">
+
+        <p>
+        Sidekar is an "object database" Java persistence solution. It
+        leverages the power and scalability of the
+        <a href="http://www.oracle.com/database/berkeley-db/je/index.html">Oracle Berkeley Database (Java Edition)</a>
+        while presenting a simple and natural Java programming
+        interface. Sidekar aims to make persistence technology fit the
+        Java world, instead of the other way around, so that persistence
+        becomes trivial for the Java programmer.
+        </p>
+
+        <p>
+        Sidekar is not <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">object-relational mapping</a>
+        (ORM) software; it does not rely on SQL. Beccause of this, it is dramatically simpler
+        and easier to work with than traditional ORM persistence layers. The core JAR file is only 375k.
+        </p>
+
+        <p>
+        Sidekar provides "natural" Java persistence, because you use normal Java
+        for everything related to persistence.
+        </p>
+
+        <p>
+        Key features include:
+        <ul>
+            <li>Simple (almost trivial) configuration and programming interface</li>
+            <li>True object database: Java object identity is equivalent to database identity</li>
+            <li>Persistent data is modeled by user-supplied Java classes</li>
+            <li>Support for collections: sets, lists, maps, etc.</li>
+            <li>Support for "joins" and indexes on one or more Java fields</li>
+            <li>No Java serialization required</li>
+            <li>Full transaction support with four isolation levels</li>
+            <li>Sophisticated support for schema changes, including schema verification and update tracking</li>
+            <li>Ability to export and import database in XML format</li>
+            <li>Based on the highly scalable <a href="http://www.oracle.com/database/berkeley-db/je/index.html">Oracle
+                Berkeley DB Java Edition</a> database engine</li>
+        </ul>
+        </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="util" description="Sidekar utility classes only"/>
+        <conf name="core" extends="util" description="Sidekar core classes"/>
+        <conf name="spring" extends="core,xml" description="Sidekar Spring integration classes"/>
+        <conf name="aop" extends="core" description="Sidekar AOP interceptors"/>
+        <conf name="xml" extends="core" description="Sidekar XML import/export"/>
+        <conf name="default" extends="core,spring,aop,xml" description="Default configuration containing all classes"/>
+    </configurations>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="xml" conf="xml"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc" name="aop" conf="aop"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.aopalliance" name="aopalliance" rev="[1.0,2.0)" conf="aop-&gt;default"/>
+        <dependency org="com.sleepycat" name="berkeley-db-java" rev="3.3.82" conf="core,util-&gt;default"/>
+        <dependency org="org.apache.log4j" name="log4j" rev="[1.2.15,1.3)" conf="core,util,xml-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="[3.0,3.1)" conf="spring-&gt;tx,web-servlet"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.2.1" conf="core-&gt;runtime-base;xml-&gt;runtime-xpp3"/>
+    </dependencies>
+
+</ivy-module>

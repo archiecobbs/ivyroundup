@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="simapi-java"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://apps.cybersource.com/library/downloads/cybersource_developer_kits/Java/All_Platforms/${archive}.zip" sha1="85fbc746673e89a050fd20e32c80a9ed0b7c90c5"/>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}/lib/" includes="cybs*.jar"/>
+        </move>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/api"/>
+        </zip>
+    </build>
+
+</packager-module>

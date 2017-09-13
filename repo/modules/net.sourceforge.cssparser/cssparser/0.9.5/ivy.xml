@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Joshua Tharp
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="net.sourceforge.cssparser" module="cssparser" revision="0.9.5" status="release" publication="20090420000000">
+        <license name="GNU Lesser General Public License" url="http://www.gnu.org/copyleft/lesser.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/net.sourceforge.cssparser/cssparser/0.9.5/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://cssparser.sourceforge.net/">
+The CSS Parser is implemented as a package of Java classes, that inputs Cascadin
+g Style Sheets Level 2 source text and outputs a Document Object Model Level 2 S
+tyle tree. Alternatively, applications can use SAC: The Simple API for CSS. Its 
+purpose is to allow developers working with Java to incorporate Cascading Style 
+Sheet information, primarily in conjunction with XML application developments.
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="cssparser-source"/>
+        <artifact name="cssparser-source" type="source" ext="jar"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.xerces" name="xerces" rev="2.9+" conf="default-&gt;impl,apis"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="bin" value="${name}-${revision}"/>
+    <property name="src" value="${name}-src-${revision}"/>
+    <property name="doc" value="${name}-docs-${revision}"/>
+
+    <property name="backup" value="http://archive.apache.org/dist"/>
+
+    <resource url="${backup}/xmlgraphics/batik/${bin}.zip" sha1="8004d12420e98f6074481f19f81a35b73a880e70">
+        <include name="${name}-${revision}/*.jar"/>
+        <include name="${name}-${revision}/lib/*.jar"/>
+    </resource>
+    <resource url="${backup}/xmlgraphics/batik/${src}.zip" sha1="d04ece76f29aad2a4ae1773b161f41a15011f61b">
+        <include name="xml-batik/sources/**/*"/>
+        <include name="xml-batik/resources/**/*"/>
+    </resource>
+    <resource url="${backup}/xmlgraphics/batik/${doc}.zip" sha1="e8970fa2c99f9ec61d9a8e23f1f844ac3ae239a5"/>
+
+    <build>
+        <!-- jars -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${name}-${revision}">
+                <include name="batik-*.jar"/>
+            </fileset>
+            <fileset dir="archive/${name}-${revision}/lib">
+                <include name="batik-*.jar"/>
+            </fileset>
+        </move>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/xml-batik/sources"/>
+            <fileset dir="archive/xml-batik/resources"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/docs/javadoc"/>
+        </zip>
+    </build>
+</packager-module>

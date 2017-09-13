@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Archie L. Cobbs
+    Copyright 2013 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <m2resource groupId="junit">
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="1013627e3993319870863a020034004717505815"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}.zip" sha1="b9f4021d0314ceb123cf28d5eac542343824bfe9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}.zip" sha1="84b903feddab2bd58f5ab2fc0c5c636df42df74d"/>
+    </m2resource>
+
+</packager-module>

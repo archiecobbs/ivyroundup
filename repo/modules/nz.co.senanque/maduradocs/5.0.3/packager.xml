@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Roger Parkinson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="download.name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${download.name}-${revision}"/>
+
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${download.name}/${download.name}-${revision}.zip" sha1="18c86708592e5e7d4bb897a9ed04fbcf1b293ea8"/>
+
+    <build>
+        <mkdir dir="artifacts/xmls"/>
+        <move file="archive/MaduraDocs.pdf" tofile="artifacts/xmls/MaduraDocs.pdf"/>
+        <move file="archive/build-pdf.xml" tofile="artifacts/xmls/build-pdf.xml"/>
+        <move file="archive/build-word.xml" tofile="artifacts/xmls/build-word.xml"/>
+        <move file="archive/logsample.txt" tofile="artifacts/xmls/logsample.txt"/>
+        <move file="archive/MaduraDoc.xsd" tofile="artifacts/xmls/MaduraDoc.xsd"/>
+        <move file="archive/MaduraHTML.xsl" tofile="artifacts/xmls/MaduraHTML.xsl"/>
+        <move file="archive/MaduraPDF.xsl" tofile="artifacts/xmls/MaduraPDF.xsl"/>
+        <move file="archive/style.xsl" tofile="artifacts/xmls/style.xsl"/>
+        <move file="archive/note.png" tofile="artifacts/xmls/note.png"/>
+        <move file="archive/rant.gif" tofile="artifacts/xmls/rant.gif"/>
+        <move file="archive/warning.gif" tofile="artifacts/xmls/warning.gif"/>
+        <move file="archive/translate.jar" tofile="artifacts/jars/translate.jar"/>
+    </build>
+
+</packager-module>

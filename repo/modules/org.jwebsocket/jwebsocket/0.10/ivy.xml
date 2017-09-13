@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.jwebsocket" module="jwebsocket" revision="0.10" status="release" publication="20100818113600">
+        <license name="GNU LGPL License Version 3.0" url="http://www.gnu.org/licenses/lgpl.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.jwebsocket/jwebsocket/0.10/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://jwebsocket.org/">
+            <p>
+                jWebSocket is a pure Java/JavaScript high speed bidirectional communication solution for the Web - secure, reliable and fast
+            </p>
+            <p>
+                jWebSocket is provided to you to create innovative HTML5 based streaming and communication applications on the web.
+                HTML5 WebSockets will replace the existing XHR approaches as well as Comet services by a new flexible and ultra high speed
+                bidirectional TCP socket communication technology. jWebSocket is an open source Java and JavaScript implementation of the
+                HTML5 WebSocket protocol with a huge set of extensions.
+            </p>
+            <p>
+                jWebSocket provides multiple socket server implementations.  This Ivy module only includes support for the NIO implementation.
+                Other options include JBoss Netty, Jetty, and MINA.  Please review the website for details.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="common" description="Common classes"/>
+        <conf name="client-api" extends="common" description="Client API classes"/>
+        <conf name="socketserver-api" extends="common" description="Socket Server API classes"/>
+        <conf name="socketserver" extends="socketserver-api" description="Socket Server classes"/>
+        <conf name="swing-gui" extends="javase-client" description="Swing GUI classes"/>
+        <conf name="javase-client" extends="client-api" description="JavaSE / Android Client classes"/>
+        <conf name="javascript-client" description="Javascript Client"/>
+        <conf name="default" extends="socketserver,javase-client,swing-gui,javascript-client" description="Everything"/>
+    </configurations>
+
+    <publications>
+        <!-- jars -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-common" name="jwebsocket-common" conf="common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-swing-gui" name="jwebsocket-swing-gui" conf="swing-gui"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-javase-client" name="jwebsocket-javase-client" conf="javase-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-socketserver" name="jwebsocket-socketserver" conf="socketserver"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-socketserver-api" name="jwebsocket-socketserver-api" conf="socketserver-api"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jwebsocket-client-api" name="jwebsocket-client-api" conf="client-api"/>
+
+        <!-- javascripts -->
+        <artifact type="javascript" ext="js" conf="javascript-client"/>
+
+        <!-- sources -->
+        <artifact name="jwebsocket-common" type="source" ext="zip" conf="common"/>
+        <artifact name="jwebsocket-swing-gui" type="source" ext="zip" conf="swing-gui"/>
+        <artifact name="jwebsocket-javase-client" type="source" ext="zip" conf="javase-client"/>
+        <artifact name="jwebsocket-socketserver" type="source" ext="zip" conf="socketserver"/>
+        <artifact name="jwebsocket-socketserver-api" type="source" ext="zip" conf="socketserver-api"/>
+        <artifact name="jwebsocket-client-api" type="source" ext="zip" conf="client-api"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.json" name="json" rev="20090211" conf="common-&gt;default"/>
+        <dependency org="org.javolution" name="javolution" rev="5.+" conf="common-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[1.4,2.0[" conf="socketserver-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.4,2.0[" conf="socketserver-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.5,)" conf="socketserver-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

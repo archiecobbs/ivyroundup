@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Steve Newson.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.glassfish.jersey" module="jersey" revision="2.1" status="release" publication="20130718120000">
+        <license name="CDDL 1.1 + GPL" url="https://glassfish.java.net/public/CDDL+GPL.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.glassfish.jersey/jersey/2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://jersey.java.net/">
+            <p>
+                Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation
+                for building RESTful Web services. But, it is also more than the Reference Implementation.
+                Jersey provides an API so that developers may extend Jersey to suite their needs. The
+                governance policy is the same as the one used in the GlassFish project. We also use the
+                same two licenses - CDDL 1.1 and GPL 2 with CPE - so, you can pick which one suites your
+                needs better.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <!-- Core configurations -->
+        <conf name="common" description="Common classes"/>
+        <conf name="client" extends="common" description="Client implementation"/>
+        <conf name="server" extends="common,client" description="Server implementation"/>
+
+        <!-- Containers -->
+        <conf name="container-servlet-core" extends="server" description="Servlet core"/>
+        <conf name="container-grizzly2-http" description="Grizzly 2 HTTP Container"/>
+        <conf name="container-grizzly2-servlet" extends="container-servlet,container-grizzly2-http" description="Grizzly 2 Servlet Container"/>
+        <conf name="container-jdk-http" description="JDK HTTP Container"/>
+        <conf name="container-servlet" extends="container-servlet-core" description="Servlet 3.x implementation"/>
+        <conf name="container-simple-http" description="Simple HTTP Container"/>
+
+        <!-- Connectors -->
+        <conf name="grizzly-connector" extends="client" description="Jersey Client Transport via Grizzly"/>
+        <conf name="apache-connector" extends="client" description="Jersey Client Transport via Apache"/>
+
+        <!-- Media -->
+        <conf name="json-jackson" description="Jackson JSON entity providers support module"/>
+        <conf name="json-jettison" description="Jettison JSON entity providers support module"/>
+        <conf name="json-processing" description="JSON-P (JSR 353) entity providers support proxy module"/>
+        <conf name="json-moxy" description="JSON entity providers support module based on EclipseLink MOXy"/>
+        <conf name="media-multipart" extends="server" description="Multipart entity providers support module"/>
+        <conf name="media-sse" extends="server" description="Server Sent Events entity providers support module"/>
+
+        <!-- Extensions -->
+        <conf name="ext-bean-validation" extends="server,common" description="Extension module providing support for Bean Validation (JSR 349) API"/>
+        <conf name="ext-mvc" extends="server" description="Extension module providing support for MVC"/>
+        <conf name="ext-mvc-freemarker" extends="ext-mvc" description="Extension module providing support for Freemarker templates"/>
+        <conf name="ext-mvc-jsp" extends="ext-mvc,container-servlet-core" description="Extension module providing support for JSP templates"/>
+        <conf name="ext-proxy-client" extends="common" description="Extension module providing support for (proxy-based) high-level client API"/>
+        <conf name="ext-servlet-portability" description="Extension module providing support for writing applications which run with both Jersey 1.X and 2.X servlet containers"/>
+        <conf name="ext-wadl-doclet" extends="server" description="A doclet that generates a resourcedoc XML file containing the javadoc documentation of resource classes"/>
+
+        <!-- Test Framework -->
+        <conf name="test-framework-core" extends="server" description="Test Framework - Core"/>
+        <conf name="test-framework-provider-default-client" extends="client" description="Test Framework - Default Client Provider"/>
+        <conf name="test-framework-provider-external" extends="server,client" description="Test Framework - External Container"/>
+        <conf name="test-framework-provider-grizzly2" extends="container-grizzly2-http" description="Test Framework - Grizzly 2 Container"/>
+        <conf name="test-framework-provider-inmemory" extends="server,client" description="Test Framework - In Memory Container"/>
+        <conf name="test-framework-provider-jdk-http" extends="server,client,container-jdk-http" description="Test Framework - JDK HTTP Container"/>
+        <conf name="test-framework-provider-simple" extends="server,client,container-simple-http" description="Test Framework - Simple HTTP Container"/>
+
+        <conf name="default" extends="server" description="Default server implementation without any containers, connectors, media extensions or the test framework"/>
+    </configurations>
+
+    <publications>
+        <!-- jars -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-common" ivyde:javadoc="jersey-common" name="jersey-common" conf="common"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-client" ivyde:javadoc="jersey-client" name="jersey-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-server" ivyde:javadoc="jersey-server" name="jersey-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-container-grizzly2-http" ivyde:javadoc="jersey-container-grizzly2-http" name="jersey-container-grizzly2-http" conf="container-grizzly2-http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-container-grizzly2-servlet" ivyde:javadoc="jersey-container-grizzly2-servlet" name="jersey-container-grizzly2-servlet" conf="container-grizzly2-servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-container-jdk-http" ivyde:javadoc="jersey-container-jdk-http" name="jersey-container-jdk-http" conf="container-jdk-http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-container-servlet" ivyde:javadoc="jersey-container-servlet" name="jersey-container-servlet" conf="container-servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-container-simple-http" ivyde:javadoc="jersey-container-simple-http" name="jersey-container-simple-http" conf="container-simple-http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-grizzly-connector" ivyde:javadoc="jersey-grizzly-connector" name="jersey-grizzly-connector" conf="grizzly-connector"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-apache-connector" ivyde:javadoc="jersey-apache-connector" name="jersey-apache-connector" conf="apache-connector"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-media-multipart" ivyde:javadoc="jersey-media-multipart" name="jersey-media-multipart" conf="media-multipart"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-media-sse" ivyde:javadoc="jersey-media-sse" name="jersey-media-sse" conf="media-sse"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-bean-validation" ivyde:javadoc="jersey-bean-validation" name="jersey-bean-validation" conf="ext-bean-validation"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-mvc" ivyde:javadoc="jersey-mvc" name="jersey-mvc" conf="ext-mvc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-mvc-freemarker" ivyde:javadoc="jersey-mvc-freemarker" name="jersey-mvc-freemarker" conf="ext-mvc-freemarker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-mvc-jsp" ivyde:javadoc="jersey-mvc-jsp" name="jersey-mvc-jsp" conf="ext-mvc-jsp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-proxy-client" ivyde:javadoc="jersey-proxy-client" name="jersey-proxy-client" conf="ext-proxy-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-servlet-portability" ivyde:javadoc="jersey-servlet-portability" name="jersey-servlet-portability" conf="ext-servlet-portability"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-wadl-doclet" ivyde:javadoc="jersey-wadl-doclet" name="jersey-wadl-doclet" conf="ext-wadl-doclet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-core" ivyde:javadoc="jersey-test-framework-core" name="jersey-test-framework-core" conf="test-framework-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-default-client" name="jersey-test-framework-provider-default-client" conf="test-framework-provider-default-client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-external" ivyde:javadoc="jersey-test-framework-provider-external" name="jersey-test-framework-provider-external" conf="test-framework-provider-external"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-grizzly2" ivyde:javadoc="jersey-test-framework-provider-grizzly2" name="jersey-test-framework-provider-grizzly2" conf="test-framework-provider-grizzly2"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-inmemory" ivyde:javadoc="jersey-test-framework-provider-inmemory" name="jersey-test-framework-provider-inmemory" conf="test-framework-provider-inmemory"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-jdk-http" ivyde:javadoc="jersey-test-framework-provider-jdk-http" name="jersey-test-framework-provider-jdk-http" conf="test-framework-provider-jdk-http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jersey-test-framework-provider-simple" ivyde:javadoc="jersey-test-framework-provider-simple" name="jersey-test-framework-provider-simple" conf="test-framework-provider-simple"/>
+
+        <!-- source -->
+        <artifact name="jersey-common" type="source" ext="jar" conf="common"/>
+        <artifact name="jersey-client" type="source" ext="jar" conf="client"/>
+        <artifact name="jersey-server" type="source" ext="jar" conf="server"/>
+        <artifact name="jersey-container-grizzly2-http" type="source" ext="jar" conf="container-grizzly2-http"/>
+        <artifact name="jersey-container-grizzly2-servlet" type="source" ext="jar" conf="container-grizzly2-servlet"/>
+        <artifact name="jersey-container-jdk-http" type="source" ext="jar" conf="container-jdk-http"/>
+        <artifact name="jersey-container-servlet" type="source" ext="jar" conf="container-servlet"/>
+        <artifact name="jersey-container-simple-http" type="source" ext="jar" conf="container-simple-http"/>
+        <artifact name="jersey-grizzly-connector" type="source" ext="jar" conf="grizzly-connector"/>
+        <artifact name="jersey-apache-connector" type="source" ext="jar" conf="apache-connector"/>
+        <artifact name="jersey-media-multipart" type="source" ext="jar" conf="media-multipart"/>
+        <artifact name="jersey-media-sse" type="source" ext="jar" conf="media-sse"/>
+        <artifact name="jersey-bean-validation" type="source" ext="jar" conf="ext-bean-validation"/>
+        <artifact name="jersey-mvc" type="source" ext="jar" conf="ext-mvc"/>
+        <artifact name="jersey-mvc-freemarker" type="source" ext="jar" conf="ext-mvc-freemarker"/>
+        <artifact name="jersey-mvc-jsp" type="source" ext="jar" conf="ext-mvc-jsp"/>
+        <artifact name="jersey-proxy-client" type="source" ext="jar" conf="ext-proxy-client"/>
+        <artifact name="jersey-servlet-portability" type="source" ext="jar" conf="ext-servlet-portability"/>
+        <artifact name="jersey-wadl-doclet" type="source" ext="jar" conf="ext-wadl-doclet"/>
+        <artifact name="jersey-test-framework-core" type="source" ext="jar" conf="test-framework-core"/>
+        <artifact name="jersey-test-framework-provider-default-client" type="source" ext="jar" conf="test-framework-provider-default-client"/>
+        <artifact name="jersey-test-framework-provider-external" type="source" ext="jar" conf="test-framework-provider-external"/>
+        <artifact name="jersey-test-framework-provider-grizzly2" type="source" ext="jar" conf="test-framework-provider-grizzly2"/>
+        <artifact name="jersey-test-framework-provider-inmemory" type="source" ext="jar" conf="test-framework-provider-inmemory"/>
+        <artifact name="jersey-test-framework-provider-jdk-http" type="source" ext="jar" conf="test-framework-provider-jdk-http"/>
+        <artifact name="jersey-test-framework-provider-simple" type="source" ext="jar" conf="test-framework-provider-simple"/>
+
+        <!-- javadoc -->
+        <artifact name="jersey-common" type="javadoc" ext="jar" conf="common"/>
+        <artifact name="jersey-client" type="javadoc" ext="jar" conf="client"/>
+        <artifact name="jersey-server" type="javadoc" ext="jar" conf="server"/>
+        <artifact name="jersey-container-grizzly2-http" type="javadoc" ext="jar" conf="container-grizzly2-http"/>
+        <artifact name="jersey-container-grizzly2-servlet" type="javadoc" ext="jar" conf="container-grizzly2-servlet"/>
+        <artifact name="jersey-container-jdk-http" type="javadoc" ext="jar" conf="container-jdk-http"/>
+        <artifact name="jersey-container-servlet" type="javadoc" ext="jar" conf="container-servlet"/>
+        <artifact name="jersey-container-simple-http" type="javadoc" ext="jar" conf="container-simple-http"/>
+        <artifact name="jersey-grizzly-connector" type="javadoc" ext="jar" conf="grizzly-connector"/>
+        <artifact name="jersey-apache-connector" type="javadoc" ext="jar" conf="apache-connector"/>
+        <artifact name="jersey-media-multipart" type="javadoc" ext="jar" conf="media-multipart"/>
+        <artifact name="jersey-media-sse" type="javadoc" ext="jar" conf="media-sse"/>
+        <artifact name="jersey-bean-validation" type="javadoc" ext="jar" conf="ext-bean-validation"/>
+        <artifact name="jersey-mvc" type="javadoc" ext="jar" conf="ext-mvc"/>
+        <artifact name="jersey-mvc-freemarker" type="javadoc" ext="jar" conf="ext-mvc-freemarker"/>
+        <artifact name="jersey-mvc-jsp" type="javadoc" ext="jar" conf="ext-mvc-jsp"/>
+        <artifact name="jersey-proxy-client" type="javadoc" ext="jar" conf="ext-proxy-client"/>
+        <artifact name="jersey-servlet-portability" type="javadoc" ext="jar" conf="ext-servlet-portability"/>
+        <artifact name="jersey-wadl-doclet" type="javadoc" ext="jar" conf="ext-wadl-doclet"/>
+        <artifact name="jersey-test-framework-core" type="javadoc" ext="jar" conf="test-framework-core"/>
+        <artifact name="jersey-test-framework-provider-external" type="javadoc" ext="jar" conf="test-framework-provider-external"/>
+        <artifact name="jersey-test-framework-provider-grizzly2" type="javadoc" ext="jar" conf="test-framework-provider-grizzly2"/>
+        <artifact name="jersey-test-framework-provider-inmemory" type="javadoc" ext="jar" conf="test-framework-provider-inmemory"/>
+        <artifact name="jersey-test-framework-provider-jdk-http" type="javadoc" ext="jar" conf="test-framework-provider-jdk-http"/>
+        <artifact name="jersey-test-framework-provider-simple" type="javadoc" ext="jar" conf="test-framework-provider-simple"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="13.0" conf="common,client,server-&gt;default"/>
+        <dependency org="javax.inject" name="inject" rev="1" conf="common,client,server,container-servlet-core,container-grizzly2-http,container-simple-http,media-multipart,media-sse,ext-bean-validation,ext-mvc,ext-mvc-jsp-&gt;default"/>
+        <dependency org="org.glassfish.hk2" name="hk2" rev="2.2.0-b10" conf="common,client,server-&gt;api,locator"/>
+        <dependency org="org.glassfish.hk2" name="osgi-resource-locator" rev="1.0.1" conf="common-&gt;default"/>
+        <dependency org="org.glassfish.grizzly" name="grizzly" rev="2.3.4" conf="container-grizzly2-http-&gt;http-server,http-servlet"/>
+        <dependency org="org.glassfish.grizzly" name="grizzly" rev="2.3.4" conf="grizzly-connector-&gt;websockets,http-client"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="2.3.19" conf="ext-mvc-freemarker-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="[3.0.0,4.4)" conf="ext-bean-validation-&gt;default"/>
+        <dependency org="org.apache.httpcomponents" name="httpclient" rev="[4.0,4.3)" conf="apache-connector-&gt;default"/>
+        <dependency org="org.jvnet.mimepull" name="mimepull" rev="1.7" conf="media-multipart-&gt;default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="2.6.2" conf="ext-wadl-doclet-&gt;impl"/>
+        <dependency org="org.simpleframework" name="simple" rev="5.1.5" conf="container-simple-http-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

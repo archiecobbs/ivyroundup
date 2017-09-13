@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.drools" module="drools" revision="5.5.0.Final" status="release" publication="20121112000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.drools/drools/5.5.0.Final/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.drools.org/">
+            <p>
+                JBoss Drools rules engine
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="ant" extends="verifier,decisiontables" description="ANT tasks for Drools, jBPM and Guvnor"/>
+        <conf name="benchmark" extends="compiler" description="Drools Benchmark"/>
+        <conf name="camel" extends="spring" description="Drools integration for Camel that provides an integration framework based on known Enterprise Integration Pattern"/>
+        <conf name="clips" extends="compiler" description="Drools :: Clips"/>
+        <conf name="compiler" extends="core" description="Drools :: Compiler"/>
+        <conf name="core" description="Drools :: Core"/>
+        <conf name="decisiontables" extends="templates" description="Drools :: Decision Tables"/>
+        <conf name="grid" extends="compiler" description="Drools :: Drools Grid Impl"/>
+        <conf name="jsr94" extends="decisiontables" description="Implements the JSR-94 API with Drools"/>
+        <conf name="persistence-jpa" extends="compiler" description="JPA implementation for Drools"/>
+        <conf name="pipeline" extends="grid" description="Legacy alternative to drools-camel"/>
+        <conf name="rhq-plugin" description="RHQ/JOPR plugin that monitors Drools defined MBeans"/>
+        <conf name="scorecards" extends="templates" description="Add support for PMML scorecards"/>
+        <conf name="simulator" extends="compiler" description="Drools Simulator"/>
+        <conf name="spring" extends="decisiontables" description="Drools and jBPM integration for Spring"/>
+        <conf name="templates" extends="compiler" description="Drools :: Templates"/>
+        <conf name="verifier" extends="compiler" description="Drools Verifier analyses the quality of Drools rules and reports any issues"/>
+        <conf name="default" extends="compiler" description="Core + Compiler classes"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-ant" ivyde:javadoc="drools-ant" name="drools-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-benchmark" ivyde:javadoc="drools-benchmark" name="drools-benchmark" conf="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-camel" ivyde:javadoc="drools-camel" name="drools-camel" conf="camel"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-clips" ivyde:javadoc="drools-clips" name="drools-clips" conf="clips"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-compiler" ivyde:javadoc="drools-compiler" name="drools-compiler" conf="compiler"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-core" ivyde:javadoc="drools-core" name="drools-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-decisiontables" ivyde:javadoc="drools-decisiontables" name="drools-decisiontables" conf="decisiontables"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-grid-impl" ivyde:javadoc="drools-grid-impl" name="drools-grid-impl" conf="grid"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-jsr94" ivyde:javadoc="drools-jsr94" name="drools-jsr94" conf="jsr94"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-persistence-jpa" ivyde:javadoc="drools-persistence-jpa" name="drools-persistence-jpa" conf="persistence-jpa"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-pipeline" ivyde:javadoc="drools-pipeline" name="drools-pipeline" conf="pipeline"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-rhq-plugin" name="drools-rhq-plugin" conf="rhq-plugin"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-scorecards" ivyde:javadoc="drools-scorecards" name="drools-scorecards" conf="scorecards"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-simulator" ivyde:javadoc="drools-simulator" name="drools-simulator" conf="simulator"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-spring" ivyde:javadoc="drools-spring" name="drools-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-templates" ivyde:javadoc="drools-templates" name="drools-templates" conf="templates"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="drools-verifier" ivyde:javadoc="drools-verifier" name="drools-verifier" conf="verifier"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="knowledge-api" ivyde:javadoc="knowledge-api" name="knowledge-api" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="knowledge-internal-api" ivyde:javadoc="knowledge-internal-api" name="knowledge-internal-api" conf="core"/>
+
+        <!-- source -->
+        <artifact name="drools-ant" type="source" ext="zip" conf="ant"/>
+        <artifact name="drools-benchmark" type="source" ext="zip" conf="benchmark"/>
+        <artifact name="drools-camel" type="source" ext="zip" conf="camel"/>
+        <artifact name="drools-clips" type="source" ext="zip" conf="clips"/>
+        <artifact name="drools-compiler" type="source" ext="zip" conf="compiler"/>
+        <artifact name="drools-core" type="source" ext="zip" conf="core"/>
+        <artifact name="drools-decisiontables" type="source" ext="zip" conf="decisiontables"/>
+        <artifact name="drools-grid-impl" type="source" ext="zip" conf="grid"/>
+        <artifact name="drools-jsr94" type="source" ext="zip" conf="jsr94"/>
+        <artifact name="drools-persistence-jpa" type="source" ext="zip" conf="persistence-jpa"/>
+        <artifact name="drools-pipeline" type="source" ext="zip" conf="pipeline"/>
+        <artifact name="drools-rhq-plugin" type="source" ext="zip" conf="rhq-plugin"/>
+        <artifact name="drools-scorecards" type="source" ext="zip" conf="scorecards"/>
+        <artifact name="drools-simulator" type="source" ext="zip" conf="simulator"/>
+        <artifact name="drools-spring" type="source" ext="zip" conf="spring"/>
+        <artifact name="drools-templates" type="source" ext="zip" conf="templates"/>
+        <artifact name="drools-verifier" type="source" ext="zip" conf="verifier"/>
+        <artifact name="knowledge-api" type="source" ext="zip" conf="core"/>
+        <artifact name="knowledge-internal-api" type="source" ext="zip" conf="core"/>
+
+        <!-- javadoc -->
+        <artifact name="drools-ant" type="javadoc" ext="zip" conf="ant"/>
+        <artifact name="drools-benchmark" type="javadoc" ext="zip" conf="benchmark"/>
+        <artifact name="drools-camel" type="javadoc" ext="zip" conf="camel"/>
+        <artifact name="drools-clips" type="javadoc" ext="zip" conf="clips"/>
+        <artifact name="drools-compiler" type="javadoc" ext="zip" conf="compiler"/>
+        <artifact name="drools-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="drools-decisiontables" type="javadoc" ext="zip" conf="decisiontables"/>
+        <artifact name="drools-grid-impl" type="javadoc" ext="zip" conf="grid"/>
+        <artifact name="drools-jsr94" type="javadoc" ext="zip" conf="jsr94"/>
+        <artifact name="drools-persistence-jpa" type="javadoc" ext="zip" conf="persistence-jpa"/>
+        <artifact name="drools-pipeline" type="javadoc" ext="zip" conf="pipeline"/>
+        <artifact name="drools-scorecards" type="javadoc" ext="zip" conf="scorecards"/>
+        <artifact name="drools-simulator" type="javadoc" ext="zip" conf="simulator"/>
+        <artifact name="drools-spring" type="javadoc" ext="zip" conf="spring"/>
+        <artifact name="drools-templates" type="javadoc" ext="zip" conf="templates"/>
+        <artifact name="drools-verifier" type="javadoc" ext="zip" conf="verifier"/>
+        <artifact name="knowledge-api" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="knowledge-internal-api" type="javadoc" ext="zip" conf="core"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.ant" name="ant" rev="[0,)" conf="ant-&gt;default"/>
+        <dependency org="org.codehaus.xstream" name="xstream" rev="[0,)" conf="core-&gt;default"/>
+        <dependency org="net.sourceforge.freemarker" name="freemarker" rev="[0,)" conf="ant-&gt;default"/>
+        <dependency org="com.google.common" name="google-collections" rev="[0,)" conf="ant-&gt;default"/>
+        <dependency org="org.yaml" name="snakeyaml" rev="[0,)" conf="simulator-&gt;default"/>
+        <dependency org="org.hamcrest" name="hamcrest" rev="[1.2.1,)" conf="simulator-&gt;core"/>
+        <dependency org="javax.xml.bind" name="jaxb" rev="[0,)" conf="simulator,grid,pipeline-&gt;runtime;pipeline,grid,scorecards-&gt;compile"/>
+        <dependency org="org.codehaus.jettison" name="jettison" rev="[0,)" conf="pipeline-&gt;default"/>
+        <!-- Manually downloaded software I can no longer find
+        <dependency org="org.apache.activemq" name="activemq" rev="[0,)" conf="pipeline->core"/>
+        -->
+        <dependency org="org.apache.xml" name="xalan-j" rev="[0,)" conf="pipeline-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-net" rev="[0,)" conf="pipeline-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-collections" rev="[0,)" conf="grid-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-io" rev="[0,)" conf="grid-&gt;default"/>
+        <dependency org="com.hazelcast" name="hazelcast" rev="[1.8.5,)" conf="grid-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[0,)" conf="core-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate" rev="[0,)" conf="grid-&gt;entitymanager"/>
+        <dependency org="org.dom4j" name="dom4j" rev="[0,)" conf="grid,persistence-jpa-&gt;default"/>
+        <dependency org="org.apache.mina" name="mina-core" rev="[0,)" conf="grid-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="[0,)" conf="camel-&gt;core,aop,test;spring-&gt;core,beans,context"/>
+        <dependency org="org.apache.cxf" name="cxf-bundle" rev="[0,)" conf="camel-&gt;jax-rs-json"/>
+        <dependency org="org.apache.poi" name="poi" rev="[3.8,)" conf="scorecards-&gt;default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="[0,)" conf="persistence-jpa-&gt;default"/>
+        <dependency org="org.jboss" name="javassist" rev="[0,)" conf="persistence-jpa-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[0,)" conf="persistence-jpa-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="[0,)" conf="verifier-&gt;default"/>
+        <dependency org="net.sourceforge.itext" name="itext" rev="[0,)" conf="verifier-&gt;default"/>
+        <dependency org="net.sourceforge.jexcelapi" name="jexcelapi" rev="[0,)" conf="decisiontables-&gt;default"/>
+        <dependency org="org.antlr" name="antlr" rev="[0,)" conf="compiler-&gt;default"/>
+        <dependency org="org.mvel" name="mvel2" rev="[0,)" conf="core-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="[0,)" conf="compiler-&gt;default"/>
+        <dependency org="com.google.protobuf" name="protobuf-java" rev="[0,)" conf="persistence-jpa-&gt;default"/>
+
+        <!-- missing in ivy roundup; patches welcome ;0)
+        <dependency org="jsr94" name="jsr94" rev="[0,)" conf="jsr94->default"/>
+        <dependency org="javax.jcr" name="jcr" rev="[0,)" conf="ant->default"/>
+        <dependency org="org.apache.jackrabbit" name="jackrabbit-core" rev="[0,)" conf="ant->default"/>
+        <dependency org="org.jbpm" name="jbpm-flow-builder" rev="[0,)" conf="pipeline,simulator",camel->default"/>
+        <dependency org="org.jbpm" name="jbpmn2" rev="[0,)" conf="simulator"->default"/>
+        <dependency org="net.sf.jxls" name="jxls-reader" rev="[0,)" conf="pipeline->default"/>
+        <dependency org="simple-jndi" name="simple-jndi" rev="[0,)" conf="pipeline->default"/>
+        <dependency org="org.milyn" name="milyn-smooks-javabean" rev="[0,)" conf="pipeline->default"/>
+        <dependency org="org.apache.camel" name="camel" rev="[0,)" conf="camel->core,spring,test,cxf,xstream,jaxb"/>
+        -->
+    </dependencies>
+
+</ivy-module>

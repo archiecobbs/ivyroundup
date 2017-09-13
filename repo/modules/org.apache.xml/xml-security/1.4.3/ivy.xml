@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.xml" module="xml-security" revision="1.4.3" status="release" publication="20100209120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.xml/xml-security/1.4.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://santuario.apache.org/index.html">
+
+            <p>
+            The XML Security project is aimed at providing implementation
+            of security standards for XML. Currently the focus is on the
+            W3C standards :
+            <ul>
+            <li>XML-Signature Syntax and Processing; and</li>
+            <li>XML Encryption Syntax and Processing.</li>
+            </ul>
+            </p>
+
+            <p>
+            Once these are implemented, XML Key Management is likely to be
+            the next focus for the project.
+            </p>
+
+            <p>
+            Two libraries are currently available.
+            <ol>
+            <li>A Java library, which includes a mature Digital Signature
+            implementation. Encryption is currently under development.</li>
+            <li>A C++ library is also now available. Functionality is
+            currently more basic than that provided by the Java library.</li>
+            </ol>
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:javadoc="javadoc" name="xmlsec"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0,2.0[" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

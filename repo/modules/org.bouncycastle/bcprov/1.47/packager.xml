@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+  <property name="name" value="${ivy.packager.module}"/>
+  <property name="revision" value="${ivy.packager.revision}"/>
+  <property name="archive" value="${name}-${revision}"/>
+
+  <!-- jdk15 -->
+  <m2resource artifactId="bcprov-jdk15on">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-jdk15.jar" sha1="b6f5d9926b0afbde9f4dbe3db88c5247be7794bb"/>
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-jdk15-source.zip" sha1="85e6e1ad449d5a3f09624bf4038fc8d2b02de81c"/>
+    <!-- javadoc -->
+    <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-jdk15-javadoc.zip" sha1="3186a40570a7fb253a87815921cc263e4245ae84"/>
+  </m2resource>
+
+  <!-- jdk15: extra IDEA and NTRU -->
+  <m2resource artifactId="bcprov-ext-jdk15on">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-ext-jdk15.jar" sha1="740bd55134d9975542050b5e1775883c5c9cb28e"/>
+  </m2resource>
+
+  <!-- jdk14 -->
+  <m2resource artifactId="bcprov-jdk14">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-jdk14.jar" sha1="f89a6c7bea60d3180e2c1ff5481d8efdafea4f92"/>
+    <!-- source -->
+    <artifact classifier="sources" tofile="artifacts/sources/${name}-jdk14-source.zip" sha1="9c3ad4519f1b4ad7ac28f40a7963f2b24d67a333"/>
+    <!-- javadoc -->
+    <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-jdk14-javadoc.zip" sha1="bb65dfa43c90b59ec2ee3b8e734eb129bfb419b4"/>
+  </m2resource>
+
+  <!-- jdk14: extra IDEA and NTRU -->
+  <m2resource artifactId="bcprov-ext-jdk14">
+    <!-- jar -->
+    <artifact tofile="artifacts/jars/${name}-ext-jdk14.jar" sha1="d477248882725baf4933fa84b589e81f9b3d3d82"/>
+  </m2resource>
+
+</packager-module>

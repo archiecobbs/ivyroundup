@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource artifactId="${ivy.packager.module}-appengine">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-appengine.jar" sha1="1c55c390d8ccdb271008c872898d4010d9613e6a"/>
+        <artifact tofile="artifacts/sources/appengine-source.zip" classifier="sources" sha1="902e8b9bea4742d22db947765a7506f39bdcc1a7"/>
+        <artifact tofile="artifacts/javadocs/appengine-javadoc.zip" classifier="javadoc" sha1="b5b41fa06eb7227ad4730f7fdf75c3a07d2294d2"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-examples">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-examples.jar" sha1="df722e03d6db91fd35dc6fd2533caf9e7db4ad0f"/>
+        <artifact tofile="artifacts/sources/examples-source.zip" classifier="sources" sha1="3dee5f4da2e17bafa3fc5f9dc6264ed14f10b890"/>
+        <artifact tofile="artifacts/javadocs/examples-javadoc.zip" classifier="javadoc" sha1="fd967038f54be78e46a795e597b874fc28b12d19"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-media-support">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-media-support.jar" sha1="5e5ec6be9e6b82cc187d70778cd994cd115a4100"/>
+        <artifact tofile="artifacts/sources/media-support-source.zip" classifier="sources" sha1="97d2ea1d694a1008700ea2a904d80ca07a05314d"/>
+        <artifact tofile="artifacts/javadocs/media-support-javadoc.zip" classifier="javadoc" sha1="7520d16d402c901814c7c19b4146cf2ba1459ff9"/>
+    </m2resource>
+    <!--<m2resource artifactId="${ivy.packager.module}-spdy-support">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-spdy-support.jar" sha1="8914dbecb53b954d8c395e9d786ceadb0fb58e69"/>
+        <artifact tofile="artifacts/sources/spdy-support-source.zip" classifier="sources" sha1="f597e5b1eb78859f145d25ff177ef909b26d325b"/>
+        <artifact tofile="artifacts/javadocs/spdy-support-javadoc.zip" classifier="javadoc" sha1="bf98050c972f152db544384619dfcb5849cdd48d"/>
+    </m2resource>-->
+    <m2resource artifactId="${ivy.packager.module}-stream">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-stream.jar" sha1="97769570025c3dc81df5b11730fee6c647525801"/>
+        <artifact tofile="artifacts/sources/stream-source.zip" classifier="sources" sha1="805f10bdb8bf74ae2cc8b5580635703e8ab125d7"/>
+        <artifact tofile="artifacts/javadocs/stream-javadoc.zip" classifier="javadoc" sha1="c4f7829308bdf5801ec073a2c86758bbb4a8e075"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-async">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-async.jar" sha1="dd988d1616c4bb7f6f820b25e687fe6b05cfe875"/>
+        <artifact tofile="artifacts/sources/async-source.zip" classifier="sources" sha1="19474f27f525b81240f9896c9fabe31ea618e86d"/>
+        <artifact tofile="artifacts/javadocs/async-javadoc.zip" classifier="javadoc" sha1="bd5fa4f670396bbd49704dbaf8fd73f40d8ccfc5"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-core">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-core.jar" sha1="37fd1d1eb3ed57916c9fdd1ea1f6c3afce778c7c"/>
+        <artifact tofile="artifacts/sources/core-source.zip" classifier="sources" sha1="f1ba5ef4a200e94857bc49d41385a364f1b5571e"/>
+        <artifact tofile="artifacts/javadocs/core-javadoc.zip" classifier="javadoc" sha1="3851f3f659bbe8c7b2c2a1bac98bae933f2b6338"/>
+    </m2resource>
+</packager-module>

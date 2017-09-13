@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Stephen Woods
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.lucene" module="lucene" revision="2.4.1" status="release" publication="20090308050800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.lucene/lucene/2.4.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://lucene.apache.org/">
+            Apache Lucene is a high-performance, full-featured text search engine library written
+            entirely in Java. It is a technology suitable for nearly any application that requires
+            full-text search, especially cross-platform.
+        </description>
+    </info>
+    <configurations>
+        <conf name="default" description="Lucene Core"/>
+        <conf name="analyzers" extends="default" description="Bundled analyzers"/>
+        <conf name="ant" extends="default" description="Ant support"/>
+        <conf name="benchmark" extends="default" description="Benchmark support"/>
+        <conf name="highlighter" extends="default" description="Highlighter support"/>
+        <conf name="instantiated" extends="default" description="Instantiated support"/>
+        <conf name="lucli" extends="default" description="Command line interface"/>
+        <conf name="memory" extends="default" description="Memory support"/>
+        <conf name="misc" extends="default" description="Miscellaneous"/>
+        <conf name="queries" extends="default" description="MoreLikeThis FuzzyLikeThis BoostingQuery TermsFilter"/>
+        <conf name="regex" extends="default" description="Regular expression support"/>
+        <conf name="similarity" extends="default" description="Custom document similarity measures"/>
+        <conf name="snowball" extends="default" description="Snowball string processing language designed for creating stemming algorithms"/>
+        <conf name="spellchecker" extends="default" description="Spellchecker support"/>
+        <conf name="surround" extends="default" description="Surround support"/>
+        <conf name="swing" extends="default" description="Swing support"/>
+        <conf name="wikipedia" extends="default" description="Wikipedia support"/>
+        <conf name="wordnet" extends="default" description="Wordnet support"/>
+        <conf name="xml-query-parser" extends="default" description="XML query parser support"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers" ivyde:javadoc="lucene-analyzers" name="lucene-analyzers" conf="analyzers"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-ant" ivyde:javadoc="lucene-ant" name="lucene-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-benchmark" ivyde:javadoc="lucene-benchmark" name="lucene-benchmark" conf="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-core" ivyde:javadoc="lucene-core" name="lucene-core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-highlighter" ivyde:javadoc="lucene-highlighter" name="lucene-highlighter" conf="highlighter"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-instantiated" ivyde:javadoc="lucene-instantiated" name="lucene-instantiated" conf="instantiated"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-lucli" ivyde:javadoc="lucene-lucli" name="lucene-lucli" conf="lucli"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-memory" ivyde:javadoc="lucene-memory" name="lucene-memory" conf="memory"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-misc" ivyde:javadoc="lucene-misc" name="lucene-misc" conf="misc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-queries" ivyde:javadoc="lucene-queries" name="lucene-queries" conf="queries"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-regex" ivyde:javadoc="lucene-regex" name="lucene-regex" conf="regex"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-snowball" ivyde:javadoc="lucene-snowball" name="lucene-snowball" conf="snowball"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-spellchecker" ivyde:javadoc="lucene-spellchecker" name="lucene-spellchecker" conf="spellchecker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-surround" ivyde:javadoc="lucene-surround" name="lucene-surround" conf="surround"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-swing" ivyde:javadoc="lucene-swing" name="lucene-swing" conf="swing"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-wikipedia" ivyde:javadoc="lucene-wikipedia" name="lucene-wikipedia" conf="wikipedia"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-wordnet" ivyde:javadoc="lucene-wordnet" name="lucene-wordnet" conf="wordnet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-xml-query-parser" ivyde:javadoc="lucene-xml-query-parser" name="lucene-xml-query-parser" conf="xml-query-parser"/>
+
+        <!-- source -->
+        <artifact name="lucene-analyzers" type="source" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-ant" type="source" ext="zip" conf="ant"/>
+        <artifact name="lucene-benchmark" type="source" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-core" type="source" ext="zip"/>
+        <artifact name="lucene-highlighter" type="source" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-instantiated" type="source" ext="zip" conf="instantiated"/>
+        <artifact name="lucene-lucli" type="source" ext="zip" conf="lucli"/>
+        <artifact name="lucene-memory" type="source" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="source" ext="zip" conf="misc"/>
+        <artifact name="lucene-queries" type="source" ext="zip" conf="queries"/>
+        <artifact name="lucene-regex" type="source" ext="zip" conf="regex"/>
+        <artifact name="lucene-similarity" type="source" ext="zip" conf="similarity"/>
+        <artifact name="lucene-snowball" type="source" ext="zip" conf="snowball"/>
+        <artifact name="lucene-spellchecker" type="source" ext="zip" conf="spellchecker"/>
+        <artifact name="lucene-surround" type="source" ext="zip" conf="surround"/>
+        <artifact name="lucene-swing" type="source" ext="zip" conf="swing"/>
+        <artifact name="lucene-wikipedia" type="source" ext="zip" conf="wikipedia"/>
+        <artifact name="lucene-wordnet" type="source" ext="zip" conf="wordnet"/>
+        <artifact name="lucene-xml-query-parser" type="source" ext="zip" conf="xml-query-parser"/>
+
+        <!-- javadoc -->
+        <artifact name="lucene-analyzers" type="javadoc" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-ant" type="javadoc" ext="zip" conf="ant"/>
+        <artifact name="lucene-benchmark" type="javadoc" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-core" type="javadoc" ext="zip"/>
+        <artifact name="lucene-highlighter" type="javadoc" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-instantiated" type="javadoc" ext="zip" conf="instantiated"/>
+        <artifact name="lucene-lucli" type="javadoc" ext="zip" conf="lucli"/>
+        <artifact name="lucene-memory" type="javadoc" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="javadoc" ext="zip" conf="misc"/>
+        <artifact name="lucene-queries" type="javadoc" ext="zip" conf="queries"/>
+        <artifact name="lucene-regex" type="javadoc" ext="zip" conf="regex"/>
+        <artifact name="lucene-snowball" type="javadoc" ext="zip" conf="snowball"/>
+        <artifact name="lucene-spellchecker" type="javadoc" ext="zip" conf="spellchecker"/>
+        <artifact name="lucene-surround" type="javadoc" ext="zip" conf="surround"/>
+        <artifact name="lucene-swing" type="javadoc" ext="zip" conf="swing"/>
+        <artifact name="lucene-wikipedia" type="javadoc" ext="zip" conf="wikipedia"/>
+        <artifact name="lucene-wordnet" type="javadoc" ext="zip" conf="wordnet"/>
+        <artifact name="lucene-xml-query-parser" type="javadoc" ext="zip" conf="xml-query-parser"/>
+    </publications>
+
+</ivy-module>

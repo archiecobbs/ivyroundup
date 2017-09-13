@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.lucene" module="lucene" revision="3.6.1" status="release" publication="20110604050800">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.lucene/lucene/3.6.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://lucene.apache.org/">
+            Apache Lucene is a high-performance, full-featured text search engine library written
+            entirely in Java. It is a technology suitable for nearly any application that requires
+            full-text search, especially cross-platform.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="analyzers" extends="core" description="Lucene Common Analyzers"/>
+        <conf name="benchmark" extends="analyzers,highlighter,memory,facet" description="Lucene Benchmarking Module"/>
+        <conf name="core" description="Apache Lucene Java Core"/>
+        <conf name="facet" extends="core" description="Package for Faceted Indexing and Search"/>
+        <conf name="grouping" extends="core" description="Lucene Grouping Module"/>
+        <conf name="highlighter" extends="core,memory,queries" description="This is the highlighter for apache lucene java"/>
+        <conf name="icu" extends="analyzers" description="Provides integration with ICU (International Components for Unicode) for stronger Unicode and internationalization support."/>
+        <conf name="instantiated" extends="core" description="InstantiatedIndex, alternative RAM store for small corpora."/>
+        <conf name="join" extends="grouping" description="Lucene Join Module"/>
+        <conf name="kuromoji" extends="analyzers" description="Lucene Kuromoji Japanese Morphological Analyzer"/>
+        <conf name="memory" extends="core" description="High-performance single-document index to compare against Query"/>
+        <conf name="misc" extends="analyzers" description="Miscellaneous Lucene extensions"/>
+        <conf name="phonetic" extends="core" description="Lucene Phonetic Analyzer"/>
+        <conf name="pruning" extends="core" description="Pruning Lucene indexes by various criteria."/>
+        <conf name="queries" extends="core" description="Queries - various query object exotica not in core"/>
+        <conf name="queryparser" extends="core" description="This is the Flexible Query Parser for apache lucene java"/>
+        <conf name="remote" extends="core" description="Remote Searchable based on RMI"/>
+        <conf name="smartcn" extends="analyzers" description="Lucene Smart Chinese Analyzer"/>
+        <conf name="spatial" extends="queries" description="Spatial search package"/>
+        <conf name="spellchecker" extends="analyzers" description="Spell Checker"/>
+        <conf name="stempel" extends="analyzers" description="Stempel Analyzer"/>
+        <conf name="test-framework" extends="core" description="Apache Lucene Java Test Framework"/>
+        <conf name="xml-query-parser" extends="queries" description="Lucene XML Query Parser"/>
+        <conf name="default" extends="core" description="Alias for 'core'"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-analyzers" ivyde:javadoc="lucene-analyzers" name="lucene-analyzers" conf="analyzers"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-benchmark" ivyde:javadoc="lucene-benchmark" name="lucene-benchmark" conf="benchmark"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-core" ivyde:javadoc="lucene-core" name="lucene-core" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-facet" ivyde:javadoc="lucene-facet" name="lucene-facet" conf="facet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-grouping" ivyde:javadoc="lucene-grouping" name="lucene-grouping" conf="grouping"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-highlighter" ivyde:javadoc="lucene-highlighter" name="lucene-highlighter" conf="highlighter"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-icu" ivyde:javadoc="lucene-icu" name="lucene-icu" conf="icu"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-instantiated" ivyde:javadoc="lucene-instantiated" name="lucene-instantiated" conf="instantiated"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-join" ivyde:javadoc="lucene-join" name="lucene-join" conf="join"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-kuromoji" ivyde:javadoc="lucene-kuromoji" name="lucene-kuromoji" conf="kuromoji"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-memory" ivyde:javadoc="lucene-memory" name="lucene-memory" conf="memory"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-misc" ivyde:javadoc="lucene-misc" name="lucene-misc" conf="misc"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-phonetic" ivyde:javadoc="lucene-phonetic" name="lucene-phonetic" conf="phonetic"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-pruning" ivyde:javadoc="lucene-pruning" name="lucene-pruning" conf="pruning"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-queries" ivyde:javadoc="lucene-queries" name="lucene-queries" conf="queries"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-queryparser" ivyde:javadoc="lucene-queryparser" name="lucene-queryparser" conf="queryparser"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-remote" ivyde:javadoc="lucene-remote" name="lucene-remote" conf="remote"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-smartcn" ivyde:javadoc="lucene-smartcn" name="lucene-smartcn" conf="smartcn"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-spatial" ivyde:javadoc="lucene-spatial" name="lucene-spatial" conf="spatial"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-spellchecker" ivyde:javadoc="lucene-spellchecker" name="lucene-spellchecker" conf="spellchecker"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-stempel" ivyde:javadoc="lucene-stempel" name="lucene-stempel" conf="stempel"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-test-framework" ivyde:javadoc="lucene-test-framework" name="lucene-test-framework" conf="test-framework"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="lucene-xml-query-parser" ivyde:javadoc="lucene-xml-query-parser" name="lucene-xml-query-parser" conf="xml-query-parser"/>
+
+        <!-- source -->
+        <artifact name="lucene-analyzers" type="source" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-benchmark" type="source" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-core" type="source" ext="zip" conf="core"/>
+        <artifact name="lucene-facet" type="source" ext="zip" conf="facet"/>
+        <artifact name="lucene-grouping" type="source" ext="zip" conf="grouping"/>
+        <artifact name="lucene-highlighter" type="source" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-icu" type="source" ext="zip" conf="icu"/>
+        <artifact name="lucene-instantiated" type="source" ext="zip" conf="instantiated"/>
+        <artifact name="lucene-join" type="source" ext="zip" conf="join"/>
+        <artifact name="lucene-kuromoji" type="source" ext="zip" conf="kuromoji"/>
+        <artifact name="lucene-memory" type="source" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="source" ext="zip" conf="misc"/>
+        <artifact name="lucene-phonetic" type="source" ext="zip" conf="phonetic"/>
+        <artifact name="lucene-pruning" type="source" ext="zip" conf="pruning"/>
+        <artifact name="lucene-queries" type="source" ext="zip" conf="queries"/>
+        <artifact name="lucene-queryparser" type="source" ext="zip" conf="queryparser"/>
+        <artifact name="lucene-remote" type="source" ext="zip" conf="remote"/>
+        <artifact name="lucene-smartcn" type="source" ext="zip" conf="smartcn"/>
+        <artifact name="lucene-spatial" type="source" ext="zip" conf="spatial"/>
+        <artifact name="lucene-spellchecker" type="source" ext="zip" conf="spellchecker"/>
+        <artifact name="lucene-stempel" type="source" ext="zip" conf="stempel"/>
+        <artifact name="lucene-test-framework" type="source" ext="zip" conf="test-framework"/>
+        <artifact name="lucene-xml-query-parser" type="source" ext="zip" conf="xml-query-parser"/>
+
+        <!-- javadoc -->
+        <artifact name="lucene-analyzers" type="javadoc" ext="zip" conf="analyzers"/>
+        <artifact name="lucene-benchmark" type="javadoc" ext="zip" conf="benchmark"/>
+        <artifact name="lucene-core" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="lucene-facet" type="javadoc" ext="zip" conf="facet"/>
+        <artifact name="lucene-grouping" type="javadoc" ext="zip" conf="grouping"/>
+        <artifact name="lucene-highlighter" type="javadoc" ext="zip" conf="highlighter"/>
+        <artifact name="lucene-icu" type="javadoc" ext="zip" conf="icu"/>
+        <artifact name="lucene-instantiated" type="javadoc" ext="zip" conf="instantiated"/>
+        <artifact name="lucene-join" type="javadoc" ext="zip" conf="join"/>
+        <artifact name="lucene-kuromoji" type="javadoc" ext="zip" conf="kuromoji"/>
+        <artifact name="lucene-memory" type="javadoc" ext="zip" conf="memory"/>
+        <artifact name="lucene-misc" type="javadoc" ext="zip" conf="misc"/>
+        <artifact name="lucene-phonetic" type="javadoc" ext="zip" conf="phonetic"/>
+        <artifact name="lucene-pruning" type="javadoc" ext="zip" conf="pruning"/>
+        <artifact name="lucene-queries" type="javadoc" ext="zip" conf="queries"/>
+        <artifact name="lucene-queryparser" type="javadoc" ext="zip" conf="queryparser"/>
+        <artifact name="lucene-remote" type="javadoc" ext="zip" conf="remote"/>
+        <artifact name="lucene-smartcn" type="javadoc" ext="zip" conf="smartcn"/>
+        <artifact name="lucene-spatial" type="javadoc" ext="zip" conf="spatial"/>
+        <artifact name="lucene-spellchecker" type="javadoc" ext="zip" conf="spellchecker"/>
+        <artifact name="lucene-stempel" type="javadoc" ext="zip" conf="stempel"/>
+        <artifact name="lucene-test-framework" type="javadoc" ext="zip" conf="test-framework"/>
+        <artifact name="lucene-xml-query-parser" type="javadoc" ext="zip" conf="xml-query-parser"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.ibm.icu" name="icu4j" rev="[0,)" conf="benchmark,icu-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-compress" rev="[0,)" conf="benchmark-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[0,)" conf="phonetic-&gt;default"/>
+        <dependency org="org.apache.xerces" name="xerces" rev="[0,)" conf="benchmark-&gt;default"/>
+        <dependency org="org.apache.regexp" name="jakarta-regexp" rev="[0,)" conf="queries-&gt;default"/>
+        <dependency org="org.junit" name="junit" rev="[0,)" conf="test-framework-&gt;default"/>
+        <dependency org="org.apache.ant" name="ant" rev="[0,1.8.1]" conf="test-framework-&gt;junit"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[0,)" conf="xml-query-parser-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

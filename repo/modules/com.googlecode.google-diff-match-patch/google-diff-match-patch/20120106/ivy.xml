@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.googlecode.google-diff-match-patch" module="google-diff-match-patch" revision="20120106" status="release" publication="20120106120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.googlecode.google-diff-match-patch/google-diff-match-patch/20120106/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://code.google.com/archive/p/google-diff-match-patch/">
+            <p>The Diff Match and Patch libraries offer robust algorithms to perform the operations required for synchronizing plain text. </p>
+
+            <ol>
+                <li><strong>Diff:</strong> </li>
+                <ul>
+                    <li>Compare two blocks of plain text and efficiently return a list of differences. </li>
+                    <li><a href="http://neil.fraser.name/software/diff_match_patch/svn/trunk/demos/demo_diff.html">Diff Demo</a> </li>
+                </ul>
+                <li><strong>Match:</strong> </li>
+                <ul>
+                    <li>Given a search string, find its best fuzzy match in a block of plain text.  Weighted for both accuracy and location. </li>
+                    <li><a href="http://neil.fraser.name/software/diff_match_patch/svn/trunk/demos/demo_match.html">Match Demo</a> </li>
+                </ul>
+                <li><strong>Patch:</strong> </li>
+                <ul>
+                    <li>Apply a list of patches onto plain text.  Use best-effort to apply patch even when the underlying text doesn't match. </li>
+                    <li><a href="http://neil.fraser.name/software/diff_match_patch/svn/trunk/demos/demo_patch.html">Patch Demo</a> </li>
+                </ul>
+            </ol>
+
+            <p>Currently available in Java, JavaScript, Dart, C++, C#, Objective C, Lua and Python.
+            Regardless of language, each library features <a href="/p/google-diff-match-patch/wiki/API">the same API</a> and the same functionality.
+            All versions also have comprehensive test harnesses. </p>
+
+            <h3><a name="Algorithms"/>Algorithms<a href="#Algorithms" class="section_anchor"/></h3>
+
+            <p>This library implements <a href="http://neil.fraser.name/software/diff_match_patch/myers.pdf">Myer's diff algorithm</a>
+            which is generally considered to be the best general-purpose diff.  A layer of <a href="http://neil.fraser.name/writing/diff/">pre-diff
+            speedups and post-diff cleanups</a> surround the diff algorithm, improving both performance and output quality. </p>
+
+            <p>This library also implements a <a href="http://neil.fraser.name/software/diff_match_patch/bitap.ps">Bitap matching algorithm</a>
+            at the heart of a flexible <a href="http://neil.fraser.name/writing/patch/">matching and patching strategy</a>.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="source" ivyde:javadoc="javadoc"/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+
+</ivy-module>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+    <property name="date" value="20140818"/>
+
+    <resource url="http://archive.apache.org/dist/${name}/release/bin/${name}-bin-${revision}-${date}.tar.gz" sha1="92103bd88d4e1faf269c6c39ee08e3e83dd66a2f"/>
+    <resource url="http://archive.apache.org/dist/${name}/release/src/${name}-src-${revision}-${date}.tar.gz" sha1="0303a95fc7f73b330cde25b14115cb0de7ceda53"/>
+
+    <build>
+        <!-- jar -->
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${archive}" includes="*-${revision}-${date}.jar"/>
+            <mapper type="glob" from="*-${revision}-${date}.jar" to="*.jar"/>
+        </move>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}/src/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/ooxml/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/contrib/src" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/examples/src" includes="**/*.java"/>
+            <fileset dir="archive/${archive}/src/scratchpad/src" includes="**/*.java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
+    </build>
+
+</packager-module>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2014 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="d87f53c99e4cd88f5416edd5abb77f2a1ccfb050"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-src-${revision}.zip" tofile="artifacts/sources/source.zip" sha1="803ad79cf429faeb4d767b2fb45d84bbc904ea04"/>
+    <resource url="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/${name}/${name}-${revision}-javadoc.jar" tofile="artifacts/javadocs/javadoc.zip" sha1="d6c9b1c8183c9ef5e1925a38a18cd98fe8ebee70"/>
+</packager-module>

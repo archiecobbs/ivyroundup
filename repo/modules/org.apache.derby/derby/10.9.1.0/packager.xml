@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/db/derby/db-derby-${revision}/db-derby-${revision}-bin.zip" sha1="a79443f0de366317160f3119028b25e21cd62961">
+       <include name="db-derby-${revision}-bin/lib/*.jar"/>
+       <include name="db-derby-${revision}-bin/lib/${name}.war"/>
+       <include name="db-derby-${revision}-bin/javadoc/jdbc4/**"/>
+    </resource>
+
+    <resource url="http://archive.apache.org/dist/db/derby/db-derby-${revision}/db-derby-${revision}-src.zip" sha1="8297bb54f4483e95d9e2f6e13ed0509d7534be20">
+       <include name="db-derby-${revision}-doc-src/src/**/*"/>
+    </resource>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/db-derby-${revision}-bin/lib/derby.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derby.war" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyclient.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_cs.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_de_DE.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_es.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_fr.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_hu.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_it.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_ja_JP.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_ko_KR.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_pl.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_pt_BR.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_ru.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_zh_CN.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyLocale_zh_TW.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbynet.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbyrun.jar" todir="artifacts/jars"/>
+        <move file="archive/db-derby-${revision}-bin/lib/derbytools.jar" todir="artifacts/jars"/>
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+          <fileset dir="archive/db-derby-${revision}-doc-src/src"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/db-derby-${revision}-bin/javadoc/jdbc4"/>
+        </zip>
+    </build>
+</packager-module>

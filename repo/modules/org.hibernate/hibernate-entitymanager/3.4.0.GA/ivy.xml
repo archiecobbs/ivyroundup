@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.hibernate" module="hibernate-entitymanager" revision="3.4.0.GA" status="release" publication="20080820092500">
+        <license name="GNU Lesser General Public License, Version 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.hibernate/hibernate-entitymanager/3.4.0.GA/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://hibernate.org/">
+
+            <p>
+            Hibernate EntityManager implements:
+            <ul>
+            <li>The standard Java Persistence management API</li>
+            <li>The standard Java Persistence Query Language</li>
+            <li>The standard Java Persistence object lifecycle rules</li>
+            <li>The standard Java Persistence configuration and packaging</li>
+            </ul>
+            </p>
+
+            <p>
+            Hibernate EntityManager wraps the powerful and mature
+            Hibernate Core. You can fall back to Hibernate native APIs,
+            native SQL, and native JDBC whenever necessary.
+            </p>
+
+            <p>
+            The Hibernate Java Persistence provider is the default
+            persistence provider of the JBoss EJB 3.0 implementation
+            and bundled with the JBoss Application Server.
+            </p>
+
+            <p>
+            Requirements: Together with Hibernate Annotations,
+            Hibernate EntityManager can be used as a fully certified and
+            standardized Java Persistence provider, inside any Java EE
+            5.0 application server and with any EJB 3.0 container. You
+            can also use the Hibernate Java Persistence provider with
+            JDK 5.0 standalone.
+            </p>
+
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="hibernate-entitymanager"/>
+        <artifact type="source" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.hibernate" name="hibernate" rev="[3.3.1.GA,3.5.0-Final[" conf="default-&gt;core"/>
+        <dependency org="org.hibernate" name="hibernate-annotations" rev="3.4.0.GA" conf="default-&gt;default"/>
+        <dependency org="org.hibernate" name="hibernate-commons-annotations" rev="3.1.0.GA" conf="default-&gt;default"/>
+        <dependency org="org.hibernate" name="ejb3-persistence" rev="[1.0.2.GA,2.0[" conf="default-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="[1.4.2,2.0[" conf="default-&gt;core"/>
+        <dependency org="org.dom4j" name="dom4j" rev="[1.6.1,2.0[" conf="default-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="default-&gt;default"/>
+        <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

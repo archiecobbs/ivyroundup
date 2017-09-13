@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource repo="http://download.oracle.com/maven" artifactId="je">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="c28f610c3559e3b2f16e738bcf52bf181d0dd4f2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="b4256575cb36687d9aed66ac19841830767b056b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="cd3ac88c8ca2c79e83c2506126d4efd7ccd29065"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2008 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.apache.commons" module="commons-httpclient" revision="3.1" status="release" publication="20070821120000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.apache.commons/commons-httpclient/3.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://hc.apache.org/httpclient-3.x/">
+
+            <p>
+            The Hyper-Text Transfer Protocol (HTTP) is perhaps the
+            most significant protocol used on the Internet today. Web
+            services, network-enabled appliances and the growth of
+            network computing continue to expand the role of the HTTP
+            protocol beyond user-driven web browsers, while increasing
+            the number of applications that require HTTP support.
+            </p>
+
+            <p>
+            Although the java.net package provides basic functionality
+            for accessing resources via HTTP, it doesn't provide the full
+            flexibility or functionality needed by many applications. The
+            Jakarta Commons HttpClient component seeks to fill this void
+            by providing an efficient, up-to-date, and feature-rich
+            package implementing the client side of the most recent
+            HTTP standards and recommendations. See the
+            <a href="http://hc.apache.org/httpclient-3.x/features.html">Features</a>
+            page for more details on standards compliance and capabilities.
+            </p>
+
+            <p>
+            Designed for extension while providing robust support
+            for the base HTTP protocol, the HttpClient component
+            may be of interest to anyone building HTTP-aware client
+            applications such as web browsers, web service clients,
+            or systems that leverage or extend the HTTP protocol for
+            distributed communication.
+            </p>
+
+            <p>
+            There are many projects that use HttpClient to provide the
+            core HTTP functionality. Some of these are open source with
+            project pages you can find on the web while others are closed
+            source that you would never see or hear about. The Apache
+            Source License provides maximum flexibility for source and
+            binary reuse. Please see the
+            <a href="http://wiki.apache.org/jakarta-httpclient/HttpClientPowered">Applications</a>
+            page for projects using HttpClient.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.apache.commons" name="commons-logging" rev="[1.0.4,2.0[" conf="default-&gt;default"/>
+        <dependency org="org.apache.commons" name="commons-codec" rev="[1.2,2.0[" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

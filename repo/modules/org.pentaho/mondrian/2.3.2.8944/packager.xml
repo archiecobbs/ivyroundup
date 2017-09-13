@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-${revision}"/>
+
+    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}.zip" sha1="e54b22d2e6c73d95ea33efa769e4541c3fa9d7ed"/>
+
+    <build>
+        <!-- jar -->
+        <move file="archive/${archive}/lib/${name}.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/${name}-jdk14.jar" todir="artifacts/jars/"/>
+        <move file="archive/${archive}/lib/retroweaver-rt-1.2.4.jar" tofile="artifacts/jars/retroweaver-rt.jar"/>
+
+        <!-- source -->
+        <move file="archive/${archive}/${archive}-src.zip" tofile="artifacts/sources/source.zip"/>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/doc/api"/>
+        </zip>
+    </build>
+</packager-module>

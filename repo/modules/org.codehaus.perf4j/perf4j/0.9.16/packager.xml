@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Daniel Atallah
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource groupId="org.perf4j">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="a387572ec3d8399aa894662cfd63babb8e161f43"/>
+        <artifact classifier="commonslogonly" tofile="artifacts/jars/${ivy.packager.module}-commonslogonly.jar" sha1="9b5a1a37f16270c5088ef6f400beeeac3aab1754"/>
+        <artifact classifier="javalogonly" tofile="artifacts/jars/${ivy.packager.module}-javalogonly.jar" sha1="02b03f02fcee29b5128c6047fa729036da9834c1"/>
+        <artifact classifier="log4jonly" tofile="artifacts/jars/${ivy.packager.module}-log4jonly.jar" sha1="535f128bea7f798a1282e4e88452e85fa5d4fcfd"/>
+        <artifact classifier="logbackonly" tofile="artifacts/jars/${ivy.packager.module}-logbackonly.jar" sha1="10f595283ceca0767358227a114a25598a4e3a92"/>
+        <artifact classifier="slf4jonly" tofile="artifacts/jars/${ivy.packager.module}-slf4jonly.jar" sha1="5111fa8d125932e8ceb6dd840c651acc5d11bf6a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="272154bc97c9a844cde80ea6f14b1284d27faa86"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="14b029a24faabf012c17ffc8e573f6a2f5065f51"/>
+    </m2resource>
+</packager-module>

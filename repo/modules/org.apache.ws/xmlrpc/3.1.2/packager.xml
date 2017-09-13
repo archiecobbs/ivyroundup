@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2011 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="apache-${name}-${revision}"/>
+
+    <resource url="http://archive.apache.org/dist/ws/${name}/binaries/${archive}-bin.tar.gz" sha1="f17ab82fd64fc9846043fdef6a8aa721b2edfb7e"/>
+    <resource url="http://archive.apache.org/dist/ws/${name}/sources/${archive}-src.tar.gz" sha1="da013b5ad6c50d86cfbc6b56de5c89ce16a45fae"/>
+
+    <build>
+        <!-- jars -->
+        <move file="archive/${archive}/lib/${name}-client-${revision}.jar" tofile="artifacts/jars/${name}-client.jar"/>
+        <move file="archive/${archive}/lib/${name}-common-${revision}.jar" tofile="artifacts/jars/${name}-common.jar"/>
+        <move file="archive/${archive}/lib/${name}-server-${revision}.jar" tofile="artifacts/jars/${name}-server.jar"/>
+
+        <!-- TODO: should be in its own "ws-common-util" module -->
+        <move file="archive/${archive}/lib/ws-commons-util-1.0.2.jar" todir="artifacts/jars"/>
+
+        <!-- source -->
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${archive}-src/server/src/main/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}-src/client/src/main/java" includes="**/*.java"/>
+            <fileset dir="archive/${archive}-src/common/src/main/java" includes="**/*.java"/>
+        </zip>
+
+        <!-- javadoc -->
+        <zip destfile="artifacts/javadocs/javadoc.zip">
+            <fileset dir="archive/${archive}/docs/apidocs"/>
+        </zip>
+    </build>
+</packager-module>

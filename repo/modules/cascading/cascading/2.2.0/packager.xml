@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2014 Nathan Summers
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+
+    <resource url="http://conjars.org/repo/${name}/${name}-core/${revision}/${name}-core-${revision}.jar" sha1="0058468a4baeaa9fedcdfcbb5ce22b36fec003cf" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-core/${revision}/${name}-core-${revision}-sources.jar" sha1="d2fac51b7f65f1140b5c0efb78b2d610f361fdc8" tofile="artifacts/sources/${name}-source.zip"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-core/${revision}/${name}-core-${revision}-javadoc.jar" sha1="22de2bca2271289a1b28131397cfd802bd10fc6f" tofile="artifacts/javadocs/${name}-javadoc.zip"/>
+
+    <resource url="http://conjars.org/repo/${name}/${name}-hadoop/${revision}/${name}-hadoop-${revision}.jar" sha1="c7b52bd4c6da523ebde0a5d6eca2475123783db2" tofile="artifacts/jars/${name}-hadoop.jar"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-hadoop/${revision}/${name}-hadoop-${revision}-sources.jar" sha1="0f1861f9e6b37e5f592cb78176a39a0e8a6cf276" tofile="artifacts/sources/${name}-hadoop-source.zip"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-hadoop/${revision}/${name}-hadoop-${revision}-javadoc.jar" sha1="e83a058a37da24abb94767c15bf705b905fd136a" tofile="artifacts/javadocs/${name}-hadoop-javadoc.zip"/>
+
+    <resource url="http://conjars.org/repo/${name}/${name}-local/${revision}/${name}-local-${revision}.jar" sha1="5b431b5af408057e15bb001dea27e37ad594fe06" tofile="artifacts/jars/${name}-local.jar"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-local/${revision}/${name}-local-${revision}-sources.jar" sha1="b0d17d9f0d9a00ca5f5dc75aa01efecc0a4fc2d3" tofile="artifacts/sources/${name}-local-source.zip"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-local/${revision}/${name}-local-${revision}-javadoc.jar" sha1="50480cb6ba1c6179f23e225dca6fe20dc35f6227" tofile="artifacts/javadocs/${name}-local-javadoc.zip"/>
+
+    <resource url="http://conjars.org/repo/${name}/${name}-platform/${revision}/${name}-platform-${revision}.jar" sha1="bf39efc42c3d8c44d2b18865769d68658eb0ef28" tofile="artifacts/jars/${name}-platform.jar"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-platform/${revision}/${name}-platform-${revision}-sources.jar" sha1="308df7cbc53e4b2d79efae4b709e210cba430aab" tofile="artifacts/sources/${name}-platform-source.zip"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-platform/${revision}/${name}-platform-${revision}-javadoc.jar" sha1="308df7cbc53e4b2d79efae4b709e210cba430aab" tofile="artifacts/javadocs/${name}-platform-javadoc.zip"/>
+
+    <resource url="http://conjars.org/repo/${name}/${name}-xml/${revision}/${name}-xml-${revision}.jar" sha1="2a8acfdc594d020925b30d6ab27ff01ebfde77c8" tofile="artifacts/jars/${name}-xml.jar"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-xml/${revision}/${name}-xml-${revision}-sources.jar" sha1="306947f5e1f51803cf36d10fb72990c7c39af8dc" tofile="artifacts/sources/${name}-xml-source.zip"/>
+    <resource url="http://conjars.org/repo/${name}/${name}-xml/${revision}/${name}-xml-${revision}-javadoc.jar" sha1="a8838a69ab9bb5626d60c03205b9c5a9a37a51ec" tofile="artifacts/javadocs/${name}-xml-javadoc.zip"/>
+</packager-module>

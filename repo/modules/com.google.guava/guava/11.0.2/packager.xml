@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/guava.jar" sha1="35a3c69e19d72743cac83778aecbee68680f63eb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="81936ae99fc48e75e182250dca50b8a5266f16c4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="f07f40d9e5b14790b1d7c2f3486cad0db18bf569"/>
+    </m2resource>
+    <m2resource artifactId="guava-bootstrap">
+        <artifact tofile="artifacts/jars/guava-bootstrap.jar" sha1="256e6e4c9ba7e5e291fd82700fab358d66d3c77c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-bootstrap.zip" sha1="2ee4415c10701daaf3235a6d1292cca2f73e818d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-bootstrap.zip" sha1="0fa68848e504952cc6e4356d2bb28289d58064d0"/>
+    </m2resource>
+    <m2resource artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="df8d9f8acbcc73056825111c849ead64e08f229b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="d1aedbf04344e400edf0a45d05314d675a37f4aa"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="585b3b7835c8e2e93c8d5118b7b14922fd9bfa52"/>
+    </m2resource>
+    <m2resource artifactId="guava-testlib">
+        <artifact tofile="artifacts/jars/guava-testlib.jar" sha1="62cda5f600f239ded69aefb974ef5f04c3197c15"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-testlib.zip" sha1="106035eb891c3367f1fb63b665f3ed90b8417dc0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-testlib.zip" sha1="4cb62c609dd3297fc2ff35abc26e55704982c0d7"/>
+    </m2resource>
+    <m2resource groupId="com/google/code/findbugs" artifactId="jsr305" version="2.0.0">
+        <artifact tofile="artifacts/jars/jsr305.jar" sha1="516c03b21d50a644d538de0f0369c620989cd8f0"/>
+    </m2resource>
+</packager-module>

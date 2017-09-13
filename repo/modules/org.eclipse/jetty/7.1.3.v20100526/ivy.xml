@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="org.eclipse" module="jetty" revision="7.1.3.v20100526" status="release" publication="20100526192600">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.eclipse/jetty/7.1.3.v20100526/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="http://www.eclipse.org/jetty/">
+            <p>
+            Jetty is an open-source project providing a HTTP server, HTTP
+            client and javax.servlet container. These 100% java components are
+            full-featured, standards based, small foot print, embeddable,
+            asynchronous and enterprise scalable. Jetty is dual licensed under
+            the Apache License 2.0 and/or Eclipse Public License 1.0. Jetty is
+            free for commercial use and distribution under the terms of either
+            of those licenses.
+            </p>
+            <p>
+            Jetty is used in a wide variety of projects and products:
+            embedded in phones; in tools like the the eclipse IDE, in
+            frameworks like GWT, in application servers like Apache Geronimo
+            and in huge clusters like Yahoo's Hadoop cluster. See the Jetty
+            Powered page for more uses of Jetty.
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="ajp" extends="server" description="AJP protocol support"/>
+        <conf name="all" extends="default,servlets,rewrite,annotations,jmx,deploy,start,policy,jaspi,websocket" description="All artifacts"/>
+        <conf name="annotations" extends="plus" description="Annotation support for deploying servlets in jetty"/>
+        <conf name="client" extends="http" description="Asynchronous HTTP Client"/>
+        <conf name="continuation" description="Asynchronous API"/>
+        <conf name="core" extends="server" description="Core Jetty server"/>
+        <conf name="default" extends="jsp" description="Jetty web application support with JSP 2.1"/>
+        <conf name="deploy" extends="webapp" description="Deployers"/>
+        <conf name="http" extends="io" description="Http Utility"/>
+        <conf name="io" extends="util" description="I/O Utility"/>
+        <conf name="jaspi" extends="security" description="JASPI Security"/>
+        <conf name="jmx" extends="webapp" description="JMX Management"/>
+        <conf name="jndi" extends="webapp" description="JNDI Naming"/>
+        <conf name="jsp" extends="webapp" description="JSP 2.1"/>
+        <conf name="policy" description="Policy Tool"/>
+        <conf name="plus" extends="jndi" description="Jetty JavaEE style services"/>
+        <conf name="rewrite" extends="server" description="Rewrite Handler"/>
+        <conf name="security" extends="server" description="Jetty security infrastructure"/>
+        <conf name="server" extends="continuation,http" description="Service Core"/>
+        <conf name="servlet" extends="security" description="Jetty Servlet Container"/>
+        <conf name="servlets" extends="client,webapp" description="Utility Servlets from Jetty"/>
+        <conf name="start" description="The jetty startup artifact"/>
+        <conf name="util" description="Utilities"/>
+        <conf name="webapp" extends="servlet,xml" description="Jetty web application support"/>
+        <conf name="websocket" extends="server" description="Jetty websocket support"/>
+        <conf name="xml" extends="util" description="Jetty xml utilities"/>
+    </configurations>
+
+    <publications>
+        <!-- jar -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-ajp" ivyde:javadoc="jetty-ajp" name="jetty-ajp" conf="ajp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-annotations" ivyde:javadoc="jetty-annotations" name="jetty-annotations" conf="annotations"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-client" ivyde:javadoc="jetty-client" name="jetty-client" conf="client"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-continuation" ivyde:javadoc="jetty-continuation" name="jetty-continuation" conf="continuation"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-deploy" ivyde:javadoc="jetty-deploy" name="jetty-deploy" conf="deploy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-http" ivyde:javadoc="jetty-http" name="jetty-http" conf="http"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-io" ivyde:javadoc="jetty-io" name="jetty-io" conf="io"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jaspi" ivyde:javadoc="jetty-jaspi" name="jetty-jaspi" conf="jaspi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jmx" ivyde:javadoc="jetty-jmx" name="jetty-jmx" conf="jmx"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-jndi" ivyde:javadoc="jetty-jndi" name="jetty-jndi" conf="jndi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-policy" ivyde:javadoc="jetty-policy" name="jetty-policy" conf="policy"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-plus" ivyde:javadoc="jetty-plus" name="jetty-plus" conf="plus"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-rewrite" ivyde:javadoc="jetty-rewrite" name="jetty-rewrite" conf="rewrite"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-security" ivyde:javadoc="jetty-security" name="jetty-security" conf="security"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-server" ivyde:javadoc="jetty-server" name="jetty-server" conf="server"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-servlet" ivyde:javadoc="jetty-servlet" name="jetty-servlet" conf="servlet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-servlets" ivyde:javadoc="jetty-servlets" name="jetty-servlets" conf="servlets"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-start" ivyde:javadoc="jetty-start" name="jetty-start" conf="start"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-util" ivyde:javadoc="jetty-util" name="jetty-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-webapp" ivyde:javadoc="jetty-webapp" name="jetty-webapp" conf="webapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-websocket" ivyde:javadoc="jetty-websocket" name="jetty-websocket" conf="websocket"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jetty-xml" ivyde:javadoc="jetty-xml" name="jetty-xml" conf="xml"/>
+        <artifact name="jsp-2.1" conf="jsp"/>
+        <artifact name="jsp-api-2.1" conf="jsp"/>
+
+        <!-- source -->
+        <artifact name="jetty-ajp" type="source" ext="zip" conf="ajp"/>
+        <artifact name="jetty-annotations" type="source" ext="zip" conf="annotations"/>
+        <artifact name="jetty-client" type="source" ext="zip" conf="client"/>
+        <artifact name="jetty-continuation" type="source" ext="zip" conf="continuation"/>
+        <artifact name="jetty-deploy" type="source" ext="zip" conf="deploy"/>
+        <artifact name="jetty-http" type="source" ext="zip" conf="http"/>
+        <artifact name="jetty-io" type="source" ext="zip" conf="io"/>
+        <artifact name="jetty-jaspi" type="source" ext="zip" conf="jaspi"/>
+        <artifact name="jetty-jmx" type="source" ext="zip" conf="jmx"/>
+        <artifact name="jetty-jndi" type="source" ext="zip" conf="jndi"/>
+        <artifact name="jetty-policy" type="source" ext="zip" conf="policy"/>
+        <artifact name="jetty-plus" type="source" ext="zip" conf="plus"/>
+        <artifact name="jetty-rewrite" type="source" ext="zip" conf="rewrite"/>
+        <artifact name="jetty-security" type="source" ext="zip" conf="security"/>
+        <artifact name="jetty-server" type="source" ext="zip" conf="server"/>
+        <artifact name="jetty-servlet" type="source" ext="zip" conf="servlet"/>
+        <artifact name="jetty-servlets" type="source" ext="zip" conf="servlets"/>
+        <artifact name="jetty-start" type="source" ext="zip" conf="start"/>
+        <artifact name="jetty-util" type="source" ext="zip" conf="util"/>
+        <artifact name="jetty-webapp" type="source" ext="zip" conf="webapp"/>
+        <artifact name="jetty-websocket" type="source" ext="zip" conf="websocket"/>
+        <artifact name="jetty-xml" type="source" ext="zip" conf="xml"/>
+
+        <!-- javadoc -->
+        <artifact name="jetty-ajp" type="javadoc" ext="zip" conf="ajp"/>
+        <artifact name="jetty-annotations" type="javadoc" ext="zip" conf="annotations"/>
+        <artifact name="jetty-client" type="javadoc" ext="zip" conf="client"/>
+        <artifact name="jetty-continuation" type="javadoc" ext="zip" conf="continuation"/>
+        <artifact name="jetty-deploy" type="javadoc" ext="zip" conf="deploy"/>
+        <artifact name="jetty-http" type="javadoc" ext="zip" conf="http"/>
+        <artifact name="jetty-io" type="javadoc" ext="zip" conf="io"/>
+        <artifact name="jetty-jaspi" type="javadoc" ext="zip" conf="jaspi"/>
+        <artifact name="jetty-jmx" type="javadoc" ext="zip" conf="jmx"/>
+        <artifact name="jetty-jndi" type="javadoc" ext="zip" conf="jndi"/>
+        <artifact name="jetty-policy" type="javadoc" ext="zip" conf="policy"/>
+        <artifact name="jetty-plus" type="javadoc" ext="zip" conf="plus"/>
+        <artifact name="jetty-rewrite" type="javadoc" ext="zip" conf="rewrite"/>
+        <artifact name="jetty-security" type="javadoc" ext="zip" conf="security"/>
+        <artifact name="jetty-server" type="javadoc" ext="zip" conf="server"/>
+        <artifact name="jetty-servlet" type="javadoc" ext="zip" conf="servlet"/>
+        <artifact name="jetty-servlets" type="javadoc" ext="zip" conf="servlets"/>
+        <artifact name="jetty-start" type="javadoc" ext="zip" conf="start"/>
+        <artifact name="jetty-util" type="javadoc" ext="zip" conf="util"/>
+        <artifact name="jetty-webapp" type="javadoc" ext="zip" conf="webapp"/>
+        <artifact name="jetty-websocket" type="javadoc" ext="zip" conf="websocket"/>
+        <artifact name="jetty-xml" type="javadoc" ext="zip" conf="xml"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.mail" name="javamail" rev="[1.4,2.0[" conf="jndi-&gt;default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="2.5" conf="continuation,util-&gt;default"/>
+        <dependency org="javax.transaction" name="jta" rev="[1.1,2.0[" conf="plus-&gt;default"/>
+        <dependency org="org.eclipse" name="jdt" rev="3.1.1" conf="jsp-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.5.+" conf="util-&gt;core"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="[3.1,4.0[" conf="annotations-&gt;commons"/>
+        <dependency org="org.apache.geronimo.specs" name="jaspic" rev="1.0" conf="jaspi-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
