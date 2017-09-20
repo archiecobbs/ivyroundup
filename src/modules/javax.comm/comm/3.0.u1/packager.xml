@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}api"/>
 
-    <resource url="http://freedomotic.googlecode.com/svn-history/r347/lib/JavaComm/jar/comm3.0_u1_linux.zip"
+    <resource url="https://s3.amazonaws.com/archie-public/jvser/comm3.0_u1_linux.zip"
       sha1="c5065ebb798bf81168c90745596e017da45aa64d">
         <include name="${archive}/jar/**/**.jar"/>
         <include name="${archive}/lib/*.so"/>
