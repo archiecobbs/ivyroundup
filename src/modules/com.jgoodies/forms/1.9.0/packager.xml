@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2009 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="jgoodies-forms">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="eda960be2f88d47d14a81b742772b07684abc7d0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="c19478a7c42201901ac65bf98bb25271e4d67db6"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="2e8e3ff4fe65dc5a2b4fa6bfb2522e69ac644fc5"/>
+    </m2resource>
+</packager-module>
