@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2018-04-17 18:36:16 UTC</timestamp>
+  <timestamp>2018-04-20 16:51:32 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -149,6 +149,7 @@
     <mod name="fdb-java">
       <rev name="2.0.4"/>
       <rev name="3.0.2"/>
+      <rev name="5.1.5"/>
     </mod>
   </org>
   <org name="com.gargoylesoftware">
@@ -235,6 +236,11 @@
       <rev name="2.8.0"/>
     </mod>
   </org>
+  <org name="com.google.cloud">
+    <mod name="google-cloud-spanner">
+      <rev name="0.44.0-beta"/>
+    </mod>
+  </org>
   <org name="com.google.common">
     <mod name="google-collections">
       <rev name="1.0"/>
@@ -259,6 +265,7 @@
       <rev name="19.0"/>
       <rev name="20.0"/>
       <rev name="21.0"/>
+      <rev name="24.0-jre"/>
     </mod>
   </org>
   <org name="com.google.gwt">
@@ -543,6 +550,7 @@
       <rev name="5.1.29"/>
       <rev name="5.1.31"/>
       <rev name="5.1.34"/>
+      <rev name="6.0.6"/>
     </mod>
   </org>
   <org name="com.netflix.archaius">
@@ -1031,6 +1039,7 @@
       <rev name="4.0.1"/>
       <rev name="4.0.2"/>
       <rev name="4.0.3"/>
+      <rev name="4.1.0"/>
     </mod>
   </org>
   <org name="it.m2.net">
@@ -1249,6 +1258,7 @@
     <mod name="validation-api">
       <rev name="1.0.0.GA"/>
       <rev name="2.0.0.Final"/>
+      <rev name="2.0.1.Final"/>
     </mod>
   </org>
   <org name="javax.websocket">
@@ -2887,6 +2897,7 @@
       <rev name="9.2.6.v20141205"/>
       <rev name="9.2.7.v20150116"/>
       <rev name="9.2.19.v20160908"/>
+      <rev name="9.2.24.v20180105"/>
     </mod>
     <mod name="jetty-websocket">
       <rev name="9.0.0.v20130308"/>
@@ -3720,6 +3731,7 @@
       <rev name="9.3-1103"/>
       <rev name="9.4-1202"/>
       <rev name="9.4.1208"/>
+      <rev name="42.2.2"/>
     </mod>
   </org>
   <org name="org.powermock">
@@ -3784,6 +3796,7 @@
       <rev name="4.1"/>
       <rev name="4.5.1"/>
       <rev name="4.9.0"/>
+      <rev name="5.11.3"/>
     </mod>
   </org>
   <org name="org.rxtx">
@@ -3904,6 +3917,7 @@
       <rev name="4.2.4"/>
       <rev name="4.2.5"/>
       <rev name="4.3.10"/>
+      <rev name="5.0.4"/>
     </mod>
     <mod name="spring-integration">
       <rev name="1.0.1"/>
@@ -4077,6 +4091,7 @@
       <rev name="3.8.11.2"/>
       <rev name="3.14.2.1"/>
       <rev name="3.15.1"/>
+      <rev name="3.21.0.1"/>
     </mod>
   </org>
   <org name="org.xerial.snappy">

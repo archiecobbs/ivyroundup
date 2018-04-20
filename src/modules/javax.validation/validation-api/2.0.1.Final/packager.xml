@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2010 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="cb855558e6271b1b32e716d24cb85c7f583ce09e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="4b714a5167580122e46ead3317ffcdcdbd67c5f0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="7200cee3f81566cdf641c85a53df141034e3b603"/>
+    </m2resource>
+</packager-module>
