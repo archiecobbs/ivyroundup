@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2018 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20180419000000">
+        <license name="LGPL" url="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html"/>
+        <description homepage="https://spotbugs.github.io/">
+
+            <p>
+            SpotBugs: Because it's easy!
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="ant" description="Ant task"/>
+        <conf name="annotations" description="Annotation classes"/>
+        <conf name="default" extends="core,annotations,ant" description="All JARs"/>
+    </configurations>
+
+    <publications>
+        <artifact name="spotbugs" conf="core"/>
+        <artifact name="spotbugs-ant" conf="ant"/>
+        <artifact name="spotbugs-annotations" conf="annotations"/>
+
+        <artifact name="spotbugs" type="source" ext="zip" conf="core"/>
+        <artifact name="spotbugs-ant" type="source" ext="zip" conf="ant"/>
+        <artifact name="spotbugs-annotations" type="source" ext="zip" conf="annotations"/>
+
+        <artifact name="spotbugs" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="spotbugs-ant" type="javadoc" ext="zip" conf="ant"/>
+        <artifact name="spotbugs-annotations" type="javadoc" ext="zip" conf="annotations"/>
+    </publications>
+
+</ivy-module>

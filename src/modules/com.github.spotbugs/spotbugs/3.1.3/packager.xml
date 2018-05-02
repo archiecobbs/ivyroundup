@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2018 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="054bf98496c18b56876f31be6a8ad8976bd21e6f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="13298b7349e1bf078465a42e0a543e2890999c9c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="679fd3ef52d66639f2908fd37354ec08c8d00e58"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-ant">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-ant.jar" sha1="cfb40291155edb4dc77cd8a2e6571797ba924e8f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-ant.zip" sha1="fec44b60432a788cca5abc449145dd081eb1b19b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-ant.zip" sha1="d38e2f59e4aecf1e193691637272596711cf118e"/>
+    </m2resource>
+    <m2resource artifactId="${ivy.packager.module}-annotations">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-annotations.jar" sha1="c19e39b6227963e05760d4f93b9b0785743f9439"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-annotations.zip" sha1="8d014192142b623d95193392dd58da643e3feb16"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-annotations.zip" sha1="199781bfe7a052b03384f58caec4875242fb5253"/>
+    </m2resource>
+</packager-module>
