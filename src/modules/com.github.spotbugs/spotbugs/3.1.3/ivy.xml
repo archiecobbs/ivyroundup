@@ -33,6 +33,7 @@
         <conf name="core" description="Core classes"/>
         <conf name="ant" description="Ant task"/>
         <conf name="annotations" description="Annotation classes"/>
+        <conf name="dist" description="Distribution ZIP file"/>
         <conf name="default" extends="core,annotations,ant" description="All JARs"/>
     </configurations>
 
@@ -40,6 +41,8 @@
         <artifact name="spotbugs" conf="core"/>
         <artifact name="spotbugs-ant" conf="ant"/>
         <artifact name="spotbugs-annotations" conf="annotations"/>
+
+        <artifact name="spotbugs-dist" ext="zip" conf="dist"/>
 
         <artifact name="spotbugs" type="source" ext="zip" conf="core"/>
         <artifact name="spotbugs-ant" type="source" ext="zip" conf="ant"/>

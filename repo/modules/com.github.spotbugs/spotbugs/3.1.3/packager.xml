@@ -30,4 +30,7 @@
         <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-annotations.zip" sha1="8d014192142b623d95193392dd58da643e3feb16"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-annotations.zip" sha1="199781bfe7a052b03384f58caec4875242fb5253"/>
     </m2resource>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-dist.zip" sha1="054bf98496c18b56876f31be6a8ad8976bd21e6f"/>
+    </m2resource>
 </packager-module>
