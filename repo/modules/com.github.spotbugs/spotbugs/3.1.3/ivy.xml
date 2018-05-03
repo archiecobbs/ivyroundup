@@ -44,7 +44,7 @@
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spotbugs-ant" ivyde:javadoc="spotbugs-ant" name="spotbugs-ant" conf="ant"/>
         <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="spotbugs-annotations" ivyde:javadoc="spotbugs-annotations" name="spotbugs-annotations" conf="annotations"/>
 
-        <artifact name="spotbugs-dist" type="zip" ext="zip" conf="dist"/>
+        <artifact name="spotbugs-dist" ext="zip" conf="dist"/>
 
         <artifact name="spotbugs" type="source" ext="zip" conf="core"/>
         <artifact name="spotbugs-ant" type="source" ext="zip" conf="ant"/>
