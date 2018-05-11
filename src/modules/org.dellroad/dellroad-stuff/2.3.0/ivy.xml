@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20180511000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/archiecobbs/dellroad-stuff/">
+
+            <p>
+            A dumping ground for various useful Java classes and ant build macros that have
+            evolved over time from repeated use in several different projects.
+            </p>
+
+            <p>Highlights:
+
+            <ul>
+                <li>A few additions to <a href="http://www.springframework/org/" rel="nofollow">Spring</a> integration (see <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/spring/package-summary.html" rel="nofollow">org.dellroad.stuff.spring</a>) </li>
+                <li>Automated schema update tracking with Spring integration (see <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/schema/package-summary.html" rel="nofollow">org.dellroad.stuff.schema</a>) </li>
+              <li>Several <a href="http://vaadin.com" rel="nofollow">Vaadin</a> support classes, including: </li>
+              <ul>
+                <li>
+                    <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/SpringVaadinServlet.html" rel="nofollow">Spring integration</a>
+                </li>
+                <li><a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/AbstractSimpleContainer.html" rel="nofollow">In-memory</a> and <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/AbstractQueryContainer.html" rel="nofollow">query-based</a> containers </li>
+                <li><a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/ProvidesProperty.html" rel="nofollow">Auto-generated container properties</a> using annotations </li>
+                <li><a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/FieldBuilder.html" rel="nofollow">Auto-generated fields</a> using annotations </li>
+                <li>Support for both <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin/package-summary.html" rel="nofollow">Vaadin 6.x</a> and <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/vaadin7/package-summary.html" rel="nofollow">Vaadin 7.x</a> </li>
+              </ul>
+              <li>Support classes for <a href="http://jibx.sourceforge.net/" rel="nofollow">JiBX</a> (see <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/jibx/package-summary.html" rel="nofollow">org.dellroad.stuff.jibx</a>) </li>
+              <li>Simple XML Persistence Objects (see <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/pobj/package-summary.html" rel="nofollow">org.dellroad.stuff.pobj</a>) </li>
+              <li>Some handy <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/validation/package-summary.html" rel="nofollow">validation</a> support classes </li>
+              <li>Miscellaneous stuff for <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/io/package-summary.html" rel="nofollow">I/O</a>, <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/net/package-summary.html" rel="nofollow">networking</a>, <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/xml/package-summary.html" rel="nofollow">XML</a>, <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/sql/package-summary.html" rel="nofollow">SQL</a>, <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/dao/package-summary.html" rel="nofollow">DAO's</a>, <a href="http://archiecobbs.github.io/dellroad-stuff/site/apidocs/index.html?org/dellroad/stuff/string/package-summary.html" rel="nofollow">strings and parsing</a>, etc. </li>
+            </ul>
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="main" description="Main dellroad-stuff classes"/>
+        <conf name="core" extends="main" description="Backward compatible alias for `main'"/>
+        <conf name="dao" extends="main" description="Add DAO dependencies"/>
+        <conf name="spring" extends="main" description="Add Spring classes"/>
+        <conf name="vaadin7" extends="main" description="Add Vaadin 7 classes"/>
+        <conf name="vaadin8" extends="main" description="Add Vaadin 8 classes"/>
+        <conf name="aspects" extends="main" description="Add AspectJ runtime dependencies"/>
+        <conf name="validation" extends="main" description="Add Validation API dependency"/>
+        <conf name="validation-hibernate" extends="validation" description="Add Hibernate Validator"/>
+        <conf name="jibx" extends="main" description="Add JiBX classes"/>
+        <conf name="pobj" extends="main" description="Add PersistentObject classes"/>
+        <conf name="guava" extends="main" description="Add Google Guava dependencies"/>
+        <conf name="servlet" extends="main" description="Add Servlet dependencies"/>
+        <conf name="csv" extends="main" description="Add CSV dependencies"/>
+        <conf name="default" extends="main,spring,vaadin7,validation-hibernate,jibx,servlet,aspects"
+          description="Core classes and all dependencies (Vaadin 7)"/>
+    </configurations>
+
+    <publications>
+
+        <!-- JARs -->
+        <artifact name="dellroad-stuff-jibx" conf="jibx"/>
+        <artifact name="dellroad-stuff-main" conf="main"/>
+        <artifact name="dellroad-stuff-pobj" conf="pobj"/>
+        <artifact name="dellroad-stuff-spring" conf="spring"/>
+        <artifact name="dellroad-stuff-vaadin7" conf="vaadin7"/>
+        <artifact name="dellroad-stuff-vaadin8" conf="vaadin8"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="dellroad-stuff-jibx" conf="jibx"/>
+        <artifact type="source" ext="zip" name="dellroad-stuff-main" conf="main"/>
+        <artifact type="source" ext="zip" name="dellroad-stuff-pobj" conf="pobj"/>
+        <artifact type="source" ext="zip" name="dellroad-stuff-spring" conf="spring"/>
+        <artifact type="source" ext="zip" name="dellroad-stuff-vaadin7" conf="vaadin7"/>
+        <artifact type="source" ext="zip" name="dellroad-stuff-vaadin8" conf="vaadin8"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-jibx" conf="jibx"/>
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-main" conf="main"/>
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-pobj" conf="pobj"/>
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-spring" conf="spring"/>
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-vaadin7" conf="vaadin7"/>
+        <artifact type="javadoc" ext="zip" name="dellroad-stuff-vaadin8" conf="vaadin8"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google.guava" name="guava" rev="21.0" conf="guava->default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="7+" conf="vaadin7->default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="8+" conf="vaadin8->default"/>
+        <dependency org="javax.servlet" name="servletapi" rev="[2.3,)" conf="servlet->default"/>
+        <dependency org="javax.validation" name="validation-api" rev="1+" conf="validation->default"/>
+        <dependency org="javax.persistence" name="persistence-api" rev="2.2" conf="dao->default"/>
+        <dependency org="net.sourceforge.jibx" name="jibx" rev="1.3+" conf="jibx->runtime-base"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="main->core"/>
+        <dependency org="org.sonatype.jline" name="jline" rev="2.14+" conf="main->default"/>
+        <dependency org="org.springframework" name="spring" rev="4+"
+          conf="spring->beans,context-support,expression,jdbc,tx,web-servlet;jibx->expression,oxm;servlet->aop,tx,web-servlet"/>
+        <dependency org="org.hibernate" name="hibernate-validator" rev="5.2+" conf="validation-hibernate->default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="aspects->default"/>
+        <dependency org="net.sourceforge.opencsv" name="opencsv" rev="2.4" conf="csv->default"/>
+    </dependencies>
+
+</ivy-module>
