@@ -22,9 +22,9 @@
         <artifact classifier="sources" tofile="artifacts/sources/jna-source.zip" sha1="965bf0f4cf5b71c2b1e9bb5a8d7b6919020e0492"/>
         <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-javadoc.zip" sha1="58247f8b3b0e2dcefd62dbe755288f48a9e60825"/>
     </m2resource>
-    <m2resource>
-        <artifact tofile="artifacts/jars/jna-platform.jar" sha1="65bd0cacc9c79a21c6ed8e9f588577cd3c2f85b9"/>
-        <artifact classifier="sources" tofile="artifacts/sources/jna-platform-source.zip" sha1="965bf0f4cf5b71c2b1e9bb5a8d7b6919020e0492"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-platform-javadoc.zip" sha1="58247f8b3b0e2dcefd62dbe755288f48a9e60825"/>
+    <m2resource artifactId="jna-platform">
+        <artifact tofile="artifacts/jars/jna-platform.jar" sha1="117d52c9f672d8b7ea80a81464c33ef843de9254"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jna-platform-source.zip" sha1="2793e1c7c5e916e909addff50dd38d37ff848bf6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-platform-javadoc.zip" sha1="765ce0e5028c4a44170aa0183da187f13d8e3e26"/>
     </m2resource>
 </packager-module>
