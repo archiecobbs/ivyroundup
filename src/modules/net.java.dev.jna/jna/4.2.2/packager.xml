@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2011 Ales Nosek
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/jna.jar" sha1="5012450aee579c3118ff09461d5ce210e0cdc2a9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jna-source.zip" sha1="948a9338b46e83bc029a0c500f1de0fc6eea8900"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-javadoc.zip" sha1="8cf693f684e2fbe132808bd67c476f47ce31a33e"/>
+    </m2resource>
+    <m2resource>
+        <artifact tofile="artifacts/jars/jna-platform.jar" sha1="5012450aee579c3118ff09461d5ce210e0cdc2a9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jna-platform-source.zip" sha1="948a9338b46e83bc029a0c500f1de0fc6eea8900"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jna-platform-javadoc.zip" sha1="8cf693f684e2fbe132808bd67c476f47ce31a33e"/>
+    </m2resource>
+</packager-module>
