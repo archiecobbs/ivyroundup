@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}_7.0"/>
+
+    <resource url="https://download.microsoft.com/download/2/F/C/2FC75210-EDDE-464C-8E54-45C0291032FF/sqljdbc_${revision}_enu.tar.gz" sha1="4b29e432a5f21209bd46fe8e223cd56de3535409">
+        <include name="${archive}/enu/mssql-jdbc-7.0.0.jre8.jar"/>
+        <include name="${archive}/enu/mssql-jdbc-7.0.0.jre10.jar"/>
+    </resource>
+
+    <build>
+        <move file="archive/${archive}/enu/mssql-jdbc-7.0.0.jre8.jar" tofile="artifacts/jars/mssql-jdbc.jre8.jar"/>
+        <move file="archive/${archive}/enu/mssql-jdbc-7.0.0.jre10.jar" tofile="artifacts/jars/mssql-jdbc.jre10.jar"/>
+    </build>
+</packager-module>
