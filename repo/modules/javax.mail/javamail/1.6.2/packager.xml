@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource repo="https://maven.java.net/content/repositories/releases" groupId="com.sun.mail" artifactId="javax.mail">
+        <artifact tofile="artifacts/jars/javamail.jar" sha1="935151eb71beff17a2ffac15dd80184a99a0514f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/javamail.zip" sha1="f74a1213edad69087c1f8829ca7c68adcce35942"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javamail.zip" sha1="03cf2c44de42efc993e0e837348823d4fa9f6391"/>
+    </m2resource>
+    <m2resource repo="https://maven.java.net/content/repositories/releases" groupId="com.sun.mail" artifactId="gimap">
+        <artifact tofile="artifacts/jars/gimap.jar" sha1="a1f153a464d28f62653d2efe1f5b638dae8575db"/>
+        <artifact classifier="sources" tofile="artifacts/sources/gimap.zip" sha1="77771e7c959c6e4e60bcb5e74a45b47f15180613"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/gimap.zip" sha1="9784f32d71ae2aa07128c01627a45eed1e7475a5"/>
+    </m2resource>
+    <m2resource repo="https://maven.java.net/content/repositories/releases" groupId="com.sun.mail" artifactId="dsn">
+        <artifact tofile="artifacts/jars/dsn.jar" sha1="ef79b8407da9a394f0eb06ed799ab7d062f94b4d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dsn.zip" sha1="5704abcb6c881b4e1c9a8b0cb8f37d2869cb5fbe"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dsn.zip" sha1="86335d6b6a61c4ba12bfed2f1ea576bb035b3293"/>
+    </m2resource>
+</packager-module>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20180829000000">
+        <license name="Sun Microsystems, Inc. Binary Code License Agreement" url="https://www.oracle.com/sun/index.html"/>
+        <description homepage="http://www.oracle.com/technetwork/java/javamail/index-138643.html">
+            The JavaMail API provides a platform-independent and protocol-independent
+            framework to build mail and messaging applications. The JavaMail API is
+            available as an optional package for use with Java SE platform and is
+            also included in the Java EE platform.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="main" description="The JavaMail reference implementation jar file, including the SMTP, IMAP, and POP3 protocol providers"/>
+        <conf name="jaf" extends="main" description="Add dependency on JAF - required for JDK 1.5 and earlier"/>
+        <conf name="gimap" description="An EXPERIMENTAL Gmail IMAP protocol provider that supports Gmail-specific features"/>
+        <conf name="dsn" description="Support for parsing and creating messages containing Delivery Status Notifications"/>
+        <conf name="default" extends="main" description="Same as &quot;main&quot; configuration"/>
+    </configurations>
+
+    <publications>
+        <artifact name="javamail" conf="main"/>
+        <artifact name="gimap" conf="gimap"/>
+        <artifact name="dsn" conf="dsn"/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="javax.activation" name="jaf" rev="[1.1.1,2.0[" conf="jaf->default"/>
+    </dependencies>
+
+</ivy-module>
