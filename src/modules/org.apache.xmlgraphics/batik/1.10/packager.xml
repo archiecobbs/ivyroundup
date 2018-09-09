@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2016 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+
+    <m2resource artifactId="batik-anim">
+        <artifact tofile="artifacts/jars/batik-anim.jar" sha1="e301c476768a53a33ec473b265fbdceb45dce464"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-anim-source.jar" sha1="806fbeae031125537bfbc3d21b091513950d3758"/>
+    </m2resource>
+    <m2resource artifactId="batik-awt-util">
+        <artifact tofile="artifacts/jars/batik-awt-util.jar" sha1="32712076ffee3eb533bc32f45f5c4b3f25b82749"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-awt-util-source.jar" sha1="3c536f5b8584f271a98d7b3baccd3023c06ac943"/>
+    </m2resource>
+    <m2resource artifactId="batik-bridge">
+        <artifact tofile="artifacts/jars/batik-bridge.jar" sha1="53cdf9504d1eefe0ee3bcf616a882d5a2b93ffd4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-bridge-source.jar" sha1="a2f70bfbfcc3cf756402487c25fe49bb17fb3b44"/>
+    </m2resource>
+    <m2resource artifactId="batik-codec">
+        <artifact tofile="artifacts/jars/batik-codec.jar" sha1="c45741fdde905465a3c008aa7473b2a4a213c7c1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-codec-source.jar" sha1="36e3b1d8c122a00b764cc805ccce56af580eaac6"/>
+    </m2resource>
+    <m2resource artifactId="batik-constants">
+        <artifact tofile="artifacts/jars/batik-constants.jar" sha1="53079777c80f005c10cc4837e9d3c90ad890f1a1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-constants-source.jar" sha1="a2325998f61600f6d3ea366f11d5ec364951dcc5"/>
+    </m2resource>
+    <m2resource artifactId="batik-css">
+        <artifact tofile="artifacts/jars/batik-css.jar" sha1="a1b95b2fc81d2089a089e2bb1c143b743cd0eb26"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-css-source.jar" sha1="dfb5187a13d176bda919ca3490d57116772ac1a3"/>
+    </m2resource>
+    <m2resource artifactId="batik-dom">
+        <artifact tofile="artifacts/jars/batik-dom.jar" sha1="5f94e491f3b4653c834201dcb36fa7b2169a4af9"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-dom-source.jar" sha1="2eac55be159b9412859e820f09ee6d3c706b80e2"/>
+    </m2resource>
+    <m2resource artifactId="batik-ext">
+        <artifact tofile="artifacts/jars/batik-ext.jar" sha1="23a27a446965644ff5593dab2003221936ca2499"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-ext-source.jar" sha1="8728355ae5e9ed874712ffddcb1567dbbc4c4a0d"/>
+    </m2resource>
+    <m2resource artifactId="batik-extension">
+        <artifact tofile="artifacts/jars/batik-extension.jar" sha1="cda753abfb5d8bd4315c7b6f30f1c948a945ccac"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-extension-source.jar" sha1="35a38b0aa00c2ee9ad9563b169d27c3de2e0e678"/>
+    </m2resource>
+    <m2resource artifactId="batik-gui-util">
+        <artifact tofile="artifacts/jars/batik-gui-util.jar" sha1="070cd1fe3c18d0b0bf12ab81058ff58168d22530"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-gui-util-source.jar" sha1="cfc4ecc17ce49c77b25003f8e6f3ed0632c75e32"/>
+    </m2resource>
+    <m2resource artifactId="batik-gvt">
+        <artifact tofile="artifacts/jars/batik-gvt.jar" sha1="7091974abb3f57141f29aa94d2fbf8a06d22f837"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-gvt-source.jar" sha1="7ddf15bad10839a32400121b3756b3f2c8a846b8"/>
+    </m2resource>
+    <m2resource artifactId="batik-i18n">
+        <artifact tofile="artifacts/jars/batik-i18n.jar" sha1="14923525d8c01b3cbfa9d340c0d2bf315a85b3f0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-i18n-source.jar" sha1="1c4bf7945bf5d1f03aaa8788c89bf4dbbb2cdc20"/>
+    </m2resource>
+    <m2resource artifactId="batik-parser">
+        <artifact tofile="artifacts/jars/batik-parser.jar" sha1="afe740ee774eb7f94a3f9ae056724dff0d84d7e1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-parser-source.jar" sha1="25648288c0c0d3b7f8962ffb187a71095928ebfc"/>
+    </m2resource>
+    <m2resource artifactId="batik-rasterizer">
+        <artifact tofile="artifacts/jars/batik-rasterizer.jar" sha1="21784e4d91d22a6dbec11ae3d6867e316a3d4276"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-rasterizer-source.jar" sha1="9f9853b9efbd07d34ca97c9a8aaec7752629bbf2"/>
+    </m2resource>
+    <m2resource artifactId="batik-script">
+        <artifact tofile="artifacts/jars/batik-script.jar" sha1="76c0790c695c9cec110163aef89f1de05c5d0a96"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-script-source.jar" sha1="199e2b68a5eaeaa656d3d8963203d04818ab4db7"/>
+    </m2resource>
+    <m2resource artifactId="batik-slideshow">
+        <artifact tofile="artifacts/jars/batik-slideshow.jar" sha1="ed4b22d5dedf842f88763b8e1b681787c7019431"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-slideshow-source.jar" sha1="ca149d5f813027c353e2daf9abb2b9b913755119"/>
+    </m2resource>
+    <m2resource artifactId="batik-squiggle">
+        <artifact tofile="artifacts/jars/batik-squiggle.jar" sha1="08c19b138337cdc528ecb6b3f6032ee6a0692fe1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-squiggle-source.jar" sha1="c7ff9704cb277646d6007f56944ae316e4e4d340"/>
+    </m2resource>
+    <m2resource artifactId="batik-svg-dom">
+        <artifact tofile="artifacts/jars/batik-svg-dom.jar" sha1="98b083931c3a9d3fa4b544ea927940689899eb5e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-svg-dom-source.jar" sha1="16a55199ad002c03e50d7896766bca4328e4cec6"/>
+    </m2resource>
+    <m2resource artifactId="batik-svggen">
+        <artifact tofile="artifacts/jars/batik-svggen.jar" sha1="1657ee1418304ade24a213e028d89a18e9dec13b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-svggen-source.jar" sha1="9db528b5e5b7758163278a7d89451c088ebe8373"/>
+    </m2resource>
+    <m2resource artifactId="batik-svgpp">
+        <artifact tofile="artifacts/jars/batik-svgpp.jar" sha1="ff3adb81d7f605e044d3962ef16820343cc46ad3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-svgpp-source.jar" sha1="9542caac817eaa204a978893ecb4c6d783f9f9a6"/>
+    </m2resource>
+    <m2resource artifactId="batik-swing">
+        <artifact tofile="artifacts/jars/batik-swing.jar" sha1="acf2f7b56be66c1e777a6f859df43b497065e403"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-swing-source.jar" sha1="2e534b262d4bc8c682c8a65ac228d1fac3d55a84"/>
+    </m2resource>
+    <m2resource artifactId="batik-transcoder">
+        <artifact tofile="artifacts/jars/batik-transcoder.jar" sha1="66d3c8025f50c77834ff4bb09055278fe95070fa"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-transcoder-source.jar" sha1="24ef8e38cac9a9cd6bafc43b2e772c052712a7c4"/>
+    </m2resource>
+    <m2resource artifactId="batik-ttf2svg">
+        <artifact tofile="artifacts/jars/batik-ttf2svg.jar" sha1="1d97b546bdfeeb901dfbff5b2c0cfdf5dcd82858"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-ttf2svg-source.jar" sha1="423864a4b8c95b88b6cfb2db8e65138348d1b39f"/>
+    </m2resource>
+    <m2resource artifactId="batik-util">
+        <artifact tofile="artifacts/jars/batik-util.jar" sha1="f40a4624616047c86f4bc80c985426afff964975"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-util-source.jar" sha1="87f316c0c3d6922ab02695d9a82db80a7ab3b7dc"/>
+    </m2resource>
+    <m2resource artifactId="batik-xml">
+        <artifact tofile="artifacts/jars/batik-xml.jar" sha1="601a184d2e363e0900eeec3617e62a3162a6fe37"/>
+        <artifact classifier="sources" tofile="artifacts/sources/batik-xml-source.jar" sha1="c74f33e0efebf907e520059ebac2ae2d5692b7e1"/>
+    </m2resource>
+
+<!--
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="bin" value="${name}-bin-${revision}"/>
+    <property name="src" value="${name}-src-${revision}"/>
+
+    <property name="mirror1" value="http://www.apache.org/dist"/>
+    <property name="backup" value="http://archive.apache.org/dist"/>
+
+    <resource url="${mirror1}/xmlgraphics/batik/binaries/${bin}.zip" sha1="fc95f083c7c2129ec969a55cf3a659c8b469a610">
+        <url href="${backup}/xmlgraphics/batik/${bin}.zip"/>
+        <include name="${name}-${revision}/*.jar"/>
+        <include name="${name}-${revision}/lib/*.jar"/>
+    </resource>
+    <resource url="${mirror1}/xmlgraphics/batik/source/${src}.zip" sha1="2a91b64758fb6969f5aeee9b0cdfdf48a9af3faf">
+        <url href="${backup}/xmlgraphics/batik/${src}.zip"/>
+        <include name="${name}-${revision}/sources/**/*"/>
+        <include name="${name}-${revision}/resources/**/*"/>
+    </resource>
+    <build>
+        <move todir="artifacts/jars">
+            <fileset dir="archive/${name}-${revision}">
+                <include name="batik-*.jar"/>
+            </fileset>
+            <fileset dir="archive/${name}-${revision}/lib">
+                <include name="batik-*.jar"/>
+            </fileset>
+        </move>
+        <zip destfile="artifacts/sources/source.zip">
+            <fileset dir="archive/${name}-${revision}/sources"/>
+            <fileset dir="archive/${name}-${revision}/resources"/>
+        </zip>
+    </build>
+-->
+</packager-module>
