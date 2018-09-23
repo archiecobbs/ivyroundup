@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2018 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="querystream-jpa">
+        <artifact tofile="artifacts/jars/querystream-jpa.jar" sha1="3556f1ab4c2a998edf45537ca2f5b9f63c2c9f04"/>
+        <artifact classifier="sources" tofile="artifacts/sources/querystream-jpa.zip" sha1="2a5758bd43bcf2d85f5d352ae8c481c9bda2f97e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/querystream-jpa.zip" sha1="906d42c15eb5d1f6c6fefe41dcd7a8591b77043a"/>
+    </m2resource>
+</packager-module>
