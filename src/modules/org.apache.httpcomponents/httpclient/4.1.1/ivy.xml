@@ -55,7 +55,7 @@
         <!-- httpclient -->
         <dependency conf="default; nio; client->core" org="org.apache.httpcomponents" name="httpcore" rev="4.1.1"/>
         <dependency conf="client->default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
-        <dependency conf="client->default" org="org.apache.commons" name="commons-codec" rev="1.4"/>
+        <dependency conf="client->default" org="org.apache.commons" name="commons-codec" rev="[1.4,2.0["/>
 
         <!-- cache -->
         <dependency conf="default,ehcache->default" org="net.sourceforge.ehcache" name="ehcache" rev="2.2+"/>
