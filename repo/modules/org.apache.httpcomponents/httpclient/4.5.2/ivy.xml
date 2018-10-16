@@ -97,7 +97,7 @@
         <!-- httpclient -->
         <dependency conf="client-&gt;core; nio-&gt;nio" org="org.apache.httpcomponents" name="httpcore" rev="4.4.4"/>
         <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-logging" rev="[1.1.1,2.0["/>
-        <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-codec" rev="1.10"/>
+        <dependency conf="client-&gt;default" org="org.apache.commons" name="commons-codec" rev="[1.10,2.0["/>
 
         <!-- cache -->
         <dependency conf="ehcache-&gt;default" org="net.sourceforge.ehcache" name="ehcache" rev="2.7+"/>
