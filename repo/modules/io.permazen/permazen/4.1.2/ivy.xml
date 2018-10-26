@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="io.permazen" module="permazen" revision="4.1.2" status="release" publication="20181026000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/io.permazen/permazen/4.1.2/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/archiecobbs/permazen/">
+
+        <p>
+        <b>Permazen is a better persistence layer for Java</b>
+        </p>
+
+        <p>
+        Mainstream persistence solutions such as JDBC, JPA and JDO were designed simply to give Java programmers access
+        to existing database functionality. They leave many important issues that are inherent to persistence programming
+        poorly addressed or entirely up to the programmer to solve.
+        </p>
+
+        <p>
+        Permazen is a completely different way of looking at persistence programming. Permazen starts over, asking the
+        simple question, "What are the issues that are inherent to persistence programming, regardless of programming
+        language or database technology, and how can they be addressed in the most language-natural way?"
+        </p>
+
+        <p>
+        With Permazen, not only are many issues inherent to persistence programming solved more easily and naturally than
+        before, but also many persistence issues that tranditional solutions don't address at all are solved as well.
+        </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="ant" extends="main,kv,coreapi,spring" description="Ant tasks for use with Permazen."/>
+        <conf name="app" extends="main,coreapi,spring,kv,util" description="Permazen classes supporting command line applications that utilize Permazen."/>
+        <conf name="cli-telnet" extends="main,coreapi,cli,kv" description="Telnet server for the Permazen Command Line Interface (CLI)."/>
+        <conf name="cli" extends="main,coreapi,parse,kv,kv-raft,util" description="Permazen classes supporting command line interfaces."/>
+        <conf name="cliapp" extends="app,main,cli,coreapi,parse,spring" description="Permazen Command Line Interface (CLI) executable application."/>
+        <conf name="coreapi" extends="kv,util" description="Permazen core API classes which provide objects, fields, indexes, queries, and schema management on top of a key/value store."/>
+        <conf name="demo" extends="main,vaadin,cliapp,guiapp,util" description="Permazen demonstration classes."/>
+        <conf name="guiapp" extends="app,main,coreapi,parse,spring,vaadin" description="Permazen Graphical User Interface (GUI) executable application."/>
+        <conf name="jsck" extends="coreapi,kv" description="Permazen Key/Value Database Consistency Checker."/>
+        <conf name="kv-array" extends="kv,util" description="Permazen &quot;array&quot; key/value store implementations."/>
+        <conf name="kv-bdb" extends="kv,util" description="Permazen key/value store implementation based on Berkeley DB Java Edition."/>
+        <conf name="kv-caching" extends="kv" description="Permazen key/value store caching layer."/>
+        <conf name="kv-cockroach" extends="kv,kv-sql" description="Permazen key/value store implementation based on CockroachDB."/>
+        <conf name="kv-fdb" extends="kv,util" description="Permazen key/value store implementation based on FoundationDB."/>
+        <conf name="kv-leveldb" extends="kv,util" description="Permazen key/value store implementation based on LevelDB."/>
+        <conf name="kv-lmdb" extends="kv,util" description="Permazen key/value store implementation based on LMDB."/>
+        <conf name="kv-mssql" extends="kv,kv-sql" description="Permazen key/value store implementation based on Microsoft SQL Server."/>
+        <conf name="kv-mysql" extends="kv,kv-sql" description="Permazen key/value store implementation based on MySQL."/>
+        <conf name="kv-raft" extends="kv,util" description="Permazen distributed, linearizable ACID compliant key/value store implementation based on the Raft consensus algorithm."/>
+        <conf name="kv-rocksdb" extends="kv,util" description="Permazen key/value store implementation based on RocksDB."/>
+        <conf name="kv-simple" extends="kv,util" description="A couple of simplistic Permazen key/value store implementations."/>
+        <conf name="kv-spanner" extends="kv,util" description="Support for Permazen key/value store implementation based on Google Cloud Spanner."/>
+        <conf name="kv-sql" extends="kv,util" description="Support for Permazen key/value store implementation based on SQL databases."/>
+        <conf name="kv-sqlite" extends="kv,kv-sql" description="Permazen key/value store implementation based on SQLite."/>
+        <conf name="kv-test" extends="kv,util" description="Permazen unit test classes for key/value store implementations."/>
+        <conf name="kv-xodus" extends="kv,util" description="Permazen key/value store implementation based on Xodus"/>
+        <conf name="kv" extends="util" description="Permazen classes relating to the key/value store API."/>
+        <conf name="main" extends="coreapi,kv,kv-simple,util" description="Permazen classes that map Java model classes onto the core API."/>
+        <conf name="parse" extends="main,coreapi,kv,kv-simple,util" description="Permazen classes for parsing Java expressions."/>
+        <conf name="spring" extends="main,coreapi,kv,kv-raft" description="Permazen classes for the Spring Framework."/>
+        <conf name="test" description="Permazen unit test support classes."/>
+        <conf name="util" description="Common utility classes used by Permazen."/>
+        <conf name="vaadin" extends="main,coreapi,parse,kv,spring,util" description="Permazen classes supporting Vaadin applications."/>
+        <conf name="default" extends="main" description="Permazen with simple key/value store classes"/>
+    </configurations>
+
+    <publications>
+
+        <!-- JARs -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-ant" ivyde:javadoc="permazen-ant" name="permazen-ant" conf="ant"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-app" ivyde:javadoc="permazen-app" name="permazen-app" conf="app"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-cli" ivyde:javadoc="permazen-cli" name="permazen-cli" conf="cli"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-cli-telnet" ivyde:javadoc="permazen-cli-telnet" name="permazen-cli-telnet" conf="cli-telnet"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-cliapp" ivyde:javadoc="permazen-cliapp" name="permazen-cliapp" conf="cliapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-coreapi" ivyde:javadoc="permazen-coreapi" name="permazen-coreapi" conf="coreapi"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-demo" ivyde:javadoc="permazen-demo" name="permazen-demo" conf="demo"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-guiapp" ivyde:javadoc="permazen-guiapp" name="permazen-guiapp" conf="guiapp"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-jsck" ivyde:javadoc="permazen-jsck" name="permazen-jsck" conf="jsck"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv" ivyde:javadoc="permazen-kv" name="permazen-kv" conf="kv"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-array" ivyde:javadoc="permazen-kv-array" name="permazen-kv-array" conf="kv-array"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-bdb" ivyde:javadoc="permazen-kv-bdb" name="permazen-kv-bdb" conf="kv-bdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-caching" ivyde:javadoc="permazen-kv-caching" name="permazen-kv-caching" conf="kv-caching"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-cockroach" ivyde:javadoc="permazen-kv-cockroach" name="permazen-kv-cockroach" conf="kv-cockroach"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-fdb" ivyde:javadoc="permazen-kv-fdb" name="permazen-kv-fdb" conf="kv-fdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-leveldb" ivyde:javadoc="permazen-kv-leveldb" name="permazen-kv-leveldb" conf="kv-leveldb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-lmdb" ivyde:javadoc="permazen-kv-lmdb" name="permazen-kv-lmdb" conf="kv-lmdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-mssql" ivyde:javadoc="permazen-kv-mssql" name="permazen-kv-mssql" conf="kv-mssql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-mysql" ivyde:javadoc="permazen-kv-mysql" name="permazen-kv-mysql" conf="kv-mysql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-raft" ivyde:javadoc="permazen-kv-raft" name="permazen-kv-raft" conf="kv-raft"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-rocksdb" ivyde:javadoc="permazen-kv-rocksdb" name="permazen-kv-rocksdb" conf="kv-rocksdb"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-simple" ivyde:javadoc="permazen-kv-simple" name="permazen-kv-simple" conf="kv-simple"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-spanner" ivyde:javadoc="permazen-kv-spanner" name="permazen-kv-spanner" conf="kv-spanner"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-sql" ivyde:javadoc="permazen-kv-sql" name="permazen-kv-sql" conf="kv-sql"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-sqlite" ivyde:javadoc="permazen-kv-sqlite" name="permazen-kv-sqlite" conf="kv-sqlite"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-test" ivyde:javadoc="permazen-kv-test" name="permazen-kv-test" conf="kv-test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-kv-xodus" ivyde:javadoc="permazen-kv-xodus" name="permazen-kv-xodus" conf="kv-xodus"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-main" ivyde:javadoc="permazen-main" name="permazen-main" conf="main"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-parse" ivyde:javadoc="permazen-parse" name="permazen-parse" conf="parse"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-spring" ivyde:javadoc="permazen-spring" name="permazen-spring" conf="spring"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-test" ivyde:javadoc="permazen-test" name="permazen-test" conf="test"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-util" ivyde:javadoc="permazen-util" name="permazen-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="permazen-vaadin" ivyde:javadoc="permazen-vaadin" name="permazen-vaadin" conf="vaadin"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="permazen-ant" conf="ant"/>
+        <artifact type="source" ext="zip" name="permazen-app" conf="app"/>
+        <artifact type="source" ext="zip" name="permazen-cli" conf="cli"/>
+        <artifact type="source" ext="zip" name="permazen-cli-telnet" conf="cli-telnet"/>
+        <artifact type="source" ext="zip" name="permazen-cliapp" conf="cliapp"/>
+        <artifact type="source" ext="zip" name="permazen-coreapi" conf="coreapi"/>
+        <artifact type="source" ext="zip" name="permazen-demo" conf="demo"/>
+        <artifact type="source" ext="zip" name="permazen-guiapp" conf="guiapp"/>
+        <artifact type="source" ext="zip" name="permazen-jsck" conf="jsck"/>
+        <artifact type="source" ext="zip" name="permazen-kv" conf="kv"/>
+        <artifact type="source" ext="zip" name="permazen-kv-array" conf="kv-array"/>
+        <artifact type="source" ext="zip" name="permazen-kv-bdb" conf="kv-bdb"/>
+        <artifact type="source" ext="zip" name="permazen-kv-caching" conf="kv-caching"/>
+        <artifact type="source" ext="zip" name="permazen-kv-cockroach" conf="kv-cockroach"/>
+        <artifact type="source" ext="zip" name="permazen-kv-fdb" conf="kv-fdb"/>
+        <artifact type="source" ext="zip" name="permazen-kv-leveldb" conf="kv-leveldb"/>
+        <artifact type="source" ext="zip" name="permazen-kv-lmdb" conf="kv-lmdb"/>
+        <artifact type="source" ext="zip" name="permazen-kv-mssql" conf="kv-mssql"/>
+        <artifact type="source" ext="zip" name="permazen-kv-mysql" conf="kv-mysql"/>
+        <artifact type="source" ext="zip" name="permazen-kv-raft" conf="kv-raft"/>
+        <artifact type="source" ext="zip" name="permazen-kv-rocksdb" conf="kv-rocksdb"/>
+        <artifact type="source" ext="zip" name="permazen-kv-simple" conf="kv-simple"/>
+        <artifact type="source" ext="zip" name="permazen-kv-spanner" conf="kv-spanner"/>
+        <artifact type="source" ext="zip" name="permazen-kv-sql" conf="kv-sql"/>
+        <artifact type="source" ext="zip" name="permazen-kv-sqlite" conf="kv-sqlite"/>
+        <artifact type="source" ext="zip" name="permazen-kv-test" conf="kv-test"/>
+        <artifact type="source" ext="zip" name="permazen-kv-xodus" conf="kv-xodus"/>
+        <artifact type="source" ext="zip" name="permazen-main" conf="main"/>
+        <artifact type="source" ext="zip" name="permazen-parse" conf="parse"/>
+        <artifact type="source" ext="zip" name="permazen-spring" conf="spring"/>
+        <artifact type="source" ext="zip" name="permazen-test" conf="test"/>
+        <artifact type="source" ext="zip" name="permazen-util" conf="util"/>
+        <artifact type="source" ext="zip" name="permazen-vaadin" conf="vaadin"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="permazen-ant" conf="ant"/>
+        <artifact type="javadoc" ext="zip" name="permazen-app" conf="app"/>
+        <artifact type="javadoc" ext="zip" name="permazen-cli" conf="cli"/>
+        <artifact type="javadoc" ext="zip" name="permazen-cli-telnet" conf="cli-telnet"/>
+        <artifact type="javadoc" ext="zip" name="permazen-cliapp" conf="cliapp"/>
+        <artifact type="javadoc" ext="zip" name="permazen-coreapi" conf="coreapi"/>
+        <artifact type="javadoc" ext="zip" name="permazen-demo" conf="demo"/>
+        <artifact type="javadoc" ext="zip" name="permazen-guiapp" conf="guiapp"/>
+        <artifact type="javadoc" ext="zip" name="permazen-jsck" conf="jsck"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv" conf="kv"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-array" conf="kv-array"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-bdb" conf="kv-bdb"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-caching" conf="kv-caching"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-cockroach" conf="kv-cockroach"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-fdb" conf="kv-fdb"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-leveldb" conf="kv-leveldb"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-lmdb" conf="kv-lmdb"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-mssql" conf="kv-mssql"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-mysql" conf="kv-mysql"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-raft" conf="kv-raft"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-rocksdb" conf="kv-rocksdb"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-simple" conf="kv-simple"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-spanner" conf="kv-spanner"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-sql" conf="kv-sql"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-sqlite" conf="kv-sqlite"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-test" conf="kv-test"/>
+        <artifact type="javadoc" ext="zip" name="permazen-kv-xodus" conf="kv-xodus"/>
+        <artifact type="javadoc" ext="zip" name="permazen-main" conf="main"/>
+        <artifact type="javadoc" ext="zip" name="permazen-parse" conf="parse"/>
+        <artifact type="javadoc" ext="zip" name="permazen-spring" conf="spring"/>
+        <artifact type="javadoc" ext="zip" name="permazen-test" conf="test"/>
+        <artifact type="javadoc" ext="zip" name="permazen-util" conf="util"/>
+        <artifact type="javadoc" ext="zip" name="permazen-vaadin" conf="vaadin"/>
+
+    </publications>
+
+    <dependencies>
+        <dependency org="com.foundationdb" name="fdb-java" rev="5.1+" conf="kv-fdb-&gt;default"/>
+        <dependency org="com.google.cloud" name="google-cloud-spanner" rev="0.44.0-beta" conf="kv-spanner-&gt;default"/>
+        <dependency org="com.google.guava" name="guava" rev="24.0-jre" conf="util-&gt;default"/>
+        <dependency org="com.mysql" name="mysql-connector-java" rev="6.0+" conf="kv-mysql-&gt;default"/>
+        <dependency org="com.sleepycat" name="berkeley-db-java" rev="6+" conf="kv-bdb-&gt;default"/>
+        <dependency org="com.vaadin" name="vaadin" rev="7.7+" conf="demo-&gt;shared,server,themes,widgets; guiapp,vaadin-&gt;server,shared"/>
+        <dependency org="javax.servlet" name="servletapi" rev="3.1.0" conf="demo,spring,vaadin-&gt;default"/>
+        <dependency org="javax.validation" name="validation-api" rev="2.0.1.Final" conf="demo,guiapp,main,test-&gt;default"/>
+        <dependency org="org.aspectj" name="aspectj" rev="1.8+" conf="guiapp-&gt;default"/>
+        <dependency org="org.dellroad" name="dellroad-stuff" rev="2.2+" conf="util-&gt;main; demo,vaadin,guiapp-&gt;vaadin7; guiapp-&gt;spring"/>
+        <dependency org="org.dellroad" name="leveldb" rev="0.9" conf="kv-leveldb-&gt;default"/>
+        <dependency org="org.dellroad" name="nvt4j" rev="1.2+" conf="cli-telnet-&gt;default"/>
+        <dependency org="org.eclipse" name="jetty" rev="9.2.24.v20180105" conf="guiapp-&gt;webapp,annotations"/>
+    <!--
+        <dependency org="org.lmdb" name="lmdbjava" rev="0.6.1" conf="lmdb->default"/>
+    -->
+        <dependency org="org.postgresql" name="postgresql-jdbc" rev="42.2+" conf="kv-cockroach-&gt;jdbc41"/>
+        <dependency org="org.rocksdb" name="rocksdbjni" rev="5.11+" conf="kv-rocksdb-&gt;default"/>
+        <dependency org="org.slf4j" name="slf4j" rev="1.7+" conf="cli,cliapp,coreapi,guiapp,jsck,kv-array,kv-bdb,kv-fdb,kv-leveldb,kv-raft,kv-rocksdb,kv-simple,kv-spanner,kv-sql,kv,main,parse,test,util,vaadin-&gt;core"/>
+        <dependency org="org.sonatype.jline" name="jline" rev="2.14+" conf="app,cli-&gt;default"/>
+        <dependency org="org.springframework" name="spring" rev="5.0+" conf="spring-&gt;context,core,tx,web; parse-&gt;core; guiapp-&gt;aspects; coreapi-&gt;tx; app-&gt;jdbc"/>
+        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.21+" conf="kv-sqlite-&gt;default"/>
+    </dependencies>
+
+</ivy-module>
