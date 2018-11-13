@@ -20,11 +20,11 @@
     <property name="revision" value="2_7_2"/>
     <property name="archive" value="${name}_${revision}"/>
 
-    <resource url="https://www-us.apache.org/dist/xalan/xalan-j/xalan-j_${revision}-bin-2jars.tar.gz" sha1="411b2e573803462b9093f8246c55f74912bf8869">
+    <resource url="https://www-us.apache.org/dist/xalan/xalan-j/binaries/xalan-j_${revision}-bin-2jars.tar.gz" sha1="411b2e573803462b9093f8246c55f74912bf8869">
         <include name="${archive}/*.jar"/>
         <include name="${archive}/docs/apidocs/**/*"/>
     </resource>
-    <resource url="https://www-us.apache.org/dist/xalan/xalan-j/xalan-j_${revision}-src.tar.gz" sha1="e21e665f8df7be44de6d42261a0b34cc477f9c0d">
+    <resource url="https://www-us.apache.org/dist/xalan/xalan-j/source/xalan-j_${revision}-src.tar.gz" sha1="e21e665f8df7be44de6d42261a0b34cc477f9c0d">
         <include name="${archive}/src/**/*"/>
     </resource>
 
