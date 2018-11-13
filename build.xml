@@ -350,7 +350,7 @@
         </exec>
 
         <!-- Find xalan -->
-        <ivy:resolve revision="2.7+" settingsRef="ivy-settings" type="jar"
+        <ivy:resolve revision="2.7.1" settingsRef="ivy-settings" type="jar"
           organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
         <ivy:cachepath pathid="xalan.classpath" settingsRef="ivy-settings" type="jar"
           organisation="org.apache.xml" module="xalan-j" inline="true" log="download-only"/>
