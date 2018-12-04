@@ -58,14 +58,14 @@
 
     <resource url="https://vaadin.com/download/release/7.7/${revision}/${name}-all-${revision}.zip" sha1="9296112552d78ce29ae6f9d88ce48115bab5dc8e">
         <include name="lib/vaadin-sass-compiler-0.9.13.jar"/>
-        <include name="lib/atmosphere-runtime-2.2.9.vaadin2.jar"/>
+        <include name="lib/atmosphere-runtime-2.2.13.vaadin1.jar"/>
         <include name="lib/vaadin-slf4j-jdk14-1.6.1.jar"/>
         <include name="lib/sac-1.3.jar"/>
     </resource>
 
     <build>
         <move file="archive/lib/vaadin-sass-compiler-0.9.13.jar" tofile="artifacts/jars/sass-compiler.jar"/>
-        <move file="archive/lib/atmosphere-runtime-2.2.9.vaadin2.jar" tofile="artifacts/jars/atmosphere-runtime.jar"/>
+        <move file="archive/lib/atmosphere-runtime-2.2.13.vaadin1.jar" tofile="artifacts/jars/atmosphere-runtime.jar"/>
         <move file="archive/lib/vaadin-slf4j-jdk14-1.6.1.jar" tofile="artifacts/jars/vaadin-slf4j.jar"/>
         <move file="archive/lib/sac-1.3.jar" tofile="artifacts/jars/sac.jar"/>
     </build>
