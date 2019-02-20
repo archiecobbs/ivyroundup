@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2018 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="querystream-jpa">
+        <artifact tofile="artifacts/jars/querystream-jpa.jar" sha1="a8b1616228d8e8aa87cd549867c0eefd05f4aab1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/querystream-jpa.zip" sha1="1bfb4943a598166c52f07cb94ae90e8863ec6dad"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/querystream-jpa.zip" sha1="0ff788e2cb8fa4ef47b8163a3784c5491542eb7a"/>
+    </m2resource>
+</packager-module>
