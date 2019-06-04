@@ -18,7 +18,7 @@
 
 <ivy-module>
 
-    <info publication="20120814000000">
+    <info publication="20180820000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://xmlbeans.apache.org/">
 
@@ -42,7 +42,7 @@
 
         <p>
         For a more complete introduction, see the <a href="http://xmlbeans.apache.org/overview.html">XMLBeans
-        Overview</a> or <a href="http://xmlbeans.apache.org/docs/2.6.0/guide/conGettingStartedwithXMLBeans.html">Getting
+        Overview</a> or <a href="http://xmlbeans.apache.org/docs/3.0.0/guide/conGettingStartedwithXMLBeans.html">Getting
         Started With XMLBeans</a>.
         </p>
 
@@ -56,11 +56,8 @@
 
     <publications>
         <artifact/>
-        <artifact type="source" ext="zip"/>
+        <artifact name="xmlbeans-source" type="source" ext="zip"/>
+        <artifact name="xmlbeans-javadoc" type="javadoc" ext="zip"/>
     </publications>
-
-    <dependencies>
-        <dependency org="javax.xml.stream" name="jsr173_api" rev="1.0+" conf="default-&gt;default"/>
-    </dependencies>
 
 </ivy-module>
