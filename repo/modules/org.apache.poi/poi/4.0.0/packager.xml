@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2010 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="7ddb9b983ed682c93a986e8bb596d5935b13086c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-sources.zip" sha1="dd39484826d07395475a5698576f0741f1dccf2f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-javadoc.zip" sha1="3148b4dfb55c27629af7b03cf3e999bf59e52cff"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-scratchpad">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-scratchpad.jar" sha1="1038d3bb1ec34e93c184b4c5b690e2f51c6f7a60"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-scratchpad-sources.zip" sha1="a067d6d31fb5d147d792d00d8f8b041cacd3c8f7"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-scratchpad-javadoc.zip" sha1="6a6721ded2923b595f923abe4b34d71bba964450"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-ooxml">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-ooxml.jar" sha1="f3fa9c2bd64eb3ec15378de960a07d077ae5b26d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-ooxml-sources.zip" sha1="3b13e33af978925a2986f4c7902c185ac4176617"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-ooxml-javadoc.zip" sha1="8fad56654c1275eeaef80feb96e83eed3e318afa"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-ooxml-schemas">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-ooxml-schemas.jar" sha1="125f9ccd2cf652fa4169b1c30e9023362e23324f"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-excelant">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-excelant.jar" sha1="b61a0d106ccd2e0a2a381ee32a8be8733c99c35b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-excelant-sources.zip" sha1="8c6687358209923896edda7700d0c1bc96c1b4f2"/>
+    </m2resource>
+
+    <m2resource artifactId="${ivy.packager.module}-examples">
+        <artifact tofile="artifacts/jars/${ivy.packager.module}-examples.jar" sha1="8f9e8ea013090c45d2080eeece3922c9d6dbce35"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-examples.zip" sha1="8eb77f20a04f6b6d72df4f2ab6d168ca0fdbbac4"/>
+    </m2resource>
+</packager-module>
