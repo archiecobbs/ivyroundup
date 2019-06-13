@@ -16,23 +16,10 @@
     under the License.
 -->
 
-<ivy-module>
-
-    <info publication="20160525000000">
-        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <description homepage="http://commons.apache.org/proper/commons-csv/">
-
-            <p>
-            The Apache Commons CSV library provides a simple interface for reading and writing CSV files of various types.
-            </p>
-
-        </description>
-    </info>
-
-    <publications>
-        <artifact/>
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-
-</ivy-module>
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="22b3c2f901af973a8ec4f24e80c8c0c77a600b79"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="1a912bc6e79af7903600cbc9ee7c365ee356c9af"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="7163d5c8c70c71d32507583a3f6297302b32fa71"/>
+    </m2resource>
+</packager-module>
