@@ -16,23 +16,15 @@
     under the License.
 -->
 
-<ivy-module>
+<packager-module>
 
-    <info publication="20130512203100">
-        <license name="Public Domain" url="http://tukaani.org/xz/java.html"/>
-        <description homepage="http://tukaani.org/xz/java.html">
+    <property name="name" value="${ivy.packager.module}"/>
+    <property name="revision" value="${ivy.packager.revision}"/>
+    <property name="archive" value="${name}-java-${revision}"/>
 
-            <p>
-            A complete implementation of the XZ algorithm in pure Java.
-            </p>
-
-        </description>
-    </info>
-
-    <publications>
-        <artifact />
-        <artifact name="source" type="source" ext="zip"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
-    </publications>
-
-</ivy-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="c4f7d054303948eb6a4066194253886c8af07128"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="9354393aa96682804ccc2ffdf5aa066fa23efc41"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="38c6cb5218afd414465ab6458fbcfeb1c947e808"/>
+    </m2resource>
+</packager-module>
