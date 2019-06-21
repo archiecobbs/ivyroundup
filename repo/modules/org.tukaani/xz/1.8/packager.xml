@@ -21,8 +21,8 @@
     <property name="archive" value="${name}-java-${revision}"/>
 
     <m2resource>
-        <artifact tofile="artifacts/jars/${name}.jar" sha1="66db21c8484120cb6a51b5b3ea47b6f383942bec"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="cd4f15764ada263cc0555be452dbf3c80286e741"/>
-        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="6396220725701d767c553902c41120d7bf38e9f5"/>
+        <artifact tofile="artifacts/jars/${name}.jar" sha1="c4f7d054303948eb6a4066194253886c8af07128"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="9354393aa96682804ccc2ffdf5aa066fa23efc41"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="38c6cb5218afd414465ab6458fbcfeb1c947e808"/>
     </m2resource>
 </packager-module>
