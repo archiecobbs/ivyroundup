@@ -21,11 +21,11 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java12-${revision}.zip"
+    <resource url="https://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java12-${revision}.zip"
       sha1="e9d97a8158c5ccadd75ce6ef033df4c2ed2eccdd"/>
-    <resource url="http://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java50-${revision}.zip"
+    <resource url="https://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java50-${revision}.zip"
       sha1="97563a1181857925dea655b773b36318db9b3d0b"/>
-    <resource url="http://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java60-${revision}.zip"
+    <resource url="https://downloads.sourceforge.net/project/backport-jsr166/backport-jsr166/${revision}/${name}-Java60-${revision}.zip"
       sha1="4b96c46f7554afffed8d85a94f4d64697869f897"/>
     <m2resource groupId="${name}">
         <artifact tofile="artifacts/jars/${name}-Java14.jar" sha1="682f7ac17fed79e92f8e87d8455192b63376347b"/>

@@ -22,13 +22,13 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-bin/${archive}/${archive}.bin.tgz"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}-bin/${archive}/${archive}.bin.tgz"
       sha1="2e9f588f2a694c0358d431cdb2c976c99b26231c">
         <include name="${archive}/lib/*.jar"/>
         <include name="${archive}/lib/${name}-oracle-thin-extras-${revision}.jar"/>
         <include name="${archive}/doc/apidocs/**/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-src/${archive}/${archive}.src.tgz"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}-src/${archive}/${archive}.src.tgz"
       sha1="a2a91573b71ba78886ec6c22592037aeefe17457">
         <include name="${archive}.src/src/java/**/*"/>
     </resource>

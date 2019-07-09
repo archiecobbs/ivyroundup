@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}_1_2_2"/>
 
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${name}-${revision}/${archive}.zip" sha1="5575ecb5c09b0b88aa78511b3e38377c2dfdab68"/>
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${name}-${revision}/${archive}.zip" sha1="5575ecb5c09b0b88aa78511b3e38377c2dfdab68"/>
 
     <build>
         <!-- Copy JARs but also zero out Class-Path attributes in manifests -->

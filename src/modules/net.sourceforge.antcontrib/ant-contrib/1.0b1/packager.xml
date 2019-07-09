@@ -22,9 +22,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-bin.tar.bz2"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-bin.tar.bz2"
       sha1="396e447cf04e02c3dd76bf6d73c56f003b7a9783"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-src.tar.bz2"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${archive}/${archive}-src.tar.bz2"
       sha1="3ed3d5be1a23db581ac4bb828c0dc792af18e8ea"/>
 
     <build>

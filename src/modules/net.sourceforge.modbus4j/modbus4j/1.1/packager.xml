@@ -22,16 +22,16 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J-src.zip"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J-src.zip"
         sha1="e6eea9de54cb4fc59cf64aea7af7b5a3f25852f6"
         tofile="artifacts/sources/${name}.zip"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J-doc.zip"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J-doc.zip"
         sha1="845d0f7b200cd1b3e4363c69b983cdd97e94da8a"
         tofile="artifacts/javadocs/${name}.zip"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J.jar"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${revision}/modbus4J.jar"
         sha1="15412e04270af22504fb0074fa9d0dcf06212182"
         tofile="artifacts/jars/${name}.jar"/>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/seroUtils.jar"
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${revision}/seroUtils.jar"
         sha1="98bd680582162194af04e0fcea25261dd5d00d5a"
         tofile="artifacts/jars/seroUtils.jar"/>
 

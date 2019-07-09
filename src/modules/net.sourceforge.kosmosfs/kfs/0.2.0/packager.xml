@@ -22,7 +22,7 @@
     <property name="revision" value="${ivy.packager.revision}" />
     <property name="archive" value="${name}-${revision}" />
 
-    <resource url="http://downloads.sourceforge.net/project/kosmosfs/kosmosfs/kfs-${revision}/${archive}.tar.gz" sha1="e91ce9e8a099636fcaf8d96b12ebb5b9ab276b91" />
+    <resource url="https://downloads.sourceforge.net/project/kosmosfs/kosmosfs/kfs-${revision}/${archive}.tar.gz" sha1="e91ce9e8a099636fcaf8d96b12ebb5b9ab276b91" />
 
     <build>
         <!-- Note that the original build script is broken. You must create a build/lib directory first -->

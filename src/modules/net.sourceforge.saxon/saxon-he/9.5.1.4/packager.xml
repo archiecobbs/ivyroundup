@@ -23,15 +23,15 @@
     <property name="srcarchive" value="saxon9-5-1-4source"/>
     <property name="resarchive" value="saxon-resources9-5"/>
 
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${binarchive}.zip"
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${binarchive}.zip"
       sha1="10910a1ced9c1a485a6084d4a6f1a6793645a798">
         <include name="saxon9he.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${resarchive}.zip"
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${resarchive}.zip"
       sha1="80a740a40674b1f080ebea0055ce5a351ff326a5">
         <include name="doc/javadoc/**/*"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${srcarchive}.zip" tofile="artifacts/sources/source.zip"
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/${srcarchive}.zip" tofile="artifacts/sources/source.zip"
       sha1="ead9cc21dff440f31271dbf1cf054623be08243c"/>
 
     <build>
