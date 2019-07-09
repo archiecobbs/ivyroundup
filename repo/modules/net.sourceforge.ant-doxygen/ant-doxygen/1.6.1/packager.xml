@@ -19,10 +19,10 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}-bin-${revision}.tgz" sha1="98764e5f888c224c65ea78f670940a97221fe45d">
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}/${revision}/${name}-bin-${revision}.tgz" sha1="98764e5f888c224c65ea78f670940a97221fe45d">
         <include name="lib/*.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/project/${name}/${name}-src/${revision}/${name}-src-${revision}.tgz" sha1="b2982dcb915e98c62ed30d86ccf47d08af3e2fa5">
+    <resource url="https://downloads.sourceforge.net/project/${name}/${name}-src/${revision}/${name}-src-${revision}.tgz" sha1="b2982dcb915e98c62ed30d86ccf47d08af3e2fa5">
         <include name="src/**/*"/>
     </resource>
 

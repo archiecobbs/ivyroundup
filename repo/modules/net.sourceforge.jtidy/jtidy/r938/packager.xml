@@ -20,8 +20,8 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource url="http://downloads.sourceforge.net/project/jtidy/JTidy/${revision}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="8bb312dbbdfe40d396d4adf5691a528c33663bf9"/>
+    <resource url="https://downloads.sourceforge.net/project/jtidy/JTidy/${revision}/${name}-${revision}.jar" tofile="artifacts/jars/${name}.jar" sha1="8bb312dbbdfe40d396d4adf5691a528c33663bf9"/>
 
-    <resource url="http://downloads.sourceforge.net/project/jtidy/JTidy/${revision}/${name}-${revision}-sources.zip" tofile="artifacts/sources/${name}.zip" sha1="55850ec31dfb9d6fb3eb78effa6a52db4332733b"/>
+    <resource url="https://downloads.sourceforge.net/project/jtidy/JTidy/${revision}/${name}-${revision}-sources.zip" tofile="artifacts/sources/${name}.zip" sha1="55850ec31dfb9d6fb3eb78effa6a52db4332733b"/>
 
 </packager-module>

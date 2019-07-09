@@ -20,10 +20,10 @@
     <property name="binarchive" value="SaxonHE9-7-0-21J"/>
     <property name="srcarchive" value="saxon9-7-0-21source"/>
 
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/${binarchive}.zip" sha1="dc373d34ac7f71ff264f0ea3244ce87764830d63">
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/${binarchive}.zip" sha1="dc373d34ac7f71ff264f0ea3244ce87764830d63">
         <include name="saxon9he.jar"/>
     </resource>
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/${srcarchive}.zip" tofile="artifacts/sources/source.zip" sha1="7174027eeee29305fe8f1755150da73ff52fc5e7"/>
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.7/${srcarchive}.zip" tofile="artifacts/sources/source.zip" sha1="7174027eeee29305fe8f1755150da73ff52fc5e7"/>
 
     <build>
         <move file="archive/saxon9he.jar" tofile="artifacts/jars/${name}.jar"/>

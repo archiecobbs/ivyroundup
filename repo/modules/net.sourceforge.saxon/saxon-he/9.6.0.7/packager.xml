@@ -21,16 +21,16 @@
     <property name="srcarchive" value="saxon9-6-0-7source"/>
     <property name="resarchive" value="saxon-resources9-6"/>
 
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${binarchive}.zip" sha1="b7198bad07918bea89904ddc508b272d6e44457c">
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${binarchive}.zip" sha1="b7198bad07918bea89904ddc508b272d6e44457c">
         <include name="saxon9he.jar"/>
     </resource>
 <!--
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${resarchive}.zip"
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${resarchive}.zip"
       sha1="0000000000000000000000000000000000000000">
         <include name="doc/javadoc/**/*"/>
     </resource>
 -->
-    <resource url="http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${srcarchive}.zip" tofile="artifacts/sources/source.zip" sha1="ba2c27e766647e50d9fd302e8255d813239df9f3"/>
+    <resource url="https://downloads.sourceforge.net/project/saxon/Saxon-HE/9.6/${srcarchive}.zip" tofile="artifacts/sources/source.zip" sha1="ba2c27e766647e50d9fd302e8255d813239df9f3"/>
 
     <build>
         <move file="archive/saxon9he.jar" tofile="artifacts/jars/${name}.jar"/>

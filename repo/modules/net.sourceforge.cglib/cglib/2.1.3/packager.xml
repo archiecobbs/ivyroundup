@@ -22,9 +22,9 @@
     <property name="srcjar" value="${name}-src-${revision}"/>
     <property name="docjar" value="${name}-docs-${revision}"/>
 
-    <resource tofile="artifacts/jars/${name}.jar" url="http://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${binjar}.jar" sha1="d3851e366b9fe8b7d8215de0f9eb980b359d8de0"/>
-    <resource tofile="artifacts/javadocs/javadoc.zip" url="http://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${docjar}.jar" sha1="2a83383e859e5e644a79f15d5c2822334a65d871"/>
-    <resource dest="src" url="http://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${srcjar}.jar" sha1="9f1bb4dcdd99bacc166a917a3fa6489ba54c3c38">
+    <resource tofile="artifacts/jars/${name}.jar" url="https://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${binjar}.jar" sha1="d3851e366b9fe8b7d8215de0f9eb980b359d8de0"/>
+    <resource tofile="artifacts/javadocs/javadoc.zip" url="https://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${docjar}.jar" sha1="2a83383e859e5e644a79f15d5c2822334a65d871"/>
+    <resource dest="src" url="https://downloads.sourceforge.net/project/cglib/cglib2/cglib%202.1_03/${srcjar}.jar" sha1="9f1bb4dcdd99bacc166a917a3fa6489ba54c3c38">
         <include name="src/proxy/**/*"/>
     </resource>
 

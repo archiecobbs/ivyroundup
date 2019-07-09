@@ -20,9 +20,9 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource dest="archive/${archive}" url="http://downloads.sourceforge.net/${name}/${archive}-setup.jar" sha1="b35f58febc717cd17236af596ed2894cb360786b"/>
+    <resource dest="archive/${archive}" url="https://downloads.sourceforge.net/${name}/${archive}-setup.jar" sha1="b35f58febc717cd17236af596ed2894cb360786b"/>
 
-    <resource dest="archive/${archive}/sources/" url="http://downloads.sourceforge.net/project/${name}/${name}%20sources/${revision}/${archive}-src.zip" sha1="ce5bbbd129ef4332c1404b119c995087c6e56d79">
+    <resource dest="archive/${archive}/sources/" url="https://downloads.sourceforge.net/project/${name}/${name}%20sources/${revision}/${archive}-src.zip" sha1="ce5bbbd129ef4332c1404b119c995087c6e56d79">
       <include name="${archive}/robocode.*/**/*.java"/>
     </resource>
 
