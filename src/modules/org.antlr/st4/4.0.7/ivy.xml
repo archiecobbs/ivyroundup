@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2019 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20130105033600">
+        <license name="BSD licence" url="http://antlr.org/license.html"/>
+        <description homepage="http://www.stringtemplate.org">
+
+            <p>
+            StringTemplate is a java template engine for generating source code,
+            web pages, emails, or any other formatted text output.
+
+            StringTemplate is particularly good at multi-targeted code generators,
+            multiple site skins, and internationalization/localization. 
+
+            It evolved over years of effort developing jGuru.com. 
+
+            StringTemplate also generates the stringtemplate website: http://www.stringtemplate.org
+            and powers the ANTLR v3 code generator. Its distinguishing characteristic 
+            is that unlike other engines, it strictly enforces model-view separation.
+
+            Strict separation makes websites and code generators more flexible
+            and maintainable; it also provides an excellent defense against malicious
+            template authors.
+
+            There are currently about 600 StringTemplate source downloads a month.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default configuration"/>
+    </configurations>
+
+    <publications>
+        <artifact/>
+        <artifact type="source" ext="zip"/>
+        <artifact type="javadoc" ext="zip"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.antlr" name="antlr" rev="3.5" conf="default->runtime"/>
+    </dependencies>
+
+</ivy-module>
