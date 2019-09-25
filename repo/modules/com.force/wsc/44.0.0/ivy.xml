@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2019 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.force" module="wsc" revision="44.0.0" status="release" publication="20080808000000">
+        <license name="Force.com Web Service Connector End User License Agreement" url="https://raw.githubusercontent.com/forcedotcom/wsc/master/LICENSE.md"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.force/wsc/44.0.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/forcedotcom/wsc">
+
+            <p>
+            The Force.com Web Service Connector (WSC) is a high performing web service client stack
+            implemented using a streaming parser. WSC also makes it much easier to use the Force.com
+            API (Web Services/SOAP or Asynchronous/BULK API).
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core WSC classes"/>
+        <conf name="apex" extends="core"/>
+        <conf name="metadata" extends="core"/>
+        <conf name="partner" extends="core"/>
+        <conf name="default" extends="core"/>
+    </configurations>
+
+    <publications>
+        <artifact name="force-wsc" conf="core"/>
+        <artifact name="force-wsc-source" type="source" ext="zip" conf="core"/>
+        <artifact name="force-wsc-javadoc" type="javadoc" ext="zip" conf="core"/>
+
+        <artifact name="force-apex-api" conf="apex"/>
+        <artifact name="force-apex-api-source" type="source" ext="zip" conf="apex"/>
+        <artifact name="force-apex-api-javadoc" type="javadoc" ext="zip" conf="apex"/>
+
+        <artifact name="force-metadata-api" conf="metadata"/>
+        <artifact name="force-metadata-api-source" type="source" ext="zip" conf="metadata"/>
+        <artifact name="force-metadata-api-javadoc" type="javadoc" ext="zip" conf="metadata"/>
+
+        <artifact name="force-partner-api" conf="partner"/>
+        <artifact name="force-partner-api-source" type="source" ext="zip" conf="partner"/>
+        <artifact name="force-partner-api-javadoc" type="javadoc" ext="zip" conf="partner"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="org.antlr" name="st4" rev="4.0.7" conf="core-&gt;default"/>
+        <dependency org="org.codehaus.jackson" name="jackson" rev="1.9.13" conf="core-&gt;core,mapper"/>
+        <dependency org="org.apache.commons" name="commons-beanutils" rev="1.7.0" conf="core-&gt;complete"/>
+    </dependencies>
+</ivy-module>
