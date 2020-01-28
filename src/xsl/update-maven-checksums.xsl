@@ -41,7 +41,7 @@
                     </xsl:if>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="'http://repo2.maven.org/maven2/'"/>
+                    <xsl:value-of select="'https://repo1.maven.org/maven2/'"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>

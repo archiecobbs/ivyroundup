@@ -71,7 +71,7 @@ trap "rm -f ${TEMP_BASE}*" 0 2 3 5 10 13 15
 
 # List index
 GROUP_ID=`echo "${GRP}" | sed 's|\.|/|g'`
-REPO="http://repo2.maven.org/maven2/${GROUP_ID}"
+REPO="https://repo1.maven.org/maven2/${GROUP_ID}"
 wget -q -O "${TEMP_BASE}.list" -U "${USER_AGENT}" "${REPO}"
 if [ ! -f "${TEMP_BASE}.list" ]; then
     echo "${PROGNAME}: could not list index of ${REPO}!"
