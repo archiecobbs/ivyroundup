@@ -23,18 +23,18 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource tofile="archive/${archive}/${archive}.jar"
-        url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar"
+        url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar"
         type="jar"
         sha1="6446e9ac7e90667d6883ac583c402601dec75e34">
     </resource>
     <resource
-        url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar"
+        url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar"
         type="zip"
         dest="archive/${archive}/src"
         sha1="880dfd13402b56b74724b5a845f256a634b49a07">
     </resource>
     <resource
-        url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar"
+        url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar"
         type="zip"
         dest="archive/${archive}/docs"
         sha1="fe637286ce06b1e2046435c9b3c7e987ac5dd909">

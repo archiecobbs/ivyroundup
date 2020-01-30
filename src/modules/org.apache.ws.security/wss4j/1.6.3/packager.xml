@@ -23,18 +23,18 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource tofile="archive/${archive}/${archive}.jar" 
-        url="http://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}.jar"
+        url="https://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}.jar"
         type="jar"
         sha1="4dfeee79b5165d69878c65bb43d3cfba6c50db24">
     </resource>
     <resource 
-        url="http://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}-sources.jar"
+        url="https://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}-sources.jar"
         type="zip"
         dest="archive/${archive}/src"
         sha1="7f385ec0908fa578608e7bf60f4123cd11ad21ad">
     </resource>
     <resource 
-        url="http://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}-javadoc.jar"
+        url="https://repo1.maven.org/maven2/org/apache/ws/security/${name}/${revision}/${name}-${revision}-javadoc.jar"
         type="zip"
         dest="archive/${archive}/docs"
         sha1="e01cd6fa2c31d9e359723626368a314b992d0a89">
