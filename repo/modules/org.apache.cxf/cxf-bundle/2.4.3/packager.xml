@@ -19,11 +19,11 @@
     <property name="name" value="${ivy.packager.module}"/>
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
-    <resource tofile="archive/${archive}/${archive}.jar" url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="51635f3937ee5ed06e65989909ee5c358804d960">
+    <resource tofile="archive/${archive}/${archive}.jar" url="https://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="51635f3937ee5ed06e65989909ee5c358804d960">
     </resource>
-    <resource url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-sources.jar" type="zip" dest="archive/${archive}/src" sha1="eb94ccf4f67f232dedb53d7b74ebc5930347d794">
+    <resource url="https://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-sources.jar" type="zip" dest="archive/${archive}/src" sha1="eb94ccf4f67f232dedb53d7b74ebc5930347d794">
     </resource>
-    <resource url="http://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-javadoc.jar" type="zip" dest="archive/${archive}/docs" sha1="a14bdca19db0d588585de1479854483425d7ea7f">
+    <resource url="https://repo1.maven.org/maven2/org/apache/cxf/${name}/${revision}/${name}-${revision}-javadoc.jar" type="zip" dest="archive/${archive}/docs" sha1="a14bdca19db0d588585de1479854483425d7ea7f">
     </resource>
     <build>
 

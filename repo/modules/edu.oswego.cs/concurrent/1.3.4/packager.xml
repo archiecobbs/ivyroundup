@@ -21,9 +21,9 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <!-- The jar file is in Maven. -->
-    <resource url="http://repo1.maven.org/maven2/concurrent/concurrent/${revision}/${archive}.jar" sha1="1cf394c2a388199db550cda311174a4c6a7d117c" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="https://repo1.maven.org/maven2/concurrent/concurrent/${revision}/${archive}.jar" sha1="1cf394c2a388199db550cda311174a4c6a7d117c" tofile="artifacts/jars/${name}.jar"/>
     <!-- Maven stores the javadocs as the "source" file! -->
-    <resource url="http://repo1.maven.org/maven2/concurrent/concurrent/${revision}/${archive}-sources.jar" sha1="7d346fa001db7f4dfec2d97a2e17091dc4d77a1d" tofile="artifacts/javadocs/javadoc.zip"/>
+    <resource url="https://repo1.maven.org/maven2/concurrent/concurrent/${revision}/${archive}-sources.jar" sha1="7d346fa001db7f4dfec2d97a2e17091dc4d77a1d" tofile="artifacts/javadocs/javadoc.zip"/>
     <!-- Get the sources from Doug Lea's site. -->
     <resource url="http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/current/${name}.zip" sha1="6650001aaa8638f2d50a556a5f235fd5e80eee6b" tofile="artifacts/sources/source.zip"/>
 

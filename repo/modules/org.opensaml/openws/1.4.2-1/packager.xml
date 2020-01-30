@@ -20,11 +20,11 @@
     <property name="revision" value="${ivy.packager.revision}"/>
     <property name="archive" value="${name}-${revision}"/>
 
-    <resource tofile="archive/${archive}/${archive}.jar" url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="c835fd5214632ed4befbca23dd42e062e80ceb85">
+    <resource tofile="archive/${archive}/${archive}.jar" url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}.jar" type="jar" sha1="c835fd5214632ed4befbca23dd42e062e80ceb85">
     </resource>
-    <resource url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar" type="zip" dest="archive/${archive}/src" sha1="81a8c304200fa545f73bc26906cdc522b3754ef0">
+    <resource url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-sources.jar" type="zip" dest="archive/${archive}/src" sha1="81a8c304200fa545f73bc26906cdc522b3754ef0">
     </resource>
-    <resource url="http://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar" type="zip" dest="archive/${archive}/docs" sha1="bdaf72270e995ab0453616a417f2f13e0568a48d">
+    <resource url="https://repo1.maven.org/maven2/org/opensaml/${name}/${revision}/${name}-${revision}-javadoc.jar" type="zip" dest="archive/${archive}/docs" sha1="bdaf72270e995ab0453616a417f2f13e0568a48d">
     </resource>
     <build>
 
