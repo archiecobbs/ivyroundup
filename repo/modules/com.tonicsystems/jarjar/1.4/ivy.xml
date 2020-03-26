@@ -47,7 +47,7 @@
         task that extends the built-in <tt>jar</tt> task. The normal <tt>zipfileset</tt>
         element is used to embed jar files. A new rule element is
         added which uses wildcards patterns to rename the embedded
-        class files. Bytecode transformation (via <a href="http://asm.objectweb.org/">ASM</a>) is used to change
+        class files. Bytecode transformation (via <a href="https://asm.ow2.io/">ASM</a>) is used to change
         references to the renamed classes, and special handling is
         provided for moving resource files and transforming string
         literals.
