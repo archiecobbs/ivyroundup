@@ -18,7 +18,7 @@
 
 <ivy-module>
 
-    <info publication="20180813000000">
+    <info publication="20200204000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://commons.apache.org/proper/commons-compress/">
              Commons Compress defines an API for working with ar, cpio, tar, zip, gzip, bzip2, and xz files.
@@ -31,11 +31,10 @@
         <conf name="default" extends="core,xz" description="All formats"/>
     </configurations>
 
-
     <publications>
-        <artifact name="commons-compress" />
-        <artifact name="commons-compress-sources" type="source" ext="zip"/>
-        <artifact name="commons-compress-javadoc" type="javadoc" ext="zip"/>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
     </publications>
 
     <dependencies>
