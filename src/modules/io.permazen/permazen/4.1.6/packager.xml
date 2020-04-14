@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2019 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-ant">
+        <artifact tofile="artifacts/jars/permazen-ant.jar" sha1="8377e3bb2f53533968c495b3b952d0a7360999c5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-ant.zip" sha1="51406758ac4106ad457245a4cd95441926f9f59f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-ant.zip" sha1="56900d37fc982aacaadb5f15baf38d9dc34f1ba7"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-app">
+        <artifact tofile="artifacts/jars/permazen-app.jar" sha1="1f6ef3d9daabbfb59f046c8b3917673b50488153"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-app.zip" sha1="9e6dbfc1b304647edd31d0a239e1d28ee9410035"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-app.zip" sha1="02952d00c01a53e80a461b603638affb18339f23"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-cli-telnet">
+        <artifact tofile="artifacts/jars/permazen-cli-telnet.jar" sha1="0acce8e5460aecbc9eb03f119e8eac44029ab355"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-cli-telnet.zip" sha1="8a925f542df08e2cb126f98abdd6b2d878319b66"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-cli-telnet.zip" sha1="db1af035424ae5f95754b8637ca076ae0a67da5c"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-cli">
+        <artifact tofile="artifacts/jars/permazen-cli.jar" sha1="817bbd0ffae8d85fa087dcc83a606955e494c904"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-cli.zip" sha1="060326079d51e7f5fc33638214341a58cc8f1652"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-cli.zip" sha1="f3d75a45ba065f86f969dc45195e2126be7e6f4b"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-cliapp">
+        <artifact tofile="artifacts/jars/permazen-cliapp.jar" sha1="24e92102865de8cc5b5049535b37138deb05ed42"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-cliapp.zip" sha1="4aa716e0754bd3defbdc50074ab1c6f44e948505"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-cliapp.zip" sha1="02c07198477387d69aa9ade6115977b27fcb61d6"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-coreapi">
+        <artifact tofile="artifacts/jars/permazen-coreapi.jar" sha1="86b7f4b2c5cdb082dcce8311d92cb2499969c1f4"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-coreapi.zip" sha1="39cd96dc769079b7b5a80e2f7480f118e659da8d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-coreapi.zip" sha1="78b6996f09fd95b3b9dcdd39fb6d92e12b341da6"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-demo">
+        <artifact tofile="artifacts/jars/permazen-demo.jar" sha1="227428d920a3cc0b544a5df44d3ff9089eabbad0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-demo.zip" sha1="bd6b74b6970eed89de1fd085d107c39ba2400799"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-demo.zip" sha1="b712ab0adcc2311a544358f239d4b1e49a73609d"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-guiapp">
+        <artifact tofile="artifacts/jars/permazen-guiapp.jar" sha1="c464081dca8f2aeeccd9409e910115d75e2f39f8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-guiapp.zip" sha1="ff3451c829a20b09ad314187c328371f713eeb5d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-guiapp.zip" sha1="5ff524128736c04ed6ba9a1936448e9b3d13ff06"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-jsck">
+        <artifact tofile="artifacts/jars/permazen-jsck.jar" sha1="be371575a0e59f9411b6aef8c938def3a82fc7da"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-jsck.zip" sha1="aa7cb1dd503a5c441665fbac81657458899d8d9c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-jsck.zip" sha1="89bafab2cb4ad3a4e592bd34ed2f82fa1b0a28c8"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-array">
+        <artifact tofile="artifacts/jars/permazen-kv-array.jar" sha1="3dc30e5bf1b565249ffc99262c82cecd4b226733"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-array.zip" sha1="240350d65e5ac1c923242e577aad018c1cddfab0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-array.zip" sha1="ae5898828c39914f826843fa8ff9f8e755320858"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-bdb">
+        <artifact tofile="artifacts/jars/permazen-kv-bdb.jar" sha1="9cecd0fa68ba7a0c0bf77666ab10de0cd46f648b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-bdb.zip" sha1="fdf09942bbd71d9987662d6a5b726268bfab60a0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-bdb.zip" sha1="e4edaeab07b05b445ff56544075554639bd20b64"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-caching">
+        <artifact tofile="artifacts/jars/permazen-kv-caching.jar" sha1="9b46324db7b1d4ada5dc2e85e5a692c701cb23ad"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-caching.zip" sha1="4aeb16e3dbf4ac86fb7b3b6f63c1b28c016b49bb"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-caching.zip" sha1="47e7e305d544a189e93143198239bb84bc2e42ab"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-cockroach">
+        <artifact tofile="artifacts/jars/permazen-kv-cockroach.jar" sha1="fed0a35bdc3f2aea6539a73c8bbc4c2bc3e8f82b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-cockroach.zip" sha1="ff9e2a50fbe6ee3e7ecbfc2384b9320d4e61ec69"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-cockroach.zip" sha1="1b7959341238c764a217e678f5ec389140d61c18"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-fdb">
+        <artifact tofile="artifacts/jars/permazen-kv-fdb.jar" sha1="1f18bec53b1ec3d6ca23ac6c99007d48b16aa4bf"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-fdb.zip" sha1="0d1e8e6d75846ba32681d747e2ddb39185308f7a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-fdb.zip" sha1="09fcf4caff1aadb3363532fb3239de772448d889"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-leveldb">
+        <artifact tofile="artifacts/jars/permazen-kv-leveldb.jar" sha1="8714e7e07fef0563827aa00acbbec6e716d714bc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-leveldb.zip" sha1="77cdbdb5a11121fef027f51f2c41aa3cd1bfd1a9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-leveldb.zip" sha1="382d47b4382e5d538b2717d0d80e55b8cd14d64a"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-lmdb">
+        <artifact tofile="artifacts/jars/permazen-kv-lmdb.jar" sha1="432614c8b8095e6e823336739f088b9225b249c5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-lmdb.zip" sha1="a639b9e4d062caa3ed6a46bfaf753bf13aee6641"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-lmdb.zip" sha1="853ac305ef4f2564aedba795d77735495aa9b3f2"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-mssql">
+        <artifact tofile="artifacts/jars/permazen-kv-mssql.jar" sha1="81b83fb9f21e9c5ac3ea0350b9700ab04e903026"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-mssql.zip" sha1="638e8fb1bbe7273b5e775ca17c552af4b4718eac"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-mssql.zip" sha1="0c71752b66877e7f34a388ff9ad47771b1da365e"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-mysql">
+        <artifact tofile="artifacts/jars/permazen-kv-mysql.jar" sha1="624b946b6a713f64a2b639458e314a621938b31a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-mysql.zip" sha1="388149609aa262086591ff78fa449b51336c4d45"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-mysql.zip" sha1="3979e117a8e8fd7acd8eb3a2204012dae2b1c212"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-spanner">
+        <artifact tofile="artifacts/jars/permazen-kv-spanner.jar" sha1="9e3723c37f42d6dc4c5ae1dafacb2c5e3f0ce55d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-spanner.zip" sha1="90f29aa8b8fe4a9fa4c9f4bd557afc2400d5e777"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-spanner.zip" sha1="6f038081e4ccca296503f93f8fd5987bf1eb96f2"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-raft">
+        <artifact tofile="artifacts/jars/permazen-kv-raft.jar" sha1="8eb064be331b6709e3cb6a7a1a95b66e72874aef"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-raft.zip" sha1="9d8dc32f229ddc7d90ea8d87d6895cccb5dd16f3"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-raft.zip" sha1="5c8f817a7d24018ad9a537a9fd3854f26d9498a5"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-rocksdb">
+        <artifact tofile="artifacts/jars/permazen-kv-rocksdb.jar" sha1="783f16be614cbacb3ce84f8d344a3d8091a4e96e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-rocksdb.zip" sha1="00d3829e6a45104978ef2b7c357396fb6285b6d4"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-rocksdb.zip" sha1="71596c462d0312ba2e17ba477fb1d243cec56a91"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-simple">
+        <artifact tofile="artifacts/jars/permazen-kv-simple.jar" sha1="f59b05ffab772410f218286f82135f19c5bd3629"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-simple.zip" sha1="b2571536bbb96ceeb0028cf208c04d7ba0ed5106"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-simple.zip" sha1="659b9939fa81df134e053d547585783f3dd711bd"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-sql">
+        <artifact tofile="artifacts/jars/permazen-kv-sql.jar" sha1="ad3ddb5685d7c02ca9dffa3e70e1416ab5692a8b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-sql.zip" sha1="b5118c013a4b3c41271e55de2e39eb372f509357"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-sql.zip" sha1="6ae148439d571f9c88b3371da44dd7b06899dab5"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-sqlite">
+        <artifact tofile="artifacts/jars/permazen-kv-sqlite.jar" sha1="286ec218fa6cf9d90a7b58596a74ed8371cd559f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-sqlite.zip" sha1="3e557a82cd776a8164e9f6c861000e8b9f703a88"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-sqlite.zip" sha1="877f0dbaa32aa875683f35bf82cf40952dbe2372"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-test">
+        <artifact tofile="artifacts/jars/permazen-kv-test.jar" sha1="f27430e0a5ee8ac60bd8781e8ee815435d1e1cf0"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-test.zip" sha1="7e4d76743377c9e860cc5fa696dc7516169c7984"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-test.zip" sha1="0fbf3cfc2e22a2bacf746b4dd870889a0ca2c12d"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv-xodus">
+        <artifact tofile="artifacts/jars/permazen-kv-xodus.jar" sha1="006951a01dc1c612fbdc5e2809e1a086beedccd5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv-xodus.zip" sha1="161cdad1126010065ad1572cea183c51210ee082"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv-xodus.zip" sha1="ae9bd893cf3d43fddac51c06e19655b7f014f534"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-kv">
+        <artifact tofile="artifacts/jars/permazen-kv.jar" sha1="1fa699bf45e42225e6854cda71d5d1cf4fc0ecfc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-kv.zip" sha1="76f8a5eddd4958922cdcb9894fa9024f46e5643a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-kv.zip" sha1="35c2eb716948c561ce1362a9494d47cc391138b3"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-main">
+        <artifact tofile="artifacts/jars/permazen-main.jar" sha1="6f8e76088054c3e5ab7304a7f62bdcf1adbd442f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-main.zip" sha1="6f820f41e83e9f7028f5cdfbe3269e6b70e540a2"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-main.zip" sha1="13fa513ce99ffc2c60d0ae07f164e365641a3950"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-parse">
+        <artifact tofile="artifacts/jars/permazen-parse.jar" sha1="8711294203592696836b7160c88db7cb9c0e2f1b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-parse.zip" sha1="5cb09da9359b9cfd8ce037a44ed55f16d43f0fe6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-parse.zip" sha1="f88af3e84ff0740e345447305f6b818d50f7f01b"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-spring">
+        <artifact tofile="artifacts/jars/permazen-spring.jar" sha1="f1910046540012f93f44edeee78b485db33d341b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-spring.zip" sha1="8c088876a7386d88fe8c69358e132d6d5350eecd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-spring.zip" sha1="7beb2467b6ae04d067054034eb5f1d3e6183f8d9"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-test">
+        <artifact tofile="artifacts/jars/permazen-test.jar" sha1="ef5c7ea253c2b4f9922c4b25d4eeffc4b2fd0e82"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-test.zip" sha1="09a4467dabeefe1673da2af743e1843c5cecec66"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-test.zip" sha1="0ea2c512fe23a43f2eed8a73df39668d6a62a200"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-util">
+        <artifact tofile="artifacts/jars/permazen-util.jar" sha1="d0ed99ad431bfdb4dca3cf1ef65453d2cbffb2af"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-util.zip" sha1="da7d724427c8752f62f9a25133880dacb98486e5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-util.zip" sha1="366c50c11f08f0d0c8ba646ba1842f1c96f2f7a8"/>
+    </m2resource>
+    <m2resource repo="https://oss.sonatype.org/content/repositories/public" artifactId="permazen-vaadin">
+        <artifact tofile="artifacts/jars/permazen-vaadin.jar" sha1="c6d415667aa801e19814746947aafd331350208a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/permazen-vaadin.zip" sha1="9eaaf7fe6e9cfd888a7cc68631c27774f9069045"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/permazen-vaadin.zip" sha1="18d59e6955475bbfc0281574f6e6dde59cf22a3c"/>
+    </m2resource>
+</packager-module>
