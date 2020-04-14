@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/guava.jar" sha1="801142b4c3d0f0770dd29abea50906cacfddd447"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava.zip" sha1="33e6868bc0fcb9b4b493123eeec78d1352934e87"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava.zip" sha1="21b4314dc9a0b1b7b13214e089451e89bc470aae"/>
+    </m2resource>
+    <m2resource artifactId="guava-gwt">
+        <artifact tofile="artifacts/jars/guava-gwt.jar" sha1="dfb111aef98561143f5929b64424058c94e2251b"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-gwt.zip" sha1="ac3f6e8ba6f1e791f1ea7e00b3cab5376e6ae094"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-gwt.zip" sha1="a7fed4b915c8a1981aba4b7e1bc47d52d7dc4882"/>
+    </m2resource>
+    <m2resource artifactId="guava-testlib">
+        <artifact tofile="artifacts/jars/guava-testlib.jar" sha1="10f9dd0d7c4722a3dae7a826dcc02d2eb05e24f5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/guava-testlib.zip" sha1="443c912162e6741f69f9bde34060af3866ee384c"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/guava-testlib.zip" sha1="4023bb9b377a9387d912828576f062c682e6c8ce"/>
+    </m2resource>
+</packager-module>
