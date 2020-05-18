@@ -21,7 +21,7 @@
     <info publication="20120730120000">
         <license name="Dual license consisting of the  CDDL v1.0 and GPL v2"
           url="https://glassfish.java.net/public/CDDL+GPL.html"/>
-        <description homepage="https://java.net/projects/jaxb/">
+        <description homepage="https://github.com/eclipse-ee4j/jaxb-ri/">
 
             <p>
             Welcome to the JAXB Reference Implementation Project. This
@@ -59,13 +59,13 @@
         <artifact name="jaxb-impl" conf="runtime"/>
         <artifact name="jaxb-xjc" conf="compile"/>
 
-        <artifact name="jaxb-api" type="source" ext="zip" conf="runtime"/>
-        <artifact name="jaxb-impl" type="source" ext="zip" conf="runtime"/>
-        <artifact name="jaxb-xjc" type="source" ext="zip" conf="compile"/>
+        <artifact name="jaxb-api" type="source" ext="jar" conf="runtime"/>
+        <artifact name="jaxb-impl" type="source" ext="jar" conf="runtime"/>
+        <artifact name="jaxb-xjc" type="source" ext="jar" conf="compile"/>
 
-        <artifact name="jaxb-api" type="javadoc" ext="zip" conf="runtime"/>
-        <artifact name="jaxb-impl" type="javadoc" ext="zip" conf="runtime" />
-    <artifact name="jaxb-xjc" type="javadoc" ext="zip" conf="compile" />
+        <artifact name="jaxb-api" type="javadoc" ext="jar" conf="runtime"/>
+        <artifact name="jaxb-impl" type="javadoc" ext="jar" conf="runtime" />
+        <artifact name="jaxb-xjc" type="javadoc" ext="jar" conf="compile" />
     </publications>
 
     <dependencies>
