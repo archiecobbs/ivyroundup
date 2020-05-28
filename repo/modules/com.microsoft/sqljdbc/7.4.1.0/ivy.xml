@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="com.microsoft" module="sqljdbc" revision="7.4.1.0" status="release" publication="20190802120000">
+        <license name="Microsoft License"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.microsoft/sqljdbc/7.4.1.0/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server">
+
+            <p>
+            In our continued commitment to interoperability, Microsoft
+            provides a Java Database Connectivity (JDBC) driver for use
+            with SQL Server, and Azure SQL Database. The driver is available
+            at no additional charge and provides Java database connectivity
+            from any Java application, application server, or Java-enabled
+            applet. This driver is a Type 4 JDBC driver that provides database
+            connectivity through the standard JDBC application program interfaces
+            (APIs). The Microsoft JDBC Driver for SQL Server has been tested
+            against major application servers such as IBM WebSphere, and SAP NetWeaver.
+            </p>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="jdk8" description="JDBC 4.2 for Java 8 and later"/>
+        <conf name="jdk11" description="JDBC 4.3 for Java 11 and later"/>
+        <conf name="jdk12" description="JDBC 4.3 for Java 12 and later"/>
+        <conf name="default" extends="jdk12"/>
+    </configurations>
+
+    <publications>
+        <artifact name="mssql-jdbc.jre8" conf="jdk8"/>
+        <artifact name="mssql-jdbc.jre11" conf="jdk11"/>
+        <artifact name="mssql-jdbc.jre12" conf="jdk12"/>
+    </publications>
+
+</ivy-module>
