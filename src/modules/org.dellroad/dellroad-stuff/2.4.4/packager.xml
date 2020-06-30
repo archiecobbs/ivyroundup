@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2015 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="dellroad-stuff-jibx">
+        <artifact tofile="artifacts/jars/dellroad-stuff-jibx.jar" sha1="72e52e6326adfac2fefbcddff9d7a95e504e55d5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-jibx.zip" sha1="45cf7aea9a8f10bde8d2766b6495f3f231bb385f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-jibx.zip" sha1="8afc4324f7a76e1f3aae7b5213760c1a2baa4168"/>
+    </m2resource>
+    <m2resource artifactId="dellroad-stuff-main">
+        <artifact tofile="artifacts/jars/dellroad-stuff-main.jar" sha1="d7d7a0bd724f859b5c4044b7704aeb96df2c46fb"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-main.zip" sha1="c511fa4dacea6979e82fc18bac894396221961b5"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-main.zip" sha1="c6acf17cb8995700d9b52121d4cf58710c9f7714"/>
+    </m2resource>
+    <m2resource artifactId="dellroad-stuff-pobj">
+        <artifact tofile="artifacts/jars/dellroad-stuff-pobj.jar" sha1="f7e7069703cb6edaad0c3e6ef76677d533c30658"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-pobj.zip" sha1="973cb4abf80aad9bde864a5febe128a78f568ece"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-pobj.zip" sha1="d00f18c3a967889bc8d6feb9a9126f3a85f33d55"/>
+    </m2resource>
+    <m2resource artifactId="dellroad-stuff-spring">
+        <artifact tofile="artifacts/jars/dellroad-stuff-spring.jar" sha1="f9c5df09586ab166f0291f14e054607b1cd705bc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-spring.zip" sha1="b0f3ce915c965b0f0dfb3876ed563b81a768f07e"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-spring.zip" sha1="fcfa414a091ea26458971f7e00582804664c7ac8"/>
+    </m2resource>
+    <m2resource artifactId="dellroad-stuff-vaadin7">
+        <artifact tofile="artifacts/jars/dellroad-stuff-vaadin7.jar" sha1="16bf62491876a4e24e209ef3e2db03a6bc596d3d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-vaadin7.zip" sha1="a2fd2ea160186e1a1880abf17acb75e606743721"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-vaadin7.zip" sha1="264b55a594033a5b8c931435a04f559ed3d80ac3"/>
+    </m2resource>
+    <m2resource artifactId="dellroad-stuff-vaadin8">
+        <artifact tofile="artifacts/jars/dellroad-stuff-vaadin8.jar" sha1="8a0e7a618bd2a0bcb9d7439aac5361c6976cdc33"/>
+        <artifact classifier="sources" tofile="artifacts/sources/dellroad-stuff-vaadin8.zip" sha1="6f28e851f096bdb14d296f6f0d784afd347db5a6"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/dellroad-stuff-vaadin8.zip" sha1="5b73db3d56d439970644c3e01f937b565c8989f7"/>
+    </m2resource>
+</packager-module>
