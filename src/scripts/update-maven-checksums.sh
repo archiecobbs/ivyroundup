@@ -21,6 +21,14 @@ case `uname -s` in
         ;;
 esac
 
+# Get repo flag
+REPOBASE='https://repo1.maven.org/maven2/'
+if [ "$1" = '-r' ]; then
+    shift
+    REPOBASE="${1}"
+    shift
+fi
+
 # Find saxon
 for NAME in saxon{9,8,b-xslt,}; do
     SAXON=`which "${NAME}" 2>/dev/null || true`
@@ -50,7 +58,7 @@ for FILE; do
     # Apply XSLT
     echo "*** Updating ${FILE}" 1>&2
     "${SAXON}" "${FILE}" src/xsl/update-maven-checksums.xsl \
-      org="${ORG}" mod="${MOD}" rev="${REV}" \
+      org="${ORG}" mod="${MOD}" rev="${REV}" repoBase="${REPOBASE}" \
       | sed "${SEDFLAG}" -e 's/^(<\?xml version="1.0" encoding="UTF-8"\?>)(<!--[[:space:]]*)$/\1\
 \
 \2/g' -e 's/^(-->)(<packager-module.*)$/\1\

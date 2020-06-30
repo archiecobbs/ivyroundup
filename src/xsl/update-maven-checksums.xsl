@@ -27,6 +27,8 @@
     <xsl:param name="mod"/>
     <xsl:param name="rev"/>
 
+    <xsl:param name="repoBase" select="'https://repo1.maven.org/maven2/'"/>
+
     <xsl:variable name="squot">'</xsl:variable>
 
     <xsl:template match="/packager-module/m2resource/artifact/@sha1">
@@ -41,7 +43,7 @@
                     </xsl:if>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="'https://repo1.maven.org/maven2/'"/>
+                    <xsl:value-of select="$repoBase"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
