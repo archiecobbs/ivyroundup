@@ -28,9 +28,9 @@
     </info>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="validation-api" ivyde:javadoc="validation-api"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="validation-api-sources" ivyde:javadoc="validation-api-javadoc"/>
+        <artifact name="validation-api-sources" type="source" ext="zip"/>
+        <artifact name="validation-api-javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

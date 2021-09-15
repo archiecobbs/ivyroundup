@@ -17,7 +17,7 @@
 <packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
     <m2resource repo="http://repository.jboss.org/nexus/content/groups/public">
         <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e"/>
-        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="7a561191db2203550fbfa40d534d4997624cd369"/>
-        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="0f9a4817a2f7e707bcf7ac975bba49912476aad1"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}-sources.zip" sha1="7a561191db2203550fbfa40d534d4997624cd369"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}-javadoc.zip" sha1="0f9a4817a2f7e707bcf7ac975bba49912476aad1"/>
     </m2resource>
 </packager-module>
