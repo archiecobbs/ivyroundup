@@ -16,21 +16,10 @@
     under the License.
 -->
 
-<ivy-module>
-
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
-            <p>
-                API module of JSR 353:Java API for Processing JSON
-            </p>
-        </description>
-    </info>
-
-    <publications>
-        <artifact />
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
-    </publications>
-
-</ivy-module>
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="a069f7084f37d9678fa80dd0433efca1cf2b0dce"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${ivy.packager.module}.zip" sha1="61308718e1802e74fe29ac0dd63acb0b313fede9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${ivy.packager.module}.zip" sha1="175246692381af57299e5eea44ef1ee3c19e51aa"/>
+    </m2resource>
+</packager-module>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2014 Mark Thomas
+    Copyright 2010 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,19 +18,17 @@
 
 <ivy-module>
 
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
-            <p>
-                API module of JSR 353:Java API for Processing JSON
-            </p>
+    <info publication="20130410130300">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://beanvalidation.org">
+        Bean Validation (JSR-303) API.
         </description>
     </info>
 
     <publications>
-        <artifact />
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact/>
+        <artifact name="validation-api-sources" type="source" ext="zip"/>
+        <artifact name="validation-api-javadoc" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>

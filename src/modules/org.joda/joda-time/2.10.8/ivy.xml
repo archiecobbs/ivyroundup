@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2014 Mark Thomas
+    Copyright 2013 Mark Thomas
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,19 +18,24 @@
 
 <ivy-module>
 
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
+    <info publication="20201023000000">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://joda-time.sourceforge.net/">
             <p>
-                API module of JSR 353:Java API for Processing JSON
+            Joda-Time provides a quality replacement for the Java date and time classes. The design allows for 
+            multiple calendar systems, while still providing a simple API. The 'default' calendar is the ISO8601 
+            standard which is used by XML. The Gregorian, Julian, Buddhist, Coptic, Ethiopic and Islamic systems 
+            are also included, and we welcome further additions. Supporting classes include time zone, duration, 
+            format and parsing.
             </p>
         </description>
     </info>
 
     <publications>
-        <artifact />
+        <artifact/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
+

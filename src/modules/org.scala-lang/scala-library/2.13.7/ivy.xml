@@ -18,17 +18,21 @@
 
 <ivy-module>
 
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
+    <info publication="20211101000000">
+        <license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.scala-lang.org/">
+
             <p>
-                API module of JSR 353:Java API for Processing JSON
+                Scala is a general purpose programming language designed to express common programming
+                patterns in a concise, elegant, and type-safe way. It smoothly integrates features of
+                object-oriented and functional languages. It is also fully interoperable with Java.
             </p>
+
         </description>
     </info>
 
     <publications>
-        <artifact />
+        <artifact conf="default"/>
         <artifact type="source" ext="zip"/>
         <artifact type="javadoc" ext="zip"/>
     </publications>
