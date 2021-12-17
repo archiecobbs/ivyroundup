@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20201203093300">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="http://www.groovy-lang.org/">
+
+        Apache Groovy is a <b>powerful, optionally typed</b> and <b>dynamic</b> language,
+        with <b>static-typing and static compilation</b> capabilities, for the Java
+        platform aimed at improving developer productivity thanks to a concise, <b>familiar
+        and easy to learn syntax.</b> It integrates smoothly with any Java program, and
+        immediately delivers to your application powerful features, including scripting
+        capabilities, <b>Domain-Specific Language</b> authoring, runtime and compile-time
+        <b>meta-programming</b> and <b>functional</b> programming. 
+        <ul>
+        <li><b>Flat learning curve</b> -- Concise, readable and expressive syntax, easy to
+        learn for Java developers</li>
+        <li><b>Smooth Java integration</b> -- Seamlessly and transparently integrates and
+        interoperates with Java and any third-party libraries</li>
+        <li><b>Vibrant and rich ecosystem</b> -- Web development, reactive applications,
+        concurrency / asynchronous / parallelism library, test frameworks, build tools, code
+        analysis, GUI building</li>
+        <li><b>Powerful features</b> -- Closures, builders, runtime &amp; compile-time
+        meta-programming, functional programming, type inference, and static compilation</li>
+        <li><b>Domain-Specific Languages</b> -- Flexible &amp; malleable syntax, advanced
+        integration &amp; customization mechanisms, to integrate readable business rules in
+        your applications</li>
+        <li><b>Scripting and testing glue</b> -- Great for writing concise and maintainable
+        tests, and for all your build and automation tasks</li>
+        </ul>
+
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Groovy libraries and runtime support"/>
+        <conf name="embeddable" description="Embeddable Groovy with complete support"/>
+        <conf name="default-indy" description="Groovy libraries and runtime support using invokedynamic (JDK 1.7+)"/>
+        <conf name="embeddable-indy" description="Embeddable Groovy with complete support using invokedynamic (JDK 1.7+)"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact name="groovy-all" conf="embeddable"/>
+        <artifact name="groovy-indy" conf="default-indy"/>
+        <artifact name="groovy-all-indy" conf="embeddable-indy"/>
+        <artifact type="source" ext="zip" conf="*"/>
+        <artifact type="javadoc" ext="zip" conf="*"/>
+    </publications>
+
+</ivy-module>

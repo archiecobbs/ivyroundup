@@ -23,11 +23,11 @@
     <property name="archive" value="${name}-${revision}"/>
 
     <resource url="https://archive.apache.org/dist/${name}/${revision}/distribution/apache-${name}-binary-${revision}.zip"
-      sha1="452832c9c97a4a440063034013a7c1a740f94df4"/>
+      sha1="df67f99babbc59c5e8fd384e73fd160f7e956647"/>
     <resource url="https://archive.apache.org/dist/${name}/${revision}/sources/apache-${name}-src-${revision}.zip"
-      sha1="8f9bfa4baafe49fd751fef59b2a96d4b3a7f8705"/>
+      sha1="50cdbae2fe6c75a5d32401f13e6709f1cdc51b65"/>
     <resource url="https://archive.apache.org/dist/${name}/${revision}/distribution/apache-${name}-docs-${revision}.zip"
-      sha1="f08116f47929af368a27f0ca8490194b49e7ee71"/>
+      sha1="08c37c5491ee0d52fcf051c851225f047b7d5cf9"/>
 
     <build>
         <!-- jars -->
