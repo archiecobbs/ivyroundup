@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2021 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/${ivy.packager.module}.jar" sha1="52fc9e353b4e84f8a87ebc9c5c59e58c91d5d23d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/javadoc.zip" sha1="12d932e3412275ba3dd720d11a06824e546f4b02"/>
+        <artifact classifier="sources" tofile="artifacts/sources/source.zip" sha1="d7826f8dc7ee0ab5d5b16bcffaf634849a89983b"/>
+
+        <artifact classifier="darwin_aarch64" tofile="artifacts/jars/${ivy.packager.module}-darwin_aarch64.jar" sha1="3e2e6ba4d48146c02397b0d70784205009638e94"/>
+        <artifact classifier="darwin_x86_64" tofile="artifacts/jars/${ivy.packager.module}-darwin_x86_64.jar" sha1="36af37e8a50a11de0587a2bac55c827d7c4e1076"/>
+        <artifact classifier="freebsd_amd64" tofile="artifacts/jars/${ivy.packager.module}-freebsd_amd64.jar" sha1="dfeae8ada384647a43355d48977da7b26893a4dc"/>
+        <artifact classifier="freebsd_i386" tofile="artifacts/jars/${ivy.packager.module}-freebsd_i386.jar" sha1="fdb38961d6f661f7c2b0b81301425b65f5548c63"/>
+        <artifact classifier="linux_aarch64" tofile="artifacts/jars/${ivy.packager.module}-linux_aarch64.jar" sha1="e253407d98c9f1085ed998f4d214bb10d2ccd989"/>
+        <artifact classifier="linux_amd64" tofile="artifacts/jars/${ivy.packager.module}-linux_amd64.jar" sha1="23992742b93270060e947cb52ef0d1fd04899007"/>
+        <artifact classifier="linux_arm" tofile="artifacts/jars/${ivy.packager.module}-linux_arm.jar" sha1="0c9aac5c0a8faa9db4748a82fde828f6cd565dec"/>
+        <artifact classifier="linux_i386" tofile="artifacts/jars/${ivy.packager.module}-linux_i386.jar" sha1="cb9e0191134c627050d708b1e07fa4e39e614805"/>
+        <artifact classifier="linux_mips64" tofile="artifacts/jars/${ivy.packager.module}-linux_mips64.jar" sha1="36950c71093dafb48d289f36e031069de4e0d67e"/>
+        <artifact classifier="linux_ppc64" tofile="artifacts/jars/${ivy.packager.module}-linux_ppc64.jar" sha1="411d61d0f89cc77422cd868147f402c245ec1ad7"/>
+        <artifact classifier="linux_ppc64le" tofile="artifacts/jars/${ivy.packager.module}-linux_ppc64le.jar" sha1="d7d1425b1699b872df197bde928867255b52858a"/>
+        <artifact classifier="linux_s390x" tofile="artifacts/jars/${ivy.packager.module}-linux_s390x.jar" sha1="34c244768e0cea4c58e37a63d248842d6e21adcf"/>
+        <artifact classifier="win_amd64" tofile="artifacts/jars/${ivy.packager.module}-win_amd64.jar" sha1="bea9d34d263f7e1754c5bd55fe57e25e9892811a"/>
+        <artifact classifier="win_x86" tofile="artifacts/jars/${ivy.packager.module}-win_x86.jar" sha1="a78e49eff00ffb47209fa1de8d4e190f62dcb600"/>
+    </m2resource>
+</packager-module>

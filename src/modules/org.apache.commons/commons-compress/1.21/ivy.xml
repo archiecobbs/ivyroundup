@@ -21,16 +21,17 @@
     <info publication="20200204000000">
         <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
         <description homepage="http://commons.apache.org/proper/commons-compress/">
-             The Apache Commons Compress library defines an API for working with ar, cpio, Unix dump, tar, zip, gzip, XZ, bzip2, 7z, arj, lzma, snappy, DEFLATE, lz4, Brotli, Zstandard, DEFLATE64 and Z files.
+             The Apache Commons Compress library defines an API for working with ar, cpio, Unix dump, tar, zip, gzip, XZ, Pack200, bzip2, 7z, arj, lzma, snappy, DEFLATE, lz4, Brotli, Zstandard, DEFLATE64 and Z files.
         </description>
     </info>
 
     <configurations>
         <conf name="core" description="Support for most common formats"/>
         <conf name="brotli" description="Support for Brotli format"/>
+        <conf name="pack200" description="Support for Pack200 format"/>
         <conf name="xz" description="Support for 7z, lzma, xz format"/>
         <conf name="zstandard" description="Support for Zstandard format"/>
-        <conf name="default" extends="core,brotli,xz,zstandard" description="All formats"/>
+        <conf name="default" extends="core,brotli,pack200,xz,zstandard" description="All formats"/>
     </configurations>
 
     <publications>
@@ -41,8 +42,9 @@
 
     <dependencies>
         <dependency org="org.brotli" name="dec" rev="[0.1.2,)" conf="brotli->default"/>
-        <dependency org="org.tukaani" name="xz" rev="[1.8,)" conf="xz->default"/>
-        <dependency org="com.github.luben" name="zstd-jni" rev="[1.4.4-7,)" conf="zstandard->default"/>
+        <dependency org="org.objectweb.asm" name="asm" rev="[3.2,)" conf="pack200->core"/>
+        <dependency org="org.tukaani" name="xz" rev="[1.9,)" conf="xz->default"/>
+        <dependency org="com.github.luben" name="zstd-jni" rev="[1.5.0-2,)" conf="zstandard->default"/>
     </dependencies>
 
 </ivy-module>
