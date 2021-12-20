@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2014 Zac Jacobson
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+    <info organisation="com.fasterxml" module="woodstox" revision="6.2.1" status="release" publication="20200514000000">
+        <license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/com.fasterxml/woodstox/6.2.1/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/FasterXML/woodstox">
+                Woodstox is a high-performance XML processor that implements Stax (JSR-173), SAX2 and Stax2 APIs
+            </description>
+    </info>
+    <configurations>
+            <conf name="core" visibility="public"/>
+            <conf name="default" extends="core"/>
+    </configurations>
+    <publications>
+            <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="woodstox-core" ivyde:javadoc="woodstox-core" name="woodstox-core" type="jar" ext="jar" conf="core"/>
+            <artifact name="woodstox-core" type="source" ext="zip" conf="core"/>
+            <artifact name="woodstox-core" type="javadoc" ext="zip" conf="core"/>
+    </publications>
+</ivy-module>
