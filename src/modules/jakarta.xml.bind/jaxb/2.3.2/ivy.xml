@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2014 Mark Thomas
+    Copyright 2012 Stephen Lynn
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -18,19 +18,25 @@
 
 <ivy-module>
 
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
+    <info publication="20181227153100">
+        <license name="Eclipse Distribution License - v 1.0"
+          url="http://www.eclipse.org/org/documents/edl-v10.php"/>
+        <description homepage="https://github.com/eclipse-ee4j/jaxb-api">
+
             <p>
-                API module of JSR 353:Java API for Processing JSON
+            The Jakarta XML Binding provides an API and tools that automate the mapping between XML documents and Java objects.
             </p>
         </description>
     </info>
 
     <publications>
-        <artifact />
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+        <artifact name="jakarta.xml.bind-api" />
+        <artifact name="jakarta.xml.bind-api" type="source" ext="jar"/>
+        <artifact name="jakarta.xml.bind-api" type="javadoc" ext="jar"/>
     </publications>
+
+    <dependencies>
+        <dependency org="jakarta.activation" name="jaf" rev="[1.2.1,2.0[" conf="default->default"/>
+    </dependencies>
 
 </ivy-module>

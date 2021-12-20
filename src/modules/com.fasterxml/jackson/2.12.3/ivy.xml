@@ -55,7 +55,7 @@
         <conf name="jaxrs-smile-provider" extends="jaxrs-base,module-jaxb-annotations,dataformat-smile" description="Functionality to handle Smile (binary JSON) input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding."/>
         <conf name="jaxrs-xml-provider" extends="jaxrs-base,module-jaxb-annotations,dataformat-xml" description="Functionality to handle XML input/output for JAX-RS implementations (like Jersey and RESTeasy) using standard Jackson data binding."/>
         <conf name="jr-all" description="&quot;Uber&quot; jar that contains all Jackson jr components as well as underlying Jackson core Streaming, in a single jar."/>
-        <conf name="jr-objects" description="Simple data-binding that builds directly on 'jackson-core' (streaming), has no other dependencies, and provides additional builder-style content generator"/>
+        <conf name="jr-objects" extends="core" description="Simple data-binding that builds directly on 'jackson-core' (streaming), has no other dependencies, and provides additional builder-style content generator"/>
         <conf name="module-afterburner" extends="databind" description="Jackson (https://github.com/FasterXML/jackson) extension module used to enhance access functionality using bytecode generation."/>
         <conf name="module-guice" extends="databind" description="Stuff to make integration with Guice a bit easier"/>
         <conf name="module-jaxb-annotations" extends="databind" description="Support for using JAXB annotations as an alternative to 'native' Jackson annotations, for configuring data binding."/>
@@ -64,8 +64,9 @@
         <conf name="module-mrbean" extends="databind" description="Functionality for implementing interfaces and abstract types dynamically ('bean materialization'), integrated with Jackson (although usable externally as well)"/>
         <conf name="module-parameter-names" extends="databind" description="Add-on module for Jackson (http://jackson.codehaus.org) to support introspection of method/constructor parameter names, without having to add explicit property name annotation."/>
         <conf name="module-paranamer" extends="databind" description="AnnotationIntrospectors that use Paranamer (http://paranamer.codehaus.org) to introspect names of constructor (and factory method) parameters."/>
-        <conf name="module-scala_2.10" extends="databind" description="jackson-module-scala 2.10.x"/>
         <conf name="module-scala_2.11" extends="databind" description="jackson-module-scala 2.11.x"/>
+        <conf name="module-scala_2.12" extends="databind" description="jackson-module-scala 2.12.x"/>
+        <conf name="module-scala_2.13" extends="databind" description="jackson-module-scala 2.13.x"/>
     </configurations>
 
     <publications>
@@ -92,8 +93,9 @@
         <artifact name="jackson-module-mrbean" conf="module-mrbean"/>
         <artifact name="jackson-module-parameter-names" conf="module-parameter-names"/>
         <artifact name="jackson-module-paranamer" conf="module-paranamer"/>
-        <artifact name="jackson-module-scala_2.10" conf="module-scala_2.10"/>
         <artifact name="jackson-module-scala_2.11" conf="module-scala_2.11"/>
+        <artifact name="jackson-module-scala_2.12" conf="module-scala_2.12"/>
+        <artifact name="jackson-module-scala_2.13" conf="module-scala_2.13"/>
         <artifact name="jackson-dataformat-avro" conf="dataformat-avro"/>
         <artifact name="jackson-dataformat-cbor" conf="dataformat-cbor"/>
         <artifact name="jackson-dataformat-csv" conf="dataformat-csv"/>
@@ -130,8 +132,9 @@
         <artifact name="jackson-module-mrbean" type="source" ext="zip" conf="module-mrbean"/>
         <artifact name="jackson-module-parameter-names" type="source" ext="zip" conf="module-parameter-names"/>
         <artifact name="jackson-module-paranamer" type="source" ext="zip" conf="module-paranamer"/>
-        <artifact name="jackson-module-scala_2.10" type="source" ext="zip" conf="module-scala_2.10"/>
         <artifact name="jackson-module-scala_2.11" type="source" ext="zip" conf="module-scala_2.11"/>
+        <artifact name="jackson-module-scala_2.12" type="source" ext="zip" conf="module-scala_2.12"/>
+        <artifact name="jackson-module-scala_2.13" type="source" ext="zip" conf="module-scala_2.13"/>
         <artifact name="jackson-dataformat-avro" type="source" ext="zip" conf="dataformat-avro"/>
         <artifact name="jackson-dataformat-cbor" type="source" ext="zip" conf="dataformat-cbor"/>
         <artifact name="jackson-dataformat-csv" type="source" ext="zip" conf="dataformat-csv"/>
@@ -167,8 +170,9 @@
         <artifact name="jackson-module-mrbean" type="javadoc" ext="zip" conf="module-mrbean"/>
         <artifact name="jackson-module-parameter-names" type="javadoc" ext="zip" conf="module-parameter-names"/>
         <artifact name="jackson-module-paranamer" type="javadoc" ext="zip" conf="module-paranamer"/>
-        <artifact name="jackson-module-scala_2.10" type="javadoc" ext="zip" conf="module-scala_2.10"/>
         <artifact name="jackson-module-scala_2.11" type="javadoc" ext="zip" conf="module-scala_2.11"/>
+        <artifact name="jackson-module-scala_2.12" type="javadoc" ext="zip" conf="module-scala_2.12"/>
+        <artifact name="jackson-module-scala_2.13" type="javadoc" ext="zip" conf="module-scala_2.13"/>
         <artifact name="jackson-dataformat-avro" type="javadoc" ext="zip" conf="dataformat-avro"/>
         <artifact name="jackson-dataformat-cbor" type="javadoc" ext="zip" conf="dataformat-cbor"/>
         <artifact name="jackson-dataformat-csv" type="javadoc" ext="zip" conf="dataformat-csv"/>
@@ -186,25 +190,29 @@
         <dependency org="com.google.guava" name="guava" rev="[19.0,)" conf="datatype-guava,module-scala_2.11->default"/>
         <dependency org="org.hibernate" name="hibernate" rev="[3.6.6.Final,4.0[" conf="datatype-hibernate3->entitymanager"/>
         <dependency org="org.hibernate" name="hibernate" rev="[4.1.0.Final,5.0[" conf="datatype-hibernate4->entitymanager"/>
-        <dependency org="org.joda" name="joda-time" rev="[2.2,)" conf="datatype-joda->default"/>
-        <dependency org="org.json" name="json" rev="[20090211,)" conf="datatype-json-org->default"/>
-        <dependency org="org.codehaus.woodstox" name="stax2-api" rev="[3.1.4,)" conf="jaxrs-xml-provider,dataformat-xml->default"/>
-        <dependency org="org.codehaus.woodstox" name="woodstox-core-asl" rev="[4.4.0,)" conf="jaxrs-xml-provider->default"/>
-        <dependency org="com.google" name="guice" rev="[3.0,)" conf="module-guice->default"/>
-        <dependency org="javax.xml.bind" name="jaxb" rev="[2.2,)" conf="module-jaxb-annotations->default"/>
+        <dependency org="com.carrotsearch" name="hppc" rev="[0.8.1,)" conf="datatype-hppc->default"/>
+        <dependency org="org.joda" name="joda-time" rev="[2.10.8,)" conf="datatype-joda->default"/>
+        <dependency org="org.json" name="json" rev="[20190722,)" conf="datatype-json-org->default"/>
+        <dependency org="org.codehaus.woodstox" name="stax2-api" rev="[4.2.1, 5.0)" conf="jaxrs-xml-provider,dataformat-xml->default"/>
+        <dependency org="org.fasterxml" name="woodstox" rev="[6.2.4,)" conf="jaxrs-xml-provider,dataformat-xml->core"/>
+        <dependency org="com.google" name="guice" rev="[4.0,5.0)" conf="module-guice->default"/>
+        <dependency org="jakarta.activation" name="jaf" rev="[1.2.1,)" conf="module-jaxb-annotations->default"/>
+        <dependency org="jakarta.xml.bind" name="jaxb" rev="[2.3.2,)" conf="module-jaxb-annotations->default"/>
         <dependency org="javax.validation" name="validation-api" rev="1.1.0.Final" conf="module-jsonSchema->default"/>
         <dependency org="org.objectweb.asm" name="asm" rev="[5.0,)" conf="module-mrbean->default"/>
-        <dependency org="org.scala-lang" name="scala-library" rev="2.10.+" conf="module-scala_2.10->default"/>
-        <!--<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.+" conf="module-scala_2.10->default"/>-->
-        <dependency org="org.scala-lang" name="scala-library" rev="2.11.+" conf="module-scala_2.11->default"/>
-        <dependency org="org.scala-lang" name="scala-reflect" rev="2.11.+" conf="module-scala_2.11->default"/>
-        <dependency org="javax.json" name="json-api" rev="[1.0,)" conf="datatype-jsr353->default"/>
-        <dependency org="com.thoughtworks.paranamer" name="paranamer" rev="[2.6,)" conf="module-scala_2.11,module-scala_2.10,module-paranamer->default"/>
-        <dependency org="com.carrotsearch" name="hppc" rev="[0.6.0,)" conf="datatype-hppc->default"/>
+        <dependency org="com.thoughtworks.paranamer" name="paranamer" rev="[2.8,)" conf="module-scala_2.11,module-scala_2.12,module-scala_2.13,module-paranamer->default"/>
+        <dependency org="org.scala-lang" name="scala-library" rev="[2.11.12,2.12)" conf="module-scala_2.11->default"/>
+        <dependency org="org.scala-lang" name="scala-reflect" rev="[2.11.12,2.12)" conf="module-scala_2.11->default"/>
+        <dependency org="org.scala-lang" name="scala-library" rev="2.12.+" conf="module-scala_2.12->default"/>
+        <dependency org="org.scala-lang" name="scala-reflect" rev="2.12.+" conf="module-scala_2.12->default"/>
+        <dependency org="org.scala-lang" name="scala-library" rev="2.13.+" conf="module-scala_2.13->default"/>
+        <dependency org="org.scala-lang" name="scala-reflect" rev="2.13.+" conf="module-scala_2.13->default"/>
+        <dependency org="javax.json" name="json-api" rev="[1.1.4,)" conf="datatype-jsr353->default"/>
+        <dependency org="org.yaml" name="snakeyaml" rev="[1.27,)" conf="dataformat-yaml->default"/>
 
         <!-- NOT IN REPO
-        <dependency org="org.jetbrains.kotlin" name="kotlin-stdlib" rev="[1.1.3,)" conf="module-kotlin->default"/>
-        <dependency org="org.apache.avro" name="avro" rev="[1.7.2,)" conf="dataformat-avro->default"/>
+        <dependency org="org.jetbrains.kotlin" name="kotlin-stdlib" rev="[1.4.21,)" conf="module-kotlin->default"/>
+        <dependency org="org.apache.avro" name="avro" rev="[1.8.2,)" conf="dataformat-avro->default"/>
         -->
     </dependencies>
 

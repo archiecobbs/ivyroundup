@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2019 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource groupId="com.force.api" artifactId="force-wsc">
+        <artifact tofile="artifacts/jars/force-wsc.jar" sha1="6259c6381359b8416ad0773b98ea8578c36beb2f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/force-wsc-source.zip" sha1="5e26744cb8621a8b4c396911a79b6b6841a2fabc"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/force-wsc-javadoc.zip" sha1="77191f72b1328731cf66522189d2f528f347ab9f"/>
+    </m2resource>
+    <m2resource groupId="com.force.api" artifactId="force-apex-api">
+        <artifact tofile="artifacts/jars/force-apex-api.jar" sha1="40e31694b3de718cdb231ac0f8a057bcdfbcfe47"/>
+        <artifact classifier="sources" tofile="artifacts/sources/force-apex-api-source.zip" sha1="1a83168eec721356d43d299e94e46768c3da95f9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/force-apex-api-javadoc.zip" sha1="76cdfd7541c0ed1ca53ec864cefcf3b10cd1bd45"/>
+    </m2resource>
+    <m2resource groupId="com.force.api" artifactId="force-metadata-api">
+        <artifact tofile="artifacts/jars/force-metadata-api.jar" sha1="ead9a5ca6e8b554c212e370e9a91b6e72297ab4a"/>
+        <artifact classifier="sources" tofile="artifacts/sources/force-metadata-api-source.zip" sha1="a0eb046b8a1f68edb9b363edc4c377bfba5fb883"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/force-metadata-api-javadoc.zip" sha1="523e50cf7e972db2c32d6e44d4703497631f71c3"/>
+    </m2resource>
+    <m2resource groupId="com.force.api" artifactId="force-partner-api">
+        <artifact tofile="artifacts/jars/force-partner-api.jar" sha1="48d9cd74e8a065980fdbbfe3c6b9b016a83a805f"/>
+        <artifact classifier="sources" tofile="artifacts/sources/force-partner-api-source.zip" sha1="cc9b9bb2b08007bdf2f038fb686e19609d920344"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/force-partner-api-javadoc.zip" sha1="8f6babdbddd337e3c687ceb25d13d29bb6605706"/>
+    </m2resource>
+</packager-module>

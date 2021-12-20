@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-    Copyright 2014 Mark Thomas
+    Copyright 2012 Stephen Lynn
+    Copyright 2012 Martin Weber
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may
     not use this file except in compliance with the License. You may obtain
@@ -16,21 +17,12 @@
     under the License.
 -->
 
-<ivy-module>
+<packager-module>
+    <property name="name" value="${ivy.packager.organisation}"/>
 
-    <info publication="20130424000000">
-        <license name="CDDL+GPL" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
-        <description homepage="https://json-processing-spec.java.net/">
-            <p>
-                API module of JSR 353:Java API for Processing JSON
-            </p>
-        </description>
-    </info>
-
-    <publications>
-        <artifact />
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
-    </publications>
-
-</ivy-module>
+    <m2resource artifactId="${name}-api">
+        <artifact tofile="artifacts/jars/${name}-api.jar" sha1="8d49996a4338670764d7ca4b85a1c4ccf7fe665d"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-api.jar" sha1="bbbca8da517340d81573315c33c28889d25eacc8"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-api.jar" sha1="8f7b9baa75556d2c03371c7e4b45b484683c7d28"/>
+    </m2resource>
+</packager-module>
