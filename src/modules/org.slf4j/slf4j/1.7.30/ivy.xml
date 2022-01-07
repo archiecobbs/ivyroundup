@@ -18,8 +18,8 @@
 
 <ivy-module>
 
-  <info publication="20150326000000">
-    <license name="SLF4J License" url="http://www.slf4j.org/license.html" />
+  <info publication="20191216000000">
+    <license name="SLF4J License" url="http://www.slf4j.org/license.html"/>
     <description homepage="http://www.slf4j.org/">
 
       <p>
@@ -33,18 +33,18 @@
   </info>
 
   <configurations>
-    <conf name="core" description="SLF4J core conf" />
-    <conf name="default" extends="core" description="SLF4J default conf (Log4J enabled)" />
-    <conf name="log4j" extends="default" description="Log4J 1.2.x support" />
-    <conf name="log4j-migration" extends="core" description="Gradual migration from Log4J" />
-    <conf name="jcl" extends="core" description="Jakarta Commons Logging support" />
-    <conf name="jcl-migration" extends="core" description="Gradual migration from Jakarta Commons Logging" />
-    <conf name="jul" extends="core" description="java.util.logging support" />
-    <conf name="jul-migration" extends="core" description="Gradual migration from java.util.logging" />
-    <conf name="nop" extends="core" description="NOP (no operation) Logger support" />
-    <conf name="simple" extends="core" description="Simple Logger support" />
-    <conf name="ext" extends="core" description="Enable profiling support" />
-    <conf name="migrator" description="Tool to migrate code to SLF4J" />
+    <conf name="core" description="SLF4J core conf"/>
+    <conf name="default" extends="core" description="SLF4J default conf (Log4J enabled)"/>
+    <conf name="log4j" extends="default" description="Log4J 1.2.x support"/>
+    <conf name="log4j-migration" extends="core" description="Gradual migration from Log4J"/>
+    <conf name="jcl" extends="core" description="Jakarta Commons Logging support"/>
+    <conf name="jcl-migration" extends="core" description="Gradual migration from Jakarta Commons Logging"/>
+    <conf name="jul" extends="core" description="java.util.logging support"/>
+    <conf name="jul-migration" extends="core" description="Gradual migration from java.util.logging"/>
+    <conf name="nop" extends="core" description="NOP (no operation) Logger support"/>
+    <conf name="simple" extends="core" description="Simple Logger support"/>
+    <conf name="ext" extends="core" description="Enable profiling support"/>
+    <conf name="migrator" description="Tool to migrate code to SLF4J"/>
   </configurations>
 
   <publications>
@@ -84,10 +84,9 @@
   </publications>
 
   <dependencies>
-    <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,1.3[" conf="log4j,log4j-migration->default" />
-    <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,1.2[" conf="jcl->default" />
-    <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="ext->default" />
-    <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="ext->default" />
+    <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,1.3[" conf="log4j,log4j-migration->default"/>
+    <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,1.2[" conf="jcl->default"/>
+    <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="ext->default"/>
   </dependencies>
 
 </ivy-module>
