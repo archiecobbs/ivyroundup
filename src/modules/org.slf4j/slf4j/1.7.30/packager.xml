@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2013 Mark Thomas
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource artifactId="jcl-over-slf4j">
+        <artifact tofile="artifacts/jars/jcl-over-slf4j.jar" sha1="cd92524ea19d27e5b94ecd251e1af729cffdfe15"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jcl-over-slf4j.zip" sha1="f2442e369a190089a2774920b5e73a4d4c1ef793"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jcl-over-slf4j.zip" sha1="898cad01958fdc567b31625742513261f80b6258"/>
+    </m2resource>
+    <m2resource artifactId="jul-to-slf4j">
+        <artifact tofile="artifacts/jars/jul-to-slf4j.jar" sha1="d58bebff8cbf70ff52b59208586095f467656c30"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jul-to-slf4j.zip" sha1="f9e7f2ae73c3ef9c375a325cea1ef1dcc2613579"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jul-to-slf4j.zip" sha1="139c3d6b8d846d50a0dde1cead515978bdf4d58b"/>
+    </m2resource>
+    <m2resource artifactId="log4j-over-slf4j">
+        <artifact tofile="artifacts/jars/log4j-over-slf4j.jar" sha1="69af1f8a7ef3040a2881f7ec105e0a86fb158ab2"/>
+        <artifact classifier="sources" tofile="artifacts/sources/log4j-over-slf4j.zip" sha1="c4224768713e9cd702d86165ea6d8a6491472b06"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/log4j-over-slf4j.zip" sha1="ece838713984a1fcf29467b7215491b10879be0f"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-api">
+        <artifact tofile="artifacts/jars/slf4j-api.jar" sha1="b5a4b6d16ab13e34a88fae84c35cd5d68cac922c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-api.zip" sha1="71a1fdefa224da50f1db6306ce609981e20186c9"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-api.zip" sha1="675a6ad8a316de18d66e183fe71c708289c8cecf"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-ext">
+        <artifact tofile="artifacts/jars/slf4j-ext.jar" sha1="595d5dabfeb29244b8c91776898cee78299080d5"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-ext.zip" sha1="59b59c19c2d715d8b60a97e452d0af803d769667"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-ext.zip" sha1="3a58b7918f646f4752d041377d7add307c14f14d"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-jcl">
+        <artifact tofile="artifacts/jars/slf4j-jcl.jar" sha1="5877aff15ac92b8e71c131ac2f7c2070ba0ba653"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-jcl.zip" sha1="43cf4548e5bc1e68084db6e224cece5f38987dfd"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-jcl.zip" sha1="c10ebfeb94ba832ca2e935e8607b4f8e4f50532b"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-jdk14">
+        <artifact tofile="artifacts/jars/slf4j-jdk14.jar" sha1="d35953dd2fe54ebe39fdf18cfd82fe6eb35b25ed"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-jdk14.zip" sha1="87b64d4f2f2daab7ce27f985ef98a4b274831dea"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-jdk14.zip" sha1="7f6ec9658d62c673fccaaf61176d6e30cc801ec9"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-log4j12">
+        <artifact tofile="artifacts/jars/slf4j-log4j12.jar" sha1="c21f55139d8141d2231214fb1feaf50a1edca95e"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-log4j12.zip" sha1="84a0912c7fa57ec9ba8e3efaba9d5f44dd9c3699"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-log4j12.zip" sha1="60e1ee10a09bcbceddb91b376e1ad5b6fdffbf63"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-migrator">
+        <artifact tofile="artifacts/jars/slf4j-migrator.jar" sha1="aa3c69aa555667a39f4c564a8c4948310f6ff953"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-migrator.zip" sha1="da418012e51c40e46b3f1944b5a7ad972dda2f52"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-migrator.zip" sha1="300649a717c6f5f62618e9309ad9db7e19800768"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-nop">
+        <artifact tofile="artifacts/jars/slf4j-nop.jar" sha1="55d4c73dd343efebd236abfeb367c9ef41d55063"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-nop.zip" sha1="a166ecad84482080b7f9b51692b2f84142117e8a"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-nop.zip" sha1="fc79cb7f647485760212ba712dcdad95e7a4e1d4"/>
+    </m2resource>
+    <m2resource artifactId="slf4j-simple">
+        <artifact tofile="artifacts/jars/slf4j-simple.jar" sha1="e606eac955f55ecf1d8edcccba04eb8ac98088dd"/>
+        <artifact classifier="sources" tofile="artifacts/sources/slf4j-simple.zip" sha1="5d6530a871f57605c828f2d330ea8f9817837a6f"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/slf4j-simple.zip" sha1="9581713db94428cace348deac882be373cf59a02"/>
+    </m2resource>
+</packager-module>
