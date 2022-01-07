@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/modules.xsl"?>
 <modules>
-  <timestamp>2021-12-20 22:01:51 UTC</timestamp>
+  <timestamp>2022-01-07 20:05:45 UTC</timestamp>
   <org name="bixo">
     <mod name="bixo">
       <rev name="0.9.1"/>
@@ -2405,6 +2405,11 @@
       <rev name="2.11.0"/>
     </mod>
   </org>
+  <org name="org.apache.kafka">
+    <mod name="kafka-clients">
+      <rev name="3.0.0"/>
+    </mod>
+  </org>
   <org name="org.apache.log4j">
     <mod name="log4j">
       <rev name="1.2.13"/>
@@ -3745,6 +3750,11 @@
       <rev name="2.2.1"/>
     </mod>
   </org>
+  <org name="org.lz4">
+    <mod name="lz4-java">
+      <rev name="1.7.1"/>
+    </mod>
+  </org>
   <org name="org.mapdb">
     <mod name="mapdb">
       <rev name="1.0.7"/>
@@ -4058,6 +4068,7 @@
       <rev name="1.7.12"/>
       <rev name="1.7.13"/>
       <rev name="1.7.25"/>
+      <rev name="1.7.30"/>
     </mod>
   </org>
   <org name="org.sonarsource.scanner.ant">
@@ -4303,6 +4314,7 @@
       <rev name="1.1.0.1"/>
       <rev name="1.1.1.6"/>
       <rev name="1.1.2"/>
+      <rev name="1.1.8.1"/>
     </mod>
   </org>
   <org name="org.xhtmlrenderer">

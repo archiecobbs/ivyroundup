@@ -18,9 +18,9 @@
 <!-- GENERATED FILE - DO NOT EDIT -->
 <ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
 
-  <info organisation="org.slf4j" module="slf4j" revision="1.7.12" status="release" publication="20150326000000">
+  <info organisation="org.slf4j" module="slf4j" revision="1.7.30" status="release" publication="20191216000000">
         <license name="SLF4J License" url="http://www.slf4j.org/license.html"/>
-        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.slf4j/slf4j/1.7.12/"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/org.slf4j/slf4j/1.7.30/"/>
         <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
         <description homepage="http://www.slf4j.org/">
 
@@ -89,7 +89,6 @@
     <dependency org="org.apache.log4j" name="log4j" rev="[1.2.17,1.3[" conf="log4j,log4j-migration-&gt;default"/>
     <dependency org="org.apache.commons" name="commons-logging" rev="[1.1.1,1.2[" conf="jcl-&gt;default"/>
     <dependency org="org.jboss" name="javassist" rev="[3.4,4.0[" conf="ext-&gt;default"/>
-    <dependency org="org.apache.commons" name="commons-lang" rev="[2.4,3.0[" conf="ext-&gt;default"/>
   </dependencies>
 
 </ivy-module>
