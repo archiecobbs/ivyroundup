@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2022 Archie L. Cobbs
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<packager-module>
+    <m2resource>
+        <artifact tofile="artifacts/jars/jdom.jar" sha1="8bdfeb39fa929c35f5e4f0b02d34350db39a1efc"/>
+        <artifact classifier="sources" tofile="artifacts/sources/jdom.zip" sha1="b8b961a9f20d1faf160681c49f773a66b87efd63"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/jdom.zip" sha1="adef4cfe550c6bb4bd4e983fe5d9a6d3bb1b8ec7"/>
+    </m2resource>
+</packager-module>
