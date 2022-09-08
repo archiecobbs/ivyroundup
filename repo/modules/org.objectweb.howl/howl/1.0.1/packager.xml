@@ -18,6 +18,6 @@
 
     <property name="name" value="${ivy.packager.module}"/>
 
-    <resource url="http://download.forge.ow2.org/${name}/${name}-${ivy.packager.revision}.jar" sha1="563a0983b05fd33f05d3f29856e9cbc4a9c15da9" tofile="artifacts/jars/${name}.jar"/>
+    <resource url="http://dllegacy.ow2.org/${name}/${name}-${ivy.packager.revision}.jar" sha1="563a0983b05fd33f05d3f29856e9cbc4a9c15da9" tofile="artifacts/jars/${name}.jar"/>
 
 </packager-module>

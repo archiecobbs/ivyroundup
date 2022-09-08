@@ -53,14 +53,30 @@
     </configurations>
 
     <publications>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" conf="core"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm-analysis" conf="analysis"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm-commons" conf="commons"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm-tree" conf="tree"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm-util" conf="util"/>
-        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm-xml" conf="xml"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+
+        <!-- JARs -->
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm" ivyde:javadoc="asm" name="asm" conf="core"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-analysis" ivyde:javadoc="asm-analysis" name="asm-analysis" conf="analysis"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-commons" ivyde:javadoc="asm-commons" name="asm-commons" conf="commons"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-tree" ivyde:javadoc="asm-tree" name="asm-tree" conf="tree"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-util" ivyde:javadoc="asm-util" name="asm-util" conf="util"/>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="asm-xml" ivyde:javadoc="asm-xml" name="asm-xml" conf="xml"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="asm" conf="core"/>
+        <artifact type="source" ext="zip" name="asm-analysis" conf="analysis"/>
+        <artifact type="source" ext="zip" name="asm-commons" conf="commons"/>
+        <artifact type="source" ext="zip" name="asm-tree" conf="tree"/>
+        <artifact type="source" ext="zip" name="asm-util" conf="util"/>
+        <artifact type="source" ext="zip" name="asm-xml" conf="xml"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="asm" conf="core"/>
+        <artifact type="javadoc" ext="zip" name="asm-analysis" conf="analysis"/>
+        <artifact type="javadoc" ext="zip" name="asm-commons" conf="commons"/>
+        <artifact type="javadoc" ext="zip" name="asm-tree" conf="tree"/>
+        <artifact type="javadoc" ext="zip" name="asm-util" conf="util"/>
+        <artifact type="javadoc" ext="zip" name="asm-xml" conf="xml"/>
     </publications>
 
 </ivy-module>
