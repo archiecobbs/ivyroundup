@@ -20,7 +20,7 @@
 
     <property name="name" value="${ivy.packager.module}"/>
 
-    <resource url="http://download.forge.ow2.org/${name}/${name}-${ivy.packager.revision}.jar"
+    <resource url="http://dllegacy.ow2.org/${name}/${name}-${ivy.packager.revision}.jar"
       sha1="d30554c6b7bb096961e16487e0150ae78a196366"
       tofile="artifacts/jars/${name}.jar"/>
 

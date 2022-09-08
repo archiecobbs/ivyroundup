@@ -51,14 +51,30 @@
     </configurations>
 
     <publications>
-        <artifact conf="core"/>
+
+        <!-- JARs -->
+        <artifact name="asm" conf="core"/>
         <artifact name="asm-analysis" conf="analysis"/>
         <artifact name="asm-commons" conf="commons"/>
         <artifact name="asm-tree" conf="tree"/>
         <artifact name="asm-util" conf="util"/>
         <artifact name="asm-xml" conf="xml"/>
-        <artifact type="source" ext="zip"/>
-        <artifact type="javadoc" ext="zip"/>
+
+        <!-- Sources -->
+        <artifact type="source" ext="zip" name="asm" conf="core"/>
+        <artifact type="source" ext="zip" name="asm-analysis" conf="analysis"/>
+        <artifact type="source" ext="zip" name="asm-commons" conf="commons"/>
+        <artifact type="source" ext="zip" name="asm-tree" conf="tree"/>
+        <artifact type="source" ext="zip" name="asm-util" conf="util"/>
+        <artifact type="source" ext="zip" name="asm-xml" conf="xml"/>
+
+        <!-- Javadocs -->
+        <artifact type="javadoc" ext="zip" name="asm" conf="core"/>
+        <artifact type="javadoc" ext="zip" name="asm-analysis" conf="analysis"/>
+        <artifact type="javadoc" ext="zip" name="asm-commons" conf="commons"/>
+        <artifact type="javadoc" ext="zip" name="asm-tree" conf="tree"/>
+        <artifact type="javadoc" ext="zip" name="asm-util" conf="util"/>
+        <artifact type="javadoc" ext="zip" name="asm-xml" conf="xml"/>
     </publications>
 
 </ivy-module>

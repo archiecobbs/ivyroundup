@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
     Copyright 2008 Archie L. Cobbs.
@@ -17,34 +17,22 @@
 -->
 
 <packager-module>
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://download.forge.ow2.org/${name}/${archive}-bin.zip"
-      sha1="95fd103fd18166b2186cf33640876e74f49d68d9">
-        <include name="${archive}/lib/*.jar"/>
-        <include name="${archive}/src.zip"/>
-        <include name="${archive}/doc/javadoc/user/**/*"/>
-    </resource>
-
-    <build>
-
-        <!-- jar -->
-        <move todir="artifacts/jars">
-            <fileset dir="archive/${archive}/lib">
-                <include name="*.jar"/>
-            </fileset>
-            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
-        </move>
-
-        <!-- source -->
-        <move file="archive/${archive}/src.zip" tofile="artifacts/sources/source.zip"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/javadoc.zip">
-            <fileset dir="archive/${archive}/doc/javadoc/user"/>
-        </zip>
-    </build>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm">
+        <artifact tofile="artifacts/jars/asm.jar" sha1="9bc1511dec6adf302991ced13303e4140fdf9ab7"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm" artifactId="asm-analysis">
+        <artifact tofile="artifacts/jars/asm-analysis.jar" sha1="c624956db93975b7197699dcd7de6145ca7cf2c8"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm" artifactId="asm-commons">
+        <artifact tofile="artifacts/jars/asm-commons.jar" sha1="e7a19b8c60589499e35f5d2068d09013030b8891"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm" artifactId="asm-tree">
+        <artifact tofile="artifacts/jars/asm-tree.jar" sha1="cd792e29c79d170c5d0bdd05adf5807cf6875c90"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm" artifactId="asm-xml">
+        <artifact tofile="artifacts/jars/asm-xml.jar" sha1="0bf8c455838e08abbbeb15042e8c3a994e32cf56"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/ow2-legacy/content" groupId="asm" artifactId="asm-util">
+        <artifact tofile="artifacts/jars/asm-util.jar" sha1="37ebfdad34d5f1f45109981465f311bbfbe82dcf"/>
+    </m2resource>
 </packager-module>

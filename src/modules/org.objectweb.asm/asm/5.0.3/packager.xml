@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
     Copyright 2013 Mark Thomas
@@ -17,34 +17,34 @@
 -->
 
 <packager-module>
-
-    <property name="name" value="${ivy.packager.module}"/>
-    <property name="revision" value="${ivy.packager.revision}"/>
-    <property name="archive" value="${name}-${revision}"/>
-
-    <resource url="http://download.forge.ow2.org/${name}/${archive}-bin.zip"
-      sha1="bd832c1fc9d14de4da1a4904a824966ff7cbef68">
-        <include name="${archive}/lib/*.jar"/>
-        <include name="${archive}/src.zip"/>
-        <include name="${archive}/doc/javadoc/user/**/*"/>
-    </resource>
-
-    <build>
-
-        <!-- jar -->
-        <move todir="artifacts/jars">
-            <fileset dir="archive/${archive}/lib">
-                <include name="*.jar"/>
-            </fileset>
-            <mapper type="glob" from="*-${revision}.jar" to="*.jar"/>
-        </move>
-
-        <!-- source -->
-        <move file="archive/${archive}/src.zip" tofile="artifacts/sources/${name}.zip"/>
-
-        <!-- javadoc -->
-        <zip destfile="artifacts/javadocs/${name}.zip">
-            <fileset dir="archive/${archive}/doc/javadoc/user"/>
-        </zip>
-    </build>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm">
+        <artifact tofile="artifacts/jars/asm.jar" sha1="dcc2193db20e19e1feca8b1240dbbc4e190824fa"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm" artifactId="asm-analysis">
+        <artifact tofile="artifacts/jars/asm-analysis.jar" sha1="c7126aded0e8e13fed5f913559a0dd7b770a10f3"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm-analysis.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm-analysis.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm" artifactId="asm-commons">
+        <artifact tofile="artifacts/jars/asm-commons.jar" sha1="a7111830132c7f87d08fe48cb0ca07630f8cb91c"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm-commons.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm-commons.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm" artifactId="asm-tree">
+        <artifact tofile="artifacts/jars/asm-tree.jar" sha1="287749b48ba7162fb67c93a026d690b29f410bed"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm-tree.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm-tree.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm" artifactId="asm-xml">
+        <artifact tofile="artifacts/jars/asm-xml.jar" sha1="440c3f0a1e2459716ecc65d67ed3bde51727893d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm-xml.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm-xml.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
+    <m2resource repo="https://repository.ow2.org/nexus/service/local/repositories/releases/content" groupId="org.ow2.asm" artifactId="asm-util">
+        <artifact tofile="artifacts/jars/asm-util.jar" sha1="1512e5571325854b05fb1efce1db75fcced54389"/>
+        <artifact classifier="sources" tofile="artifacts/sources/asm-util.zip" sha1="f0f24f6666c1a15c7e202e91610476bd4ce59368"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/asm-util.zip" sha1="c87547fa477f7dc22c5e3c5ddfc6dfac726e5b15"/>
+    </m2resource>
 </packager-module>
