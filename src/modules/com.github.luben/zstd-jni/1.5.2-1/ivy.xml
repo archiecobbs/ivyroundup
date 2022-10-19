@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2022 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20220122113700">
+        <license name="BSD 2-Clause License" url="https://opensource.org/licenses/BSD-2-Clause"/>
+        <description homepage="https://github.com/luben/zstd-jni">
+             JNI bindings for Zstd native library that provides fast and high compression lossless algorithm for Android, Java and all JVM languages.
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="default" description="Default with all architectures included"/>
+        <conf name="darwin-aarch64" description="Single architecture library for darwin-aarch64"/>
+        <conf name="darwin-x86_64" description="Single architecture library for darwin-x86_64 (MacOS X)"/>
+        <conf name="freebsd-amd64" description="Single architecture library for freebsd-amd64"/>
+        <conf name="freebsd-i386" description="Single architecture library for freebsd-i386"/>
+        <conf name="linux-aarch64" description="Single architecture library for linux-aarch64"/>
+        <conf name="linux-amd64" description="Single architecture library for linux-amd64"/>
+        <conf name="linux-arm" description="Single architecture library for linux-armhf"/> <!-- Author describes it as "armhf", but file names, paths, etc. are "arm" -->
+        <conf name="linux-i386" description="Single architecture library for linux-i386"/>
+        <conf name="linux-mips64" description="Single architecture library for linux-mips64"/>
+        <conf name="linux-ppc64" description="Single architecture library for linux-ppc64"/>
+        <conf name="linux-ppc64le" description="Single architecture library for linux-ppc64le"/>
+        <conf name="linux-s390x" description="Single architecture library for linux-s390x"/>
+        <conf name="win-amd64" description="Single architecture library for win-amd64"/>
+        <conf name="win-x86" description="Single architecture library for win-x86"/>
+    </configurations>
+
+    <publications>
+        <artifact conf="default"/>
+        <artifact name="source" type="source" ext="zip" conf="default"/>
+        <artifact name="javadoc" type="javadoc" ext="zip" conf="default"/>
+
+        <artifact name="zstd-jni-darwin_aarch64" conf="darwin-aarch64"/>
+        <artifact name="zstd-jni-darwin_x86_64" conf="darwin-x86_64"/>
+        <artifact name="zstd-jni-freebsd_amd64" conf="freebsd-amd64"/>
+        <artifact name="zstd-jni-freebsd_i386" conf="freebsd-i386"/>
+        <artifact name="zstd-jni-linux_aarch64" conf="linux-aarch64"/>
+        <artifact name="zstd-jni-linux_amd64" conf="linux-amd64"/>
+        <artifact name="zstd-jni-linux_arm" conf="linux-arm"/>
+        <artifact name="zstd-jni-linux_i386" conf="linux-i386"/>
+        <artifact name="zstd-jni-linux_mips64" conf="linux-mips64"/>
+        <artifact name="zstd-jni-linux_ppc64" conf="linux-ppc64"/>
+        <artifact name="zstd-jni-linux_ppc64le" conf="linux-ppc64le"/>
+        <artifact name="zstd-jni-linux_s390x" conf="linux-s390x"/>
+        <artifact name="zstd-jni-win_amd64" conf="win-amd64"/>
+        <artifact name="zstd-jni-win_x86" conf="win-x86"/>
+    </publications>
+
+</ivy-module>

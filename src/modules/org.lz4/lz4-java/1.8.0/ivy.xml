@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2022 Bill Soul
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20210619063100">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="https://github.com/lz4/lz4-java">
+            <p>
+            LZ4 compression for Java, based on Yann Collet's work available at
+            http://code.google.com/p/lz4/
+            </p>
+
+            <p>
+            This library provides access to two compression methods that both
+            generate a valid LZ4 stream:
+            <ul>
+            <li>fast scan (LZ4):</li>
+                <ul>
+                <li>low memory footprint (~ 16 KB),</li>
+                <li>very fast (fast scan with skipping heuristics in case the
+                input looks incompressible),</li>
+                <li>reasonable compression ratio (depending on the redundancy
+                of the input).</li>
+                </ul>
+
+            <li>high compression (LZ4 HC):</li>
+                <ul>
+                <li> medium memory footprint (~ 256 KB),</li>
+                <li>rather slow (~ 10 times slower than LZ4),</li>
+                <li>good compression ratio (depending on the size and the redundancy
+                of the input).</li>
+                </ul>
+            </ul>
+            </p>
+            
+            <p>
+            The streams produced by those 2 compression algorithms use the same
+            compression format, are very fast to decompress and can be decompressed
+            by the same decompressor instance.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact/>
+        <artifact name="source" type="source" ext="zip"/>
+        <artifact name="javadoc" type="javadoc" ext="zip"/>
+    </publications>
+</ivy-module>
