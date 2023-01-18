@@ -25,20 +25,10 @@
         </description>
     </info>
 
-    <configurations>
-        <conf name="default" extends="ojdbc8" description="Default JDBC driver"/>
-        <conf name="ojdbc8" description="Default JDBC driver"/>
-        <conf name="ojdbc8_g" description="Default JDBC driver with debug"/>
-        <conf name="ojdbc8dms" description="Default JDBC driver with additional code to support Oracle Dynamic Monitoring Service"/>
-        <conf name="ojdbc8dms_g" description="Default JDBC driver with additional code to support Oracle Dynamic Monitoring Service and debug"/>
-    </configurations>
-
     <publications>
-        <artifact name="ojdbc8" conf="ojdbc8"/>
-        <artifact name="ojdbc8_g" conf="ojdbc8_g"/>
-        <artifact name="ojdbc8dms" conf="ojdbc8dms"/>
-        <artifact name="ojdbc8dms_g" conf="ojdbc8dms_g"/>
-        <artifact name="javadoc" type="javadoc" ext="zip"/>
+        <artifact name="ojdbc8"/>
+        <artifact name="ojdbc8" type="source" ext="zip"/>
+        <artifact name="ojdbc8" type="javadoc" ext="zip"/>
     </publications>
 
 </ivy-module>
