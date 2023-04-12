@@ -100,7 +100,7 @@
     </target>
 
     <!-- Build the Ivy RoundUp packager repository (no artifacts) -->
-    <target name="repo" depends="gen-repo, graph" description="Regenerate the repository." />
+    <target name="repo" depends="gen-repo" description="Regenerate the repository." />
     <target name="repo-for-module" depends="gen-repo-for-module" description="Regenerate the repository for single module and revision." />
     <!--<target name="repo-for-module" depends="gen-repo-for-module, graph-single" description="Regenerate the repository." />-->
 
