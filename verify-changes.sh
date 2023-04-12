@@ -18,5 +18,6 @@ ant \
   -Dresolve.org="${MOD_ORGS}" \
   -Dresolve.mod="${MOD_MODS}" \
   -Dresolve.rev="${MOD_REVS}" \
+  -Dskip-graph=true \
   clean get-xalan repo resolve
 
