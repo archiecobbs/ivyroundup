@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright 2014 Tim T. Preston
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+
+<ivy-module>
+
+    <info publication="20230630143700">
+        <license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <description homepage="hhttps://github.com/google/guava">
+            <p>
+                Guava is a set of core Java libraries from Google that includes new collection types
+                (such as multimap and multiset), immutable collections, a graph library, and utilities
+                for concurrency, I/O, hashing, primitives, strings, and more!
+            </p>
+        </description>
+    </info>
+
+    <configurations>
+        <conf name="core" description="Core classes"/>
+        <conf name="gwt" extends="core" description="GWT classes"/>
+        <conf name="testlib" extends="core" description="Testlib classes"/>
+        <conf name="default" extends="core" description="Alias for core"/>
+    </configurations>
+
+
+    <publications>
+        <!-- jar -->
+        <artifact name="guava" conf="core"/>
+        <artifact name="guava-gwt" conf="gwt"/>
+        <artifact name="guava-testlib" conf="testlib"/>
+
+        <!-- source -->
+        <artifact name="guava" type="source" ext="zip" conf="core"/>
+        <artifact name="guava-gwt" type="source" ext="zip" conf="gwt"/>
+        <artifact name="guava-testlib" type="source" ext="zip" conf="testlib"/>
+
+        <!-- javadoc -->
+        <artifact name="guava" type="javadoc" ext="zip" conf="core"/>
+        <artifact name="guava-testlib" type="javadoc" ext="zip" conf="testlib"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="com.google" name="gwt" rev="[0,)" conf="gwt,testlib->compile"/>
+        <dependency org="com.google.guava" name="failureaccess" rev="[1.0.1,)" conf="core->default"/>
+    </dependencies>
+
+</ivy-module>
