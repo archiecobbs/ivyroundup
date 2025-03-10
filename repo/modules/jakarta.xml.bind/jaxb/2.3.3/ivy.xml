@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../xsl/ivy-doc.xsl"?>
+<!--
+    Copyright 2012 Stephen Lynn
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:noNamespaceSchemaLocation="../../../../xsd/ivy.xsd">
+
+    <info organisation="jakarta.xml.bind" module="jaxb" revision="2.3.3" status="release" publication="20200127093500">
+        <license name="Eclipse Distribution License - v 1.0" url="http://www.eclipse.org/org/documents/edl-v10.php"/>
+        <ivyauthor xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" name="Ivy RoundUp Repository" url="https://github.com/archiecobbs/ivyroundup/blob/master/src/modules/jakarta.xml.bind/jaxb/2.3.3/"/>
+        <repository xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" pattern="https://raw.githubusercontent.com/archiecobbs/ivyroundup/master/repo/modules/[organisation]/[module]/[revision]/ivy.xml" ivys="true" url="https://github.com/archiecobbs/ivyroundup" name="ivyroundup"/>
+        <description homepage="https://github.com/eclipse-ee4j/jaxb-api">
+
+            <p>
+            The Jakarta XML Binding provides an API and tools that automate the mapping between XML documents and Java objects.
+            </p>
+        </description>
+    </info>
+
+    <publications>
+        <artifact xmlns:ivyde="http://ant.apache.org/ivy/ivyde/ns/" ivyde:source="jakarta.xml.bind-api" ivyde:javadoc="jakarta.xml.bind-api" name="jakarta.xml.bind-api"/>
+        <artifact name="jakarta.xml.bind-api" type="source" ext="jar"/>
+        <artifact name="jakarta.xml.bind-api" type="javadoc" ext="jar"/>
+    </publications>
+
+    <dependencies>
+        <dependency org="jakarta.activation" name="jaf" rev="[1.2.1,2.0[" conf="default-&gt;default"/>
+    </dependencies>
+
+</ivy-module>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+    Copyright 2012 Stephen Lynn
+    Copyright 2012 Martin Weber
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may
+    not use this file except in compliance with the License. You may obtain
+    a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations
+    under the License.
+-->
+<!-- GENERATED FILE - DO NOT EDIT -->
+<packager-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:noNamespaceSchemaLocation="../../../../xsd/packager-1.0.xsd">
+    <property name="name" value="${ivy.packager.module}"/>
+
+    <m2resource groupId="com.sun.xml.bind" artifactId="${name}-impl">
+        <artifact tofile="artifacts/jars/jaxb-impl.jar" sha1="95076261a51690f95b29e09fd6ff9f8a90381af0"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-impl.jar" sha1="6beae207b75e124597383746418615ce6d2a3226"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-impl.jar" sha1="c0344c4326e002e2e77ca51dcab2d0cf436b711f"/>
+    </m2resource>
+
+    <m2resource groupId="com.sun.xml.bind" artifactId="${name}-xjc">
+        <artifact tofile="artifacts/jars/${name}-xjc.jar" sha1="4a45d6b44909dba42c936977cd411e52c5431f1b"/>
+        <artifact classifier="javadoc" tofile="artifacts/javadocs/${name}-xjc.jar" sha1="7a9a32418df73b0e92e66a3437ba301d201ae80d"/>
+        <artifact classifier="sources" tofile="artifacts/sources/${name}-xjc.jar" sha1="2954c8f9a84e0e93ffeb1c856ee4456d64fbb412"/>
+    </m2resource>
+</packager-module>
